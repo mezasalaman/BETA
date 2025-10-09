@@ -190,7 +190,10 @@ section {
     margin-bottom: 5rem;
 }
 
-/* :::::::::::::::::::: SECCIÓN: INVESTIGACIÓN UX :::::::::::::::::::: */
+/* ============================ */
+/* SECCIÓN INVESTIGACIÓN UX     */
+/* ============================ */
+
 .subtitulo_card {
     font-weight: 500;
     font-size: 14px;
@@ -211,17 +214,19 @@ section {
 }
 
 .investigacion .contenedor {
-    width: 105rem;
-    max-width: 100%;
+    width: 100%;
+    max-width: 1200px;
+    /* ✅ Antes era 105rem */
     margin: 0 auto;
+    padding: 0 1rem;
+    /* ✅ Agregamos padding para que respire */
     text-align: center;
 }
 
-.investigacion h2 {
+.investigacion h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     line-height: 1.3;
-    animation: fadeUp 1s ease-out 0.2s both;
 }
 
 .investigacion .subtitulo {
@@ -231,19 +236,16 @@ section {
     opacity: 0.8;
 }
 
-/* GRID PRINCIPAL */
+/* ========== GRID PRINCIPAL ========== */
 .investigacion__grid {
-    padding-top: 10rem;
+    padding-top: 5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: auto;
     gap: 2rem;
     justify-content: center;
     align-items: stretch;
-    animation: fadeUp 1s ease-out 0.4s both;
 }
 
-/* --- Tarjetas --- */
 .investigacion__grid .card {
     background: #0a0a0a;
     border: 1px solid #3a3a3a;
@@ -274,16 +276,51 @@ section {
     transform: scale(1.03);
 }
 
-/* --- Customer Journey Map: aparece primero y ocupa todo el ancho --- */
-/* --- Customer Journey Map: fila 2, ocupa las dos últimas columnas --- */
+/* Card Wide */
 .investigacion__grid .card--wide {
     grid-column: 2 / 4;
-    /* de la columna 2 a la 3 (porque 4 no existe, marca el final) */
     grid-row: 2;
-    /* va en la segunda fila */
 }
 
-/* ------*
+//* ========== MEDIA QUERIES ========== */
+
+/* Tablets: mantenemos 3 columnas igual que desktop */
+@media (max-width: 992px) {
+    .investigacion__grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* mismo layout que desktop */
+    }
+
+    .investigacion__grid .card--wide {
+        grid-column: 2 / 4;
+        /* ocupa columnas 2 y 3 */
+    }
+
+    .investigacion h1 {
+        font-size: 2.4rem;
+    }
+}
+
+/* Celulares: una columna, todo apilado */
+@media (max-width: 600px) {
+    .investigacion__grid {
+        grid-template-columns: 1fr;
+        /* 1 columna */
+    }
+
+    .investigacion__grid .card--wide {
+        grid-column: auto;
+        /* ocupa toda la fila */
+    }
+
+    .investigacion h1 {
+        font-size: 2rem;
+    }
+
+    .investigacion__grid .card {
+        padding: 1.5rem;
+    }
+}
 
 
 
