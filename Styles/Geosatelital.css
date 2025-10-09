@@ -282,7 +282,7 @@ section {
     grid-row: 2;
 }
 
-//* ========== MEDIA QUERIES ========== */
+/* ========== MEDIA QUERIES ========== */
 
 /* Tablets: mantenemos 3 columnas igual que desktop */
 @media (max-width: 992px) {
