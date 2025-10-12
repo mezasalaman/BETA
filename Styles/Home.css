@@ -406,6 +406,14 @@
 }
 
 @media (max-width: 480px) {
+    p.card__text {
+        font-weight: 100;
+    }
+
+    li {
+        font-weight: 100;
+        font-size: 13px;
+    }
 
     .experiencia__cards .card .card__header {
         display: flex;
@@ -510,7 +518,6 @@
 
 .experiencia__cards .card .card__competencias {
     list-style: disc;
-    text-align: justify;
     padding-left: 1.8rem;
     line-height: 4rem;
     font-size: 1.4rem;
@@ -532,10 +539,11 @@
 
 /* Responsive - Experiencia */
 @media (max-width: 480px) {
+
     .experiencia__cards .card {
         column-gap: 2.5rem;
         text-align: left;
-        text-align: justify;
+
     }
 
     .experiencia__cards .card .card__img {
@@ -545,15 +553,18 @@
     .experiencia__cards .card .card__header>p {
         margin: 1rem 0;
         font-size: 1.4rem;
+        font-weight: 100;
     }
 
     .experiencia__cards .card .card__text {
-        font-size: 1.4rem;
+        font-size: 13px;
+        margin-bottom: 4rem;
     }
 
     .experiencia__cards .card .card__competencias {
         line-height: 3rem;
         gap: 2rem;
+
     }
 
     .experiencia__cards .card .card__herramientas {
