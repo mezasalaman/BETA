@@ -1,4 +1,6 @@
-/* ---------- Animaciones ---------- */
+/* ==========================================================
+   🔸 ANIMACIONES
+   ========================================================== */
 @keyframes fadeUp {
     0% {
         opacity: 0;
@@ -11,7 +13,9 @@
     }
 }
 
-/* ---------- Banner ---------- */
+/* ==========================================================
+   🔸 BANNER
+   ========================================================== */
 .banner {
     text-align: center;
     padding: 1rem 0;
@@ -54,18 +58,9 @@
     object-fit: contain;
 }
 
-/* 🔹 Ajuste para móviles */
-@media (max-width: 480px) {
-    .banner__img {
-        margin: 2rem auto 0;
-    }
-
-    .banner__title {
-        margin-bottom: 2rem;
-    }
-}
-
-/* ---------- Sección: Tecnologías ---------- */
+/* ==========================================================
+   🔸 TECNOLOGÍAS
+   ========================================================== */
 .tecnologias {
     display: flex;
     justify-content: center;
@@ -91,32 +86,9 @@
     transform: scale(1.05);
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 780px) {
-    .tecnologias {
-        gap: 1.2rem;
-        padding-bottom: 1rem;
-    }
-
-    .tecnologias img {
-        max-width: 60px;
-        flex: 1 1 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .banner__title {
-        font-size: 3.2rem;
-        animation: fadeUp 0.8s ease-out 0.2s both;
-    }
-
-    .tecnologias img {
-        max-width: 45px;
-        animation: fadeUp 0.8s ease-out 0.3s both;
-    }
-}
-
-/* :::::::::::: SECTION: REQUERIMIENTO :::::::::::: */
+/* ==========================================================
+   🔸 SECCIÓN REQUERIMIENTO
+   ========================================================== */
 section {
     width: 100%;
     max-width: 1100px;
@@ -132,7 +104,9 @@ section {
     font-weight: 300;
 }
 
-/* :::::::::::: SECTION: USER PERSON :::::::::::: */
+/* ==========================================================
+   🔸 USER PERSON
+   ========================================================== */
 .section__userPerson .cards {
     display: flex;
     column-gap: 5rem;
@@ -162,24 +136,8 @@ section {
     margin: 2rem 0px;
 }
 
-@media (max-width: 768px) {
-    .section__userPerson .cards {
-        flex-direction: column;
-        row-gap: 5rem;
-        align-items: center;
-    }
-
-    .section__userPerson .card {
-        max-width: 50rem;
-    }
-
-    .section__userPerson .card .card__info {
-        max-width: none;
-    }
-}
-
 /* ==========================================================
-   SECCIÓN: INVESTIGACIÓN UX
+   🔸 INVESTIGACIÓN UX
    ========================================================== */
 .subtitulo_ayuda {
     margin-bottom: 1rem;
@@ -189,10 +147,6 @@ section {
 .Titulo_general {
     margin-bottom: 5rem;
 }
-
-/* ============================ */
-/* SECCIÓN INVESTIGACIÓN UX     */
-/* ============================ */
 
 .subtitulo_card {
     font-weight: 500;
@@ -216,10 +170,8 @@ section {
 .investigacion .contenedor {
     width: 100%;
     max-width: 1200px;
-    /* ✅ Antes era 105rem */
     margin: 0 auto;
     padding: 0 1rem;
-    /* ✅ Agregamos padding para que respire */
     text-align: center;
 }
 
@@ -236,7 +188,6 @@ section {
     opacity: 0.8;
 }
 
-/* ========== GRID PRINCIPAL ========== */
 .investigacion__grid {
     padding-top: 5rem;
     display: grid;
@@ -276,55 +227,14 @@ section {
     transform: scale(1.03);
 }
 
-/* Card Wide */
 .investigacion__grid .card--wide {
     grid-column: 2 / 4;
     grid-row: 2;
 }
 
-/* ========== MEDIA QUERIES ========== */
-
-/* Tablets: mantenemos 3 columnas igual que desktop */
-@media (max-width: 992px) {
-    .investigacion__grid {
-        grid-template-columns: repeat(3, 1fr);
-        /* mismo layout que desktop */
-    }
-
-    .investigacion__grid .card--wide {
-        grid-column: 2 / 4;
-        /* ocupa columnas 2 y 3 */
-    }
-
-    .investigacion h1 {
-        font-size: 2.4rem;
-    }
-}
-
-/* Celulares: una columna, todo apilado */
-@media (max-width: 600px) {
-    .investigacion__grid {
-        grid-template-columns: 1fr;
-        /* 1 columna */
-    }
-
-    .investigacion__grid .card--wide {
-        grid-column: auto;
-        /* ocupa toda la fila */
-    }
-
-    .investigacion h1 {
-        font-size: 2rem;
-    }
-
-    .investigacion__grid .card {
-        padding: 1.5rem;
-    }
-}
-
-
-
-/* :::::::::::: SECTION: Diseño de Soluciones UX/UI :::::::::::: */
+/* ==========================================================
+   🔸 DISEÑO DE SOLUCIONES UX/UI
+   ========================================================== */
 .diseno {
     margin-top: 10rem;
     width: 100%;
@@ -348,7 +258,6 @@ section {
     opacity: 0.8;
 }
 
-/* ::::: GRID ::::: */
 .diseno__grid {
     margin-top: 10rem;
     display: grid;
@@ -383,25 +292,13 @@ section {
     transform: scale(1.03);
 }
 
-/* ::::: Card Grande ::::: */
 .diseno__grid .card--grande {
     grid-column: span 3;
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 780px) {
-    .diseno__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .diseno__grid .card--grande {
-        grid-column: auto;
-    }
-}
-
-/* ========================================= */
-/* SECCIÓN COMPONENTES REACT */
-/* ========================================= */
+/* ==========================================================
+   🔸 COMPONENTES REACT
+   ========================================================== */
 .componentes-react-section {
     width: 100%;
     max-width: 1100px;
@@ -447,12 +344,13 @@ section {
     object-fit: cover;
 }
 
-/* :::::::::::: SECTION: INFO :::::::::::: */
+/* ==========================================================
+   🔸 INFO / INTERFAZ
+   ========================================================== */
 .section--info .section__img {
     margin-top: 7rem;
 }
 
-/* :::::::::::: SECTION: INTERFAZ :::::::::::: */
 .section--interfaz .section__img {
     display: flex;
     column-gap: 5rem;
@@ -470,28 +368,11 @@ section {
     justify-content: space-between;
 }
 
-@media (max-width: 480px) {
-    .section--interfaz .section__img {
-        flex-direction: column;
-    }
+/* ==========================================================
+   🔸 MEDIA QUERIES
+   ========================================================== */
 
-    .section--interfaz .img__container--01 {
-        row-gap: 3rem;
-    }
-
-    .section--interfaz .img__container--02 {
-        row-gap: 3rem;
-        margin-top: 3rem;
-    }
-}
-
-
-
-
-/* ========================================= */
-/* 🔹 AJUSTES RESPONSIVE GENERALES 🔹 */
-/* ========================================= */
-
+/* ---------- 1024px ---------- */
 @media (max-width: 1024px) {
 
     .investigacion .contenedor,
@@ -510,7 +391,46 @@ section {
     }
 }
 
+/* ---------- 992px (tablets investigación) ---------- */
+@media (max-width: 992px) {
+    .investigacion__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .investigacion__grid .card--wide {
+        grid-column: 2 / 4;
+    }
+
+    .investigacion h1 {
+        font-size: 2.4rem;
+    }
+}
+
+/* ---------- 780px ---------- */
 @media (max-width: 780px) {
+    .tecnologias {
+        gap: 1.2rem;
+        padding-bottom: 1rem;
+    }
+
+    .tecnologias img {
+        max-width: 60px;
+        flex: 1 1 40px;
+    }
+
+    .section__userPerson .cards {
+        flex-direction: column;
+        row-gap: 5rem;
+        align-items: center;
+    }
+
+    .section__userPerson .card {
+        max-width: 50rem;
+    }
+
+    .section__userPerson .card .card__info {
+        max-width: none;
+    }
 
     .investigacion__grid,
     .diseno__grid {
@@ -532,10 +452,39 @@ section {
     .imagen-react {
         margin: 3rem 0;
     }
+
+    .diseno__grid .card--grande {
+        grid-column: auto;
+    }
 }
 
+/* ---------- 600px ---------- */
+@media (max-width: 600px) {
+    .investigacion__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .investigacion__grid .card--wide {
+        grid-column: auto;
+    }
+
+    .investigacion h1 {
+        font-size: 2rem;
+    }
+
+    .investigacion__grid .card {
+        padding: 1.5rem;
+    }
+}
+
+/* ---------- 480px ---------- */
 @media (max-width: 480px) {
+    .banner__img {
+        margin: 2rem auto 0;
+    }
+
     .banner__title {
+        margin-bottom: 2rem;
         font-size: 2.2rem;
         padding: 0 1rem;
     }
@@ -561,5 +510,33 @@ section {
 
     .titulo-seccion {
         font-size: 1.6rem;
+    }
+
+    .tecnologias img {
+        max-width: 45px;
+        animation: fadeUp 0.8s ease-out 0.3s both;
+    }
+
+    /* 🔹 Títulos generales */
+    .banner__title,
+    .Titulo_general,
+    .titulo-seccion,
+    h1,
+    h2,
+    h3 {
+        font-size: 20px;
+    }
+
+    .section--interfaz .section__img {
+        flex-direction: column;
+    }
+
+    .section--interfaz .img__container--01 {
+        row-gap: 3rem;
+    }
+
+    .section--interfaz .img__container--02 {
+        row-gap: 3rem;
+        margin-top: 3rem;
     }
 }

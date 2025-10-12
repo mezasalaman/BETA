@@ -294,6 +294,20 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .typewriter {
+        font-size: 16px;
+
+    }
+
+    .banner__title {
+        font-size: 24px;
+    }
+
+    .typewriter-delay {
+        font-size: 12px;
+    }
+
 }
 
 
@@ -392,6 +406,18 @@
 }
 
 @media (max-width: 480px) {
+
+    .experiencia__cards .card .card__header {
+        display: flex;
+        flex-direction: column;
+        /* 👈 Esto baja la fecha debajo del título */
+
+        text-align: left;
+        /* 👈 fuerza alineación a la izquierda */
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
     .section--proyectos {
         padding: 5rem 0;
     }
@@ -404,6 +430,10 @@
     .section--proyectos p {
         text-align: center;
         margin: 0 auto;
+    }
+
+    .section--about {
+        padding-top: 110px;
     }
 
     .proyectos__cards {
@@ -470,7 +500,7 @@
 /* Contenido */
 .experiencia__cards .card .card__header {
     display: flex;
-    align-items: center;
+
     justify-content: space-between;
 }
 
@@ -480,6 +510,7 @@
 
 .experiencia__cards .card .card__competencias {
     list-style: disc;
+    text-align: justify;
     padding-left: 1.8rem;
     line-height: 4rem;
     font-size: 1.4rem;
@@ -503,6 +534,8 @@
 @media (max-width: 480px) {
     .experiencia__cards .card {
         column-gap: 2.5rem;
+        text-align: left;
+        text-align: justify;
     }
 
     .experiencia__cards .card .card__img {
