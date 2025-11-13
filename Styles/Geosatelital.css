@@ -49,6 +49,7 @@
     max-width: 105rem;
     margin: 5rem auto 0;
     animation: fadeUp 1s ease-out 0.5s both;
+    object-fit: cover;
 }
 
 .banner__img img {
@@ -481,6 +482,7 @@ section {
 @media (max-width: 480px) {
     .banner__img {
         margin: 2rem auto 0;
+        object-fit: cover;
     }
 
     .banner__title {
