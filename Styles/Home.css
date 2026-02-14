@@ -45,7 +45,7 @@
 }
 
 .banner__title span {
-    color: var(--white);
+    color: var(--primary-color);
 }
 
 .banner__info p {
@@ -67,7 +67,7 @@
     margin-right: 8rem;
     height: auto;
     object-fit: contain;
-
+    border-radius: 8px;
 }
 
 /* Responsive - Banner */
@@ -114,7 +114,7 @@
     color: white;
     font-weight: 600;
     font-size: 16px;
-    border: 2px solid #fff;
+    border: 2px solid #00027C;
     border-radius: 8px;
     text-decoration: none;
     line-height: 1;
@@ -124,7 +124,7 @@
 }
 
 .btn-cv:hover {
-    background-color: #fff;
+    background-color: #00027C;
     color: black;
     transform: scale(1.05);
     filter: brightness(1.2);
@@ -253,33 +253,33 @@
     text-align: center;
     background-color: transparent;
     color: white;
-    border: 2px solid #fff;
+    border: 2px solid #00027C;
     transition: background-color 0.3s ease, color 0.3s ease;
     box-sizing: border-box;
 }
 
 .about__cards ul li:hover {
-    background-color: #fff;
+    background-color: #00027C;
     color: white;
 }
 
 /* Cards de Estrategias */
 .about__cards .card--estrategias ul li {
-    border: 2px solid #595C5E;
+    border: 2px solid var(--blue);
 }
 
 .about__cards .card--estrategias ul li:hover {
-    background-color: var(--white);
-    color: black;
+    background-color: var(--blue);
+    color: white;
 }
 
 /* Cards de Metodologías */
 .about__cards .card--metodologias ul li {
-    border: 2px solid #595C5E;
+    border: 2px solid var(--yellow);
 }
 
 .about__cards .card--metodologias ul li:hover {
-    background-color: var(--white);
+    background-color: var(--yellow);
     color: black;
 }
 
@@ -341,7 +341,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     /* ✅ Dos columnas */
-    gap: 2rem 2rem;
+    gap: 3rem 1rem;
     justify-items: center;
     margin-top: 5rem;
     max-width: 1200px;
@@ -352,24 +352,25 @@
 .proyecto__card {
     width: 100%;
     max-width: 500px;
-    transition: transform 0.4s ease, box-shadow 0.2s ease;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
 .proyecto__card a {
     display: block;
     border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .proyecto__card a:hover {
-    transform: scale(1.02);
+    transform: scale(1.08);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .proyecto__card img {
     width: 100%;
     height: auto;
+    border-radius: 12px;
     object-fit: cover;
     display: block;
 }
