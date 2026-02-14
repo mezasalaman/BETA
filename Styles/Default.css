@@ -59,7 +59,7 @@ a {
 .section .section__title {
     text-transform: uppercase;
     max-width: 400px;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--white);
     padding-bottom: 3rem;
     margin-bottom: 3rem;
 }
