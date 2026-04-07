@@ -16,12 +16,13 @@
 }
 
 .hero-mockup-main {
-    padding-top: 80px;
+    padding-top: 20px;
     padding-bottom: 80px;
 }
 
 /* --- HERO ESTILO CENTRADO --- */
 .satelock-hero {
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +65,7 @@
     /* Centra horizontalmente */
     text-align: center;
     /* Centra el texto */
-    padding-top: 8rem;
+    padding-top: 40px;
 }
 
 /* Título corregido */
@@ -105,6 +106,7 @@
 
 /* Botón Explorar */
 .btn-explore {
+
     background-color: #4A6FFF;
     color: #ffffff;
     padding: 1.6rem 3.5rem;
@@ -687,4 +689,120 @@
         border-radius: 1.2rem;
         /* Esquinas menos redondeadas en pantallas pequeñas */
     }
+}
+
+/* --- CONFIGURACIÓN GENERAL DEL HERO --- */
+.project-hero {
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text-block {
+    max-width: 850px;
+    margin-bottom: 4rem;
+}
+
+.hero-title-massive {
+    font-size: clamp(3.5rem, 8vw, 8rem);
+    /* Tamaño fluido según pantalla */
+    font-weight: 800;
+    line-height: 1;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.hero-description {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 65rem;
+    margin: 0 auto;
+}
+
+/* --- SOLUCIÓN A LA IMAGEN DE SATELOCK --- */
+.hero-mockup-main {
+    padding-top: 40px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 5rem auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-mockup-main img {
+    width: 100%;
+    height: auto;
+    /* Mantiene proporción */
+    max-height: 70vh;
+    /* Evita que en pantallas muy altas se desborde */
+    object-fit: contain;
+    /* Ajusta sin recortar */
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
+}
+
+/* --- BOTÓN PILL --- */
+.btn-primary-pill {
+    background-color: #3b71fe;
+    color: #fff;
+    padding: 1.8rem 4rem;
+    border-radius: 10rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-pill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(59, 113, 254, 0.4);
+}
+
+/* --- AJUSTES RESPONSIVE (MÓVIL) --- */
+@media (max-width: 768px) {
+    .project-hero {
+        padding: 6rem 1.5rem;
+    }
+
+    .hero-text-block {
+        margin-bottom: 3rem;
+    }
+
+    .hero-title-massive {
+        font-size: 3.8rem;
+    }
+
+    .hero-mockup-main {
+        padding: 0;
+        /* Aprovechar todo el ancho en móvil */
+        margin-bottom: 4rem;
+    }
+
+    .hero-mockup-main img {
+        width: 110%;
+        /* Un toque extra de ancho para que se luzca el detalle */
+        margin-left: -5%;
+        /* Centrado compensado */
+    }
+
+    .btn-primary-pill {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* --- ESTILOS EN SELLERCENTER.CSS --- */
+
+.hero-mockup-main {
+    /* ... tus otros estilos (width, max-width, etc.) ... */
+
+    /* AÑADE ESTA LÍNEA */
+    margin-top: 5rem;
+    /* Esto crea separación con el botón de arriba */
 }
