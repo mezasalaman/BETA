@@ -1,0 +1,1065 @@
+/* :::::::::::::::::::::::::::::::::::::::::::: */
+/* ==============  FOOD DELIVERY  ============= */
+/* :::::::::::::::::::::::::::::::::::::::::::: */
+
+.food-main {
+    background-color: var(--bg-color);
+    padding-bottom: 10rem;
+    font-family: var(--primary-font), sans-serif;
+}
+
+.content {
+    max-width: 1050px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* --- NAVBAR --- */
+.navbar,
+.logo-text,
+.link--main {
+    font-family: var(--primary-font), sans-serif;
+}
+
+/* --- HERO SECTION RE-ESTILIZADA (CORRECCIÓN FIGMA) --- */
+.project-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0 6rem;
+    background-color: #000;
+}
+
+/* Título Masivo Compacto Estilo Figma */
+.hero-title-massive {
+    font-size: 9.2rem;
+    /* Tamaño masivo */
+    font-weight: 800;
+    /* Extra Bold */
+
+    /* EL SECRETO: INTERLINEADO FIJO MUY BAJO */
+    line-height: 7.5rem;
+    /* Ajusta este valor (7.5rem o 75px) para pegar las líneas */
+
+    letter-spacing: -0.055em;
+    /* Apretamos las letras aún más */
+    color: #fff;
+    margin: 4rem 0 3rem;
+    /* Espaciado ajustado */
+    text-transform: uppercase;
+    max-width: 1050px;
+}
+
+.highlight {
+    color: var(--primary-color);
+    display: block;
+    /* Fuerza la segunda línea */
+    margin-top: 1rem;
+    /* Espacio sutil entre las líneas apretadas */
+}
+
+.hero-description {
+    max-width: 70rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+    font-weight: 400;
+}
+
+/* --- RESPONSIVE OPTIMIZADO (Ajustando interlineado) --- */
+
+@media (max-width: 1024px) {
+    .hero-title-massive {
+        font-size: 7rem;
+        line-height: 6rem;
+        /* Ajuste proporcional */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title-massive {
+        font-size: 5rem;
+        line-height: 4.5rem;
+        /* Ajuste proporcional */
+        letter-spacing: -0.03em;
+    }
+
+    .hero-description {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title-massive {
+        font-size: 3.4rem;
+        line-height: 3.2rem;
+        /* Ajuste proporcional */
+    }
+}
+
+/* --- ESTILO DEL BOTÓN --- */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    background-color: #3b71fe;
+    /* Azul sólido del Figma */
+    color: #ffffff;
+    padding: 1.8rem 4rem;
+    /* Padding generoso para que se vea Senior */
+    border-radius: 10rem;
+    /* Botón tipo píldora */
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #2a5ecf;
+    /* Un poco más oscuro al pasar el mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(59, 113, 254, 0.3);
+}
+
+.btn-icon {
+    width: 2rem;
+    /* Tamaño de la flecha */
+    height: auto;
+    /* Si tu flecha es negra o de otro color, este filtro la vuelve blanca */
+    filter: brightness(0) invert(1);
+}
+
+/* --- CONTENEDOR DEL MOCKUP --- */
+.hero-mockup-main {
+    width: 100%;
+    max-width: 1050px;
+    /* Tu grid estándar */
+    margin: 8rem auto 0;
+    /* 80px de aire ARRIBA (exterior) */
+
+    /* PADDING INTERNO A 0 (Para que la imagen toque los bordes si es necesario) */
+    padding: 0;
+
+    background: #0d0d0f;
+    /* Fondo oscuro del contenedor */
+    border-radius: 4rem;
+    /* Redondeado Senior */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6);
+
+    display: block;
+    /* O flex si necesitas centrado */
+    overflow: hidden;
+    /* Asegura que la imagen no se salga de las esquinas redondeadas */
+}
+
+/* --- LA IMAGEN INTERNA AL 100% --- */
+.hero-mockup-main img {
+    width: 100%;
+    /* Ocupa el 100% del ancho del contenedor (max 1050px) */
+    height: auto;
+    /* Mantiene la proporción original */
+    display: block;
+    /* Elimina espacio blanco debajo de la imagen */
+    object-fit: contain;
+    /* Asegura que no se corte */
+}
+
+/* --- RESPONSIVE OPTIMIZADO --- */
+
+/* Tablets (1024px o menos) */
+@media (max-width: 1024px) {
+    .hero-mockup-main {
+        margin-top: 6rem;
+        /* Bajamos el espacio exterior a 60px */
+        border-radius: 3rem;
+        /* Redondeado más suave en tablets */
+    }
+}
+
+/* Móviles (768px o menos) */
+@media (max-width: 768px) {
+    .hero-mockup-main {
+        margin-top: 4rem;
+        /* Bajamos el espacio exterior a 40px */
+        border-radius: 2.5rem;
+    }
+}
+
+/* Móviles muy pequeños (480px o menos) */
+@media (max-width: 480px) {
+    .hero-mockup-main {
+        margin-top: 2rem;
+        /* Espacio mínimo arriba */
+    }
+}
+
+/* --- SECCIÓN PROBLEMA Y SOLUCIÓN --- */
+.section-container {
+    padding: 8rem 0;
+    width: 100%;
+}
+
+.section__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.split-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+.card-dark,
+.card-blue-gradient {
+    padding: 4.5rem;
+    border-radius: 3.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-dark {
+    background: #0d0d0f;
+    border: 1px solid rgba(255, 77, 77, 0.1);
+}
+
+.card-blue-gradient {
+    background: linear-gradient(135deg, #7A9BFF 0%, #2C2FFF 100%);
+    color: var(--white);
+}
+
+/* Alineaciones Internas */
+.card-header-inline {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.icon-tag-sm {
+    width: 1.6rem;
+    height: auto;
+}
+
+/* COLORES FIGMA (EL ROJO) */
+.text-error {
+    color: #ff4d4d !important;
+    font-weight: 700;
+}
+
+.label-error {
+    color: #ff4d4d;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+.label-white {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+.card-main-title {
+    font-size: 3.2rem;
+    margin: 1.5rem 0 2rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.card-description-text {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: auto;
+}
+
+/* Métricas Footer */
+.card-footer-metrics {
+    display: flex;
+    gap: 5rem;
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-metric-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+}
+
+.footer-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card-badge-check {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 3.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 10rem;
+    align-self: flex-start;
+}
+
+.icon-check-sol {
+    width: 2rem;
+}
+
+/* ========================================================== */
+/* === SECCIÓN ESPECÍFICA: CONTEXTO DE NEGOCIO (BENTO) === */
+/* ========================================================== */
+
+/* Definición del GRID Maestro */
+.bento-context-grid {
+    display: grid;
+    /* 3 columnas de igual tamaño */
+    grid-template-columns: repeat(3, 1fr);
+    /* Definimos alturas mínimas para que la tarjeta grande de la izquierda tenga altura */
+    grid-template-rows: repeat(2, minmax(220px, auto)) auto;
+    gap: 2.5rem;
+    /* Mapa de áreas: área1 ocupa 2x2 a la izquierda */
+    grid-template-areas:
+        "area1 area1 area2"
+        "area1 area1 area3"
+        "area4 area4 area4";
+    width: 100%;
+}
+
+/* Asignación obligatoria de áreas */
+.bento-card-main {
+    grid-area: area1;
+}
+
+.bento-card-up {
+    grid-area: area2;
+}
+
+.bento-card-down {
+    grid-area: area3;
+}
+
+.bento-card-base {
+    grid-area: area4;
+}
+
+/* Estilo Base de las Tarjetas Bento */
+.bento-card {
+    background: #111216;
+    /* Gris oscuro del diseño */
+    padding: 3.5rem;
+    border-radius: 3.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- TARJETA GRANDE IZQUIERDA (MAIN) --- */
+.bento-card-main .bento-label {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.15rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.bento-card-main .bento-card-title {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.bento-card-main .bento-card-description {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* --- TARJETAS CENTRADAS DERECHA (UP/DOWN) --- */
+.bento-card-center {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.bento-card-center h4 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.icon-circle-bg {
+    width: 5rem;
+    height: 5rem;
+    background: rgba(44, 79, 255, 0.1);
+    /* Azul sutil del diseño */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.bento-icon {
+    width: 2rem;
+    filter: brightness(0.8) saturate(1.2);
+    /* Ajuste sutil de color del icono */
+}
+
+/* --- TARJETA FILA INFERIOR (HORIZONTAL BASE) --- */
+.bento-card-horizontal {
+    flex-direction: row !important;
+    /* Fuerza la alineación horizontal */
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 5rem;
+}
+
+.bento-info-base {
+    max-width: 65%;
+    text-align: left;
+}
+
+.bento-info-base h4 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Círculo Target +21% */
+.target-badge-circle {
+    min-width: 9rem;
+    height: 9rem;
+    background: #08080a;
+    /* Un tono más oscuro */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 1.5rem rgba(44, 79, 255, 0.08);
+    /* Sombra interna azul sutil */
+}
+
+.badge-target-num {
+    color: #4A6FFF;
+    /* Tu azul primario */
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.badge-target-unit {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+/* --- ESTILOS COMPARTIDOS --- */
+.small-text {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* ========================================================== */
+/* === RESPONSIVE DESIGN ESPECÍFICO === */
+/* ========================================================== */
+
+@media (max-width: 900px) {
+    .bento-context-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+        /* Desactivamos el grid */
+        grid-template-rows: auto;
+    }
+
+    .bento-card {
+        grid-area: auto;
+        /* Las tarjetas fluyen una debajo de otra */
+        width: 100%;
+    }
+
+    .bento-card-horizontal {
+        flex-direction: column !important;
+        /* Vuelven a columna en móvil */
+        text-align: center;
+        gap: 2.5rem;
+    }
+
+    .bento-info-base {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+/* --- DECISIONES CLAVE (CORREGIDO) --- */
+.metrics-dashboard {
+    display: grid;
+    grid-template-columns: 35rem 1fr;
+    gap: 2rem;
+    /* Reduje un poco el gap para que respire mejor en 1050px */
+    align-items: stretch;
+    /* Esto obliga a que ambas columnas tengan la misma altura */
+}
+
+.metrics-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribuye las 3 etiquetas equitativamente */
+    height: 100%;
+}
+
+.label-item {
+    background: #111114;
+    /* Color más acorde a tus otras tarjetas */
+    padding: 2.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    /* Quitamos el margin-bottom fijo para que justify-content haga el trabajo */
+    margin-bottom: 0;
+    flex: 1;
+    /* Hace que todas las etiquetas pesen lo mismo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Espaciador entre etiquetas excepto la última */
+.label-item:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.label-item.active {
+    border-left: 4px solid #4A6FFF;
+    /* Cambié var por el color directo para asegurar */
+    background: linear-gradient(90deg, rgba(44, 79, 255, 0.05), transparent);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.metrics-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    /* Forzamos filas iguales */
+    gap: 2rem;
+}
+
+.metric-case-card {
+    background: #111114;
+    padding: 4rem 2rem;
+    border-radius: 2.4rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.metric-num {
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: #4A6FFF;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* --- SECCIÓN MOCKUP FINAL (ALINEACIÓN REPARADA) --- */
+
+.mockup-section {
+    text-align: center;
+    padding-bottom: 12rem;
+    padding-top: 8rem;
+    /* Aire superior */
+}
+
+/* Contenedor de texto limitado al ancho principal */
+.mockup-text-container {
+    margin-bottom: 8rem;
+    /* Espacio con la imagen */
+    max-width: 800px;
+    /* Hacemos el texto un poco más compacto que la grid principal para que respire */
+    margin: 0 auto;
+}
+
+.label-dim-blue {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    display: block;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.mockup-title {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 4rem;
+}
+
+/* Tags / Pills Estilo Figma */
+.mockup-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-bottom: 50px;
+}
+
+.tag-pills {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.8rem 2.2rem;
+    border-radius: 10rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Imagen del iPhone completa y alineada al centro */
+.iphone-image-full {
+    width: 100%;
+    max-width: 1050px;
+    /* Alineado con la grid principal */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4rem;
+    /* Mantiene los bordes redondeados si la imagen los tiene */
+    filter: drop-shadow(0 4rem 10rem rgba(0, 0, 0, 0.3));
+    /* Sombra para profundidad */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mockup-title {
+        font-size: 3.2rem;
+    }
+
+    .mockup-tags {
+        flex-wrap: wrap;
+    }
+
+    .iphone-image-full {
+        border-radius: 2rem;
+    }
+
+    .mockup-text-container {
+        margin-bottom: 4rem;
+        padding: 0 2rem;
+    }
+}
+
+/* ========================================================== */
+/* === 1. SECCIÓN PROBLEMA Y SOLUCIÓN (SPLIT CARDS) === */
+/* ========================================================== */
+
+.split-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: stretch;
+}
+
+.card-dark {
+    background: #0d0d0f;
+    padding: 4.5rem;
+    border-radius: 3.2rem;
+    border: 1px solid rgba(255, 77, 77, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-blue-gradient {
+    background: linear-gradient(135deg, #4A6FFF 0%, #2C2FFF 100%);
+    padding: 4.5rem;
+    border-radius: 3.2rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-error {
+    color: #ff4d4d !important;
+}
+
+.card-footer-metrics {
+    display: flex;
+    gap: 5rem;
+    margin-top: auto;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ========================================================== */
+/* === 2. CONTEXTO DE NEGOCIO (BENTO GRID) === */
+/* ========================================================== */
+
+.bento-context-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(220px, auto)) auto;
+    gap: 2.5rem;
+    grid-template-areas:
+        "area1 area1 area2"
+        "area1 area1 area3"
+        "area4 area4 area4";
+}
+
+.bento-card-main {
+    grid-area: area1;
+}
+
+.bento-card-up {
+    grid-area: area2;
+}
+
+.bento-card-down {
+    grid-area: area3;
+}
+
+.bento-card-base {
+    grid-area: area4;
+}
+
+.bento-card {
+    background: #111216;
+    padding: 3.5rem;
+    border-radius: 3.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.bento-card-horizontal {
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 5rem;
+}
+
+.target-badge-circle {
+    min-width: 9rem;
+    height: 9rem;
+    background: #08080a;
+    border: 1px solid rgba(74, 111, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ========================================================== */
+/* === 3. DECISIONES CLAVE (METRICS DASHBOARD) === */
+/* ========================================================== */
+
+.metrics-dashboard {
+    display: grid;
+    grid-template-columns: 35rem 1fr;
+    gap: 2.5rem;
+}
+
+.metrics-labels {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.label-item {
+    background: #111114;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+}
+
+.label-item.active {
+    border-left: 4px solid #4A6FFF;
+    background: linear-gradient(90deg, rgba(74, 111, 255, 0.05), transparent);
+}
+
+.metrics-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.metric-case-card {
+    background: #111114;
+    padding: 4rem 2rem;
+    border-radius: 2.4rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.metric-num {
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: #4A6FFF;
+    display: block;
+}
+
+/* ========================================================== */
+/* === RESPONSIVE CONSOLIDADO === */
+/* ========================================================== */
+
+@media (max-width: 1024px) {
+    .metrics-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .metrics-labels {
+        flex-direction: row;
+    }
+
+    .label-item {
+        flex: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .split-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .bento-context-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: none;
+    }
+
+    .bento-card {
+        grid-area: auto;
+    }
+
+    .bento-card-horizontal {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 4rem 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .metrics-labels {
+        flex-direction: column;
+    }
+
+    .metrics-grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .card-footer-metrics {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* --- SECCIÓN MOCKUP SOLUTION --- */
+
+.mockup-section {
+    text-align: center;
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mockup-header {
+    margin-bottom: 6rem;
+    max-width: 800px;
+}
+
+.mockup-title {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    margin: 2rem 0 4rem;
+}
+
+/* Tags / Pills */
+.mockup-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    /* Importante para que no se corten en móvil */
+}
+
+.tag-pills {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 0.8rem 2.2rem;
+    border-radius: 10rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* LA IMAGEN RESPONSIVA */
+.iphone-image {
+    width: 100%;
+    max-width: 1050px;
+    /* Alineado con tu grid principal */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4rem;
+    /* Redondeado Senior */
+    filter: drop-shadow(0 4rem 10rem rgba(0, 0, 0, 0.3));
+    /* Sombra para profundidad */
+    object-fit: contain;
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 768px) {
+    .mockup-section {
+        padding: 6rem 0;
+    }
+
+    .mockup-title {
+        font-size: 3.2rem;
+    }
+
+    .iphone-image {
+        max-width: 90%;
+        /* Un poco de margen en los lados en móvil */
+        border-radius: 2rem;
+    }
+
+    .tag-pills {
+        font-size: 1.1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mockup-title {
+        font-size: 2.8rem;
+    }
+
+    .mockup-tags {
+        gap: 1rem;
+    }
+}
+
+/* --- AJUSTE DE ESPACIADO --- */
+
+.mockup-section {
+    text-align: center;
+    /* Reducimos el padding superior de 10rem a 4rem o 6rem */
+    padding: 5rem 0 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mockup-header {
+    /* Reducimos el margen inferior para que las tags estén más cerca de la imagen */
+    margin-bottom: 4rem;
+    max-width: 800px;
+}
+
+.mockup-title {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #ffffff;
+    /* Reducimos el margen superior e inferior del título */
+    margin: 1.5rem 0 3rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .mockup-section {
+        padding: 4rem 0 6rem;
+        /* Aún menos espacio en móviles */
+    }
+
+    .mockup-title {
+        font-size: 3.2rem;
+        margin: 1rem 0 2rem;
+    }
+}
+
+/* --- AJUSTE DE ESPACIO ENTRE TAGS Y MOCKUP --- */
+
+.mockup-header {
+    /* Bajamos de 8rem/6rem a solo 3rem para pegar la imagen */
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mockup-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    /* Asegúrate de que no haya un margin-bottom aquí también */
+    margin-bottom: 0;
+}
+
+.iphone-image {
+    width: 100%;
+    max-width: 1050px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* Si la imagen tiene un margen superior interno, lo eliminamos */
+    margin-top: 0;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .mockup-header {
+        margin-bottom: 2rem;
+        /* Aún más cerca en móviles */
+    }
+}

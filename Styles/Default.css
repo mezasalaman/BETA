@@ -30,13 +30,12 @@ body {
 }
 
 ul {
-    list-style: none;
+
     padding: 0px;
     margin: 0px;
 }
 
 img {
-    width: 100%;
     object-fit: cover;
     display: block;
 }
@@ -85,7 +84,8 @@ a {
 h1,
 h2,
 h3 {
-    margin: 0px;
+
+    font-size: 36px
 }
 
 h1 {
@@ -96,7 +96,14 @@ h2 {
     font-weight: 400;
     margin-top: 2rem;
     font-size: 20px;
-    line-height: 2rem;
+
+}
+
+h3 {
+    font-weight: 400;
+    margin-top: 2rem;
+    font-size: 16px;
+
 }
 
 p {

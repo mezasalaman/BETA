@@ -2,322 +2,278 @@
 <html lang="es">
 
 <head>
-    <!-- METAINFO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- TIPOGRAFÍA -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <title>Carlos Meza | Product Designer</title>
+    <link rel="stylesheet" href="Styles/Normalize.css">
+    <link rel="stylesheet" href="Styles/Default.css">
+    <link rel="stylesheet" href="Styles/Nav.css">
+    <link rel="stylesheet" href="Styles/Home.css">
+    <link rel="stylesheet" href="Styles/Footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="./Media/Home/logo.png" type="image/x-icon">
-
-    <!-- ESTILOS -->
-    <link rel="stylesheet" href="./Styles/Normalize.css">
-    <link rel="stylesheet" href="./Styles/Default.css">
-    <link rel="stylesheet" href="./Styles/Nav.css">
-    <link rel="stylesheet" href="./Styles/Home.css">
-    <link rel="stylesheet" href="./Styles/Footer.css">
-
-    <title>Portafolio UX</title>
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header>
-        <nav>
-            <ul class="enlaces__content content">
-                <li>
-                    <a href="../index.html" class="link--main"></a>
-                </li>
-                <li class="enlace--proyecto">
-                    <a href="#" class="link--main link--proyectos">Proyectos</a>
-                    <ul class="subenlaces__content">
-                        <li><a href="./Pages/geosatelital.html">Geosatelital</a></li>
-                        <li><a href="./Pages/satelock.html">Sate Lock</a></li>
-                        <li><a href="./Pages/seller.html">Seller </a></li>
-                        <li><a href="./Pages/levelTour.html">Municipalidad</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="./Pages/about.html" class="link--main">Sobre mí</a>
-                </li>
-            </ul>
-        </nav>
 
-        <!-- BANNER -->
-        <div class="banner">
-            <div class="banner__content content">
-                <div class="banner__info">
-                    <h1 class="banner__title">Hola, soy Carlos Meza</h1>
-                    <h2 class="typewriter">Product Designer especializado en experiencia, métricas y funcionalidad.</h2>
-                    <p class="typewriter-delay">
-                        Investigo, prototipo y valido para crear experiencias medibles.
-                    </p>
-                    <a href="./Media/Home/CARLOSMEZA_CV.pdf" download class="btn-cv">Descargar CV</a>
-                </div>
-                <div class="banner__img">
-                    <img src="./Media/Home/final-portada.svg" alt="Foto de Carlos Meza">
-                </div>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-content">
+                <a href="index.html" class="logo-container">
+                    <img src="Media/Home/icono meza.svg" alt="Icono" class="logo-icon">
+                    <span class="logo-text">Carlos Meza</span>
+                </a>
+
+                <ul class="enlaces__content">
+                    <li class="enlace--proyecto">
+                        <a href="#proyectos" class="link--main">Proyectos</a>
+                        <div class="subenlaces__content">
+                            <a href="Pages/food-delivery.html">FoodDelivery</a>
+                            <a href="Pages/Satelock.html">Satelock</a>
+                            <a href="Pages/SellerCenter.html">Seller Center</a>
+                        </div>
+                    </li>
+                    <li><a href="Pages/about.html" class="link--main">Sobre mí</a></li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <!-- MAIN -->
     <main>
-        <!-- ABOUT -->
-        <section class="section section--about">
-            <div class="section__content content">
-                <h2 class="section__title">About me</h2>
-                <p>
-                    Soy Product Designer con enfoque en experiencia de usuario y análisis estratégico. Me especializo en
-                    optimizar procesos digitales y mejorar la interacción humano-computadora mediante investigación,
-                    prototipado y validación constante. Diseño experiencias intuitivas que generan impacto medible y
-                    aportan valor al negocio.
+        <section class="hero container">
+            <div class="hero-left">
+                <div class="badge-container">
+                    <span class="dot"></span>
+                    <span class="badge-text">DISPONIBLE PARA NUEVOS RETOS</span>
+                </div>
+                <h1 class="hero-title">Hola, soy <br><span class="highlight">Carlos Meza</span></h1>
+
+                <p class="hero-description desktop-only">
+                    Product Designer especializado en <strong>experiencia, métricas y funcionalidad</strong>.
+                    Creando soluciones digitales de alto impacto.
                 </p>
 
-                <div class="about__cards">
-                    <!-- Estrategias -->
-                    <div class="card--estrategias">
-                        <h3 class="card__title">Estrategias</h3>
-                        <ul>
-                            <li>Journey map</li>
-                            <li>Prototipado</li>
-                            <li>Wireframing</li>
-                            <li>Test de usabilidad</li>
-                            <li>Mapa de color</li>
-                            <li>User interviews</li>
-                            <li>Rediseño interactivo</li>
-                            <li>User stories</li>
-                            <li>Benchmarking</li>
-                            <li>Pruebas A/B</li>
-                            <li>Análisis heurísticos</li>
-                            <li>Análisis de competencia</li>
-                            <li>Análisis de métricas de uso</li>
-                        </ul>
-                    </div>
+                <a href="CARLOSMEZA_CV_PRODUCT.pdf" class="cta-button desktop-only" target="_blank">
+                    Descargar CV <span class="arrow">→</span>
+                </a>
+            </div>
 
-                    <!-- Metodologías -->
-                    <div class="card--metodologias">
-                        <h3 class="card__title">Metodologías</h3>
-                        <ul>
-                            <li>Design Thinking</li>
-                            <li>Scrum</li>
-                            <li>UCD</li>
-                            <li>Lean UX</li>
-                        </ul>
+            <div class="hero-right">
+                <img src="Media/Home/jajapportad.svg" alt="Ilustración Carlos Meza" class="hero-img">
+            </div>
+
+            <div class="mobile-only-content">
+                <p class="hero-description">
+                    Product Designer especializado en <strong>experiencia, métricas y funcionalidad</strong>.
+                    Creando soluciones digitales de alto impacto.
+                </p>
+                <a href="CARLOSMEZA_CV.pdf" class="cta-button" target="_blank">
+                    Descargar CV <span class="arrow">→</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="strategy container">
+            <div class="strategy-intro">
+                <h2>Evolucionando el diseño a través de la
+                    estrategia</h2>
+                <p>Mi enfoque combina la investigación profunda de usuarios con los objetivos de negocio. No solo
+                    diseño
+                    interfaces hermosas, sino soluciones funcionales que resuelven problemas reales y medibles.</p>
+                <p>El diseño de producto es una herramienta para crear valor, y mi misión es asegurar que cada
+                    decisión
+                    de diseño esté respaldada por datos y propósito.</p>
+            </div>
+            <div class="strategy-cards">
+                <div class="strategy-card">
+                    <div class="card-icon"><img src="Media/Home/estrategia.svg" alt="Estrategia"></div>
+                    <h3>Estrategia</h3>
+                    <p>Definición de problemas, research, user personas, customer journey maps y alineación con
+                        KPIs.
+                    </p>
+                </div>
+                <div class="strategy-card">
+                    <div class="card-icon"><img src="Media/Home/metodologia.svg" alt="Metodologías"></div>
+                    <h3>Metodologías</h3>
+                    <p>Diseño iterativo, wireframing, prototipado de alta fidelidad, pruebas de usabilidad y
+                        feedback.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects container">
+            <div class="section-header">
+                <h2>Proyectos Destacados</h2>
+                <p>Una selección de mis trabajos más recientes en diseño de producto.</p>
+            </div>
+            <div class="project-grid">
+                <div class="project-card large">
+                    <img src="Media/Home/Img-home-fooddelivery.svg" alt="FoodDelivery">
+                    <div class="project-info">
+
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="Media/Home/img-satelock.svg" alt="Satelock">
+                    <div class="project-info">
+
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="Media/Home/img-seller.svg" alt="Seller Center">
+                    <div class="project-info">
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROYECTOS -->
-        <section class="section section--proyectos">
-            <div class="section__content content">
-                <h2 class="section__title">Proyectos</h2>
-                <p>
-                    Explora algunos de los proyectos en los que he aplicado investigación UX, diseño estratégico y
-                    validación continua. Incluyen aplicaciones móviles y plataformas web, desarrolladas como soluciones
-                    completas y accesibles.
-                </p>
+        <section class="experience container">
+            <div class="section-header centered">
+                <h2>Experiencia Profesional</h2>
+                <p>Selección de mi trayectoria profesional colaborando con equipos multidisciplinarios.</p>
+            </div>
 
-                <div class="proyectos__cards">
-                    <div class="proyecto__card">
-                        <a href="./Pages/satelock.html">
-                            <img src="./Media/Home/SATELOCK.svg" alt="Sate Lock">
-                        </a>
-                    </div>
-                    <div class="proyecto__card">
-                        <a href="./Pages/geosatelital.html">
-                            <img src="./Media/Home/PANEL GEO.svg" alt="Geosatelital">
-                        </a>
-                    </div>
-                    <div class="proyecto__card">
-                        <a href="./Pages/seller.html">
-                            <img src="./Media/Home/SELLER CENTER.svg" alt="Seller">
-                        </a>
-                    </div>
-                    <div class="proyecto__card">
-                        <a href="./Pages/levelTour.html">
-                            <img src="./Media/Home/REAL-MUNI.svg" alt="Level Tour">
-                        </a>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <h3>UX/UI Designer</h3>
+                            <span class="company-name">Grupo HNG</span>
+                        </div>
+                        <span class="job-date">Diciembre 2025 — Presente</span>
+                        <ul class="experience-list">
+                            <li>Lideré la estrategia de <strong>UX Writing</strong> y la creación de contenido de
+                                interfaz utilizando herramientas de IA como <strong>Gemini</strong>, mejorando la
+                                claridad, el tono y la consistencia en flujos críticos.</li>
+                            <li>Diseñé e iteré flujos de usuario complejos, interfaces y prototipos de alta
+                                fidelidad
+                                utilizando <strong>Stitch AI y Figma Make</strong>, facilitando validaciones rápidas
+                                con
+                                liderazgo.</li>
+                            <li>Construí y escalé <strong>Design Systems</strong>, asegurando consistencia visual,
+                                reutilización de componentes y alineación eficiente entre productos.</li>
+                            <li>Realicé análisis del comportamiento de usuarios basado en datos utilizando
+                                <strong>GA4,
+                                    Mixpanel y Microsoft Clarity</strong>, identificando puntos de fricción y
+                                oportunidades de optimización.
+                            </li>
+                            <li>Participé en sesiones de refinamiento con stakeholders, apoyando la definición de
+                                requerimientos y alineación con los objetivos del producto.</li>
+                            <li>Colaboré con equipos de desarrollo, QA y líderes técnicos para asegurar una
+                                implementación precisa en entornos <strong>Ágiles</strong>.</li>
+                            <li>Presenté hallazgos de UX y propuestas de mejora a equipos de liderazgo para la toma
+                                de
+                                decisiones estratégicas basadas en <strong>insights</strong> de usuarios.</li>
+                            <li>Promoví buenas prácticas de diseño centrado en el usuario, alineando negocio,
+                                tecnología
+                                y estándares de UX.</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- EXPERIENCIA -->
-        <section class="section section--experiencia">
-            <div class="section__content content">
-                <h2 class="section__title">Experiencia</h2>
-                <p>Más de 3 años de experiencia en diseño de experiencia e interacción de usuario, desarrollando
-                    productos y servicios tecnológicos.</p>
-
-                <div class="experiencia__cards">
-
-                    <!-- Geosatelital -->
-                    <article class="card">
-                        <div class="card__img__content">
-                            <div class="card__img">
-                                <img src="./Media/Home/image 213.png" alt="">
-                            </div>
-                            <div class="card__line">
-                                <div class="line"></div>
-                            </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <h3>UX/UI Designer</h3>
+                            <span class="company-name">Geosatelital</span>
                         </div>
-                        <div class="card__info">
-                            <div class="card__header">
-                                <h3 class="card__title">Geosatelital - UX/UI Designer</h3>
-                                <p class="card__date">Junio 2024 – Octubre 2025</p>
-                            </div>
-                            <p class="card__text">
-                                Empresa tecnológica especializada en monitoreo vehicular, logística y facturación, líder
-                                en soluciones de localización para clientes públicos y privados.
-                            </p>
-                            <ul class="card__competencias">
-                                <li>Diseñé y optimicé productos digitales de monitoreo y logística mediante research,
-                                    definición de flujos y validación continua.</li>
-                                <li>Definí experiencias alineadas a necesidades de clientes públicos y privados,
-                                    asegurando coherencia entre negocio y usuario.</li>
-                                <li>Construí y documenté sistemas de diseño para garantizar escalabilidad y consistencia
-                                    del producto.</li>
-                                <li>Identifiqué oportunidades de mejora en la tienda virtual y Seller Center mediante
-                                    benchmarking y análisis competitivo.</li>
-                                <li>Optimicé la app principal (+10,000 usuarios) y lideré capacitaciones a +50 personas
-                                    para mejorar adopción y uso del producto.</li>
-                            </ul>
-                            <div class="card__herramientas">
-                                <img src="./Media/Home/image 202.png" alt="">
-                                <img src="./Media/Home/image.png" alt="">
-                                <img src="./Media/Home/image-1.png" alt="">
-                                <img src="./Media/Home/image-2.png" alt="">
-                                <img src="./Media/Home/image-3.png" alt="">
-                                <img src="./Media/Home/image-4.png" alt="">
-                            </div>
-                        </div>
-                    </article>
+                        <span class="job-date">Junio 2024 — Octubre 2025</span>
+                        <ul class="experience-list">
+                            <li>Diseño de productos digitales con enfoque en <strong>geolocalización y plataformas
+                                    de
+                                    e-commerce</strong> para sector privado y entidades gubernamentales.</li>
+                            <li>Creo user stories, flujos de procesos, wireframes y arquitectura de información para
+                                diversos módulos web y plataformas complejas.</li>
+                            <li>Valido y audito requerimientos funcionales, asegurando una implementación fluida
+                                mediante la colaboración con desarrollo y stakeholders.</li>
+                            <li>Elaboro manuales técnicos y guías de usuario para facilitar la adopción de la
+                                plataforma
+                                en el sector público.</li>
+                            <li>Lidero sesiones de capacitación presenciales y virtuales, brindando
+                                <strong>onboarding</strong> a más de 50 usuarios finales.
+                            </li>
+                            <li>Evalúo la experiencia mediante entrevistas, <strong>evaluaciones
+                                    heurísticas</strong>,
+                                pruebas A/B y análisis de datos con <strong>Hotjar y Google Analytics</strong>.</li>
+                            <li>Colaboro en entornos ágiles (<strong>Scrum</strong>), trabajando de manera
+                                transversal
+                                con Producto e Ingeniería.</li>
+                            <li>Utilizo herramientas de IA (<strong>Stitch</strong>) para optimizar flujos de diseño
+                                y
+                                prototipado.</li>
+                        </ul>
+                    </div>
+                </div>
 
-                    <!-- Kuskana -->
-                    <article class="card">
-                        <div class="card__img__content">
-                            <div class="card__img">
-                                <img src="./Media/Home/image 214.png" alt="">
-                            </div>
-                            <div class="card__line">
-                                <div class="line"></div>
-                            </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="job-header">
+                            <h3>UX/UI Designer</h3>
+                            <span class="company-name">Level Tour</span>
                         </div>
-                        <div class="card__info">
-                            <div class="card__header">
-                                <h3 class="card__title">Kuskana — Product Designer </h3>
-                                <p class="card__date">Enero 2025 – Febrero 2025</p>
-                            </div>
-                            <p class="card__text">
-                                Empresa de servicios y administración que desarrolla una plataforma para negocios que
-                                imparten clases o venden productos en línea.
-                            </p>
-                            <ul class="card__competencias">
-                                <li>Definí la identidad visual y lineamientos de la plataforma, asegurando coherencia y
-                                    escalabilidad del producto.</li>
-                                <li>Diseñé y estructuré un sistema de componentes reutilizables para mejorar
-                                    consistencia y eficiencia en el desarrollo.</li>
-                                <li>Optimicé vistas de venta y arquitectura de producto, fortaleciendo la estructura y
-                                    claridad de la experiencia.</li>
-                            </ul>
-
-                            <div class="card__herramientas">
-                                <img src="./Media/Home/image 202.png" alt="">
-                                <img src="./Media/Home/image-1.png" alt="">
-                                <img src="./Media/Home/image-2.png" alt="">
-                                <img src="./Media/Home/image-4.png" alt="">
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Level Tour -->
-                    <article class="card">
-                        <div class="card__img__content">
-                            <div class="card__img">
-                                <img src="./Media/Home/image 215.png" alt="">
-                            </div>
-                            <div class="card__line">
-                                <div class="line"></div>
-                            </div>
-                        </div>
-                        <div class="card__info">
-                            <div class="card__header">
-                                <h3 class="card__title">Level Tour - UX/UI Designer</h3>
-                                <p class="card__date">Junio 2023 - Marzo 2024</p>
-                            </div>
-                            <p class="card__text">
-                                Empresa de transporte y turismo que ofrece paquetes personalizados por Sudamérica,
-                                incluyendo alojamiento, tours y experiencias adaptadas al perfil del usuario.
-                            </p>
-                            <ul class="card__competencias">
-                                <li>Definí la experiencia UX/UI de la web y app de reservas, alineando personalización y
-                                    accesibilidad con objetivos del producto.</li>
-                                <li>Realicé investigación, construcción de user personas y diseño de flujos para
-                                    optimizar la experiencia del viajero.</li>
-                                <li>Trabajé junto al equipo de TI en la implementación y mejora continua de componentes
-                                    clave.</li>
-                                <li>Establecí lineamientos de diseño e identidad visual para asegurar coherencia y
-                                    escalabilidad entre plataformas.</li>
-                            </ul>
-
-                            <div class="card__herramientas">
-                                <img src="./Media/Home/image 202.png" alt="">
-                                <img src="./Media/Home/image.png" alt="">
-                                <img src="./Media/Home/image-1.png" alt="">
-                                <img src="./Media/Home/image-4.png" alt="">
-                            </div>
-                        </div>
-                    </article>
-
+                        <span class="job-date">Junio 2023 — Marzo 2024</span>
+                        <ul class="experience-list">
+                            <li>Diseñé flujos <strong>end-to-end</strong> y la arquitectura de experiencia para una
+                                aplicación móvil enfocada en viajes y experiencias digitales.</li>
+                            <li>Realicé investigación UX cualitativa y cuantitativa para identificar oportunidades
+                                de
+                                mejora del producto.</li>
+                            <li>Facilité workshops de <strong>co-creación</strong> utilizando dinámicas ágiles y
+                                herramientas visuales (tableros <strong>Scrum</strong>).</li>
+                            <li>Lideré el rediseño visual y funcional de la app móvil, optimizando la
+                                <strong>accesibilidad, jerarquía visual</strong> y claridad de interacción.
+                            </li>
+                            <li>Desarrollé prototipos de alta fidelidad y documentación funcional completa para
+                                asegurar
+                                un <strong>handoff eficiente</strong>.</li>
+                            <li>Colaboré con equipos de Producto e Ingeniería para garantizar la traducción de la
+                                visión
+                                de diseño en soluciones técnicas.</li>
+                            <li>Apliqué procesos de diseño iterativos, incorporando feedback continuo para impulsar
+                                la
+                                excelencia del producto.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer__content content">
-            <div class="footer__info">
-                <h3 class="footer__title">Portafolio Carlos Meza</h3>
-                <ul>
-                    <li>
-                        Todo el contenido de este portafolio es propiedad de Carlos Meza
-                        y no puede ser reproducido sin autorización.
-                    </li>
-                    <li>
-                        No nos responsabilizamos por el contenido de los sitios web externos a los que se enlaza desde
-                        este portafolio
-                    </li>
-                    <li>
-                        Podemos modificar estos Términos y Condiciones en cualquier momento. Revisa esta página
-                        periódicamente para estar al tanto de los cambios
-                    </li>
-                </ul>
+    <footer class="carlos-footer">
+        <div class="carlos-footer-container">
+            <div class="footer-left-block">
+                <div class="footer-brand-header">
+                    <img src="../Media/Home/Footeer-escudo.svg" alt="Escudo" class="footer-shield-icon">
+                    <span class="footer-brand-text">Jose Carlos Meza Portfolio</span>
+                </div>
+                <p class="footer-brand-description">
+                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de
+                    vanguardia.
+                </p>
             </div>
-            <div class="footer__enlaces">
-                <ul>
-                    <li><a href="https://www.facebook.com/mezajosecarlos11"><img src="./Media/Home/facebo.png"
-                                alt="Facebook"></a></li>
-                    <li><a href="https://www.instagram.com/gmeza16"><img src="./Media/Home/instagram.png"
-                                alt="Instagram"></a></li>
-                    <li><a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248"><img
-                                src="./Media/Home/linkedin.svg" alt="Linkedin"></a></li>
-                    <li><a href="#"><img src="./Media/Home/tiktok.png" alt="TikTok"></a></li>
-                    <li><a href="#"><img src="./Media/Home/x.png" alt="X"></a></li>
-                </ul>
+
+            <div class="footer-right-block">
+                <h3 class="footer-cta-text">¿Trabajamos juntos?</h3>
+                <div class="footer-social-wrapper">
+                    <a href="mailto:tu-correo@gmail.com" class="footer-icon-circle">
+                        <img src="../Media/Home/correo-icono.svg" alt="Email">
+                    </a>
+                    <a href="https://linkedin.com/in/tu-perfil" class="footer-icon-circle">
+                        <img src="../Media/Home/compratir-icono.svg" alt="LinkedIn">
+                    </a>
+                    <a href="#" class="footer-icon-circle">
+                        <img src="../Media/Home/user-icono.svg" alt="Perfil">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="footer__sign">
-            <p>Design by <span>Carlos Meza</span></p>
         </div>
     </footer>
+
 </body>
 
 </html>

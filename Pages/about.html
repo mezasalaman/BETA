@@ -2,257 +2,209 @@
 <html lang="es">
 
 <head>
-    <!-- METAINFO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me | Jose Carlos Meza</title>
 
-    <!-- TIPOGRAFIA -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- FAVICON -->
     <link rel="shortcut icon" href="../Media/Home/logo.png" type="image/x-icon">
 
-    <!-- ESTILOS -->
     <link rel="stylesheet" href="../Styles/Normalize.css">
     <link rel="stylesheet" href="../Styles/Default.css">
     <link rel="stylesheet" href="../Styles/About.css">
     <link rel="stylesheet" href="../Styles/Nav.css">
     <link rel="stylesheet" href="../Styles/Footer.css">
-
-    <title>About me | Jose</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class="enlaces__content content">
-                <li><a href="../index.html" class="link--main">Home</a></li>
-                <li class="enlace--proyecto">
-                    <a href="#" class="link--main link--proyectos">Proyectos</a>
-                    <ul class="subenlaces__content">
-                        <li><a href="./geosatelital.html">Geosatelital</a></li>
-                        <li><a href="./satelock.html">Sate Lock</a></li>
-                        <li><a href="./seller.html">Seller</a></li>
-                        <li><a href="./levelTour.html">Municipalidad</li>
-                    </ul>
-                </li>
-                <li><a href="./about.html" class="link--main">Sobre mi</a></li>
-            </ul>
-        </nav>
-        <div class="banner">
-            <div class="banner__content content">
-                <div class="banner__info">
-                    <h1 class="banner__title">Carlos Meza</h1>
-                    <p class="banner__cargo">Product design - Ux Research - Design components</p>
-                    <div class="banner__img--responsive">
-                        <img src="../Media/Home/IMG-BANNER-2.png">
-                    </div>
-                    <p class="banner__descripcion">
-                        Apasionado por la tecnología, la automatización de procesos y el diseño funcional. Me gusta
-                        investigar, analizar y perfeccionar cada detalle para crear experiencias digitales efectivas,
-                        intuitivas y visualmente atractivas. Busco siempre optimizar el flujo de los usuarios y aportar
-                        soluciones innovadoras que generen valor real.
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo-container">
+                    <img src="/Media/Home/icono meza.svg" alt="Icono" class="logo-icon">
+                    <span class="logo-text">Carlos Meza</span>
+                </a>
+
+                <ul class="enlaces__content">
+                    <li class="enlace--proyecto">
+                        <a href="#" class="link--main">Proyectos</a>
+                        <div class="subenlaces__content">
+                            <a href="./food-delivery.html">FoodDelivery</a>
+                            <a href="./satelock.html">Satelock</a>
+                            <a href="./SellerCenter.html">Seller Center</a>
+                        </div>
+                    </li>
+                    <li><a href="./about.html" class="link--main">Sobre mí</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="about-main container">
+        <section class="about-hero">
+            <span class="badge-available">• AVAILABLE FOR NEW PROJECTS</span>
+            <h1>Senior Product <span class="highlight">Designer</span> & Strategist</h1>
+            <p class="hero-intro">
+                Product Designer con enfoque en experiencia de usuario y análisis estratégico. Me especializo en
+                optimizar procesos digitales y mejorar la interacción humano-computadora a través de investigación,
+                prototipado y validación constante.
+            </p>
+            <div class="hero-tags">
+                <span>Strategic Analysis</span>
+                <span>UX Optimization</span>
+                <span>HCI Expert</span>
+            </div>
+        </section>
+
+        <div class="about-grid">
+            <aside class="education-section">
+                <h2 class="section-label">Education</h2>
+
+                <div class="edu-item">
+                    <span class="edu-date">NOV 2025</span>
+                    <h3>Capacitación de Inteligencia Artificial y Gestión Empresarial</h3>
+                    <p class="edu-org">UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS (UPC)</p>
+                    <p class="edu-desc">
+                        Análisis profundo sobre el <strong>impacto de la IA</strong> en modelos de negocio modernos,
+                        integrando <strong>ciberseguridad</strong> avanzada y optimización de la <strong>experiencia de
+                            usuario</strong>
+                        potenciada por IA. Enfoque directo en la identificación de <strong>oportunidades de
+                            mejora</strong> y
+                        estrategias para maximizar la <strong>conversión económica</strong> mediante tecnología de
+                        vanguardia.
                     </p>
-                    <ul>
-                        <li class="bton">
-                            <p>UX Design</p>
-                        </li>
-                        <li class="bton">
-                            <p>UI Design</p>
-                        </li>
-                        <li class="bton">
-                            <p>Product Design</p>
-                        </li>
-                    </ul>
+                    <div class="edu-tags">
+                        <span>AI Impact</span>
+                        <span>Cybersecurity</span>
+                        <span>UX AI</span>
+                        <span>Business ROI</span>
+                    </div>
                 </div>
-                <div class="banner__img">
-                    <img src="../Media/Home/IMG-BANNER-2.png" alt="">
+
+                <div class="edu-item">
+                    <span class="edu-date">DEC 2023</span>
+                    <h3>Graphic Designer Technician</h3>
+                    <p class="edu-org">CIBERTEC</p>
+                    <p class="edu-desc">
+                        Especializado en Diseño de Planes de Negocio, Costos, Fundamentos de Programación,
+                        UX Research, Psicología del Usuario y Fundamentos Visuales para la creación de productos
+                        digitales.
+                    </p>
+                    <div class="edu-tags">
+                        <span>Visual Design</span>
+                        <span>UX Research</span>
+                        <span>Business Plans</span>
+                    </div>
                 </div>
-            </div>
+
+                <div class="edu-item">
+                    <span class="edu-date">JUNE 2024</span>
+                    <h3>Professional Certificate in UX Design</h3>
+                    <p class="edu-org">COURSERA (Google)</p>
+                    <div class="edu-tags">
+                        <span>User Research</span>
+                        <span>Prototyping</span>
+                        <span>Design Thinking</span>
+                    </div>
+                </div>
+
+                <div class="edu-item">
+                    <span class="edu-date">MAY 2024</span>
+                    <h3>Analítica Digital</h3>
+                    <p class="edu-org">UDEMY</p>
+                    <p class="edu-desc">
+                        Enfoque en la medición de métricas clave, análisis del comportamiento del usuario
+                        en plataformas digitales y estrategias de optimización de embudos de conversión.
+                    </p>
+                    <div class="edu-tags">
+                        <span>Data Analytics</span>
+                        <span>Conversion Rate</span>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="expertise-section">
+                <h2 class="section-label">Expertise</h2>
+                <div class="expertise-grid">
+                    <div class="exp-card">
+                        <div class="card-icon-container">
+                            <img src="../Media/SOBRE MI/Design-icon.svg" alt="Design Systems" class="card-icon">
+                        </div>
+                        <h4>Design Systems</h4>
+                        <p>Construcción y escalamiento de librerías de componentes atómicos. Fomento de la consistencia
+                            visual y eficiencia en el handoff.</p>
+                    </div>
+                    <div class="exp-card">
+                        <div class="card-icon-container">
+                            <img src="../Media/SOBRE MI/data-icon.svg" alt="Data Analysis" class="card-icon">
+                        </div>
+                        <h4>Data Analysis</h4>
+                        <p>Interpretación de KPIs para la toma de decisiones. Análisis cualitativo y cuantitativo para
+                            optimización de productos.</p>
+                    </div>
+                    <div class="exp-card">
+                        <div class="card-icon-container">
+                            <img src="../Media/SOBRE MI/ux-research.svg" alt="UX Research" class="card-icon">
+                        </div>
+                        <h4>UX Research</h4>
+                        <p>Liderazgo en fases de descubrimiento, entrevistas a usuarios, pruebas de usabilidad y
+                            auditorías heurísticas.</p>
+                    </div>
+                    <div class="exp-card">
+                        <div class="card-icon-container">
+                            <img src="../Media/SOBRE MI/ia-icon.svg" alt="AI Workflows" class="card-icon">
+                        </div>
+                        <h4>AI Workflows</h4>
+                        <p>Optimización del ciclo de diseño mediante IA, automatización de flujos y generación de
+                            contenido dinámico.</p>
+                    </div>
+                </div>
+
+                <h2 class="section-label">Tech Stack</h2>
+                <div class="tech-tags">
+                    <span>Figma</span> <span>Adobe Creative Cloud</span> <span>Stitch Gemini</span> <span>Figma
+                        Make</span>
+                    <span>Optimal Workshop</span> <span>Maze</span> <span>Hotjar</span> <span>Microsoft Clarity</span>
+                    <span>Typeform</span>
+                    <span>GA4</span> <span>Mixpanel</span> <span>Tableau</span> <span>Power BI</span>
+                    <span>GPT-4</span> <span>Claude 3.5 Sonnet</span> <span>Midjourney</span> <span>Notion AI</span>
+                    <span>Jira</span> <span>HTML5 & CSS3</span> <span>Tailwind CSS</span> <span>Storybook</span>
+                </div>
+            </section>
         </div>
-    </header>
-    <main>
-        <section class="section section--education">
-            <div class="content">
-                <h2 class="section__title">Educación Superior</h2>
-                <p>Lograremos la solución eficaz de tus necesidades empresariales</p>
-                <div class="cards--education">
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="../Media/SOBRE MI/image 210.svg" alt="">
-                            <div class="content__line">
-                                <div class="line"></div>
-                            </div>
-                        </div>
-                        <div class="card__info">
-                            <h3 class="card__title">Cibertec</h3>
-                            <div class="info__group">
-                                <p class="card__subtitle">Titulo</p>
-                                <p>Tecnico en diseñador gráfico</p>
-                            </div>
-                            <div class="info__group">
-                                <p class="card__subtitle">Fecha de Graduación</p>
-                                <p>Diciembre 2023</p>
-                            </div>
-                            <p>
-                                Me gradué como Técnico en Diseño Gráfico en CIBERTEC en diciembre de 2023, donde adquirí
-                                conocimientos en UX, investigación de usuarios, análisis de mercados y diseño de planes
-                                de negocios.
-                            </p>
-                            <p class="card__subtitle">Cursos Relevantes</p>
-                            <ul>
-                                <li>Diseñado de Plan de Negocios y Costos</li>
-                                <li>Conceptos de Programación</li>
-                                <li>Investigación de Personas y Análisis de Targets</li>
-                                <li>Diseñado de Experiencia de Usuario (UX)</li>
-                                <li>Psicología del Usuario</li>
-                                <li>Fundamentos Visuales</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="../Media/SOBRE MI/image 211.svg" alt="">
-                        </div>
-                        <div class="card__info">
-                            <h3 class="card__title">Coursera (Google ux Design)</h3>
-                            <div class="info__group">
-                                <p class="card__subtitle">Certificación</p>
-                                <p>Google Ux Design</p>
-                            </div>
-                            <div class="info__group">
-                                <p class="card__subtitle">Fecha de Culminación</p>
-                                <p>Julio 2024</p>
-                            </div>
-                            <p>
-                                Obtuve la certificación en Google UX Design a través de Coursera, con fecha de
-                                culminación en julio de 2024. Allí aprendí sobre análisis de KPI, métodos de
-                                investigación y estrategias de UX.
-                            </p>
-                            <p class="card__subtitle">Cursos Relevantes </p>
-                            <ul>
-                                <li>Análisis de KPI</li>
-                                <li>Métodos de Investigación</li>
-                                <li>Estrategias UX</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section section--app">
-            <div class="content">
-                <h2 class="section__title">Aplicaciones que manejo</h2>
-                <p>Apliacaciones que utilizo en mi día a día como Product Design</p>
-                <div class="cards__app">
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="../Media/SOBRE MI/Vector-2.svg" alt="">
-                        </div>
-                        <div class="card__info">
-                            <p class="card__title">Paquetería Affinity </p>
-                            <p class="card__level">(Avanzado)</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img">
-                            <img class="img-about" src="../Media/SOBRE MI/Vector-3.svg" alt="">
-                        </div>
-                        <div class="card__info">
-                            <p class="card__title">Figma</p>
-                            <p class="card__level">(Avanzado)</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="../Media/SOBRE MI/image 15.svg" alt="">
-                        </div>
-                        <div class="card__info">
-                            <p class="card__title">optimal workshop</p>
-                            <p class="card__level">(Avanzado)</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="../Media/SOBRE MI/Vector-1.svg" alt="">
-                        </div>
-                        <div class="card__info">
-                            <p class="card__title">HTML y CSS</p>
-                            <p class="card__level">(Avanzado)</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="../Media/SOBRE MI/Vector.svg" alt="">
-                        </div>
-                        <div class="card__info">
-                            <p class="card__title">Paquetería Adobe</p>
-                            <p class="card__level">(Avanzado)</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__img">
-                            <img src="../Media/SOBRE MI/image 16.svg" alt="">
-                        </div>
-                        <div class="card__info">
-                            <p class="card__title">Maze</p>
-                            <p class="card__level">(Avanzado)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer__content content">
-            <div class="footer__info">
-                <h3 class="footer__title">Portafolio Carlos Meza</h3>
-                <ul>
-                    <li>
-                        Todo el contenido de este portafolio es propiedad de Carlos Meza
-                        y no puede ser reproducido sin autorización.
-                    </li>
-                    <li>
-                        No nos responsabilizamos por el contenido de los sitios web externos a los que se enlaza desde
-                        este portafolio
-                    </li>
-                    <li>
-                        Podemos modificar estos Términos y Condiciones en cualquier momento. Revisa esta página
-                        periódicamente para estar al tanto de los cambios
-                    </li>
-                </ul>
+
+    <footer class="carlos-footer">
+        <div class="carlos-footer-container">
+            <div class="footer-left-block">
+                <div class="footer-brand-header">
+                    <img src="../Media/Home/Footeer-escudo.svg" alt="Escudo" class="footer-shield-icon">
+                    <span class="footer-brand-text">Jose Carlos Meza Portfolio</span>
+                </div>
+                <p class="footer-brand-description">
+                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de
+                    vanguardia.
+                </p>
             </div>
-            <div class="footer__enlaces">
-                <ul>
-                    <li><a href="https://www.facebook.com/mezajosecarlos11">
-                            <img src="../Media/Home/facebo.png" alt="Facebook">
-                        </a></li>
 
-                    <li><a href="https://www.instagram.com/gmeza16">
-                            <img src="../Media/Home/instagram.png" alt="Instagram">
-                        </a></li>
-
-                    <li><a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248">
-                            <img src="../Media/Home/linkedin.svg" alt="Linkedin">
-                        </a></li>
-
-                    <li><a href="#">
-                            <img src="../Media/Home/tiktok.png" alt="TikTok">
-                        </a></li>
-
-                    <li><a href="#">
-                            <img src="../Media/Home/x.png" alt="X">
-                        </a></li>
-                </ul>
+            <div class="footer-right-block">
+                <h3 class="footer-cta-text">¿Trabajamos juntos?</h3>
+                <div class="footer-social-wrapper">
+                    <a href="mailto:tu-correo@gmail.com" class="footer-icon-circle">
+                        <img src="../Media/Home/correo-icono.svg" alt="Email">
+                    </a>
+                    <a href="https://linkedin.com/in/tu-perfil" class="footer-icon-circle">
+                        <img src="../Media/Home/compratir-icono.svg" alt="LinkedIn">
+                    </a>
+                    <a href="#" class="footer-icon-circle">
+                        <img src="../Media/Home/user-icono.svg" alt="Perfil">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="footer__sign">
-            <p>Design by <span>Carlos Meza</span></p>
         </div>
     </footer>
 </body>
