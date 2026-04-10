@@ -379,7 +379,7 @@ body {
         /* Imagen arriba, texto abajo */
         text-align: center;
         padding: 40px 0 60px 0;
-        gap: 40px;
+        gap: 20px;
     }
 
     .hero-left {
@@ -484,7 +484,7 @@ body {
 .hero-right {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+
 }
 
 /* --- CONFIGURACIÓN TABLET Y MOBILE --- */
