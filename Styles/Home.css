@@ -662,3 +662,55 @@ body {
         /* Título más pequeño en celular */
     }
 }
+
+/* --- LIMPIEZA TOTAL --- */
+
+/* Esconde CUALQUIER texto que se esté escapando por debajo */
+.project-card {
+    position: relative !important;
+    overflow: hidden !important;
+    /* Corta lo que se salga */
+    display: block !important;
+    text-decoration: none !important;
+}
+
+/* El interruptor de imágenes */
+.img-mobile {
+    display: none !important;
+}
+
+.img-desktop {
+    display: block !important;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 650px) {
+    .img-desktop {
+        display: none !important;
+    }
+
+    .img-mobile {
+        display: block !important;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilo del texto sobre la imagen */
+.project-info {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    padding: 30px !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, transparent 100%) !important;
+    z-index: 10 !important;
+    /* Asegura que esté ARRIBA de la imagen */
+}
+
+.project-title {
+    color: #fff !important;
+    font-size: clamp(1.2rem, 3vw, 2.2rem) !important;
+    margin: 0 !important;
+}

@@ -1048,3 +1048,104 @@
         font-size: 3.2rem;
     }
 }
+
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        /* Una sola columna para que la imagen sea ancha */
+        gap: 20px;
+    }
+
+    .project-card img {
+        height: auto;
+        /* Que mantenga su proporción original */
+        aspect-ratio: 16 / 9;
+        /* O la proporción que tengan tus capturas */
+    }
+}
+
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        /* Una sola columna para que la imagen sea ancha */
+        gap: 20px;
+    }
+
+    .project-card img {
+        height: auto;
+        /* Que mantenga su proporción original */
+        aspect-ratio: 16 / 9;
+        /* O la proporción que tengan tus capturas */
+    }
+}
+
+/* --- LÓGICA DE IMÁGENES ADAPTATIVAS --- */
+
+/* 1. Estado inicial: Escondemos la de móvil siempre */
+.img-mobile {
+    display: none;
+}
+
+.img-desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 2. Cuando la pantalla es pequeña (Mobile) */
+@media (max-width: 650px) {
+
+    /* Apagamos Desktop */
+    .img-desktop {
+        display: none;
+    }
+
+    /* Encendemos Mobile */
+    .img-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+        /* Para que respete la proporción vertical que diseñes */
+        object-fit: cover;
+    }
+
+    /* Ajuste de los textos para que no se vean gigantes en pantallas pequeñas */
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+}
+
+/* --- EL INTERRUPTOR MÁGICO --- */
+
+/* 1. Paso obligatorio: Esconder la imagen de móvil por defecto */
+.img-mobile {
+    display: none !important;
+}
+
+/* 2. Asegurar que la de escritorio se vea bien en PC */
+.img-desktop {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 3. Cuando la pantalla sea pequeña (Móvil) */
+@media (max-width: 650px) {
+
+    /* APAGAMOS la de escritorio */
+    .img-desktop {
+        display: none !important;
+    }
+
+    /* ENCENDEMOS la de móvil */
+    .img-mobile {
+        display: block !important;
+        width: 100%;
+        height: auto;
+    }
+}
