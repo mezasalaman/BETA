@@ -5,6 +5,13 @@
 html { scroll-behavior: smooth; }
 body { background-color: #ffffff; color: #0f172a; overflow-x: hidden; }
 
+/* ---- Sistema de iconografía (ver assets/icons.js) ---- */
+.ic { display: inline-flex; align-items: center; justify-content: center; width: 1em; height: 1em; line-height: 0; flex-shrink: 0; }
+.ic svg { display: block; width: 100%; height: 100%; }
+.ic-spin { transform-origin: 50% 50%; animation: icSpin .9s linear infinite; }
+@keyframes icSpin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .ic-spin { animation: none; } }
+
 /* Logo del nav y escudo del footer: iconos monocromos (diseñados en blanco)
    -> los oscurecemos para que se vean sobre fondo claro */
 img[src*="icono%20meza"],
