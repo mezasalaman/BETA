@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Iconografía | Carlos Meza</title>
+    <meta name="description" content="Sistema de iconografía del portfolio de Carlos Meza — set coherente de íconos de trazo para navegación, servicios, proyectos, tecnologías, métricas, contacto, redes y estados UI." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232563eb'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/tw-config.js"></script>
+    <link rel="stylesheet" href="assets/portfolio.css" />
+    <style>
+        .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    </style>
+</head>
+
+<body class="bg-ink font-sans text-[#0f172a] antialiased">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="sticky top-0 z-[9999] w-full bg-ink/95 backdrop-blur">
+        <div class="mx-auto max-w-[1150px] px-5">
+            <div class="flex w-full items-center justify-between border-b border-hairline py-6">
+                <a href="index.html" class="flex items-center gap-3">
+                    <span class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-primary text-[#ffffff]"><span class="ic" data-icon="brush" data-sw="1.8" style="font-size:19px"></span></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Carlos Meza</span>
+                </a>
+                <a href="index.html" class="group inline-flex items-center gap-2 text-[15px] text-dim transition-colors hover:text-primary">
+                    <span class="ic" data-icon="arrow-right" style="font-size:17px; transform:scaleX(-1)"></span>
+                    Volver al portfolio
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="mx-auto max-w-[1150px] px-5">
+
+        <!-- ================= HEADER ================= -->
+        <header class="py-14 sm:py-20">
+            <span class="mb-5 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.07] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary">
+                <span class="ic" data-icon="brush" style="font-size:14px"></span> Design System · Iconografía
+            </span>
+            <h1 class="mb-5 max-w-[760px] text-[34px] font-bold leading-[1.1] tracking-[-0.02em] sm:text-[48px]">Sistema de Iconografía</h1>
+            <p class="mb-10 max-w-[620px] text-[15px] leading-[1.65] text-dim md:text-[17px]">Un set propio y coherente, diseñado desde cero para el portfolio. Trazo limpio, geometría consistente y semántica clara — los íconos heredan color y tamaño del contexto, así que escalan sin perder nitidez.</p>
+
+            <!-- Principios del sistema -->
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                <div class="rounded-2xl border border-hairline bg-white p-5">
+                    <span class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#eff4ff] text-primary"><span class="ic" data-icon="design-systems" style="font-size:22px"></span></span>
+                    <h3 class="text-[14px] font-semibold">Grid 24×24</h3>
+                    <p class="mt-1 text-[12.5px] leading-[1.5] text-dim">Lienzo y alineación óptica consistentes.</p>
+                </div>
+                <div class="rounded-2xl border border-hairline bg-white p-5">
+                    <span class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#eff4ff] text-primary"><span class="ic" data-icon="product-design" style="font-size:22px"></span></span>
+                    <h3 class="text-[14px] font-semibold">Trazo 1.7</h3>
+                    <p class="mt-1 text-[12.5px] leading-[1.5] text-dim">Grosor uniforme, caps y joins redondeados.</p>
+                </div>
+                <div class="rounded-2xl border border-hairline bg-white p-5">
+                    <span class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#eff4ff] text-primary"><span class="ic" data-icon="tech-css" style="font-size:22px"></span></span>
+                    <h3 class="text-[14px] font-semibold">currentColor</h3>
+                    <p class="mt-1 text-[12.5px] leading-[1.5] text-dim">Heredan color del texto; un solo set para todo.</p>
+                </div>
+                <div class="rounded-2xl border border-hairline bg-white p-5">
+                    <span class="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-[#eff4ff] text-primary"><span class="ic" data-icon="prototyping" style="font-size:22px"></span></span>
+                    <h3 class="text-[14px] font-semibold">Escalable</h3>
+                    <p class="mt-1 text-[12.5px] leading-[1.5] text-dim">De 14px a 40px sin pérdida — son vectores.</p>
+                </div>
+            </div>
+
+            <!-- Escala -->
+            <div class="mt-6 flex flex-wrap items-end gap-7 rounded-2xl border border-hairline bg-white px-7 py-6">
+                <span class="text-[11px] font-bold uppercase tracking-[0.14em] text-[#94a3b8]">Escala</span>
+                <span class="ic text-primary" data-icon="rocket" style="font-size:14px"></span>
+                <span class="ic text-primary" data-icon="rocket" style="font-size:18px"></span>
+                <span class="ic text-primary" data-icon="rocket" style="font-size:24px"></span>
+                <span class="ic text-primary" data-icon="rocket" style="font-size:32px"></span>
+                <span class="ic text-primary" data-icon="rocket" style="font-size:40px"></span>
+                <div class="ml-auto flex items-center gap-5">
+                    <span class="text-[11px] font-bold uppercase tracking-[0.14em] text-[#94a3b8]">Color</span>
+                    <span class="ic text-[#0f172a]" data-icon="verified" style="font-size:26px"></span>
+                    <span class="ic text-primary" data-icon="verified" style="font-size:26px"></span>
+                    <span class="ic text-dim" data-icon="verified" style="font-size:26px"></span>
+                    <span class="ic text-ok" data-icon="verified" style="font-size:26px"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= CATÁLOGO (generado) ================= -->
+        <div id="catalog" class="space-y-16 pb-8"></div>
+
+        <!-- ================= ESTADOS UI (demo interactiva) ================= -->
+        <section class="border-t border-hairline py-16">
+            <span class="mb-3 block text-[11px] font-bold uppercase tracking-[0.15em] text-primary">Estados UI</span>
+            <h2 class="mb-3 text-[26px] font-bold tracking-[-0.01em] sm:text-[32px]">Estados &amp; feedback en contexto</h2>
+            <p class="mb-10 max-w-[600px] text-[15px] leading-[1.6] text-dim">Cómo se comportan los íconos dentro de la interfaz: interacción, selección y feedback de sistema.</p>
+
+            <div class="grid grid-cols-1 gap-5 lg:grid-cols-3">
+                <!-- Hover / Activo -->
+                <div class="rounded-2xl border border-hairline bg-white p-7">
+                    <h3 class="mb-1 text-[15px] font-semibold">Hover &amp; Activo</h3>
+                    <p class="mb-6 text-[12.5px] text-dim">Pasa el cursor y haz clic.</p>
+                    <button type="button" class="group mb-4 inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-primary px-6 py-3.5 text-[14px] font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1d4ed8] hover:shadow-[0_10px_24px_rgba(37,99,235,0.30)]">
+                        <span class="ic" data-icon="rocket" style="font-size:18px"></span>
+                        Botón con hover
+                        <span class="ic transition-transform duration-300 group-hover:translate-x-1" data-icon="arrow-right" style="font-size:16px"></span>
+                    </button>
+                    <div class="flex gap-3" id="chip-row">
+                        <button type="button" data-chip class="flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#334155] transition-all">
+                            <span class="ic" data-icon="target" style="font-size:16px"></span> Opción A
+                        </button>
+                        <button type="button" data-chip class="flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#334155] transition-all">
+                            <span class="ic" data-icon="gauge" style="font-size:16px"></span> Opción B
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Loading -->
+                <div class="rounded-2xl border border-hairline bg-white p-7">
+                    <h3 class="mb-1 text-[15px] font-semibold">Loading</h3>
+                    <p class="mb-6 text-[12.5px] text-dim">Spinner en acción asíncrona.</p>
+                    <button id="load-btn" type="button" class="inline-flex w-full items-center justify-center gap-2.5 rounded-full bg-primary px-6 py-3.5 text-[14px] font-semibold text-white transition-all hover:bg-[#1d4ed8]">
+                        <span class="ic" data-icon="send" style="font-size:17px"></span>
+                        <span data-label>Enviar mensaje</span>
+                    </button>
+                    <div class="mt-5 flex items-center justify-center gap-3 text-dim">
+                        <span class="ic text-primary" data-icon="loading" style="font-size:28px"></span>
+                        <span class="text-[12.5px]">Estado <span class="mono">loading</span> (continuo)</span>
+                    </div>
+                </div>
+
+                <!-- Error / Success -->
+                <div class="rounded-2xl border border-hairline bg-white p-7">
+                    <h3 class="mb-1 text-[15px] font-semibold">Error &amp; Success</h3>
+                    <p class="mb-6 text-[12.5px] text-dim">Validación de formulario.</p>
+                    <label class="mb-1.5 block text-[12px] font-medium text-[#475569]">Correo</label>
+                    <div class="mb-1.5 flex items-center gap-2 rounded-xl border-2 border-err/60 bg-err/[0.04] px-3.5 py-2.5">
+                        <span class="ic text-err" data-icon="error" style="font-size:18px"></span>
+                        <input type="text" value="carlos@correo" class="w-full bg-transparent text-[13.5px] text-[#0f172a] outline-none" readonly />
+                    </div>
+                    <p class="mb-5 flex items-center gap-1.5 text-[11.5px] text-err"><span class="ic" data-icon="warning" style="font-size:13px"></span> Formato de correo inválido</p>
+                    <div class="flex items-center gap-2 rounded-xl border-2 border-ok/60 bg-ok/[0.05] px-3.5 py-2.5">
+                        <span class="ic text-ok" data-icon="success" style="font-size:18px"></span>
+                        <input type="text" value="carlos@correo.com" class="w-full bg-transparent text-[13.5px] text-[#0f172a] outline-none" readonly />
+                    </div>
+                    <p class="mt-1.5 flex items-center gap-1.5 text-[11.5px] text-ok"><span class="ic" data-icon="verified" style="font-size:13px"></span> Correo verificado</p>
+                </div>
+            </div>
+
+            <!-- Tira de estados de sistema -->
+            <div class="mt-5 flex flex-wrap items-center gap-x-9 gap-y-5 rounded-2xl border border-hairline bg-white px-7 py-6">
+                <span class="inline-flex items-center gap-2.5 text-[13px] font-medium"><span class="ic text-ok" data-icon="success" style="font-size:22px"></span> Success</span>
+                <span class="inline-flex items-center gap-2.5 text-[13px] font-medium"><span class="ic text-err" data-icon="error" style="font-size:22px"></span> Error</span>
+                <span class="inline-flex items-center gap-2.5 text-[13px] font-medium"><span class="ic text-[#d97706]" data-icon="warning" style="font-size:22px"></span> Warning</span>
+                <span class="inline-flex items-center gap-2.5 text-[13px] font-medium"><span class="ic text-primary" data-icon="info" style="font-size:22px"></span> Info</span>
+                <span class="inline-flex items-center gap-2.5 text-[13px] font-medium"><span class="ic text-primary" data-icon="loading" style="font-size:22px"></span> Loading</span>
+                <span class="inline-flex items-center gap-2.5 text-[13px] font-medium text-[#94a3b8]"><span class="ic" data-icon="disabled" style="font-size:22px"></span> Disabled</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-hairline">
+        <div class="mx-auto flex max-w-[1150px] flex-col items-center justify-between gap-4 px-5 py-10 sm:flex-row">
+            <span class="text-[13px] text-dim">Sistema de iconografía · Carlos Meza</span>
+            <div class="flex items-center gap-3">
+                <a href="#" class="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-primary text-white transition-all hover:-translate-y-1 hover:bg-[#1d4ed8]"><span class="ic" data-icon="social-mail" style="font-size:18px"></span></a>
+                <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-primary text-white transition-all hover:-translate-y-1 hover:bg-[#1d4ed8]"><span class="ic" data-icon="linkedin" style="font-size:18px"></span></a>
+                <a href="https://wa.me/51934865894" class="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-primary text-white transition-all hover:-translate-y-1 hover:bg-[#1d4ed8]"><span class="ic" data-icon="social-whatsapp" style="font-size:18px"></span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/icons.js"></script>
+    <script>
+        (function () {
+            var CATS = [
+                { key: "Navbar / Navegación", desc: "Estructura, accesos y direcciones.", names: ["brush", "menu", "close", "home", "work", "about", "arrow-right", "arrow-up-right", "external", "chevron-down", "download"] },
+                { key: "Secciones principales", desc: "Anclas de las grandes áreas del sitio.", names: ["intro", "section-work", "process", "gallery", "section-contact"] },
+                { key: "Servicios / Habilidades", desc: "Lo que hago y cómo lo hago.", names: ["ux-strategy", "product-design", "research", "design-systems", "prototyping", "ai-workflow", "usability", "data-analysis"] },
+                { key: "Proyectos", desc: "Marcas y tipos de caso de estudio.", names: ["delivery", "satelock", "seller", "conduzko", "case-study", "web", "mobile-app", "dashboard"] },
+                { key: "Tecnologías", desc: "Stack representado con iconografía propia.", names: ["tech-html", "tech-css", "tech-js", "tech-tailwind", "tech-react", "tech-figma", "tech-ai", "tech-analytics", "tech-automation"] },
+                { key: "Métricas / Logros", desc: "Resultados, impacto y reconocimiento.", names: ["trending-up", "target", "funnel", "gauge", "rocket", "trophy", "growth", "verified"] },
+                { key: "Contacto", desc: "Canales directos.", names: ["mail", "phone", "whatsapp", "location", "calendar", "send"] },
+                { key: "Redes sociales", desc: "Presencia y enlaces.", names: ["linkedin", "social-whatsapp", "social-mail", "profile", "link"] },
+                { key: "Estados UI", desc: "Interacción y feedback de sistema.", names: ["hover", "active", "success", "error", "warning", "info", "loading", "disabled"] }
+            ];
+
+            var root = document.getElementById("catalog");
+            CATS.forEach(function (cat) {
+                var sec = document.createElement("section");
+                sec.innerHTML =
+                    '<div class="mb-7">' +
+                    '<span class="mb-2 block text-[11px] font-bold uppercase tracking-[0.15em] text-primary">' + cat.key + '</span>' +
+                    '<p class="text-[14px] text-dim">' + cat.desc + '</p>' +
+                    '</div>';
+                var grid = document.createElement("div");
+                grid.className = "grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6";
+                cat.names.forEach(function (n) {
+                    var card = document.createElement("div");
+                    card.className = "group flex flex-col items-center gap-3 rounded-2xl border border-hairline bg-white p-5 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_12px_28px_rgba(37,99,235,0.12)]";
+                    card.innerHTML =
+                        '<span class="flex h-[54px] w-[54px] items-center justify-center rounded-[15px] bg-[#eff4ff] text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">' +
+                        '<span class="ic" data-icon="' + n + '" style="font-size:26px"></span>' +
+                        '</span>' +
+                        '<span class="mono text-[11.5px] text-dim">' + n + '</span>';
+                    grid.appendChild(card);
+                });
+                sec.appendChild(grid);
+                root.appendChild(sec);
+            });
+
+            // Hidratar todos los íconos recién creados
+            if (window.hydrateIcons) window.hydrateIcons();
+
+            // --- Demo: chips activos ---
+            document.querySelectorAll("[data-chip]").forEach(function (chip) {
+                chip.addEventListener("click", function () {
+                    document.querySelectorAll("[data-chip]").forEach(function (c) {
+                        c.classList.remove("border-primary", "bg-primary/[0.07]", "text-primary");
+                        c.classList.add("border-hairline", "text-[#334155]");
+                    });
+                    chip.classList.remove("border-hairline", "text-[#334155]");
+                    chip.classList.add("border-primary", "bg-primary/[0.07]", "text-primary");
+                });
+            });
+            // primer chip activo por defecto
+            var first = document.querySelector("[data-chip]");
+            if (first) first.click();
+
+            // --- Demo: loading button ---
+            var lb = document.getElementById("load-btn");
+            if (lb) {
+                lb.addEventListener("click", function () {
+                    if (lb.dataset.busy) return;
+                    lb.dataset.busy = "1";
+                    var label = lb.querySelector("[data-label]");
+                    var iconSpan = lb.querySelector(".ic");
+                    var prevLabel = label.textContent;
+                    iconSpan.setAttribute("data-icon", "loading");
+                    iconSpan.dataset.iconDone = "";
+                    window.hydrateIcons(lb);
+                    label.textContent = "Enviando…";
+                    lb.classList.add("opacity-90");
+                    setTimeout(function () {
+                        iconSpan.setAttribute("data-icon", "success");
+                        iconSpan.dataset.iconDone = "";
+                        window.hydrateIcons(lb);
+                        label.textContent = "¡Enviado!";
+                        setTimeout(function () {
+                            iconSpan.setAttribute("data-icon", "send");
+                            iconSpan.dataset.iconDone = "";
+                            window.hydrateIcons(lb);
+                            label.textContent = prevLabel;
+                            lb.classList.remove("opacity-90");
+                            lb.dataset.busy = "";
+                        }, 1400);
+                    }, 1600);
+                });
+            }
+        })();
+    </script>
+</body>
+
+</html>
