@@ -1,0 +1,1151 @@
+/* --- ESTILOS GENERALES DEL CASO --- */
+.case-study-page {
+    background-color: #000000;
+    color: #ffffff;
+    padding-top: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- HERO --- */
+.case-category {
+    color: #4A6FFF;
+    /* Azul vibrante */
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+}
+
+.case-main-title {
+    font-size: 7.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-top: 3rem;
+    letter-spacing: -0.02em;
+}
+
+.text-blue {
+    color: #4A6FFF;
+}
+
+/* --- GRID BENTO --- */
+.case-grid-bento {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    /* Proporción de la imagen */
+    gap: 2.5rem;
+    margin-top: 8rem;
+}
+
+/* --- TARJETA NEGRA (PROBLEMA) --- */
+.card-problem {
+    background: #111216;
+    /* Gris oscuro suave */
+    padding: 4.5rem;
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+}
+
+.card-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 4rem;
+}
+
+.text-red-highlight {
+    color: #FF5C5C;
+}
+
+/* Pills de métricas abajo */
+.problem-metrics {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: auto;
+}
+
+.metric-pill {
+    background: #1C1E24;
+    padding: 1.5rem 2.5rem;
+    border-radius: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.pill-icon {
+    width: 1.8rem;
+    opacity: 0.8;
+}
+
+.pill-label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+.pill-value {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* --- TARJETA AZUL (SOLUCIÓN) --- */
+.card-solution {
+    background: #7A9BFF;
+    /* El azul de tu captura */
+    padding: 4.5rem;
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+}
+
+.card-title-dark {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.card-text-dark {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 4rem;
+}
+
+.solution-badge {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.check-icon {
+    width: 1.8rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .case-main-title {
+        font-size: 4.5rem;
+    }
+
+    .case-grid-bento {
+        grid-template-columns: 1fr;
+    }
+
+    .problem-metrics {
+        flex-direction: column;
+    }
+}
+
+/* --- PERSONAS SECTION --- */
+.block-tag-alt {
+    color: #4A6FFF;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 2rem;
+    padding-top: 80px;
+}
+
+.section-title-left {
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin-bottom: 6rem;
+    letter-spacing: -0.01em;
+}
+
+.personas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.persona-card {
+    background: #111216;
+    border-radius: 2.4rem;
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Línea de color superior */
+.persona-blue {
+    border-top: 4px solid #4A6FFF;
+}
+
+.persona-purple {
+    border-top: 4px solid #7A9BFF;
+}
+
+.persona-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.persona-icon-bg {
+    width: 5.6rem;
+    height: 5.6rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-icon {
+    width: 2.4rem;
+    opacity: 0.7;
+}
+
+.persona-title-group h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.persona-role {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+/* Grid interno de Objetivos y Dolores */
+.persona-details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.detail-label {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.label-blue {
+    color: #4A6FFF;
+}
+
+.label-red {
+    color: #FF5C5C;
+}
+
+.detail-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-col li {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.detail-col li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: inherit;
+}
+
+/* Cita (Quote) */
+.persona-quote {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 2.5rem;
+    border-radius: 2rem;
+}
+
+.persona-quote p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .section-title-left {
+        font-size: 3.2rem;
+    }
+
+    .personas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- FLUJO KINÉTICO --- */
+.kinetic-header {
+    text-align: left;
+    margin-bottom: 4rem;
+    padding-top: 80px;
+}
+
+.kinetic-subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.6rem;
+    max-width: 700px;
+    margin-top: -4rem;
+    /* Ajuste por el margen del h2 */
+    margin-bottom: 4rem;
+}
+
+.kinetic-flow-container {
+    background: #0a0a0c;
+    border-radius: 3.2rem;
+    padding: 6rem 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.kinetic-stepper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 6rem;
+}
+
+.k-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+}
+
+.k-icon-box {
+    width: 6.4rem;
+    height: 6.4rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.k-icon-box img {
+    width: 2.4rem;
+    opacity: 0.6;
+}
+
+/* Paso Activo (Rocket) */
+.k-glow {
+    border-color: #4A6FFF;
+    box-shadow: 0 0 20px rgba(74, 111, 255, 0.2);
+}
+
+.k-glow img {
+    opacity: 1;
+    filter: drop-shadow(0 0 5px #4A6FFF);
+}
+
+.k-num {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0.4rem;
+}
+
+.k-label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.k-active .k-label {
+    color: #4A6FFF;
+}
+
+.kinetic-divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 6rem;
+}
+
+/* Grid de Fases inferiores */
+.kinetic-phases-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+}
+
+.phase-item {
+    text-align: left;
+}
+
+.p-tag {
+    color: #4A6FFF;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    display: block;
+    margin-bottom: 1.2rem;
+}
+
+.phase-item h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.phase-item p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .kinetic-stepper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .kinetic-phases-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .kinetic-stepper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kinetic-phases-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   --- BLOQUE 2: UI & ATOMIC DESIGN ---
+   ========================================== */
+
+.atomic-header {
+    margin-bottom: 6rem;
+    padding-top: 80px;
+}
+
+.atomic-subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-top: 2rem;
+}
+
+.atomic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* --- TARJETAS DE VISUALIZACIÓN (CONTENEDORES) --- */
+.atomic-visual-box {
+    background: #111216;
+    /* Gris oscuro de sistema */
+    height: 240px;
+    border-radius: 3.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- ESTILO DE ÁTOMOS --- */
+.atom-circle {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    margin: 0 0.8rem;
+}
+
+.circle-1 {
+    background: #4A6FFF;
+    box-shadow: 0 0 20px rgba(74, 111, 255, 0.3);
+}
+
+.circle-2 {
+    background: #7A9BFF;
+}
+
+.circle-3 {
+    background: #9DB7FF;
+}
+
+/* --- ESTILO DE MOLÉCULAS (BADGE) --- */
+.molecule-badge {
+    background: #1c1e24;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.molecule-badge span {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.m-toggle {
+    width: 3rem;
+    height: 1.5rem;
+    background: #4A6FFF;
+    border-radius: 1rem;
+}
+
+/* --- ESTILO DEL ORGANISMO (DASHBOARD SKELETON) --- */
+.box-organisms {
+    padding: 3rem;
+}
+
+.organism-skeleton {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 2rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skel-header {
+    width: 60%;
+    height: 1.2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+}
+
+.skel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.skel-item {
+    height: 4rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1.2rem;
+    border: 1px solid transparent;
+}
+
+/* Item resaltado que viste en tu captura */
+.active-skel {
+    background: rgba(74, 111, 255, 0.15);
+    border: 1px solid rgba(74, 111, 255, 0.4);
+    box-shadow: 0 0 15px rgba(74, 111, 255, 0.1);
+}
+
+.skel-footer {
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 1.5rem;
+    width: 100%;
+}
+
+/* --- TEXTOS INFORMATIVOS --- */
+.atomic-info h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.atomic-info p {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .atomic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .atomic-visual-box {
+        height: 200px;
+    }
+}
+
+/* --- IA & CREATIVE WORKFLOW --- */
+.workflow-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.section-title-center {
+    font-size: 4.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding-top: 80px;
+}
+
+.workflow-intro {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.workflow-card {
+    background: #0d0e12;
+    border-radius: 3.2rem;
+    padding: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.w-card-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.w-icon-bg {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.purple-glow {
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.red-glow {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.w-card-header h3 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.w-description {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.6;
+    margin-bottom: 3.5rem;
+    min-height: 8rem;
+    /* Para mantener alineación */
+}
+
+.w-visual-box {
+    width: 100%;
+    background: #16171d;
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    margin-top: auto;
+}
+
+.w-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.w-visual-box:hover .w-img {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .workflow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title-center {
+        font-size: 3.2rem;
+    }
+}
+
+/* --- DATA STRATEGY SECTION --- */
+.data-header {
+    margin-bottom: 6rem;
+    padding-top: 80px;
+}
+
+.data-intro {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    max-width: 900px;
+    margin-top: 2rem;
+}
+
+.data-intro strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    /* GA4 más ancho por el gráfico */
+    gap: 3rem;
+    padding-bottom: 80px;
+}
+
+.data-card {
+    background: #111216;
+    border-radius: 3.2rem;
+    padding: 4.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.d-card-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.d-icon-bg {
+    width: 4.8rem;
+    height: 4.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clarity-bg {
+    background: rgba(255, 92, 92, 0.1);
+}
+
+/* Color distintivo Clarity */
+
+.d-card-header h3 {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.d-description {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.6;
+    margin-bottom: 4rem;
+}
+
+/* GA4 Mini Metrics */
+.ga4-metrics {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.ga4-pill {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 1.5rem 2rem;
+    border-radius: 2rem;
+    flex: 1;
+}
+
+.ga4-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #4A6FFF;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.ga4-val {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.ga4-val small {
+    font-size: 1.1rem;
+    color: #4ade80;
+    /* Verde éxito */
+    margin-left: 0.5rem;
+}
+
+/* Visual Boxes */
+.ga4-visual-box,
+.clarity-visual-box {
+    width: 100%;
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.data-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ga4-metrics {
+        flex-direction: column;
+    }
+}
+
+/* --- INSIGHTS & FRICCIONES --- */
+.block-tag-red {
+    color: #FF5C5C;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.insights-subtitle {
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 5rem;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding-bottom: 80px;
+}
+
+.insight-card {
+    background: #111216;
+    /* Consistente con tus otras tarjetas */
+    padding: 4rem;
+    border-radius: 3.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.insight-icon-bg {
+    width: 4.8rem;
+    height: 4.8rem;
+    background: rgba(255, 92, 92, 0.1);
+    border-radius: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+
+
+.insight-quote {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+    flex-grow: 1;
+}
+
+.insight-tag {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.dot.red {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #FF5C5C;
+    border-radius: 50%;
+}
+
+.insight-impact {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.5;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- SECCIÓN GALERÍA HI-FI --- */
+.gallery-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.gallery-subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.6rem;
+    margin-top: 2rem;
+}
+
+/* MASONRY GRID SYSTEM */
+.masonry-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    /* Base para el cálculo */
+    gap: 2.5rem;
+    margin-bottom: 12rem;
+}
+
+.masonry-item {
+    border-radius: 2.4rem;
+    overflow: hidden;
+    background: #111216;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.masonry-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta la imagen al contenedor */
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.masonry-item:hover img {
+    transform: scale(1.04);
+}
+
+/* Proporciones de las imágenes según tu captura */
+.item-wide {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item-tall {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.masonry-item:nth-child(n+3) {
+    grid-row: span 1.5;
+}
+
+/* Laptop y Desktop pequeños */
+
+/* --- CLOSING STATEMENT --- */
+.closing-statement {
+    text-align: center;
+    padding: 10rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.closing-statement h2 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 4rem;
+}
+
+.btn-outline-glow {
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.btn-outline-glow:hover {
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .masonry-gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+
+    .item-wide,
+    .item-tall {
+        grid-column: span 1;
+        grid-row: auto;
+    }
+
+    .closing-statement h2 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        /* Una sola columna para que la imagen sea ancha */
+        gap: 20px;
+    }
+
+    .project-card img {
+        height: auto;
+        /* Que mantenga su proporción original */
+        aspect-ratio: 16 / 9;
+        /* O la proporción que tengan tus capturas */
+    }
+}
+
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+        /* Una sola columna para que la imagen sea ancha */
+        gap: 20px;
+    }
+
+    .project-card img {
+        height: auto;
+        /* Que mantenga su proporción original */
+        aspect-ratio: 16 / 9;
+        /* O la proporción que tengan tus capturas */
+    }
+}
+
+/* --- LÓGICA DE IMÁGENES ADAPTATIVAS --- */
+
+/* 1. Estado inicial: Escondemos la de móvil siempre */
+.img-mobile {
+    display: none;
+}
+
+.img-desktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 2. Cuando la pantalla es pequeña (Mobile) */
+@media (max-width: 650px) {
+
+    /* Apagamos Desktop */
+    .img-desktop {
+        display: none;
+    }
+
+    /* Encendemos Mobile */
+    .img-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+        /* Para que respete la proporción vertical que diseñes */
+        object-fit: cover;
+    }
+
+    /* Ajuste de los textos para que no se vean gigantes en pantallas pequeñas */
+    .project-title {
+        font-size: 1.4rem;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+}
+
+/* --- EL INTERRUPTOR MÁGICO --- */
+
+/* 1. Paso obligatorio: Esconder la imagen de móvil por defecto */
+.img-mobile {
+    display: none !important;
+}
+
+/* 2. Asegurar que la de escritorio se vea bien en PC */
+.img-desktop {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 3. Cuando la pantalla sea pequeña (Móvil) */
+@media (max-width: 650px) {
+
+    /* APAGAMOS la de escritorio */
+    .img-desktop {
+        display: none !important;
+    }
+
+    /* ENCENDEMOS la de móvil */
+    .img-mobile {
+        display: block !important;
+        width: 100%;
+        height: auto;
+    }
+}

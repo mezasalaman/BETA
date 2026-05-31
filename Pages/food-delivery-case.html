@@ -2,516 +2,498 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caso de Estudio | Food Delivery</title>
-    <link rel="stylesheet" href="../Styles/Normalize.css">
-    <link rel="stylesheet" href="../Styles/Default.css">
-    <link rel="stylesheet" href="../Styles/Nav.css">
-    <link rel="stylesheet" href="../Styles/CaseStudy.css">
-    <link rel="stylesheet" href="../Styles/Footer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <meta name="description" content="FoodDelivery — caso de estudio profundo: UX, activación, atomic design y estrategia de datos (GA4 · Clarity)." />
+    <link rel="icon" href="https://mezasalaman.github.io/BETA/Media/Home/icono%20meza.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Caso de Estudio | Food Delivery" />
+    <meta property="og:description" content="FoodDelivery — caso de estudio profundo: UX, activación, atomic design y estrategia de datos (GA4 · Clarity)." />
+    <meta property="og:image" content="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/img-portada-food.svg" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/tw-config.js"></script>
+    <link rel="stylesheet" href="../assets/portfolio.css" />
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="nav-content">
-                <a href="../index.html" class="logo-container">
-                    <img src="../Media/Home/icono meza.svg" alt="Icono" class="logo-icon">
-                    <span class="logo-text">Carlos Meza</span>
+<body class="bg-ink font-sans text-[#0f172a] antialiased">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="sticky top-0 z-[9999] w-full bg-ink">
+        <div class="mx-auto max-w-[1150px] px-5">
+            <div class="flex w-full items-center justify-between border-b border-hairline py-6">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <span class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Carlos Meza</span>
                 </a>
-                <ul class="enlaces__content">
-                    <li class="enlace--proyecto">
-                        <a href="#" class="link--main">Proyectos</a>
-                        <div class="subenlaces__content">
-                            <a href="./food-delivery.html">FoodDelivery</a>
-                            <a href="./satelock.html">Satelock</a>
-                            <a href="./SellerCenter.html">Seller Center</a>
+                <ul class="hidden items-center gap-10 md:flex">
+                    <li class="dropdown-trigger relative py-2.5">
+                        <a href="#" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Proyectos</a>
+                        <div class="dropdown-menu absolute left-1/2 top-full flex min-w-[180px] flex-col items-start gap-4 rounded-xl bg-white p-5 shadow-drop">
+                            <a href="food-delivery.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">FoodDelivery</a>
+                            <a href="satelock.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Satelock</a>
+                            <a href="SellerCenter.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Seller Center</a>
+                            <a href="conduzko.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">ConDuzko</a>
                         </div>
                     </li>
-                    <li><a href="./about.html" class="link--main">Sobre mí</a></li>
+                    <li><a href="about.html" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Sobre mí</a></li>
                 </ul>
+                <button type="button" data-menu-toggle aria-label="Abrir menú" class="flex h-10 w-10 items-center justify-center md:hidden">
+                    <span class="relative block h-[2px] w-6 rounded bg-white before:absolute before:-top-2 before:left-0 before:h-[2px] before:w-6 before:rounded before:bg-white before:content-[''] after:absolute after:top-2 after:left-0 after:h-[2px] after:w-6 after:rounded after:bg-white after:content-['']"></span>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden border-b border-hairline pb-4 md:!hidden">
+                <span class="block px-2 pb-1 pt-3 text-[11px] font-bold uppercase tracking-wider text-[#94a3b8]">Proyectos</span>
+                <a href="food-delivery.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">FoodDelivery</a>
+                <a href="satelock.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Satelock</a>
+                <a href="SellerCenter.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Seller Center</a>
+                <a href="conduzko.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">ConDuzko</a>
+                <a href="about.html" class="mt-1 block rounded-lg px-2 py-2.5 text-[15px] font-medium text-[#0f172a] hover:bg-[#f3f5f8]">Sobre mí</a>
             </div>
         </div>
     </nav>
-    <main class="case-study-page">
 
-        <header class="case-hero content">
-            <span class="case-category">BLOQUE 1: UX & ACTIVACIÓN</span>
-            <h1 class="case-main-title">
-                Simplificando el <span class="text-blue">Ciclo <br> de Activación</span> de Food Delivery.
+    <main class="pt-10">
+        <!-- ================= HERO ================= -->
+        <header class="mx-auto w-[90%] max-w-grid">
+            <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-electric">BLOQUE 1: UX &amp; ACTIVACIÓN</span>
+            <h1 class="mt-8 text-[40px] font-bold leading-[1.1] tracking-[-0.02em] sm:text-[56px] lg:text-[72px]">
+                Simplificando el <span class="text-electric">Ciclo <br />de Activación</span> de Food Delivery.
             </h1>
         </header>
 
-        <section class="section-container content">
-            <div class="case-grid-bento">
 
-                <div class="card-problem">
-                    <h3 class="card-title">El Problema: Sobrecarga Cognitiva</h3>
-                    <p class="card-text">
+        <!-- ================= ROL & IMPACTO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <div class="mb-10">
+                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">ROL &amp; IMPACTO</span>
+                <p class="max-w-[980px] text-[17px] font-light leading-[1.6] text-[#475569] sm:text-[20px]">Lideré el rediseño del onboarding de extremo a extremo. Estos son los resultados medidos contra la línea base previa al lanzamiento.</p>
+            </div>
+            <div class="mb-6 grid grid-cols-2 gap-6 rounded-[24px] border border-[#e9edf2] bg-card p-8 lg:grid-cols-4 sm:p-10">
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">MI ROL</span><p class="text-[16px] font-semibold text-[#0f172a]">Product Designer</p><p class="mt-0.5 text-[12px] text-dim">Research · UX · UI · Handoff</p></div>
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">EQUIPO</span><p class="text-[16px] font-semibold text-[#0f172a]">Producto + 2 devs</p></div>
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">DURACIÓN</span><p class="text-[16px] font-semibold text-[#0f172a]">≈ 10 semanas</p></div>
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">HERRAMIENTAS</span><p class="text-[16px] font-semibold text-[#0f172a]">GA4 · Mixpanel · Clarity · Figma</p></div>
+            </div>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline gap-2"><span class="text-[16px] font-medium text-[#94a3b8] line-through">48%</span><span class="text-[15px] text-[#94a3b8]">→</span><span class="text-[34px] font-bold leading-none text-electric">63%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Completitud de onboarding</p><p class="mt-1 text-[12px] leading-snug text-dim">+32% relativo · GA4, 6 semanas post-launch (n≈900)</p></div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline gap-2"><span class="text-[16px] font-medium text-[#94a3b8] line-through">41%</span><span class="text-[15px] text-[#94a3b8]">→</span><span class="text-[34px] font-bold leading-none text-electric">30%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Tasa de abandono</p><p class="mt-1 text-[12px] leading-snug text-dim">−27% · funnel GA4 + grabaciones de Clarity</p></div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">+21%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Creación de tiendas</p><p class="mt-1 text-[12px] leading-snug text-dim">Cohortes en Mixpanel vs. trimestre anterior</p></div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">+18%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Conversión final</p><p class="mt-1 text-[12px] leading-snug text-dim">Test A/B en GA4 sobre el flujo de publicación</p></div>
+            </div>
+            <p class="mt-5 text-[12px] text-dim">Métricas medidas contra la línea base previa a cada rediseño. Valores relativos salvo indicación contraria.</p>
+        </section>
+
+        <!-- ================= PROBLEMA / SOLUCIÓN ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20">
+            <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-[1.5fr_1fr]">
+                <!-- Problema -->
+                <div class="flex flex-col rounded-[40px] bg-panel2 p-8 sm:p-11">
+                    <h3 class="mb-8 text-[22px] font-semibold">El Problema: Sobrecarga Cognitiva</h3>
+                    <p class="mb-12 text-[16px] leading-[1.6] text-[#475569]">
                         Los usuarios abandonaban frecuentemente la plataforma durante la "Primera Milla". La
-                        documentación compleja y los procesos de configuración fragmentados generaban una <span
-                            class="text-red-highlight">tasa de abandono del 65%</span> antes de concretar el primer
-                        pedido.
+                        documentación compleja y los procesos de configuración fragmentados generaban una <span class="text-[#FF5C5C]">tasa de abandono del 65%</span> antes de concretar el primer pedido.
                     </p>
-
-                    <div class="problem-metrics">
-                        <div class="metric-pill">
-                            <img src="../Media/GEOSATELITAL/sincronizacion.svg" alt="icon" class="pill-icon">
-                            <div class="pill-info">
-                                <span class="pill-label">COMPLEJIDAD</span>
-                                <span class="pill-value">Sincronización Manual</span>
+                    <div class="mt-auto flex flex-col gap-4 sm:flex-row">
+                        <div class="flex flex-1 items-center gap-4 rounded-[28px] bg-[#eef1f5] px-7 py-5">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/sincronizacion.svg" alt="icon" class="h-[18px] w-auto opacity-80" />
+                            <div>
+                                <span class="block text-[9px] font-bold tracking-[0.1em] text-[#94a3b8]">COMPLEJIDAD</span>
+                                <span class="block text-[14px] font-semibold text-[#0f172a]">Sincronización Manual</span>
                             </div>
                         </div>
-                        <div class="metric-pill">
-                            <img src="../Media/GEOSATELITAL/friccion.svg" alt="icon" class="pill-icon">
-                            <div class="pill-info">
-                                <span class="pill-label">FRICCIÓN</span>
-                                <span class="pill-value">Retraso de 48hs</span>
+                        <div class="flex flex-1 items-center gap-4 rounded-[28px] bg-[#eef1f5] px-7 py-5">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/friccion.svg" alt="icon" class="h-[18px] w-auto opacity-80" />
+                            <div>
+                                <span class="block text-[9px] font-bold tracking-[0.1em] text-[#94a3b8]">FRICCIÓN</span>
+                                <span class="block text-[14px] font-semibold text-[#0f172a]">Retraso de 48hs</span>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="card-solution">
-                    <h3 class="card-title-dark">Solución UX: El Motor Progresivo</h3>
-                    <p class="card-text-dark">
+                <!-- Solución -->
+                <div class="flex flex-col rounded-[40px] bg-[#7A9BFF] p-8 text-black sm:p-11">
+                    <h3 class="mb-8 text-[22px] font-bold">Solución UX: El Motor Progresivo</h3>
+                    <p class="mb-12 text-[16px] leading-[1.6] text-black/70">
                         Sustituimos los formularios densos por una experiencia de Onboarding basada en micro-pasos. Los
                         ciclos de retroalimentación en tiempo real y la progresión gamificada redujeron el tiempo de
                         obtención de valor en un 82%.
                     </p>
-
-                    <div class="solution-badge">
-                        <img src="../Media/GEOSATELITAL/chek interaccion.svg" alt="check" class="check-icon">
+                    <div class="mt-auto flex items-center gap-3 text-[13px] font-semibold">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/chek%20interaccion.svg" alt="check" class="h-[18px] w-auto" />
                         <span>Micro-interacciones integradas</span>
                     </div>
                 </div>
-
             </div>
         </section>
-        <section class="section-container content">
-            <span class="block-tag-alt">INVESTIGACIÓN: ARQUETIPOS</span>
-            <h2 class="section-title-left">Mapeando el Comportamiento del Usuario.</h2>
 
-            <div class="personas-grid">
-                <div class="persona-card persona-blue">
-                    <div class="persona-header">
-                        <div class="persona-icon-bg">
-                            <img src="../Media/GEOSATELITAL/comerciante.svg" alt="store" class="p-icon">
+        <!-- ================= PERSONAS ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <span class="block pt-10 text-[11px] font-bold uppercase tracking-[0.15em] text-electric">INVESTIGACIÓN: ARQUETIPOS</span>
+            <h2 class="mb-14 mt-8 text-[32px] font-bold tracking-[-0.01em] sm:text-[48px]">Mapeando el Comportamiento del Usuario.</h2>
+
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                <!-- Comerciante -->
+                <div class="overflow-hidden rounded-[24px] border border-[#edf0f4] border-t-4 border-t-electric bg-panel2 p-8 sm:p-10">
+                    <div class="mb-10 flex items-center gap-5">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f5f8]">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/comerciante.svg" alt="store" class="h-6 w-auto opacity-70" />
                         </div>
-                        <div class="persona-title-group">
-                            <h4>El Comerciante Ágil</h4>
-                            <span class="persona-role">TOMADOR DE DECISIONES</span>
+                        <div>
+                            <h4 class="text-[22px] font-semibold text-[#0f172a]">El Comerciante Ágil</h4>
+                            <span class="text-[11px] font-bold tracking-[0.1em] text-[#94a3b8]">TOMADOR DE DECISIONES</span>
                         </div>
                     </div>
-
-                    <div class="persona-details-grid">
-                        <div class="detail-col">
-                            <span class="detail-label label-blue">OBJETIVOS</span>
-                            <ul>
-                                <li>Activación rápida de tienda</li>
-                                <li>Automatización de inventario</li>
+                    <div class="mb-10 grid grid-cols-2 gap-8">
+                        <div>
+                            <span class="mb-4 block text-[10px] font-extrabold tracking-[0.1em] text-electric">OBJETIVOS</span>
+                            <ul class="flex flex-col gap-2 text-[14px] text-[#475569]">
+                                <li class="before:mr-2 before:content-['•']">Activación rápida de tienda</li>
+                                <li class="before:mr-2 before:content-['•']">Automatización de inventario</li>
                             </ul>
                         </div>
-                        <div class="detail-col">
-                            <span class="detail-label label-red">PUNTOS DE DOLOR</span>
-                            <ul>
-                                <li>Alta barrera tecnológica</li>
-                                <li>Entrada manual de datos</li>
+                        <div>
+                            <span class="mb-4 block text-[10px] font-extrabold tracking-[0.1em] text-[#FF5C5C]">PUNTOS DE DOLOR</span>
+                            <ul class="flex flex-col gap-2 text-[14px] text-[#475569]">
+                                <li class="before:mr-2 before:content-['•']">Alta barrera tecnológica</li>
+                                <li class="before:mr-2 before:content-['•']">Entrada manual de datos</li>
                             </ul>
                         </div>
                     </div>
-
-                    <div class="persona-quote">
-                        <p>"Necesito que mi vitrina digital sea tan operativa como mi tienda física, sin pasar horas
-                            configurándola."</p>
+                    <div class="rounded-[20px] bg-[#f7f8fa] p-7">
+                        <p class="text-[14px] italic leading-[1.6] text-[#64748b]">"Necesito que mi vitrina digital sea tan operativa como mi tienda física, sin pasar horas configurándola."</p>
                     </div>
                 </div>
-
-                <div class="persona-card persona-purple">
-                    <div class="persona-header">
-                        <div class="persona-icon-bg">
-                            <img src="../Media/GEOSATELITAL/consumidor.svg" alt="user" class="p-icon">
+                <!-- Consumidor -->
+                <div class="overflow-hidden rounded-[24px] border border-[#edf0f4] border-t-4 border-t-[#7A9BFF] bg-panel2 p-8 sm:p-10">
+                    <div class="mb-10 flex items-center gap-5">
+                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f5f8]">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/consumidor.svg" alt="user" class="h-6 w-auto opacity-70" />
                         </div>
-                        <div class="persona-title-group">
-                            <h4>El Consumidor Directo</h4>
-                            <span class="persona-role">USUARIO FINAL</span>
-                        </div>
-                    </div>
-
-                    <div class="persona-details-grid">
-                        <div class="detail-col">
-                            <span class="detail-label label-blue">OBJETIVOS</span>
-                            <ul>
-                                <li>Precisión en tiempo real</li>
-                                <li>Fulfillment en un clic</li>
-                            </ul>
-                        </div>
-                        <div class="detail-col">
-                            <span class="detail-label label-red">PUNTOS DE DOLOR</span>
-                            <ul>
-                                <li>Estatus de entrega opaco</li>
-                                <li>Fragmentación del carrito</li>
-                            </ul>
+                        <div>
+                            <h4 class="text-[22px] font-semibold text-[#0f172a]">El Consumidor Directo</h4>
+                            <span class="text-[11px] font-bold tracking-[0.1em] text-[#94a3b8]">USUARIO FINAL</span>
                         </div>
                     </div>
-
-                    <div class="persona-quote">
-                        <p>"La visibilidad es mi moneda de cambio. Si no puedo ver exactamente dónde está mi pedido,
-                            pierdo la confianza en el servicio."</p>
+                    <div class="mb-10 grid grid-cols-2 gap-8">
+                        <div>
+                            <span class="mb-4 block text-[10px] font-extrabold tracking-[0.1em] text-electric">OBJETIVOS</span>
+                            <ul class="flex flex-col gap-2 text-[14px] text-[#475569]">
+                                <li class="before:mr-2 before:content-['•']">Precisión en tiempo real</li>
+                                <li class="before:mr-2 before:content-['•']">Fulfillment en un clic</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span class="mb-4 block text-[10px] font-extrabold tracking-[0.1em] text-[#FF5C5C]">PUNTOS DE DOLOR</span>
+                            <ul class="flex flex-col gap-2 text-[14px] text-[#475569]">
+                                <li class="before:mr-2 before:content-['•']">Estatus de entrega opaco</li>
+                                <li class="before:mr-2 before:content-['•']">Fragmentación del carrito</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rounded-[20px] bg-[#f7f8fa] p-7">
+                        <p class="text-[14px] italic leading-[1.6] text-[#64748b]">"La visibilidad es mi moneda de cambio. Si no puedo ver exactamente dónde está mi pedido, pierdo la confianza en el servicio."</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section-container content kinetic-onboarding-section">
-            <div class="kinetic-header">
-                <span class="block-tag-alt">ARQUITECTURA: EL HAPPY PATH</span>
-                <h2 class="section-title-left">Flujo de Onboarding Kinético.</h2>
-                <p class="kinetic-subtitle">Visualización de la transición optimizada de 7 pasos, desde la identidad
-                    inicial hasta la presencia en vivo en el mercado.</p>
+
+        <!-- ================= FLUJO KINÉTICO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <div class="pt-10">
+                <span class="block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">ARQUITECTURA: EL HAPPY PATH</span>
+                <h2 class="mb-6 mt-8 text-[32px] font-bold tracking-[-0.01em] sm:text-[48px]">Flujo de Onboarding Kinético.</h2>
+                <p class="mb-12 max-w-[700px] text-[16px] text-[#64748b]">Visualización de la transición optimizada de 7 pasos, desde la identidad inicial hasta la presencia en vivo en el mercado.</p>
             </div>
 
-            <div class="kinetic-flow-container">
-
-                <div class="kinetic-stepper">
-                    <div class="k-step">
-                        <div class="k-icon-box"><img src="../Media/GEOSATELITAL/registro.svg" alt="Registro"></div>
-                        <span class="k-num">1. Registro</span>
-                        <span class="k-label">IDENTIDAD</span>
+            <div class="rounded-[32px] border border-[#edf0f4] bg-[#f6f7f9] px-6 py-12 sm:px-10">
+                <div class="mb-12 grid grid-cols-2 gap-8 sm:grid-cols-4 lg:flex lg:justify-between">
+                    <div class="flex flex-1 flex-col items-center text-center">
+                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/registro.svg" alt="Registro" class="h-6 w-auto opacity-60" /></div>
+                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">1. Registro</span>
+                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">IDENTIDAD</span>
                     </div>
-                    <div class="k-step">
-                        <div class="k-icon-box"><img src="../Media/GEOSATELITAL/guiado+.svg" alt="Inicio"></div>
-                        <span class="k-num">2. Inicio guiado</span>
-                        <span class="k-label">CONTEXTO</span>
+                    <div class="flex flex-1 flex-col items-center text-center">
+                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/guiado%2B.svg" alt="Inicio" class="h-6 w-auto opacity-60" /></div>
+                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">2. Inicio guiado</span>
+                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">CONTEXTO</span>
                     </div>
-                    <div class="k-step">
-                        <div class="k-icon-box"><img src="../Media/GEOSATELITAL/categoria.svg" alt="Categoría"></div>
-                        <span class="k-num">3. Categoría</span>
-                        <span class="k-label">ESTRUCTURA</span>
+                    <div class="flex flex-1 flex-col items-center text-center">
+                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/categoria.svg" alt="Categoría" class="h-6 w-auto opacity-60" /></div>
+                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">3. Categoría</span>
+                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">ESTRUCTURA</span>
                     </div>
-                    <div class="k-step">
-                        <div class="k-icon-box"><img src="../Media/GEOSATELITAL/productos.svg" alt="Productos"></div>
-                        <span class="k-num">4. Productos</span>
-                        <span class="k-label">INVENTARIO</span>
+                    <div class="flex flex-1 flex-col items-center text-center">
+                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/productos.svg" alt="Productos" class="h-6 w-auto opacity-60" /></div>
+                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">4. Productos</span>
+                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">INVENTARIO</span>
                     </div>
-                    <div class="k-step">
-                        <div class="k-icon-box"><img src="../Media/GEOSATELITAL/personalizacion.svg"
-                                alt="Personalización"></div>
-                        <span class="k-num">5. Personalización</span>
-                        <span class="k-label">MARCA</span>
+                    <div class="flex flex-1 flex-col items-center text-center">
+                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/personalizacion.svg" alt="Personalización" class="h-6 w-auto opacity-60" /></div>
+                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">5. Personalización</span>
+                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">MARCA</span>
                     </div>
-                    <div class="k-step">
-                        <div class="k-icon-box"><img src="../Media/GEOSATELITAL/validacion.svg" alt="Vista previa">
-                        </div>
-                        <span class="k-num">6. Vista previa</span>
-                        <span class="k-label">VALIDACIÓN</span>
+                    <div class="flex flex-1 flex-col items-center text-center">
+                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/validacion.svg" alt="Vista previa" class="h-6 w-auto opacity-60" /></div>
+                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">6. Vista previa</span>
+                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">VALIDACIÓN</span>
                     </div>
-                    <div class="k-step k-active">
-                        <div class="k-icon-box k-glow"><img src="../Media/GEOSATELITAL/publicacion.svg"
-                                alt="Publicación"></div>
-                        <span class="k-num">7. Publicación</span>
-                        <span class="k-label">ESTADO EN VIVO</span>
+                    <div class="flex flex-1 flex-col items-center text-center">
+                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-electric bg-[#f3f5f8] shadow-[0_0_20px_rgba(74,111,255,0.2)]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/publicacion.svg" alt="Publicación" class="h-6 w-auto drop-shadow-[0_0_5px_#4A6FFF]" /></div>
+                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">7. Publicación</span>
+                        <span class="text-[9px] font-bold uppercase tracking-wide text-electric">ESTADO EN VIVO</span>
                     </div>
                 </div>
 
-                <hr class="kinetic-divider">
+                <hr class="mb-12 border-0 border-t border-[#e9edf2]" />
 
-                <div class="kinetic-phases-grid">
-                    <div class="phase-item">
-                        <span class="p-tag">PASO 01-02</span>
-                        <h4>Autenticación & Contextualización</h4>
-                        <p>Captura de credenciales seguras y recorrido interactivo inicial para reducir el "blank slate
-                            syndrome".</p>
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+                    <div>
+                        <span class="mb-3 block text-[10px] font-bold tracking-[0.1em] text-electric">PASO 01-02</span>
+                        <h4 class="mb-3 text-[16px] font-semibold">Autenticación &amp; Contextualización</h4>
+                        <p class="text-[13px] leading-[1.6] text-[#64748b]">Captura de credenciales seguras y recorrido interactivo inicial para reducir el "blank slate syndrome".</p>
                     </div>
-                    <div class="phase-item">
-                        <span class="p-tag">PASO 03-04</span>
-                        <h4>Estructura de Catálogo</h4>
-                        <p>Organización lógica de categorías y carga masiva de productos optimizada por IA para mapeo
-                            automático.</p>
+                    <div>
+                        <span class="mb-3 block text-[10px] font-bold tracking-[0.1em] text-electric">PASO 03-04</span>
+                        <h4 class="mb-3 text-[16px] font-semibold">Estructura de Catálogo</h4>
+                        <p class="text-[13px] leading-[1.6] text-[#64748b]">Organización lógica de categorías y carga masiva de productos optimizada por IA para mapeo automático.</p>
                     </div>
-                    <div class="phase-item">
-                        <span class="p-tag">PASO 05-06</span>
-                        <h4>Estética & Control de Calidad</h4>
-                        <p>Configuración de identidad visual y simulación en tiempo real del flujo del usuario final
-                            antes del despliegue.</p>
+                    <div>
+                        <span class="mb-3 block text-[10px] font-bold tracking-[0.1em] text-electric">PASO 05-06</span>
+                        <h4 class="mb-3 text-[16px] font-semibold">Estética &amp; Control de Calidad</h4>
+                        <p class="text-[13px] leading-[1.6] text-[#64748b]">Configuración de identidad visual y simulación en tiempo real del flujo del usuario final antes del despliegue.</p>
                     </div>
-                    <div class="phase-item">
-                        <span class="p-tag">PASO 07</span>
-                        <h4>Lanzamiento al Ecosistema</h4>
-                        <p>Distribución instantánea en la red de entrega con propagación de caché global sin latencia.
-                        </p>
+                    <div>
+                        <span class="mb-3 block text-[10px] font-bold tracking-[0.1em] text-electric">PASO 07</span>
+                        <h4 class="mb-3 text-[16px] font-semibold">Lanzamiento al Ecosistema</h4>
+                        <p class="text-[13px] leading-[1.6] text-[#64748b]">Distribución instantánea en la red de entrega con propagación de caché global sin latencia.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section-container content atomic-design-section">
-            <div class="atomic-header">
-                <span class="case-category">BLOQUE 2: UI & ATOMIC DESIGN</span>
-                <h2 class="section-title-left">Integridad Visual a Escala.</h2>
-                <p class="atomic-subtitle">Nuestro Design System está construido sobre precisión matemática, asegurando
-                    que cada píxel cumpla un propósito en el ecosistema logístico.</p>
+
+        <!-- ================= ATOMIC DESIGN ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <div class="pt-10">
+                <span class="block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">BLOQUE 2: UI &amp; ATOMIC DESIGN</span>
+                <h2 class="mb-6 mt-8 text-[32px] font-bold tracking-[-0.01em] sm:text-[48px]">Integridad Visual a Escala.</h2>
+                <p class="mb-12 max-w-[800px] text-[16px] leading-[1.6] text-[#64748b]">Nuestro Design System está construido sobre precisión matemática, asegurando que cada píxel cumpla un propósito en el ecosistema logístico.</p>
             </div>
 
-            <div class="atomic-grid">
-                <div class="atomic-card">
-                    <div class="atomic-visual-box box-atoms">
-                        <div class="atom-circle circle-1"></div>
-                        <div class="atom-circle circle-2"></div>
-                        <div class="atom-circle circle-3"></div>
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+                <!-- Átomos -->
+                <div>
+                    <div class="relative mb-6 flex h-[240px] items-center justify-center overflow-hidden rounded-[32px] border border-[#e9edf2] bg-panel2">
+                        <div class="mx-2 h-14 w-14 rounded-full bg-electric shadow-[0_0_20px_rgba(74,111,255,0.3)]"></div>
+                        <div class="mx-2 h-14 w-14 rounded-full bg-[#7A9BFF]"></div>
+                        <div class="mx-2 h-14 w-14 rounded-full bg-[#9DB7FF]"></div>
                     </div>
-                    <div class="atomic-info">
-                        <h4>Átomos</h4>
-                        <p>Escalas definidas por luminancia y la regla de "No-Line" para la elevación.</p>
-                    </div>
+                    <h4 class="mb-3 text-[22px] font-semibold">Átomos</h4>
+                    <p class="text-[14px] leading-[1.6] text-[#64748b]">Escalas definidas por luminancia y la regla de "No-Line" para la elevación.</p>
                 </div>
-
-                <div class="atomic-card">
-                    <div class="atomic-visual-box box-molecules">
-                        <div class="molecule-badge">
-                            <img src="../Media/GEOSATELITAL/rastreo.svg" alt="icon" class="m-icon">
-                            <span>RASTREANDO...</span>
-                            <div class="m-toggle"></div>
+                <!-- Moléculas -->
+                <div>
+                    <div class="relative mb-6 flex h-[240px] items-center justify-center overflow-hidden rounded-[32px] border border-[#e9edf2] bg-panel2">
+                        <div class="flex items-center gap-4 rounded-full border border-[#e9edf2] bg-[#eef1f5] px-6 py-3">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/rastreo.svg" alt="icon" class="h-4 w-auto" />
+                            <span class="text-[10px] font-bold tracking-[0.1em] text-[#0f172a]">RASTREANDO...</span>
+                            <div class="h-5 w-10 rounded-full bg-electric"></div>
                         </div>
                     </div>
-                    <div class="atomic-info">
-                        <h4>Moléculas</h4>
-                        <p>Badges de estado interactivos y clusters de búsqueda predictiva.</p>
-                    </div>
+                    <h4 class="mb-3 text-[22px] font-semibold">Moléculas</h4>
+                    <p class="text-[14px] leading-[1.6] text-[#64748b]">Badges de estado interactivos y clusters de búsqueda predictiva.</p>
                 </div>
-
-                <div class="atomic-card">
-                    <div class="atomic-visual-box box-organisms">
-                        <div class="organism-skeleton">
-                            <div class="skel-header"></div>
-                            <div class="skel-grid">
-                                <div class="skel-item"></div>
-                                <div class="skel-item"></div>
-                                <div class="skel-item active-skel"></div>
-                                <div class="skel-item"></div>
+                <!-- Organismos -->
+                <div>
+                    <div class="relative mb-6 flex h-[240px] items-center justify-center overflow-hidden rounded-[32px] border border-[#e9edf2] bg-panel2 p-8">
+                        <div class="flex h-full w-full flex-col gap-4 rounded-2xl border border-[#e9edf2] bg-[#f7f8fa] p-5">
+                            <div class="h-3 w-3/5 rounded-full bg-[#f3f5f8]"></div>
+                            <div class="grid grid-cols-4 gap-3">
+                                <div class="h-10 rounded-xl border border-transparent bg-[#f3f5f8]"></div>
+                                <div class="h-10 rounded-xl border border-transparent bg-[#f3f5f8]"></div>
+                                <div class="h-10 rounded-xl border border-electric/40 bg-electric/[0.15] shadow-[0_0_15px_rgba(74,111,255,0.1)]"></div>
+                                <div class="h-10 rounded-xl border border-transparent bg-[#f3f5f8]"></div>
                             </div>
-                            <div class="skel-footer"></div>
+                            <div class="w-full flex-1 rounded-2xl bg-[#f7f8fa]"></div>
                         </div>
                     </div>
-                    <div class="atomic-info">
-                        <h4>Organismos</h4>
-                        <p>Dashboards dinámicos de gestión de flota y mapas en tiempo real.</p>
+                    <h4 class="mb-3 text-[22px] font-semibold">Organismos</h4>
+                    <p class="text-[14px] leading-[1.6] text-[#64748b]">Dashboards dinámicos de gestión de flota y mapas en tiempo real.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= IA WORKFLOW ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <div class="mb-14 text-center">
+                <h2 class="mb-6 pt-10 text-[32px] font-bold sm:text-[48px]">IA &amp; Creative Workflow</h2>
+                <p class="mx-auto max-w-[700px] text-[16px] leading-[1.6] text-[#64748b] md:text-[18px]">Integrando herramientas de inteligencia artificial para acelerar la producción de alta fidelidad sin comprometer la calidad.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                <div class="flex flex-col rounded-[32px] border border-[#e9edf2] bg-[#f6f7f9] p-8 sm:p-10">
+                    <div class="mb-8 flex items-center gap-5">
+                        <div class="flex h-[45px] w-[45px] items-center justify-center rounded-xl border border-[#a855f7]/20 bg-[#a855f7]/10"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/diagramaicon.svg" alt="icon" class="h-5 w-auto" /></div>
+                        <h3 class="text-[22px] font-semibold">Diagrama de Flujos</h3>
+                    </div>
+                    <p class="mb-9 min-h-[80px] text-[15px] leading-[1.6] text-[#64748b]">Generación de mapa de Flujo en todo requerimiento utilizado para el proyecto, para el mejor entendimiento del Developer, teniendo un producto documentado y preciso.</p>
+                    <div class="group mt-auto w-full overflow-hidden rounded-2xl border border-[#edf0f4] bg-[#eef1f5]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/diagrama%20imagen.svg" alt="Diagrama de Flujos" class="block w-full transition-transform duration-500 group-hover:scale-105" />
+                    </div>
+                </div>
+                <div class="flex flex-col rounded-[32px] border border-[#e9edf2] bg-[#f6f7f9] p-8 sm:p-10">
+                    <div class="mb-8 flex items-center gap-5">
+                        <div class="flex h-[45px] w-[45px] items-center justify-center rounded-xl border border-[#ef4444]/20 bg-[#ef4444]/10"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/stich.svg" alt="icon" class="h-5 w-auto" /></div>
+                        <h3 class="text-[22px] font-semibold">STICH (IA) Integration</h3>
+                    </div>
+                    <p class="mb-9 min-h-[80px] text-[15px] leading-[1.6] text-[#64748b]">Uso de Stitch para la generación de texturas dinámicas, recursos visuales abstractos y apoyo en la creación de interfaces, facilitando la exploración rápida de estilos.</p>
+                    <div class="group mt-auto w-full overflow-hidden rounded-2xl border border-[#edf0f4] bg-[#eef1f5]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/stich%20img.svg" alt="Stich AI Integration" class="block w-full transition-transform duration-500 group-hover:scale-105" />
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section-container content workflow-section">
-            <div class="workflow-header">
-                <h2 class="section-title-center">IA & Creative Workflow</h2>
-                <p class="workflow-intro">Integrando herramientas de inteligencia artificial para acelerar la producción
-                    de alta fidelidad sin comprometer la calidad.</p>
+
+        <!-- ================= DATA STRATEGY ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <div class="pt-10">
+                <span class="block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">BLOQUE 3: ESTRATEGIA DE DATOS</span>
+                <h2 class="mb-6 mt-8 text-[32px] font-bold tracking-[-0.01em] sm:text-[48px]">Inteligencia Estratégica &amp; Medición de Usuarios</h2>
+                <p class="mb-12 max-w-[900px] text-[16px] leading-[1.6] text-[#64748b] md:text-[18px]"><strong class="font-semibold text-[#0f172a]">UX + Data = Decisiones Efectivas.</strong> Como Senior Designer, mi enfoque no es solo estético, sino validado. Cada micro-interacción se mide para garantizar que estamos eliminando la fricción y maximizando el valor de negocio.</p>
             </div>
 
-            <div class="workflow-grid">
-                <div class="workflow-card">
-                    <div class="w-card-header">
-                        <div class="w-icon-bg purple-glow">
-                            <img src="../Media/GEOSATELITAL/diagramaicon.svg" alt="icon">
+            <div class="grid grid-cols-1 gap-8 pb-12 lg:grid-cols-[1.6fr_1fr]">
+                <!-- GA4 -->
+                <div class="rounded-[32px] border border-[#e9edf2] bg-panel2 p-8 sm:p-11">
+                    <div class="mb-8 flex items-center gap-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#f3f5f8]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/ga4.svg" alt="GA4" class="h-6 w-auto" /></div>
+                        <h3 class="text-[24px] font-semibold">Google Analytics 4 (GA4)</h3>
+                    </div>
+                    <p class="mb-10 text-[15px] leading-[1.6] text-[#64748b]">Implementamos un monitoreo continuo del comportamiento del usuario para analizar la evolución de sesiones, transacciones y tasas de conversión.</p>
+                    <div class="mb-8 flex flex-col gap-4 sm:flex-row">
+                        <div class="flex-1 rounded-[20px] bg-[#f7f8fa] px-5 py-4">
+                            <span class="mb-1 block text-[9px] font-bold tracking-wide text-electric">TASA DE CONVERSIÓN PROMEDIO</span>
+                            <span class="text-[18px] font-bold text-[#0f172a]">3.8% <small class="text-[11px] text-[#4ade80]">+12%</small></span>
                         </div>
-                        <h3>Diagrama de Flujos</h3>
+                        <div class="flex-1 rounded-[20px] bg-[#f7f8fa] px-5 py-4">
+                            <span class="mb-1 block text-[9px] font-bold tracking-wide text-electric">TOTAL DE TRANSACCIONES</span>
+                            <span class="text-[18px] font-bold text-[#0f172a]">76 <small class="text-[11px] text-[#4ade80]">+8%</small></span>
+                        </div>
+                        <div class="flex-1 rounded-[20px] bg-[#f7f8fa] px-5 py-4">
+                            <span class="mb-1 block text-[9px] font-bold tracking-wide text-electric">USUARIOS ACTIVOS</span>
+                            <span class="text-[18px] font-bold text-[#0f172a]">894 <small class="text-[11px] text-[#4ade80]">+21%</small></span>
+                        </div>
                     </div>
-                    <p class="w-description">Generación de mapa de Flujo en todo requerimiento utilizado para el
-                        proyecto, para el mejor entendimiento del Developer, teniendo un producto documentado y preciso.
-                    </p>
-                    <div class="w-visual-box">
-                        <img src="../Media/GEOSATELITAL/diagrama imagen.svg" alt="Diagrama de Flujos" class="w-img">
-                    </div>
+                    <div class="w-full overflow-hidden rounded-2xl border border-[#e9edf2]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/metricas.svg" alt="Evolutivo GA4" class="block w-full" /></div>
                 </div>
-
-                <div class="workflow-card">
-                    <div class="w-card-header">
-                        <div class="w-icon-bg red-glow">
-                            <img src="../Media/GEOSATELITAL/stich.svg" alt="icon">
-                        </div>
-                        <h3>STICH (IA) Integration</h3>
+                <!-- Clarity -->
+                <div class="rounded-[32px] border border-[#e9edf2] bg-panel2 p-8 sm:p-11">
+                    <div class="mb-8 flex items-center gap-5">
+                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FF5C5C]/10"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/clarity.svg" alt="Clarity" class="h-6 w-auto" /></div>
+                        <h3 class="text-[24px] font-semibold">Microsoft Clarity</h3>
                     </div>
-                    <p class="w-description">Uso de Stitch para la generación de texturas dinámicas, recursos visuales
-                        abstractos y apoyo en la creación de interfaces, facilitando la exploración rápida de estilos.
-                    </p>
-                    <div class="w-visual-box">
-                        <img src="../Media/GEOSATELITAL/stich img.svg" alt="Stich AI Integration" class="w-img">
-                    </div>
+                    <p class="mb-10 text-[15px] leading-[1.6] text-[#64748b]">El análisis de mapas de calor y grabaciones de sesiones reveló fricciones invisibles en la búsqueda de productos, validando la necesidad de eliminar Pop ups invasivos.</p>
+                    <div class="w-full overflow-hidden rounded-2xl border border-[#e9edf2]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/claruty%20imagen.svg" alt="Heatmap Clarity" class="block w-full" /></div>
                 </div>
             </div>
         </section>
-        <section class="section-container content data-strategy-section">
-            <div class="data-header">
-                <span class="case-category">BLOQUE 3: ESTRATEGIA DE DATOS</span>
-                <h2 class="section-title-left">Inteligencia Estratégica & Medición de Usuarios</h2>
-                <p class="data-intro"><strong>UX + Data = Decisiones Efectivas.</strong> Como Senior Designer, mi
-                    enfoque no es solo estético, sino validado. Cada micro-interacción se mide para garantizar que
-                    estamos eliminando la fricción y maximizando el valor de negocio.</p>
-            </div>
 
-            <div class="data-grid">
-                <div class="data-card ga4-card">
-                    <div class="d-card-header">
-                        <div class="d-icon-bg">
-                            <img src="../Media/GEOSATELITAL/ga4.svg" alt="GA4">
-                        </div>
-                        <h3>Google Analytics 4 (GA4)</h3>
-                    </div>
-                    <p class="d-description">Implementamos un monitoreo continuo del comportamiento del usuario para
-                        analizar la evolución de sesiones, transacciones y tasas de conversión.</p>
+        <!-- ================= INSIGHTS ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <span class="block text-[11px] font-bold uppercase tracking-[0.15em] text-[#FF5C5C]">ANÁLISIS DE USUARIO: PUNTOS DE DOLOR</span>
+            <h2 class="mb-6 mt-8 text-[32px] font-bold tracking-[-0.01em] sm:text-[48px]">Insights Hallados &amp; Fricciones Detectadas.</h2>
+            <p class="mb-14 max-w-[800px] text-[16px] leading-[1.6] text-[#64748b] md:text-[18px]">A través de pruebas de usabilidad y grabaciones en vivo, identificamos patrones críticos de sobrecarga cognitiva causados por una arquitectura de avisos intrusiva.</p>
 
-                    <div class="ga4-metrics">
-                        <div class="ga4-pill">
-                            <span class="ga4-label">TASA DE CONVERSIÓN PROMEDIO</span>
-                            <span class="ga4-val">3.8% (+0.8%) <small>+12%</small></span>
-                        </div>
-                        <div class="ga4-pill">
-                            <span class="ga4-label">TOTAL DE TRANSACCIONES</span>
-                            <span class="ga4-val">76 (+8%) <small>+8%</small></span>
-                        </div>
-                        <div class="ga4-pill">
-                            <span class="ga4-label">USUARIOS ACTIVOS</span>
-                            <span class="ga4-val">894 (+12%) <small>+21%</small></span>
-                        </div>
-                    </div>
-
-                    <div class="ga4-visual-box">
-                        <img src="../Media/GEOSATELITAL/metricas.svg" alt="Evolutivo GA4" class="data-img">
-                    </div>
+            <div class="grid grid-cols-1 gap-8 pb-12 lg:grid-cols-3">
+                <div class="flex h-full flex-col rounded-[32px] border border-[#edf0f4] bg-panel2 p-8 sm:p-10">
+                    <div class="mb-8 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FF5C5C]/10"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/alert-1.svg" alt="friccion" class="h-6 w-auto" /></div>
+                    <p class="mb-9 flex-1 text-[18px] leading-[1.5] text-[#0f172a]">"El pop-up de confirmación de Dirección interrumpe mi flujo justo cuando estoy por Añadir un producto."</p>
+                    <div class="mb-8 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.1em] text-[#94a3b8]"><span class="h-2 w-2 rounded-full bg-[#FF5C5C]"></span>FRICCIÓN DE FLUJO</div>
+                    <p class="border-t border-[#e9edf2] pt-6 text-[13px] leading-[1.5] text-[#64748b]">Impacto: Incremento en el tiempo de tarea de un 40% debido a micro-interrupciones.</p>
                 </div>
-
-                <div class="data-card clarity-card">
-                    <div class="d-card-header">
-                        <div class="d-icon-bg clarity-bg">
-                            <img src="../Media/GEOSATELITAL/clarity.svg" alt="Clarity">
-                        </div>
-                        <h3>Microsoft Clarity</h3>
-                    </div>
-                    <p class="d-description">El análisis de mapas de calor y grabaciones de sesiones reveló fricciones
-                        invisibles en la búsqueda de productos, validando la necesidad de eliminar Pop ups invasivos.
-                    </p>
-
-                    <div class="clarity-visual-box">
-                        <img src="../Media/GEOSATELITAL/claruty imagen.svg" alt="Heatmap Clarity" class="data-img">
-                    </div>
+                <div class="flex h-full flex-col rounded-[32px] border border-[#edf0f4] bg-panel2 p-8 sm:p-10">
+                    <div class="mb-8 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FF5C5C]/10"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/cap-2.svg" alt="carga" class="h-6 w-auto" /></div>
+                    <p class="mb-9 flex-1 text-[18px] leading-[1.5] text-[#0f172a]">"Hay demasiados avisos intrusivos que no me dejan ver el progreso de mi tienda."</p>
+                    <div class="mb-8 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.1em] text-[#94a3b8]"><span class="h-2 w-2 rounded-full bg-[#FF5C5C]"></span>CARGA COGNITIVA</div>
+                    <p class="border-t border-[#e9edf2] pt-6 text-[13px] leading-[1.5] text-[#64748b]">Impacto: Desorientación del usuario al ocultar elementos clave de la interfaz secundaria.</p>
+                </div>
+                <div class="flex h-full flex-col rounded-[32px] border border-[#edf0f4] bg-panel2 p-8 sm:p-10">
+                    <div class="mb-8 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FF5C5C]/10"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/danger-3.svg" alt="presion" class="h-6 w-auto" /></div>
+                    <p class="mb-9 flex-1 text-[18px] leading-[1.5] text-[#0f172a]">"Siento que la interfaz me presiona con tantas alertas antes de terminar una tarea."</p>
+                    <div class="mb-8 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.1em] text-[#94a3b8]"><span class="h-2 w-2 rounded-full bg-[#FF5C5C]"></span>PRESIÓN PSICOLÓGICA</div>
+                    <p class="border-t border-[#e9edf2] pt-6 text-[13px] leading-[1.5] text-[#64748b]">Impacto: El 22% de los usuarios reportaron estrés visual durante el proceso de onboarding.</p>
                 </div>
             </div>
         </section>
-        <section class="section-container content insights-section">
-            <div class="insights-header">
-                <span class="block-tag-red">ANÁLISIS DE USUARIO: PUNTOS DE DOLOR</span>
-                <h2 class="section-title-left">Insights Hallados & Fricciones Detectadas.</h2>
-                <p class="insights-subtitle">A través de pruebas de usabilidad y grabaciones en vivo, identificamos
-                    patrones críticos de sobrecarga cognitiva causados por una arquitectura de avisos intrusiva.</p>
+
+        <!-- ================= GALERÍA ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <div data-gallery class="grid auto-rows-[200px] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2 sm:col-span-2 sm:row-span-2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/desktop.svg" alt="Desktop View" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2 row-span-2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/mobile.svg" alt="Mobile Experience" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/i-2.svg" alt="Interface 2" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/laptod.svg" alt="Laptop View" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/laptod-2.svg" alt="Laptop View 2" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/i-3.svg" alt="Interface 3" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/i-4.svg" alt="Interface 4" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
             </div>
 
-            <div class="insights-grid">
-                <div class="insight-card">
-                    <div class="insight-icon-bg">
-                        <img src="../Media/GEOSATELITAL/alert-1.svg" alt="friccion">
-                    </div>
-                    <p class="insight-quote">"El pop-up de confirmación de Dirección interrumpe mi flujo justo cuando
-                        estoy por Añadir un producto."</p>
-                    <div class="insight-tag">
-                        <span class="dot red"></span> FRICCIÓN DE FLUJO
-                    </div>
-                    <p class="insight-impact">Impacto: Incremento en el tiempo de tarea de un 40% debido a
-                        micro-interrupciones.</p>
-                </div>
-
-                <div class="insight-card">
-                    <div class="insight-icon-bg">
-                        <img src="../Media/GEOSATELITAL/cap-2.svg" alt="carga">
-                    </div>
-                    <p class="insight-quote">"Hay demasiados avisos intrusivos que no me dejan ver el progreso de mi
-                        tienda."</p>
-                    <div class="insight-tag">
-                        <span class="dot red"></span> CARGA COGNITIVA
-                    </div>
-                    <p class="insight-impact">Impacto: Desorientación del usuario al ocultar elementos clave de la
-                        interfaz secundaria.</p>
-                </div>
-
-                <div class="insight-card">
-                    <div class="insight-icon-bg">
-                        <img src="../Media/GEOSATELITAL/danger-3.svg" alt="presion">
-                    </div>
-                    <p class="insight-quote">"Siento que la interfaz me presiona con tantas alertas antes de terminar
-                        una tarea."</p>
-                    <div class="insight-tag">
-                        <span class="dot red"></span> PRESIÓN PSICOLÓGICA
-                    </div>
-                    <p class="insight-impact">Impacto: El 22% de los usuarios reportaron estrés visual durante el
-                        proceso de onboarding.</p>
-                </div>
+            <div class="border-t border-[#e9edf2] py-24 text-center">
+                <h2 class="mb-10 text-[32px] font-bold leading-[1.2] sm:text-[48px]">Diseñando experiencias que <br />convierten <span class="text-electric">datos</span> en decisiones.</h2>
+                <a href="https://wa.me/51934865894?text=Hola%20Carlos%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 rounded-full bg-primary px-10 py-4 text-[16px] font-semibold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.717zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>Conversemos por WhatsApp</a>
             </div>
         </section>
-        <section class="section-container content gallery-section">
-
-
-            <div class="masonry-gallery">
-                <div class="masonry-item item-wide">
-                    <img src="../Media/GEOSATELITAL/desktop.svg" alt="Desktop View">
-                </div>
-
-                <div class="masonry-item item-tall">
-                    <img src="../Media/GEOSATELITAL/mobile.svg" alt="Mobile Experience">
-                </div>
-
-                <div class="masonry-item">
-                    <img src="../Media/GEOSATELITAL/i-2.svg" alt="Interface 2">
-                </div>
-                <div class="masonry-item">
-                    <img src="../Media/GEOSATELITAL/laptod.svg" alt="Laptop View">
-                </div>
-                <div class="masonry-item">
-                    <img src="../Media/GEOSATELITAL/laptod-2.svg" alt="Laptop View 2">
-                </div>
-                <div class="masonry-item">
-                    <img src="../Media/GEOSATELITAL/i-3.svg" alt="Interface 3">
-                </div>
-                <div class="masonry-item">
-                    <img src="../Media/GEOSATELITAL/i-4.svg" alt="Interface 4">
-                </div>
-            </div>
-
-            <div class="closing-statement">
-                <h2>Diseñando experiencias que <br> convierten <span class="text-blue">datos</span> en decisiones.</h2>
-                <a href="https://linkedin.com/in/tu-perfil" class="btn-outline-glow">Conectemos</a>
-            </div>
-        </section>
-        <footer class="carlos-footer">
-            <div class="carlos-footer-container">
-                <div class="footer-left-block">
-                    <div class="footer-brand-header">
-                        <img src="../Media/Home/Footeer-escudo.svg" alt="Escudo" class="footer-shield-icon">
-                        <span class="footer-brand-text">Jose Carlos Meza Portfolio</span>
-                    </div>
-                    <p class="footer-brand-description">
-                        Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de
-                        vanguardia.
-                    </p>
-                </div>
-
-                <div class="footer-right-block">
-                    <h3 class="footer-cta-text">¿Trabajamos juntos?</h3>
-                    <div class="footer-social-wrapper">
-                        <a href="mailto:tu-correo@gmail.com" class="footer-icon-circle">
-                            <img src="../Media/Home/correo-icono.svg" alt="Email">
-                        </a>
-                        <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="footer-icon-circle">
-                            <img src="../Media/Home/compratir-icono.svg" alt="LinkedIn">
-                        </a>
-                        <a href="#" class="footer-icon-circle">
-                            <img src="../Media/Home/user-icono.svg" alt="Perfil">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </main>
 
+    <!-- ================= NAV PROYECTOS ================= -->
+    <section class="mx-auto mb-4 w-[90%] max-w-grid border-t border-[#e9edf2] pt-10">
+        <div class="flex items-center justify-between gap-4">
+            <a href="food-delivery.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="transition-transform group-hover:-translate-x-1">←</span>
+                <span class="text-[14px]">Volver a FoodDelivery</span>
+            </a>
+            <a href="satelock.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="text-[14px]">Siguiente proyecto: <span class="font-semibold text-[#0f172a]">Satelock</span></span>
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+        </div>
+    </section>
 
+    <!-- ================= FOOTER ================= -->
+    <footer class="w-full border-t border-[#e9edf2] bg-card py-20">
+        <div class="mx-auto flex w-[90%] max-w-grid flex-col items-center justify-between gap-10 text-center md:flex-row md:items-start md:text-left">
+            <div>
+                <div class="mb-5 flex items-center justify-center gap-3 md:justify-start">
+                    <span class="flex h-7 w-7 items-center justify-center rounded-[9px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
+                </div>
+                <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
+                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de vanguardia.
+                </p>
+            </div>
+            <div class="text-center md:text-right">
+                <h3 class="mb-6 text-[18px] font-semibold text-[#0f172a]">¿Trabajamos juntos?</h3>
+                <div class="flex justify-center gap-4 md:justify-end">
+                    <a href="mailto:mezasalaman@gmail.com" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/correo-icono.svg" alt="Email" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/compratir-icono.svg" alt="LinkedIn" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                    <a href="#" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/user-icono.svg" alt="Perfil" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/site.js"></script>
 </body>
 
 </html>

@@ -2,391 +2,382 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caso de Estudio | Satelock Security</title>
-    <link rel="stylesheet" href="../Styles/Normalize.css">
-    <link rel="stylesheet" href="../Styles/Default.css">
-    <link rel="stylesheet" href="../Styles/Nav.css">
-    <link rel="stylesheet" href="../Styles/SatelockCase.css">
-    <link rel="stylesheet" href="../Styles/Footer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <meta name="description" content="Satelock — caso de estudio profundo: research, atomic design, usabilidad con Hotjar y escalabilidad en React." />
+    <link rel="icon" href="https://mezasalaman.github.io/BETA/Media/Home/icono%20meza.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Caso de Estudio | Satelock Security" />
+    <meta property="og:description" content="Satelock — caso de estudio profundo: research, atomic design, usabilidad con Hotjar y escalabilidad en React." />
+    <meta property="og:image" content="https://mezasalaman.github.io/BETA/Media/SATELOCK/img-portada.svg" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/tw-config.js"></script>
+    <link rel="stylesheet" href="../assets/portfolio.css" />
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="nav-content">
-                <a href="../index.html" class="logo-container">
-                    <img src="../Media/Home/icono meza.svg" alt="Icono" class="logo-icon">
-                    <span class="logo-text">Carlos Meza</span>
+<body class="bg-ink font-sans text-[#0f172a] antialiased">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="sticky top-0 z-[9999] w-full bg-ink">
+        <div class="mx-auto max-w-[1150px] px-5">
+            <div class="flex w-full items-center justify-between border-b border-hairline py-6">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <span class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Carlos Meza</span>
                 </a>
-                <ul class="enlaces__content">
-                    <li class="enlace--proyecto">
-                        <a href="#" class="link--main">Proyectos</a>
-                        <div class="subenlaces__content">
-                            <a href="./food-delivery.html">FoodDelivery</a>
-                            <a href="./satelock.html">Satelock</a>
-                            <a href="./SellerCenter.html">Seller Center</a>
+                <ul class="hidden items-center gap-10 md:flex">
+                    <li class="dropdown-trigger relative py-2.5">
+                        <a href="#" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Proyectos</a>
+                        <div class="dropdown-menu absolute left-1/2 top-full flex min-w-[180px] flex-col items-start gap-4 rounded-xl bg-white p-5 shadow-drop">
+                            <a href="food-delivery.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">FoodDelivery</a>
+                            <a href="satelock.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Satelock</a>
+                            <a href="SellerCenter.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Seller Center</a>
+                            <a href="conduzko.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">ConDuzko</a>
                         </div>
                     </li>
-                    <li><a href="./about.html" class="link--main">Sobre mí</a></li>
+                    <li><a href="about.html" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Sobre mí</a></li>
                 </ul>
+                <button type="button" data-menu-toggle aria-label="Abrir menú" class="flex h-10 w-10 items-center justify-center md:hidden">
+                    <span class="relative block h-[2px] w-6 rounded bg-white before:absolute before:-top-2 before:left-0 before:h-[2px] before:w-6 before:rounded before:bg-white before:content-[''] after:absolute after:top-2 after:left-0 after:h-[2px] after:w-6 after:rounded after:bg-white after:content-['']"></span>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden border-b border-hairline pb-4 md:!hidden">
+                <span class="block px-2 pb-1 pt-3 text-[11px] font-bold uppercase tracking-wider text-[#94a3b8]">Proyectos</span>
+                <a href="food-delivery.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">FoodDelivery</a>
+                <a href="satelock.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Satelock</a>
+                <a href="SellerCenter.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Seller Center</a>
+                <a href="conduzko.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">ConDuzko</a>
+                <a href="about.html" class="mt-1 block rounded-lg px-2 py-2.5 text-[15px] font-medium text-[#0f172a] hover:bg-[#f3f5f8]">Sobre mí</a>
             </div>
         </div>
     </nav>
 
-    <main class="satelock-case-page">
-        <header class="case-hero content">
-            <div class="pill-badge">CASE STUDY DEEP DIVE</div>
-            <h1 class="case-title">
-                Satelock: El Proceso <br>
-                Detrás de la <span class="text-blue-glow">Innovación</span>
+    <main class="pt-10">
+        <!-- ================= HERO ================= -->
+        <header class="mx-auto w-[90%] max-w-grid">
+            <span class="mb-10 inline-block rounded-full border border-electric/30 bg-electric/10 px-8 py-3 text-[10px] font-bold tracking-[0.1em] text-electric">CASE STUDY DEEP DIVE</span>
+            <h1 class="mb-10 text-[42px] font-bold leading-[1.1] tracking-[-0.03em] sm:text-[60px] lg:text-[82px]">
+                Satelock: El Proceso <br />
+                Detrás de la <span class="text-electric [text-shadow:0_0_30px_rgba(74,111,255,0.3)]">Innovación</span>
             </h1>
-            <p class="case-subtitle">
-                Un desglose táctico de cómo transformamos la seguridad de flotas <br>
+            <p class="max-w-[600px] text-[16px] leading-[1.6] text-[#64748b] md:text-[18px]">
+                Un desglose táctico de cómo transformamos la seguridad de flotas
                 mediante UX estratégica, IA y React.
             </p>
         </header>
 
-        <section class="section-container content">
-            <div class="section-header-left">
-                <h2 class="section-title-main">El Desafío: Brecha de Usabilidad</h2>
-                <div class="title-underline-blue"></div>
+        <!-- ================= DESAFÍO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20">
+            <div class="mb-12 mt-12">
+                <h2 class="mb-4 text-[28px] font-bold sm:text-[32px]">El Desafío: Brecha de Usabilidad</h2>
+                <div class="h-1 w-16 rounded bg-electric"></div>
             </div>
-
-            <div class="challenge-grid">
-                <div class="card-glass-dark">
-                    <div class="card-header-icon">
-                        <img src="../Media/SATELOCK/alert.svg" alt="icon" class="icon-sm">
-                        <h3>El Problema</h3>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div class="flex flex-col rounded-[30px] border border-[#e9edf2] bg-[#f7f8fa] p-8 transition-transform duration-300 hover:-translate-y-1.5 hover:bg-[#eef1f5] sm:p-12">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/alert.svg" alt="icon" class="h-7 w-7" />
+                        <h3 class="text-[22px] font-semibold">El Problema</h3>
                     </div>
-                    <p class="card-description">
+                    <p class="mb-10 text-[15px] leading-[1.7] text-[#64748b]">
                         Los sistemas legados presentaban una carga cognitiva abrumadora para los operadores.
                         La falta de respuesta en tiempo real y una arquitectura de información fragmentada
                         provocaban retrasos críticos en la detección de incidentes.
                     </p>
-                    <ul class="check-list list-red">
+                    <ul class="status-cross flex flex-col gap-4 text-[14px] text-[#475569]">
                         <li>Tiempos de respuesta superiores a 15 minutos.</li>
                         <li>Interfaz no adaptativa (Desktop-only).</li>
                     </ul>
                 </div>
-
-                <div class="card-glass-dark">
-                    <div class="card-header-icon">
-                        <img src="../Media/SATELOCK/check.svg" alt="icon" class="icon-sm">
-                        <h3>La Solución</h3>
+                <div class="flex flex-col rounded-[30px] border border-[#e9edf2] bg-[#f7f8fa] p-8 transition-transform duration-300 hover:-translate-y-1.5 hover:bg-[#eef1f5] sm:p-12">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/check.svg" alt="icon" class="h-7 w-7" />
+                        <h3 class="text-[22px] font-semibold">La Solución</h3>
                     </div>
-                    <p class="card-description">
+                    <p class="mb-10 text-[15px] leading-[1.7] text-[#64748b]">
                         Una plataforma centralizada basada en Atomic Design que optimiza la toma de decisiones
                         mediante visualización predictiva y una jerarquía visual clara diseñada para entornos
                         de alta presión.
                     </p>
-                    <ul class="check-list list-green">
-                        <li>Monitoreo en tiempo real con latencia < 1s.</li>
+                    <ul class="status-check flex flex-col gap-4 text-[14px] text-[#475569]">
+                        <li>Monitoreo en tiempo real con latencia &lt; 1s.</li>
                         <li>Ecosistema responsivo y notificaciones inteligentes.</li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section class="research-section-v3 content">
-            <div class="research-header-v3">
-                <h2>UX Research Deep Dive</h2>
-                <p>Identificando los puntos de fricción en la monitorización de activos críticos en tiempo real.</p>
+
+
+        <!-- ================= ROL & IMPACTO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <div class="mb-10">
+                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">ROL &amp; IMPACTO</span>
+                <p class="max-w-[980px] text-[17px] font-light leading-[1.6] text-[#475569] sm:text-[20px]">Rediseñé el dashboard de monitoreo en tiempo real, validado con shadowing de operadores y mapas de calor.</p>
             </div>
+            <div class="mb-6 grid grid-cols-2 gap-6 rounded-[24px] border border-[#e9edf2] bg-card p-8 lg:grid-cols-4 sm:p-10">
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">MI ROL</span><p class="text-[16px] font-semibold text-[#0f172a]">UX/UI Designer</p><p class="mt-0.5 text-[12px] text-dim">Research · Design System · Prototipo</p></div>
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">EQUIPO</span><p class="text-[16px] font-semibold text-[#0f172a]">Monitoreo + Ingeniería</p></div>
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">DURACIÓN</span><p class="text-[16px] font-semibold text-[#0f172a]">≈ 12 semanas</p></div>
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">HERRAMIENTAS</span><p class="text-[16px] font-semibold text-[#0f172a]">Hotjar · GA4 · Figma · React</p></div>
+            </div>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">−40%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Carga operativa</p><p class="mt-1 text-[12px] leading-snug text-dim">Tiempo de tarea · shadowing 48h + Hotjar</p></div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">−25%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Reacción ante alertas</p><p class="mt-1 text-[12px] leading-snug text-dim">Mapas de calor y grabaciones en Hotjar</p></div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline gap-2"><span class="text-[16px] font-medium text-[#94a3b8] line-through">78%</span><span class="text-[15px] text-[#94a3b8]">→</span><span class="text-[34px] font-bold leading-none text-electric">92%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Success rate (primer uso)</p><p class="mt-1 text-[12px] leading-snug text-dim">Pruebas moderadas con 50+ usuarios</p></div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">50+</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Usuarios evaluados</p><p class="mt-1 text-[12px] leading-snug text-dim">Tests moderados y no moderados</p></div>
+            </div>
+            <p class="mt-5 text-[12px] text-dim">Métricas medidas contra la línea base previa a cada rediseño. Valores relativos salvo indicación contraria.</p>
+        </section>
 
-            <div class="research-grid-v3">
-                <div class="card-v3 sidebar-v3">
-                    <div class="card-title-v3">
-                        <img src="../Media/SATELOCK/user person case.svg" alt="icon" class="icon-v3">
-                        <h3>User <br> Personas</h3>
+        <!-- ================= RESEARCH DEEP DIVE ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20">
+            <div class="mb-10">
+                <h2 class="mb-2 text-[28px] font-bold sm:text-[32px]">UX Research Deep Dive</h2>
+                <p class="text-[15px] text-[#64748b]">Identificando los puntos de fricción en la monitorización de activos críticos en tiempo real.</p>
+            </div>
+            <div class="grid grid-cols-1 items-start gap-5 lg:grid-cols-[310px_1fr]">
+                <!-- Sidebar personas -->
+                <div class="rounded-[35px] border border-[#edf0f4] bg-card p-9">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/user%20person%20case.svg" alt="icon" class="h-[30px] w-auto" />
+                        <h3 class="text-[26px] font-bold leading-[1.1]">User <br />Personas</h3>
                     </div>
-
-                    <div class="persona-item-v3 dark-v3">
-                        <span class="p-name-v3">Particular</span>
-                        <p>Enfoque en seguridad individual y alertas rápidas.</p>
+                    <div class="mb-3 rounded-[20px] border border-[#e9edf2] bg-[#eef1f5] px-6 py-5">
+                        <span class="mb-1.5 block text-[14px] font-bold text-electric">Particular</span>
+                        <p class="text-[12px] leading-[1.4] text-[#64748b]">Enfoque en seguridad individual y alertas rápidas.</p>
                     </div>
-
-                    <div class="persona-item-v3 white-v3">
-                        <span class="p-name-v3 blue-v3">Líder de Flota</span>
-                        <p>Gestión masiva, analítica avanzada y optimización 24/7.</p>
+                    <div class="rounded-[20px] bg-white px-6 py-5">
+                        <span class="mb-1.5 block text-[14px] font-bold text-electric">Líder de Flota</span>
+                        <p class="text-[12px] font-medium leading-[1.4] text-black/50">Gestión masiva, analítica avanzada y optimización 24/7.</p>
                     </div>
                 </div>
-
-                <div class="card-v3 main-v3">
-                    <div class="card-title-v3">
-                        <img src="../Media/SATELOCK/journymap.svg" alt="icon" class="icon-v3">
-                        <h3>Journey Mapping Analysis</h3>
+                <!-- Journey map -->
+                <div class="rounded-[35px] border border-[#edf0f4] bg-card p-9">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/journymap.svg" alt="icon" class="h-[30px] w-auto" />
+                        <h3 class="text-[26px] font-bold leading-[1.1]">Journey Mapping Analysis</h3>
                     </div>
-
-                    <div class="timeline-v3">
-                        <div class="timeline-line-v3"></div>
-                        <div class="timeline-steps-v3">
-                            <div class="t-step-v3">
-                                <div class="t-dot-v3 active-v3"></div>
-                                <span class="t-tag-v3">DETECCIÓN</span>
-                                <p class="t-info-v3">Alerta en <br> tiempo real</p>
+                    <div class="relative py-12">
+                        <div class="absolute left-10 right-10 top-[89px] h-px bg-[#e7ebf1]"></div>
+                        <div class="relative z-[5] grid grid-cols-2 gap-8 sm:grid-cols-4">
+                            <div class="flex flex-col items-center text-center">
+                                <div class="mb-6 h-[18px] w-[18px] rounded-full border-2 border-electric bg-electric shadow-[0_0_15px_rgba(74,111,255,0.4)]"></div>
+                                <span class="mb-2.5 text-[9px] font-bold tracking-[1px] text-[#aab4c0]">DETECCIÓN</span>
+                                <p class="text-[12.5px] leading-[1.3] text-[#334155]">Alerta en <br />tiempo real</p>
                             </div>
-                            <div class="t-step-v3">
-                                <div class="t-dot-v3 active-v3"></div>
-                                <span class="t-tag-v3">EVALUACIÓN</span>
-                                <p class="t-info-v3 blue-v3">Fricción Crítica: <br> Latencia</p>
+                            <div class="flex flex-col items-center text-center">
+                                <div class="mb-6 h-[18px] w-[18px] rounded-full border-2 border-electric bg-electric shadow-[0_0_15px_rgba(74,111,255,0.4)]"></div>
+                                <span class="mb-2.5 text-[9px] font-bold tracking-[1px] text-[#aab4c0]">EVALUACIÓN</span>
+                                <p class="text-[12.5px] font-semibold leading-[1.3] text-electric">Fricción Crítica: <br />Latencia</p>
                             </div>
-                            <div class="t-step-v3">
-                                <div class="t-dot-v3"></div>
-                                <span class="t-tag-v3">ACCIÓN</span>
-                                <p class="t-info-v3">Protocolo de <br> bloqueo</p>
+                            <div class="flex flex-col items-center text-center">
+                                <div class="mb-6 h-[18px] w-[18px] rounded-full border-2 border-[#cfd6df] bg-card"></div>
+                                <span class="mb-2.5 text-[9px] font-bold tracking-[1px] text-[#aab4c0]">ACCIÓN</span>
+                                <p class="text-[12.5px] leading-[1.3] text-[#334155]">Protocolo de <br />bloqueo</p>
                             </div>
-                            <div class="t-step-v3">
-                                <div class="t-dot-v3"></div>
-                                <span class="t-tag-v3">RESOLUCIÓN</span>
-                                <p class="t-info-v3">Reporte de <br> incidente</p>
+                            <div class="flex flex-col items-center text-center">
+                                <div class="mb-6 h-[18px] w-[18px] rounded-full border-2 border-[#cfd6df] bg-card"></div>
+                                <span class="mb-2.5 text-[9px] font-bold tracking-[1px] text-[#aab4c0]">RESOLUCIÓN</span>
+                                <p class="text-[12.5px] leading-[1.3] text-[#334155]">Reporte de <br />incidente</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section-container content ia-workflow-section">
-            <div class="ia-header">
-                <h2 class="ia-main-title">IA & Creative Workflow</h2>
-                <p class="ia-main-subtitle">
-                    Integrando herramientas de inteligencia artificial para acelerar la
-                    producción de alta fidelidad sin comprometer la calidad.
-                </p>
+
+        <!-- ================= IA WORKFLOW ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20 text-center">
+            <div class="mb-14">
+                <h2 class="mb-4 text-[32px] font-bold tracking-[-0.02em] sm:text-[42px]">IA &amp; Creative Workflow</h2>
+                <p class="mx-auto max-w-[700px] text-[16px] leading-[1.6] text-[#64748b]">Integrando herramientas de inteligencia artificial para acelerar la producción de alta fidelidad sin comprometer la calidad.</p>
             </div>
-
-            <div class="ia-workflow-grid">
-                <div class="ia-card">
-                    <div class="ia-card-header">
-                        <div class="ia-icon-purple">
-                            <img src="../Media/SATELOCK/midjournymap.svg" alt="Brush">
-                        </div>
-                        <h3>Midjourney Integration</h3>
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
+                <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-card p-8 text-left sm:p-11">
+                    <div class="mb-6 flex items-center gap-4">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#a855f7]/10"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/midjournymap.svg" alt="Brush" class="h-5 w-5" /></div>
+                        <h3 class="text-[22px] font-semibold">Midjourney Integration</h3>
                     </div>
-                    <p class="ia-card-desc">
-                        Generación de mapa de Empatía donde el usuario pasa un recorrido de emociones
-                        por todo el servicio que tiene que hacer para llegar al objetivo final,
-                        medimos los resultados y armamos un esquema.
-                    </p>
-                    <div class="ia-image-container light-bg">
-                        <img src="../Media/SATELOCK/user jopurnymap.svg" alt="Empathy Map AI" class="ia-result-img">
-                    </div>
+                    <p class="mb-9 flex-1 text-[14px] leading-[1.6] text-[#64748b]">Generación de mapa de Empatía donde el usuario pasa un recorrido de emociones por todo el servicio que tiene que hacer para llegar al objetivo final, medimos los resultados y armamos un esquema.</p>
+                    <div class="w-full overflow-hidden rounded-3xl bg-[#e2e8f0] leading-[0]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/user%20jopurnymap.svg" alt="Empathy Map AI" class="block w-full object-cover" /></div>
                 </div>
-
-                <div class="ia-card">
-                    <div class="ia-card-header">
-                        <div class="ia-icon-red">
-                            <img src="../Media/SATELOCK/stich-integration.svg" alt="AI">
-                        </div>
-                        <h3>STICH (IA) Integration</h3>
+                <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-card p-8 text-left sm:p-11">
+                    <div class="mb-6 flex items-center gap-4">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#ef4444]/10"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/stich-integration.svg" alt="AI" class="h-5 w-5" /></div>
+                        <h3 class="text-[22px] font-semibold">STICH (IA) Integration</h3>
                     </div>
-                    <p class="ia-card-desc">
-                        Uso de Stitch para la generación de texturas dinámicas, recursos visuales
-                        abstractos y apoyo en la creación de interfaces, facilitando la exploración
-                        rápida de estilos visuales y conceptos de diseño para el dashboard.
-                    </p>
-                    <div class="ia-image-container dark-ui-bg">
-                        <img src="../Media/SATELOCK/stichimg.svg" alt="Stitch Integration" class="ia-result-img">
-                    </div>
+                    <p class="mb-9 flex-1 text-[14px] leading-[1.6] text-[#64748b]">Uso de Stitch para la generación de texturas dinámicas, recursos visuales abstractos y apoyo en la creación de interfaces, facilitando la exploración rápida de estilos visuales y conceptos de diseño para el dashboard.</p>
+                    <div class="w-full overflow-hidden rounded-3xl bg-[#1a1a1c] leading-[0]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/stichimg.svg" alt="Stitch Integration" class="block w-full object-cover" /></div>
                 </div>
             </div>
         </section>
-        <section class="section-container content design-system-section">
-            <div class="ds-header">
-                <h2 class="ds-title">Design System: Atomic Strategy</h2>
-                <p class="ds-subtitle">
-                    Implementamos una arquitectura de diseño atómica para asegurar la escalabilidad. La decisión de un
-                    <span class="text-blue-bold">Dark Theme</span> fue fundamental: reducir la fatiga ocular de los
-                    operadores que supervisan pantallas durante turnos de 8 a 12 horas.
-                </p>
+
+        <!-- ================= DESIGN SYSTEM ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20">
+            <div class="mb-14">
+                <h2 class="mb-6 text-[32px] font-bold tracking-[-0.02em] sm:text-[48px]">Design System: Atomic Strategy</h2>
+                <p class="max-w-[950px] text-[16px] leading-[1.6] text-[#64748b]">Implementamos una arquitectura de diseño atómica para asegurar la escalabilidad. La decisión de un <span class="font-semibold text-electric">Dark Theme</span> fue fundamental: reducir la fatiga ocular de los operadores que supervisan pantallas durante turnos de 8 a 12 horas.</p>
             </div>
-
-            <div class="ds-bento-grid">
-                <div class="ds-card atoms">
-                    <span class="ds-card-tag blue-tag">ÁTOMOS Y MOLÉCULAS</span>
-                    <p class="ds-card-text">
-                        Definición de estilos base, inputs y componentes funcionales interdependientes para una interfaz
-                        cohesiva.
-                    </p>
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
+                <div class="flex flex-col rounded-[20px] border border-[#e9edf2] bg-card p-10 transition-all duration-300 hover:border-electric/20 hover:bg-[#f3f5f8]">
+                    <span class="mb-4 text-[11px] font-bold tracking-[0.15em] text-electric">ÁTOMOS Y MOLÉCULAS</span>
+                    <p class="max-w-[400px] text-[14px] leading-[1.6] text-[#64748b]">Definición de estilos base, inputs y componentes funcionales interdependientes para una interfaz cohesiva.</p>
                 </div>
-
-                <div class="ds-card organisms">
-                    <span class="ds-card-tag blue-tag">ORGANISMOS</span>
-                    <p class="ds-card-text">
-                        Estructuras complejas como dashboards de control y paneles de monitorización multiactivo.
-                    </p>
+                <div class="flex flex-col rounded-[20px] border border-[#e9edf2] bg-card p-10 transition-all duration-300 hover:border-electric/20 hover:bg-[#f3f5f8]">
+                    <span class="mb-4 text-[11px] font-bold tracking-[0.15em] text-electric">ORGANISMOS</span>
+                    <p class="max-w-[400px] text-[14px] leading-[1.6] text-[#64748b]">Estructuras complejas como dashboards de control y paneles de monitorización multiactivo.</p>
                 </div>
-
-                <div class="ds-card prototyping full-width">
-                    <span class="ds-card-tag white-tag">PROTOTIPADO AVANZADO</span>
-                    <p class="ds-card-text">
-                        Simulación de flujos de usuario complejos y micro-interacciones de alta fidelidad para validar
-                        la ergonomía digital antes de la implementación final.
-                    </p>
+                <div class="flex flex-col rounded-[20px] border border-[#e9edf2] bg-[#f6f7f9] p-10 transition-all duration-300 hover:border-electric/20 md:col-span-2">
+                    <span class="mb-4 text-[11px] font-bold tracking-[0.15em] text-[#0f172a]">PROTOTIPADO AVANZADO</span>
+                    <p class="max-w-[600px] text-[14px] leading-[1.6] text-[#64748b]">Simulación de flujos de usuario complejos y micro-interacciones de alta fidelidad para validar la ergonomía digital antes de la implementación final.</p>
                 </div>
             </div>
         </section>
-        <section class="section-container content usability-testing-section">
-            <div class="testing-header">
-                <h2 class="testing-title">Usability Testing & User Validation Report with Hotjar</h2>
-                <p class="testing-subtitle">
-                    Validación rigurosa mediante metodologías cualitativas y cuantitativas para asegurar la viabilidad
-                    del diseño.
-                </p>
+
+        <!-- ================= USABILITY TESTING ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20 text-center">
+            <div class="mb-14">
+                <h2 class="mb-5 text-[28px] font-bold tracking-[-0.01em] sm:text-[36px]">Usability Testing &amp; User Validation Report with Hotjar</h2>
+                <p class="mx-auto max-w-[800px] text-[16px] leading-[1.6] text-[#64748b]">Validación rigurosa mediante metodologías cualitativas y cuantitativas para asegurar la viabilidad del diseño.</p>
             </div>
-
-            <div class="heatmap-container">
-                <img src="../Media/SATELOCK/heathmap.svg" alt="Hotjar Heatmap Analysis" class="heatmap-img">
-            </div>
-
-            <div class="metrics-grid-final">
-                <div class="metric-card-final">
-                    <span class="m-number">50+</span>
-                    <h4 class="m-title">Usuarios Evaluados</h4>
-                    <p class="m-desc">Pruebas moderadas y no moderadas para validar la intuitividad de la interfaz.</p>
+            <div class="mb-14 w-full overflow-hidden rounded-3xl border border-[#e9edf2]"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/heathmap.svg" alt="Hotjar Heatmap Analysis" class="block w-full saturate-[1.2]" /></div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                <div class="rounded-3xl border border-[#edf0f4] bg-card p-10 text-left transition-transform duration-300 hover:-translate-y-2 hover:border-electric/20">
+                    <span class="mb-4 block text-[42px] font-bold text-electric">50+</span>
+                    <h4 class="mb-4 text-[18px] font-semibold">Usuarios Evaluados</h4>
+                    <p class="text-[14px] leading-[1.5] text-[#64748b]">Pruebas moderadas y no moderadas para validar la intuitividad de la interfaz.</p>
                 </div>
-
-                <div class="metric-card-final">
-                    <span class="m-number">48h+</span>
-                    <h4 class="m-title">Shadowing Sessions</h4>
-                    <p class="m-desc">Observación directa de operadores en su entorno de trabajo real para detectar
-                        fricciones invisibles.</p>
+                <div class="rounded-3xl border border-[#edf0f4] bg-card p-10 text-left transition-transform duration-300 hover:-translate-y-2 hover:border-electric/20">
+                    <span class="mb-4 block text-[42px] font-bold text-electric">48h+</span>
+                    <h4 class="mb-4 text-[18px] font-semibold">Shadowing Sessions</h4>
+                    <p class="text-[14px] leading-[1.5] text-[#64748b]">Observación directa de operadores en su entorno de trabajo real para detectar fricciones invisibles.</p>
                 </div>
-
-                <div class="metric-card-final">
-                    <span class="m-number">92%</span>
-                    <h4 class="m-title">Success Rate</h4>
-                    <p class="m-desc">Tasa de éxito en la realización de tareas críticas durante el primer uso del
-                        dashboard renovado.</p>
+                <div class="rounded-3xl border border-[#edf0f4] bg-card p-10 text-left transition-transform duration-300 hover:-translate-y-2 hover:border-electric/20">
+                    <span class="mb-4 block text-[42px] font-bold text-electric">92%</span>
+                    <h4 class="mb-4 text-[18px] font-semibold">Success Rate</h4>
+                    <p class="text-[14px] leading-[1.5] text-[#64748b]">Tasa de éxito en la realización de tareas críticas durante el primer uso del dashboard renovado.</p>
                 </div>
             </div>
         </section>
-        <section class="section-container content dev-scalability-section">
-            <div class="dev-grid-layout">
 
-                <div class="dev-info">
-                    <div class="dev-header-main">
-                        <img src="../Media/SATELOCK/development.svg" alt="icon" class="dev-icon-main">
-                        <h2>Development & Scalability</h2>
+        <!-- ================= DEV & SCALABILITY ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20">
+            <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+                <div>
+                    <div class="mb-10 flex items-center gap-4">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/development.svg" alt="icon" class="h-[30px] w-auto" />
+                        <h2 class="text-[28px] font-bold sm:text-[32px]">Development &amp; Scalability</h2>
                     </div>
-
-                    <div class="dev-item">
-                        <div class="dev-item-header">
-                            <img src="../Media/SATELOCK/checkazul.svg" alt="check" class="check-icon">
-                            <h3>React Architecture</h3>
+                    <div class="mb-9">
+                        <div class="mb-2.5 flex items-center gap-3">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/checkazul.svg" alt="check" class="h-[22px] w-auto" />
+                            <h3 class="text-[18px] font-semibold">React Architecture</h3>
                         </div>
-                        <p>Uso de Custom Hooks para la gestión de WebSockets y estados globales complejos con Redux
-                            Toolkit.</p>
+                        <p class="pl-[34px] text-[14px] leading-[1.6] text-[#64748b]">Uso de Custom Hooks para la gestión de WebSockets y estados globales complejos con Redux Toolkit.</p>
                     </div>
-
-                    <div class="dev-item">
-                        <div class="dev-item-header">
-                            <img src="../Media/SATELOCK/checkazul.svg" alt="check" class="check-icon">
-                            <h3>Performance First</h3>
+                    <div>
+                        <div class="mb-2.5 flex items-center gap-3">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/checkazul.svg" alt="check" class="h-[22px] w-auto" />
+                            <h3 class="text-[18px] font-semibold">Performance First</h3>
                         </div>
-                        <p>Implementación de Memoization y Virtualización de listas para manejar +5000 activos
-                            simultáneos.</p>
+                        <p class="pl-[34px] text-[14px] leading-[1.6] text-[#64748b]">Implementación de Memoization y Virtualización de listas para manejar +5000 activos simultáneos.</p>
                     </div>
                 </div>
-
-                <div class="validation-card-blue">
-                    <div class="validation-header">
-                        <img src="../Media/SATELOCK/validation.svg" alt="icon" class="val-icon">
-                        <h3>Validation & KPIs</h3>
+                <div class="rounded-[35px] border border-electric/20 bg-gradient-to-br from-[#dfe9fb] to-[#eef3fc] p-8 shadow-[0_30px_60px_rgba(0,0,0,0.4)] sm:p-12">
+                    <div class="mb-11 flex items-center gap-3">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/validation.svg" alt="icon" class="h-5 w-auto" />
+                        <h3 class="text-[22px] font-semibold">Validation &amp; KPIs</h3>
                     </div>
-
-                    <div class="kpi-metrics-row">
-                        <div class="kpi-item">
-                            <span class="kpi-value">-40%</span>
-                            <span class="kpi-label">CARGA OPERATIVA</span>
+                    <div class="mb-10 flex gap-12 border-b border-[#e9edf2] pb-10">
+                        <div>
+                            <span class="mb-1 block text-[48px] font-bold text-electric">-40%</span>
+                            <span class="text-[11px] font-bold tracking-[1px] text-[#94a3b8]">CARGA OPERATIVA</span>
                         </div>
-                        <div class="kpi-item">
-                            <span class="kpi-value">98%</span>
-                            <span class="kpi-label">UPTIME UI</span>
+                        <div>
+                            <span class="mb-1 block text-[48px] font-bold text-electric">98%</span>
+                            <span class="text-[11px] font-bold tracking-[1px] text-[#94a3b8]">UPTIME UI</span>
                         </div>
                     </div>
-
-                    <div class="validation-quote">
-                        <p>"Los heatmaps confirmaron que la nueva jerarquía visual redujo el tiempo de reacción ante
-                            alertas en un 25%."</p>
-                    </div>
+                    <p class="text-[14px] italic leading-[1.6] text-[#64748b]">"Los heatmaps confirmaron que la nueva jerarquía visual redujo el tiempo de reacción ante alertas en un 25%."</p>
                 </div>
             </div>
         </section>
-        <section class="section-container content gallery-section">
-            <div class="gallery-header">
-                <p class="tag-visual-showcase">VISUAL SHOWCASE</p>
-                <p class="title-gallery-bold">Galería de Producto | Alta Fidelidad</p>
-                <p class="desc-gallery-dim">
-                    Visualización final del ecosistema digital optimizado para conversión y <br> experiencia de usuario.
-                </p>
+
+        <!-- ================= GALERÍA ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <div class="mb-20 mt-12 flex flex-col items-center text-center">
+                <p class="mb-6 text-[13px] font-extrabold uppercase tracking-[0.4em] text-royal">VISUAL SHOWCASE</p>
+                <p class="mb-4 max-w-[900px] text-[36px] font-extrabold leading-none tracking-[-0.04em] sm:text-[56px]">Galería de Producto | Alta Fidelidad</p>
+                <p class="mx-auto max-w-[700px] text-[18px] leading-[1.5] text-[#64748b] sm:text-[20px]">Visualización final del ecosistema digital optimizado para conversión y experiencia de usuario.</p>
             </div>
 
-            <div class="masonry-gallery">
-                <div class="masonry-item item-wide">
-                    <img src="../Media/SATELOCK/monitor principal.svg" alt="Desktop View">
-                </div>
-
-                <div class="masonry-item item-tall">
-                    <img src="../Media/SATELOCK/mobile.svg" alt="Mobile Experience">
-                </div>
-
-                <div class="masonry-item">
-                    <img src="../Media/SATELOCK/laptod view.svg" alt="Interface 2">
-                </div>
-                <div class="masonry-item">
-                    <img src="../Media/SATELOCK/destop detaill.svg" alt="Laptop View">
-                </div>
-                <div class="masonry-item">
-                    <img src="../Media/SATELOCK/dashboard red.svg" alt="Laptop View 2">
-                </div>
-                <div class="masonry-item">
-                    <img src="../Media/SATELOCK/analitic.svg" alt="Interface 3">
-                </div>
-                <div class="masonry-item">
-                    <img src="../Media/SATELOCK/laptod setup.svg" alt="Interface 4">
-                </div>
+            <div data-gallery class="grid auto-rows-[200px] grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2 sm:col-span-2 sm:row-span-2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/monitor%20principal.svg" alt="Desktop View" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2 row-span-2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/mobile.svg" alt="Mobile Experience" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/laptod%20view.svg" alt="Interface 2" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/destop%20detaill.svg" alt="Laptop View" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/dashboard%20red.svg" alt="Laptop View 2" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/analitic.svg" alt="Interface 3" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-panel2"><img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/laptod%20setup.svg" alt="Interface 4" class="h-full w-full object-cover transition-transform duration-700 hover:scale-105" /></div>
             </div>
-            <div class="closing-statement">
-                <h2>Diseñando experiencias que <br> convierten <span class="text-blue">datos</span> en decisiones.</h2>
-                <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/"
-                    class="btn-outline-glow">Conectemos</a>
+
+            <div class="border-t border-[#e9edf2] py-24 text-center">
+                <h2 class="mb-10 text-[32px] font-bold leading-[1.2] sm:text-[48px]">Seguridad que se diseña, <br />no se <span class="text-electric">improvisa</span>.</h2>
+                <a href="https://wa.me/51934865894?text=Hola%20Carlos%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 rounded-full bg-primary px-10 py-4 text-[16px] font-semibold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.717zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>Conversemos por WhatsApp</a>
             </div>
         </section>
-        <footer class="carlos-footer">
-            <div class="carlos-footer-container">
-                <div class="footer-left-block">
-                    <div class="footer-brand-header">
-                        <img src="../Media/Home/Footeer-escudo.svg" alt="Escudo" class="footer-shield-icon">
-                        <span class="footer-brand-text">Jose Carlos Meza Portfolio</span>
-                    </div>
-                    <p class="footer-brand-description">
-                        Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de
-                        vanguardia.
-                    </p>
-                </div>
-
-                <div class="footer-right-block">
-                    <h3 class="footer-cta-text">¿Trabajamos juntos?</h3>
-                    <div class="footer-social-wrapper">
-                        <a href="mailto:tu-correo@gmail.com" class="footer-icon-circle">
-                            <img src="../Media/Home/correo-icono.svg" alt="Email">
-                        </a>
-                        <a href="https://linkedin.com/in/tu-perfil" class="footer-icon-circle">
-                            <img src="../Media/Home/compratir-icono.svg" alt="LinkedIn">
-                        </a>
-                        <a href="#" class="footer-icon-circle">
-                            <img src="../Media/Home/user-icono.svg" alt="Perfil">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </main>
 
+    <!-- ================= NAV PROYECTOS ================= -->
+    <section class="mx-auto mb-4 w-[90%] max-w-grid border-t border-[#e9edf2] pt-10">
+        <div class="flex items-center justify-between gap-4">
+            <a href="satelock.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="transition-transform group-hover:-translate-x-1">←</span>
+                <span class="text-[14px]">Volver a Satelock</span>
+            </a>
+            <a href="SellerCenter.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="text-[14px]">Siguiente proyecto: <span class="font-semibold text-[#0f172a]">Seller Center</span></span>
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+        </div>
+    </section>
 
+    <!-- ================= FOOTER ================= -->
+    <footer class="w-full border-t border-[#e9edf2] bg-card py-20">
+        <div class="mx-auto flex w-[90%] max-w-grid flex-col items-center justify-between gap-10 text-center md:flex-row md:items-start md:text-left">
+            <div>
+                <div class="mb-5 flex items-center justify-center gap-3 md:justify-start">
+                    <span class="flex h-7 w-7 items-center justify-center rounded-[9px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
+                </div>
+                <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
+                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de vanguardia.
+                </p>
+            </div>
+            <div class="text-center md:text-right">
+                <h3 class="mb-6 text-[18px] font-semibold text-[#0f172a]">¿Trabajamos juntos?</h3>
+                <div class="flex justify-center gap-4 md:justify-end">
+                    <a href="mailto:mezasalaman@gmail.com" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/correo-icono.svg" alt="Email" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/compratir-icono.svg" alt="LinkedIn" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                    <a href="#" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/user-icono.svg" alt="Perfil" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/site.js"></script>
 </body>
 
 </html>

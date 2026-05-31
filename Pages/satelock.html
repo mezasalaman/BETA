@@ -2,244 +2,277 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satelock | Seguridad & Logística</title>
-    <link rel="stylesheet" href="../Styles/Normalize.css">
-    <link rel="stylesheet" href="../Styles/Default.css?v=1.1">
-    <link rel="stylesheet" href="../Styles/Nav.css?v=1.1">
-    <link rel="stylesheet" href="../Styles/Satelock.css?v=1.1">
-    <link rel="stylesheet" href="../Styles/Footer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satelock | Seguridad &amp; Logística</title>
+    <meta name="description" content="Satelock — Rediseño de la seguridad de flotas en tiempo real mediante UX estratégica, IA y React." />
+    <link rel="icon" href="https://mezasalaman.github.io/BETA/Media/Home/icono%20meza.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Satelock | Seguridad &amp; Logística" />
+    <meta property="og:description" content="Satelock — Rediseño de la seguridad de flotas en tiempo real mediante UX estratégica, IA y React." />
+    <meta property="og:image" content="https://mezasalaman.github.io/BETA/Media/SATELOCK/img-portada.svg" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/tw-config.js"></script>
+    <link rel="stylesheet" href="../assets/portfolio.css" />
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="nav-content">
-                <a href="../index.html" class="logo-container">
-                    <img src="../Media/Home/icono meza.svg" alt="Icono" class="logo-icon">
-                    <span class="logo-text">Carlos Meza</span>
+<body class="bg-ink font-sans text-[#0f172a] antialiased">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="sticky top-0 z-[9999] w-full bg-ink">
+        <div class="mx-auto max-w-[1150px] px-5">
+            <div class="flex w-full items-center justify-between border-b border-hairline py-6">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <span class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Carlos Meza</span>
                 </a>
-                <ul class="enlaces__content">
-                    <li class="enlace--proyecto">
-                        <a href="#" class="link--main">Proyectos</a>
-                        <div class="subenlaces__content">
-                            <a href="food-delivery.html">FoodDelivery</a>
-                            <a href="satelock.html">Satelock</a>
-                            <a href="SellerCenter.html">Seller Center</a>
+                <ul class="hidden items-center gap-10 md:flex">
+                    <li class="dropdown-trigger relative py-2.5">
+                        <a href="#" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Proyectos</a>
+                        <div class="dropdown-menu absolute left-1/2 top-full flex min-w-[180px] flex-col items-start gap-4 rounded-xl bg-white p-5 shadow-drop">
+                            <a href="food-delivery.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">FoodDelivery</a>
+                            <a href="satelock.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Satelock</a>
+                            <a href="SellerCenter.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Seller Center</a>
+                            <a href="conduzko.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">ConDuzko</a>
                         </div>
                     </li>
-                    <li><a href="./about.html" class="link--main">Sobre mí</a></li>
+                    <li><a href="about.html" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Sobre mí</a></li>
                 </ul>
+                <button type="button" data-menu-toggle aria-label="Abrir menú" class="flex h-10 w-10 items-center justify-center md:hidden">
+                    <span class="relative block h-[2px] w-6 rounded bg-white before:absolute before:-top-2 before:left-0 before:h-[2px] before:w-6 before:rounded before:bg-white before:content-[''] after:absolute after:top-2 after:left-0 after:h-[2px] after:w-6 after:rounded after:bg-white after:content-['']"></span>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden border-b border-hairline pb-4 md:!hidden">
+                <span class="block px-2 pb-1 pt-3 text-[11px] font-bold uppercase tracking-wider text-[#94a3b8]">Proyectos</span>
+                <a href="food-delivery.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">FoodDelivery</a>
+                <a href="satelock.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Satelock</a>
+                <a href="SellerCenter.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Seller Center</a>
+                <a href="conduzko.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">ConDuzko</a>
+                <a href="about.html" class="mt-1 block rounded-lg px-2 py-2.5 text-[15px] font-medium text-[#0f172a] hover:bg-[#f3f5f8]">Sobre mí</a>
             </div>
         </div>
     </nav>
-    <main class="satelock-main">
-        <header class="satelock-hero content">
-            <div class="pill-tag">
-                <span class="dot-blue"></span>
-                <span class="pill-text">SENIOR PRODUCT DESIGNER STORYTELLING</span>
+
+    <main>
+        <!-- ================= HERO ================= -->
+        <header class="mx-auto flex w-[90%] max-w-grid flex-col items-center pt-10 text-center">
+            <div class="mb-12 flex items-center gap-3 rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-8 py-3">
+                <span class="h-2 w-2 rounded-full bg-electric shadow-[0_0_10px_rgba(74,111,255,0.8)]"></span>
+                <span class="text-[11px] font-semibold tracking-[0.1em] text-[#64748b]">SENIOR PRODUCT DESIGNER STORYTELLING</span>
             </div>
 
-            <h1 class="hero-title-centered">
-                Satelock<br>
-                <span class="text-blue-gradient">Revolutionizing Security</span>
+            <h1 class="title-centered mx-auto mb-8 max-w-[1000px] font-bold text-[#0f172a]">
+                Satelock<br />
+                <span class="mt-2 block text-electric">Revolutionizing Security</span>
             </h1>
 
-            <p class="hero-description-centered">
-                Rediseñando la seguridad de flotas en tiempo real. Reducción del
-                40% en tiempos operativos mediante diseño estratégico y
-                optimización de flujos con IA.
+            <p class="mx-auto mb-12 max-w-[700px] text-[16px] leading-[1.6] text-[#475569] md:text-[18px]">
+                Rediseñé el monitoreo de seguridad de flotas en tiempo real: UX estratégica e IA para
+                decidir más rápido bajo presión. <strong class="font-semibold text-[#0f172a]">−40% en tiempos operativos.</strong>
             </p>
 
-            <a href="./satelock-case.html" class="btn-explore">
+            <a href="satelock-case.html"
+               class="group flex items-center gap-4 rounded-full border border-[#e0e5ec] bg-electric px-9 py-4 text-[16px] font-semibold text-[#ffffff] transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(74,111,255,0.4)]">
                 Explorar caso de estudio
-                <img src="../Media/GEOSATELITAL/icon-arrow.svg" alt="arrow" class="icon-arrow">
+                <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/icon-arrow.svg" alt="arrow" class="h-[18px] w-auto brightness-0 invert transition-transform group-hover:translate-x-1.5" />
             </a>
-            <div class="hero-mockup-main">
-                <img src="../Media/SATELOCK/img-portada.svg" alt="FoodDelivery Interface">
+
+            <div class="flex w-full max-w-[1100px] justify-center px-0 pb-20 pt-10">
+                <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/img-portada.svg" alt="Satelock Interface" class="block h-auto max-h-[70vh] w-full object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.5)]" />
             </div>
         </header>
-        <section class="section-container content">
-            <div class="section-header-left">
-                <h2 class="section-title-main">El Desafío: Brecha de Usabilidad</h2>
-                <div class="title-underline"></div>
-            </div>
 
-            <div class="challenge-grid">
-                <div class="challenge-card card-dark">
-                    <div class="card-header">
-                        <img src="../Media/SATELOCK/alert.svg" alt="Problema" class="card-icon">
-                        <h3>El Problema</h3>
+        <!-- ================= DESAFÍO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20">
+            <div class="mb-12">
+                <h2 class="mb-4 text-[28px] font-bold text-[#0f172a] sm:text-[32px]">El Desafío: Brecha de Usabilidad</h2>
+                <div class="h-1 w-16 rounded bg-electric"></div>
+            </div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div class="flex flex-col rounded-[24px] border border-[#edf0f4] bg-card p-8 sm:p-10">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/alert.svg" alt="Problema" class="h-7 w-7" />
+                        <h3 class="text-[22px] font-semibold text-[#0f172a]">El Problema</h3>
                     </div>
-                    <p class="card-body-text">
+                    <p class="mb-8 flex-1 text-[15px] leading-[1.7] text-[#64748b]">
                         Los sistemas legados presentaban una carga cognitiva abrumadora para los operadores.
                         La falta de respuesta en tiempo real y una arquitectura de información fragmentada
                         provocaban retrasos críticos en la detección de incidentes.
                     </p>
-                    <ul class="status-list list-red">
+                    <ul class="status-cross flex flex-col gap-3 text-[14px] font-medium text-[#475569]">
                         <li>Tiempos de respuesta superiores a 15 minutos.</li>
                         <li>Interfaz no adaptativa (Desktop-only).</li>
                     </ul>
                 </div>
-
-                <div class="challenge-card card-dark">
-                    <div class="card-header">
-                        <img src="../Media/SATELOCK/check.svg" alt="Solución" class="card-icon">
-                        <h3>La Solución</h3>
+                <div class="flex flex-col rounded-[24px] border border-[#edf0f4] bg-card p-8 sm:p-10">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/check.svg" alt="Solución" class="h-7 w-7" />
+                        <h3 class="text-[22px] font-semibold text-[#0f172a]">La Solución</h3>
                     </div>
-                    <p class="card-body-text">
+                    <p class="mb-8 flex-1 text-[15px] leading-[1.7] text-[#64748b]">
                         Una plataforma centralizada basada en Atomic Design que optimiza la toma de decisiones
                         mediante visualización predictiva y una jerarquía visual clara diseñada para entornos
                         de alta presión.
                     </p>
-                    <ul class="status-list list-green">
-                        <li>Monitoreo en tiempo real con latencia < 1s.</li>
+                    <ul class="status-check flex flex-col gap-3 text-[14px] font-medium text-[#475569]">
+                        <li>Monitoreo en tiempo real con latencia &lt; 1s.</li>
                         <li>Ecosistema responsivo y notificaciones inteligentes.</li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section class="section-container content ai-process-section">
-            <div class="section-header-center">
-                <h2 class="ai-title">AI-Driven Process: Acelerando el Workflow</h2>
-                <p class="ai-subtitle">Implementación de herramientas de IA para maximizar la eficiencia creativa y
-                    técnica.</p>
+
+        <!-- ================= AI PROCESS ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20 text-center">
+            <div class="mb-14">
+                <h2 class="mb-6 text-[28px] font-bold text-[#0f172a] sm:text-[36px]">AI-Driven Process: Acelerando el Workflow</h2>
+                <p class="mx-auto max-w-[700px] text-[16px] text-[#64748b]">Implementación de herramientas de IA para maximizar la eficiencia creativa y técnica.</p>
             </div>
-
-            <div class="ai-cards-grid">
-                <div class="ai-card">
-                    <div class="ai-icon-box">
-                        <img src="../Media/SATELOCK/midjourney.svg" alt="Midjourney" class="ai-icon">
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/midjourney.svg" alt="Midjourney" class="h-[22px] w-auto" />
                     </div>
-                    <h3>Midjourney</h3>
-                    <p>Generación de activos visuales complejos y texturas abstractas para el sistema de diseño,
-                        manteniendo una estética futurista y profesional.</p>
+                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Midjourney</h3>
+                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Generación de activos visuales complejos y texturas abstractas para el sistema de diseño, manteniendo una estética futurista y profesional.</p>
                 </div>
-
-                <div class="ai-card">
-                    <div class="ai-icon-box">
-                        <img src="../Media/SATELOCK/chat gpt.svg" alt="ChatGPT" class="ai-icon">
+                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/chat%20gpt.svg" alt="ChatGPT" class="h-[22px] w-auto" />
                     </div>
-                    <h3>ChatGPT</h3>
-                    <p>Refinamiento de UX Writing, microcopy y estructuración de la documentación técnica para asegurar
-                        claridad en cada punto de contacto.</p>
+                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">ChatGPT</h3>
+                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Refinamiento de UX Writing, microcopy y estructuración de la documentación técnica para asegurar claridad en cada punto de contacto.</p>
                 </div>
-
-                <div class="ai-card">
-                    <div class="ai-icon-box">
-                        <img src="../Media/SATELOCK/claude.svg" alt="Claude AI" class="ai-icon">
+                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/claude.svg" alt="Claude AI" class="h-[22px] w-auto" />
                     </div>
-                    <h3>Claude AI</h3>
-                    <p>Optimización de componentes React y lógica de negocio, reduciendo el tiempo de desarrollo de
-                        prototipos funcionales en un 30%.</p>
+                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Claude AI</h3>
+                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Optimización de componentes React y lógica de negocio, reduciendo el tiempo de desarrollo de prototipos funcionales en un 30%.</p>
                 </div>
-
-                <div class="ai-card">
-                    <div class="ai-icon-box">
-                        <img src="../Media/SATELOCK/stich.svg" alt="Stitch Gemini" class="ai-icon">
+                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/stich.svg" alt="Stitch Gemini" class="h-[22px] w-auto" />
                     </div>
-                    <h3>Stitch Gemini</h3>
-                    <p>Generación de contenido contextual dinámico y narrativas de usuario complejas, acelerando la
-                        creación de activos de alta fidelidad.</p>
+                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Stitch Gemini</h3>
+                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Generación de contenido contextual dinámico y narrativas de usuario complejas, acelerando la creación de activos de alta fidelidad.</p>
                 </div>
-
-                <div class="ai-card">
-                    <div class="ai-icon-box">
-                        <img src="../Media/SATELOCK/make.svg" alt="Figma Make" class="ai-icon">
+                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/make.svg" alt="Figma Make" class="h-[22px] w-auto" />
                     </div>
-                    <h3>Figma Make</h3>
-                    <p>Automatización de layouts y escalado de sistemas de diseño, permitiendo entregas técnicas en
-                        tiempos récord sin comprometer la calidad.</p>
+                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Figma Make</h3>
+                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Automatización de layouts y escalado de sistemas de diseño, permitiendo entregas técnicas en tiempos récord sin comprometer la calidad.</p>
                 </div>
             </div>
         </section>
-        <section class="section-container content data-optimization-section">
-            <div class="data-grid-layout">
 
-                <div class="data-tools-grid">
-                    <div class="data-card small-card">
-                        <span class="tool-name">GA4</span>
-                        <span class="tool-desc">EVENT TRACKING</span>
+        <!-- ================= DATA DRIVEN ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-24">
+            <div class="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
+                <!-- Tools bento -->
+                <div class="grid grid-cols-2 gap-4 md:order-1 order-2">
+                    <div class="flex flex-col items-center justify-center rounded-[16px] border border-[#edf0f4] bg-card p-8 transition-colors duration-300 hover:border-electric/40 hover:bg-panel">
+                        <span class="text-[22px] font-bold text-electric">GA4</span>
+                        <span class="mt-1 text-[10px] font-bold tracking-[0.15em] text-[#94a3b8]">EVENT TRACKING</span>
                     </div>
-                    <div class="data-card small-card">
-                        <span class="tool-name">Hotjar</span>
-                        <span class="tool-desc">HEATMAPS</span>
+                    <div class="flex flex-col items-center justify-center rounded-[16px] border border-[#edf0f4] bg-card p-8 transition-colors duration-300 hover:border-electric/40 hover:bg-panel">
+                        <span class="text-[22px] font-bold text-electric">Hotjar</span>
+                        <span class="mt-1 text-[10px] font-bold tracking-[0.15em] text-[#94a3b8]">HEATMAPS</span>
                     </div>
-                    <div class="data-card large-card">
-                        <span class="tool-name">Mixpanel</span>
-                        <span class="tool-desc">BEHAVIORAL ANALYTICS</span>
+                    <div class="col-span-2 flex flex-col items-center justify-center rounded-[16px] border border-[#edf0f4] bg-card p-10 transition-colors duration-300 hover:border-electric/40 hover:bg-panel">
+                        <span class="text-[22px] font-bold text-electric">Mixpanel</span>
+                        <span class="mt-1 text-[10px] font-bold tracking-[0.15em] text-[#94a3b8]">BEHAVIORAL ANALYTICS</span>
                     </div>
                 </div>
-
-                <div class="data-content-info">
-                    <h2 class="data-title">Data-Driven Optimization</h2>
-                    <p class="data-description">
+                <!-- Texto -->
+                <div class="md:order-2 order-1 text-center md:text-left">
+                    <h2 class="mb-6 text-[32px] font-bold tracking-[-0.02em] sm:text-[48px]">Data-Driven Optimization</h2>
+                    <p class="mb-10 text-[16px] leading-[1.6] text-[#64748b]">
                         Validamos cada decisión de diseño mediante un stack analítico robusto.
-                        Utilizamos <strong>GA4, Hotjar y Mixpanel</strong> para monitorizar el comportamiento real
+                        Utilizamos <strong class="font-semibold text-[#0f172a]">GA4, Hotjar y Mixpanel</strong> para monitorizar el comportamiento real
                         de los operadores, identificando cuellos de botella críticos en el dashboard
                         de monitoreo y optimizando flujos mediante evidencia empírica.
                     </p>
-
-                    <div class="data-cycle-row">
-                        <div class="number-badges">
-                            <span class="badge-blue">1</span>
-                            <span class="badge-blue">2</span>
-                            <span class="badge-blue">3</span>
+                    <div class="flex items-center justify-center gap-8 md:justify-start">
+                        <div class="flex gap-2">
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-[#ffffff]">1</span>
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-[#ffffff]">2</span>
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-[#ffffff]">3</span>
                         </div>
-                        <p class="cycle-text">Ciclo continuo de iteración basado en datos.</p>
+                        <p class="text-[14px] font-semibold text-[#0f172a]">Ciclo continuo de iteración basado en datos.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section-container content solution-mockup-section">
-            <div class="solution-header">
-                <span class="solution-tag">THE SOLUTION</span>
-                <h2 class="solution-title">Estructura simplificada.<br>Control total.</h2>
 
-                <div class="solution-pills">
-                    <span class="pill-dark">Onboarding guiado</span>
-                    <span class="pill-dark">Preview real-time</span>
-                    <span class="pill-dark">Smart Templates</span>
+        <!-- ================= SOLUCIÓN MOCKUP ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20 text-center">
+            <div class="mb-14">
+                <span class="mb-8 block text-[11px] font-bold uppercase tracking-[0.2em] text-electric">THE SOLUTION</span>
+                <h2 class="mb-9 text-[32px] font-bold leading-[1.1] tracking-[-0.02em] text-[#0f172a] sm:text-[56px]">Visión total.<br />Reacción inmediata.</h2>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-6 py-2.5 text-[13px] font-medium text-[#475569]">Monitoreo en vivo</span>
+                    <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-6 py-2.5 text-[13px] font-medium text-[#475569]">Alertas inteligentes</span>
+                    <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-6 py-2.5 text-[13px] font-medium text-[#475569]">Dark theme operativo</span>
                 </div>
             </div>
-
-            <div class="mockup-display-container">
-                <img src="../Media/SATELOCK/mockup.svg" alt="Satelock App Interface" class="main-mockup-img">
+            <div class="mx-auto flex w-full max-w-grid justify-center">
+                <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/mockup.svg" alt="Satelock App Interface" class="block w-full max-w-full rounded-[20px] object-contain" />
             </div>
         </section>
-        <footer class="carlos-footer">
-            <div class="carlos-footer-container">
-                <div class="footer-left-block">
-                    <div class="footer-brand-header">
-                        <img src="../Media/Home/Footeer-escudo.svg" alt="Escudo" class="footer-shield-icon">
-                        <span class="footer-brand-text">Jose Carlos Meza Portfolio</span>
-                    </div>
-                    <p class="footer-brand-description">
-                        Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de
-                        vanguardia.
-                    </p>
-                </div>
-
-                <div class="footer-right-block">
-                    <h3 class="footer-cta-text">¿Trabajamos juntos?</h3>
-                    <div class="footer-social-wrapper">
-                        <a href="mailto:tu-correo@gmail.com" class="footer-icon-circle">
-                            <img src="../Media/Home/correo-icono.svg" alt="Email">
-                        </a>
-                        <a href="https://linkedin.com/in/tu-perfil" class="footer-icon-circle">
-                            <img src="../Media/Home/compratir-icono.svg" alt="LinkedIn">
-                        </a>
-                        <a href="#" class="footer-icon-circle">
-                            <img src="../Media/Home/user-icono.svg" alt="Perfil">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </main>
+
+    <!-- ================= NAV PROYECTOS ================= -->
+    <section class="mx-auto mb-4 w-[90%] max-w-grid border-t border-[#e9edf2] pt-10">
+        <div class="flex items-center justify-between gap-4">
+            <a href="../index.html#proyectos" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="transition-transform group-hover:-translate-x-1">←</span>
+                <span class="text-[14px]">Todos los proyectos</span>
+            </a>
+            <a href="SellerCenter.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="text-[14px]">Siguiente: <span class="font-semibold text-[#0f172a]">Seller Center</span></span>
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="w-full border-t border-[#e9edf2] bg-card py-20">
+        <div class="mx-auto flex w-[90%] max-w-grid flex-col items-center justify-between gap-10 text-center md:flex-row md:items-start md:text-left">
+            <div>
+                <div class="mb-5 flex items-center justify-center gap-3 md:justify-start">
+                    <span class="flex h-7 w-7 items-center justify-center rounded-[9px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
+                </div>
+                <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
+                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de vanguardia.
+                </p>
+            </div>
+            <div class="text-center md:text-right">
+                <h3 class="mb-6 text-[18px] font-semibold text-[#0f172a]">¿Trabajamos juntos?</h3>
+                <div class="flex justify-center gap-4 md:justify-end">
+                    <a href="mailto:mezasalaman@gmail.com" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/correo-icono.svg" alt="Email" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/compratir-icono.svg" alt="LinkedIn" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                    <a href="#" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/user-icono.svg" alt="Perfil" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/site.js"></script>
 </body>
 
 </html>

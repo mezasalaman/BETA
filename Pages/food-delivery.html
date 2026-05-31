@@ -2,237 +2,270 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caso de Estudio | Food Delivery</title>
-    <link rel="stylesheet" href="../Styles/Normalize.css">
-    <link rel="stylesheet" href="../Styles/Default.css">
-    <link rel="stylesheet" href="../Styles/Nav.css">
-    <link rel="stylesheet" href="../Styles/Food.css">
-    <link rel="stylesheet" href="../Styles/Footer.css">
-    <link rel="stylesheet" href="../Styles/Food.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <meta name="description" content="FoodDelivery — Caso de diseño de producto enfocado en onboarding, activación y conversión para una plataforma gastronómica." />
+    <link rel="icon" href="https://mezasalaman.github.io/BETA/Media/Home/icono%20meza.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Caso de Estudio | Food Delivery" />
+    <meta property="og:description" content="FoodDelivery — Caso de diseño de producto enfocado en onboarding, activación y conversión para una plataforma gastronómica." />
+    <meta property="og:image" content="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/img-portada-food.svg" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/tw-config.js"></script>
+    <link rel="stylesheet" href="../assets/portfolio.css" />
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="nav-content">
-                <a href="../index.html" class="logo-container">
-                    <img src="../Media/Home/icono meza.svg" alt="Icono" class="logo-icon">
-                    <span class="logo-text">Carlos Meza</span>
+<body class="bg-ink font-sans text-[#0f172a] antialiased">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="sticky top-0 z-[9999] w-full bg-ink">
+        <div class="mx-auto max-w-[1150px] px-5">
+            <div class="flex w-full items-center justify-between border-b border-hairline py-6">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <span class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Carlos Meza</span>
                 </a>
-                <ul class="enlaces__content">
-                    <li class="enlace--proyecto">
-                        <a href="#" class="link--main">Proyectos</a>
-                        <div class="subenlaces__content">
-                            <a href="./food-delivery.html">FoodDelivery</a>
-                            <a href="./satelock.html">Satelock</a>
-                            <a href="./SellerCenter.html">Seller Center</a>
+                <ul class="hidden items-center gap-10 md:flex">
+                    <li class="dropdown-trigger relative py-2.5">
+                        <a href="#" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Proyectos</a>
+                        <div class="dropdown-menu absolute left-1/2 top-full flex min-w-[180px] flex-col items-start gap-4 rounded-xl bg-white p-5 shadow-drop">
+                            <a href="food-delivery.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">FoodDelivery</a>
+                            <a href="satelock.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Satelock</a>
+                            <a href="SellerCenter.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Seller Center</a>
+                            <a href="conduzko.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">ConDuzko</a>
                         </div>
                     </li>
-                    <li><a href="./about.html" class="link--main">Sobre mí</a></li>
+                    <li><a href="about.html" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Sobre mí</a></li>
                 </ul>
+                <button type="button" data-menu-toggle aria-label="Abrir menú" class="flex h-10 w-10 items-center justify-center md:hidden">
+                    <span class="relative block h-[2px] w-6 rounded bg-white before:absolute before:-top-2 before:left-0 before:h-[2px] before:w-6 before:rounded before:bg-white before:content-[''] after:absolute after:top-2 after:left-0 after:h-[2px] after:w-6 after:rounded after:bg-white after:content-['']"></span>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden border-b border-hairline pb-4 md:!hidden">
+                <span class="block px-2 pb-1 pt-3 text-[11px] font-bold uppercase tracking-wider text-[#94a3b8]">Proyectos</span>
+                <a href="food-delivery.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">FoodDelivery</a>
+                <a href="satelock.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Satelock</a>
+                <a href="SellerCenter.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Seller Center</a>
+                <a href="conduzko.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">ConDuzko</a>
+                <a href="about.html" class="mt-1 block rounded-lg px-2 py-2.5 text-[15px] font-medium text-[#0f172a] hover:bg-[#f3f5f8]">Sobre mí</a>
             </div>
         </div>
     </nav>
 
-    <main class="food-main">
-        <header class="project-hero container">
-            <span class="badge-storytelling">SENIOR PRODUCT DESIGNER STORYTELLING</span>
+    <main class="pb-24">
+        <!-- ================= HERO ================= -->
+        <header class="mx-auto flex w-[90%] max-w-grid flex-col items-center px-0 pb-24 pt-10 text-center">
+            <span class="mb-10 inline-block rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[11px] font-bold tracking-[0.15em] text-royal">SENIOR PRODUCT DESIGNER STORYTELLING</span>
 
-            <h1 class="hero-title-massive">
+            <h1 class="title-massive mb-12 mt-8 font-extrabold uppercase text-[#0f172a]">
                 FOODDELIVERY
-                <span class="highlight">Ecosistema Digital</span>
+                <span class="mt-4 block text-royal">Ecosistema Digital</span>
             </h1>
 
-            <p class="hero-description">
-                Diseño de una experiencia digital enfocada en optimizar activación, reducir fricción operativa y mejorar
-                métricas de conversión dentro del ecosistema gastronómico.
+            <p class="mb-12 max-w-[700px] text-[17px] leading-[1.5] text-[#475569] md:text-[20px]">
+                Rediseñé el onboarding de una plataforma de delivery gastronómico de extremo a extremo:
+                menos fricción para activar la tienda y publicar productos. <strong class="font-semibold text-[#0f172a]">+32% de
+                completitud y +18% de conversión.</strong>
             </p>
 
-            <div class="hero-actions">
-                <a href="./food-delivery-case.html" class="btn-primary">
-                    Explorar caso de estudio
-                    <img src="../Media/GEOSATELITAL/icon-arrow.svg" alt="flecha" class="btn-icon">
-                </a>
-            </div>
+            <a href="food-delivery-case.html"
+               class="group inline-flex items-center justify-center gap-3 rounded-full bg-royal px-10 py-4 text-[16px] font-bold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:bg-[#2a5ecf] hover:shadow-[0_10px_20px_rgba(59,113,254,0.3)] md:text-[18px]">
+                Explorar caso de estudio
+                <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/icon-arrow.svg" alt="flecha" class="h-5 w-auto brightness-0 invert transition-transform group-hover:translate-x-1" />
+            </a>
 
-            <div class="hero-mockup-main">
-                <img src="../Media/GEOSATELITAL/img-portada-food.svg" alt="FoodDelivery Interface">
+            <div class="mx-auto mt-20 w-full max-w-grid overflow-hidden rounded-[32px] border border-[#e9edf2] bg-card shadow-showcase">
+                <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/img-portada-food.svg" alt="FoodDelivery Interface" class="block w-full" />
             </div>
         </header>
 
-        <section class="section-container content">
-            <h2 class="section__title">Problema y Solución</h2>
-            <div class="split-cards">
-                <div class="card-dark card-problem-border">
-                    <div class="card-header-inline">
-                        <img src="../Media/GEOSATELITAL/info.svg" alt="alert" class="icon-tag-sm">
-                        <span class="label-error">EL PROBLEMA</span>
+        <!-- ================= PROBLEMA Y SOLUCIÓN ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20">
+            <h2 class="mb-12 text-[24px] font-semibold">Problema y Solución</h2>
+            <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2">
+                <!-- Problema -->
+                <div class="flex flex-col rounded-[32px] border border-err/10 bg-card p-8 sm:p-11">
+                    <div class="mb-8 flex items-center gap-3">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/info.svg" alt="alert" class="h-4 w-auto" />
+                        <span class="text-[12px] font-bold uppercase tracking-[0.15em] text-err">EL PROBLEMA</span>
                     </div>
-                    <h2 class="card-main-title">Sobrecarga Cognitiva y <span class="text-error">Pérdida
-                            Operativa.</span></h2>
-                    <p class="card-description-text">Fricción crítica en la comunicación entre administradores de
-                        Productos y Usuarios. Gestión ineficiente de Ventas resultando en <span
-                            class="text-error">pérdidas de Ventas del 22%.</span></p>
-
-                    <div class="card-footer-metrics">
-                        <div class="footer-metric-box">
-                            <span class="footer-label">IMPACTO NEGOCIO</span>
-                            <span class="footer-value text-error">-22%</span>
+                    <h3 class="mb-6 text-[26px] font-semibold leading-[1.2] text-[#0f172a] sm:text-[32px]">Sobrecarga Cognitiva y <span class="font-bold text-err">Pérdida Operativa.</span></h3>
+                    <p class="mb-auto text-[15px] font-light leading-[1.6] text-[#334155]">Fricción crítica en la comunicación entre administradores de Productos y Usuarios. Gestión ineficiente de Ventas resultando en <span class="font-bold text-err">pérdidas de Ventas del 22%.</span></p>
+                    <div class="mt-9 flex gap-12 border-t border-[#e9edf2] pt-6">
+                        <div class="flex flex-col">
+                            <span class="text-[11px] font-semibold uppercase text-[#64748b]">IMPACTO NEGOCIO</span>
+                            <span class="text-[20px] font-bold text-err">-22%</span>
                         </div>
-                        <div class="footer-metric-box">
-                            <span class="footer-label">GRAVEDAD</span>
-                            <span class="footer-value text-error">CRÍTICA</span>
+                        <div class="flex flex-col">
+                            <span class="text-[11px] font-semibold uppercase text-[#64748b]">GRAVEDAD</span>
+                            <span class="text-[20px] font-bold text-err">CRÍTICA</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="card-blue-gradient">
-                    <div class="card-header-inline">
-                        <img src="../Media/GEOSATELITAL/ia.svg" alt="stars" class="icon-tag-sm">
-                        <span class="label-white">LA SOLUCIÓN</span>
+                <!-- Solución -->
+                <div class="flex flex-col rounded-[32px] bg-gradient-to-br from-[#4A6FFF] to-[#2C2FFF] p-8 text-[#ffffff] sm:p-11">
+                    <div class="mb-8 flex items-center gap-3">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/ia.svg" alt="stars" class="h-4 w-auto" />
+                        <span class="text-[12px] font-bold uppercase tracking-[0.15em] text-[#dbe4ff]">LA SOLUCIÓN</span>
                     </div>
-                    <h2 class="card-main-title">Motor de Gestión Centralizado.</h2>
-                    <p class="card-description-text">Implementación de una interfaz centralizada para la gestión de
-                        servicios y comunicación en tiempo real. Reducción de la carga cognitiva mediante flujos de
-                        trabajo optimizados.</p>
-
-                    <div class="card-badge-check">
-                        <img src="../Media/GEOSATELITAL/chek.svg" alt="check" class="icon-check-sol">
-                        <span>Eficiencia Operativa Maximizada</span>
+                    <h3 class="mb-6 text-[26px] font-semibold leading-[1.2] text-[#ffffff] sm:text-[32px]">Motor de Gestión Centralizado.</h3>
+                    <p class="mb-auto text-[15px] font-light leading-[1.6] text-[#dbe4ff]">Implementación de una interfaz centralizada para la gestión de servicios y comunicación en tiempo real. Reducción de la carga cognitiva mediante flujos de trabajo optimizados.</p>
+                    <div class="mt-9 flex items-center gap-3 self-start rounded-full bg-[rgba(255,255,255,0.22)] px-5 py-2.5">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/chek.svg" alt="check" class="h-5 w-auto" />
+                        <span class="text-[14px]">Eficiencia Operativa Maximizada</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-container content bento-section">
-            <h2 class="section__title bento-section-title">Contexto De Negocio</h2>
-
-            <div class="bento-context-grid">
-                <div class="bento-card bento-card-main">
-                    <span class="bento-label">CONTEXTO DE NEGOCIO</span>
-                    <h3 class="bento-card-title">Redefiniendo el onboarding para operadores gastronómicos.</h3>
-                    <p class="bento-card-description">La plataforma anterior presentaba una curva de aprendizaje
-                        pronunciada, resultando en pérdidas significativas durante la primera semana de uso.</p>
+        <!-- ================= CONTEXTO DE NEGOCIO (BENTO) ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20">
+            <h2 class="mb-12 text-[24px] font-semibold">Contexto De Negocio</h2>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:grid-rows-[minmax(220px,auto)_minmax(220px,auto)_auto]">
+                <!-- Main -->
+                <div class="flex flex-col rounded-[32px] border border-[#edf0f4] bg-panel2 p-9 md:col-span-2 md:row-span-2">
+                    <span class="mb-8 text-[11px] font-bold uppercase tracking-[0.15em] text-[#94a3b8]">CONTEXTO DE NEGOCIO</span>
+                    <h3 class="mb-6 text-[26px] font-semibold leading-[1.2] text-[#0f172a] sm:text-[32px]">Redefiniendo el onboarding para operadores gastronómicos.</h3>
+                    <p class="text-[16px] font-light leading-[1.6] text-[#64748b]">La plataforma anterior presentaba una curva de aprendizaje pronunciada, resultando en pérdidas significativas durante la primera semana de uso.</p>
                 </div>
-
-                <div class="bento-card bento-card-center bento-card-up">
-                    <div class="icon-circle-bg bento-icon-up">
-                        <img src="../Media/GEOSATELITAL/activacionsvg.svg" alt="rocket" class="bento-icon">
+                <!-- Up -->
+                <div class="flex flex-col items-center justify-center rounded-[32px] border border-[#edf0f4] bg-panel2 p-9 text-center">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/activacionsvg.svg" alt="rocket" class="h-5 w-auto" />
                     </div>
-                    <h4>Aumentar activación</h4>
-                    <p class="small-text">Garantizar que el usuario complete su perfil en menos de 5 minutos.</p>
+                    <h4 class="mb-4 text-[18px] font-semibold text-[#0f172a]">Aumentar activación</h4>
+                    <p class="text-[13px] leading-[1.4] text-[#64748b]">Garantizar que el usuario complete su perfil en menos de 5 minutos.</p>
                 </div>
-
-                <div class="bento-card bento-card-center bento-card-down">
-                    <div class="icon-circle-bg bento-icon-down">
-                        <img src="../Media/GEOSATELITAL/reduccionsvg.svg" alt="down" class="bento-icon">
+                <!-- Down -->
+                <div class="flex flex-col items-center justify-center rounded-[32px] border border-[#edf0f4] bg-panel2 p-9 text-center">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/reduccionsvg.svg" alt="down" class="h-5 w-auto" />
                     </div>
-                    <h4>Reducir abandono</h4>
-                    <p class="small-text">Minimizar la fricción en el proceso de carga de productos y menús.</p>
+                    <h4 class="mb-4 text-[18px] font-semibold text-[#0f172a]">Reducir abandono</h4>
+                    <p class="text-[13px] leading-[1.4] text-[#64748b]">Minimizar la fricción en el proceso de carga de productos y menús.</p>
                 </div>
-
-                <div class="bento-card bento-card-horizontal bento-card-base">
-                    <div class="bento-info-base">
-                        <h4>Incrementar conversión</h4>
-                        <p class="small-text">Transformar usuarios de prueba en suscriptores recurrentes mediante valor
-                            inmediato.</p>
+                <!-- Base -->
+                <div class="flex flex-col items-center justify-between gap-6 rounded-[32px] border border-[#edf0f4] bg-panel2 px-9 py-6 text-center md:col-span-3 md:flex-row md:px-12 md:text-left">
+                    <div class="md:max-w-[65%]">
+                        <h4 class="mb-4 text-[22px] font-semibold text-[#0f172a]">Incrementar conversión</h4>
+                        <p class="text-[13px] leading-[1.4] text-[#64748b]">Transformar usuarios de prueba en suscriptores recurrentes mediante valor inmediato.</p>
                     </div>
-                    <div class="target-badge-circle">
-                        <span class="badge-target-num">+21%</span>
-                        <span class="badge-target-unit">TARGET</span>
+                    <div class="flex h-[90px] min-w-[90px] flex-col items-center justify-center rounded-full border border-[#e4e8ee] bg-[#f6f7f9] shadow-[inset_0_0_1.5rem_rgba(74,111,255,0.08)]">
+                        <span class="text-[24px] font-bold text-electric">+21%</span>
+                        <span class="text-[9px] font-semibold tracking-wider text-[#94a3b8]">TARGET</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DECISIONES CLAVE ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20">
+            <h2 class="mb-12 text-[24px] font-semibold">Decisiones clave</h2>
+            <div class="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-[35rem_1fr]">
+                <!-- Labels -->
+                <div class="flex flex-col gap-6 sm:flex-row lg:flex-col">
+                    <div class="flex flex-1 flex-col justify-center rounded-[20px] border border-[#edf0f4] border-l-4 border-l-electric bg-gradient-to-r from-electric/5 to-transparent p-6">
+                        <strong class="text-[16px] font-semibold">Activación temprana</strong>
+                        <p class="mt-1 text-[13px] text-dim">Mostrar resultados antes de pedir datos complejos.</p>
+                    </div>
+                    <div class="flex flex-1 flex-col justify-center rounded-[20px] border border-[#edf0f4] bg-panel p-6">
+                        <strong class="text-[16px] font-semibold">Rediseño onboarding</strong>
+                        <p class="mt-1 text-[13px] text-dim">Estructura lineal y modular asistida por IA.</p>
+                    </div>
+                    <div class="flex flex-1 flex-col justify-center rounded-[20px] border border-[#edf0f4] bg-panel p-6">
+                        <strong class="text-[16px] font-semibold">Priorización de tareas</strong>
+                        <p class="mt-1 text-[13px] text-dim">Foco absoluto en la tarea crítica del momento.</p>
+                    </div>
+                </div>
+                <!-- Metrics -->
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                    <div class="flex flex-col justify-center rounded-[24px] border border-[#edf0f4] bg-panel p-10 text-center">
+                        <span class="mb-4 block text-[48px] font-bold text-electric">+32%</span>
+                        <p class="text-[14px] text-dim">Completitud de Onboarding</p>
+                    </div>
+                    <div class="flex flex-col justify-center rounded-[24px] border border-[#edf0f4] bg-panel p-10 text-center">
+                        <span class="mb-4 block text-[48px] font-bold text-electric">-27%</span>
+                        <p class="text-[14px] text-dim">Tasa de Abandono</p>
+                    </div>
+                    <div class="flex flex-col justify-center rounded-[24px] border border-[#edf0f4] bg-panel p-10 text-center">
+                        <span class="mb-4 block text-[48px] font-bold text-electric">+21%</span>
+                        <p class="text-[14px] text-dim">Creación de Tiendas</p>
+                    </div>
+                    <div class="flex flex-col justify-center rounded-[24px] border border-[#edf0f4] bg-panel p-10 text-center">
+                        <span class="mb-4 block text-[48px] font-bold text-electric">+18%</span>
+                        <p class="text-[14px] text-dim">Conversión Final</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-container content">
-            <h2 class="section__title">Decisiones clave</h2>
-            <div class="metrics-dashboard">
-                <div class="metrics-labels">
-                    <div class="label-item active">
-                        <strong>Activación temprana</strong>
-                        <p>Mostrar resultados antes de pedir datos complejos.</p>
-                    </div>
-                    <div class="label-item">
-                        <strong>Rediseño onboarding</strong>
-                        <p>Estructura lineal y modular asistida por IA.</p>
-                    </div>
-                    <div class="label-item">
-                        <strong>Priorización de tareas</strong>
-                        <p>Foco absoluto en la tarea crítica del momento.</p>
-                    </div>
-                </div>
-                <div class="metrics-grid-layout">
-                    <div class="metric-case-card">
-                        <span class="metric-num">+32%</span>
-                        <p>Completitud de Onboarding</p>
-                    </div>
-                    <div class="metric-case-card">
-                        <span class="metric-num">-27%</span>
-                        <p>Tasa de Abandono</p>
-                    </div>
-                    <div class="metric-case-card">
-                        <span class="metric-num">+21%</span>
-                        <p>Creación de Tiendas</p>
-                    </div>
-                    <div class="metric-case-card">
-                        <span class="metric-num">+18%</span>
-                        <p>Conversión Final</p>
-                    </div>
+        <!-- ================= MOCKUP FINAL ================= -->
+        <section class="mx-auto flex w-[90%] max-w-grid flex-col items-center px-0 pb-12 pt-20 text-center">
+            <div class="mb-12 max-w-[800px]">
+                <span class="mb-8 block text-[11px] font-bold uppercase tracking-[0.15em] text-royal">THE SOLUTION</span>
+                <h2 class="mb-8 text-[32px] font-bold leading-[1.1] text-[#0f172a] sm:text-[48px]">Menos fricción.<br />Más pedidos.</h2>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">Onboarding en 7 pasos</span>
+                    <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">Carga masiva con IA</span>
+                    <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">Publicación instantánea</span>
                 </div>
             </div>
+            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/img-mockup.svg" alt="FoodDelivery App" class="mx-auto block w-full max-w-grid rounded-[32px] drop-shadow-[0_40px_100px_rgba(0,0,0,0.3)]" />
         </section>
-        <section class="section-container content mockup-section">
-            <div class="mockup-header">
-                <span class="label-dim-blue">THE SOLUTION</span>
-                <h2 class="mockup-title">Estructura simplificada.<br>Control total.</h2>
-
-                <div class="mockup-tags">
-                    <span class="tag-pills">Onboarding guiado</span>
-                    <span class="tag-pills">Preview real-time</span>
-                    <span class="tag-pills">Smart Templates</span>
-                </div>
-            </div>
-
-
-            <img src="../Media/GEOSATELITAL/img-mockup.svg" class="iphone-image">
-            </div>
-        </section>
-
     </main>
-    <footer class="carlos-footer">
-        <div class="carlos-footer-container">
-            <div class="footer-left-block">
-                <div class="footer-brand-header">
-                    <img src="../Media/Home/Footeer-escudo.svg" alt="Escudo" class="footer-shield-icon">
-                    <span class="footer-brand-text">Jose Carlos Meza Portfolio</span>
+
+    <!-- ================= NAV PROYECTOS ================= -->
+    <section class="mx-auto mb-4 w-[90%] max-w-grid border-t border-[#e9edf2] pt-10">
+        <div class="flex items-center justify-between gap-4">
+            <a href="../index.html#proyectos" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="transition-transform group-hover:-translate-x-1">←</span>
+                <span class="text-[14px]">Todos los proyectos</span>
+            </a>
+            <a href="satelock.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="text-[14px]">Siguiente: <span class="font-semibold text-[#0f172a]">Satelock</span></span>
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="w-full border-t border-[#e9edf2] bg-card py-20">
+        <div class="mx-auto flex w-[90%] max-w-grid flex-col items-center justify-between gap-10 text-center md:flex-row md:items-start md:text-left">
+            <div>
+                <div class="mb-5 flex items-center justify-center gap-3 md:justify-start">
+                    <span class="flex h-7 w-7 items-center justify-center rounded-[9px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
                 </div>
-                <p class="footer-brand-description">
-                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de
-                    vanguardia.
+                <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
+                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de vanguardia.
                 </p>
             </div>
-
-            <div class="footer-right-block">
-                <h3 class="footer-cta-text">¿Trabajamos juntos?</h3>
-                <div class="footer-social-wrapper">
-                    <a href="mailto:tu-correo@gmail.com" class="footer-icon-circle">
-                        <img src="../Media/Home/correo-icono.svg" alt="Email">
+            <div class="text-center md:text-right">
+                <h3 class="mb-6 text-[18px] font-semibold text-[#0f172a]">¿Trabajamos juntos?</h3>
+                <div class="flex justify-center gap-4 md:justify-end">
+                    <a href="mailto:mezasalaman@gmail.com" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/correo-icono.svg" alt="Email" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
                     </a>
-                    <a href="https://linkedin.com/in/tu-perfil" class="footer-icon-circle">
-                        <img src="../Media/Home/compratir-icono.svg" alt="LinkedIn">
+                    <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/compratir-icono.svg" alt="LinkedIn" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
                     </a>
-                    <a href="#" class="footer-icon-circle">
-                        <img src="../Media/Home/user-icono.svg" alt="Perfil">
+                    <a href="#" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/user-icono.svg" alt="Perfil" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
                     </a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src="../assets/site.js"></script>
 </body>
 
 </html>

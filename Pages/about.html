@@ -2,213 +2,254 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About me | Jose Carlos Meza</title>
+    <meta name="description" content="Sobre Jose Carlos Meza — Senior Product Designer & Strategist. Educación, expertise y stack tecnológico." />
+    <link rel="icon" href="https://mezasalaman.github.io/BETA/Media/Home/icono%20meza.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About me | Jose Carlos Meza" />
+    <meta property="og:description" content="Sobre Jose Carlos Meza — Senior Product Designer & Strategist. Educación, expertise y stack tecnológico." />
+    <meta property="og:image" content="https://mezasalaman.github.io/BETA/Media/Home/end.svg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
 
-    <link rel="shortcut icon" href="../Media/Home/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="../Styles/Normalize.css">
-    <link rel="stylesheet" href="../Styles/Default.css">
-    <link rel="stylesheet" href="../Styles/About.css">
-    <link rel="stylesheet" href="../Styles/Nav.css">
-    <link rel="stylesheet" href="../Styles/Footer.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/tw-config.js"></script>
+    <link rel="stylesheet" href="../assets/portfolio.css" />
 </head>
 
-<body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="nav-content">
-                <a href="../index.html" class="logo-container">
-                    <img src="../Media/Home/icono meza.svg" alt="Icono" class="logo-icon">
-                    <span class="logo-text">Carlos Meza</span>
+<body class="bg-ink font-sans text-[#0f172a] antialiased">
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="sticky top-0 z-[9999] w-full bg-ink">
+        <div class="mx-auto max-w-[1150px] px-5">
+            <div class="flex w-full items-center justify-between border-b border-hairline py-6">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <span class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Carlos Meza</span>
                 </a>
-                <ul class="enlaces__content">
-                    <li class="enlace--proyecto">
-                        <a href="#" class="link--main">Proyectos</a>
-                        <div class="subenlaces__content">
-                            <a href="./food-delivery.html">FoodDelivery</a>
-                            <a href="./satelock.html">Satelock</a>
-                            <a href="./SellerCenter.html">Seller Center</a>
+                <ul class="hidden items-center gap-10 md:flex">
+                    <li class="dropdown-trigger relative py-2.5">
+                        <a href="#" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Proyectos</a>
+                        <div class="dropdown-menu absolute left-1/2 top-full flex min-w-[180px] flex-col items-start gap-4 rounded-xl bg-white p-5 shadow-drop">
+                            <a href="food-delivery.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">FoodDelivery</a>
+                            <a href="satelock.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Satelock</a>
+                            <a href="SellerCenter.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Seller Center</a>
+                            <a href="conduzko.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">ConDuzko</a>
                         </div>
                     </li>
-                    <li><a href="./about.html" class="link--main">Sobre mí</a></li>
+                    <li><a href="about.html" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Sobre mí</a></li>
                 </ul>
+                <button type="button" data-menu-toggle aria-label="Abrir menú" class="flex h-10 w-10 items-center justify-center md:hidden">
+                    <span class="relative block h-[2px] w-6 rounded bg-white before:absolute before:-top-2 before:left-0 before:h-[2px] before:w-6 before:rounded before:bg-white before:content-[''] after:absolute after:top-2 after:left-0 after:h-[2px] after:w-6 after:rounded after:bg-white after:content-['']"></span>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden border-b border-hairline pb-4 md:!hidden">
+                <span class="block px-2 pb-1 pt-3 text-[11px] font-bold uppercase tracking-wider text-[#94a3b8]">Proyectos</span>
+                <a href="food-delivery.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">FoodDelivery</a>
+                <a href="satelock.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Satelock</a>
+                <a href="SellerCenter.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Seller Center</a>
+                <a href="conduzko.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">ConDuzko</a>
+                <a href="about.html" class="mt-1 block rounded-lg px-2 py-2.5 text-[15px] font-medium text-[#0f172a] hover:bg-[#f3f5f8]">Sobre mí</a>
             </div>
         </div>
+    </nav>
 
-        <main class="about-main container">
-            <section class="about-hero">
-                <span class="badge-available">• AVAILABLE FOR NEW PROJECTS</span>
-                <h1>Senior Product <span class="highlight">Designer</span> & Strategist</h1>
-                <p class="hero-intro">
-                    Product Designer con enfoque en experiencia de usuario y análisis estratégico. Me especializo en
-                    optimizar procesos digitales y mejorar la interacción humano-computadora a través de investigación,
-                    prototipado y validación constante.
+    <main class="mx-auto max-w-[1150px] px-5 md:px-10">
+        <!-- ================= HERO ================= -->
+        <section class="py-10 md:py-14">
+            <div class="relative mx-auto max-w-[960px] overflow-hidden rounded-[28px] border border-[#e9edf2] bg-gradient-to-b from-white to-[#f4f7fb] px-7 py-12 text-center shadow-drop sm:px-12 md:py-16">
+                <span class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.08] px-4 py-1.5 text-[11px] font-semibold tracking-wider text-primary"><span class="pulse-dot h-1.5 w-1.5 rounded-full bg-primary"></span>DISPONIBLE PARA NUEVOS RETOS</span>
+                <h1 class="mb-5 text-[36px] font-bold leading-[1.1] sm:text-[48px] md:text-[58px]">
+                    Senior Product <span class="text-primary">Designer</span> &amp; Strategist
+                </h1>
+                <p class="mx-auto mb-9 max-w-[520px] text-[16px] leading-[1.6] text-dim md:text-[18px]">
+                    Convierto <strong class="font-semibold text-[#0f172a]">research y datos</strong> en productos claros, usables y medibles.
                 </p>
-                <div class="hero-tags">
-                    <span>Strategic Analysis</span>
-                    <span>UX Optimization</span>
-                    <span>HCI Expert</span>
+
+                <!-- Key points -->
+                <div class="mb-10 flex flex-wrap justify-center gap-2.5">
+                    <span class="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#1a2840]"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>UX Strategy</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#1a2840]"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Product Design</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#1a2840]"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Research Driven</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#1a2840]"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>AI + Design Workflow</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#1a2840]"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>SaaS · Growth</span>
+                </div>
+
+                <!-- CTAs -->
+                <div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
+                    <a href="../assets/CARLOS_MEZA_CV.pdf" target="_blank" class="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-semibold text-[#ffffff] transition-transform hover:-translate-y-0.5 sm:w-auto">
+                        Descargar CV <span class="transition-transform group-hover:translate-x-1">→</span>
+                    </a>
+                    <a href="https://wa.me/51934865894?text=Hola%20Carlos%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" rel="noopener" class="group inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#cfd8e3] bg-white px-8 py-3.5 font-semibold text-[#1a2840] transition-colors hover:border-primary hover:text-primary sm:w-auto">
+                        Conversemos
+                        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.717zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GRID PRINCIPAL ================= -->
+        <div class="grid grid-cols-1 gap-16 pb-28 lg:grid-cols-[400px_1fr] lg:gap-20">
+            <!-- IZQUIERDA: Educación -->
+            <aside class="lg:sticky lg:top-[120px] lg:self-start">
+                <h2 class="mb-10 block border-b border-hairline pb-3 text-[13px] font-semibold uppercase tracking-[2px] text-[#0f172a]">Education</h2>
+
+                <div class="mb-11 border-l border-hairline pl-5">
+                    <span class="mb-2 block text-[12px] font-bold text-primary">NOV 2025</span>
+                    <h3 class="mb-1.5 text-[19px] text-[#0f172a]">Capacitación de Inteligencia Artificial y Gestión Empresarial</h3>
+                    <p class="mb-4 text-[14px] text-dim">UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS (UPC)</p>
+                    <p class="mb-4 text-[13.5px] leading-[1.6] text-dim">
+                        Análisis profundo sobre el <strong class="font-medium text-[#0f172a]">impacto de la IA</strong> en modelos de negocio modernos,
+                        integrando <strong class="font-medium text-[#0f172a]">ciberseguridad</strong> avanzada y optimización de la <strong class="font-medium text-[#0f172a]">experiencia de usuario</strong>
+                        potenciada por IA. Enfoque directo en la identificación de <strong class="font-medium text-[#0f172a]">oportunidades de mejora</strong> y
+                        estrategias para maximizar la <strong class="font-medium text-[#0f172a]">conversión económica</strong> mediante tecnología de vanguardia.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">AI Impact</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Cybersecurity</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">UX AI</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Business ROI</span>
+                    </div>
+                </div>
+
+                <div class="mb-11 border-l border-hairline pl-5">
+                    <span class="mb-2 block text-[12px] font-bold text-primary">DEC 2023</span>
+                    <h3 class="mb-1.5 text-[19px] text-[#0f172a]">Graphic Designer Technician</h3>
+                    <p class="mb-4 text-[14px] text-dim">CIBERTEC</p>
+                    <p class="mb-4 text-[13.5px] leading-[1.6] text-dim">
+                        Especializado en Diseño de Planes de Negocio, Costos, Fundamentos de Programación,
+                        UX Research, Psicología del Usuario y Fundamentos Visuales para la creación de productos digitales.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Visual Design</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">UX Research</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Business Plans</span>
+                    </div>
+                </div>
+
+                <div class="mb-11 border-l border-hairline pl-5">
+                    <span class="mb-2 block text-[12px] font-bold text-primary">JUNE 2024</span>
+                    <h3 class="mb-1.5 text-[19px] text-[#0f172a]">Professional Certificate in UX Design</h3>
+                    <p class="mb-4 text-[14px] text-dim">COURSERA (Google)</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">User Research</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Prototyping</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Design Thinking</span>
+                    </div>
+                </div>
+
+                <div class="border-l border-hairline pl-5">
+                    <span class="mb-2 block text-[12px] font-bold text-primary">MAY 2024</span>
+                    <h3 class="mb-1.5 text-[19px] text-[#0f172a]">Analítica Digital</h3>
+                    <p class="mb-4 text-[14px] text-dim">UDEMY</p>
+                    <p class="mb-4 text-[13.5px] leading-[1.6] text-dim">
+                        Enfoque en la medición de métricas clave, análisis del comportamiento del usuario
+                        en plataformas digitales y estrategias de optimización de embudos de conversión.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Data Analytics</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Conversion Rate</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- DERECHA: Expertise + Tech Stack -->
+            <section>
+                <h2 class="mb-10 block border-b border-hairline pb-3 text-[13px] font-semibold uppercase tracking-[2px] text-[#0f172a]">Expertise</h2>
+                <div class="mb-16 grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <div class="group rounded-2xl border border-hairline bg-card p-[30px] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:bg-[#eaf0fb]">
+                        <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#dbe4f5] bg-[#eaf0fb] transition-colors duration-300 group-hover:bg-primary">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SOBRE%20MI/Design-icon.svg" alt="Design Systems" class="h-5 w-5 object-contain" />
+                        </div>
+                        <h4 class="mb-2 mt-4 text-[17px] text-[#0f172a]">Design Systems</h4>
+                        <p class="text-[13.5px] leading-[1.5] text-dim">Construcción y escalamiento de librerías de componentes atómicos. Fomento de la consistencia visual y eficiencia en el handoff.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-hairline bg-card p-[30px] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:bg-[#eaf0fb]">
+                        <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#dbe4f5] bg-[#eaf0fb] transition-colors duration-300 group-hover:bg-primary">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SOBRE%20MI/data-icon.svg" alt="Data Analysis" class="h-5 w-5 object-contain" />
+                        </div>
+                        <h4 class="mb-2 mt-4 text-[17px] text-[#0f172a]">Data Analysis</h4>
+                        <p class="text-[13.5px] leading-[1.5] text-dim">Interpretación de KPIs para la toma de decisiones. Análisis cualitativo y cuantitativo para optimización de productos.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-hairline bg-card p-[30px] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:bg-[#eaf0fb]">
+                        <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#dbe4f5] bg-[#eaf0fb] transition-colors duration-300 group-hover:bg-primary">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SOBRE%20MI/ux-research.svg" alt="UX Research" class="h-5 w-5 object-contain" />
+                        </div>
+                        <h4 class="mb-2 mt-4 text-[17px] text-[#0f172a]">UX Research</h4>
+                        <p class="text-[13.5px] leading-[1.5] text-dim">Liderazgo en fases de descubrimiento, entrevistas a usuarios, pruebas de usabilidad y auditorías heurísticas.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-hairline bg-card p-[30px] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:bg-[#eaf0fb]">
+                        <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#dbe4f5] bg-[#eaf0fb] transition-colors duration-300 group-hover:bg-primary">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SOBRE%20MI/ia-icon.svg" alt="AI Workflows" class="h-5 w-5 object-contain" />
+                        </div>
+                        <h4 class="mb-2 mt-4 text-[17px] text-[#0f172a]">AI Workflows</h4>
+                        <p class="text-[13.5px] leading-[1.5] text-dim">Optimización del ciclo de diseño mediante IA, automatización de flujos y generación de contenido dinámico.</p>
+                    </div>
+                </div>
+
+                <h2 class="mb-10 block border-b border-hairline pb-3 text-[13px] font-semibold uppercase tracking-[2px] text-[#0f172a]">Tech Stack</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Figma</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Adobe Creative Cloud</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Stitch Gemini</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Figma Make</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Optimal Workshop</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Maze</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Hotjar</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Microsoft Clarity</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Typeform</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">GA4</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Mixpanel</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Tableau</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Power BI</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">GPT-4</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Claude 3.5 Sonnet</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Midjourney</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Notion AI</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Jira</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">HTML5 &amp; CSS3</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Tailwind CSS</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Storybook</span>
                 </div>
             </section>
+        </div>
+    </main>
 
-            <div class="about-grid">
-                <aside class="education-section">
-                    <h2 class="section-label">Education</h2>
-
-                    <div class="edu-item">
-                        <span class="edu-date">NOV 2025</span>
-                        <h3>Capacitación de Inteligencia Artificial y Gestión Empresarial</h3>
-                        <p class="edu-org">UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS (UPC)</p>
-                        <p class="edu-desc">
-                            Análisis profundo sobre el <strong>impacto de la IA</strong> en modelos de negocio modernos,
-                            integrando <strong>ciberseguridad</strong> avanzada y optimización de la <strong>experiencia
-                                de
-                                usuario</strong>
-                            potenciada por IA. Enfoque directo en la identificación de <strong>oportunidades de
-                                mejora</strong> y
-                            estrategias para maximizar la <strong>conversión económica</strong> mediante tecnología de
-                            vanguardia.
-                        </p>
-                        <div class="edu-tags">
-                            <span>AI Impact</span>
-                            <span>Cybersecurity</span>
-                            <span>UX AI</span>
-                            <span>Business ROI</span>
-                        </div>
-                    </div>
-
-                    <div class="edu-item">
-                        <span class="edu-date">DEC 2023</span>
-                        <h3>Graphic Designer Technician</h3>
-                        <p class="edu-org">CIBERTEC</p>
-                        <p class="edu-desc">
-                            Especializado en Diseño de Planes de Negocio, Costos, Fundamentos de Programación,
-                            UX Research, Psicología del Usuario y Fundamentos Visuales para la creación de productos
-                            digitales.
-                        </p>
-                        <div class="edu-tags">
-                            <span>Visual Design</span>
-                            <span>UX Research</span>
-                            <span>Business Plans</span>
-                        </div>
-                    </div>
-
-                    <div class="edu-item">
-                        <span class="edu-date">JUNE 2024</span>
-                        <h3>Professional Certificate in UX Design</h3>
-                        <p class="edu-org">COURSERA (Google)</p>
-                        <div class="edu-tags">
-                            <span>User Research</span>
-                            <span>Prototyping</span>
-                            <span>Design Thinking</span>
-                        </div>
-                    </div>
-
-                    <div class="edu-item">
-                        <span class="edu-date">MAY 2024</span>
-                        <h3>Analítica Digital</h3>
-                        <p class="edu-org">UDEMY</p>
-                        <p class="edu-desc">
-                            Enfoque en la medición de métricas clave, análisis del comportamiento del usuario
-                            en plataformas digitales y estrategias de optimización de embudos de conversión.
-                        </p>
-                        <div class="edu-tags">
-                            <span>Data Analytics</span>
-                            <span>Conversion Rate</span>
-                        </div>
-                    </div>
-                </aside>
-
-                <section class="expertise-section">
-                    <h2 class="section-label">Expertise</h2>
-                    <div class="expertise-grid">
-                        <div class="exp-card">
-                            <div class="card-icon-container">
-                                <img src="../Media/SOBRE MI/Design-icon.svg" alt="Design Systems" class="card-icon">
-                            </div>
-                            <h4>Design Systems</h4>
-                            <p>Construcción y escalamiento de librerías de componentes atómicos. Fomento de la
-                                consistencia
-                                visual y eficiencia en el handoff.</p>
-                        </div>
-                        <div class="exp-card">
-                            <div class="card-icon-container">
-                                <img src="../Media/SOBRE MI/data-icon.svg" alt="Data Analysis" class="card-icon">
-                            </div>
-                            <h4>Data Analysis</h4>
-                            <p>Interpretación de KPIs para la toma de decisiones. Análisis cualitativo y cuantitativo
-                                para
-                                optimización de productos.</p>
-                        </div>
-                        <div class="exp-card">
-                            <div class="card-icon-container">
-                                <img src="../Media/SOBRE MI/ux-research.svg" alt="UX Research" class="card-icon">
-                            </div>
-                            <h4>UX Research</h4>
-                            <p>Liderazgo en fases de descubrimiento, entrevistas a usuarios, pruebas de usabilidad y
-                                auditorías heurísticas.</p>
-                        </div>
-                        <div class="exp-card">
-                            <div class="card-icon-container">
-                                <img src="../Media/SOBRE MI/ia-icon.svg" alt="AI Workflows" class="card-icon">
-                            </div>
-                            <h4>AI Workflows</h4>
-                            <p>Optimización del ciclo de diseño mediante IA, automatización de flujos y generación de
-                                contenido dinámico.</p>
-                        </div>
-                    </div>
-
-                    <h2 class="section-label">Tech Stack</h2>
-                    <div class="tech-tags">
-                        <span>Figma</span> <span>Adobe Creative Cloud</span> <span>Stitch Gemini</span> <span>Figma
-                            Make</span>
-                        <span>Optimal Workshop</span> <span>Maze</span> <span>Hotjar</span> <span>Microsoft
-                            Clarity</span>
-                        <span>Typeform</span>
-                        <span>GA4</span> <span>Mixpanel</span> <span>Tableau</span> <span>Power BI</span>
-                        <span>GPT-4</span> <span>Claude 3.5 Sonnet</span> <span>Midjourney</span> <span>Notion AI</span>
-                        <span>Jira</span> <span>HTML5 & CSS3</span> <span>Tailwind CSS</span> <span>Storybook</span>
-                    </div>
-                </section>
-            </div>
-        </main>
-
-        <footer class="carlos-footer">
-            <div class="carlos-footer-container">
-                <div class="footer-left-block">
-                    <div class="footer-brand-header">
-                        <img src="../Media/Home/Footeer-escudo.svg" alt="Escudo" class="footer-shield-icon">
-                        <span class="footer-brand-text">Jose Carlos Meza Portfolio</span>
-                    </div>
-                    <p class="footer-brand-description">
-                        Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de
-                        vanguardia.
-                    </p>
+    <!-- ================= FOOTER ================= -->
+    <footer class="w-full border-t border-[#e9edf2] bg-card py-20">
+        <div class="mx-auto flex w-[90%] max-w-grid flex-col items-center justify-between gap-10 text-center md:flex-row md:items-start md:text-left">
+            <div>
+                <div class="mb-5 flex items-center justify-center gap-3 md:justify-start">
+                    <span class="flex h-7 w-7 items-center justify-center rounded-[9px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                    <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
                 </div>
-
-                <div class="footer-right-block">
-                    <h3 class="footer-cta-text">¿Trabajamos juntos?</h3>
-                    <div class="footer-social-wrapper">
-                        <a href="mailto:tu-correo@gmail.com" class="footer-icon-circle">
-                            <img src="../Media/Home/correo-icono.svg" alt="Email">
-                        </a>
-                        <a href="https://linkedin.com/in/tu-perfil" class="footer-icon-circle">
-                            <img src="../Media/Home/compratir-icono.svg" alt="LinkedIn">
-                        </a>
-                        <a href="#" class="footer-icon-circle">
-                            <img src="../Media/Home/user-icono.svg" alt="Perfil">
-                        </a>
-                    </div>
+                <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
+                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de vanguardia.
+                </p>
+            </div>
+            <div class="text-center md:text-right">
+                <h3 class="mb-6 text-[18px] font-semibold text-[#0f172a]">¿Trabajamos juntos?</h3>
+                <div class="flex justify-center gap-4 md:justify-end">
+                    <a href="mailto:mezasalaman@gmail.com" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/correo-icono.svg" alt="Email" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/compratir-icono.svg" alt="LinkedIn" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
+                    <a href="#" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/Home/user-icono.svg" alt="Perfil" class="h-[18px] w-[18px] opacity-80 group-hover:opacity-100" />
+                    </a>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
+
+    <script src="../assets/site.js"></script>
 </body>
 
 </html>
