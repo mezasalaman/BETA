@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Caso de Estudio | Seller Center";
+const description = "Seller Center — Ecosistema de gestión y ventas que une compradores, talleres y administradores en una sola plataforma.";
+const ogImage = "https://mezasalaman.github.io/BETA/Media/SELLER%20CENTER/portada%20seller.svg";
+---
+<BaseLayout title={title} description={description} ogImage={ogImage}>
+<!-- ================= HERO ================= -->
+    <header class="mx-auto flex w-[90%] max-w-grid flex-col items-center pb-24 pt-10 text-center">
+        <div class="mb-12 inline-flex items-center gap-3 rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[11px] font-bold tracking-[0.15em] text-royal">
+            <span class="h-2 w-2 rounded-full bg-royal"></span>
+            SENIOR PRODUCT DESIGNER STORYTELLING
+        </div>
+
+        <h1 class="title-massive mb-9 font-extrabold uppercase text-[#0f172a]">
+            Seller Center
+            <span class="mt-2 block text-royal">Ecosistema de Gestión y Ventas</span>
+        </h1>
+
+        <p class="mb-14 max-w-[720px] text-[17px] leading-[1.6] text-[#64748b] md:text-[20px]">
+            Diseñé un ecosistema que une compradores, talleres y administradores en una sola plataforma:
+            publicación asistida por IA, booking y ventas centralizados. <strong class="font-semibold text-[#0f172a]">+22% de conversión.</strong>
+        </p>
+
+        <a href="/BETA/seller-case/"
+           class="group inline-flex items-center gap-4 rounded-full bg-royal px-11 py-4 text-[16px] font-bold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(59,113,254,0.3)] md:text-[18px]">
+            Explorar caso de estudio
+            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/icon-arrow.svg" alt="flecha" class="h-5 w-auto brightness-0 invert transition-transform group-hover:translate-x-1" />
+        </a>
+
+        <div class="mx-auto mt-20 w-full max-w-grid overflow-hidden rounded-[32px] border border-[#e9edf2] bg-card shadow-[0_50px_100px_rgba(0,0,0,0.5)]">
+            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SELLER%20CENTER/portada%20seller.svg" alt="Seller Center Interfaces" class="block w-full" />
+        </div>
+    </header>
+
+    <!-- ================= DESAFÍO ================= -->
+    <section class="mx-auto w-[90%] max-w-grid py-20">
+        <h2 class="relative mb-12 pb-6 text-[26px] font-bold text-[#0f172a] sm:text-[32px] after:absolute after:bottom-0 after:left-0 after:h-1 after:w-16 after:bg-royal after:content-['']">El Desafío: Tres Perfiles, Una Brecha</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+            <article class="flex flex-col rounded-[30px] border border-[#edf0f4] bg-card p-8 sm:p-11">
+                <div class="mb-8 flex items-center gap-3">
+                    <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SELLER%20CENTER/problema.svg" alt="error" class="h-[22px] w-[22px]" />
+                    <span class="text-[18px] font-bold text-err">El Problema</span>
+                </div>
+                <p class="mb-9 text-[15px] leading-[1.7] text-[#475569]">
+                    Compradores, talleres y administradores operaban en herramientas desconectadas. La información de
+                    servicios, precios e inventario vivía en procesos manuales, generando pérdida de ventas y datos
+                    duplicados entre los tres perfiles.
+                </p>
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-center gap-3 text-[14px] text-[#64748b]"><span class="text-[18px] font-extrabold text-err">×</span>Inventario desactualizado y duplicado.</li>
+                    <li class="flex items-center gap-3 text-[14px] text-[#64748b]"><span class="text-[18px] font-extrabold text-err">×</span>Sin trazabilidad entre oferta y demanda.</li>
+                </ul>
+            </article>
+
+            <article class="flex flex-col rounded-[30px] border border-[#edf0f4] bg-card p-8 sm:p-11">
+                <div class="mb-8 flex items-center gap-3">
+                    <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SELLER%20CENTER/solucion.svg" alt="success" class="h-[22px] w-[22px]" />
+                    <span class="text-[18px] font-bold text-ok">La Solución</span>
+                </div>
+                <p class="mb-9 text-[15px] leading-[1.7] text-[#475569]">
+                    Un ecosistema unificado que conecta los tres perfiles en una sola interfaz, con publicación
+                    asistida por IA, booking centralizado y seguimiento de ventas automatizado de extremo a extremo.
+                </p>
+                <ul class="flex flex-col gap-4">
+                    <li class="flex items-center gap-3 text-[14px] text-[#334155]"><span class="text-[16px] font-extrabold text-ok">✓</span>Panel único para B2C, B2B y administración.</li>
+                    <li class="flex items-center gap-3 text-[14px] text-[#334155]"><span class="text-[16px] font-extrabold text-ok">✓</span>Edición masiva de inventarios en tiempo real.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- ================= AI PROCESS ================= -->
+    <section class="mx-auto w-[90%] max-w-grid py-12">
+        <div class="mb-14 mt-12 text-center">
+            <h2 class="mb-6 text-[30px] font-bold tracking-[-0.02em] sm:text-[42px]">AI-Driven Process: Acelerando el Workflow</h2>
+            <p class="text-[16px] font-light text-[#64748b] md:text-[18px]">Implementación de herramientas de IA para maximizar la eficiencia creativa y técnica.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+            <article class="group flex flex-col items-center rounded-[24px] border border-[#e9edf2] bg-card px-6 py-12 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-royal/30 hover:bg-panel">
+                <div class="mb-9 flex h-14 w-14 items-center justify-center rounded-[14px] bg-royal/10">
+                    <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/midjourney.svg" alt="mj" class="h-6 w-6" />
+                </div>
+                <h3 class="mb-5 text-[22px] font-bold text-[#0f172a]">Midjourney</h3>
+                <p class="text-[14px] font-light leading-[1.6] text-[#64748b]">Generación de activos visuales complejos y texturas abstractas para el sistema de diseño, manteniendo una estética futurista y profesional.</p>
+            </article>
+            <article class="group flex flex-col items-center rounded-[24px] border border-[#e9edf2] bg-card px-6 py-12 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-royal/30 hover:bg-panel">
+                <div class="mb-9 flex h-14 w-14 items-center justify-center rounded-[14px] bg-royal/10">
+                    <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/chat%20gpt.svg" alt="gpt" class="h-6 w-6" />
+                </div>
+                <h3 class="mb-5 text-[22px] font-bold text-[#0f172a]">ChatGPT</h3>
+                <p class="text-[14px] font-light leading-[1.6] text-[#64748b]">Refinamiento de UX Writing, microcopy y estructuración de la documentación técnica para asegurar claridad en cada punto de contacto.</p>
+            </article>
+            <article class="group flex flex-col items-center rounded-[24px] border border-[#e9edf2] bg-card px-6 py-12 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-royal/30 hover:bg-panel">
+                <div class="mb-9 flex h-14 w-14 items-center justify-center rounded-[14px] bg-royal/10">
+                    <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/claude.svg" alt="claude" class="h-6 w-6" />
+                </div>
+                <h3 class="mb-5 text-[22px] font-bold text-[#0f172a]">Claude AI</h3>
+                <p class="text-[14px] font-light leading-[1.6] text-[#64748b]">Optimización de componentes React y lógica de negocio, reduciendo el tiempo de desarrollo de prototipos funcionales en un 30%.</p>
+            </article>
+            <article class="group flex flex-col items-center rounded-[24px] border border-[#e9edf2] bg-card px-6 py-12 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-royal/30 hover:bg-panel">
+                <div class="mb-9 flex h-14 w-14 items-center justify-center rounded-[14px] bg-royal/10">
+                    <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/stich.svg" alt="gemini" class="h-6 w-6" />
+                </div>
+                <h3 class="mb-5 text-[22px] font-bold text-[#0f172a]">Stitch Gemini</h3>
+                <p class="text-[14px] font-light leading-[1.6] text-[#64748b]">Generación de contenido contextual dinámico y narrativas de usuario complejas, acelerando la creación de activos de alta fidelidad.</p>
+            </article>
+            <article class="group flex flex-col items-center rounded-[24px] border border-[#e9edf2] bg-card px-6 py-12 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-royal/30 hover:bg-panel">
+                <div class="mb-9 flex h-14 w-14 items-center justify-center rounded-[14px] bg-royal/10">
+                    <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/make.svg" alt="figma" class="h-6 w-6" />
+                </div>
+                <h3 class="mb-5 text-[22px] font-bold text-[#0f172a]">Figma Make</h3>
+                <p class="text-[14px] font-light leading-[1.6] text-[#64748b]">Automatización de layouts y escalado de sistemas de diseño, permitiendo entregas técnicas en tiempos récord sin comprometer la calidad.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ================= INTELIGENCIA ESTRATÉGICA ================= -->
+    <section class="mx-auto w-[90%] max-w-grid py-20">
+        <div class="mb-14 flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
+            <div>
+                <h2 class="mb-4 text-[30px] font-bold sm:text-[38px]">Inteligencia Estratégica &amp; Insight de Usuario</h2>
+                <p class="text-[16px] text-[#64748b]">Metodologías de investigación aplicadas a la resolución de problemas en infraestructuras críticas.</p>
+            </div>
+            <div class="flex items-center gap-8">
+                <div class="text-center">
+                    <span class="block text-[32px] font-extrabold text-royal">12</span>
+                    <span class="text-[10px] font-semibold tracking-[0.1em] text-[#94a3b8]">ENTREVISTAS</span>
+                </div>
+                <div class="h-[45px] w-px bg-[#e7ebf1]"></div>
+                <div class="text-center">
+                    <span class="block text-[32px] font-extrabold text-royal">48h</span>
+                    <span class="text-[10px] font-semibold tracking-[0.1em] text-[#94a3b8]">SHADOWING</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+            <!-- User Persona -->
+            <div class="flex flex-col rounded-[30px] border border-[#edf0f4] bg-card p-9 sm:p-11">
+                <div class="mb-8 flex h-12 w-12 items-center justify-center rounded-xl bg-[#f3f5f8]">
+                    <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SELLER%20CENTER/PERsona.svg" alt="persona" class="h-6 w-6" />
+                </div>
+                <h3 class="mb-4 text-[22px] font-semibold">User Persona</h3>
+                <p class="mb-8 text-[14px] leading-[1.5] text-[#64748b]">Operadores de monitoreo que gestionan más de 50 flotas simultáneamente.</p>
+                <div class="mb-2 h-1.5 rounded-full bg-[#f3f5f8]">
+                    <div class="h-full rounded-full bg-royal shadow-[0_0_15px_rgba(59,113,254,0.3)]" style="width:75%"></div>
+                </div>
+                <span class="text-[10px] font-bold text-[#94a3b8]">FATIGA COGNITIVA</span>
+            </div>
+
+            <!-- Journey Map -->
+            <div class="flex flex-col rounded-[30px] border border-[#edf0f4] bg-card p-9 sm:p-11">
+                <div class="mb-8 flex h-12 w-12 items-center justify-center rounded-xl bg-[#f3f5f8]">
+                    <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/journymap.svg" alt="journey" class="h-6 w-6" />
+                </div>
+                <h3 class="mb-4 text-[22px] font-semibold">Journey Map</h3>
+                <p class="mb-8 text-[14px] leading-[1.5] text-[#64748b]">Identificación de puntos de fricción durante alertas de seguridad crítica.</p>
+                <div class="flex gap-2">
+                    <div class="h-1 flex-1 rounded-full bg-royal"></div>
+                    <div class="h-1 flex-1 rounded-full bg-royal"></div>
+                    <div class="h-1 flex-1 rounded-full bg-err"></div>
+                    <div class="h-1 flex-1 rounded-full bg-[#e7ebf1]"></div>
+                </div>
+            </div>
+
+            <!-- Card Sorting -->
+            <div class="flex flex-col rounded-[30px] border border-[#edf0f4] bg-card p-9 sm:p-11">
+                <div class="mb-8 flex h-12 w-12 items-center justify-center rounded-xl bg-[#f3f5f8]">
+                    <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SELLER%20CENTER/card%20sorting.svg" alt="sorting" class="h-6 w-6" />
+                </div>
+                <h3 class="mb-4 text-[22px] font-semibold">Card Sorting</h3>
+                <p class="mb-8 text-[14px] leading-[1.5] text-[#64748b]">Restructuración de la arquitectura de información para acceso rápido.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="rounded-md bg-royal/10 px-3 py-1.5 text-[10px] font-bold text-royal">ALERTA</span>
+                    <span class="rounded-md bg-royal/10 px-3 py-1.5 text-[10px] font-bold text-royal">MAPA</span>
+                    <span class="rounded-md bg-royal/10 px-3 py-1.5 text-[10px] font-bold text-royal">HISTORIAL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= DATA DRIVEN ================= -->
+    <section class="mx-auto w-[90%] max-w-grid">
+        <div class="grid grid-cols-1 items-center gap-16 py-20 lg:grid-cols-[1fr_1.2fr]">
+            <div class="flex flex-col gap-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex flex-col justify-center gap-2 rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 text-center">
+                        <span class="text-[22px] font-extrabold tracking-[-0.02em] text-royal">GA4</span>
+                        <span class="text-[9px] font-bold uppercase tracking-[0.15em] text-[#94a3b8]">EVENT TRACKING</span>
+                    </div>
+                    <div class="flex flex-col justify-center gap-2 rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 text-center">
+                        <span class="text-[22px] font-extrabold tracking-[-0.02em] text-royal">Hotjar</span>
+                        <span class="text-[9px] font-bold uppercase tracking-[0.15em] text-[#94a3b8]">HEATMAPS</span>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center gap-2 rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 text-center">
+                    <span class="text-[22px] font-extrabold tracking-[-0.02em] text-royal">Mixpanel</span>
+                    <span class="text-[9px] font-bold uppercase tracking-[0.15em] text-[#94a3b8]">BEHAVIORAL ANALYTICS</span>
+                </div>
+            </div>
+
+            <div class="text-center lg:text-left">
+                <h2 class="mb-8 text-[32px] font-bold tracking-[-0.02em] sm:text-[48px]">Data-Driven Optimization</h2>
+                <p class="mb-12 text-[16px] leading-[1.6] text-[#64748b] md:text-[18px]">
+                    Validamos cada decisión de diseño mediante un stack analítico robusto.
+                    Utilizamos <strong class="font-semibold text-[#0f172a]">GA4, Hotjar y Mixpanel</strong> para monitorizar el comportamiento real
+                    de los operadores, identificando cuellos de botella críticos en el dashboard
+                    de monitoreo y optimizando flujos mediante evidencia empírica.
+                </p>
+                <div class="flex flex-col items-center gap-6 sm:flex-row lg:justify-start">
+                    <div class="flex gap-2">
+                        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-royal text-[13px] font-bold text-[#ffffff] shadow-[0_0_20px_rgba(59,113,254,0.2)]">1</span>
+                        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-royal text-[13px] font-bold text-[#ffffff] shadow-[0_0_20px_rgba(59,113,254,0.2)]">2</span>
+                        <span class="flex h-8 w-8 items-center justify-center rounded-full bg-royal text-[13px] font-bold text-[#ffffff] shadow-[0_0_20px_rgba(59,113,254,0.2)]">3</span>
+                    </div>
+                    <span class="text-[16px] font-semibold text-[#0f172a]">Ciclo continuo de iteración basado en datos.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MOCKUP FINAL ================= -->
+    <section class="mx-auto flex w-[90%] max-w-grid flex-col items-center pb-32 pt-20 text-center">
+        <div class="mb-16 max-w-[800px]">
+            <span class="mb-8 block text-[12px] font-bold uppercase tracking-[0.15em] text-royal">THE SOLUTION</span>
+            <h2 class="mb-8 text-[32px] font-bold leading-[1.1] text-[#0f172a] sm:text-[48px]">Tres perfiles.<br />Una plataforma.</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">Gestión unificada</span>
+                <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">Booking centralizado</span>
+                <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">Automatización de ventas</span>
+            </div>
+        </div>
+        <div class="mx-auto flex w-full max-w-grid items-center justify-center overflow-hidden rounded-[32px] border border-[#e9edf2] bg-card shadow-showcase">
+            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SELLER%20CENTER/mockup.svg" alt="Final Solution Interfaces" class="block w-full object-contain" />
+        </div>
+    </section>
+
+    <!-- ================= NAV PROYECTOS ================= -->
+    <section class="mx-auto mb-4 w-[90%] max-w-grid border-t border-[#e9edf2] pt-10">
+        <div class="flex items-center justify-between gap-4">
+            <a href="/BETA/#proyectos" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="transition-transform group-hover:-translate-x-1">←</span>
+                <span class="text-[14px]">Todos los proyectos</span>
+            </a>
+            <a href="/BETA/conduzko/" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="text-[14px]">Siguiente: <span class="font-semibold text-[#0f172a]">ConDuzko</span></span>
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+        </div>
+    </section>
+</BaseLayout>

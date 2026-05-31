@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mezasalaman.github.io/BETA/sitemap-index.xml

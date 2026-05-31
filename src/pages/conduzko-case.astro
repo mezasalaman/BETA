@@ -1,0 +1,317 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Caso de Estudio | ConDuzko";
+const description = "ConDuzko — caso de estudio profundo: rediseño de 3 perfiles (usuario, vendedor, admin), IA integrada, funnel de ventas y front-end con Claude Design.";
+const ogImage = "https://mezasalaman.github.io/BETA/assets/conduzko/dashboard.png";
+---
+<BaseLayout title={title} description={description} ogImage={ogImage}>
+<main class="pt-10">
+        <!-- ================= HERO ================= -->
+        <header class="mx-auto w-[90%] max-w-grid">
+            <span class="mb-10 inline-block rounded-full border border-electric/30 bg-electric/10 px-8 py-3 text-[10px] font-bold tracking-[0.1em] text-electric">CASE STUDY DEEP DIVE</span>
+            <h1 class="mb-10 text-[42px] font-bold leading-[1.1] tracking-[-0.03em] sm:text-[60px] lg:text-[78px]">
+                ConDuzko: confianza<br />
+                diseñada en cada <span class="text-electric">flujo</span>
+            </h1>
+            <p class="max-w-[640px] text-[16px] leading-[1.6] text-[#475569] md:text-[18px]">
+                Cómo transformé un marketplace de autos sin base de UX en un ecosistema coherente de tres
+                perfiles, con IA integrada y front-end producido con Claude Design.
+            </p>
+        </header>
+
+        <!-- ================= ROL & IMPACTO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <div class="mb-10 mt-12">
+                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">ROL &amp; IMPACTO</span>
+                <p class="max-w-[980px] text-[17px] font-light leading-[1.6] text-[#475569] sm:text-[20px]">Lideré el rediseño de los tres entornos del producto. Estas son las métricas que dejé instrumentadas como entregable para medir el proceso comercial.</p>
+            </div>
+            <div class="mb-6 grid grid-cols-2 gap-6 rounded-[24px] border border-[#e9edf2] bg-card p-8 lg:grid-cols-4 sm:p-10">
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">MI ROL</span><p class="text-[16px] font-semibold text-[#0f172a]">Product Designer · IA</p><p class="mt-0.5 text-[12px] text-dim">UX · UI · Front-end · IA</p></div>
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">PERFILES</span><p class="text-[16px] font-semibold text-[#0f172a]">3 entornos</p><p class="mt-0.5 text-[12px] text-dim">Usuario · Vendedor · Admin</p></div>
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">SUPERFICIES</span><p class="text-[16px] font-semibold text-[#0f172a]">Web + Mobile</p><p class="mt-0.5 text-[12px] text-dim">Catálogo · Wizard · Dashboard</p></div>
+                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">HERRAMIENTAS</span><p class="text-[16px] font-semibold text-[#0f172a]">Claude Design · Figma</p><p class="mt-0.5 text-[12px] text-dim">+ IA generativa</p></div>
+            </div>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">14.6%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Conversión de ventas</p><p class="mt-1 text-[12px] leading-snug text-dim">Funnel del dashboard de vendedor</p></div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline gap-2"><span class="text-[16px] font-medium text-[#94a3b8] line-through">20d</span><span class="text-[15px] text-[#94a3b8]">→</span><span class="text-[34px] font-bold leading-none text-electric">18d</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Cierre promedio</p><p class="mt-1 text-[12px] leading-snug text-dim">−2 días vs. periodo anterior</p></div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">248</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Vehículos publicados</p><p class="mt-1 text-[12px] leading-snug text-dim">+12.5% vs. semana anterior</p></div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">3 perfiles</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Rediseñados end-to-end</p><p class="mt-1 text-[12px] leading-snug text-dim">Bajo un mismo design system</p></div>
+            </div>
+            <p class="mt-5 text-[12px] text-dim">Métricas instrumentadas en el dashboard del producto. Valores referenciales del periodo medido — ajustables a tus datos finales.</p>
+        </section>
+
+        <!-- ================= EL DESAFÍO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-16">
+            <div class="mb-12">
+                <h2 class="mb-4 text-[28px] font-bold sm:text-[32px]">El Desafío: un producto sin base de UX</h2>
+                <div class="h-1 w-16 rounded bg-electric"></div>
+            </div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div class="flex flex-col rounded-[30px] border border-[#e9edf2] bg-card p-8 sm:p-11">
+                    <div class="mb-8 flex items-center gap-3"><span class="text-[18px] font-bold text-err">El Problema</span></div>
+                    <p class="mb-9 text-[15px] leading-[1.7] text-[#475569]">El cliente había construido el producto sin experiencia en flujos de UX. Las pantallas de compra, venta y administración no compartían lógica ni lenguaje visual, generando confusión y trabajo manual.</p>
+                    <ul class="status-cross flex flex-col gap-4 text-[14px] text-[#475569]">
+                        <li>Flujos fragmentados entre los 3 perfiles.</li>
+                        <li>Arquitectura e interfaz inconsistentes.</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col rounded-[30px] border border-[#e9edf2] bg-card p-8 sm:p-11">
+                    <div class="mb-8 flex items-center gap-3"><span class="text-[18px] font-bold text-ok">La Solución</span></div>
+                    <p class="mb-9 text-[15px] leading-[1.7] text-[#475569]">Un sistema de diseño único, flujos simplificados y validados, y la integración de IA en los momentos de mayor valor — entregando código listo para desarrollo con Claude Design.</p>
+                    <ul class="status-check flex flex-col gap-4 text-[14px] text-[#0f172a]">
+                        <li>Design system común a los 3 entornos.</li>
+                        <li>IA: cotizador, validación y asistente Duzko.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROCESO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-16">
+            <div class="mb-12">
+                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">PROCESO &amp; RESEARCH</span>
+                <h2 class="mb-4 text-[28px] font-bold tracking-[-0.01em] sm:text-[34px]">Del concesionario real al handoff</h2>
+                <p class="max-w-[820px] text-[15px] leading-[1.6] text-[#475569] md:text-[17px]">Entrevisté a <strong class="font-semibold text-[#0f172a]">más de 20 concesionarias</strong> para entender cómo compran, venden y gestionan sus autos en la realidad. Con esos insights definí un proceso claro: primero planifico, diseño en Stitch, refino y construyo los flujos en Figma, y recién paso a Claude Design para un handoff apropiado al equipo de desarrollo.</p>
+            </div>
+
+            <div class="mb-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+                <div class="rounded-[18px] border border-[#e9edf2] bg-card p-6">
+                    <span class="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 text-[13px] font-bold text-electric">1</span>
+                    <h3 class="mb-1.5 text-[16px] font-semibold">Planificación</h3>
+                    <p class="text-[13px] leading-[1.55] text-[#475569]">Insights de +20 concesionarias → objetivos, alcance y arquitectura.</p>
+                </div>
+                <div class="rounded-[18px] border border-[#e9edf2] bg-card p-6">
+                    <span class="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 text-[13px] font-bold text-electric">2</span>
+                    <h3 class="mb-1.5 text-[16px] font-semibold">Stitch · Diseño IA</h3>
+                    <p class="text-[13px] leading-[1.55] text-[#475569]">Exploración rápida de pantallas y design system asistido por IA.</p>
+                </div>
+                <div class="rounded-[18px] border border-[#e9edf2] bg-card p-6">
+                    <span class="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 text-[13px] font-bold text-electric">3</span>
+                    <h3 class="mb-1.5 text-[16px] font-semibold">Figma · Flujos</h3>
+                    <p class="text-[13px] leading-[1.55] text-[#475569]">Refinamiento, prototipado y construcción de los flujos completos.</p>
+                </div>
+                <div class="rounded-[18px] border border-electric/40 bg-electric/5 p-6">
+                    <span class="mb-3 flex h-8 w-8 items-center justify-center rounded-full bg-electric text-[13px] font-bold text-[#ffffff]">4</span>
+                    <h3 class="mb-1.5 text-[16px] font-semibold">Claude Design · Handoff</h3>
+                    <p class="text-[13px] leading-[1.55] text-[#475569]">De diseño a código listo para desarrollo, con handoff apropiado.</p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card shadow-showcase">
+                <img loading="lazy" src="/BETA/assets/conduzko/stitch.png" alt="ConDuzko en Stitch — exploración de pantallas y design system con IA" class="block w-full" />
+            </div>
+        </section>
+
+
+        <!-- ================= METODOLOGÍA KANBAN ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-16">
+            <div class="mb-10">
+                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">METODOLOGÍA · KANBAN</span>
+                <h2 class="mb-4 text-[28px] font-bold tracking-[-0.01em] sm:text-[34px]">Un flujo continuo, de punta a punta</h2>
+                <p class="max-w-[820px] text-[15px] leading-[1.6] text-[#475569] md:text-[17px]">Trabajamos con tablero <strong class="font-semibold text-[#0f172a]">Kanban</strong> en ciclos cortos. Fui parte clave del flujo: prioricé el backlog, entrevisté a los usuarios, facilité las validaciones y, sobre todo, me encargué del <strong class="font-semibold text-[#0f172a]">handoff</strong> a desarrollo.</p>
+            </div>
+            <div class="-mx-2 flex gap-4 overflow-x-auto px-2 pb-2">
+                <div class="flex w-full shrink-0 flex-col gap-3 rounded-[16px] bg-[#f4f7fb] p-4 sm:w-[220px]"><div class="mb-1 flex items-center justify-between"><span class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#475569]"><span class="h-2 w-2 rounded-full bg-[#94a3b8]"></span>Backlog</span><span class="rounded-full bg-white px-2 py-0.5 text-[11px] font-bold text-[#94a3b8]">2</span></div><div class="hover:-translate-y-1 rounded-[12px] border border-[#e9edf2] bg-white p-3.5 transition-all"><p class="text-[13px] font-medium leading-snug text-[#0f172a]">Research a +20 concesionarias</p><span class="mt-2 inline-block rounded-md bg-[#eff4ff] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">Research</span></div><div class="hover:-translate-y-1 rounded-[12px] border border-[#e9edf2] bg-white p-3.5 transition-all"><p class="text-[13px] font-medium leading-snug text-[#0f172a]">Mapa de flujos y arquitectura</p><span class="mt-2 inline-block rounded-md bg-[#eff4ff] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">Discovery</span></div></div>
+                <div class="flex w-full shrink-0 flex-col gap-3 rounded-[16px] bg-[#f4f7fb] p-4 sm:w-[220px]"><div class="mb-1 flex items-center justify-between"><span class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#475569]"><span class="h-2 w-2 rounded-full bg-primary"></span>En diseño</span><span class="rounded-full bg-white px-2 py-0.5 text-[11px] font-bold text-[#94a3b8]">2</span></div><div class="hover:-translate-y-1 rounded-[12px] border border-[#e9edf2] bg-white p-3.5 transition-all"><p class="text-[13px] font-medium leading-snug text-[#0f172a]">Wizard de venta (5 pasos)</p><span class="mt-2 inline-block rounded-md bg-[#eff4ff] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">UX</span></div><div class="hover:-translate-y-1 rounded-[12px] border border-[#e9edf2] bg-white p-3.5 transition-all"><p class="text-[13px] font-medium leading-snug text-[#0f172a]">Dashboard de vendedor</p><span class="mt-2 inline-block rounded-md bg-[#eff4ff] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">UI</span></div></div>
+                <div class="flex w-full shrink-0 flex-col gap-3 rounded-[16px] bg-[#f4f7fb] p-4 sm:w-[220px]"><div class="mb-1 flex items-center justify-between"><span class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#475569]"><span class="h-2 w-2 rounded-full bg-warning"></span>Validación</span><span class="rounded-full bg-white px-2 py-0.5 text-[11px] font-bold text-[#94a3b8]">1</span></div><div class="hover:-translate-y-1 rounded-[12px] border border-[#e9edf2] bg-white p-3.5 transition-all"><p class="text-[13px] font-medium leading-snug text-[#0f172a]">Pruebas de usabilidad</p><span class="mt-2 inline-block rounded-md bg-[#eff4ff] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">Testing</span></div></div>
+                <div class="flex w-full shrink-0 flex-col gap-3 rounded-[16px] border-2 border-primary/30 bg-[#eff4ff] p-4 sm:w-[220px]"><div class="mb-1 flex items-center justify-between"><span class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.08em] text-primary"><span class="pulse-dot h-2 w-2 rounded-full bg-primary"></span>Handoff</span><span class="rounded-full bg-white px-2 py-0.5 text-[11px] font-bold text-primary">1</span></div><div class="hover:-translate-y-1 rounded-[12px] border border-[#e9edf2] bg-white p-3.5 transition-all"><p class="text-[13px] font-medium leading-snug text-[#0f172a]">Componentes con Claude Design</p><span class="mt-2 inline-block rounded-md bg-[#eff4ff] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">React/CSS</span></div></div>
+                <div class="flex w-full shrink-0 flex-col gap-3 rounded-[16px] bg-[#f4f7fb] p-4 sm:w-[220px]"><div class="mb-1 flex items-center justify-between"><span class="flex items-center gap-2 text-[12px] font-bold uppercase tracking-[0.08em] text-[#475569]"><span class="h-2 w-2 rounded-full bg-ok"></span>Hecho</span><span class="rounded-full bg-white px-2 py-0.5 text-[11px] font-bold text-[#94a3b8]">2</span></div><div class="hover:-translate-y-1 rounded-[12px] border border-[#e9edf2] bg-white p-3.5 transition-all"><p class="text-[13px] font-medium leading-snug text-[#0f172a]">Catálogo + detalle</p><span class="mt-2 inline-block rounded-md bg-[#eff4ff] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">Live</span></div><div class="hover:-translate-y-1 rounded-[12px] border border-[#e9edf2] bg-white p-3.5 transition-all"><p class="text-[13px] font-medium leading-snug text-[#0f172a]">Panel administrativo</p><span class="mt-2 inline-block rounded-md bg-[#eff4ff] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">Live</span></div></div>
+            </div>
+        </section>
+
+        <!-- ================= MI CONTRIBUCIÓN ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-16">
+            <div class="mb-10"><span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">MI CONTRIBUCIÓN</span><h2 class="text-[28px] font-bold tracking-[-0.01em] sm:text-[34px]">Dónde aporté valor</h2></div>
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+                <div class="hover:-translate-y-1 rounded-[20px] border border-[#e9edf2] bg-card p-7 transition-all"><span class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#eff4ff] text-primary"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></span><span class="block text-[26px] font-extrabold leading-none text-[#0f172a]" data-count="20" data-suffix="+">20+</span><h3 class="mt-2 mb-1 text-[15px] font-semibold text-[#0f172a]">Entrevistas</h3><p class="text-[13px] leading-[1.55] text-[#475569]">A concesionarias para entender el flujo real de compra-venta.</p></div>
+                <div class="hover:-translate-y-1 rounded-[20px] border border-[#e9edf2] bg-card p-7 transition-all"><span class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#eff4ff] text-primary"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><span class="block text-[26px] font-extrabold leading-none text-[#0f172a]">Facilitación</span><h3 class="mt-2 mb-1 text-[15px] font-semibold text-[#0f172a]">Validaciones</h3><p class="text-[13px] leading-[1.55] text-[#475569]">Sesiones con usuarios y stakeholders para validar decisiones.</p></div>
+                <div class="hover:-translate-y-1 rounded-[20px] border border-[#e9edf2] bg-card p-7 transition-all"><span class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-[#eff4ff] text-primary"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1-6.3-4.6L5.7 21l2.3-7.1-6-4.5h7.6z"></path></svg></span><span class="block text-[26px] font-extrabold leading-none text-[#0f172a]" data-count="3" data-suffix=" perfiles">3 perfiles</span><h3 class="mt-2 mb-1 text-[15px] font-semibold text-[#0f172a]">Diseño &amp; IA</h3><p class="text-[13px] leading-[1.55] text-[#475569]">Usuario, vendedor y admin bajo un mismo design system.</p></div>
+                <div class="hover:-translate-y-1 rounded-[20px] border-2 border-primary/30 bg-[#eff4ff] p-7 transition-all"><span class="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path></svg></span><span class="block text-[26px] font-extrabold leading-none text-primary" data-count="40" data-prefix="−" data-suffix="%">−40%</span><h3 class="mt-2 mb-1 text-[15px] font-semibold text-[#0f172a]">Handoff</h3><p class="text-[13px] leading-[1.55] text-[#475569]">Menos tiempo de diseño a desarrollo con Claude Design.</p></div>
+            </div>
+        </section>
+
+        <!-- ================= FUNNEL ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-16">
+            <!-- Fila 1: título + texto | imagen -->
+            <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
+                <div>
+                    <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">MEDICIÓN DEL PROCESO</span>
+                    <h2 class="mb-6 text-[30px] font-bold tracking-[-0.02em] sm:text-[40px]">Un funnel para decidir con datos</h2>
+                    <p class="text-[15px] leading-[1.6] text-[#475569] md:text-[17px]">Diseñé el dashboard del vendedor para hacer visible cada etapa del proceso comercial y detectar dónde se pierde la conversión.</p>
+                </div>
+                <div class="overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card shadow-showcase">
+                    <img loading="lazy" src="/BETA/assets/conduzko/dashboard.png" alt="Dashboard de vendedor — funnel de ventas y compras" class="block w-full" />
+                </div>
+            </div>
+
+            <!-- Fila 2: barras del funnel a lo ancho -->
+            <div class="mt-14 rounded-[24px] border border-[#e9edf2] bg-card p-8 sm:p-10">
+                <div class="grid grid-cols-1 gap-x-12 gap-y-5 md:grid-cols-2">
+                    <div>
+                        <div class="mb-2 flex items-baseline justify-between"><span class="text-[13.5px] font-medium text-[#0f172a]">Publicados <span class="text-[#94a3b8]">· 240</span></span><span class="text-[15px] font-bold text-electric">100%</span></div>
+                        <div class="h-8 w-full overflow-hidden rounded-full bg-[#eff4ff]"><div class="h-full rounded-full bg-primary" style="width:100%"></div></div>
+                    </div>
+                    <div>
+                        <div class="mb-2 flex items-baseline justify-between"><span class="text-[13.5px] font-medium text-[#0f172a]">Contactados <span class="text-[#94a3b8]">· 160</span></span><span class="text-[15px] font-bold text-electric">67.8%</span></div>
+                        <div class="h-8 w-full overflow-hidden rounded-full bg-[#eff4ff]"><div class="h-full rounded-full bg-primary" style="width:67.8%"></div></div>
+                    </div>
+                    <div>
+                        <div class="mb-2 flex items-baseline justify-between"><span class="text-[13.5px] font-medium text-[#0f172a]">Negociación <span class="text-[#94a3b8]">· 78</span></span><span class="text-[15px] font-bold text-electric">45.3%</span></div>
+                        <div class="h-8 w-full overflow-hidden rounded-full bg-[#eff4ff]"><div class="h-full rounded-full bg-primary" style="width:45.3%"></div></div>
+                    </div>
+                    <div>
+                        <div class="mb-2 flex items-baseline justify-between"><span class="text-[13.5px] font-semibold text-[#0f172a]">Vendidos <span class="text-[#94a3b8]">· 41</span></span><span class="text-[15px] font-extrabold text-electric">21.3%</span></div>
+                        <div class="h-8 w-full overflow-hidden rounded-full bg-[#eff4ff]"><div class="h-full rounded-full bg-gradient-to-r from-primary to-[#1e3a8a] shadow-[0_2px_10px_rgba(37,99,235,0.35)]" style="width:21.3%"></div></div>
+                    </div>
+                </div>
+                <div class="mt-6 flex items-center gap-2 rounded-[12px] bg-[#eff4ff] px-4 py-3">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"></path></svg>
+                    <span class="text-[12.5px] text-[#475569]"><strong class="font-semibold text-[#0f172a]">−78.7%</strong> de caída total — el mayor drop ocurre en <strong class="font-semibold text-[#0f172a]">Negociación → Vendidos</strong>.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= IA & CLAUDE DESIGN ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-16 text-center">
+            <div class="mb-14">
+                <h2 class="mb-4 text-[32px] font-bold tracking-[-0.02em] sm:text-[42px]">IA &amp; Claude Design Workflow</h2>
+                <p class="mx-auto max-w-[700px] text-[16px] leading-[1.6] text-[#475569]">Integré IA en el producto y aceleré la producción de interfaces de diseño a código.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-9 text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/30">
+                    <h3 class="mb-3 text-[20px] font-semibold">Cotizador inteligente</h3>
+                    <p class="text-[14px] leading-[1.6] text-[#475569]">Sugiere precio (Oportunidad / Fast / Premium) según balance precio-velocidad y demanda potencial.</p>
+                </div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-9 text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/30">
+                    <h3 class="mb-3 text-[20px] font-semibold">Validación 100 puntos</h3>
+                    <p class="text-[14px] leading-[1.6] text-[#475569]">Sello de confianza que certifica el vehículo y lo mantiene publicado hasta vender.</p>
+                </div>
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-9 text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-electric/30">
+                    <h3 class="mb-3 text-[20px] font-semibold">Front-end con Claude</h3>
+                    <p class="text-[14px] leading-[1.6] text-[#475569]">De diseño a componentes en React/HTML/CSS listos para desarrollo, recortando el handoff a días.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ================= HANDOFF ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-16">
+            <div class="mb-12">
+                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">HANDOFF A DESARROLLO</span>
+                <h2 class="mb-4 text-[30px] font-bold tracking-[-0.01em] sm:text-[40px]">Handoff impecable, de diseño a código</h2>
+                <p class="max-w-[820px] text-[15px] leading-[1.6] text-[#475569] md:text-[17px]">Mi foco principal fue entregar interfaces listas para desarrollo con <strong class="font-semibold text-[#0f172a]">Claude Design</strong>: componentes y estados documentados que recortaron el ciclo de semanas a días.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+                <!-- Reducción de tiempo -->
+                <div class="flex flex-col justify-center rounded-[20px] border border-[#e9edf2] bg-card p-8 sm:p-10">
+                    <span class="mb-6 text-[12px] font-bold uppercase tracking-[0.12em] text-[#475569]">Ciclo de handoff</span>
+                    <div class="flex items-center gap-6">
+                        <div><span class="block text-[15px] font-medium text-[#94a3b8] line-through">4 semanas</span><span class="mt-1 block text-[11px] font-semibold uppercase tracking-wide text-[#94a3b8]">Antes</span></div>
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                        <div><span class="block text-[40px] font-extrabold leading-none text-primary" data-count="3" data-suffix=" días">3 días</span><span class="mt-1 block text-[11px] font-semibold uppercase tracking-wide text-primary">Ahora</span></div>
+                    </div>
+                    <div class="mt-7 inline-flex w-fit items-center gap-2 rounded-full bg-[#eff4ff] px-4 py-2 text-[13px] font-semibold text-primary">−40% del tiempo de handoff</div>
+                </div>
+                <!-- Qué entregué -->
+                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-8 sm:p-10">
+                    <h3 class="mb-6 text-[12px] font-bold uppercase tracking-[0.12em] text-[#475569]">Qué entregué</h3>
+                    <ul class="grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+                        <li class="flex items-start gap-3 text-[14px] text-[#0f172a]"><svg class="mt-0.5 shrink-0 text-ok" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span>Componentes en React / HTML / CSS / Tailwind</span></li>
+                        <li class="flex items-start gap-3 text-[14px] text-[#0f172a]"><svg class="mt-0.5 shrink-0 text-ok" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span>Tokens y design system reutilizable</span></li>
+                        <li class="flex items-start gap-3 text-[14px] text-[#0f172a]"><svg class="mt-0.5 shrink-0 text-ok" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span>Estados, validaciones y casos borde</span></li>
+                        <li class="flex items-start gap-3 text-[14px] text-[#0f172a]"><svg class="mt-0.5 shrink-0 text-ok" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg><span>Specs claras para QA e Ingeniería</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= INSTRUMENTACIÓN GA4 ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-16">
+            <div class="mb-12 max-w-[820px]">
+                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">IA CREATIVE · CLAUDE DESIGN</span>
+                <h2 class="mb-4 text-[28px] font-bold tracking-[-0.01em] sm:text-[34px]">Mapas de medición diseñados con IA</h2>
+                <p class="text-[15px] leading-[1.6] text-[#475569] md:text-[17px]">Como entregable, dejé instrumentado cada flujo crítico en GA4: estados, eventos y parámetros para medir conversión y fricción paso a paso. Los mapeé y maqueté con Claude Design. Haz clic para verlos en grande.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
+                <a href="/BETA/assets/conduzko/ga4-registro.png" target="_blank" rel="noopener" class="group relative flex flex-col overflow-hidden rounded-[22px] border border-[#dbe4ff] bg-gradient-to-b from-white to-[#eff4ff] transition-all duration-300 hover:-translate-y-1.5">
+                    <div class="relative overflow-hidden">
+                        <img loading="lazy" src="/BETA/assets/conduzko/ga4-registro.png" alt="Mapa de estados GA4 — registro de vehículo (concesionaria)" class="block h-[210px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.05]" />
+                        <span class="absolute left-4 top-4 rounded-full bg-primary px-3 py-1 text-[11px] font-bold text-[#ffffff] shadow-[0_4px_12px_rgba(37,99,235,0.35)]">7 estados</span>
+                        <span class="absolute inset-0 bg-gradient-to-t from-[#0a1f4d]/55 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+                        <span class="absolute bottom-4 right-4 flex translate-y-2 items-center gap-1.5 rounded-full bg-white/95 px-3.5 py-1.5 text-[12px] font-semibold text-primary opacity-0 shadow-drop transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M21 3l-7 7M9 21H3v-6M3 21l7-7"></path></svg>Ampliar</span>
+                    </div>
+                    <div class="flex items-start gap-3 p-7">
+                        <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#eff4ff] text-primary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg></span>
+                        <div><h3 class="mb-1 text-[17px] font-semibold text-[#0f172a]">Registro de vehículo</h3><p class="text-[13px] leading-[1.6] text-[#475569]">7 estados · eventos de formulario, características y publicación.</p></div>
+                    </div>
+                </a>
+                <a href="/BETA/assets/conduzko/ga4-cita.png" target="_blank" rel="noopener" class="group relative flex flex-col overflow-hidden rounded-[22px] border border-[#dbe4ff] bg-gradient-to-b from-white to-[#eff4ff] transition-all duration-300 hover:-translate-y-1.5">
+                    <div class="relative overflow-hidden">
+                        <img loading="lazy" src="/BETA/assets/conduzko/ga4-cita.png" alt="Mapa de estados GA4 — agendar cita desde catálogo" class="block h-[210px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.05]" />
+                        <span class="absolute left-4 top-4 rounded-full bg-primary px-3 py-1 text-[11px] font-bold text-[#ffffff] shadow-[0_4px_12px_rgba(37,99,235,0.35)]">6 estados</span>
+                        <span class="absolute inset-0 bg-gradient-to-t from-[#0a1f4d]/55 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+                        <span class="absolute bottom-4 right-4 flex translate-y-2 items-center gap-1.5 rounded-full bg-white/95 px-3.5 py-1.5 text-[12px] font-semibold text-primary opacity-0 shadow-drop transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M21 3l-7 7M9 21H3v-6M3 21l7-7"></path></svg>Ampliar</span>
+                    </div>
+                    <div class="flex items-start gap-3 p-7">
+                        <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#eff4ff] text-primary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="16" rx="2"></rect><path d="M4 9h16M8 3v4M16 3v4"></path></svg></span>
+                        <div><h3 class="mb-1 text-[17px] font-semibold text-[#0f172a]">Agendar cita</h3><p class="text-[13px] leading-[1.6] text-[#475569]">Del card al éxito de la visita, con la fricción del formulario.</p></div>
+                    </div>
+                </a>
+                <a href="/BETA/assets/conduzko/ga4-verificacion.png" target="_blank" rel="noopener" class="group relative flex flex-col overflow-hidden rounded-[22px] border border-[#dbe4ff] bg-gradient-to-b from-white to-[#eff4ff] transition-all duration-300 hover:-translate-y-1.5">
+                    <div class="relative overflow-hidden">
+                        <img loading="lazy" src="/BETA/assets/conduzko/ga4-verificacion.png" alt="Mapa de estados GA4 — verificación ConDuzko premium" class="block h-[210px] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.05]" />
+                        <span class="absolute left-4 top-4 rounded-full bg-primary px-3 py-1 text-[11px] font-bold text-[#ffffff] shadow-[0_4px_12px_rgba(37,99,235,0.35)]">9 estados</span>
+                        <span class="absolute inset-0 bg-gradient-to-t from-[#0a1f4d]/55 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></span>
+                        <span class="absolute bottom-4 right-4 flex translate-y-2 items-center gap-1.5 rounded-full bg-white/95 px-3.5 py-1.5 text-[12px] font-semibold text-primary opacity-0 shadow-drop transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M21 3l-7 7M9 21H3v-6M3 21l7-7"></path></svg>Ampliar</span>
+                    </div>
+                    <div class="flex items-start gap-3 p-7">
+                        <span class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-[10px] bg-[#eff4ff] text-primary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v5c0 5-3.5 8-8 11-4.5-3-8-6-8-11V6z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
+                        <div><h3 class="mb-1 text-[17px] font-semibold text-[#0f172a]">Verificación premium</h3><p class="text-[13px] leading-[1.6] text-[#475569]">9 estados hasta el pago, con revenue como conversión final.</p></div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ================= RESULTADOS EN NÚMEROS ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-16">
+            <div class="rounded-[28px] bg-gradient-to-br from-[#0f1e3d] to-[#0a1530] px-8 py-14 text-center sm:px-12">
+                <span class="mb-3 block text-[11px] font-bold uppercase tracking-[0.15em] text-[#7fb0ff]">RESULTADOS</span>
+                <h2 class="mb-12 text-[28px] font-bold text-white sm:text-[36px]">El proyecto en números</h2>
+                <div class="grid grid-cols-2 gap-10 lg:grid-cols-4">
+                    <div class="text-center"><span class="block text-[40px] font-extrabold leading-none text-[#7fb0ff] sm:text-[48px]" data-count="20" data-suffix="+">20+</span><span class="mt-3 block text-[13px] font-medium text-[#aac4f0]">Concesionarias entrevistadas</span></div>
+                    <div class="text-center"><span class="block text-[40px] font-extrabold leading-none text-[#7fb0ff] sm:text-[48px]" data-count="248">248</span><span class="mt-3 block text-[13px] font-medium text-[#aac4f0]">Vehículos publicados</span></div>
+                    <div class="text-center"><span class="block text-[40px] font-extrabold leading-none text-[#7fb0ff] sm:text-[48px]" data-count="40" data-prefix="−" data-suffix="%">−40%</span><span class="mt-3 block text-[13px] font-medium text-[#aac4f0]">Tiempo de handoff</span></div>
+                    <div class="text-center"><span class="block text-[40px] font-extrabold leading-none text-[#7fb0ff] sm:text-[48px]" data-count="3" data-suffix=" flujos">3 flujos</span><span class="mt-3 block text-[13px] font-medium text-[#aac4f0]">Instrumentados en GA4</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALERÍA ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-12">
+            <div class="mb-14 text-center">
+                <span class="mb-4 block text-[11px] font-bold tracking-[0.2em] text-electric">VISUAL SHOWCASE</span>
+                <h2 class="mb-5 text-[32px] font-bold sm:text-[48px]">Galería de Producto</h2>
+                <p class="mx-auto max-w-[600px] text-[16px] text-[#475569]">El ecosistema ConDuzko de extremo a extremo: web, mobile y panel administrativo.</p>
+            </div>
+
+            <div data-gallery class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="aspect-square overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card"><img loading="lazy" src="/BETA/assets/conduzko/mobile-mockup.png" alt="ConDuzko — detalle de vehículo en mobile" class="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105" /></div>
+                <div class="aspect-square overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card"><img loading="lazy" src="/BETA/assets/conduzko/portada.png" alt="ConDuzko — catálogo y detalle en escritorio" class="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105" /></div>
+                <div class="aspect-square overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card"><img loading="lazy" src="/BETA/assets/conduzko/validacion-mockup.png" alt="ConDuzko — Validación 100 puntos en escritorio" class="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105" /></div>
+                <div class="aspect-square overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card"><img loading="lazy" src="/BETA/assets/conduzko/calendario-mockup.png" alt="ConDuzko — calendario de citas (panel admin)" class="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105" /></div>
+                <div class="aspect-square overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card"><img loading="lazy" src="/BETA/assets/conduzko/asesores-mockup.png" alt="ConDuzko — calendario por asesores" class="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105" /></div>
+                <div class="aspect-square overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card"><img loading="lazy" src="/BETA/assets/conduzko/campanas-mockup.png" alt="ConDuzko — panel de campañas de marketing" class="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105" /></div>
+                <div class="aspect-square overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card"><img loading="lazy" src="/BETA/assets/conduzko/wizard-placa.png" alt="ConDuzko — wizard de venta, paso Placa" class="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105" /></div>
+                <div class="aspect-square overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card"><img loading="lazy" src="/BETA/assets/conduzko/wizard-fotos.png" alt="ConDuzko — wizard de venta, paso Fotos con preview" class="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105" /></div>
+                <div class="aspect-square overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card"><img loading="lazy" src="/BETA/assets/conduzko/wizard-precio.png" alt="ConDuzko — wizard de venta, paso Precio con sugerencia IA" class="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105" /></div>
+            </div>
+
+            <div class="border-t border-[#e9edf2] py-24 text-center">
+                <h2 class="mb-10 text-[32px] font-bold leading-[1.2] sm:text-[48px]">Confianza que se diseña, <br />no se <span class="text-electric">promete</span>.</h2>
+                <a href="https://wa.me/51934865894?text=Hola%20Carlos%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 rounded-full bg-primary px-10 py-4 text-[16px] font-semibold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.717zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>Conversemos por WhatsApp</a>
+            </div>
+        </section>
+    </main>
+</BaseLayout>

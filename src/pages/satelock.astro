@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "Satelock | Seguridad & Logística";
+const description = "Satelock — Rediseño de la seguridad de flotas en tiempo real mediante UX estratégica, IA y React.";
+const ogImage = "https://mezasalaman.github.io/BETA/Media/SATELOCK/img-portada.svg";
+---
+<BaseLayout title={title} description={description} ogImage={ogImage}>
+<main>
+        <!-- ================= HERO ================= -->
+        <header class="mx-auto flex w-[90%] max-w-grid flex-col items-center pt-10 text-center">
+            <div class="mb-12 flex items-center gap-3 rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-8 py-3">
+                <span class="h-2 w-2 rounded-full bg-electric shadow-[0_0_10px_rgba(74,111,255,0.8)]"></span>
+                <span class="text-[11px] font-semibold tracking-[0.1em] text-[#64748b]">SENIOR PRODUCT DESIGNER STORYTELLING</span>
+            </div>
+
+            <h1 class="title-centered mx-auto mb-8 max-w-[1000px] font-bold text-[#0f172a]">
+                Satelock<br />
+                <span class="mt-2 block text-electric">Revolutionizing Security</span>
+            </h1>
+
+            <p class="mx-auto mb-12 max-w-[700px] text-[16px] leading-[1.6] text-[#475569] md:text-[18px]">
+                Rediseñé el monitoreo de seguridad de flotas en tiempo real: UX estratégica e IA para
+                decidir más rápido bajo presión. <strong class="font-semibold text-[#0f172a]">−40% en tiempos operativos.</strong>
+            </p>
+
+            <a href="/BETA/satelock-case/"
+               class="group flex items-center gap-4 rounded-full border border-[#e0e5ec] bg-electric px-9 py-4 text-[16px] font-semibold text-[#ffffff] transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(74,111,255,0.4)]">
+                Explorar caso de estudio
+                <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/GEOSATELITAL/icon-arrow.svg" alt="arrow" class="h-[18px] w-auto brightness-0 invert transition-transform group-hover:translate-x-1.5" />
+            </a>
+
+            <div class="flex w-full max-w-[1100px] justify-center px-0 pb-20 pt-10">
+                <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/img-portada.svg" alt="Satelock Interface" class="block h-auto max-h-[70vh] w-full object-contain drop-shadow-[0_30px_60px_rgba(0,0,0,0.5)]" />
+            </div>
+        </header>
+
+        <!-- ================= DESAFÍO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20">
+            <div class="mb-12">
+                <h2 class="mb-4 text-[28px] font-bold text-[#0f172a] sm:text-[32px]">El Desafío: Brecha de Usabilidad</h2>
+                <div class="h-1 w-16 rounded bg-electric"></div>
+            </div>
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div class="flex flex-col rounded-[24px] border border-[#edf0f4] bg-card p-8 sm:p-10">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/alert.svg" alt="Problema" class="h-7 w-7" />
+                        <h3 class="text-[22px] font-semibold text-[#0f172a]">El Problema</h3>
+                    </div>
+                    <p class="mb-8 flex-1 text-[15px] leading-[1.7] text-[#64748b]">
+                        Los sistemas legados presentaban una carga cognitiva abrumadora para los operadores.
+                        La falta de respuesta en tiempo real y una arquitectura de información fragmentada
+                        provocaban retrasos críticos en la detección de incidentes.
+                    </p>
+                    <ul class="status-cross flex flex-col gap-3 text-[14px] font-medium text-[#475569]">
+                        <li>Tiempos de respuesta superiores a 15 minutos.</li>
+                        <li>Interfaz no adaptativa (Desktop-only).</li>
+                    </ul>
+                </div>
+                <div class="flex flex-col rounded-[24px] border border-[#edf0f4] bg-card p-8 sm:p-10">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/check.svg" alt="Solución" class="h-7 w-7" />
+                        <h3 class="text-[22px] font-semibold text-[#0f172a]">La Solución</h3>
+                    </div>
+                    <p class="mb-8 flex-1 text-[15px] leading-[1.7] text-[#64748b]">
+                        Una plataforma centralizada basada en Atomic Design que optimiza la toma de decisiones
+                        mediante visualización predictiva y una jerarquía visual clara diseñada para entornos
+                        de alta presión.
+                    </p>
+                    <ul class="status-check flex flex-col gap-3 text-[14px] font-medium text-[#475569]">
+                        <li>Monitoreo en tiempo real con latencia &lt; 1s.</li>
+                        <li>Ecosistema responsivo y notificaciones inteligentes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= AI PROCESS ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20 text-center">
+            <div class="mb-14">
+                <h2 class="mb-6 text-[28px] font-bold text-[#0f172a] sm:text-[36px]">AI-Driven Process: Acelerando el Workflow</h2>
+                <p class="mx-auto max-w-[700px] text-[16px] text-[#64748b]">Implementación de herramientas de IA para maximizar la eficiencia creativa y técnica.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/midjourney.svg" alt="Midjourney" class="h-[22px] w-auto" />
+                    </div>
+                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Midjourney</h3>
+                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Generación de activos visuales complejos y texturas abstractas para el sistema de diseño, manteniendo una estética futurista y profesional.</p>
+                </div>
+                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/chat%20gpt.svg" alt="ChatGPT" class="h-[22px] w-auto" />
+                    </div>
+                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">ChatGPT</h3>
+                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Refinamiento de UX Writing, microcopy y estructuración de la documentación técnica para asegurar claridad en cada punto de contacto.</p>
+                </div>
+                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/claude.svg" alt="Claude AI" class="h-[22px] w-auto" />
+                    </div>
+                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Claude AI</h3>
+                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Optimización de componentes React y lógica de negocio, reduciendo el tiempo de desarrollo de prototipos funcionales en un 30%.</p>
+                </div>
+                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/stich.svg" alt="Stitch Gemini" class="h-[22px] w-auto" />
+                    </div>
+                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Stitch Gemini</h3>
+                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Generación de contenido contextual dinámico y narrativas de usuario complejas, acelerando la creación de activos de alta fidelidad.</p>
+                </div>
+                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
+                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
+                        <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/make.svg" alt="Figma Make" class="h-[22px] w-auto" />
+                    </div>
+                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Figma Make</h3>
+                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Automatización de layouts y escalado de sistemas de diseño, permitiendo entregas técnicas en tiempos récord sin comprometer la calidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= DATA DRIVEN ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-24">
+            <div class="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
+                <!-- Tools bento -->
+                <div class="grid grid-cols-2 gap-4 md:order-1 order-2">
+                    <div class="flex flex-col items-center justify-center rounded-[16px] border border-[#edf0f4] bg-card p-8 transition-colors duration-300 hover:border-electric/40 hover:bg-panel">
+                        <span class="text-[22px] font-bold text-electric">GA4</span>
+                        <span class="mt-1 text-[10px] font-bold tracking-[0.15em] text-[#94a3b8]">EVENT TRACKING</span>
+                    </div>
+                    <div class="flex flex-col items-center justify-center rounded-[16px] border border-[#edf0f4] bg-card p-8 transition-colors duration-300 hover:border-electric/40 hover:bg-panel">
+                        <span class="text-[22px] font-bold text-electric">Hotjar</span>
+                        <span class="mt-1 text-[10px] font-bold tracking-[0.15em] text-[#94a3b8]">HEATMAPS</span>
+                    </div>
+                    <div class="col-span-2 flex flex-col items-center justify-center rounded-[16px] border border-[#edf0f4] bg-card p-10 transition-colors duration-300 hover:border-electric/40 hover:bg-panel">
+                        <span class="text-[22px] font-bold text-electric">Mixpanel</span>
+                        <span class="mt-1 text-[10px] font-bold tracking-[0.15em] text-[#94a3b8]">BEHAVIORAL ANALYTICS</span>
+                    </div>
+                </div>
+                <!-- Texto -->
+                <div class="md:order-2 order-1 text-center md:text-left">
+                    <h2 class="mb-6 text-[32px] font-bold tracking-[-0.02em] sm:text-[48px]">Data-Driven Optimization</h2>
+                    <p class="mb-10 text-[16px] leading-[1.6] text-[#64748b]">
+                        Validamos cada decisión de diseño mediante un stack analítico robusto.
+                        Utilizamos <strong class="font-semibold text-[#0f172a]">GA4, Hotjar y Mixpanel</strong> para monitorizar el comportamiento real
+                        de los operadores, identificando cuellos de botella críticos en el dashboard
+                        de monitoreo y optimizando flujos mediante evidencia empírica.
+                    </p>
+                    <div class="flex items-center justify-center gap-8 md:justify-start">
+                        <div class="flex gap-2">
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-[#ffffff]">1</span>
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-[#ffffff]">2</span>
+                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-[#ffffff]">3</span>
+                        </div>
+                        <p class="text-[14px] font-semibold text-[#0f172a]">Ciclo continuo de iteración basado en datos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SOLUCIÓN MOCKUP ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-20 text-center">
+            <div class="mb-14">
+                <span class="mb-8 block text-[11px] font-bold uppercase tracking-[0.2em] text-electric">THE SOLUTION</span>
+                <h2 class="mb-9 text-[32px] font-bold leading-[1.1] tracking-[-0.02em] text-[#0f172a] sm:text-[56px]">Visión total.<br />Reacción inmediata.</h2>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-6 py-2.5 text-[13px] font-medium text-[#475569]">Monitoreo en vivo</span>
+                    <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-6 py-2.5 text-[13px] font-medium text-[#475569]">Alertas inteligentes</span>
+                    <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-6 py-2.5 text-[13px] font-medium text-[#475569]">Dark theme operativo</span>
+                </div>
+            </div>
+            <div class="mx-auto flex w-full max-w-grid justify-center">
+                <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SATELOCK/mockup.svg" alt="Satelock App Interface" class="block w-full max-w-full rounded-[20px] object-contain" />
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= NAV PROYECTOS ================= -->
+    <section class="mx-auto mb-4 w-[90%] max-w-grid border-t border-[#e9edf2] pt-10">
+        <div class="flex items-center justify-between gap-4">
+            <a href="/BETA/#proyectos" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="transition-transform group-hover:-translate-x-1">←</span>
+                <span class="text-[14px]">Todos los proyectos</span>
+            </a>
+            <a href="/BETA/sellercenter/" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+                <span class="text-[14px]">Siguiente: <span class="font-semibold text-[#0f172a]">Seller Center</span></span>
+                <span class="transition-transform group-hover:translate-x-1">→</span>
+            </a>
+        </div>
+    </section>
+</BaseLayout>

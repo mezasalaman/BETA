@@ -1,0 +1,40 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!-- ================= NAVBAR ================= -->
+<nav class="sticky top-0 z-[9999] w-full bg-ink">
+    <div class="mx-auto max-w-[1150px] px-5">
+        <div class="flex w-full items-center justify-between border-b border-hairline py-6">
+            <!-- Logo -->
+            <a href={`${base}/`} class="flex items-center gap-3">
+                <span class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
+                <span class="text-[18px] font-bold text-[#0f172a]">Carlos Meza</span>
+            </a>
+
+            <!-- Enlaces -->
+            <ul class="hidden items-center gap-10 md:flex">
+                <li class="dropdown-trigger relative py-2.5">
+                    <a href={`${base}/#proyectos`} class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Proyectos</a>
+                    <div class="dropdown-menu absolute left-1/2 top-full flex min-w-[180px] flex-col items-start gap-4 rounded-xl bg-white p-5 shadow-drop">
+                        <a href={`${base}/food-delivery/`} class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">FoodDelivery</a>
+                        <a href={`${base}/satelock/`} class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Satelock</a>
+                        <a href={`${base}/sellercenter/`} class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Seller Center</a>
+                        <a href={`${base}/conduzko/`} class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">ConDuzko</a>
+                    </div>
+                </li>
+                <li><a href={`${base}/about/`} class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Sobre mí</a></li>
+            </ul>
+            <button type="button" data-menu-toggle aria-label="Abrir menú" class="flex h-10 w-10 items-center justify-center md:hidden">
+                <span class="relative block h-[2px] w-6 rounded bg-white before:absolute before:-top-2 before:left-0 before:h-[2px] before:w-6 before:rounded before:bg-white before:content-[''] after:absolute after:top-2 after:left-0 after:h-[2px] after:w-6 after:rounded after:bg-white after:content-['']"></span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden border-b border-hairline pb-4 md:!hidden">
+            <span class="block px-2 pb-1 pt-3 text-[11px] font-bold uppercase tracking-wider text-[#94a3b8]">Proyectos</span>
+            <a href={`${base}/food-delivery/`} class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">FoodDelivery</a>
+            <a href={`${base}/satelock/`} class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Satelock</a>
+            <a href={`${base}/sellercenter/`} class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Seller Center</a>
+            <a href={`${base}/conduzko/`} class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">ConDuzko</a>
+            <a href={`${base}/about/`} class="mt-1 block rounded-lg px-2 py-2.5 text-[15px] font-medium text-[#0f172a] hover:bg-[#f3f5f8]">Sobre mí</a>
+        </div>
+    </div>
+</nav>
