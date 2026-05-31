@@ -1,0 +1,169 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = "About me | Jose Carlos Meza";
+const description = "Sobre Jose Carlos Meza — Senior Product Designer & Strategist. Educación, expertise y stack tecnológico.";
+const ogImage = "https://mezasalaman.github.io/BETA/Media/Home/end.svg";
+---
+<BaseLayout title={title} description={description} ogImage={ogImage}>
+<main class="mx-auto max-w-[1150px] px-5 md:px-10">
+        <!-- ================= HERO ================= -->
+        <section class="py-10 md:py-14">
+            <div class="relative mx-auto max-w-[960px] overflow-hidden rounded-[28px] border border-[#e9edf2] bg-gradient-to-b from-white to-[#f4f7fb] px-7 py-12 text-center shadow-drop sm:px-12 md:py-16">
+                <span class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/[0.08] px-4 py-1.5 text-[11px] font-semibold tracking-wider text-primary"><span class="pulse-dot h-1.5 w-1.5 rounded-full bg-primary"></span>DISPONIBLE PARA NUEVOS RETOS</span>
+                <h1 class="mb-5 text-[36px] font-bold leading-[1.1] sm:text-[48px] md:text-[58px]">
+                    Senior Product <span class="text-primary">Designer</span> &amp; Strategist
+                </h1>
+                <p class="mx-auto mb-9 max-w-[520px] text-[16px] leading-[1.6] text-dim md:text-[18px]">
+                    Convierto <strong class="font-semibold text-[#0f172a]">research y datos</strong> en productos claros, usables y medibles.
+                </p>
+
+                <!-- Key points -->
+                <div class="mb-10 flex flex-wrap justify-center gap-2.5">
+                    <span class="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#1a2840]"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>UX Strategy</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#1a2840]"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Product Design</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#1a2840]"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Research Driven</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#1a2840]"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>AI + Design Workflow</span>
+                    <span class="inline-flex items-center gap-2 rounded-full border border-hairline bg-white px-4 py-2 text-[13px] font-medium text-[#1a2840]"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>SaaS · Growth</span>
+                </div>
+
+                <!-- CTAs -->
+                <div class="flex flex-col items-center justify-center gap-3 sm:flex-row">
+                    <a href="/BETA/assets/CARLOS_MEZA_CV.pdf" target="_blank" class="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-8 py-3.5 font-semibold text-[#ffffff] transition-transform hover:-translate-y-0.5 sm:w-auto">
+                        Descargar CV <span class="transition-transform group-hover:translate-x-1">→</span>
+                    </a>
+                    <a href="https://wa.me/51934865894?text=Hola%20Carlos%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" rel="noopener" class="group inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#cfd8e3] bg-white px-8 py-3.5 font-semibold text-[#1a2840] transition-colors hover:border-primary hover:text-primary sm:w-auto">
+                        Conversemos
+                        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.717zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GRID PRINCIPAL ================= -->
+        <div class="grid grid-cols-1 gap-16 pb-28 lg:grid-cols-[400px_1fr] lg:gap-20">
+            <!-- IZQUIERDA: Educación -->
+            <aside class="lg:sticky lg:top-[120px] lg:self-start">
+                <h2 class="mb-10 block border-b border-hairline pb-3 text-[13px] font-semibold uppercase tracking-[2px] text-[#0f172a]">Education</h2>
+
+                <div class="mb-11 border-l border-hairline pl-5">
+                    <span class="mb-2 block text-[12px] font-bold text-primary">NOV 2025</span>
+                    <h3 class="mb-1.5 text-[19px] text-[#0f172a]">Capacitación de Inteligencia Artificial y Gestión Empresarial</h3>
+                    <p class="mb-4 text-[14px] text-dim">UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS (UPC)</p>
+                    <p class="mb-4 text-[13.5px] leading-[1.6] text-dim">
+                        Análisis profundo sobre el <strong class="font-medium text-[#0f172a]">impacto de la IA</strong> en modelos de negocio modernos,
+                        integrando <strong class="font-medium text-[#0f172a]">ciberseguridad</strong> avanzada y optimización de la <strong class="font-medium text-[#0f172a]">experiencia de usuario</strong>
+                        potenciada por IA. Enfoque directo en la identificación de <strong class="font-medium text-[#0f172a]">oportunidades de mejora</strong> y
+                        estrategias para maximizar la <strong class="font-medium text-[#0f172a]">conversión económica</strong> mediante tecnología de vanguardia.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">AI Impact</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Cybersecurity</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">UX AI</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Business ROI</span>
+                    </div>
+                </div>
+
+                <div class="mb-11 border-l border-hairline pl-5">
+                    <span class="mb-2 block text-[12px] font-bold text-primary">DEC 2023</span>
+                    <h3 class="mb-1.5 text-[19px] text-[#0f172a]">Graphic Designer Technician</h3>
+                    <p class="mb-4 text-[14px] text-dim">CIBERTEC</p>
+                    <p class="mb-4 text-[13.5px] leading-[1.6] text-dim">
+                        Especializado en Diseño de Planes de Negocio, Costos, Fundamentos de Programación,
+                        UX Research, Psicología del Usuario y Fundamentos Visuales para la creación de productos digitales.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Visual Design</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">UX Research</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Business Plans</span>
+                    </div>
+                </div>
+
+                <div class="mb-11 border-l border-hairline pl-5">
+                    <span class="mb-2 block text-[12px] font-bold text-primary">JUNE 2024</span>
+                    <h3 class="mb-1.5 text-[19px] text-[#0f172a]">Professional Certificate in UX Design</h3>
+                    <p class="mb-4 text-[14px] text-dim">COURSERA (Google)</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">User Research</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Prototyping</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Design Thinking</span>
+                    </div>
+                </div>
+
+                <div class="border-l border-hairline pl-5">
+                    <span class="mb-2 block text-[12px] font-bold text-primary">MAY 2024</span>
+                    <h3 class="mb-1.5 text-[19px] text-[#0f172a]">Analítica Digital</h3>
+                    <p class="mb-4 text-[14px] text-dim">UDEMY</p>
+                    <p class="mb-4 text-[13.5px] leading-[1.6] text-dim">
+                        Enfoque en la medición de métricas clave, análisis del comportamiento del usuario
+                        en plataformas digitales y estrategias de optimización de embudos de conversión.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Data Analytics</span>
+                        <span class="rounded-md bg-[#eef1f5] px-3 py-1 text-[11px]">Conversion Rate</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- DERECHA: Expertise + Tech Stack -->
+            <section>
+                <h2 class="mb-10 block border-b border-hairline pb-3 text-[13px] font-semibold uppercase tracking-[2px] text-[#0f172a]">Expertise</h2>
+                <div class="mb-16 grid grid-cols-1 gap-5 sm:grid-cols-2">
+                    <div class="group rounded-2xl border border-hairline bg-card p-[30px] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:bg-[#eaf0fb]">
+                        <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#dbe4f5] bg-[#eaf0fb] transition-colors duration-300 group-hover:bg-primary">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SOBRE%20MI/Design-icon.svg" alt="Design Systems" class="h-5 w-5 object-contain" />
+                        </div>
+                        <h4 class="mb-2 mt-4 text-[17px] text-[#0f172a]">Design Systems</h4>
+                        <p class="text-[13.5px] leading-[1.5] text-dim">Construcción y escalamiento de librerías de componentes atómicos. Fomento de la consistencia visual y eficiencia en el handoff.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-hairline bg-card p-[30px] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:bg-[#eaf0fb]">
+                        <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#dbe4f5] bg-[#eaf0fb] transition-colors duration-300 group-hover:bg-primary">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SOBRE%20MI/data-icon.svg" alt="Data Analysis" class="h-5 w-5 object-contain" />
+                        </div>
+                        <h4 class="mb-2 mt-4 text-[17px] text-[#0f172a]">Data Analysis</h4>
+                        <p class="text-[13.5px] leading-[1.5] text-dim">Interpretación de KPIs para la toma de decisiones. Análisis cualitativo y cuantitativo para optimización de productos.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-hairline bg-card p-[30px] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:bg-[#eaf0fb]">
+                        <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#dbe4f5] bg-[#eaf0fb] transition-colors duration-300 group-hover:bg-primary">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SOBRE%20MI/ux-research.svg" alt="UX Research" class="h-5 w-5 object-contain" />
+                        </div>
+                        <h4 class="mb-2 mt-4 text-[17px] text-[#0f172a]">UX Research</h4>
+                        <p class="text-[13.5px] leading-[1.5] text-dim">Liderazgo en fases de descubrimiento, entrevistas a usuarios, pruebas de usabilidad y auditorías heurísticas.</p>
+                    </div>
+                    <div class="group rounded-2xl border border-hairline bg-card p-[30px] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary hover:bg-[#eaf0fb]">
+                        <div class="mb-5 flex h-10 w-10 items-center justify-center rounded-full border border-[#dbe4f5] bg-[#eaf0fb] transition-colors duration-300 group-hover:bg-primary">
+                            <img loading="lazy" src="https://mezasalaman.github.io/BETA/Media/SOBRE%20MI/ia-icon.svg" alt="AI Workflows" class="h-5 w-5 object-contain" />
+                        </div>
+                        <h4 class="mb-2 mt-4 text-[17px] text-[#0f172a]">AI Workflows</h4>
+                        <p class="text-[13.5px] leading-[1.5] text-dim">Optimización del ciclo de diseño mediante IA, automatización de flujos y generación de contenido dinámico.</p>
+                    </div>
+                </div>
+
+                <h2 class="mb-10 block border-b border-hairline pb-3 text-[13px] font-semibold uppercase tracking-[2px] text-[#0f172a]">Tech Stack</h2>
+                <div class="flex flex-wrap gap-3">
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Figma</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Adobe Creative Cloud</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Stitch Gemini</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Figma Make</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Optimal Workshop</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Maze</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Hotjar</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Microsoft Clarity</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Typeform</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">GA4</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Mixpanel</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Tableau</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Power BI</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">GPT-4</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Claude 3.5 Sonnet</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Midjourney</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Notion AI</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Jira</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">HTML5 &amp; CSS3</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Tailwind CSS</span>
+                    <span class="rounded-lg border border-hairline bg-ink px-5 py-2.5 text-[13px] transition-colors hover:border-primary hover:bg-primary/5">Storybook</span>
+                </div>
+            </section>
+        </div>
+    </main>
+</BaseLayout>

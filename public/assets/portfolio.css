@@ -1,0 +1,352 @@
+/* ============================================================
+   Estilos compartidos del portfolio (lo que no cubre Tailwind)
+   ============================================================ */
+
+html { scroll-behavior: smooth; }
+body { background-color: #ffffff; color: #0f172a; overflow-x: hidden; }
+
+/* Logo del nav y escudo del footer: iconos monocromos (diseñados en blanco)
+   -> los oscurecemos para que se vean sobre fondo claro */
+img[src*="icono%20meza"],
+img[src*="Footeer-escudo"] {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(18%) saturate(1100%) hue-rotate(187deg);
+}
+
+/* --- Dropdown de Proyectos (hover) --- */
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(10px);
+    transition: 0.3s ease-in-out;
+}
+.dropdown-trigger:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+    filter: drop-shadow(0 -1px 0 #e4e8ee);
+}
+
+/* --- Conmutador de imágenes desktop / mobile en project cards --- */
+.img-mobile { display: none; }
+@media (max-width: 650px) {
+    .img-desktop { display: none; }
+    .img-mobile { display: block; }
+}
+
+/* --- Listas de estado (✓ / ✕) en los casos de estudio --- */
+.status-check li,
+.status-cross li {
+    position: relative;
+    padding-left: 2rem;
+}
+.status-cross li::before {
+    content: "✕";
+    position: absolute;
+    left: 0;
+    color: #dc2626;
+    font-weight: 900;
+}
+.status-check li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #16a34a;
+    font-weight: 900;
+}
+
+/* ============================================================
+   LIGHTBOX — visor de imágenes a pantalla completa
+   ============================================================ */
+.lb-zoomable { cursor: zoom-in; }
+
+.lb-overlay {
+    position: fixed; inset: 0; z-index: 100000;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(10,16,30,0.90);
+    -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    opacity: 0; visibility: hidden; transition: opacity .3s ease, visibility .3s ease;
+}
+.lb-overlay.open { opacity: 1; visibility: visible; }
+
+.lb-stage { position: relative; width: 92vw; height: 88vh; display: flex; align-items: center; justify-content: center; }
+.lb-img {
+    max-width: 92vw; max-height: 84vh; object-fit: contain;
+    border-radius: 14px; box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    background: #fff; transform: scale(.96); opacity: 0;
+    transition: transform .35s cubic-bezier(.2,.7,.2,1), opacity .25s ease;
+}
+.lb-overlay.open .lb-img { transform: scale(1); opacity: 1; }
+
+.lb-btn {
+    position: absolute; display: flex; align-items: center; justify-content: center;
+    width: 52px; height: 52px; border-radius: 50%; border: none; cursor: pointer;
+    background: rgba(255,255,255,0.12); color: #fff; font-size: 24px; line-height: 1;
+    transition: background .2s ease, transform .2s ease; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.lb-btn:hover { background: #2563eb; transform: scale(1.08); }
+.lb-prev { left: 1.5vw; } .lb-next { right: 1.5vw; }
+.lb-close { top: -2px; right: 0; width: 46px; height: 46px; font-size: 22px; }
+@media (max-width: 640px) {
+    .lb-prev { left: 6px; } .lb-next { right: 6px; }
+    .lb-btn { width: 44px; height: 44px; }
+}
+
+.lb-counter {
+    position: absolute; bottom: -2px; left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,0.85); font-size: 13px; font-weight: 600; letter-spacing: .04em;
+    background: rgba(0,0,0,0.35); padding: 6px 14px; border-radius: 9999px;
+}
+.lb-caption {
+    position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%);
+    max-width: 80vw; text-align: center; color: rgba(255,255,255,0.7); font-size: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lb-overlay, .lb-img { transition: none !important; }
+}
+
+/* ============================================================
+   HERO ILLUS — ilustración vectorizada con animación sutil perpetua
+   ============================================================ */
+.hero-illus {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 1 / 1;
+    background: transparent;
+    isolation: isolate;
+}
+@media (max-width: 767px) { .hero-illus { max-width: 320px; } }
+
+/* Resplandores azules que se mueven detrás de la ilustración */
+.hi-glow { position: absolute; border-radius: 50%; filter: blur(46px); opacity: .55; z-index: 0; }
+.hi-glow-1 { width: 55%; height: 55%; left: -6%; top: -4%; background: radial-gradient(circle, #60a5fa, transparent 70%); animation: hvFloat1 12s ease-in-out infinite; }
+.hi-glow-2 { width: 50%; height: 50%; right: -8%; bottom: -6%; background: radial-gradient(circle, #93c5fd, transparent 72%); animation: hvFloat2 14s ease-in-out infinite; }
+
+.hi-grid {
+    position: absolute; inset: 0; z-index: 1;
+    background-image:
+        linear-gradient(rgba(37,99,235,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(37,99,235,0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 60%, transparent 88%);
+    mask-image: radial-gradient(circle at 50% 50%, #000 60%, transparent 88%);
+}
+
+.hi-img {
+    position: relative; z-index: 2;
+    width: 100%; height: 100%; object-fit: contain;
+    padding: 6%;
+    animation: hiFloat 7s ease-in-out infinite;
+    will-change: transform;
+}
+@keyframes hiFloat {
+    0%,100% { transform: translateY(0) scale(1); }
+    50%     { transform: translateY(-12px) scale(1.015); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hi-glow, .hi-img { animation: none !important; }
+}
+
+/* Nubecitas (pills) flotando alrededor del vector */
+.hi-tag {
+    position: absolute; z-index: 5;
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 8px 14px; border-radius: 9999px;
+    background: #ffffff; border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 22px rgba(15,23,42,0.10);
+    font-size: 12.5px; font-weight: 600; color: #1a2840; white-space: nowrap;
+    animation: hvChip 6s ease-in-out infinite;
+    will-change: transform;
+}
+.hi-dot { width: 7px; height: 7px; border-radius: 50%; background: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
+@media (max-width: 767px) { .hi-tag { font-size: 11px; padding: 6px 11px; } }
+
+/* ============================================================
+   HERO VISUAL — composición azul animada (reemplaza la ilustración)
+   ============================================================ */
+.hero-visual {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 1 / 1;
+    border-radius: 32px;
+    overflow: hidden;
+    background:
+        radial-gradient(120% 120% at 20% 10%, #1e3a8a 0%, #1d4ed8 38%, #2563eb 62%, #3b82f6 100%);
+    box-shadow: 0 40px 90px rgba(37,99,235,0.30), inset 0 1px 0 rgba(255,255,255,0.18);
+    isolation: isolate;
+}
+@media (max-width: 767px) { .hero-visual { max-width: 320px; } }
+
+/* Aurora blobs */
+.hv-blob {
+    position: absolute; border-radius: 50%; filter: blur(34px); opacity: .8;
+    mix-blend-mode: screen; will-change: transform;
+}
+.hv-blob-1 { width: 58%; height: 58%; left: -8%; top: -6%;
+    background: radial-gradient(circle, #60a5fa, transparent 70%); animation: hvFloat1 11s ease-in-out infinite; }
+.hv-blob-2 { width: 52%; height: 52%; right: -10%; top: 18%;
+    background: radial-gradient(circle, #93c5fd, transparent 70%); animation: hvFloat2 13s ease-in-out infinite; }
+.hv-blob-3 { width: 60%; height: 60%; left: 12%; bottom: -16%;
+    background: radial-gradient(circle, #1e40af, transparent 72%); animation: hvFloat3 15s ease-in-out infinite; }
+@keyframes hvFloat1 { 0%,100%{ transform: translate(0,0) scale(1) } 50%{ transform: translate(14%,10%) scale(1.12) } }
+@keyframes hvFloat2 { 0%,100%{ transform: translate(0,0) scale(1) } 50%{ transform: translate(-12%,12%) scale(1.08) } }
+@keyframes hvFloat3 { 0%,100%{ transform: translate(0,0) scale(1) } 50%{ transform: translate(8%,-10%) scale(1.15) } }
+
+/* Retícula sutil */
+.hv-grid {
+    position: absolute; inset: 0;
+    background-image:
+        linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 38px 38px;
+    -webkit-mask-image: radial-gradient(circle at 50% 45%, #000 55%, transparent 85%);
+    mask-image: radial-gradient(circle at 50% 45%, #000 55%, transparent 85%);
+}
+
+/* Tarjeta central de cristal */
+.hv-core {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    width: 56%; padding: 26px 22px; border-radius: 22px; text-align: center;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 18px 40px rgba(2,15,46,0.32);
+    animation: floatSoft 7s ease-in-out infinite; z-index: 3;
+}
+.hv-core-label { display:block; font-size: 9px; letter-spacing: .22em; font-weight: 700; color: rgba(255,255,255,0.75); }
+.hv-core-big { display:block; font-size: 64px; line-height: 1; font-weight: 800; color: #fff; margin: 6px 0 2px; text-shadow: 0 4px 20px rgba(0,0,0,0.25); }
+.hv-core-sub { display:block; font-size: 11px; color: rgba(255,255,255,0.82); }
+.hv-bars { display:flex; align-items:flex-end; justify-content:center; gap:6px; height:42px; margin-top:16px; }
+.hv-bars i { width: 12px; border-radius: 4px 4px 2px 2px; background: linear-gradient(180deg, #fff, rgba(255,255,255,0.55));
+    height: var(--h); transform-origin: bottom; animation: hvBar 2.6s ease-in-out infinite; }
+.hv-bars i:nth-child(2){ animation-delay:.2s } .hv-bars i:nth-child(3){ animation-delay:.4s }
+.hv-bars i:nth-child(4){ animation-delay:.6s } .hv-bars i:nth-child(5){ animation-delay:.8s }
+@keyframes hvBar { 0%,100%{ transform: scaleY(.78) } 50%{ transform: scaleY(1) } }
+
+/* Chips flotantes */
+.hv-chip {
+    position: absolute; z-index: 4; display:flex; flex-direction:column; gap:2px;
+    padding: 11px 15px; border-radius: 15px; background: rgba(255,255,255,0.95);
+    box-shadow: 0 14px 30px rgba(2,15,46,0.22); will-change: transform;
+}
+.hv-chip-cap { font-size: 10px; color: #5b6573; font-weight: 600; }
+.hv-chip-num { font-size: 19px; font-weight: 800; color: #1d4ed8; line-height: 1; }
+.hv-chip-1 { top: 10%; right: -4%; animation: hvChip 6s ease-in-out infinite; }
+.hv-chip-2 { bottom: 14%; left: -6%; animation: hvChip 7s ease-in-out infinite .6s; }
+.hv-chip-3 { bottom: 6%; right: 6%; flex-direction: row; align-items:center; gap:7px; animation: hvChip 6.5s ease-in-out infinite .3s; }
+.hv-chip-dot { width:8px; height:8px; border-radius:50%; background:#16a34a; box-shadow:0 0 0 0 rgba(22,163,74,.5); animation: pulseGreen 1.8s ease-out infinite; }
+@keyframes hvChip { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-12px) } }
+@keyframes pulseGreen { 0%{ box-shadow:0 0 0 0 rgba(22,163,74,.5) } 100%{ box-shadow:0 0 0 9px rgba(22,163,74,0) } }
+
+@media (prefers-reduced-motion: reduce) {
+    .hv-blob, .hv-core, .hv-bars i, .hv-chip, .hv-chip-dot { animation: none !important; }
+}
+
+/* ============================================================
+   ANIMACIONES — entrada al scroll, hover azul, vida en el hero
+   ============================================================ */
+
+/* Hover azul universal: cualquier card con "lift" gana borde + glow azul */
+[class*="hover:-translate-y"] {
+    transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease, border-color .3s ease, background-color .3s ease;
+}
+body.anim-ready [class*="hover:-translate-y"]:hover {
+    border-color: #2563eb !important;
+    box-shadow: 0 18px 42px rgba(37,99,235,0.16);
+}
+
+/* Reveal al hacer scroll (progresivo: sólo se activa con JS) */
+body.anim-ready .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+    will-change: opacity, transform;
+}
+body.anim-ready .reveal.in {
+    opacity: 1;
+    transform: none;
+}
+
+/* Nombre del hero con degradado azul animado */
+.grad-anim {
+    background: linear-gradient(100deg, #2563eb, #60a5fa, #2563eb);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradShift 6s ease-in-out infinite;
+}
+@keyframes gradShift { 0%,100%{ background-position: 0% 50% } 50%{ background-position: 100% 50% } }
+
+/* Nombre protagonista: más peso, tamaño y brillo de barrido */
+.name-hero {
+    display: inline-block;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    font-size: 1.14em;
+    position: relative;
+}
+.name-hero::after {
+    content: "";
+    position: absolute; left: -8%; bottom: 2px; height: 30%; width: 116%;
+    background: linear-gradient(90deg, transparent, rgba(37,99,235,0.16), transparent);
+    border-radius: 6px; z-index: -1;
+    transform: scaleX(0); transform-origin: left;
+    animation: nameSweep 1.1s cubic-bezier(.2,.7,.2,1) .35s forwards;
+}
+@keyframes nameSweep { to { transform: scaleX(1); } }
+
+/* Punto "disponible" con pulso */
+.pulse-dot { position: relative; }
+.pulse-dot::after {
+    content: ""; position: absolute; inset: 0; border-radius: 9999px;
+    background: #2563eb; animation: pulseRing 2s ease-out infinite;
+}
+@keyframes pulseRing {
+    0%   { transform: scale(1); opacity: .6 }
+    100% { transform: scale(3.2); opacity: 0 }
+}
+
+/* Subrayado animado en enlaces del nav */
+.nav-underline { position: relative; }
+.nav-underline::after {
+    content: ""; position: absolute; left: 0; bottom: -4px; height: 2px; width: 100%;
+    background: #2563eb; transform: scaleX(0); transform-origin: left;
+    transition: transform .3s cubic-bezier(.2,.7,.2,1);
+}
+.nav-underline:hover::after { transform: scaleX(1); }
+
+/* Flotación suave para ilustraciones del hero */
+.float-soft { animation: floatSoft 7s ease-in-out infinite; }
+@keyframes floatSoft { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-14px) } }
+
+/* Zoom suave en imágenes de galería al hover (refuerza el scale existente) */
+@media (prefers-reduced-motion: reduce) {
+    body.anim-ready .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .grad-anim, .pulse-dot::after, .float-soft { animation: none !important; }
+}
+
+/* Título masivo de los casos de estudio (tamaño fluido) */
+.title-massive {
+    font-size: clamp(34px, 8vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+}
+.title-centered {
+    font-size: clamp(40px, 8vw, 85px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
