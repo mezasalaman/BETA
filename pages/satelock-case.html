@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Caso de Estudio | Satelock Security</title>
-    <meta name="description" content="Satelock — caso de estudio profundo: research, atomic design, usabilidad con Hotjar y escalabilidad en React." />
+    <title>Satelock | Monitoreo y eficiencia operativa</title>
+    <meta name="description" content="Satelock — caso de estudio profundo: product strategy, research operacional, priorización RICE y eficiencia operativa." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232563eb'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Caso de Estudio | Satelock Security" />
-    <meta property="og:description" content="Satelock — caso de estudio profundo: research, atomic design, usabilidad con Hotjar y escalabilidad en React." />
+    <meta property="og:description" content="Satelock — caso de estudio profundo: product strategy, research operacional, priorización RICE y eficiencia operativa." />
     <meta property="og:image" content="../assets/projects/satelock/dashboard-window.png" />
 
 
@@ -59,1139 +59,977 @@
         </div>
     </nav>
 
-    <main class="pt-10">
+    <main class="pt-8">
+
         <!-- ================= HERO ================= -->
-        <header class="mx-auto w-[90%] max-w-grid">
-            <span class="mb-10 inline-block rounded-full border border-electric/30 bg-electric/10 px-8 py-3 text-[10px] font-bold tracking-[0.1em] text-electric">CASE STUDY DEEP DIVE</span>
-            <h1 class="mb-10 text-[42px] font-bold leading-[1.1] tracking-[-0.03em] sm:text-[60px] lg:text-[82px]">
-                Satelock: El Proceso <br />
-                Detrás de la <span class="text-electric [text-shadow:0_0_30px_rgba(74,111,255,0.3)]">Innovación</span>
-            </h1>
-            <p class="max-w-[600px] text-[16px] leading-[1.6] text-[#64748b] md:text-[18px]">
-                Un desglose táctico de cómo transformamos la seguridad de flotas
-                mediante UX estratégica, IA y React.
-            </p>
+        <header class="mx-auto w-[90%] max-w-grid py-10 sm:py-14">
+            <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+                <!-- Izquierda: narrativa -->
+                <div>
+                    <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-electric">Product Case Study · Deep Dive</span>
+                    <h1 class="mt-4 mb-5 text-[30px] font-bold leading-[1.15] tracking-[-0.02em] sm:text-[38px] lg:text-[44px]">
+                        Más control, <span class="text-electric">menos tiempo</span> de reacción.
+                    </h1>
+                    <p class="mb-4 max-w-[500px] text-[15px] leading-[1.65] text-[#475569]">
+                        ¿Cómo reducimos el tiempo y esfuerzo necesario para que un operador detecte, evalúe y responda ante una incidencia crítica?
+                    </p>
+                    <p class="mb-7 max-w-[500px] text-[14px] leading-[1.6] text-[#64748b]">
+                        Investigamos el trabajo real de los operadores, priorizamos oportunidades y rediseñamos el monitoreo.
+                    </p>
+                    <div class="mb-8 flex flex-wrap gap-2">
+                        <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Product Strategy</span>
+                        <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Product Discovery</span>
+                        <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#0f172a]">UX Research</span>
+                        <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Data</span>
+                        <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Operational Efficiency</span>
+                    </div>
+                    <a href="satelock.html" class="group inline-flex items-center gap-2 rounded-xl border-2 border-primary px-5 py-2.5 text-[13.5px] font-semibold text-primary transition-all hover:bg-primary hover:text-white">
+                        <span class="transition-transform group-hover:-translate-x-1">←</span> Ver Project Overview
+                    </a>
+                </div>
+
+                <!-- Derecha: composición de producto (asset real) -->
+                <div class="relative">
+                    <div class="overflow-hidden rounded-[18px] border border-[#e9edf2] bg-white shadow-showcase">
+                        <img loading="lazy" src="../assets/projects/satelock/hero-dashboard.png" alt="Satelock — dashboard de monitoreo de rutas e incidencias" class="block w-full" />
+                    </div>
+                    <div class="absolute -right-3 -top-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex">
+                        <span class="ic" data-icon="satelock" style="font-size:15px;color:#2563eb"></span>
+                        <div>
+                            <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8]">Time to First Action</div>
+                            <div class="text-[13px] font-bold text-[#0f172a]">15 min → 11.25 min</div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-3 -left-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex">
+                        <span class="ic" data-icon="verified" style="font-size:15px;color:#16a34a"></span>
+                        <div>
+                            <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8]">Carga operativa</div>
+                            <div class="text-[13px] font-bold text-[#0f172a]">−40%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <!-- ================= DESAFÍO ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-20">
-            <div class="mb-12 mt-12">
-                <h2 class="mb-4 text-[28px] font-bold sm:text-[32px]">El Desafío: Brecha de Usabilidad</h2>
-                <div class="h-1 w-16 rounded bg-electric"></div>
-            </div>
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-                <div class="flex flex-col rounded-[30px] border border-[#e9edf2] bg-[#f7f8fa] p-8 transition-transform duration-300 hover:-translate-y-1.5 hover:bg-[#eef1f5] sm:p-12">
-                    <div class="mb-8 flex items-center gap-4">
-                        <span class="ic" data-icon="warning" style="font-size:26px;color:#d97706"></span>
-                        <h3 class="text-[22px] font-semibold">El Problema</h3>
-                    </div>
-                    <p class="mb-10 text-[15px] leading-[1.7] text-[#64748b]">
-                        Los sistemas legados presentaban una carga cognitiva abrumadora para los operadores.
-                        La falta de respuesta en tiempo real y una arquitectura de información fragmentada
-                        provocaban retrasos críticos en la detección de incidentes.
-                    </p>
-                    <ul class="status-cross flex flex-col gap-4 text-[14px] text-[#475569]">
-                        <li>Tiempos de respuesta superiores a 15 minutos.</li>
-                        <li>Interfaz no adaptativa (Desktop-only).</li>
-                    </ul>
-                </div>
-                <div class="flex flex-col rounded-[30px] border border-[#e9edf2] bg-[#f7f8fa] p-8 transition-transform duration-300 hover:-translate-y-1.5 hover:bg-[#eef1f5] sm:p-12">
-                    <div class="mb-8 flex items-center gap-4">
-                        <span class="ic" data-icon="verified" style="font-size:26px;color:#16a34a"></span>
-                        <h3 class="text-[22px] font-semibold">La Solución</h3>
-                    </div>
-                    <p class="mb-10 text-[15px] leading-[1.7] text-[#64748b]">
-                        Una plataforma centralizada basada en Atomic Design que optimiza la toma de decisiones
-                        mediante visualización predictiva y una jerarquía visual clara diseñada para entornos
-                        de alta presión.
-                    </p>
-                    <ul class="status-check flex flex-col gap-4 text-[14px] text-[#475569]">
-                        <li>Monitoreo en tiempo real con latencia &lt; 1s.</li>
-                        <li>Ecosistema responsivo y notificaciones inteligentes.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ================= ROL & IMPACTO ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-12">
-            <div class="mb-10">
-                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">ROL &amp; IMPACTO</span>
-                <p class="max-w-[980px] text-[17px] font-light leading-[1.6] text-[#475569] sm:text-[20px]">Rediseñé el dashboard de monitoreo en tiempo real, validado con shadowing de operadores y mapas de calor.</p>
-            </div>
-            <div class="mb-6 grid grid-cols-2 gap-6 rounded-[24px] border border-[#e9edf2] bg-card p-8 lg:grid-cols-4 sm:p-10">
-                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">MI ROL</span><p class="text-[16px] font-semibold text-[#0f172a]">UX/UI Designer</p><p class="mt-0.5 text-[12px] text-dim">Research · Design System · Prototipo</p></div>
-                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">EQUIPO</span><p class="text-[16px] font-semibold text-[#0f172a]">Monitoreo + Ingeniería</p></div>
-                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">DURACIÓN</span><p class="text-[16px] font-semibold text-[#0f172a]">≈ 12 semanas</p></div>
-                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">HERRAMIENTAS</span><p class="text-[16px] font-semibold text-[#0f172a]">Hotjar · GA4 · Figma · React</p></div>
-            </div>
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">−40%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Carga operativa</p><p class="mt-1 text-[12px] leading-snug text-dim">Tiempo de tarea · shadowing 48h + Hotjar</p></div>
-                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">−25%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Reacción ante alertas</p><p class="mt-1 text-[12px] leading-snug text-dim">Mapas de calor y grabaciones en Hotjar</p></div>
-                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline gap-2"><span class="text-[16px] font-medium text-[#94a3b8] line-through">78%</span><span class="text-[15px] text-[#94a3b8]">→</span><span class="text-[34px] font-bold leading-none text-electric">92%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Success rate (primer uso)</p><p class="mt-1 text-[12px] leading-snug text-dim">Pruebas moderadas con 50+ usuarios</p></div>
-                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">50+</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Usuarios evaluados</p><p class="mt-1 text-[12px] leading-snug text-dim">Tests moderados y no moderados</p></div>
-            </div>
-            <p class="mt-5 text-[12px] text-dim">Métricas medidas contra la línea base previa a cada rediseño. Valores relativos salvo indicación contraria.</p>
-        </section>
-
-        <!-- ================= RESEARCH DEEP DIVE ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-20">
-            <div class="mb-10">
-                <h2 class="mb-2 text-[28px] font-bold sm:text-[32px]">UX Research Deep Dive</h2>
-                <p class="text-[15px] text-[#64748b]">Identificando los puntos de fricción en la monitorización de activos críticos en tiempo real.</p>
-            </div>
-            <div class="grid grid-cols-1 items-start gap-5 lg:grid-cols-[310px_1fr]">
-                <!-- Sidebar personas -->
-                <div class="rounded-[35px] border border-[#edf0f4] bg-card p-9">
-                    <div class="mb-8 flex items-center gap-4">
-                        <span class="ic" data-icon="profile" style="font-size:30px;color:#2563eb"></span>
-                        <h3 class="text-[26px] font-bold leading-[1.1]">User <br />Personas</h3>
-                    </div>
-                    <div class="mb-3 rounded-[20px] border border-[#e9edf2] bg-[#eef1f5] px-6 py-5">
-                        <span class="mb-1.5 block text-[14px] font-bold text-electric">Particular</span>
-                        <p class="text-[12px] leading-[1.4] text-[#64748b]">Enfoque en seguridad individual y alertas rápidas.</p>
-                    </div>
-                    <div class="rounded-[20px] bg-white px-6 py-5">
-                        <span class="mb-1.5 block text-[14px] font-bold text-electric">Líder de Flota</span>
-                        <p class="text-[12px] font-medium leading-[1.4] text-black/50">Gestión masiva, analítica avanzada y optimización 24/7.</p>
-                    </div>
-                </div>
-                <!-- Journey map -->
-                <div class="rounded-[35px] border border-[#edf0f4] bg-card p-9">
-                    <div class="mb-8 flex items-center gap-4">
-                        <span class="ic" data-icon="process" style="font-size:30px;color:#2563eb"></span>
-                        <h3 class="text-[26px] font-bold leading-[1.1]">Journey Mapping Analysis</h3>
-                    </div>
-                    <div class="relative py-12">
-                        <div class="absolute left-10 right-10 top-[89px] h-px bg-[#e7ebf1]"></div>
-                        <div class="relative z-[5] grid grid-cols-2 gap-8 sm:grid-cols-4">
-                            <div class="flex flex-col items-center text-center">
-                                <div class="mb-6 h-[18px] w-[18px] rounded-full border-2 border-electric bg-electric shadow-[0_0_15px_rgba(74,111,255,0.4)]"></div>
-                                <span class="mb-2.5 text-[9px] font-bold tracking-[1px] text-[#aab4c0]">DETECCIÓN</span>
-                                <p class="text-[12.5px] leading-[1.3] text-[#334155]">Alerta en <br />tiempo real</p>
-                            </div>
-                            <div class="flex flex-col items-center text-center">
-                                <div class="mb-6 h-[18px] w-[18px] rounded-full border-2 border-electric bg-electric shadow-[0_0_15px_rgba(74,111,255,0.4)]"></div>
-                                <span class="mb-2.5 text-[9px] font-bold tracking-[1px] text-[#aab4c0]">EVALUACIÓN</span>
-                                <p class="text-[12.5px] font-semibold leading-[1.3] text-electric">Fricción Crítica: <br />Latencia</p>
-                            </div>
-                            <div class="flex flex-col items-center text-center">
-                                <div class="mb-6 h-[18px] w-[18px] rounded-full border-2 border-[#cfd6df] bg-card"></div>
-                                <span class="mb-2.5 text-[9px] font-bold tracking-[1px] text-[#aab4c0]">ACCIÓN</span>
-                                <p class="text-[12.5px] leading-[1.3] text-[#334155]">Protocolo de <br />bloqueo</p>
-                            </div>
-                            <div class="flex flex-col items-center text-center">
-                                <div class="mb-6 h-[18px] w-[18px] rounded-full border-2 border-[#cfd6df] bg-card"></div>
-                                <span class="mb-2.5 text-[9px] font-bold tracking-[1px] text-[#aab4c0]">RESOLUCIÓN</span>
-                                <p class="text-[12.5px] leading-[1.3] text-[#334155]">Reporte de <br />incidente</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= IA WORKFLOW ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-20 text-center">
-            <div class="mb-14">
-                <h2 class="mb-4 text-[32px] font-bold tracking-[-0.02em] sm:text-[42px]">IA &amp; Creative Workflow</h2>
-                <p class="mx-auto max-w-[700px] text-[16px] leading-[1.6] text-[#64748b]">Integrando herramientas de inteligencia artificial para acelerar la producción de alta fidelidad sin comprometer la calidad.</p>
-            </div>
-            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-card p-8 text-left sm:p-11">
-                    <div class="mb-6 flex items-center gap-4">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#a855f7]/10"><span class="ic" data-icon="ai-workflow" style="font-size:20px;color:#2563eb"></span></div>
-                        <h3 class="text-[22px] font-semibold">Midjourney Integration</h3>
-                    </div>
-                    <p class="mb-9 flex-1 text-[14px] leading-[1.6] text-[#64748b]">Generación de mapa de Empatía donde el usuario pasa un recorrido de emociones por todo el servicio que tiene que hacer para llegar al objetivo final, medimos los resultados y armamos un esquema.</p>
-                    <div class="w-full overflow-hidden rounded-3xl leading-[0]"><img loading="lazy" src="../assets/projects/satelock/journey-map.png" alt="Mapa de empatía — recorrido emocional del usuario" class="block w-full object-cover" /></div>
-                </div>
-                <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-card p-8 text-left sm:p-11">
-                    <div class="mb-6 flex items-center gap-4">
-                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-[#ef4444]/10"><span class="ic" data-icon="process" style="font-size:20px;color:#2563eb"></span></div>
-                        <h3 class="text-[22px] font-semibold">STICH (IA) Integration</h3>
-                    </div>
-                    <p class="mb-9 flex-1 text-[14px] leading-[1.6] text-[#64748b]">Uso de Stitch para la generación de texturas dinámicas, recursos visuales abstractos y apoyo en la creación de interfaces, facilitando la exploración rápida de estilos visuales y conceptos de diseño para el dashboard.</p>
-                    <div class="w-full overflow-hidden rounded-3xl bg-[#1a1a1c] leading-[0]"><img loading="lazy" src="../assets/projects/satelock/stitch-board.png" alt="Stitch (IA) — exploración de dashboard" class="block w-full object-cover" /></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= DESIGN SYSTEM ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-20">
-            <div class="mb-14">
-                <h2 class="mb-6 text-[32px] font-bold tracking-[-0.02em] sm:text-[48px]">Design System: Atomic Strategy</h2>
-                <p class="max-w-[950px] text-[16px] leading-[1.6] text-[#64748b]">Implementamos una arquitectura de diseño atómica para asegurar la escalabilidad. La decisión de un <span class="font-semibold text-electric">Dark Theme</span> fue fundamental: reducir la fatiga ocular de los operadores que supervisan pantallas durante turnos de 8 a 12 horas.</p>
-            </div>
-            <div class="grid grid-cols-1 gap-5 md:grid-cols-2">
-                <div class="flex flex-col rounded-[20px] border border-[#e9edf2] bg-card p-10 transition-all duration-300 hover:border-electric/20 hover:bg-[#f3f5f8]">
-                    <span class="mb-4 text-[11px] font-bold tracking-[0.15em] text-electric">ÁTOMOS Y MOLÉCULAS</span>
-                    <p class="max-w-[400px] text-[14px] leading-[1.6] text-[#64748b]">Definición de estilos base, inputs y componentes funcionales interdependientes para una interfaz cohesiva.</p>
-                </div>
-                <div class="flex flex-col rounded-[20px] border border-[#e9edf2] bg-card p-10 transition-all duration-300 hover:border-electric/20 hover:bg-[#f3f5f8]">
-                    <span class="mb-4 text-[11px] font-bold tracking-[0.15em] text-electric">ORGANISMOS</span>
-                    <p class="max-w-[400px] text-[14px] leading-[1.6] text-[#64748b]">Estructuras complejas como dashboards de control y paneles de monitorización multiactivo.</p>
-                </div>
-                <div class="flex flex-col rounded-[20px] border border-[#e9edf2] bg-[#f6f7f9] p-10 transition-all duration-300 hover:border-electric/20 md:col-span-2">
-                    <span class="mb-4 text-[11px] font-bold tracking-[0.15em] text-[#0f172a]">PROTOTIPADO AVANZADO</span>
-                    <p class="max-w-[600px] text-[14px] leading-[1.6] text-[#64748b]">Simulación de flujos de usuario complejos y micro-interacciones de alta fidelidad para validar la ergonomía digital antes de la implementación final.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= USABILITY TESTING ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-20 text-center">
-            <div class="mb-14">
-                <h2 class="mb-5 text-[28px] font-bold tracking-[-0.01em] sm:text-[36px]">Usability Testing &amp; User Validation Report with Hotjar</h2>
-                <p class="mx-auto max-w-[800px] text-[16px] leading-[1.6] text-[#64748b]">Validación rigurosa mediante metodologías cualitativas y cuantitativas para asegurar la viabilidad del diseño.</p>
-            </div>
-            <div class="mb-14 w-full overflow-hidden rounded-3xl border border-[#e9edf2]"><img loading="lazy" src="../assets/projects/satelock/heatmap.png" alt="Hotjar — heatmap de atención sobre el panel de entregas" class="block w-full" /></div>
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-                <div class="rounded-3xl border border-[#edf0f4] bg-card p-10 text-left transition-transform duration-300 hover:-translate-y-2 hover:border-electric/20">
-                    <span class="mb-4 block text-[42px] font-bold text-electric">50+</span>
-                    <h4 class="mb-4 text-[18px] font-semibold">Usuarios Evaluados</h4>
-                    <p class="text-[14px] leading-[1.5] text-[#64748b]">Pruebas moderadas y no moderadas para validar la intuitividad de la interfaz.</p>
-                </div>
-                <div class="rounded-3xl border border-[#edf0f4] bg-card p-10 text-left transition-transform duration-300 hover:-translate-y-2 hover:border-electric/20">
-                    <span class="mb-4 block text-[42px] font-bold text-electric">48h+</span>
-                    <h4 class="mb-4 text-[18px] font-semibold">Shadowing Sessions</h4>
-                    <p class="text-[14px] leading-[1.5] text-[#64748b]">Observación directa de operadores en su entorno de trabajo real para detectar fricciones invisibles.</p>
-                </div>
-                <div class="rounded-3xl border border-[#edf0f4] bg-card p-10 text-left transition-transform duration-300 hover:-translate-y-2 hover:border-electric/20">
-                    <span class="mb-4 block text-[42px] font-bold text-electric">92%</span>
-                    <h4 class="mb-4 text-[18px] font-semibold">Success Rate</h4>
-                    <p class="text-[14px] leading-[1.5] text-[#64748b]">Tasa de éxito en la realización de tareas críticas durante el primer uso del dashboard renovado.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= DEV & SCALABILITY ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-20">
-            <div class="grid grid-cols-1 items-center gap-16 lg:grid-cols-2">
+        <!-- ================= PROJECT INFO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid border-y border-[#e9edf2] py-6">
+            <div class="grid grid-cols-2 gap-6 sm:grid-cols-4">
                 <div>
-                    <div class="mb-10 flex items-center gap-4">
-                        <span class="ic" data-icon="tech-js" style="font-size:30px;color:#2563eb"></span>
-                        <h2 class="text-[28px] font-bold sm:text-[32px]">Development &amp; Scalability</h2>
-                    </div>
-                    <div class="mb-9">
-                        <div class="mb-2.5 flex items-center gap-3">
-                            <span class="ic" data-icon="verified" style="font-size:22px;color:#16a34a"></span>
-                            <h3 class="text-[18px] font-semibold">React Architecture</h3>
-                        </div>
-                        <p class="pl-[34px] text-[14px] leading-[1.6] text-[#64748b]">Uso de Custom Hooks para la gestión de WebSockets y estados globales complejos con Redux Toolkit.</p>
-                    </div>
-                    <div>
-                        <div class="mb-2.5 flex items-center gap-3">
-                            <span class="ic" data-icon="verified" style="font-size:22px;color:#16a34a"></span>
-                            <h3 class="text-[18px] font-semibold">Performance First</h3>
-                        </div>
-                        <p class="pl-[34px] text-[14px] leading-[1.6] text-[#64748b]">Implementación de Memoization y Virtualización de listas para manejar +5000 activos simultáneos.</p>
-                    </div>
+                    <span class="mb-1.5 block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Mi Rol</span>
+                    <p class="text-[13.5px] font-semibold text-[#0f172a]">Product Strategic Designer</p>
+                    <p class="text-[11.5px] text-dim">Product Strategy · Research · UX · Data</p>
                 </div>
-                <div class="rounded-[35px] border border-electric/20 bg-gradient-to-br from-[#dfe9fb] to-[#eef3fc] p-8 shadow-[0_30px_60px_rgba(0,0,0,0.4)] sm:p-12">
-                    <div class="mb-11 flex items-center gap-3">
-                        <span class="ic" data-icon="verified" style="font-size:20px;color:#16a34a"></span>
-                        <h3 class="text-[22px] font-semibold">Validation &amp; KPIs</h3>
-                    </div>
-                    <div class="mb-10 flex gap-12 border-b border-[#e9edf2] pb-10">
-                        <div>
-                            <span class="mb-1 block text-[48px] font-bold text-electric">-40%</span>
-                            <span class="text-[11px] font-bold tracking-[1px] text-[#94a3b8]">CARGA OPERATIVA</span>
-                        </div>
-                        <div>
-                            <span class="mb-1 block text-[48px] font-bold text-electric">98%</span>
-                            <span class="text-[11px] font-bold tracking-[1px] text-[#94a3b8]">UPTIME UI</span>
-                        </div>
-                    </div>
-                    <p class="text-[14px] italic leading-[1.6] text-[#64748b]">"Los heatmaps confirmaron que la nueva jerarquía visual redujo el tiempo de reacción ante alertas en un 25%."</p>
+                <div>
+                    <span class="mb-1.5 block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Equipo</span>
+                    <p class="text-[13.5px] font-semibold text-[#0f172a]">Producto · Diseño · Desarrollo</p>
+                </div>
+                <div>
+                    <span class="mb-1.5 block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Plataforma</span>
+                    <p class="text-[13.5px] font-semibold text-[#0f172a]">Web (operación)</p>
+                </div>
+                <div>
+                    <span class="mb-1.5 block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Herramientas</span>
+                    <p class="text-[13.5px] font-semibold text-[#0f172a]">Figma · Hotjar · GA4</p>
                 </div>
             </div>
         </section>
 
-        <!-- ================= SOLUCIÓN MOCKUP ================= -->
-        <!-- GALERÍA SATELOCK -->
-<section class="mx-auto flex w-[90%] max-w-grid flex-col items-center px-0 pb-12 pt-20 text-center">
+        <!-- ================= DEEP DIVE TIMELINE ================= -->
+        <div class="mx-auto w-[90%] max-w-grid">
 
-    <!-- Encabezado -->
-    <div class="mb-12 max-w-[800px]">
-        <span class="mb-8 block text-[11px] font-bold uppercase tracking-[0.15em] text-royal">
-            GALERIA DE IMÁGENES
-        </span>
+            <!-- 01 — CONTEXTO -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">01</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Contexto</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">01 — Contexto</span>
+                    <h2 class="mb-4 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Cada minuto sin responder a una incidencia tiene costo operativo.</h2>
 
-        <h2 class="mb-8 text-[32px] font-bold leading-[1.1] text-[#0f172a] sm:text-[48px]">
-            Menos fricción y mas control: la nueva experiencia de Satelock
-        </h2>
+                    <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.1fr] lg:gap-14">
+                        <!-- Contexto y problema -->
+                        <div>
+                            <p class="mb-3 text-[14px] leading-[1.65] text-[#475569]">
+                                Satelock es una plataforma de monitoreo de activos y flotas donde detectar y responder rápidamente ante incidencias es crítico.
+                            </p>
+                            <p class="text-[14px] leading-[1.65] text-[#475569]">
+                                El problema no era solo de interfaz: alta carga cognitiva, información fragmentada y dificultad para priorizar alertas. <span class="font-semibold text-[#0f172a]">El tiempo de respuesta promedio superaba los 15 minutos.</span>
+                            </p>
+                        </div>
 
-        <div class="flex flex-wrap justify-center gap-4">
-            <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">
-                Gestión en tiempo real
-            </span>
+                        <!-- ¿Quiénes participan? -->
+                        <div>
+                            <span class="mb-6 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric">¿Quiénes participan?</span>
+                            <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
+                                <div>
+                                    <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="profile" style="font-size:19px;color:#2563eb"></span></div>
+                                    <h3 class="mb-1 text-[13.5px] font-bold text-[#0f172a]">Operador</h3>
+                                    <p class="text-[12px] leading-[1.5] text-[#64748b]">Monitorea alertas, evalúa incidencias y ejecuta acciones.</p>
+                                </div>
+                                <div>
+                                    <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="verified" style="font-size:19px;color:#2563eb"></span></div>
+                                    <h3 class="mb-1 text-[13.5px] font-bold text-[#0f172a]">Supervisor</h3>
+                                    <p class="text-[12px] leading-[1.5] text-[#64748b]">Supervisa la operación, prioridades y resolución de incidencias.</p>
+                                </div>
+                                <div>
+                                    <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="satelock" style="font-size:19px;color:#2563eb"></span></div>
+                                    <h3 class="mb-1 text-[13.5px] font-bold text-[#0f172a]">Plataforma</h3>
+                                    <p class="text-[12px] leading-[1.5] text-[#64748b]">Centraliza activos, ubicación, alertas y estados operativos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">
-                Captura de evidencia
-            </span>
+            <!-- 02 — BUSINESS GOALS -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">02</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Business Goals</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">02 — Business Goals</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">¿Qué necesitaba conseguir la operación?</h2>
 
-            <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">
-                Seguimiento detallado
-            </span>
+                    <div class="mb-6 grid grid-cols-1 gap-5 sm:grid-cols-3">
+                        <div class="flex items-start gap-3">
+                            <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-electric/10">
+                                <span class="ic" data-icon="gauge" style="font-size:16px;color:#2563eb"></span>
+                            </div>
+                            <div>
+                                <h3 class="mb-0.5 text-[13.5px] font-semibold text-[#0f172a]">Reducir tiempo de reacción</h3>
+                                <p class="text-[12px] leading-[1.45] text-[#64748b]">Permitir actuar más rápido ante incidencias.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-electric/10">
+                                <span class="ic" data-icon="funnel" style="font-size:16px;color:#2563eb"></span>
+                            </div>
+                            <div>
+                                <h3 class="mb-0.5 text-[13.5px] font-semibold text-[#0f172a]">Reducir carga operativa</h3>
+                                <p class="text-[12px] leading-[1.45] text-[#64748b]">Disminuir navegación, búsqueda y esfuerzo innecesario.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-electric/10">
+                                <span class="ic" data-icon="target" style="font-size:16px;color:#2563eb"></span>
+                            </div>
+                            <div>
+                                <h3 class="mb-0.5 text-[13.5px] font-semibold text-[#0f172a]">Aumentar claridad operacional</h3>
+                                <p class="text-[12px] leading-[1.45] text-[#64748b]">Priorizar información crítica para facilitar decisiones.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-x-2.5 gap-y-2 border-t border-[#eef1f5] pt-5 text-[12px] font-semibold text-[#0f172a]">
+                        <span class="text-[9.5px] font-bold uppercase tracking-[0.1em] text-[#94a3b8]">Efecto en cascada</span>
+                        <span class="text-[#c3cbd8]">·</span>
+                        <span>Operational Efficiency</span><span class="text-electric">→</span>
+                        <span>Menor esfuerzo</span><span class="text-electric">→</span>
+                        <span>Respuesta más rápida</span><span class="text-electric">→</span>
+                        <span class="text-electric">Mayor capacidad operativa</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 03 — ECONOMÍA OPERATIVA -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">03</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Economía Operativa</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">03 — Economía Operativa</span>
+                    <div class="mb-4 flex flex-wrap items-center gap-3">
+                        <h2 class="text-[22px] font-bold leading-[1.2] sm:text-[26px]">¿Cuánto cuesta operativamente un tiempo de reacción lento?</h2>
+                        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#fbbf24] bg-[#fffbeb] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#d97706]">⚠ Modelo Operativo Estimado</span>
+                    </div>
+
+                    <div class="mb-4 rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                        <div class="flex flex-wrap items-center gap-3 text-center text-[13px] font-semibold sm:flex-nowrap">
+                            <div class="rounded-lg bg-white px-4 py-3 border border-[#e9edf2]"><div class="text-[18px] font-bold text-[#0f172a]">10</div><div class="text-[10px] text-[#94a3b8]">operadores</div></div>
+                            <span class="text-[16px] text-[#94a3b8]">×</span>
+                            <div class="rounded-lg bg-white px-4 py-3 border border-[#e9edf2]"><div class="text-[18px] font-bold text-[#0f172a]">160h</div><div class="text-[10px] text-[#94a3b8]">/ operador / mes</div></div>
+                            <span class="text-[16px] text-[#94a3b8]">×</span>
+                            <div class="rounded-lg bg-white px-4 py-3 border border-[#e9edf2]"><div class="text-[18px] font-bold text-[#0f172a]">S/18</div><div class="text-[10px] text-[#94a3b8]">costo / hora</div></div>
+                            <span class="text-[16px] text-[#94a3b8]">=</span>
+                            <div class="rounded-lg border-2 border-electric bg-electric/5 px-4 py-3"><div class="text-[18px] font-bold text-electric">S/28,800</div><div class="text-[10px] text-[#475569]">costo operativo / mes</div></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                            <div class="text-[10px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1.5">Volumen operativo</div>
+                            <div class="text-[26px] font-bold leading-none text-electric">≈2,400</div>
+                            <div class="mt-1.5 text-[12px] text-[#64748b]">incidencias / mes</div>
+                        </div>
+                        <div class="rounded-[16px] border-2 border-[#fde68a] bg-[#fffbeb] p-5">
+                            <div class="text-[10px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1.5">Baseline</div>
+                            <div class="text-[26px] font-bold leading-none text-[#0f172a]">15 min</div>
+                            <div class="mt-1.5 text-[12px] text-[#64748b]">promedio para evaluar y realizar primera acción ≈ <strong class="text-[#0f172a]">600 horas operativas / mes</strong></div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-[12px] border border-[#e9edf2] bg-[#f7f8fa] p-4 text-[11.5px] leading-[1.55] text-[#64748b]">
+                        <strong class="text-[#0f172a]">ⓘ Disclaimer:</strong> Modelo económico estimado para fines del case study. Los valores financieros y operativos utilizan supuestos y no representan información financiera oficial de Satelock.
+                    </div>
+                </div>
+            </section>
+
+            <!-- 04 — PRODUCT GOALS -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">04</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Product Goals</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">04 — Product Goals</span>
+                    <h2 class="mb-8 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Traducimos la eficiencia operativa en métricas de producto.</h2>
+
+                    <div class="grid grid-cols-1 gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-14">
+                        <!-- Cadena estratégica -->
+                        <div class="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-4">
+                            <div>
+                                <div class="mb-1 text-[9.5px] font-bold uppercase tracking-wide text-[#94a3b8]">Business Goal</div>
+                                <div class="text-[15px] font-bold text-[#0f172a]">Operational Efficiency</div>
+                            </div>
+                            <span class="hidden text-[20px] text-electric sm:block">→</span>
+                            <span class="text-[18px] text-electric sm:hidden">↓</span>
+                            <div>
+                                <div class="mb-1 text-[9.5px] font-bold uppercase tracking-wide text-[#94a3b8]">Product Outcome</div>
+                                <div class="text-[15px] font-bold text-[#0f172a]">Reducir esfuerzo y tiempo de respuesta</div>
+                            </div>
+                            <span class="hidden text-[20px] text-electric sm:block">→</span>
+                            <span class="text-[18px] text-electric sm:hidden">↓</span>
+                            <div>
+                                <div class="mb-1 text-[9.5px] font-bold uppercase tracking-wide text-electric">Primary Metric</div>
+                                <div class="text-[19px] font-bold text-electric">Time to First Action</div>
+                            </div>
+                        </div>
+
+                        <!-- Métricas clave -->
+                        <div>
+                            <span class="mb-4 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric">Métricas clave</span>
+                            <ul class="grid grid-cols-1 gap-x-6 gap-y-2.5 sm:grid-cols-2">
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Reaction Time</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Task Success Rate</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Operational Load</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Time to Evaluate</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Navigation Steps</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 05 — RESEARCH -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">05</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Research</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">05 — Research</span>
+                    <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Entendimos cómo trabajan los operadores antes de rediseñar.</h2>
+                    <p class="mb-8 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Observación directa, análisis de comportamiento y pruebas con usuarios.</p>
+
+                    <div class="flex flex-col gap-8 lg:flex-row lg:items-stretch">
+                        <!-- 4 métodos en fila -->
+                        <div class="grid flex-[3] grid-cols-2 gap-x-6 gap-y-7 sm:grid-cols-4">
+                            <div>
+                                <span class="mb-2.5 block text-[9.5px] font-bold uppercase tracking-wide text-electric">01 — Shadowing</span>
+                                <div class="mb-1.5 text-[22px] font-bold leading-none text-[#0f172a]">48h+</div>
+                                <p class="text-[12px] leading-[1.45] text-[#64748b]">observando la operación real.</p>
+                            </div>
+                            <div>
+                                <span class="mb-2.5 block text-[9.5px] font-bold uppercase tracking-wide text-electric">02 — Usuarios</span>
+                                <div class="mb-1.5 text-[22px] font-bold leading-none text-[#0f172a]">50+</div>
+                                <p class="text-[12px] leading-[1.45] text-[#64748b]">usuarios evaluados.</p>
+                            </div>
+                            <div>
+                                <span class="mb-2.5 block text-[9.5px] font-bold uppercase tracking-wide text-electric">03 — Hotjar</span>
+                                <div class="mb-1.5 flex h-[22px] items-center"><span class="ic" data-icon="tech-analytics" style="font-size:18px;color:#2563eb"></span></div>
+                                <p class="text-[12px] leading-[1.45] text-[#64748b]">Heatmaps y recordings para detectar patrones.</p>
+                            </div>
+                            <div>
+                                <span class="mb-2.5 block text-[9.5px] font-bold uppercase tracking-wide text-electric">04 — Usability Testing</span>
+                                <div class="mb-1.5 flex h-[22px] items-center"><span class="ic" data-icon="usability" style="font-size:18px;color:#2563eb"></span></div>
+                                <p class="text-[12px] leading-[1.45] text-[#64748b]">Pruebas moderadas y no moderadas.</p>
+                            </div>
+                        </div>
+
+                        <!-- Insight destacado -->
+                        <div class="flex-1 border-t border-[#eef1f5] pt-6 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
+                            <span class="mb-2.5 block text-[9.5px] font-bold uppercase tracking-wide text-[#94a3b8]">Insight</span>
+                            <p class="text-[13.5px] italic leading-[1.55] text-[#0f172a]">La información crítica estaba distribuida entre distintas vistas, y evaluar una incidencia exigía más esfuerzo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 06 — JOURNEY ACTUAL -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">06</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Journey Actual</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">06 — Journey Actual</span>
+                    <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Así se vive una incidencia desde el lado del operador.</h2>
+                    <p class="mb-8 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Dónde se concentraban el esfuerzo, la navegación y el tiempo de respuesta.</p>
+
+                    <div class="rounded-[16px] border border-[#e9edf2] px-5 py-7 sm:px-7">
+                        <div class="flex flex-col gap-8 sm:flex-row sm:items-start sm:gap-3">
+                            <div class="min-w-0 flex-1">
+                                <div class="mb-2 text-[9.5px] font-bold uppercase tracking-wide text-electric">01 · Detección</div>
+                                <div class="mb-2.5 flex h-8 w-8 items-center justify-center rounded-lg bg-electric/10"><span class="ic" data-icon="warning" style="font-size:16px;color:#2563eb"></span></div>
+                                <p class="mb-2 text-[13px] font-semibold text-[#0f172a]">Recibe y prioriza la alerta</p>
+                                <p class="text-[11.5px] italic leading-[1.4] text-[#94a3b8]">Las alertas compiten por atención.</p>
+                            </div>
+                            <span class="hidden pt-8 text-[16px] text-[#c3cbd8] sm:block">→</span>
+                            <div class="min-w-0 flex-1">
+                                <div class="mb-2 text-[9.5px] font-bold uppercase tracking-wide text-electric">02 · Evaluación</div>
+                                <div class="mb-2.5 flex h-8 w-8 items-center justify-center rounded-lg bg-electric/10"><span class="ic" data-icon="research" style="font-size:16px;color:#2563eb"></span></div>
+                                <p class="mb-2 text-[13px] font-semibold text-[#0f172a]">Busca contexto y valida la incidencia</p>
+                                <p class="text-[11.5px] italic leading-[1.4] text-[#94a3b8]">Información distribuida entre diferentes vistas.</p>
+                            </div>
+                            <span class="hidden pt-8 text-[16px] text-[#c3cbd8] sm:block">→</span>
+                            <div class="min-w-0 flex-1">
+                                <div class="mb-2 text-[9.5px] font-bold uppercase tracking-wide text-electric">03 · Acción</div>
+                                <div class="mb-2.5 flex h-8 w-8 items-center justify-center rounded-lg bg-electric/10"><span class="ic" data-icon="process" style="font-size:16px;color:#2563eb"></span></div>
+                                <p class="mb-2 text-[13px] font-semibold text-[#0f172a]">Ejecuta la respuesta necesaria</p>
+                                <p class="text-[11.5px] italic leading-[1.4] text-[#94a3b8]">Demasiados pasos para acciones frecuentes.</p>
+                            </div>
+                            <span class="hidden pt-8 text-[16px] text-[#c3cbd8] sm:block">→</span>
+                            <div class="min-w-0 flex-1">
+                                <div class="mb-2 text-[9.5px] font-bold uppercase tracking-wide text-electric">04 · Resolución</div>
+                                <div class="mb-2.5 flex h-8 w-8 items-center justify-center rounded-lg bg-electric/10"><span class="ic" data-icon="verified" style="font-size:16px;color:#2563eb"></span></div>
+                                <p class="mb-2 text-[13px] font-semibold text-[#0f172a]">Confirma el estado de la incidencia</p>
+                                <p class="text-[11.5px] italic leading-[1.4] text-[#94a3b8]">Poca visibilidad del estado final.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 07 — EVIDENCIA -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">07</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Evidencia</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">07 — Evidencia</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Lo que confirmó el research.</h2>
+
+                    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3"><span class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-electric"></span><span class="text-[14px] leading-[1.6] text-[#475569]">Información crítica fragmentada entre distintas vistas.</span></li>
+                            <li class="flex items-start gap-3"><span class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-electric"></span><span class="text-[14px] leading-[1.6] text-[#475569]">Alta carga cognitiva durante jornadas prolongadas.</span></li>
+                            <li class="flex items-start gap-3"><span class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-electric"></span><span class="text-[14px] leading-[1.6] text-[#475569]">Acciones frecuentes requieren navegación adicional.</span></li>
+                            <li class="flex items-start gap-3"><span class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-electric"></span><span class="text-[14px] leading-[1.6] text-[#475569]">La priorización de alertas no siempre refleja la urgencia operacional.</span></li>
+                            <li class="flex items-start gap-3"><span class="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-electric"></span><span class="text-[14px] leading-[1.6] text-[#475569]">El operador necesita contexto antes de tomar una decisión.</span></li>
+                        </ul>
+                        <div class="overflow-hidden rounded-[16px] border border-[#e9edf2] bg-white">
+                            <img loading="lazy" src="../assets/projects/satelock/heatmap.png" alt="Hotjar — heatmap de atención sobre el panel operativo" class="block w-full" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 08 — OPORTUNIDADES -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">08</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Oportunidades</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">08 — Oportunidades</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Áreas de mejora identificadas, sin convertirlas aún en features.</h2>
+
+                    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9] p-4">
+                            <div class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">A</div>
+                            <h3 class="mb-1 text-[13.5px] font-semibold leading-tight">Unificar información crítica</h3>
+                        </div>
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9] p-4">
+                            <div class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">B</div>
+                            <h3 class="mb-1 text-[13.5px] font-semibold leading-tight">Simplificar evaluación</h3>
+                        </div>
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9] p-4">
+                            <div class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">C</div>
+                            <h3 class="mb-1 text-[13.5px] font-semibold leading-tight">Mejorar priorización de alertas</h3>
+                        </div>
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9] p-4">
+                            <div class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">D</div>
+                            <h3 class="mb-1 text-[13.5px] font-semibold leading-tight">Facilitar acciones rápidas</h3>
+                        </div>
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9] p-4">
+                            <div class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">E</div>
+                            <h3 class="mb-1 text-[13.5px] font-semibold leading-tight">Reducir navegación</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 09 — PRIORIZACIÓN RICE -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">09</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">RICE</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">09 — Priorización RICE</span>
+                    <div class="mb-4 flex flex-wrap items-center gap-3">
+                        <h2 class="text-[22px] font-bold leading-[1.2] sm:text-[26px]">Priorizamos por impacto operacional, no por preferencia.</h2>
+                        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#fbbf24] bg-[#fffbeb] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#d97706]">⚠ Modelo de Priorización Simulado</span>
+                    </div>
+                    <p class="mb-5 text-[12.5px] text-[#64748b]"><span class="font-mono">RICE = Reach × Impact × Confidence ÷ Effort</span></p>
+
+                    <div class="mb-5 overflow-x-auto rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                        <div class="min-w-[520px]">
+                            <div class="mb-3 grid grid-cols-6 gap-2 border-b border-[#e9edf2] pb-2 text-[10px] font-bold uppercase tracking-wide text-[#94a3b8]">
+                                <div class="col-span-2">Oportunidad</div>
+                                <div class="text-center">Reach</div>
+                                <div class="text-center">Impact</div>
+                                <div class="text-center">Conf.</div>
+                                <div class="text-center text-electric">RICE</div>
+                            </div>
+                            <div class="space-y-1.5">
+                                <div class="grid grid-cols-6 gap-2 items-center rounded-lg border-2 border-electric bg-electric/5 px-2 py-2">
+                                    <div class="col-span-2 text-[13px] font-bold text-[#0f172a]">A · Unificar información crítica</div>
+                                    <div class="text-[12.5px] text-center text-[#475569]">6,000</div>
+                                    <div class="text-[12.5px] text-center text-[#475569]">3</div>
+                                    <div class="text-[12.5px] text-center text-[#475569]">90%</div>
+                                    <div class="text-[13px] font-bold text-center text-electric">5,400</div>
+                                </div>
+                                <div class="grid grid-cols-6 gap-2 items-center px-2 py-1.5">
+                                    <div class="col-span-2 text-[12.5px] font-medium text-[#0f172a]">B · Simplificar evaluación</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">3,800</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">2</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">80%</div>
+                                    <div class="text-[12.5px] text-center text-[#64748b]">3,040</div>
+                                </div>
+                                <div class="grid grid-cols-6 gap-2 items-center px-2 py-1.5">
+                                    <div class="col-span-2 text-[12.5px] font-medium text-[#0f172a]">C · Priorización de alertas</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">4,200</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">2</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">85%</div>
+                                    <div class="text-[12.5px] text-center text-[#64748b]">2,380</div>
+                                </div>
+                                <div class="grid grid-cols-6 gap-2 items-center px-2 py-1.5">
+                                    <div class="col-span-2 text-[12.5px] font-medium text-[#0f172a]">D · Acciones rápidas</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">3,200</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">1</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">75%</div>
+                                    <div class="text-[12.5px] text-center text-[#64748b]">1,200</div>
+                                </div>
+                                <div class="grid grid-cols-6 gap-2 items-center px-2 py-1.5">
+                                    <div class="col-span-2 text-[12.5px] font-medium text-[#0f172a]">E · Reducir navegación</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">2,500</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">1</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">70%</div>
+                                    <div class="text-[12.5px] text-center text-[#64748b]">≈583</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 rounded-[16px] border-2 border-electric bg-electric/5 px-5 py-4">
+                        <span class="ic" data-icon="trophy" style="font-size:22px;color:#2563eb"></span>
+                        <div>
+                            <div class="text-[10px] font-bold uppercase tracking-wide text-electric">Prioridad clara</div>
+                            <div class="text-[15px] font-bold text-[#0f172a]">Unificar información crítica — RICE 5,400</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10 — DECISIÓN -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">10</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Decisión</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">10 — Decisión</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Centralizar contexto antes de agregar más funcionalidades.</h2>
+
+                    <div class="mb-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                            <div class="mb-2.5 flex h-9 w-9 items-center justify-center rounded-lg bg-electric/10"><span class="ic" data-icon="rocket" style="font-size:17px;color:#2563eb"></span></div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Alto Reach</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Impacta prácticamente todas las incidencias.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                            <div class="mb-2.5 flex h-9 w-9 items-center justify-center rounded-lg bg-electric/10"><span class="ic" data-icon="target" style="font-size:17px;color:#2563eb"></span></div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Conexión directa</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Reduce el esfuerzo necesario para evaluar situaciones.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                            <div class="mb-2.5 flex h-9 w-9 items-center justify-center rounded-lg bg-electric/10"><span class="ic" data-icon="gauge" style="font-size:17px;color:#2563eb"></span></div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Esfuerzo controlado</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Permite mejorar el flujo sin reconstruir completamente el producto.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-[16px] bg-[#0f172a] px-5 py-4">
+                        <p class="text-[13.5px] leading-[1.6] text-white"><span class="font-semibold text-electric">Conclusión:</span> reducir el esfuerzo de interpretación va antes que sumar funciones.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11 — HIPÓTESIS -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">11</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Hipótesis</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">11 — Hipótesis</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Si centralizamos el contexto, el operador actúa más rápido.</h2>
+
+                    <div class="rounded-[18px] border-2 border-electric bg-electric/5 p-6 sm:p-7">
+                        <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wide text-electric">Si</span>
+                                <p class="mt-2 text-[13.5px] leading-[1.6] text-[#0f172a]">centralizamos la información crítica y reducimos la navegación necesaria para comprender una incidencia,</p>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wide text-electric">Entonces</span>
+                                <p class="mt-2 text-[13.5px] leading-[1.6] text-[#0f172a]">los operadores podrán evaluar y actuar más rápido,</p>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wide text-electric">Porque</span>
+                                <p class="mt-2 text-[13.5px] leading-[1.6] text-[#0f172a]">tendrán el contexto para decidir sin reconstruir información repartida entre vistas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12 — SOLUCIÓN -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">12</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Solución</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">12 — Solución</span>
+                    <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Una experiencia diseñada alrededor de la operación.</h2>
+                    <p class="mb-6 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Monitoreo, ubicación, alertas, detalle del activo y acciones operativas — centralizados en un mismo flujo.</p>
+
+                    <div class="flex flex-col gap-8 lg:flex-row lg:items-center">
+                        <!-- Carrusel protagonista: 1 slide activo -->
+                        <div class="min-w-0 lg:flex-[7]">
+                            <div class="sl-carousel relative overflow-hidden rounded-[18px] border border-[#e9edf2] bg-[#f6f7f9]">
+                                <div class="sl-carousel-track" id="slTrack">
+                                    <div class="sl-carousel-slide px-3 py-4">
+                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
+                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
+                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 01</span>
+                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
+                                        </div>
+                                        <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">01 — Monitoreo operativo</p>
+                                    </div>
+                                    <div class="sl-carousel-slide px-3 py-4">
+                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
+                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
+                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 02</span>
+                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
+                                        </div>
+                                        <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">02 — Seguimiento y ubicación</p>
+                                    </div>
+                                    <div class="sl-carousel-slide px-3 py-4">
+                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
+                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
+                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 03</span>
+                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
+                                        </div>
+                                        <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">03 — Gestión de alertas</p>
+                                    </div>
+                                    <div class="sl-carousel-slide px-3 py-4">
+                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
+                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
+                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 04</span>
+                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
+                                        </div>
+                                        <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">04 — Detalle del activo</p>
+                                    </div>
+                                    <div class="sl-carousel-slide px-3 py-4">
+                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
+                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
+                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 05</span>
+                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
+                                        </div>
+                                        <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">05 — Acciones operativas</p>
+                                    </div>
+                                    <div class="sl-carousel-slide px-3 py-4">
+                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
+                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
+                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 06</span>
+                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
+                                        </div>
+                                        <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">06 — Resolución y seguimiento</p>
+                                    </div>
+                                </div>
+                                <button type="button" id="slPrev" aria-label="Anterior" class="absolute left-3 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[18px] text-[#0f172a] shadow-drop transition hover:bg-electric hover:text-white">‹</button>
+                                <button type="button" id="slNext" aria-label="Siguiente" class="absolute right-3 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[18px] text-[#0f172a] shadow-drop transition hover:bg-electric hover:text-white">›</button>
+                            </div>
+                            <div class="mt-4 flex items-center justify-center gap-2" id="slDots"></div>
+                        </div>
+
+                        <!-- Beneficios de la solución (lista fija) -->
+                        <div class="lg:flex-[3]">
+                            <span class="mb-4 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric">Diseñado para actuar más rápido</span>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Información crítica centralizada</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Priorización de alertas</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Menos navegación entre vistas</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Acciones operativas accesibles</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Estado del activo visible</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Seguimiento de la incidencia</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13 — VALIDACIÓN -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">13</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Validación</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">13 — Validación</span>
+                    <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Medimos si la nueva experiencia permitía actuar más rápido.</h2>
+                    <p class="mb-8 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Contrastamos la experiencia anterior con el nuevo flujo utilizando pruebas de usabilidad y métricas operativas.</p>
+
+                    <div class="flex flex-col gap-8 lg:flex-row lg:items-start">
+                        <!-- Comparación Baseline vs Nueva Experiencia -->
+                        <div class="flex flex-shrink-0 items-center gap-3 lg:flex-col lg:items-stretch lg:gap-2.5">
+                            <div class="flex-1 rounded-lg border border-[#e9edf2] bg-[#f6f7f9] px-4 py-3 text-center lg:w-[168px]">
+                                <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1">Baseline</div>
+                                <div class="text-[13px] font-bold text-[#0f172a]">Experiencia anterior</div>
+                            </div>
+                            <span class="text-[11px] font-bold text-[#94a3b8]">VS.</span>
+                            <div class="flex-1 rounded-lg border-2 border-electric bg-electric/5 px-4 py-3 text-center lg:w-[168px]">
+                                <div class="text-[9px] font-bold uppercase tracking-wide text-electric mb-1">Nueva Experiencia</div>
+                                <div class="text-[13px] font-bold text-[#0f172a]">Rediseño Satelock</div>
+                            </div>
+                        </div>
+
+                        <!-- Métricas evaluadas -->
+                        <div class="lg:flex-1">
+                            <span class="mb-3 block text-[9.5px] font-bold uppercase tracking-wide text-[#94a3b8]">Métricas evaluadas</span>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Time to First Action</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Reaction Time</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Task Success Rate</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Time to Evaluate</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Navigation Steps</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Operational Load</li>
+                            </ul>
+                        </div>
+
+                        <!-- Métodos -->
+                        <div class="lg:flex-1">
+                            <span class="mb-3 block text-[9.5px] font-bold uppercase tracking-wide text-[#94a3b8]">Métodos</span>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Usability Testing</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Task Completion</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Time on Task</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Observación</li>
+                                <li class="flex items-center gap-2 text-[13px] text-[#0f172a]"><span class="h-1 w-1 flex-shrink-0 rounded-full bg-electric"></span>Feedback operacional</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 14 — OUTCOMES -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">14</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Outcomes</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">14 — Outcomes</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">De navegar y buscar a decidir y actuar.</h2>
+
+                    <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9]">
+                        <div class="grid grid-cols-1 divide-y divide-[#e9edf2] sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+                            <div class="px-6 py-4 text-center sm:text-left">
+                                <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1">Métrica 01</div>
+                                <div class="text-[24px] font-bold leading-none text-electric">−40%</div>
+                                <p class="mt-1 text-[12px] font-medium text-[#64748b]">Carga operativa</p>
+                            </div>
+                            <div class="px-6 py-4 text-center sm:text-left">
+                                <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1">Métrica 02</div>
+                                <div class="text-[24px] font-bold leading-none text-[#0f172a]">−25%</div>
+                                <p class="mt-1 text-[12px] font-medium text-[#64748b]">Tiempo de reacción ante alertas</p>
+                            </div>
+                            <div class="px-6 py-4 text-center sm:text-left">
+                                <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1">Métrica 03</div>
+                                <div class="flex items-baseline justify-center gap-1.5 sm:justify-start"><span class="text-[13px] font-medium text-[#94a3b8] line-through">78%</span><span class="text-[12px] text-[#94a3b8]">→</span><span class="text-[24px] font-bold leading-none text-[#0f172a]">92%</span></div>
+                                <p class="mt-1 text-[12px] font-medium text-[#64748b]">Éxito en primera interacción</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 15 — IMPACTO OPERATIVO -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">15</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Impacto Operativo</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">15 — Impacto Operativo</span>
+                    <div class="mb-6 flex flex-wrap items-center gap-3">
+                        <h2 class="text-[22px] font-bold leading-[1.2] sm:text-[26px]">Menos tiempo por incidencia libera capacidad operativa.</h2>
+                        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#fbbf24] bg-[#fffbeb] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#d97706]">⚠ Modelo Operativo Estimado</span>
+                    </div>
+                    <p class="mb-7 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Estimación del impacto potencial de reaccionar más rápido.</p>
+
+                    <div class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-panel2 p-4">
+                            <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1.5">01</div>
+                            <div class="text-[20px] font-bold leading-none text-[#0f172a]">150 h / mes</div>
+                            <p class="mt-1.5 text-[11.5px] leading-[1.4] text-[#64748b]">Capacidad operativa equivalente recuperada</p>
+                        </div>
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-panel2 p-4">
+                            <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1.5">02</div>
+                            <div class="text-[20px] font-bold leading-none text-[#0f172a]">S/ 2,700 / mes</div>
+                            <p class="mt-1.5 text-[11.5px] leading-[1.4] text-[#64748b]">Valor operativo potencial</p>
+                        </div>
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-panel2 p-4">
+                            <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1.5">03</div>
+                            <div class="text-[20px] font-bold leading-none text-[#0f172a]">S/ 32,400 / año</div>
+                            <p class="mt-1.5 text-[11.5px] leading-[1.4] text-[#64748b]">Valor operativo potencial anualizado</p>
+                        </div>
+                        <div class="rounded-[14px] border-2 border-electric bg-electric/5 p-4">
+                            <div class="text-[9px] font-bold uppercase tracking-wide text-electric mb-1.5">04</div>
+                            <div class="text-[20px] font-bold leading-none text-electric">≈ 8 meses</div>
+                            <p class="mt-1.5 text-[11.5px] leading-[1.4] text-[#64748b]">Payback estimado</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 flex flex-col gap-4 border-t border-[#eef1f5] pt-5 sm:flex-row sm:items-center sm:justify-between">
+                        <div class="flex flex-wrap items-center gap-2 text-[12px] font-medium text-[#64748b]">
+                            <span>2,400 incidencias/mes</span><span class="text-[#c3cbd8]">×</span>
+                            <span>3.75 min recuperados por incidencia</span><span class="text-[#c3cbd8]">=</span>
+                            <span class="font-semibold text-[#0f172a]">150 horas operativas recuperadas/mes</span>
+                        </div>
+                        <p class="max-w-[320px] text-[11px] leading-[1.5] text-[#94a3b8]">Modelo económico estimado para fines del case study. Los valores financieros y operativos utilizan supuestos y no representan información financiera oficial de Satelock.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 16 — APRENDIZAJES -->
+            <section class="flex gap-5 py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 h-8 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">16</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Aprendizajes</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">16 — Aprendizajes</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Lo que me llevo del producto.</h2>
+
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">01</div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Diseñar operaciones requiere entender el contexto real</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Shadowing y observación directa fueron más reveladores que cualquier entrevista aislada.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">02</div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Reducir carga cognitiva también genera eficiencia</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Menos esfuerzo mental se traduce directamente en capacidad operativa.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">03</div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Research + Data permiten priorizar problemas reales</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">RICE ayudó a decidir con criterio en vez de con preferencia.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">04</div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Una buena experiencia operacional reduce tiempo de decisión</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Centralizar contexto fue más valioso que agregar funcionalidades nuevas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </div>
-
-
-    <!-- GALERÍA -->
-    <div class="mx-auto w-full max-w-[1050px]">
-
-        <!-- =========================
-             FILA 01
-             3 móviles + Laptop + Mobile
-        ========================== -->
-        <div
-            class="
-                grid
-                grid-cols-1
-                items-center
-                gap-6
-
-                md:h-[320px]
-                md:grid-cols-[330fr_555fr_135fr]
-                md:gap-[15px]
-            "
-        >
-
-            <!-- 01 — 3 celulares -->
-            <button
-                type="button"
-                class="satelock-gallery-item flex h-full w-full items-center justify-center"
-                data-index="0"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/satelock/1sate.svg"
-                    alt="Satelock — inicio de sesión, rutas y seguimiento"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
-
-
-            <!-- 02 — Laptop -->
-            <button
-                type="button"
-                class="satelock-gallery-item flex h-full w-full items-center justify-center"
-                data-index="1"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/satelock/2sate.svg"
-                    alt="Satelock — gestión y monitoreo de rutas"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
-
-
-            <!-- 03 — Mobile -->
-            <button
-                type="button"
-                class="satelock-gallery-item flex h-full w-full items-center justify-center"
-                data-index="2"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/satelock/3sate.svg"
-                    alt="Satelock — detalle y seguimiento de ruta"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
-
-        </div>
-
-
-        <!-- =========================
-             FILA 02
-             Laptop + 3 móviles + Mobile
-        ========================== -->
-        <div
-            class="
-                mt-10
-                grid
-                grid-cols-1
-                items-center
-                gap-6
-
-                md:h-[320px]
-                md:grid-cols-[510fr_390fr_120fr]
-                md:gap-[15px]
-            "
-        >
-
-            <!-- 04 — Laptop -->
-            <button
-                type="button"
-                class="satelock-gallery-item flex h-full w-full items-center justify-center"
-                data-index="3"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/satelock/4sate.svg"
-                    alt="Satelock — dashboard de rutas y alertas"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
-
-
-            <!-- 05 — 3 celulares -->
-            <button
-                type="button"
-                class="satelock-gallery-item flex h-full w-full items-center justify-center"
-                data-index="4"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/satelock/5sate.svg"
-                    alt="Satelock — rutas, seguimiento y gestión de eventos"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
-
-
-            <!-- 06 — Mobile -->
-            <button
-                type="button"
-                class="satelock-gallery-item flex h-full w-full items-center justify-center"
-                data-index="5"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/satelock/6sate.svg"
-                    alt="Satelock — seguimiento completo de Ruta Norte"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================
-     LIGHTBOX SATELOCK
-=================================== -->
-
-<div id="satelockLightbox" class="satelock-lightbox" aria-hidden="true">
-
-    <!-- Cerrar -->
-    <button
-        id="satelockLightboxClose"
-        type="button"
-        class="satelock-lightbox-close"
-        aria-label="Cerrar galería"
-    >
-        ×
-    </button>
-
-
-    <!-- Anterior -->
-    <button
-        id="satelockLightboxPrev"
-        type="button"
-        class="satelock-lightbox-arrow satelock-lightbox-prev"
-        aria-label="Imagen anterior"
-    >
-        ‹
-    </button>
-
-
-    <!-- Contenido -->
-    <div class="satelock-lightbox-content">
-
-        <div class="satelock-lightbox-image-wrapper">
-            <img
-                id="satelockLightboxImage"
-                src=""
-                alt=""
-                class="satelock-lightbox-image"
-            />
-        </div>
-
-        <p
-            id="satelockLightboxCaption"
-            class="satelock-lightbox-caption"
-        ></p>
-
-        <div
-            id="satelockLightboxCounter"
-            class="satelock-lightbox-counter"
-        >
-            1 / 6
-        </div>
-
-    </div>
-
-
-    <!-- Siguiente -->
-    <button
-        id="satelockLightboxNext"
-        type="button"
-        class="satelock-lightbox-arrow satelock-lightbox-next"
-        aria-label="Imagen siguiente"
-    >
-        ›
-    </button>
-
-</div>
-
-
-<style>
-
-    .satelock-lightbox {
-        position: fixed;
-        inset: 0;
-
-        width: 100%;
-        height: 100%;
-
-        z-index: 999999;
-
-        display: none;
-        align-items: center;
-        justify-content: center;
-
-        background: rgba(8, 21, 45, 0.95);
-
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-
-        padding: 40px 80px;
-    }
-
-
-    .satelock-lightbox.is-open {
-        display: flex;
-    }
-
-
-    /* CONTENIDO */
-
-    .satelock-lightbox-content {
-
-        width: 100%;
-        height: 100%;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
-        justify-content: center;
-
-        pointer-events: none;
-    }
-
-
-    /* IMAGEN */
-
-    .satelock-lightbox-image-wrapper {
-
-        width: min(900px, 72vw);
-        height: min(620px, 68vh);
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-    }
-
-
-    .satelock-lightbox-image {
-
-        display: block;
-
-        max-width: 100%;
-        max-height: 100%;
-
-        width: auto;
-        height: auto;
-
-        object-fit: contain;
-
-        border-radius: 14px;
-
-        filter:
-            drop-shadow(
-                0 30px 60px rgba(0,0,0,0.35)
-            );
-
-        opacity: 1;
-
-        transition:
-            opacity 180ms ease,
-            transform 220ms ease;
-
-        pointer-events: auto;
-    }
-
-
-    /* CAPTION */
-
-    .satelock-lightbox-caption {
-
-        margin-top: 24px;
-        margin-bottom: 0;
-
-        font-size: 13px;
-        font-weight: 500;
-
-        line-height: 1.4;
-
-        color: rgba(255,255,255,0.75);
-
-        text-align: center;
-    }
-
-
-    /* CONTADOR */
-
-    .satelock-lightbox-counter {
-
-        margin-top: 12px;
-
-        padding: 7px 14px;
-
-        border-radius: 999px;
-
-        background: rgba(0,0,0,0.30);
-
-        color: #ffffff;
-
-        font-size: 12px;
-        font-weight: 600;
-    }
-
-
-    /* CERRAR */
-
-    .satelock-lightbox-close {
-
-        position: absolute;
-
-        top: 32px;
-        right: 40px;
-
-        width: 48px;
-        height: 48px;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        border: 0;
-
-        border-radius: 999px;
-
-        background: rgba(255,255,255,0.10);
-
-        color: white;
-
-        font-size: 30px;
-        font-weight: 300;
-
-        line-height: 1;
-
-        cursor: pointer;
-
-        transition:
-            background 180ms ease,
-            transform 180ms ease;
-    }
-
-
-    .satelock-lightbox-close:hover {
-
-        background: rgba(255,255,255,0.18);
-
-        transform: scale(1.06);
-    }
-
-
-    /* FLECHAS */
-
-    .satelock-lightbox-arrow {
-
-        position: absolute;
-
-        top: 50%;
-
-        width: 52px;
-        height: 52px;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
-        transform: translateY(-50%);
-
-        border: 0;
-
-        border-radius: 999px;
-
-        background: rgba(255,255,255,0.10);
-
-        color: #ffffff;
-
-        font-size: 34px;
-        font-weight: 300;
-
-        cursor: pointer;
-
-        transition:
-            background 180ms ease,
-            transform 180ms ease;
-    }
-
-
-    .satelock-lightbox-arrow:hover {
-
-        background: rgba(255,255,255,0.18);
-    }
-
-
-    .satelock-lightbox-prev {
-
-        left: 40px;
-    }
-
-
-    .satelock-lightbox-next {
-
-        right: 40px;
-    }
-
-
-    /* MOBILE */
-
-    @media (max-width: 768px) {
-
-        .satelock-lightbox {
-
-            padding: 24px;
-        }
-
-
-        .satelock-lightbox-image-wrapper {
-
-            width: 88vw;
-            height: 65vh;
-        }
-
-
-        .satelock-lightbox-prev {
-
-            left: 12px;
-        }
-
-
-        .satelock-lightbox-next {
-
-            right: 12px;
-        }
-
-
-        .satelock-lightbox-arrow {
-
-            width: 44px;
-            height: 44px;
-
-            font-size: 28px;
-        }
-
-
-        .satelock-lightbox-close {
-
-            top: 20px;
-            right: 20px;
-
-            width: 44px;
-            height: 44px;
-        }
-
-
-        .satelock-lightbox-caption {
-
-            margin-top: 18px;
-        }
-    }
-
-</style>
-
-
-<script>
-
-    const satelockGallery = [
-
-        {
-            src: "../assets/projects/satelock/1sate.svg",
-            caption: "Inicio, rutas asignadas y seguimiento"
-        },
-
-        {
-            src: "../assets/projects/satelock/2sate.svg",
-            caption: "Gestión y monitoreo de rutas"
-        },
-
-        {
-            src: "../assets/projects/satelock/3sate.svg",
-            caption: "Detalle y seguimiento en tiempo real"
-        },
-
-        {
-            src: "../assets/projects/satelock/4sate.svg",
-            caption: "Dashboard operativo de rutas"
-        },
-
-        {
-            src: "../assets/projects/satelock/5sate.svg",
-            caption: "Gestión, evidencia y estados de la ruta"
-        },
-
-        {
-            src: "../assets/projects/satelock/6sate.svg",
-            caption: "Seguimiento detallado de Ruta Norte"
-        }
-
-    ];
-
-
-    const satelockLightbox =
-        document.getElementById("satelockLightbox");
-
-
-    const satelockLightboxImage =
-        document.getElementById("satelockLightboxImage");
-
-
-    const satelockLightboxCaption =
-        document.getElementById("satelockLightboxCaption");
-
-
-    const satelockLightboxCounter =
-        document.getElementById("satelockLightboxCounter");
-
-
-    const satelockLightboxClose =
-        document.getElementById("satelockLightboxClose");
-
-
-    const satelockLightboxPrev =
-        document.getElementById("satelockLightboxPrev");
-
-
-    const satelockLightboxNext =
-        document.getElementById("satelockLightboxNext");
-
-
-    const satelockGalleryItems =
-        document.querySelectorAll(".satelock-gallery-item");
-
-
-    let currentSatelockIndex = 0;
-
-
-    function renderSatelockLightbox() {
-
-        const item =
-            satelockGallery[currentSatelockIndex];
-
-
-        satelockLightboxImage.style.opacity = "0";
-
-        satelockLightboxImage.style.transform =
-            "scale(0.98)";
-
-
-        setTimeout(() => {
-
-            satelockLightboxImage.src =
-                item.src;
-
-
-            satelockLightboxCaption.textContent =
-                item.caption;
-
-
-            satelockLightboxCounter.textContent =
-                `${currentSatelockIndex + 1} / ${satelockGallery.length}`;
-
-
-            satelockLightboxImage.style.opacity =
-                "1";
-
-
-            satelockLightboxImage.style.transform =
-                "scale(1)";
-
-        }, 100);
-
-    }
-
-
-    function openSatelockLightbox(index) {
-
-        currentSatelockIndex = index;
-
-
-        renderSatelockLightbox();
-
-
-        satelockLightbox.classList.add(
-            "is-open"
-        );
-
-
-        satelockLightbox.setAttribute(
-            "aria-hidden",
-            "false"
-        );
-
-
-        document.body.style.overflow =
-            "hidden";
-    }
-
-
-    function closeSatelockLightbox() {
-
-        satelockLightbox.classList.remove(
-            "is-open"
-        );
-
-
-        satelockLightbox.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-
-        document.body.style.overflow =
-            "";
-    }
-
-
-    function nextSatelockImage() {
-
-        currentSatelockIndex =
-            (currentSatelockIndex + 1)
-            %
-            satelockGallery.length;
-
-
-        renderSatelockLightbox();
-    }
-
-
-    function previousSatelockImage() {
-
-        currentSatelockIndex =
-            (
-                currentSatelockIndex
-                - 1
-                + satelockGallery.length
-            )
-            %
-            satelockGallery.length;
-
-
-        renderSatelockLightbox();
-    }
-
-
-    satelockGalleryItems.forEach(
-        (item) => {
-
-            item.addEventListener(
-                "click",
-                () => {
-
-                    openSatelockLightbox(
-                        Number(
-                            item.dataset.index
-                        )
-                    );
-
+        <!-- ================= /DEEP DIVE TIMELINE ================= -->
+
+        <style>
+            /* Carrusel de la sección Solución (12) — scoped a esta página */
+            .sl-carousel-track { display: flex; transition: transform .45s cubic-bezier(.2,.7,.2,1); cursor: grab; }
+            .sl-carousel-track.dragging { transition: none; cursor: grabbing; }
+            .sl-carousel-slide { flex: 0 0 100%; box-sizing: border-box; }
+            .sl-dot { width: 28px; height: 28px; border-radius: 999px; background: transparent; position: relative; cursor: pointer; border: 0; padding: 0; }
+            .sl-dot::after { content: ""; position: absolute; top: 50%; left: 50%; width: 7px; height: 7px; border-radius: 999px; background: #dbe4f3; transform: translate(-50%,-50%); transition: background-color .2s ease, transform .2s ease; }
+            .sl-dot.active::after { background: #2563eb; transform: translate(-50%,-50%) scale(1.35); }
+        </style>
+
+        <script>
+            (function () {
+                var slTrack = document.getElementById("slTrack");
+                var slPrev = document.getElementById("slPrev");
+                var slNext = document.getElementById("slNext");
+                var slDotsWrap = document.getElementById("slDots");
+                if (slTrack && slDotsWrap) {
+                    var slSlides = slTrack.querySelectorAll(".sl-carousel-slide");
+                    var slIndex = 0;
+                    var slDots = [];
+
+                    slSlides.forEach(function (_, i) {
+                        var dot = document.createElement("button");
+                        dot.type = "button";
+                        dot.className = "sl-dot" + (i === 0 ? " active" : "");
+                        dot.setAttribute("aria-label", "Ir a la interfaz " + (i + 1));
+                        dot.addEventListener("click", function () { slGoTo(i); });
+                        slDotsWrap.appendChild(dot);
+                        slDots.push(dot);
+                    });
+
+                    function slSlideWidth() {
+                        return slSlides[0].getBoundingClientRect().width;
+                    }
+                    function slGoTo(i) {
+                        slIndex = Math.max(0, Math.min(i, slSlides.length - 1));
+                        slTrack.style.transform = "translateX(-" + (slIndex * slSlideWidth()) + "px)";
+                        slDots.forEach(function (d, di) { d.classList.toggle("active", di === slIndex); });
+                    }
+                    slPrev.addEventListener("click", function () { slGoTo(slIndex - 1); });
+                    slNext.addEventListener("click", function () { slGoTo(slIndex + 1); });
+                    window.addEventListener("resize", function () { slGoTo(slIndex); });
+
+                    /* Drag / swipe */
+                    var slDragging = false, slStartX = 0, slCurrentX = 0, slBaseOffset = 0;
+                    function slPointerDown(x) {
+                        slDragging = true;
+                        slStartX = x;
+                        slBaseOffset = -slIndex * slSlideWidth();
+                        slTrack.classList.add("dragging");
+                    }
+                    function slPointerMove(x) {
+                        if (!slDragging) return;
+                        slCurrentX = x;
+                        var delta = slCurrentX - slStartX;
+                        slTrack.style.transform = "translateX(" + (slBaseOffset + delta) + "px)";
+                    }
+                    function slPointerUp() {
+                        if (!slDragging) return;
+                        slDragging = false;
+                        slTrack.classList.remove("dragging");
+                        var delta = slCurrentX - slStartX;
+                        if (Math.abs(delta) > 60) {
+                            slGoTo(slIndex + (delta < 0 ? 1 : -1));
+                        } else {
+                            slGoTo(slIndex);
+                        }
+                        slCurrentX = 0;
+                    }
+                    slTrack.addEventListener("mousedown", function (e) { slPointerDown(e.clientX); });
+                    window.addEventListener("mousemove", function (e) { slPointerMove(e.clientX); });
+                    window.addEventListener("mouseup", slPointerUp);
+                    slTrack.addEventListener("touchstart", function (e) { slPointerDown(e.touches[0].clientX); }, { passive: true });
+                    slTrack.addEventListener("touchmove", function (e) { slPointerMove(e.touches[0].clientX); }, { passive: true });
+                    slTrack.addEventListener("touchend", slPointerUp);
+
+                    slGoTo(0);
                 }
-            );
+            })();
+        </script>
 
-        }
-    );
+        <!-- ================= CTA FINAL ================= -->
+        <div class="mx-auto w-[90%] max-w-grid border-t border-[#e9edf2] py-20 text-center">
+            <h2 class="mb-8 text-[26px] font-bold leading-[1.25] sm:text-[36px]">¿Quieres diseñar operaciones que también <br class="hidden sm:block" />generen <span class="text-electric">eficiencia</span>?</h2>
+            <a href="https://wa.me/51934865894?text=Hola%20Carlos%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 rounded-full bg-primary px-6 py-3.5 text-[14.5px] font-semibold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8] sm:px-9"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.717zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>Conversemos por WhatsApp</a>
+        </div>
 
-
-    satelockLightboxClose.addEventListener(
-        "click",
-        closeSatelockLightbox
-    );
-
-
-    satelockLightboxNext.addEventListener(
-        "click",
-        nextSatelockImage
-    );
-
-
-    satelockLightboxPrev.addEventListener(
-        "click",
-        previousSatelockImage
-    );
-
-
-    satelockLightbox.addEventListener(
-        "click",
-        (event) => {
-
-            if (
-                event.target
-                ===
-                satelockLightbox
-            ) {
-
-                closeSatelockLightbox();
-
-            }
-
-        }
-    );
-
-
-    document.addEventListener(
-        "keydown",
-        (event) => {
-
-            if (
-                !satelockLightbox
-                    .classList
-                    .contains("is-open")
-            ) {
-
-                return;
-
-            }
-
-
-            if (event.key === "Escape") {
-
-                closeSatelockLightbox();
-
-            }
-
-
-            if (
-                event.key
-                ===
-                "ArrowRight"
-            ) {
-
-                nextSatelockImage();
-
-            }
-
-
-            if (
-                event.key
-                ===
-                "ArrowLeft"
-            ) {
-
-                previousSatelockImage();
-
-            }
-
-        }
-    );
-
-</script> <div class="border-t border-[#e9edf2] py-24 text-center">
-                <h2 class="mb-10 text-[32px] font-bold leading-[1.2] sm:text-[48px]">Donde la oferta y la demanda <br />hablan el mismo <span class="text-electric">idioma</span>.</h2>
-                <a href="https://wa.me/51934865894?text=Hola%20Carlos%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 rounded-full bg-primary px-10 py-4 text-[16px] font-semibold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.717zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>Conversemos por WhatsApp</a>
-            </div>
-        </section>
     </main>
-    
 
     <!-- ================= NAV PROYECTOS ================= -->
     <section class="mx-auto mb-4 w-[90%] max-w-grid border-t border-[#e9edf2] pt-10">
-        <div class="flex items-center justify-between gap-4">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <a href="satelock.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
                 <span class="transition-transform group-hover:-translate-x-1">←</span>
                 <span class="text-[14px]">Volver a Satelock</span>
             </a>
-            <a href="SellerCenter.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+            <a href="SellerCenter.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a] sm:justify-end">
                 <span class="text-[14px]">Siguiente proyecto: <span class="font-semibold text-[#0f172a]">Seller Center</span></span>
                 <span class="transition-transform group-hover:translate-x-1">→</span>
             </a>
@@ -1207,7 +1045,7 @@
                     <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
                 </div>
                 <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
-                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de vanguardia.
+                    Diseño de producto orientado a datos: research, UX y decisiones medibles.
                 </p>
             </div>
             <div class="text-center md:text-right">

@@ -346,6 +346,64 @@ body.anim-ready .reveal.in {
     .grad-anim, .pulse-dot::after, .float-soft { animation: none !important; }
 }
 
+/* ============================================================
+   CTA "Explorar caso de estudio" — componente estandarizado
+   Usado en el Overview de FoodDelivery, Satelock, Seller Center y ConDuzko.
+   ============================================================ */
+.cta-explore {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 9999px;
+    padding: 16px 44px;
+    font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    color: #ffffff;
+    background-color: #2563eb;
+    box-shadow: 0 8px 24px rgba(37,99,235,0.18), 0 2px 6px rgba(15,23,42,0.08);
+    transition: transform 280ms ease, box-shadow 280ms ease, filter 280ms ease;
+    will-change: transform, box-shadow;
+}
+.cta-explore-arrow {
+    display: inline-flex;
+    align-items: center;
+    transition: transform 280ms ease;
+}
+body.anim-ready .cta-explore:hover {
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 16px 36px rgba(37,99,235,0.26), 0 4px 10px rgba(15,23,42,0.10);
+    filter: brightness(1.04);
+}
+body.anim-ready .cta-explore:hover .cta-explore-arrow {
+    transform: translateX(6px);
+}
+.cta-explore:active {
+    transform: translateY(0) scale(0.985);
+}
+.cta-explore:focus-visible {
+    outline: 3px solid rgba(37,99,235,0.35);
+    outline-offset: 3px;
+}
+
+/* Entrada al viewport: reutiliza el sistema .reveal existente (ver assets/site.js) */
+body.anim-ready .cta-explore.reveal {
+    transform: translateY(10px);
+    transition: opacity 550ms cubic-bezier(.2,.7,.2,1), transform 550ms cubic-bezier(.2,.7,.2,1);
+}
+body.anim-ready .cta-explore.reveal.in {
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cta-explore, .cta-explore-arrow { transition: none !important; }
+    body.anim-ready .cta-explore:hover,
+    body.anim-ready .cta-explore:hover .cta-explore-arrow,
+    .cta-explore:active { transform: none !important; filter: none !important; }
+}
+
 /* Título masivo de los casos de estudio (tamaño fluido) */
 .title-massive {
     font-size: clamp(34px, 8vw, 92px);
@@ -356,4 +414,315 @@ body.anim-ready .reveal.in {
     font-size: clamp(40px, 8vw, 85px);
     line-height: 1.05;
     letter-spacing: -0.04em;
+}
+
+/* ============================================================
+   Badge superior del hero — componente estandarizado
+   Usado en el Overview de FoodDelivery, Satelock, Seller Center y ConDuzko.
+   Solo cambia el texto; el margen inferior se define en cada página.
+   ============================================================ */
+.project-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: fit-content;
+    max-width: calc(100% - 8px);
+    padding: 12px 32px;
+    border: 1px solid #e0e5ec;
+    border-radius: 9999px;
+    background: #f3f5f8;
+    font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #64748b;
+}
+.project-badge__dot {
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: #2563eb;
+    box-shadow: 0 0 10px rgba(74, 111, 255, 0.8);
+}
+.project-badge__label {
+    min-width: 0;
+}
+@media (max-width: 768px) {
+    .project-badge { gap: 10px; padding: 10px 24px; font-size: 10.5px; letter-spacing: 0.09em; }
+}
+@media (max-width: 480px) {
+    .project-badge { gap: 9px; padding: 9px 18px; font-size: 10px; letter-spacing: 0.06em; }
+}
+@media (max-width: 380px) {
+    .project-badge { gap: 8px; padding: 8px 14px; font-size: 9px; letter-spacing: 0.04em; }
+}
+
+/* ============================================================
+   Navegación móvil — botón hamburguesa + drawer lateral
+   Componente global (lo construye assets/site.js). Solo < 768px;
+   en tablet/desktop se conserva el navbar actual.
+   ============================================================ */
+.nav-burger, .nav-overlay, .nav-drawer { display: none; }
+
+html.nav-lock, html.nav-lock body { overflow: hidden; }
+
+@media (max-width: 767.98px) {
+    /* Botón del menú: mismo lenguaje que el cuadrado azul del logo (34px, radio 10px), a la derecha */
+    button.nav-burger {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+        width: 34px;
+        height: 34px;
+        padding: 0;
+        border: 0;
+        border-radius: 10px;
+        background: #2563eb;
+        color: #ffffff;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 0.2s ease;
+    }
+    .nav-burger:active { transform: scale(0.95); }
+    .nav-burger:focus-visible,
+    .nav-drawer__close:focus-visible,
+    .nav-drawer__item:focus-visible,
+    .nav-drawer__about:focus-visible,
+    .nav-drawer__brand:focus-visible { outline: 2px solid #2563eb; outline-offset: 3px; }
+
+    /* ☰ → × */
+    .nav-burger__bar {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 16px;
+        height: 2px;
+        margin: -1px 0 0 -8px;
+        border-radius: 2px;
+        background: #ffffff;
+        transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+    }
+    .nav-burger__bar:nth-child(1) { transform: translateY(-5px); }
+    .nav-burger__bar:nth-child(3) { transform: translateY(5px); }
+    .nav-burger[aria-expanded="true"] .nav-burger__bar:nth-child(1) { transform: rotate(45deg); }
+    .nav-burger[aria-expanded="true"] .nav-burger__bar:nth-child(2) { opacity: 0; transform: scaleX(0.2); }
+    .nav-burger[aria-expanded="true"] .nav-burger__bar:nth-child(3) { transform: rotate(-45deg); }
+
+    /* Overlay */
+    .nav-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        background: rgba(15, 23, 42, 0.42);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.32s ease, visibility 0s linear 0.32s;
+    }
+    .nav-overlay.is-open { opacity: 1; visibility: visible; transition: opacity 0.32s ease, visibility 0s; }
+
+    /* Drawer */
+    .nav-drawer {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10001;
+        width: 88vw;
+        max-width: 380px;
+        height: 100vh;
+        height: 100dvh;
+        padding: 22px 20px calc(28px + env(safe-area-inset-bottom, 0px));
+        background: #ffffff;
+        box-shadow: -30px 0 70px rgba(15, 23, 42, 0.18);
+        font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.36s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 0.36s;
+    }
+    .nav-drawer.is-open {
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 0.36s cubic-bezier(0.22, 1, 0.36, 1), visibility 0s;
+    }
+
+    .nav-drawer__head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid #e4e8ee;
+    }
+    .nav-drawer__brand {
+        display: block;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.3;
+        color: #0f172a;
+        text-decoration: none;
+    }
+    .nav-drawer__role {
+        margin: 4px 0 0;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        color: #64748b;
+    }
+    button.nav-drawer__close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        border: 1px solid #e4e8ee;
+        border-radius: 10px;
+        background: #ffffff;
+        color: #0f172a;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.2s ease;
+    }
+    .nav-drawer__close:active { background: #f3f5f8; }
+
+    .nav-drawer__nav { margin-top: 26px; }
+    .nav-drawer__eyebrow {
+        margin: 0 0 8px 12px;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #94a3b8;
+    }
+    .nav-drawer__list { display: flex; flex-direction: column; gap: 2px; }
+
+    .nav-drawer__item {
+        position: relative;
+        display: grid;
+        grid-template-columns: 28px 1fr auto;
+        align-items: center;
+        column-gap: 8px;
+        padding: 15px 12px;
+        border-radius: 14px;
+        color: inherit;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.2s ease;
+    }
+    .nav-drawer__item + .nav-drawer__item::before {
+        content: "";
+        position: absolute;
+        top: -1px;
+        left: 12px;
+        right: 12px;
+        height: 1px;
+        background: #eef1f5;
+    }
+    .nav-drawer__num {
+        align-self: start;
+        margin-top: 5px;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: #2563eb;
+    }
+    .nav-drawer__name {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.3;
+        color: #0f172a;
+    }
+    .nav-drawer__desc {
+        display: block;
+        margin-top: 2px;
+        font-size: 12px;
+        line-height: 1.4;
+        color: #64748b;
+    }
+    .nav-drawer__end {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        color: #94a3b8;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+    .nav-drawer__dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 9999px;
+        background: #2563eb;
+        box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+    }
+    .nav-drawer__item:active,
+    .nav-drawer__item[aria-current="page"],
+    .nav-drawer__about:active,
+    .nav-drawer__about[aria-current="page"] { background: rgba(37, 99, 235, 0.05); }
+    .nav-drawer__item:active .nav-drawer__end,
+    .nav-drawer__about:active .nav-drawer__end { color: #2563eb; transform: translateX(2px); }
+
+    /* Sobre mí: opción principal, separada de los proyectos */
+    .nav-drawer__about {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 22px;
+        padding: 16px 12px;
+        border-radius: 14px;
+        font-size: 17px;
+        font-weight: 600;
+        color: #0f172a;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.2s ease;
+    }
+    .nav-drawer__about::before {
+        content: "";
+        position: absolute;
+        top: -11px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: #e4e8ee;
+    }
+
+    /* Entrada escalonada muy sutil al abrir */
+    .nav-drawer.is-open .nav-drawer__item,
+    .nav-drawer.is-open .nav-drawer__about {
+        animation: navItemIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+        animation-delay: calc(90ms + var(--i, 0) * 45ms);
+    }
+}
+
+@media (max-width: 767.98px) and (hover: hover) {
+    .nav-drawer__item:hover,
+    .nav-drawer__about:hover { background: rgba(37, 99, 235, 0.05); }
+    .nav-drawer__item:hover .nav-drawer__end,
+    .nav-drawer__about:hover .nav-drawer__end { color: #2563eb; transform: translateX(2px); }
+    .nav-drawer__close:hover { background: #f3f5f8; }
+}
+
+@keyframes navItemIn {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-burger, .nav-burger__bar, .nav-overlay, .nav-drawer, .nav-drawer__end { transition: none !important; }
+    .nav-drawer.is-open .nav-drawer__item,
+    .nav-drawer.is-open .nav-drawer__about { animation: none !important; }
 }

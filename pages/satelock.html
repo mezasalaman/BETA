@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Satelock | Seguridad &amp; Logística</title>
-    <meta name="description" content="Satelock — Rediseño de la seguridad de flotas en tiempo real mediante UX estratégica, IA y React." />
+    <meta name="description" content="Satelock — Rediseño del monitoreo de flotas: menos navegación y menor tiempo de reacción ante incidencias." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232563eb'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Satelock | Seguridad &amp; Logística" />
-    <meta property="og:description" content="Satelock — Rediseño de la seguridad de flotas en tiempo real mediante UX estratégica, IA y React." />
+    <meta property="og:description" content="Satelock — Rediseño del monitoreo de flotas: menos navegación y menor tiempo de reacción ante incidencias." />
     <meta property="og:image" content="../assets/projects/satelock/dashboard-window.png" />
 
 
@@ -62,25 +62,24 @@
     <main>
         <!-- ================= HERO ================= -->
         <header class="mx-auto flex w-[90%] max-w-grid flex-col items-center pt-10 text-center">
-            <div class="mb-12 flex items-center gap-3 rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-8 py-3">
-                <span class="h-2 w-2 rounded-full bg-electric shadow-[0_0_10px_rgba(74,111,255,0.8)]"></span>
-                <span class="text-[11px] font-semibold tracking-[0.1em] text-[#64748b]">SENIOR PRODUCT DESIGNER STORYTELLING</span>
+            <div class="project-badge mb-12">
+                <span class="project-badge__dot"></span>
+                <span class="project-badge__label">SENIOR PRODUCT DESIGNER · STORYTELLING</span>
             </div>
 
-            <h1 class="title-centered mx-auto mb-8 max-w-[1000px] font-bold text-[#0f172a]">
+            <h1 class="title-centered mx-auto mb-8 max-w-[1000px] font-bold uppercase text-[#0f172a]">
                 Satelock<br />
-                <span class="mt-2 block text-electric">Revolutionizing Security</span>
+                <span class="mt-2 block text-electric">Monitoreo de flotas</span>
             </h1>
 
             <p class="mx-auto mb-12 max-w-[700px] text-[16px] leading-[1.6] text-[#475569] md:text-[18px]">
-                Rediseñé el monitoreo de seguridad de flotas en tiempo real: UX estratégica e IA para
-                decidir más rápido bajo presión. <strong class="font-semibold text-[#0f172a]">−40% en tiempos operativos.</strong>
+                Rediseñé el monitoreo de flotas para que el operador identifique qué requiere atención
+                y actúe con menos navegación. <strong class="font-semibold text-[#0f172a]">−25% en tiempo de reacción.</strong>
             </p>
 
-            <a href="satelock-case.html"
-               class="group flex items-center gap-4 rounded-full border border-[#e0e5ec] bg-electric px-9 py-4 text-[16px] font-semibold text-[#ffffff] transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(74,111,255,0.4)]">
+            <a href="satelock-case.html" class="cta-explore reveal">
                 Explorar caso de estudio
-                <span class="ic" data-icon="arrow-right" style="font-size:18px;color:#2563eb"></span>
+                <span class="ic cta-explore-arrow" data-icon="arrow-right" style="font-size:20px"></span>
             </a>
 
             <div class="flex w-full max-w-[1100px] justify-center px-0 pb-20 pt-10 b">
@@ -88,127 +87,412 @@
             </div>
         </header>
 
-        <!-- ================= DESAFÍO ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-20">
-            <div class="mb-12">
-                <h2 class="mb-4 text-[28px] font-bold text-[#0f172a] sm:text-[32px]">El Desafío: Brecha de Usabilidad</h2>
+        <!-- ================= PROBLEMA Y SOLUCIÓN ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-14">
+            <div class="mb-6">
+                <h2 class="mb-3 text-[24px] font-bold text-[#0f172a] sm:text-[28px]">Problema y Solución</h2>
                 <div class="h-1 w-16 rounded bg-electric"></div>
             </div>
-            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                <div class="flex flex-col rounded-[24px] border border-[#edf0f4] bg-card p-8 sm:p-10">
-                    <div class="mb-8 flex items-center gap-4">
-                        <span class="ic" data-icon="warning" style="font-size:26px;color:#d97706"></span>
-                        <h3 class="text-[22px] font-semibold text-[#0f172a]">El Problema</h3>
-                    </div>
-                    <p class="mb-8 flex-1 text-[15px] leading-[1.7] text-[#64748b]">
-                        Los sistemas legados presentaban una carga cognitiva abrumadora para los operadores.
-                        La falta de respuesta en tiempo real y una arquitectura de información fragmentada
-                        provocaban retrasos críticos en la detección de incidentes.
-                    </p>
-                    <ul class="status-cross flex flex-col gap-3 text-[14px] font-medium text-[#475569]">
-                        <li>Tiempos de respuesta superiores a 15 minutos.</li>
-                        <li>Interfaz no adaptativa (Desktop-only).</li>
-                    </ul>
-                </div>
-                <div class="flex flex-col rounded-[24px] border border-[#edf0f4] bg-card p-8 sm:p-10">
-                    <div class="mb-8 flex items-center gap-4">
-                        <span class="ic" data-icon="verified" style="font-size:26px;color:#16a34a"></span>
-                        <h3 class="text-[22px] font-semibold text-[#0f172a]">La Solución</h3>
-                    </div>
-                    <p class="mb-8 flex-1 text-[15px] leading-[1.7] text-[#64748b]">
-                        Una plataforma centralizada basada en Atomic Design que optimiza la toma de decisiones
-                        mediante visualización predictiva y una jerarquía visual clara diseñada para entornos
-                        de alta presión.
-                    </p>
-                    <ul class="status-check flex flex-col gap-3 text-[14px] font-medium text-[#475569]">
-                        <li>Monitoreo en tiempo real con latencia &lt; 1s.</li>
-                        <li>Ecosistema responsivo y notificaciones inteligentes.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <!-- ================= AI PROCESS ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-20 text-center">
-            <div class="mb-14">
-                <h2 class="mb-6 text-[28px] font-bold text-[#0f172a] sm:text-[36px]">AI-Driven Process: Acelerando el Workflow</h2>
-                <p class="mx-auto max-w-[700px] text-[16px] text-[#64748b]">Implementación de herramientas de IA para maximizar la eficiencia creativa y técnica.</p>
-            </div>
-            <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
-                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
-                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
-                        <span class="ic" data-icon="ai-workflow" style="font-size:22px;color:#2563eb"></span>
-                    </div>
-                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Midjourney</h3>
-                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Generación de activos visuales complejos y texturas abstractas para el sistema de diseño, manteniendo una estética futurista y profesional.</p>
-                </div>
-                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
-                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
-                        <span class="ic" data-icon="ai-workflow" style="font-size:22px;color:#2563eb"></span>
-                    </div>
-                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">ChatGPT</h3>
-                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Refinamiento de UX Writing, microcopy y estructuración de la documentación técnica para asegurar claridad en cada punto de contacto.</p>
-                </div>
-                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
-                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
-                        <span class="ic" data-icon="ai-workflow" style="font-size:22px;color:#2563eb"></span>
-                    </div>
-                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Claude AI</h3>
-                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Optimización de componentes React y lógica de negocio, reduciendo el tiempo de desarrollo de prototipos funcionales en un 30%.</p>
-                </div>
-                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
-                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
-                        <span class="ic" data-icon="ai-workflow" style="font-size:22px;color:#2563eb"></span>
-                    </div>
-                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Stitch Gemini</h3>
-                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Generación de contenido contextual dinámico y narrativas de usuario complejas, acelerando la creación de activos de alta fidelidad.</p>
-                </div>
-                <div class="group flex flex-col items-center rounded-[20px] border border-[#e9edf2] bg-card px-6 py-10 transition-all duration-300 hover:-translate-y-2.5 hover:border-electric/30">
-                    <div class="mb-8 flex h-[50px] w-[50px] items-center justify-center rounded-xl bg-electric/10">
-                        <span class="ic" data-icon="tech-automation" style="font-size:22px;color:#2563eb"></span>
-                    </div>
-                    <h3 class="mb-5 text-[18px] font-semibold text-[#0f172a]">Figma Make</h3>
-                    <p class="text-[13px] font-normal leading-[1.6] text-[#64748b]">Automatización de layouts y escalado de sistemas de diseño, permitiendo entregas técnicas en tiempos récord sin comprometer la calidad.</p>
-                </div>
-            </div>
-        </section>
+            <div class="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2">
 
-        <!-- ================= DATA DRIVEN ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-24">
-            <div class="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
-                <!-- Tools bento -->
-                <div class="grid grid-cols-2 gap-4 md:order-1 order-2">
-                    <div class="flex flex-col items-center justify-center rounded-[16px] border border-[#edf0f4] bg-card p-8 transition-colors duration-300 hover:border-electric/40 hover:bg-panel">
-                        <span class="text-[22px] font-bold text-electric">GA4</span>
-                        <span class="mt-1 text-[10px] font-bold tracking-[0.15em] text-[#94a3b8]">EVENT TRACKING</span>
+                <!-- Problema -->
+                <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
+                    <div class="mb-4 flex items-center gap-2.5">
+                        <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-err/10"><span class="ic" data-icon="warning" style="font-size:15px;color:#dc2626"></span></span>
+                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-err">El problema</span>
                     </div>
-                    <div class="flex flex-col items-center justify-center rounded-[16px] border border-[#edf0f4] bg-card p-8 transition-colors duration-300 hover:border-electric/40 hover:bg-panel">
-                        <span class="text-[22px] font-bold text-electric">Hotjar</span>
-                        <span class="mt-1 text-[10px] font-bold tracking-[0.15em] text-[#94a3b8]">HEATMAPS</span>
-                    </div>
-                    <div class="col-span-2 flex flex-col items-center justify-center rounded-[16px] border border-[#edf0f4] bg-card p-10 transition-colors duration-300 hover:border-electric/40 hover:bg-panel">
-                        <span class="text-[22px] font-bold text-electric">Mixpanel</span>
-                        <span class="mt-1 text-[10px] font-bold tracking-[0.15em] text-[#94a3b8]">BEHAVIORAL ANALYTICS</span>
-                    </div>
-                </div>
-                <!-- Texto -->
-                <div class="md:order-2 order-1 text-center md:text-left">
-                    <h2 class="mb-6 text-[32px] font-bold tracking-[-0.02em] sm:text-[48px]">Data-Driven Optimization</h2>
-                    <p class="mb-10 text-[16px] leading-[1.6] text-[#64748b]">
-                        Validamos cada decisión de diseño mediante un stack analítico robusto.
-                        Utilizamos <strong class="font-semibold text-[#0f172a]">GA4, Hotjar y Mixpanel</strong> para monitorizar el comportamiento real
-                        de los operadores, identificando cuellos de botella críticos en el dashboard
-                        de monitoreo y optimizando flujos mediante evidencia empírica.
-                    </p>
-                    <div class="flex items-center justify-center gap-8 md:justify-start">
-                        <div class="flex gap-2">
-                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-[#ffffff]">1</span>
-                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-[#ffffff]">2</span>
-                            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-[#ffffff]">3</span>
+                    <h3 class="mb-2.5 text-[22px] font-bold leading-[1.15] text-[#0f172a] sm:text-[25px]">Operación saturada.<br /><span class="text-err">Decisiones más lentas.</span></h3>
+                    <p class="mb-5 text-[13px] leading-[1.5] text-[#64748b]">La información crítica competía por atención y evaluar una incidencia exigía demasiado esfuerzo.</p>
+
+                    <div class="mb-5 flex items-start">
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-err/10"><span class="ic" data-icon="work" style="font-size:18px;color:#dc2626"></span></div>
+                            <div class="text-[12px] font-bold text-[#0f172a]">Información dispersa</div>
+                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Entre distintas vistas</div>
                         </div>
-                        <p class="text-[14px] font-semibold text-[#0f172a]">Ciclo continuo de iteración basado en datos.</p>
+                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-err/10"><span class="ic" data-icon="gauge" style="font-size:18px;color:#dc2626"></span></div>
+                            <div class="text-[12px] font-bold text-[#0f172a]">Sobrecarga cognitiva</div>
+                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Mayor esfuerzo mental</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-err/10"><span class="ic" data-icon="calendar" style="font-size:18px;color:#dc2626"></span></div>
+                            <div class="text-[12px] font-bold text-[#0f172a]">Respuesta tardía</div>
+                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Ante incidencias críticas</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto flex items-center divide-x divide-err/15 rounded-[14px] bg-err/5 px-5 py-3.5">
+                        <div class="flex-1 pr-4">
+                            <span class="block text-[20px] font-bold leading-none text-err">&gt;15 min</span>
+                            <p class="mt-1.5 text-[11px] leading-[1.35] text-[#64748b]">Tiempo de respuesta<br />ante incidencias</p>
+                        </div>
+                        <div class="flex-1 pl-4">
+                            <span class="block text-[9.5px] font-bold uppercase tracking-wide text-[#64748b]">Carga cognitiva</span>
+                            <span class="block text-[18px] font-bold text-err">Alta</span>
+                            <p class="text-[11px] leading-[1.35] text-[#64748b]">En jornadas prolongadas</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Solución -->
+                <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
+                    <div class="mb-4 flex items-center gap-2.5">
+                        <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="intro" style="font-size:15px;color:#2563eb"></span></span>
+                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">La solución</span>
+                    </div>
+                    <h3 class="mb-2.5 text-[22px] font-bold leading-[1.15] text-[#0f172a] sm:text-[25px]">Información priorizada.<br /><span class="text-electric">Acción más rápida.</span></h3>
+                    <p class="mb-5 text-[13px] leading-[1.5] text-[#64748b]">Estado de activos, alertas y acciones críticas en un mismo flujo.</p>
+
+                    <div class="mb-5 flex items-start">
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="funnel" style="font-size:18px;color:#2563eb"></span></div>
+                            <div class="text-[12px] font-bold text-[#0f172a]">Señales priorizadas</div>
+                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Lo más importante primero</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="research" style="font-size:18px;color:#2563eb"></span></div>
+                            <div class="text-[12px] font-bold text-[#0f172a]">Contexto inmediato</div>
+                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Visión unificada</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="rocket" style="font-size:18px;color:#2563eb"></span></div>
+                            <div class="text-[12px] font-bold text-[#0f172a]">Acción rápida</div>
+                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Con menos navegación</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto flex items-center divide-x divide-electric/15 rounded-[14px] bg-electric/5 px-5 py-3.5">
+                        <div class="flex-1 pr-4">
+                            <span class="block text-[20px] font-bold leading-none text-electric">−25%</span>
+                            <p class="mt-1.5 text-[11px] leading-[1.35] text-[#64748b]">Tiempo de reacción<br />ante incidencias</p>
+                        </div>
+                        <div class="flex-1 pl-4">
+                            <span class="block text-[9.5px] font-bold uppercase tracking-wide text-[#64748b]">Carga operativa</span>
+                            <span class="block text-[18px] font-bold text-electric">−40%</span>
+                            <p class="text-[11px] leading-[1.35] text-[#64748b]">Menos navegación y búsqueda</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= CONTEXTO DE NEGOCIO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-14">
+            <div class="mb-6">
+                <h2 class="mb-3 text-[24px] font-bold text-[#0f172a] sm:text-[28px]">Contexto de negocio</h2>
+                <div class="h-1 w-16 rounded bg-electric"></div>
+            </div>
+
+            <!-- Bloque superior: Contexto | Operación → Decisión -->
+            <div class="mb-5 grid grid-cols-1 gap-5 lg:grid-cols-2">
+                <!-- Contexto -->
+                <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
+                    <span class="mb-3 block text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Contexto de negocio</span>
+                    <h3 class="mb-3 text-[21px] font-bold leading-[1.25] text-[#0f172a] sm:text-[24px]">Una operación donde cada incidencia requiere contexto y acción.</h3>
+                    <p class="text-[13px] leading-[1.55] text-[#64748b]">Satelock permite monitorear activos y gestionar incidencias en operaciones logísticas. El desafío no era mostrar más información, sino que el operador identifique qué requiere atención, entienda el contexto y actúe.</p>
+                </div>
+
+                <!-- Operación → Decisión -->
+                <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
+                    <span class="mb-4 block text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">De la operación a la decisión</span>
+
+                    <div class="mb-4 flex items-start">
+                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="delivery" style="font-size:18px;color:#2563eb"></span></div>
+                            <div class="text-[11px] font-bold text-[#0f172a]">01 · Activos / flota</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Vehículos y equipos<br />en operación</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="warning" style="font-size:18px;color:#2563eb"></span></div>
+                            <div class="text-[11px] font-bold text-[#0f172a]">02 · Estados y alertas</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Información para<br />identificar incidencias</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="research" style="font-size:18px;color:#2563eb"></span></div>
+                            <div class="text-[11px] font-bold text-[#0f172a]">03 · Evaluación</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Contexto para<br />tomar decisiones</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="rocket" style="font-size:18px;color:#2563eb"></span></div>
+                            <div class="text-[11px] font-bold text-[#0f172a]">04 · Acción</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Respuesta ante<br />la incidencia</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto flex items-center gap-2.5 rounded-[14px] bg-electric/5 px-4 py-3">
+                        <span class="ic flex-shrink-0" data-icon="info" style="font-size:16px;color:#2563eb"></span>
+                        <p class="text-[11.5px] font-medium leading-[1.4] text-[#0f172a]">Así se vive una incidencia desde el lado del operador.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Evidencia -->
+            <div class="mb-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                <div class="flex items-center gap-3.5 rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="calendar" style="font-size:18px;color:#2563eb"></span></div>
+                    <div>
+                        <span class="block text-[22px] font-bold leading-none text-electric">&gt;15 min</span>
+                        <p class="mt-1 text-[12px] font-semibold text-[#0f172a]">Tiempo de respuesta inicial</p>
+                        <p class="mt-0.5 text-[10.5px] leading-[1.3] text-[#64748b]">Ante incidencias operativas.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3.5 rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="profile" style="font-size:18px;color:#2563eb"></span></div>
+                    <div>
+                        <span class="block text-[22px] font-bold leading-none text-electric">50+</span>
+                        <p class="mt-1 text-[12px] font-semibold text-[#0f172a]">Usuarios evaluados</p>
+                        <p class="mt-0.5 text-[10.5px] leading-[1.3] text-[#64748b]">Operadores y usuarios del producto.</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3.5 rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="case-study" style="font-size:18px;color:#2563eb"></span></div>
+                    <div>
+                        <span class="block text-[22px] font-bold leading-none text-electric">48h+</span>
+                        <p class="mt-1 text-[12px] font-semibold text-[#0f172a]">Shadowing operativo</p>
+                        <p class="mt-0.5 text-[10.5px] leading-[1.3] text-[#64748b]">Observación del trabajo y contexto de uso.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desafío de negocio -->
+            <div class="flex flex-col items-center gap-5 rounded-[16px] border border-[#e9edf2] bg-panel2 px-7 py-5 text-center sm:flex-row sm:items-center sm:text-left">
+                <div class="flex flex-1 items-center gap-3.5">
+                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="target" style="font-size:17px;color:#2563eb"></span></div>
+                    <div>
+                        <span class="block text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Desafío de negocio</span>
+                        <h4 class="mt-0.5 text-[16.5px] font-semibold text-[#0f172a]">Reducir el esfuerzo y tiempo de respuesta operativo.</h4>
+                    </div>
+                </div>
+                <div class="hidden h-10 w-px bg-[#e4e8ee] sm:block"></div>
+                <p class="flex-1 text-[13px] leading-[1.5] text-[#64748b] sm:text-left">Que el operador detecte, evalúe y responda más rápido y con menos carga.</p>
+            </div>
+        </section>
+
+        <!-- ================= ECOSISTEMA DE PRODUCTO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-14">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-[26%_1fr] lg:items-start">
+                <!-- Intro -->
+                <div>
+                    <div class="mb-3 flex items-center gap-2">
+                        <span class="h-1.5 w-1.5 rounded-full bg-electric"></span>
+                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Ecosistema de producto</span>
+                    </div>
+                    <h2 class="mb-3 text-[26px] font-bold leading-[1.15] text-[#0f172a] sm:text-[30px]">De la ruta<br /><span class="text-electric">a la operación.</span></h2>
+                    <p class="text-[13.5px] leading-[1.55] text-[#64748b]">Conductor, plataforma y dispositivo: cada solicitud se valida antes de ejecutarse.</p>
+                </div>
+
+                <!-- 3 cards + flechas -->
+                <div class="flex flex-col gap-3 lg:flex-row lg:items-stretch">
+                    <!-- Conductor -->
+                    <div class="flex-1 rounded-[18px] border border-[#fbbf24]/25 bg-[#fffbeb] p-4">
+                        <div class="mb-3 flex items-center justify-between">
+                            <span class="text-[15px] font-bold text-[#d97706]">01</span>
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="profile" style="font-size:16px;color:#d97706"></span></span>
+                        </div>
+                        <h3 class="mb-1.5 text-[14.5px] font-bold text-[#0f172a]">Conductor</h3>
+                        <p class="mb-3 text-[11.5px] leading-[1.4] text-[#64748b]">Solicitud desde la app.</p>
+                        <div class="mb-2.5 border-t border-[#fbbf24]/20"></div>
+                        <ul class="space-y-1.5">
+                            <li class="flex items-center gap-1.5 text-[11px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:12px;color:#d97706"></span>Solicita apertura de candado</li>
+                            <li class="flex items-center gap-1.5 text-[11px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:12px;color:#d97706"></span>Comparte su ubicación</li>
+                            <li class="flex items-center gap-1.5 text-[11px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:12px;color:#d97706"></span>Recibe notificaciones de estado</li>
+                        </ul>
+                    </div>
+
+                    <span class="hidden flex-shrink-0 items-center px-1 text-[16px] font-semibold text-[#c3cbd8] lg:flex">→</span>
+
+                    <!-- Satelock -->
+                    <div class="flex-1 rounded-[18px] border border-electric/20 bg-electric/5 p-4">
+                        <div class="mb-3 flex items-center justify-between">
+                            <span class="text-[15px] font-bold text-electric">02</span>
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="dashboard" style="font-size:16px;color:#2563eb"></span></span>
+                        </div>
+                        <h3 class="mb-1.5 text-[14.5px] font-bold text-[#0f172a]">Satelock</h3>
+                        <p class="mb-3 text-[11.5px] leading-[1.4] text-[#64748b]">Validación y control.</p>
+                        <div class="mb-2.5 border-t border-electric/15"></div>
+                        <ul class="space-y-1.5">
+                            <li class="flex items-center gap-1.5 text-[11px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:12px;color:#2563eb"></span>Valida la solicitud</li>
+                            <li class="flex items-center gap-1.5 text-[11px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:12px;color:#2563eb"></span>Aplica reglas de seguridad</li>
+                            <li class="flex items-center gap-1.5 text-[11px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:12px;color:#2563eb"></span>Ejecuta la acción en el dispositivo</li>
+                        </ul>
+                    </div>
+
+                    <span class="hidden flex-shrink-0 items-center px-1 text-[16px] font-semibold text-[#c3cbd8] lg:flex">→</span>
+
+                    <!-- Apertura de candado -->
+                    <div class="flex-1 rounded-[18px] border border-[#16a34a]/20 bg-[#16a34a]/[0.05] p-4">
+                        <div class="mb-3 flex items-center justify-between">
+                            <span class="text-[15px] font-bold text-[#16a34a]">03</span>
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="satelock" style="font-size:16px;color:#16a34a"></span></span>
+                        </div>
+                        <h3 class="mb-1.5 text-[14.5px] font-bold text-[#0f172a]">Apertura de candado</h3>
+                        <p class="mb-3 text-[11.5px] leading-[1.4] text-[#64748b]">Ejecución en el dispositivo.</p>
+                        <div class="mb-2.5 border-t border-[#16a34a]/15"></div>
+                        <ul class="space-y-1.5">
+                            <li class="flex items-center gap-1.5 text-[11px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:12px;color:#16a34a"></span>Recibe la instrucción</li>
+                            <li class="flex items-center gap-1.5 text-[11px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:12px;color:#16a34a"></span>Desbloquea el candado</li>
+                            <li class="flex items-center gap-1.5 text-[11px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:12px;color:#16a34a"></span>Confirma la apertura</li>
+                            <li class="flex items-center gap-1.5 text-[11px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:12px;color:#16a34a"></span>Envía su estado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra inferior -->
+            <div class="mt-5 flex flex-col gap-3 rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] px-6 py-4 sm:flex-row sm:items-center sm:gap-6">
+                <div class="flex flex-shrink-0 items-center gap-3">
+                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="process" style="font-size:15px;color:#2563eb"></span></span>
+                    <div class="flex flex-wrap items-center gap-2 text-[12.5px] font-bold text-[#0f172a]">
+                        <span>Conductor</span><span class="text-[#c3cbd8]">→</span>
+                        <span>Satelock</span><span class="text-[#c3cbd8]">→</span>
+                        <span>Apertura de candado</span>
+                    </div>
+                </div>
+                <div class="hidden h-8 w-px bg-[#e4e8ee] sm:block"></div>
+                <p class="text-[12.5px] leading-[1.4] text-[#64748b]">Una misma lógica de producto conectando personas, plataforma y dispositivo.</p>
+            </div>
+        </section>
+
+        <!-- ================= SISTEMA DE DISEÑO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-14">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-[260px_1fr] lg:items-start">
+                <!-- Introducción -->
+                <div>
+                    <div class="mb-3 flex items-center gap-2">
+                        <span class="h-1.5 w-1.5 rounded-full bg-electric"></span>
+                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Sistema de diseño</span>
+                    </div>
+                    <h2 class="mb-3 text-[22px] font-bold leading-[1.2] sm:text-[24px]">Una interfaz clara para una operación <span class="text-electric">más segura.</span></h2>
+                    <p class="mb-4 text-[13px] leading-[1.55] text-[#64748b]">Diseñamos un sistema visual pensado para entornos operativos, priorizando la claridad, la consistencia y la rápida identificación de estados críticos.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#0f172a]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="success" style="font-size:11px;color:#2563eb"></span></span>Componentes consistentes</li>
+                        <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#0f172a]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="success" style="font-size:11px;color:#2563eb"></span></span>Estados visuales claros</li>
+                        <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#0f172a]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="success" style="font-size:11px;color:#2563eb"></span></span>Experiencia escalable</li>
+                    </ul>
+                </div>
+
+                <!-- Panel Design System -->
+                <div class="rounded-[20px] border border-[#eef1f5] bg-[#fbfbfc] p-4">
+                    <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                        <!-- Colores -->
+                        <div class="rounded-[14px] border border-[#eef1f5] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#0f172a]">Colores</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#64748b]">Paleta funcional que comunica estados y jerarquía.</p>
+                            <div class="mb-2.5 grid grid-cols-4 gap-1.5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-electric"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Primario</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#0f172a]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Navy</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full border border-[#e4e8ee] bg-[#f6f7f9]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Superficie</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#5b6573]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Texto</span>
+                                </div>
+                            </div>
+                            <div class="mb-2 border-t border-[#eef1f5]"></div>
+                            <div class="grid grid-cols-4 gap-1.5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#16a34a]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Éxito</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#d97706]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Advert.</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#dc2626]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Crítico</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-electric"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Info.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tipografía -->
+                        <div class="rounded-[14px] border border-[#eef1f5] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#0f172a]">Tipografía</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#64748b]">Poppins, para una lectura clara en entornos operativos.</p>
+                            <div class="mb-2 text-[28px] font-bold leading-none text-[#0f172a]">Aa</div>
+                            <p class="mb-2.5 text-[11px] font-semibold text-[#64748b]">Poppins</p>
+                            <div class="space-y-1 border-t border-[#eef1f5] pt-2">
+                                <div class="flex items-center justify-between text-[10px] text-[#64748b]"><span class="font-bold text-[#0f172a]">H1</span><span>Bold · 26px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#64748b]"><span class="font-bold text-[#0f172a]">H2</span><span>Bold · 22px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#64748b]"><span class="font-semibold text-[#0f172a]">H3</span><span>Semibold · 14px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#64748b]"><span class="text-[#0f172a]">Body</span><span>Regular · 13px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#64748b]"><span class="font-bold text-[#0f172a]">Caption</span><span>Bold · 11px</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Componentes -->
+                        <div class="rounded-[14px] border border-[#eef1f5] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#0f172a]">Componentes</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#64748b]">Elementos reutilizables para mantener consistencia.</p>
+                            <div class="space-y-1.5">
+                                <div class="flex items-center justify-center gap-1.5 rounded-full bg-electric px-3 py-1.5 text-[10.5px] font-semibold text-white">Botón principal <span class="ic" data-icon="arrow-up-right" style="font-size:10px"></span></div>
+                                <div class="flex items-center justify-center rounded-full border border-[#e4e8ee] px-3 py-1.5 text-[10.5px] font-semibold text-[#0f172a]">Botón secundario</div>
+                                <div class="flex items-center gap-1.5 rounded-full border border-[#e4e8ee] bg-[#f6f7f9] px-3 py-1.5 text-[10.5px] text-[#94a3b8]"><span class="ic" data-icon="location" style="font-size:11px;color:#94a3b8"></span>Buscar activo...</div>
+                                <div class="flex items-center justify-between rounded-full border border-[#e4e8ee] px-3 py-1.5 text-[10.5px] text-[#0f172a]">Seleccionar opción<span class="text-[#94a3b8]">▾</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                        <!-- Estados operativos -->
+                        <div class="rounded-[14px] border border-[#eef1f5] bg-white p-4 sm:col-span-2">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#0f172a]">Estados operativos</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#64748b]">Señales visuales para identificar rápidamente el estado de los activos.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#16a34a]/10 px-3 py-1.5 text-[10.5px] font-semibold text-[#16a34a]"><span class="h-1.5 w-1.5 rounded-full bg-[#16a34a]"></span>Normal</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#d97706]/10 px-3 py-1.5 text-[10.5px] font-semibold text-[#d97706]"><span class="h-1.5 w-1.5 rounded-full bg-[#d97706]"></span>Advertencia</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#dc2626]/10 px-3 py-1.5 text-[10.5px] font-semibold text-[#dc2626]"><span class="h-1.5 w-1.5 rounded-full bg-[#dc2626]"></span>Crítico</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1.5 text-[10.5px] font-semibold text-electric"><span class="h-1.5 w-1.5 rounded-full bg-electric"></span>Información</span>
+                            </div>
+                        </div>
+
+                        <!-- Iconografía -->
+                        <div class="rounded-[14px] border border-[#eef1f5] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#0f172a]">Iconografía</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#64748b]">Íconos simples y consistentes para facilitar la comprensión.</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="delivery" style="font-size:13px;color:#0f172a"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="location" style="font-size:13px;color:#0f172a"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="satelock" style="font-size:13px;color:#0f172a"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="warning" style="font-size:13px;color:#0f172a"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="tech-analytics" style="font-size:13px;color:#0f172a"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="process" style="font-size:13px;color:#0f172a"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra inferior -->
+            <div class="mt-4 flex flex-col gap-3 rounded-[16px] border border-[#eef1f5] bg-[#f6f7f9] px-6 py-4 sm:flex-row sm:items-center sm:gap-6">
+                <div class="flex flex-shrink-0 items-center gap-3">
+                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="design-systems" style="font-size:15px;color:#2563eb"></span></span>
+                    <span class="text-[12.5px] font-bold text-[#0f172a]">Un sistema visual al servicio de la operación.</span>
+                </div>
+                <div class="hidden h-8 w-px bg-[#e4e8ee] sm:block"></div>
+                <p class="text-[12.5px] leading-[1.4] text-[#64748b]">Componentes, colores y patrones diseñados para facilitar la gestión de activos, mejorar la legibilidad y mantener una experiencia consistente en todo el producto.</p>
             </div>
         </section>
 
@@ -219,11 +503,11 @@
     <!-- Encabezado -->
     <div class="mb-12 max-w-[800px]">
         <span class="mb-8 block text-[11px] font-bold uppercase tracking-[0.15em] text-royal">
-            GALERIA DE IMÁGENES
+            GALERÍA DE IMÁGENES
         </span>
 
         <h2 class="mb-8 text-[32px] font-bold leading-[1.1] text-[#0f172a] sm:text-[48px]">
-            Menos fricción y mas control: la nueva experiencia de Satelock
+            Del monitoreo a la acción, con menos navegación.
         </h2>
 
         <div class="flex flex-wrap justify-center gap-4">
@@ -256,9 +540,10 @@
                 items-center
                 gap-6
 
-                md:h-[320px]
+                md:h-[240px]
                 md:grid-cols-[330fr_555fr_135fr]
                 md:gap-[15px]
+                lg:h-[320px]
             "
         >
 
@@ -354,9 +639,10 @@
                 items-center
                 gap-6
 
-                md:h-[320px]
+                md:h-[240px]
                 md:grid-cols-[510fr_390fr_120fr]
                 md:gap-[15px]
+                lg:h-[320px]
             "
         >
 
@@ -1084,12 +1370,12 @@
 
     <!-- ================= NAV PROYECTOS ================= -->
     <section class="mx-auto mb-4 w-[90%] max-w-grid border-t border-[#e9edf2] pt-10">
-        <div class="flex items-center justify-between gap-4">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <a href="../index.html#proyectos" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
                 <span class="transition-transform group-hover:-translate-x-1">←</span>
                 <span class="text-[14px]">Todos los proyectos</span>
             </a>
-            <a href="SellerCenter.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+            <a href="SellerCenter.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a] sm:justify-end">
                 <span class="text-[14px]">Siguiente: <span class="font-semibold text-[#0f172a]">Seller Center</span></span>
                 <span class="transition-transform group-hover:translate-x-1">→</span>
             </a>
@@ -1105,7 +1391,7 @@
                     <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
                 </div>
                 <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
-                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de vanguardia.
+                    Diseño de producto orientado a datos: research, UX y decisiones medibles.
                 </p>
             </div>
             <div class="text-center md:text-right">

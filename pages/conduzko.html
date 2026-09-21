@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ConDuzko | Marketplace de autos verificados</title>
-    <meta name="description" content="ConDuzko — Rediseño del ecosistema de un marketplace de autos usados: usuario final, vendedor y panel administrativo, con IA integrada y maquetado con Claude Design." />
+    <meta name="description" content="ConDuzko — Marketplace de autos usados con tres perfiles (comprador, vendedor y administración) e IA donde mejora una decisión." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232563eb'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ConDuzko | Marketplace de autos verificados" />
-    <meta property="og:description" content="Rediseño end-to-end de un marketplace de autos: 3 perfiles, IA integrada y front-end con Claude Design." />
+    <meta property="og:description" content="Marketplace de autos usados con tres perfiles e IA donde mejora una decisión." />
     <meta property="og:image" content="../assets/conduzko/home.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -61,7 +61,10 @@
     <main class="pb-24">
         <!-- ================= HERO ================= -->
         <header class="mx-auto flex w-[90%] max-w-grid flex-col items-center px-0 pb-20 pt-10 text-center">
-            <span class="mb-10 inline-block rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[11px] font-bold tracking-[0.15em] text-royal">PRODUCT DESIGNER · IA</span>
+            <div class="project-badge mb-10">
+                <span class="project-badge__dot"></span>
+                <span class="project-badge__label">PRODUCT MANAGER · IA</span>
+            </div>
 
             <h1 class="title-massive mb-9 font-extrabold uppercase text-[#0f172a]">
                 ConDuzko
@@ -69,15 +72,13 @@
             </h1>
 
             <p class="mb-12 max-w-[720px] text-[17px] leading-[1.5] text-[#475569] md:text-[20px]">
-                Rediseñé de extremo a extremo el ecosistema de un marketplace de autos usados —usuario final,
-                vendedor y panel administrativo— integrando IA en los puntos clave y maquetando el front-end con
-                Claude Design. <strong class="font-semibold text-[#0f172a]">14.6% de conversión y cierre promedio en 18 días.</strong>
+                Definí y diseñé el ecosistema de un marketplace de autos usados —comprador, vendedor y
+                administración— con IA donde mejora una decisión. <strong class="font-semibold text-[#0f172a]">248 autos publicados, 41 vendidos.</strong>
             </p>
 
-            <a href="conduzko-case.html"
-               class="group inline-flex items-center gap-4 rounded-full bg-royal px-11 py-4 text-[16px] font-bold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_30px_rgba(37,99,235,0.3)] md:text-[18px]">
+            <a href="conduzko-case.html" class="cta-explore reveal">
                 Explorar caso de estudio
-                <span class="transition-transform group-hover:translate-x-1">→</span>
+                <span class="ic cta-explore-arrow" data-icon="arrow-right" style="font-size:20px"></span>
             </a>
 
             <div class="mx-auto mt-20 w-full max-w-grid overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card shadow-showcase">
@@ -85,149 +86,386 @@
             </div>
         </header>
 
-        <!-- ================= MÉTRICAS (ESQUEMA) ================= -->
-        <section class="mx-auto w-[90%] max-w-grid pt-4 pb-8">
-            <div class="grid grid-cols-2 divide-y divide-[#e9edf2] overflow-hidden rounded-[20px] border border-[#e9edf2] bg-card sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
-                <div class="flex items-center gap-4 p-7 sm:border-r sm:border-[#e9edf2] lg:border-r-0">
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#eff4ff] text-primary">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"></path><path d="M21 7v4h-4"></path></svg>
-                    </span>
-                    <div><span class="block text-[26px] font-extrabold leading-none text-[#0f172a]">14.6%</span><span class="mt-1 block text-[12px] text-dim">Conversión de ventas</span></div>
-                </div>
-                <div class="flex items-center gap-4 p-7">
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#eff4ff] text-primary">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
-                    </span>
-                    <div><span class="block text-[26px] font-extrabold leading-none text-[#0f172a]">18 días</span><span class="mt-1 block text-[12px] text-dim">Cierre promedio</span></div>
-                </div>
-                <div class="flex items-center gap-4 p-7 sm:border-r sm:border-[#e9edf2] lg:border-r-0">
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#eff4ff] text-primary">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l2-5a2 2 0 0 1 1.9-1.3h10.2A2 2 0 0 1 19 8l2 5"></path><path d="M3 13v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4"></path><circle cx="7.5" cy="15.5" r="1"></circle><circle cx="16.5" cy="15.5" r="1"></circle></svg>
-                    </span>
-                    <div><span class="block text-[26px] font-extrabold leading-none text-[#0f172a]">248</span><span class="mt-1 block text-[12px] text-dim">Vehículos publicados</span></div>
-                </div>
-                <div class="flex items-center gap-4 p-7">
-                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#eff4ff] text-primary">
-                        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7a4 4 0 1 0-8 0"></path><circle cx="12" cy="7" r="0" opacity="0"></circle><path d="M3 20a6 6 0 0 1 18 0"></path><circle cx="12" cy="7" r="3.4"></circle></svg>
-                    </span>
-                    <div><span class="block text-[26px] font-extrabold leading-none text-[#0f172a]">3 perfiles</span><span class="mt-1 block text-[12px] text-dim">Usuario · Vendedor · Admin</span></div>
-                </div>
-            </div>
-        </section>
-
         <!-- ================= PROBLEMA Y SOLUCIÓN ================= -->
         <section class="mx-auto w-[90%] max-w-grid py-16">
-            <h2 class="mb-12 text-[24px] font-semibold">Problema y Solución</h2>
-            <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2">
-                <div class="flex flex-col rounded-[30px] border border-err/10 bg-card p-8 sm:p-11">
-                    <span class="mb-8 text-[12px] font-bold uppercase tracking-[0.15em] text-err">EL PROBLEMA</span>
-                    <h3 class="mb-6 text-[26px] font-semibold leading-[1.2] text-[#0f172a] sm:text-[32px]">Flujos confusos, <span class="font-bold text-err">sin experiencia UX.</span></h3>
-                    <p class="text-[15px] leading-[1.6] text-[#475569]">
-                        El producto creció sin una base de UX: flujos de compra, venta y administración fragmentados,
-                        arquitectura inconsistente entre los tres perfiles y fricción que frenaba la conversión y
-                        cargaba de trabajo manual al equipo comercial.
-                    </p>
+            <h2 class="mb-8 text-[24px] font-semibold">Problema y Solución</h2>
+            <div class="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2">
+                <!-- EL PROBLEMA -->
+                <div class="flex flex-col rounded-[24px] border border-[#e4e8ee] bg-card p-6 sm:p-7">
+                    <div class="mb-4 flex items-center gap-2.5">
+                        <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-err/10"><span class="ic" data-icon="warning" style="font-size:15px;color:#dc2626"></span></span>
+                        <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-err">El problema</span>
+                    </div>
+                    <h3 class="mb-3 text-[21px] font-bold leading-[1.2] text-[#0f172a]">Proceso de compra–venta fragmentado.</h3>
+                    <p class="mb-5 text-[13.5px] leading-[1.6] text-[#64748b]">Publicar, buscar y negociar un auto ocurría en canales separados, con poca confianza en cada etapa.</p>
+
+                    <div class="mb-5 flex items-start">
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-err/10"><span class="ic" data-icon="work" style="font-size:16px;color:#dc2626"></span></div>
+                            <div class="text-[11.5px] font-semibold text-[#0f172a]">Información dispersa</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">En múltiples canales</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-1 text-[17px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-err/10"><span class="ic" data-icon="process" style="font-size:16px;color:#dc2626"></span></div>
+                            <div class="text-[11.5px] font-semibold text-[#0f172a]">Proceso lento</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Y poco transparente</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-1 text-[17px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-err/10"><span class="ic" data-icon="error" style="font-size:16px;color:#dc2626"></span></div>
+                            <div class="text-[11.5px] font-semibold text-[#0f172a]">Baja confianza</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Entre compradores y vendedores</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto flex divide-x divide-err/10 rounded-[14px] bg-err/5 px-5 py-3.5">
+                        <div class="flex-1 pr-4">
+                            <span class="block text-[9.5px] font-bold uppercase tracking-[0.12em] text-err">Impacto en usuarios</span>
+                            <p class="mt-1 text-[12.5px] font-semibold leading-[1.3] text-[#0f172a]">Más fricción y abandono<br /><span class="font-normal text-[#64748b]">en el proceso de compra–venta</span></p>
+                        </div>
+                        <div class="flex-1 pl-4">
+                            <span class="block text-[9.5px] font-bold uppercase tracking-[0.12em] text-err">Impacto en el negocio</span>
+                            <p class="mt-1 text-[12.5px] font-semibold leading-[1.3] text-[#0f172a]">Menor dinamismo<br /><span class="font-normal text-[#64748b]">en el marketplace</span></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col rounded-[30px] bg-gradient-to-br from-[#2563eb] to-[#1e3a8a] p-8 text-[#ffffff] sm:p-11">
-                    <span class="mb-8 text-[12px] font-bold uppercase tracking-[0.15em] text-[#dbe4ff]">LA SOLUCIÓN</span>
-                    <h3 class="mb-6 text-[26px] font-semibold leading-[1.2] sm:text-[32px]">Un ecosistema coherente, asistido por IA.</h3>
-                    <p class="text-[15px] font-light leading-[1.6] text-[#dbe4ff]">
-                        Rediseñé los tres entornos bajo un mismo sistema de diseño, simplifiqué los flujos críticos e
-                        integré IA (cotizador inteligente, validación de 100 puntos, asistente Duzko) — entregando el
-                        front-end listo para desarrollo con Claude Design.
-                    </p>
+
+                <!-- LA SOLUCIÓN -->
+                <div class="flex flex-col rounded-[24px] border border-[#e4e8ee] bg-card p-6 sm:p-7">
+                    <div class="mb-4 flex items-center gap-2.5">
+                        <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="intro" style="font-size:15px;color:#2563eb"></span></span>
+                        <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-electric">La solución</span>
+                    </div>
+                    <h3 class="mb-3 text-[21px] font-bold leading-[1.2] text-[#0f172a]">Tres experiencias, <span class="text-electric">un solo producto.</span></h3>
+                    <p class="mb-5 text-[13.5px] leading-[1.6] text-[#64748b]">Definí ConDuzko como una plataforma web y mobile, con IA en puntos específicos que apoyan la decisión.</p>
+
+                    <div class="mb-5 flex items-start">
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="design-systems" style="font-size:16px;color:#2563eb"></span></div>
+                            <div class="text-[11.5px] font-semibold text-[#0f172a]">Información unificada</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">En un solo lugar</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-1 text-[17px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="ai-workflow" style="font-size:16px;color:#2563eb"></span></div>
+                            <div class="text-[11.5px] font-semibold text-[#0f172a]">Procesos más simples</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Y asistidos por IA</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-1 text-[17px] font-semibold text-[#c3cbd8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="verified" style="font-size:16px;color:#2563eb"></span></div>
+                            <div class="text-[11.5px] font-semibold text-[#0f172a]">Mayor confianza</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">A lo largo del journey</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-auto flex divide-x divide-electric/10 rounded-[14px] bg-electric/5 px-5 py-3.5">
+                        <div class="flex-1 pr-4">
+                            <span class="block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Ecosistema multiplataforma</span>
+                            <p class="mt-1 text-[12.5px] font-semibold leading-[1.3] text-[#0f172a]">Web + Mobile<br /><span class="font-normal text-[#64748b]">Una experiencia consistente</span></p>
+                        </div>
+                        <div class="flex-1 pl-4">
+                            <span class="block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">3 perfiles principales</span>
+                            <p class="mt-1 text-[12.5px] font-semibold leading-[1.3] text-[#0f172a]">Comprador · Vendedor · Admin<br /><span class="font-normal text-[#64748b]">Un mismo ecosistema</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ================= 3 PERFILES ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-16">
-            <div class="mb-12">
-                <span class="mb-3 block text-[11px] font-bold uppercase tracking-[0.15em] text-royal">UN PRODUCTO, TRES PERFILES</span>
-                <h2 class="text-[28px] font-semibold sm:text-[32px]">Diseñé la experiencia completa</h2>
-                <p class="mt-2 text-[14px] text-dim">Cada perfil con sus propios objetivos, bajo una misma arquitectura visual.</p>
+        <!-- ================= CONTEXTO DE NEGOCIO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-14">
+            <h2 class="mb-8 text-[24px] font-semibold">Contexto de negocio</h2>
+            <!-- Bloque superior: Contexto | Funnel -->
+            <div class="mb-5 grid grid-cols-1 gap-5 lg:grid-cols-2">
+                <!-- Izquierda: contexto -->
+                <div class="rounded-[20px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
+                    <span class="mb-3 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">Contexto de negocio</span>
+                    <h3 class="mb-3 text-[21px] font-semibold leading-[1.25] text-[#0f172a]">Publicar vehículos no era suficiente. Había que <span class="text-electric">ayudar a decidir.</span></h3>
+                    <p class="mb-2.5 text-[13px] leading-[1.55] text-[#64748b]">ConDuzko debía conectar compradores y vendedores en una experiencia coherente, sin la fragmentación entre búsqueda, publicación, contacto y negociación.</p>
+                    <p class="text-[13px] leading-[1.55] text-[#64748b]">Los autos publicados tenían que generar interés, contacto y oportunidades comerciales.</p>
+                </div>
+
+                <!-- Derecha: funnel -->
+                <div class="rounded-[20px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
+                    <span class="mb-3 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">De la oferta a la venta</span>
+                    <h3 class="mb-5 text-[17px] font-semibold leading-[1.3] text-[#0f172a]">Así avanzaba el funnel, de la publicación a la venta.</h3>
+
+                    <div class="flex items-start">
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="case-study" style="font-size:16px;color:#2563eb"></span></div>
+                            <span class="block text-[15px] font-bold leading-none text-electric">248</span>
+                            <div class="mt-1 text-[11.5px] font-semibold text-[#0f172a]">Publicación</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Vehículos publicados</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-1 text-[17px] font-semibold text-[#94a3b8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="phone" style="font-size:16px;color:#2563eb"></span></div>
+                            <span class="block text-[15px] font-bold leading-none text-electric">160</span>
+                            <div class="mt-1 text-[11.5px] font-semibold text-[#0f172a]">Contacto</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Contactos generados</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-1 text-[17px] font-semibold text-[#94a3b8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="process" style="font-size:16px;color:#2563eb"></span></div>
+                            <span class="block text-[15px] font-bold leading-none text-electric">78</span>
+                            <div class="mt-1 text-[11.5px] font-semibold text-[#0f172a]">Negociación</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Oportunidades comerciales</div>
+                        </div>
+                        <span class="mt-[18px] flex-shrink-0 px-1 text-[17px] font-semibold text-[#94a3b8]">→</span>
+                        <div class="flex flex-1 flex-col items-center text-center">
+                            <div class="mx-auto mb-2 flex h-11 w-11 items-center justify-center rounded-full border-2 border-electric bg-electric/15"><span class="ic" data-icon="trophy" style="font-size:17px;color:#2563eb"></span></div>
+                            <span class="block text-[15px] font-bold leading-none text-electric">41</span>
+                            <div class="mt-1 text-[12px] font-bold text-electric">Venta</div>
+                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Vehículos vendidos</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
-                <div class="flex flex-col overflow-hidden rounded-[20px] border border-[#e9edf2] bg-card">
-                    <img loading="lazy" src="../assets/conduzko/detalle.png" alt="Usuario final — catálogo y detalle de vehículo" class="block h-[200px] w-full object-cover object-top border-b border-[#e9edf2]" />
-                    <div class="p-7">
-                        <h3 class="mb-2 text-[18px] font-semibold">Usuario final</h3>
-                        <p class="text-[13.5px] leading-[1.6] text-[#475569]">Catálogo con filtros, detalle del auto, sello "Verificado", simulación de crédito/seguro y agenda de visita.</p>
+
+            <!-- Desafío de negocio -->
+            <div class="flex flex-col items-center gap-5 rounded-[16px] border border-[#e9edf2] bg-panel2 px-7 py-5 text-center sm:flex-row sm:items-center sm:text-left">
+                <div class="flex flex-1 items-center gap-3.5">
+                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="target" style="font-size:17px;color:#2563eb"></span></div>
+                    <div>
+                        <span class="block text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Desafío de negocio</span>
+                        <h4 class="mt-0.5 text-[17px] font-semibold text-[#0f172a]">Convertir inventario en oportunidades comerciales.</h4>
                     </div>
                 </div>
-                <div class="flex flex-col overflow-hidden rounded-[20px] border border-[#e9edf2] bg-card">
-                    <img loading="lazy" src="../assets/conduzko/dashboard.png" alt="Vendedor — dashboard con funnel de ventas" class="block h-[200px] w-full object-cover object-top border-b border-[#e9edf2]" />
-                    <div class="p-7">
-                        <h3 class="mb-2 text-[18px] font-semibold">Vendedor</h3>
-                        <p class="text-[13.5px] leading-[1.6] text-[#475569]">Dashboard con funnel de ventas y compras, métricas en vivo, vehículos más cotizados y top de marcas.</p>
-                    </div>
-                </div>
-                <div class="flex flex-col overflow-hidden rounded-[20px] border border-[#e9edf2] bg-card">
-                    <img loading="lazy" src="../assets/conduzko/asesores.png" alt="Concesionario — panel administrativo de asesores" class="block h-[200px] w-full object-cover object-top border-b border-[#e9edf2]" />
-                    <div class="p-7">
-                        <h3 class="mb-2 text-[18px] font-semibold">Concesionario / Admin</h3>
-                        <p class="text-[13.5px] leading-[1.6] text-[#475569]">Panel de gestión de asesores, calendario de citas, leads, ofertas y rendimiento del equipo comercial.</p>
-                    </div>
-                </div>
+                <div class="hidden h-10 w-px bg-[#e4e8ee] sm:block"></div>
+                <p class="flex-1 text-[13px] leading-[1.5] text-[#64748b] sm:text-left">Conectar descubrimiento, confianza, contacto y negociación en un mismo ecosistema.</p>
             </div>
         </section>
 
-        
+        <!-- ================= ECOSISTEMA DE PRODUCTO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-14">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-[26%_1fr] lg:items-start">
+                <!-- Intro -->
+                <div>
+                    <div class="mb-3 flex items-center gap-2">
+                        <span class="h-1.5 w-1.5 rounded-full bg-electric"></span>
+                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Ecosistema de producto</span>
+                    </div>
+                    <h2 class="mb-3 text-[26px] font-bold leading-[1.15] text-[#0f172a] sm:text-[30px]">De la búsqueda<br /><span class="text-electric">a la transacción.</span></h2>
+                    <p class="text-[13.5px] leading-[1.55] text-[#64748b]">Compradores, vendedores y administración en un mismo ecosistema: descubrimiento, publicación, contacto y gestión comercial.</p>
+                </div>
 
-        <!-- ================= WIZARD · FLUJO 5 PASOS ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-16">
-            <div class="mb-14 max-w-[760px]">
-                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-royal">VÉNDELO ConDUZKO</span>
-                <h2 class="mb-4 text-[30px] font-bold leading-[1.1] text-[#0f172a] sm:text-[44px]">Publicar un auto, en 5 pasos</h2>
-                <p class="text-[15px] leading-[1.6] text-[#475569] md:text-[17px]">Un wizard guiado con preview en tiempo real y nudges de visibilidad para reducir el abandono en cada paso.</p>
+                <!-- 3 cards + flechas -->
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-stretch">
+                    <!-- Usuario -->
+                    <div class="flex-1 rounded-[18px] border border-[#e9edf2] bg-panel2 p-5">
+                        <div class="mb-3 flex items-center justify-between">
+                            <span class="text-[15px] font-bold text-electric">01</span>
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="research" style="font-size:16px;color:#2563eb"></span></span>
+                        </div>
+                        <h3 class="mb-1.5 text-[15px] font-bold text-[#0f172a]">Usuario</h3>
+                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Descubre vehículos, evalúa alternativas y conecta con vendedores.</p>
+                        <div class="mb-2.5 border-t border-electric/15"></div>
+                        <ul class="space-y-1.5">
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Búsqueda y filtros</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Comparación de vehículos</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Contacto con vendedor</li>
+                        </ul>
+                    </div>
+
+                    <span class="hidden flex-shrink-0 items-center px-1 text-[16px] font-semibold text-[#c3cbd8] sm:flex">→</span>
+
+                    <!-- Vendedor -->
+                    <div class="flex-1 rounded-[18px] border border-[#e9edf2] bg-panel2 p-5">
+                        <div class="mb-3 flex items-center justify-between">
+                            <span class="text-[15px] font-bold text-electric">02</span>
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="delivery" style="font-size:16px;color:#2563eb"></span></span>
+                        </div>
+                        <h3 class="mb-1.5 text-[15px] font-bold text-[#0f172a]">Vendedor</h3>
+                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Publica vehículos y gestiona las oportunidades generadas dentro del marketplace.</p>
+                        <div class="mb-2.5 border-t border-electric/15"></div>
+                        <ul class="space-y-1.5">
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Publicación de vehículos</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Gestión de leads</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Seguimiento comercial</li>
+                        </ul>
+                    </div>
+
+                    <span class="hidden flex-shrink-0 items-center px-1 text-[16px] font-semibold text-[#c3cbd8] sm:flex">→</span>
+
+                    <!-- Administración -->
+                    <div class="flex-1 rounded-[18px] border border-[#e9edf2] bg-panel2 p-5">
+                        <div class="mb-3 flex items-center justify-between">
+                            <span class="text-[15px] font-bold text-electric">03</span>
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="dashboard" style="font-size:16px;color:#2563eb"></span></span>
+                        </div>
+                        <h3 class="mb-1.5 text-[15px] font-bold text-[#0f172a]">Administración</h3>
+                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Supervisa el ecosistema y mantiene el control operativo de la plataforma.</p>
+                        <div class="mb-2.5 border-t border-electric/15"></div>
+                        <ul class="space-y-1.5">
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Gestión de publicaciones</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Gestión de usuarios</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Seguimiento del marketplace</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <!-- Flujo de pasos -->
-            <div class="relative">
-                <span class="absolute left-0 right-0 top-[34px] hidden h-0.5 bg-[#dbe4ff] lg:block"></span>
-                <ol class="relative grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5 lg:gap-4">
-                    <li class="flex flex-col items-center text-center">
-                        <span class="z-[2] mb-5 flex h-[68px] w-[68px] items-center justify-center rounded-[18px] border border-[#dbe4ff] bg-[#eff4ff] text-primary shadow-[0_4px_18px_rgba(37,99,235,0.12)]">
-                            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M7 10h2M11 10h6M7 14h10"></path></svg>
-                        </span>
-                        <span class="mb-1 text-[11px] font-bold uppercase tracking-[0.12em] text-royal">Paso 1</span>
-                        <h3 class="mb-1.5 text-[17px] font-semibold text-[#0f172a]">Placa</h3>
-                        <p class="text-[12.5px] leading-[1.5] text-[#475569]">Autocompletado de datos a partir de la placa.</p>
-                    </li>
-                    <li class="flex flex-col items-center text-center">
-                        <span class="z-[2] mb-5 flex h-[68px] w-[68px] items-center justify-center rounded-[18px] border border-[#dbe4ff] bg-[#eff4ff] text-primary shadow-[0_4px_18px_rgba(37,99,235,0.12)]">
-                            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 8h6M9 12h6M9 16h4"></path></svg>
-                        </span>
-                        <span class="mb-1 text-[11px] font-bold uppercase tracking-[0.12em] text-royal">Paso 2</span>
-                        <h3 class="mb-1.5 text-[17px] font-semibold text-[#0f172a]">Datos</h3>
-                        <p class="text-[12.5px] leading-[1.5] text-[#475569]">Especificaciones del vehículo, validadas en vivo.</p>
-                    </li>
-                    <li class="flex flex-col items-center text-center">
-                        <span class="z-[2] mb-5 flex h-[68px] w-[68px] items-center justify-center rounded-[18px] border border-[#dbe4ff] bg-[#eff4ff] text-primary shadow-[0_4px_18px_rgba(37,99,235,0.12)]">
-                            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a2 2 0 0 1 2-2h2l1.5-2h7L19 6h0a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><circle cx="12" cy="12.5" r="3.2"></circle></svg>
-                        </span>
-                        <span class="mb-1 text-[11px] font-bold uppercase tracking-[0.12em] text-royal">Paso 3</span>
-                        <h3 class="mb-1.5 text-[17px] font-semibold text-[#0f172a]">Fotos</h3>
-                        <p class="text-[12.5px] leading-[1.5] text-[#475569]">Barra de visibilidad que motiva a subir más fotos.</p>
-                    </li>
-                    <li class="flex flex-col items-center text-center">
-                        <span class="z-[2] mb-5 flex h-[68px] w-[68px] items-center justify-center rounded-[18px] border border-[#dbe4ff] bg-[#eff4ff] text-primary shadow-[0_4px_18px_rgba(37,99,235,0.12)]">
-                            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13l8-9 8 9-8 7z" opacity="0"></path><path d="M3 17l6-6 4 4 8-8"></path><path d="M21 7v4h-4"></path></svg>
-                        </span>
-                        <span class="mb-1 text-[11px] font-bold uppercase tracking-[0.12em] text-royal">Paso 4</span>
-                        <h3 class="mb-1.5 text-[17px] font-semibold text-[#0f172a]">Precio</h3>
-                        <p class="text-[12.5px] leading-[1.5] text-[#475569]">Sugerencia de precio por demanda potencial (IA).</p>
-                    </li>
-                    <li class="flex flex-col items-center text-center">
-                        <span class="z-[2] mb-5 flex h-[68px] w-[68px] items-center justify-center rounded-[18px] border border-primary bg-primary text-[#ffffff] shadow-[0_6px_20px_rgba(37,99,235,0.30)]">
-                            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.5 2.5 4.5-5"></path></svg>
-                        </span>
-                        <span class="mb-1 text-[11px] font-bold uppercase tracking-[0.12em] text-royal">Paso 5</span>
-                        <h3 class="mb-1.5 text-[17px] font-semibold text-[#0f172a]">Revisión</h3>
-                        <p class="text-[12.5px] leading-[1.5] text-[#475569]">Resumen final y publicación con sello de confianza.</p>
-                    </li>
-                </ol>
+            <!-- Barra inferior -->
+            <div class="mt-5 flex flex-col gap-3 rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] px-6 py-4 sm:flex-row sm:items-center sm:gap-6">
+                <div class="flex flex-shrink-0 items-center gap-3">
+                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="target" style="font-size:15px;color:#2563eb"></span></span>
+                    <div>
+                        <span class="block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Un mismo ecosistema</span>
+                        <div class="mt-0.5 flex items-center gap-2 text-[12.5px] font-bold text-[#0f172a]">
+                            <span>Usuario</span><span class="text-[#c3cbd8]">→</span>
+                            <span>Vendedor</span><span class="text-[#c3cbd8]">→</span>
+                            <span>Administración</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden h-8 w-px bg-[#e4e8ee] sm:block"></div>
+                <p class="text-[12.5px] leading-[1.4] text-[#64748b]">Del descubrimiento a la gestión comercial.</p>
             </div>
+        </section>
+
+        <!-- ================= SISTEMA DE DISEÑO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid py-14">
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-[30%_1fr] lg:items-start">
+                <!-- Columna izquierda -->
+                <div>
+                    <div class="mb-3 flex items-center gap-2">
+                        <span class="h-1.5 w-1.5 rounded-full bg-[#1f3a8a]"></span>
+                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-[#1f3a8a]">Sistema de diseño</span>
+                    </div>
+                    <h2 class="mb-3 text-[26px] font-bold leading-[1.15] text-[#111827] sm:text-[30px]">Una experiencia consistente para<br /><span class="text-[#1f3a8a]">el mundo automotriz.</span></h2>
+                    <p class="mb-4 text-[13.5px] leading-[1.55] text-[#6b7280]">Diseñamos un sistema visual pensado para ConDuzko, facilitando la navegación y manteniendo consistencia entre compradores, vendedores y administración.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#111827]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3a8a]/10"><span class="ic" data-icon="success" style="font-size:11px;color:#1f3a8a"></span></span>Componentes reutilizables</li>
+                        <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#111827]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3a8a]/10"><span class="ic" data-icon="success" style="font-size:11px;color:#1f3a8a"></span></span>Estados visuales claros</li>
+                        <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#111827]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3a8a]/10"><span class="ic" data-icon="success" style="font-size:11px;color:#1f3a8a"></span></span>Escalable para web y mobile</li>
+                    </ul>
+                </div>
+
+                <!-- Contenedor Design System -->
+                <div class="rounded-[20px] border border-[#e5e7eb] bg-[#f8fafc] p-4">
+                    <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                        <!-- Colores -->
+                        <div class="rounded-[14px] border border-[#e5e7eb] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#111827]">Colores</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#6b7280]">Paleta funcional que comunica confianza, movilidad y claridad.</p>
+                            <div class="mb-2.5 grid grid-cols-4 gap-1.5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#1f3a8a]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Primario</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#111827]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Navy</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full border border-[#e5e7eb] bg-[#f5f7fa]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Superficie</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#6b7280]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Texto</span>
+                                </div>
+                            </div>
+                            <div class="mb-2 border-t border-[#eef1f5]"></div>
+                            <div class="grid grid-cols-4 gap-1.5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#16a34a]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Disp.</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#f59e0b]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Negoc.</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#ef4444]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Vendido</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#3b82f6]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Info.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tipografía -->
+                        <div class="rounded-[14px] border border-[#e5e7eb] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#111827]">Tipografía</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#6b7280]">Poppins, para una lectura clara y moderna en todos los entornos.</p>
+                            <div class="mb-2 text-[28px] font-bold leading-none text-[#111827]">Aa</div>
+                            <p class="mb-2.5 text-[11px] font-semibold text-[#1f3a8a]">Poppins</p>
+                            <div class="space-y-1 border-t border-[#eef1f5] pt-2">
+                                <div class="flex items-center justify-between text-[10px] text-[#6b7280]"><span class="font-bold text-[#111827]">H1</span><span>Bold · 32px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#6b7280]"><span class="font-bold text-[#111827]">H2</span><span>Bold · 24px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#6b7280]"><span class="font-semibold text-[#111827]">H3</span><span>Semibold · 18px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#6b7280]"><span class="text-[#111827]">Body</span><span>Regular · 16px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#6b7280]"><span class="text-[#111827]">Caption</span><span>Regular · 14px</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Componentes -->
+                        <div class="rounded-[14px] border border-[#e5e7eb] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#111827]">Componentes</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#6b7280]">Elementos reutilizables para una experiencia consistente.</p>
+                            <div class="space-y-1.5">
+                                <div class="flex items-center justify-center gap-1.5 rounded-full bg-[#1f3a8a] px-3 py-1.5 text-[10.5px] font-semibold text-white">Ver vehículos <span class="ic" data-icon="arrow-up-right" style="font-size:10px"></span></div>
+                                <div class="flex items-center justify-center rounded-full border border-[#1f3a8a] px-3 py-1.5 text-[10.5px] font-semibold text-[#1f3a8a]">Publicar vehículo</div>
+                                <div class="flex items-center gap-1.5 rounded-full border border-[#e5e7eb] bg-[#f8fafc] px-3 py-1.5 text-[10.5px] text-[#94a3b8]"><span class="ic" data-icon="research" style="font-size:11px;color:#94a3b8"></span>Buscar marca, modelo...</div>
+                                <div class="flex items-center justify-between rounded-full border border-[#e5e7eb] px-3 py-1.5 text-[10.5px] text-[#111827]">Seleccionar opción<span class="text-[#94a3b8]">▾</span></div>
+                                <div class="flex items-center justify-center gap-1 pt-0.5 text-[10px] font-semibold text-[#94a3b8]">
+                                    <span class="flex h-5 w-5 items-center justify-center">‹</span>
+                                    <span class="flex h-5 w-5 items-center justify-center rounded-full bg-[#1f3a8a] text-white">1</span>
+                                    <span class="flex h-5 w-5 items-center justify-center">2</span>
+                                    <span class="flex h-5 w-5 items-center justify-center">3</span>
+                                    <span class="flex h-5 w-5 items-center justify-center">…</span>
+                                    <span class="flex h-5 w-5 items-center justify-center">10</span>
+                                    <span class="flex h-5 w-5 items-center justify-center">›</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                        <!-- Estados operativos -->
+                        <div class="rounded-[14px] border border-[#e5e7eb] bg-white p-4 sm:col-span-2">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#111827]">Estados operativos</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#6b7280]">Señales visuales para identificar rápidamente el estado de vehículos, publicaciones y procesos.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#16a34a]/10 px-3 py-1.5 text-[10.5px] font-semibold text-[#16a34a]"><span class="h-1.5 w-1.5 rounded-full bg-[#16a34a]"></span>Disponible</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#f59e0b]/10 px-3 py-1.5 text-[10.5px] font-semibold text-[#f59e0b]"><span class="h-1.5 w-1.5 rounded-full bg-[#f59e0b]"></span>En negociación</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#ef4444]/10 px-3 py-1.5 text-[10.5px] font-semibold text-[#ef4444]"><span class="h-1.5 w-1.5 rounded-full bg-[#ef4444]"></span>Vendido</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#3b82f6]/10 px-3 py-1.5 text-[10.5px] font-semibold text-[#3b82f6]"><span class="h-1.5 w-1.5 rounded-full bg-[#3b82f6]"></span>Reservado</span>
+                            </div>
+                        </div>
+
+                        <!-- Iconografía -->
+                        <div class="rounded-[14px] border border-[#e5e7eb] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#111827]">Iconografía</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#6b7280]">Íconos simples y consistentes para los principales módulos del producto.</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f5f7fa]"><span class="ic" data-icon="delivery" style="font-size:13px;color:#111827"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f5f7fa]"><span class="ic" data-icon="profile" style="font-size:13px;color:#111827"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f5f7fa]"><span class="ic" data-icon="case-study" style="font-size:13px;color:#111827"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f5f7fa]"><span class="ic" data-icon="mail" style="font-size:13px;color:#111827"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f5f7fa]"><span class="ic" data-icon="trending-up" style="font-size:13px;color:#111827"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f5f7fa]"><span class="ic" data-icon="process" style="font-size:13px;color:#111827"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra inferior -->
+            <div class="mt-4 flex flex-col gap-3 rounded-[16px] border border-[#e5e7eb] bg-[#f5f7fa] px-6 py-4 sm:flex-row sm:items-center sm:gap-6">
+                <div class="flex flex-shrink-0 items-center gap-3">
+                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3a8a]/10"><span class="ic" data-icon="delivery" style="font-size:15px;color:#1f3a8a"></span></span>
+                    <span class="text-[12.5px] font-bold text-[#111827]">Un sistema visual al servicio del ecosistema <span class="text-[#1f3a8a]">ConDuzko.</span></span>
+                </div>
+                <div class="hidden h-8 w-px bg-[#e5e7eb] sm:block"></div>
+                <p class="text-[12.5px] leading-[1.4] text-[#6b7280]">Componentes, colores y patrones diseñados para facilitar la experiencia de compradores, vendedores y administración, manteniendo consistencia en todo el producto.</p>
+            </div>
+        </section>
 
    <!-- GALERÍA CONDUZKO -->
 <section class="mx-auto flex w-[90%] max-w-grid flex-col items-center px-0 pb-12 pt-20 text-center">
@@ -239,20 +477,20 @@
         </span>
 
         <h2 class="mb-8 text-[32px] font-bold leading-[1.1] text-[#0f172a] sm:text-[48px]">
-            Menos fricción y una nueva experiencia de Conduzko 
+            De la búsqueda a la decisión, en web y mobile.
         </h2>
 
         <div class="flex flex-wrap justify-center gap-4">
             <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">
-                Gestión centralizada
+                Búsqueda y comparación
             </span>
 
             <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">
-                Flujo guiado
+                Panel de gestión
             </span>
 
             <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">
-                Seguimiento del proceso
+                Experiencia mobile
             </span>
         </div>
     </div>
@@ -982,7 +1220,7 @@
                     <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
                 </div>
                 <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
-                    Diseño de producto orientado a datos: research, UX, IA y front-end listo para desarrollo.
+                    Diseño de producto orientado a datos: research, UX y decisiones medibles.
                 </p>
             </div>
             <div class="text-center md:text-right">

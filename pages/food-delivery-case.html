@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Caso de Estudio | Food Delivery</title>
+    <title>Food Delivery | Onboarding y activación</title>
     <meta name="description" content="FoodDelivery — caso de estudio profundo: UX, activación, atomic design y estrategia de datos (GA4 · Clarity)." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232563eb'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
     <meta property="og:type" content="website" />
@@ -59,1112 +59,886 @@
         </div>
     </nav>
 
-    <main class="pt-10">
+    <main class="pt-8">
+
         <!-- ================= HERO ================= -->
-        <header class="mx-auto w-[90%] max-w-grid">
-            <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-electric">BLOQUE 1: UX &amp; ACTIVACIÓN</span>
-            <h1 class="mt-8 text-[40px] font-bold leading-[1.1] tracking-[-0.02em] sm:text-[56px] lg:text-[72px]">
-                Simplificando el <span class="text-electric">Ciclo <br />de Activación</span> de Food Delivery.
-            </h1>
+        <header class="mx-auto w-[90%] max-w-grid py-10 sm:py-14">
+            <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
+                <!-- Izquierda: narrativa -->
+                <div>
+                    <span class="text-[11px] font-bold uppercase tracking-[0.15em] text-electric">Product Case Study · Deep Dive</span>
+                    <h1 class="mt-4 mb-5 text-[30px] font-bold leading-[1.15] tracking-[-0.02em] sm:text-[38px] lg:text-[44px]">
+                        De onboarding a <span class="text-electric">activación</span>: diseñando para crecer.
+                    </h1>
+                    <p class="mb-7 max-w-[480px] text-[15px] leading-[1.65] text-[#475569]">
+                        Cómo rediseñé el onboarding para que más comercios pasen de registrarse a publicar su tienda, guiado por datos de funnel y una hipótesis medible.
+                    </p>
+                    <div class="mb-8 flex flex-wrap gap-2">
+                        <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Product Strategy</span>
+                        <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Growth</span>
+                        <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#0f172a]">UX Research</span>
+                        <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Data</span>
+                        <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Experimentation</span>
+                    </div>
+                    <a href="food-delivery.html" class="group inline-flex items-center gap-2 rounded-xl border-2 border-primary px-5 py-2.5 text-[13.5px] font-semibold text-primary transition-all hover:bg-primary hover:text-white">
+                        <span class="transition-transform group-hover:-translate-x-1">←</span> Ver Project Overview
+                    </a>
+                </div>
+
+                <!-- Derecha: composición de producto (assets existentes) -->
+                <div class="relative">
+                    <div class="overflow-hidden rounded-[18px] border border-[#e9edf2] bg-white shadow-showcase">
+                        <div class="flex items-center gap-1.5 border-b border-[#e9edf2] bg-[#f6f7f9] px-4 py-2.5">
+                            <span class="h-2 w-2 rounded-full bg-[#e2e8f0]"></span>
+                            <span class="h-2 w-2 rounded-full bg-[#e2e8f0]"></span>
+                            <span class="h-2 w-2 rounded-full bg-[#e2e8f0]"></span>
+                        </div>
+                        <img loading="lazy" src="../assets/projects/food/1food.svg" alt="FoodDelivery — flujo de onboarding" class="block w-full" />
+                    </div>
+                    <div class="absolute -right-3 -top-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex">
+                        <span class="ic" data-icon="trending-up" style="font-size:15px;color:#2563eb"></span>
+                        <div>
+                            <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8]">Activation Rate</div>
+                            <div class="text-[13px] font-bold text-[#0f172a]">48% → 63%</div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-3 -left-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex">
+                        <span class="ic" data-icon="verified" style="font-size:15px;color:#16a34a"></span>
+                        <div>
+                            <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8]">Onboarding</div>
+                            <div class="text-[13px] font-bold text-[#0f172a]">7 pasos guiados</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
-
-        <!-- ================= ROL & IMPACTO ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-12">
-            <div class="mb-10">
-                <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">ROL &amp; IMPACTO</span>
-                <p class="max-w-[980px] text-[17px] font-light leading-[1.6] text-[#475569] sm:text-[20px]">Lideré el rediseño del onboarding de extremo a extremo. Estos son los resultados medidos contra la línea base previa al lanzamiento.</p>
+        <!-- ================= PROJECT INFO ================= -->
+        <section class="mx-auto w-[90%] max-w-grid border-y border-[#e9edf2] py-6">
+            <div class="grid grid-cols-2 gap-6 sm:grid-cols-4">
+                <div>
+                    <span class="mb-1.5 block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Mi Rol</span>
+                    <p class="text-[13.5px] font-semibold text-[#0f172a]">Product Designer</p>
+                    <p class="text-[11.5px] text-dim">Research · UX · Product Strategy</p>
+                </div>
+                <div>
+                    <span class="mb-1.5 block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Equipo</span>
+                    <p class="text-[13.5px] font-semibold text-[#0f172a]">Producto · Diseño · Desarrollo</p>
+                </div>
+                <div>
+                    <span class="mb-1.5 block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Plataforma</span>
+                    <p class="text-[13.5px] font-semibold text-[#0f172a]">Web</p>
+                </div>
+                <div>
+                    <span class="mb-1.5 block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Herramientas</span>
+                    <p class="text-[13.5px] font-semibold text-[#0f172a]">Figma · GA4 · Mixpanel · Clarity</p>
+                </div>
             </div>
-            <div class="mb-6 grid grid-cols-2 gap-6 rounded-[24px] border border-[#e9edf2] bg-card p-8 lg:grid-cols-4 sm:p-10">
-                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">MI ROL</span><p class="text-[16px] font-semibold text-[#0f172a]">Product Designer</p><p class="mt-0.5 text-[12px] text-dim">Research · UX · UI · Handoff</p></div>
-                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">EQUIPO</span><p class="text-[16px] font-semibold text-[#0f172a]">Producto + 2 devs</p></div>
-                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">DURACIÓN</span><p class="text-[16px] font-semibold text-[#0f172a]">≈ 10 semanas</p></div>
-                <div><span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-electric">HERRAMIENTAS</span><p class="text-[16px] font-semibold text-[#0f172a]">GA4 · Mixpanel · Clarity · Figma</p></div>
-            </div>
-            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline gap-2"><span class="text-[16px] font-medium text-[#94a3b8] line-through">48%</span><span class="text-[15px] text-[#94a3b8]">→</span><span class="text-[34px] font-bold leading-none text-electric">63%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Completitud de onboarding</p><p class="mt-1 text-[12px] leading-snug text-dim">+32% relativo · GA4, 6 semanas post-launch (n≈900)</p></div>
-                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline gap-2"><span class="text-[16px] font-medium text-[#94a3b8] line-through">41%</span><span class="text-[15px] text-[#94a3b8]">→</span><span class="text-[34px] font-bold leading-none text-electric">30%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Tasa de abandono</p><p class="mt-1 text-[12px] leading-snug text-dim">−27% · funnel GA4 + grabaciones de Clarity</p></div>
-                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">+21%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Creación de tiendas</p><p class="mt-1 text-[12px] leading-snug text-dim">Cohortes en Mixpanel vs. trimestre anterior</p></div>
-                <div class="rounded-[20px] border border-[#e9edf2] bg-card p-7"><div class="flex items-baseline"><span class="text-[34px] font-bold leading-none text-electric">+18%</span></div><p class="mt-3 text-[14px] font-semibold text-[#0f172a]">Conversión final</p><p class="mt-1 text-[12px] leading-snug text-dim">Test A/B en GA4 sobre el flujo de publicación</p></div>
-            </div>
-            <p class="mt-5 text-[12px] text-dim">Métricas medidas contra la línea base previa a cada rediseño. Valores relativos salvo indicación contraria.</p>
         </section>
 
-        <!-- ================= PROBLEMA / SOLUCIÓN ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-20">
-            <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-[1.5fr_1fr]">
-                <!-- Problema -->
-                <div class="flex flex-col rounded-[40px] bg-panel2 p-8 sm:p-11">
-                    <h3 class="mb-8 text-[22px] font-semibold">El Problema: Sobrecarga Cognitiva</h3>
-                    <p class="mb-12 text-[16px] leading-[1.6] text-[#475569]">
-                        Los usuarios abandonaban frecuentemente la plataforma durante la "Primera Milla". La
-                        documentación compleja y los procesos de configuración fragmentados generaban una <span class="text-[#FF5C5C]">tasa de abandono del 65%</span> antes de concretar el primer pedido.
+        <!-- ================= DEEP DIVE TIMELINE ================= -->
+        <div class="mx-auto w-[90%] max-w-grid">
+
+            <!-- 01 — CONTEXTO DEL PRODUCTO -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">01</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Contexto</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">01 — Contexto</span>
+                    <h2 class="mb-3 text-[22px] font-bold leading-[1.2] sm:text-[26px]">El problema no era terminar pantallas. Era activar comercios.</h2>
+                    <p class="mb-2.5 max-w-[680px] text-[14.5px] leading-[1.65] text-[#475569]">
+                        FoodDelivery permite que pequeños negocios gastronómicos creen su tienda digital y empiecen a vender. Pero crear una cuenta no generaba valor.
                     </p>
-                    <div class="mt-auto flex flex-col gap-4 sm:flex-row">
-                        <div class="flex flex-1 items-center gap-4 rounded-[28px] bg-[#eef1f5] px-7 py-5">
-                            <span class="ic" data-icon="tech-automation" style="font-size:18px;color:#2563eb"></span>
-                            <div>
-                                <span class="block text-[9px] font-bold tracking-[0.1em] text-[#94a3b8]">COMPLEJIDAD</span>
-                                <span class="block text-[14px] font-semibold text-[#0f172a]">Sincronización Manual</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-1 items-center gap-4 rounded-[28px] bg-[#eef1f5] px-7 py-5">
-                            <span class="ic" data-icon="warning" style="font-size:18px;color:#d97706"></span>
-                            <div>
-                                <span class="block text-[9px] font-bold tracking-[0.1em] text-[#94a3b8]">FRICCIÓN</span>
-                                <span class="block text-[14px] font-semibold text-[#0f172a]">Retraso de 48hs</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Solución -->
-                <div class="flex flex-col rounded-[40px] bg-[#7A9BFF] p-8 text-black sm:p-11">
-                    <h3 class="mb-8 text-[22px] font-bold">Solución UX: El Motor Progresivo</h3>
-                    <p class="mb-12 text-[16px] leading-[1.6] text-black/70">
-                        Sustituimos los formularios densos por una experiencia de Onboarding basada en micro-pasos. Los
-                        ciclos de retroalimentación en tiempo real y la progresión gamificada redujeron el tiempo de
-                        obtención de valor en un 82%.
+                    <p class="mb-6 max-w-[680px] text-[14.5px] leading-[1.65] text-[#475569]">
+                        El momento clave era la publicación de la tienda.
                     </p>
-                    <div class="mt-auto flex items-center gap-3 text-[13px] font-semibold">
-                        <span class="ic" data-icon="verified" style="font-size:18px;color:#16a34a"></span>
-                        <span>Micro-interacciones integradas</span>
+
+                    <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] px-5 py-5">
+                        <div class="flex flex-wrap items-center gap-x-3 gap-y-3 text-[12.5px] font-semibold text-[#0f172a] sm:flex-nowrap sm:justify-between">
+                            <span class="rounded-lg bg-white px-3 py-2 border border-[#e9edf2]">Registro</span>
+                            <span class="text-[#c3cbd8]">→</span>
+                            <span class="rounded-lg bg-white px-3 py-2 border border-[#e9edf2]">Configuración</span>
+                            <span class="text-[#c3cbd8]">→</span>
+                            <span class="rounded-lg bg-white px-3 py-2 border border-[#e9edf2]">Publicación</span>
+                            <span class="text-[#c3cbd8]">→</span>
+                            <span class="rounded-lg bg-white px-3 py-2 border border-[#e9edf2]">Tienda activa</span>
+                            <span class="text-[#c3cbd8]">→</span>
+                            <span class="rounded-lg border border-electric bg-electric/10 px-3 py-2 text-electric">Ventas</span>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-[13.5px] italic leading-[1.6] text-[#64748b]">"Una tienda creada pero nunca publicada no genera valor para el comercio ni para el producto."</p>
+                </div>
+            </section>
+
+            <!-- 02 — BUSINESS GOALS -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">02</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Business Goals</span>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">02 — Business Goals</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Conectando UX con crecimiento.</h2>
 
-        <!-- ================= PERSONAS ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-12">
-            <span class="block pt-10 text-[11px] font-bold uppercase tracking-[0.15em] text-electric">INVESTIGACIÓN: ARQUETIPOS</span>
-            <h2 class="mb-14 mt-8 text-[32px] font-bold tracking-[-0.01em] sm:text-[48px]">Mapeando el Comportamiento del Usuario.</h2>
-
-            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                <!-- Comerciante -->
-                <div class="overflow-hidden rounded-[24px] border border-[#edf0f4] border-t-4 border-t-electric bg-panel2 p-8 sm:p-10">
-                    <div class="mb-10 flex items-center gap-5">
-                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f5f8]">
-                            <span class="ic" data-icon="seller" style="font-size:24px;color:#2563eb"></span>
-                        </div>
-                        <div>
-                            <h4 class="text-[22px] font-semibold text-[#0f172a]">El Comerciante Ágil</h4>
-                            <span class="text-[11px] font-bold tracking-[0.1em] text-[#94a3b8]">TOMADOR DE DECISIONES</span>
-                        </div>
-                    </div>
-                    <div class="mb-10 grid grid-cols-2 gap-8">
-                        <div>
-                            <span class="mb-4 block text-[10px] font-extrabold tracking-[0.1em] text-electric">OBJETIVOS</span>
-                            <ul class="flex flex-col gap-2 text-[14px] text-[#475569]">
-                                <li class="before:mr-2 before:content-['•']">Activación rápida de tienda</li>
-                                <li class="before:mr-2 before:content-['•']">Automatización de inventario</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <span class="mb-4 block text-[10px] font-extrabold tracking-[0.1em] text-[#FF5C5C]">PUNTOS DE DOLOR</span>
-                            <ul class="flex flex-col gap-2 text-[14px] text-[#475569]">
-                                <li class="before:mr-2 before:content-['•']">Alta barrera tecnológica</li>
-                                <li class="before:mr-2 before:content-['•']">Entrada manual de datos</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="rounded-[20px] bg-[#f7f8fa] p-7">
-                        <p class="text-[14px] italic leading-[1.6] text-[#64748b]">"Necesito que mi vitrina digital sea tan operativa como mi tienda física, sin pasar horas configurándola."</p>
-                    </div>
-                </div>
-                <!-- Consumidor -->
-                <div class="overflow-hidden rounded-[24px] border border-[#edf0f4] border-t-4 border-t-[#7A9BFF] bg-panel2 p-8 sm:p-10">
-                    <div class="mb-10 flex items-center gap-5">
-                        <div class="flex h-14 w-14 items-center justify-center rounded-full bg-[#f3f5f8]">
-                            <span class="ic" data-icon="profile" style="font-size:24px;color:#2563eb"></span>
-                        </div>
-                        <div>
-                            <h4 class="text-[22px] font-semibold text-[#0f172a]">El Consumidor Directo</h4>
-                            <span class="text-[11px] font-bold tracking-[0.1em] text-[#94a3b8]">USUARIO FINAL</span>
-                        </div>
-                    </div>
-                    <div class="mb-10 grid grid-cols-2 gap-8">
-                        <div>
-                            <span class="mb-4 block text-[10px] font-extrabold tracking-[0.1em] text-electric">OBJETIVOS</span>
-                            <ul class="flex flex-col gap-2 text-[14px] text-[#475569]">
-                                <li class="before:mr-2 before:content-['•']">Precisión en tiempo real</li>
-                                <li class="before:mr-2 before:content-['•']">Fulfillment en un clic</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <span class="mb-4 block text-[10px] font-extrabold tracking-[0.1em] text-[#FF5C5C]">PUNTOS DE DOLOR</span>
-                            <ul class="flex flex-col gap-2 text-[14px] text-[#475569]">
-                                <li class="before:mr-2 before:content-['•']">Estatus de entrega opaco</li>
-                                <li class="before:mr-2 before:content-['•']">Fragmentación del carrito</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="rounded-[20px] bg-[#f7f8fa] p-7">
-                        <p class="text-[14px] italic leading-[1.6] text-[#64748b]">"La visibilidad es mi moneda de cambio. Si no puedo ver exactamente dónde está mi pedido, pierdo la confianza en el servicio."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= FLUJO KINÉTICO ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-12">
-            <div class="pt-10">
-                <span class="block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">ARQUITECTURA: EL HAPPY PATH</span>
-                <h2 class="mb-6 mt-8 text-[32px] font-bold tracking-[-0.01em] sm:text-[48px]">Flujo de Onboarding Kinético.</h2>
-                <p class="mb-12 max-w-[700px] text-[16px] text-[#64748b]">Visualización de la transición optimizada de 7 pasos, desde la identidad inicial hasta la presencia en vivo en el mercado.</p>
-            </div>
-
-            <div class="rounded-[32px] border border-[#edf0f4] bg-[#f6f7f9] px-6 py-12 sm:px-10">
-                <div class="mb-12 grid grid-cols-2 gap-8 sm:grid-cols-4 lg:flex lg:justify-between">
-                    <div class="flex flex-1 flex-col items-center text-center">
-                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><span class="ic" data-icon="profile" style="font-size:24px;color:#2563eb"></span></div>
-                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">1. Registro</span>
-                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">IDENTIDAD</span>
-                    </div>
-                    <div class="flex flex-1 flex-col items-center text-center">
-                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><span class="ic" data-icon="process" style="font-size:24px;color:#2563eb"></span></div>
-                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">2. Inicio guiado</span>
-                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">CONTEXTO</span>
-                    </div>
-                    <div class="flex flex-1 flex-col items-center text-center">
-                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><span class="ic" data-icon="work" style="font-size:24px;color:#2563eb"></span></div>
-                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">3. Categoría</span>
-                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">ESTRUCTURA</span>
-                    </div>
-                    <div class="flex flex-1 flex-col items-center text-center">
-                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><span class="ic" data-icon="delivery" style="font-size:24px;color:#2563eb"></span></div>
-                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">4. Productos</span>
-                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">INVENTARIO</span>
-                    </div>
-                    <div class="flex flex-1 flex-col items-center text-center">
-                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><span class="ic" data-icon="product-design" style="font-size:24px;color:#2563eb"></span></div>
-                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">5. Personalización</span>
-                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">MARCA</span>
-                    </div>
-                    <div class="flex flex-1 flex-col items-center text-center">
-                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#e4e8ee] bg-[#f3f5f8]"><span class="ic" data-icon="verified" style="font-size:24px;color:#16a34a"></span></div>
-                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">6. Vista previa</span>
-                        <span class="text-[9px] font-bold uppercase tracking-wide text-[#a3adba]">VALIDACIÓN</span>
-                    </div>
-                    <div class="flex flex-1 flex-col items-center text-center">
-                        <div class="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-electric bg-[#f3f5f8] shadow-[0_0_20px_rgba(74,111,255,0.2)]"><span class="ic" data-icon="send" style="font-size:24px;color:#2563eb"></span></div>
-                        <span class="mb-1 text-[13px] font-semibold text-[#0f172a]">7. Publicación</span>
-                        <span class="text-[9px] font-bold uppercase tracking-wide text-electric">ESTADO EN VIVO</span>
-                    </div>
-                </div>
-
-                <hr class="mb-12 border-0 border-t border-[#e9edf2]" />
-
-                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-                    <div>
-                        <span class="mb-3 block text-[10px] font-bold tracking-[0.1em] text-electric">PASO 01-02</span>
-                        <h4 class="mb-3 text-[16px] font-semibold">Autenticación &amp; Contextualización</h4>
-                        <p class="text-[13px] leading-[1.6] text-[#64748b]">Captura de credenciales seguras y recorrido interactivo inicial para reducir el "blank slate syndrome".</p>
-                    </div>
-                    <div>
-                        <span class="mb-3 block text-[10px] font-bold tracking-[0.1em] text-electric">PASO 03-04</span>
-                        <h4 class="mb-3 text-[16px] font-semibold">Estructura de Catálogo</h4>
-                        <p class="text-[13px] leading-[1.6] text-[#64748b]">Organización lógica de categorías y carga masiva de productos optimizada por IA para mapeo automático.</p>
-                    </div>
-                    <div>
-                        <span class="mb-3 block text-[10px] font-bold tracking-[0.1em] text-electric">PASO 05-06</span>
-                        <h4 class="mb-3 text-[16px] font-semibold">Estética &amp; Control de Calidad</h4>
-                        <p class="text-[13px] leading-[1.6] text-[#64748b]">Configuración de identidad visual y simulación en tiempo real del flujo del usuario final antes del despliegue.</p>
-                    </div>
-                    <div>
-                        <span class="mb-3 block text-[10px] font-bold tracking-[0.1em] text-electric">PASO 07</span>
-                        <h4 class="mb-3 text-[16px] font-semibold">Lanzamiento al Ecosistema</h4>
-                        <p class="text-[13px] leading-[1.6] text-[#64748b]">Distribución instantánea en la red de entrega con propagación de caché global sin latencia.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= ATOMIC DESIGN ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-12">
-            <div class="pt-10">
-                <span class="block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">BLOQUE 2: UI &amp; ATOMIC DESIGN</span>
-                <h2 class="mb-6 mt-8 text-[32px] font-bold tracking-[-0.01em] sm:text-[48px]">Integridad Visual a Escala.</h2>
-                <p class="mb-12 max-w-[800px] text-[16px] leading-[1.6] text-[#64748b]">Nuestro Design System está construido sobre precisión matemática, asegurando que cada píxel cumpla un propósito en el ecosistema logístico.</p>
-            </div>
-
-            <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-                <!-- Átomos -->
-                <div>
-                    <div class="relative mb-6 flex h-[240px] items-center justify-center overflow-hidden rounded-[32px] border border-[#e9edf2] bg-panel2">
-                        <div class="mx-2 h-14 w-14 rounded-full bg-electric shadow-[0_0_20px_rgba(74,111,255,0.3)]"></div>
-                        <div class="mx-2 h-14 w-14 rounded-full bg-[#7A9BFF]"></div>
-                        <div class="mx-2 h-14 w-14 rounded-full bg-[#9DB7FF]"></div>
-                    </div>
-                    <h4 class="mb-3 text-[22px] font-semibold">Átomos</h4>
-                    <p class="text-[14px] leading-[1.6] text-[#64748b]">Escalas definidas por luminancia y la regla de "No-Line" para la elevación.</p>
-                </div>
-                <!-- Moléculas -->
-                <div>
-                    <div class="relative mb-6 flex h-[240px] items-center justify-center overflow-hidden rounded-[32px] border border-[#e9edf2] bg-panel2">
-                        <div class="flex items-center gap-4 rounded-full border border-[#e9edf2] bg-[#eef1f5] px-6 py-3">
-                            <span class="ic" data-icon="location" style="font-size:16px;color:#2563eb"></span>
-                            <span class="text-[10px] font-bold tracking-[0.1em] text-[#0f172a]">RASTREANDO...</span>
-                            <div class="h-5 w-10 rounded-full bg-electric"></div>
-                        </div>
-                    </div>
-                    <h4 class="mb-3 text-[22px] font-semibold">Moléculas</h4>
-                    <p class="text-[14px] leading-[1.6] text-[#64748b]">Badges de estado interactivos y clusters de búsqueda predictiva.</p>
-                </div>
-                <!-- Organismos -->
-                <div>
-                    <div class="relative mb-6 flex h-[240px] items-center justify-center overflow-hidden rounded-[32px] border border-[#e9edf2] bg-panel2 p-8">
-                        <div class="flex h-full w-full flex-col gap-4 rounded-2xl border border-[#e9edf2] bg-[#f7f8fa] p-5">
-                            <div class="h-3 w-3/5 rounded-full bg-[#f3f5f8]"></div>
-                            <div class="grid grid-cols-4 gap-3">
-                                <div class="h-10 rounded-xl border border-transparent bg-[#f3f5f8]"></div>
-                                <div class="h-10 rounded-xl border border-transparent bg-[#f3f5f8]"></div>
-                                <div class="h-10 rounded-xl border border-electric/40 bg-electric/[0.15] shadow-[0_0_15px_rgba(74,111,255,0.1)]"></div>
-                                <div class="h-10 rounded-xl border border-transparent bg-[#f3f5f8]"></div>
+                    <div class="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-electric/10">
+                                <span class="ic" data-icon="trending-up" style="font-size:18px;color:#2563eb"></span>
                             </div>
-                            <div class="w-full flex-1 rounded-2xl bg-[#f7f8fa]"></div>
+                            <h3 class="mb-1.5 text-[14.5px] font-semibold">Aumentar Activación</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Más comercios deben completar y publicar su tienda.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-electric/10">
+                                <span class="ic" data-icon="funnel" style="font-size:18px;color:#2563eb"></span>
+                            </div>
+                            <h3 class="mb-1.5 text-[14.5px] font-semibold">Reducir Abandono</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Identificar y disminuir fricción dentro del onboarding.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-3 flex h-9 w-9 items-center justify-center rounded-lg bg-electric/10">
+                                <span class="ic" data-icon="rocket" style="font-size:18px;color:#2563eb"></span>
+                            </div>
+                            <h3 class="mb-1.5 text-[14.5px] font-semibold">Acelerar Time to Value</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Reducir el esfuerzo para alcanzar la primera experiencia de valor.</p>
                         </div>
                     </div>
-                    <h4 class="mb-3 text-[22px] font-semibold">Organismos</h4>
-                    <p class="text-[14px] leading-[1.6] text-[#64748b]">Dashboards dinámicos de gestión de flota y mapas en tiempo real.</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- ================= IA WORKFLOW ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-12">
-            <div class="mb-14 text-center">
-                <h2 class="mb-6 pt-10 text-[32px] font-bold sm:text-[48px]">IA &amp; Creative Workflow</h2>
-                <p class="mx-auto max-w-[700px] text-[16px] leading-[1.6] text-[#64748b] md:text-[18px]">Integrando herramientas de inteligencia artificial para acelerar la producción de alta fidelidad sin comprometer la calidad.</p>
-            </div>
-            <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-                <div class="flex flex-col rounded-[32px] border border-[#e9edf2] bg-[#f6f7f9] p-8 sm:p-10">
-                    <div class="mb-8 flex items-center gap-5">
-                        <div class="flex h-[45px] w-[45px] items-center justify-center rounded-xl border border-[#a855f7]/20 bg-[#a855f7]/10"><span class="ic" data-icon="process" style="font-size:20px;color:#2563eb"></span></div>
-                        <h3 class="text-[22px] font-semibold">Diagrama de Flujos</h3>
-                    </div>
-                    <p class="mb-9 min-h-[80px] text-[15px] leading-[1.6] text-[#64748b]">Generación de mapa de Flujo en todo requerimiento utilizado para el proyecto, para el mejor entendimiento del Developer, teniendo un producto documentado y preciso.</p>
-                    <div class="group mt-auto w-full overflow-hidden rounded-2xl border border-[#edf0f4] bg-[#eef1f5]">
-                        <img loading="lazy" src="../assets/projects/food/flow-diagram.png" alt="Diagrama de Flujos" class="block w-full transition-transform duration-500 group-hover:scale-105" />
-                    </div>
-                </div>
-                <div class="flex flex-col rounded-[32px] border border-[#e9edf2] bg-[#f6f7f9] p-8 sm:p-10">
-                    <div class="mb-8 flex items-center gap-5">
-                        <div class="flex h-[45px] w-[45px] items-center justify-center rounded-xl border border-[#ef4444]/20 bg-[#ef4444]/10"><span class="ic" data-icon="ai-workflow" style="font-size:20px;color:#2563eb"></span></div>
-                        <h3 class="text-[22px] font-semibold">STICH (IA) Integration</h3>
-                    </div>
-                    <p class="mb-9 min-h-[80px] text-[15px] leading-[1.6] text-[#64748b]">Uso de Stitch para la generación de texturas dinámicas, recursos visuales abstractos y apoyo en la creación de interfaces, facilitando la exploración rápida de estilos.</p>
-                    <div class="group mt-auto w-full overflow-hidden rounded-2xl border border-[#edf0f4] bg-[#eef1f5]">
-                        <img loading="lazy" src="../assets/projects/food/stitch-board.png" alt="Stich AI Integration" class="block w-full transition-transform duration-500 group-hover:scale-105" />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================= DATA STRATEGY ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-12">
-            <div class="pt-10">
-                <span class="block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">BLOQUE 3: ESTRATEGIA DE DATOS</span>
-                <h2 class="mb-6 mt-8 text-[32px] font-bold tracking-[-0.01em] sm:text-[48px]">Inteligencia Estratégica &amp; Medición de Usuarios</h2>
-                <p class="mb-12 max-w-[900px] text-[16px] leading-[1.6] text-[#64748b] md:text-[18px]"><strong class="font-semibold text-[#0f172a]">UX + Data = Decisiones Efectivas.</strong> Como Senior Designer, mi enfoque no es solo estético, sino validado. Cada micro-interacción se mide para garantizar que estamos eliminando la fricción y maximizando el valor de negocio.</p>
-            </div>
-
-            <div class="grid grid-cols-1 gap-8 pb-12 lg:grid-cols-[1.6fr_1fr]">
-                <!-- GA4 -->
-                <div class="rounded-[32px] border border-[#e9edf2] bg-panel2 p-8 sm:p-11">
-                    <div class="mb-8 flex items-center gap-5">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#f3f5f8]"><span class="ic" data-icon="tech-analytics" style="font-size:24px;color:#2563eb"></span></div>
-                        <h3 class="text-[24px] font-semibold">Google Analytics 4 (GA4)</h3>
-                    </div>
-                    <p class="mb-10 text-[15px] leading-[1.6] text-[#64748b]">Implementamos un monitoreo continuo del comportamiento del usuario para analizar la evolución de sesiones, transacciones y tasas de conversión.</p>
-                    <div class="mb-8 flex flex-col gap-4 sm:flex-row">
-                        <div class="flex-1 rounded-[20px] bg-[#f7f8fa] px-5 py-4">
-                            <span class="mb-1 block text-[9px] font-bold tracking-wide text-electric">TASA DE CONVERSIÓN PROMEDIO</span>
-                            <span class="text-[18px] font-bold text-[#0f172a]">3.8% <small class="text-[11px] text-[#4ade80]">+12%</small></span>
-                        </div>
-                        <div class="flex-1 rounded-[20px] bg-[#f7f8fa] px-5 py-4">
-                            <span class="mb-1 block text-[9px] font-bold tracking-wide text-electric">TOTAL DE TRANSACCIONES</span>
-                            <span class="text-[18px] font-bold text-[#0f172a]">76 <small class="text-[11px] text-[#4ade80]">+8%</small></span>
-                        </div>
-                        <div class="flex-1 rounded-[20px] bg-[#f7f8fa] px-5 py-4">
-                            <span class="mb-1 block text-[9px] font-bold tracking-wide text-electric">USUARIOS ACTIVOS</span>
-                            <span class="text-[18px] font-bold text-[#0f172a]">894 <small class="text-[11px] text-[#4ade80]">+21%</small></span>
+                    <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 px-5 py-5">
+                        <div class="mb-3 text-[9.5px] font-bold uppercase tracking-[0.1em] text-[#94a3b8]">Efecto en cascada</div>
+                        <div class="flex flex-wrap items-center gap-x-2.5 gap-y-2 text-[12.5px] font-semibold text-[#0f172a]">
+                            <span>Business Growth</span><span class="text-electric">→</span>
+                            <span>Más comercios activos</span><span class="text-electric">→</span>
+                            <span>Más tiendas vendiendo</span><span class="text-electric">→</span>
+                            <span>Más transacciones</span><span class="text-electric">→</span>
+                            <span class="text-electric">Mayor potencial de GMV</span>
                         </div>
                     </div>
-                    <div class="w-full overflow-hidden rounded-2xl border border-[#e9edf2] bg-white"><img loading="lazy" src="../assets/projects/food/ga4-chart.png" alt="GA4 — evolutivo de sesiones y ventas diario" class="block w-full" /></div>
                 </div>
-                <!-- Clarity -->
-                <div class="rounded-[32px] border border-[#e9edf2] bg-panel2 p-8 sm:p-11">
-                    <div class="mb-8 flex items-center gap-5">
-                        <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-[#FF5C5C]/10"><span class="ic" data-icon="research" style="font-size:24px;color:#2563eb"></span></div>
-                        <h3 class="text-[24px] font-semibold">Microsoft Clarity</h3>
-                    </div>
-                    <p class="mb-10 text-[15px] leading-[1.6] text-[#64748b]">El análisis de mapas de calor y grabaciones de sesiones reveló fricciones invisibles en la búsqueda de productos, validando la necesidad de eliminar Pop ups invasivos.</p>
-                    <div class="w-full overflow-hidden rounded-2xl border border-[#e9edf2]"><img loading="lazy" src="../assets/projects/food/heatmap.png" alt="Heatmap Clarity" class="block w-full" /></div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- ================= INSIGHTS ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-12">
-            <span class="block text-[11px] font-bold uppercase tracking-[0.15em] text-[#FF5C5C]">ANÁLISIS DE USUARIO: PUNTOS DE DOLOR</span>
-            <h2 class="mb-6 mt-8 text-[32px] font-bold tracking-[-0.01em] sm:text-[48px]">Insights Hallados &amp; Fricciones Detectadas.</h2>
-            <p class="mb-14 max-w-[800px] text-[16px] leading-[1.6] text-[#64748b] md:text-[18px]">A través de pruebas de usabilidad y grabaciones en vivo, identificamos patrones críticos de sobrecarga cognitiva causados por una arquitectura de avisos intrusiva.</p>
+            <!-- 03 — ECONOMÍA DEL PRODUCTO -->
 
-            <div class="grid grid-cols-1 gap-8 pb-12 lg:grid-cols-3">
-                <div class="flex h-full flex-col rounded-[32px] border border-[#edf0f4] bg-panel2 p-8 sm:p-10">
-                    <div class="mb-8 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FF5C5C]/10"><span class="ic" data-icon="warning" style="font-size:24px;color:#d97706"></span></div>
-                    <p class="mb-9 flex-1 text-[18px] leading-[1.5] text-[#0f172a]">"El pop-up de confirmación de Dirección interrumpe mi flujo justo cuando estoy por Añadir un producto."</p>
-                    <div class="mb-8 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.1em] text-[#94a3b8]"><span class="h-2 w-2 rounded-full bg-[#FF5C5C]"></span>FRICCIÓN DE FLUJO</div>
-                    <p class="border-t border-[#e9edf2] pt-6 text-[13px] leading-[1.5] text-[#64748b]">Impacto: Incremento en el tiempo de tarea de un 40% debido a micro-interrupciones.</p>
-                </div>
-                <div class="flex h-full flex-col rounded-[32px] border border-[#edf0f4] bg-panel2 p-8 sm:p-10">
-                    <div class="mb-8 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FF5C5C]/10"><span class="ic" data-icon="gallery" style="font-size:24px;color:#2563eb"></span></div>
-                    <p class="mb-9 flex-1 text-[18px] leading-[1.5] text-[#0f172a]">"Hay demasiados avisos intrusivos que no me dejan ver el progreso de mi tienda."</p>
-                    <div class="mb-8 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.1em] text-[#94a3b8]"><span class="h-2 w-2 rounded-full bg-[#FF5C5C]"></span>CARGA COGNITIVA</div>
-                    <p class="border-t border-[#e9edf2] pt-6 text-[13px] leading-[1.5] text-[#64748b]">Impacto: Desorientación del usuario al ocultar elementos clave de la interfaz secundaria.</p>
-                </div>
-                <div class="flex h-full flex-col rounded-[32px] border border-[#edf0f4] bg-panel2 p-8 sm:p-10">
-                    <div class="mb-8 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FF5C5C]/10"><span class="ic" data-icon="error" style="font-size:24px;color:#dc2626"></span></div>
-                    <p class="mb-9 flex-1 text-[18px] leading-[1.5] text-[#0f172a]">"Siento que la interfaz me presiona con tantas alertas antes de terminar una tarea."</p>
-                    <div class="mb-8 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.1em] text-[#94a3b8]"><span class="h-2 w-2 rounded-full bg-[#FF5C5C]"></span>PRESIÓN PSICOLÓGICA</div>
-                    <p class="border-t border-[#e9edf2] pt-6 text-[13px] leading-[1.5] text-[#64748b]">Impacto: El 22% de los usuarios reportaron estrés visual durante el proceso de onboarding.</p>
-                </div>
-            </div>
-        </section>
-<section class="mx-auto flex w-[90%] max-w-grid flex-col items-center px-0 pb-12 pt-20 text-center">
 
-    <!-- Encabezado -->
-    <div class="mb-12 max-w-[800px]">
-        <span class="mb-8 block text-[11px] font-bold uppercase tracking-[0.15em] text-royal">
-            GALERIA DE IMÁGENES
-        </span>
 
-        <h2 class="mb-8 text-[32px] font-bold leading-[1.1] text-[#0f172a] sm:text-[48px]">
-            Menos fricción y mas control para el usuario final.
             
-        </h2>
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">03</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Economía</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">03 — Economía</span>
+                    <div class="mb-4 flex flex-wrap items-center gap-3">
+                        <h2 class="text-[22px] font-bold leading-[1.2] sm:text-[26px]">¿Cuánto cuesta no activar a un usuario?</h2>
+                        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#fbbf24] bg-[#fffbeb] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#d97706]">⚠ Modelo Simulado</span>
+                    </div>
 
-        <div class="flex flex-wrap justify-center gap-4">
-            <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">
-                Onboarding en 7 pasos
-            </span>
+                    <div class="mb-4 rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                        <div class="flex flex-wrap items-center gap-3 text-center text-[13px] font-semibold sm:flex-nowrap">
+                            <div class="rounded-lg bg-white px-4 py-3 border border-[#e9edf2]"><div class="text-[18px] font-bold text-[#0f172a]">2,000</div><div class="text-[10px] text-[#94a3b8]">comercios / mes</div></div>
+                            <span class="text-[16px] text-[#94a3b8]">×</span>
+                            <div class="rounded-lg bg-white px-4 py-3 border border-[#e9edf2]"><div class="text-[18px] font-bold text-[#0f172a]">S/50</div><div class="text-[10px] text-[#94a3b8]">CAC estimado</div></div>
+                            <span class="text-[16px] text-[#94a3b8]">=</span>
+                            <div class="rounded-lg border-2 border-electric bg-electric/5 px-4 py-3"><div class="text-[18px] font-bold text-electric">S/100K</div><div class="text-[10px] text-[#475569]">inversión / mes</div></div>
+                        </div>
+                    </div>
 
-            <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">
-                Carga masiva con IA
-            </span>
+                    <div class="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                            <div class="text-[10px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1.5">Baseline Activation Rate</div>
+                            <div class="text-[30px] font-bold leading-none text-electric">48%</div>
+                            <div class="mt-1.5 text-[12px] text-[#64748b]">2,000 × 48% = <strong class="text-[#0f172a]">960 activados</strong></div>
+                        </div>
+                        <div class="rounded-[16px] border-2 border-[#fecaca] bg-[#fef2f2] p-5">
+                            <div class="text-[10px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1.5">No activados</div>
+                            <div class="text-[30px] font-bold leading-none text-[#0f172a]">1,040</div>
+                            <div class="mt-1.5 text-[12px] text-[#64748b]">1,040 × S/50 = <strong class="text-[#dc2626]">S/52,000 / mes</strong></div>
+                        </div>
+                    </div>
 
-            <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">
-                Publicación instantánea
-            </span>
+                    <p class="mb-4 text-[13px] leading-[1.5] text-[#64748b]">S/52K de inversión de adquisición asociada a comercios que no alcanzaban activación.</p>
+
+                    <div class="rounded-[12px] border border-[#e9edf2] bg-[#f7f8fa] p-4 text-[11.5px] leading-[1.55] text-[#64748b]">
+                        <strong class="text-[#0f172a]">ⓘ Disclaimer:</strong> Modelo económico estimado para fines del case study. Los valores financieros utilizan supuestos de negocio y no representan información financiera oficial de la empresa.
+                    </div>
+                </div>
+            </section>
+
+            <!-- 04 — PRODUCT GOALS & MÉTRICAS -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">04</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Product Goals</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">04 — Product Goals</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Definimos activación como el outcome principal.</h2>
+
+                    <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 p-5 sm:p-6">
+                        <div class="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+                            <div class="flex-1 rounded-lg bg-white border border-[#e9edf2] px-4 py-3 text-center">
+                                <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1">Business Goal</div>
+                                <div class="text-[14px] font-bold text-[#0f172a]">Growth</div>
+                            </div>
+                            <span class="mx-auto text-[18px] text-electric sm:mx-0">→</span>
+                            <div class="flex-1 rounded-lg bg-white border border-[#e9edf2] px-4 py-3 text-center">
+                                <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8] mb-1">Product Outcome</div>
+                                <div class="text-[14px] font-bold text-[#0f172a]">Más comercios activos</div>
+                            </div>
+                            <span class="mx-auto text-[18px] text-electric sm:mx-0">→</span>
+                            <div class="flex-1 rounded-lg border-2 border-electric bg-electric/5 px-4 py-3 text-center">
+                                <div class="text-[9px] font-bold uppercase tracking-wide text-electric mb-1">Primary Metric</div>
+                                <div class="text-[15px] font-bold text-electric">Activation Rate</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-5 rounded-lg bg-white border border-[#e9edf2] px-4 py-3 text-center text-[12.5px] text-[#475569]">
+                            <strong class="text-[#0f172a]">Activation Rate</strong> = Comercios que publican su tienda ÷ Comercios que comienzan onboarding
+                        </div>
+
+                        <div class="mt-5">
+                            <div class="mb-2 text-[9.5px] font-bold uppercase tracking-wide text-[#94a3b8]">Leading indicators</div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="rounded-full bg-white border border-[#e9edf2] px-3 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Completion Rate</span>
+                                <span class="rounded-full bg-white border border-[#e9edf2] px-3 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Drop-off por paso</span>
+                                <span class="rounded-full bg-white border border-[#e9edf2] px-3 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Time to Activate</span>
+                                <span class="rounded-full bg-white border border-[#e9edf2] px-3 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Conversion by Stage</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 05 — DISCOVERY / RESEARCH -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">05</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Research</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">05 — Research</span>
+                    <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Cuatro fuentes para entender el onboarding.</h2>
+                    <p class="mb-10 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Datos de comportamiento y conversaciones con comerciantes.</p>
+
+                    <div class="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-4 sm:gap-x-8">
+                        <div class="text-center sm:text-left">
+                            <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10 sm:mx-0"><span class="ic" data-icon="tech-analytics" style="font-size:20px;color:#2563eb"></span></div>
+                            <h3 class="mb-1.5 text-[14px] font-bold text-[#0f172a]">GA4</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Análisis del funnel y puntos de abandono.</p>
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10 sm:mx-0"><span class="ic" data-icon="research" style="font-size:20px;color:#2563eb"></span></div>
+                            <h3 class="mb-1.5 text-[14px] font-bold text-[#0f172a]">Microsoft Clarity</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Grabaciones y heatmaps para detectar fricciones.</p>
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10 sm:mx-0"><span class="ic" data-icon="profile" style="font-size:20px;color:#2563eb"></span></div>
+                            <h3 class="mb-1.5 text-[14px] font-bold text-[#0f172a]">Entrevistas</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Conversaciones con comerciantes reales.</p>
+                        </div>
+                        <div class="text-center sm:text-left">
+                            <div class="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-electric/10 sm:mx-0"><span class="ic" data-icon="data-analysis" style="font-size:20px;color:#2563eb"></span></div>
+                            <h3 class="mb-1.5 text-[14px] font-bold text-[#0f172a]">Mixpanel</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Comportamiento y cohortes de activación.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 06 — FUNNEL BASELINE -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">06</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Funnel</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">06 — Funnel</span>
+                    <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Más de la mitad se perdía antes de publicar.</h2>
+                    <p class="mb-6 max-w-[560px] text-[13.5px] leading-[1.6] text-[#64748b]">Progresión de los comercios desde el registro hasta la publicación.</p>
+
+                    <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5 sm:p-7">
+                        <div class="overflow-x-auto">
+                            <div class="flex min-w-[600px] items-end justify-between gap-2.5 sm:gap-3">
+                                <div class="flex flex-1 flex-col items-center">
+                                    <div class="mb-2 text-[13px] font-bold leading-none text-[#0f172a] sm:text-[14px]">100%</div>
+                                    <div class="w-full max-w-[52px] rounded-t-md h-[140px]" style="background-color:#2563eb"></div>
+                                    <div class="mt-2.5 text-center text-[10px] font-medium leading-tight text-[#64748b] sm:text-[11px]">Registro</div>
+                                </div>
+                                <div class="flex flex-1 flex-col items-center">
+                                    <div class="mb-2 text-[13px] font-bold leading-none text-[#0f172a] sm:text-[14px]">78%</div>
+                                    <div class="w-full max-w-[52px] rounded-t-md h-[109px]" style="background-color:#3f78ec"></div>
+                                    <div class="mt-2.5 text-center text-[10px] font-medium leading-tight text-[#64748b] sm:text-[11px]">Contexto</div>
+                                </div>
+                                <div class="flex flex-1 flex-col items-center">
+                                    <div class="mb-2 text-[13px] font-bold leading-none text-[#0f172a] sm:text-[14px]">68%</div>
+                                    <div class="w-full max-w-[52px] rounded-t-md h-[95px]" style="background-color:#5c8bef"></div>
+                                    <div class="mt-2.5 text-center text-[10px] font-medium leading-tight text-[#64748b] sm:text-[11px]">Categoría</div>
+                                </div>
+                                <div class="flex flex-1 flex-col items-center">
+                                    <div class="mb-2 text-[13px] font-bold leading-none text-[#0f172a] sm:text-[14px]">58%</div>
+                                    <div class="w-full max-w-[52px] rounded-t-md h-[81px]" style="background-color:#7ea0f2"></div>
+                                    <div class="mt-2.5 text-center text-[10px] font-medium leading-tight text-[#64748b] sm:text-[11px]">Productos</div>
+                                </div>
+                                <div class="flex flex-1 flex-col items-center">
+                                    <div class="mb-2 text-[13px] font-bold leading-none text-[#0f172a] sm:text-[14px]">52%</div>
+                                    <div class="w-full max-w-[52px] rounded-t-md h-[73px]" style="background-color:#9db4f5"></div>
+                                    <div class="mt-2.5 text-center text-[10px] font-medium leading-tight text-[#64748b] sm:text-[11px]">Personalización</div>
+                                </div>
+                                <div class="flex flex-1 flex-col items-center">
+                                    <div class="mb-2 text-[13px] font-bold leading-none text-[#0f172a] sm:text-[14px]">49%</div>
+                                    <div class="w-full max-w-[52px] rounded-t-md h-[69px]" style="background-color:#bccaf8"></div>
+                                    <div class="mt-2.5 text-center text-[10px] font-medium leading-tight text-[#64748b] sm:text-[11px]">Preview</div>
+                                </div>
+                                <div class="flex flex-1 flex-col items-center">
+                                    <div class="mb-2 text-[13px] font-bold leading-none text-electric sm:text-[14px]">48%</div>
+                                    <div class="w-full max-w-[52px] rounded-t-md h-[67px]" style="background-color:#d3ddfb; border-top:3px solid #2563eb"></div>
+                                    <div class="mt-2.5 text-center text-[10px] font-semibold leading-tight text-electric sm:text-[11px]">Publicación</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 flex flex-col items-start justify-between gap-3 border-t border-[#e9edf2] pt-5 sm:flex-row sm:items-center">
+                            <span class="text-[12.5px] font-medium text-[#475569]">Mayor caída: registro → contexto (−22 pts).</span>
+                            <div class="flex items-center gap-2 rounded-full border border-electric/30 bg-electric/10 px-4 py-2">
+                                <span class="text-[9px] font-bold uppercase tracking-wide text-electric">Baseline Activation Rate</span>
+                                <span class="text-[15px] font-bold leading-none text-electric">48%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 07 — OPPORTUNITY SPACE -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">07</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Oportunidades</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">07 — Oportunidades</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">No todo problema merece convertirse en prioridad.</h2>
+
+                    <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9] p-4">
+                            <div class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">A</div>
+                            <h3 class="mb-1 text-[13.5px] font-semibold leading-tight">Simplificar onboarding</h3>
+                            <p class="text-[11.5px] leading-[1.4] text-[#64748b]">Reducir carga cognitiva del flujo inicial.</p>
+                        </div>
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9] p-4">
+                            <div class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">B</div>
+                            <h3 class="mb-1 text-[13.5px] font-semibold leading-tight">Mejorar carga de productos</h3>
+                            <p class="text-[11.5px] leading-[1.4] text-[#64748b]">Acelerar la entrada de inventario.</p>
+                        </div>
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9] p-4">
+                            <div class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">C</div>
+                            <h3 class="mb-1 text-[13.5px] font-semibold leading-tight">Mejorar validaciones</h3>
+                            <p class="text-[11.5px] leading-[1.4] text-[#64748b]">Errores y mensajes más claros.</p>
+                        </div>
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9] p-4">
+                            <div class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">D</div>
+                            <h3 class="mb-1 text-[13.5px] font-semibold leading-tight">Optimizar personalización</h3>
+                            <p class="text-[11.5px] leading-[1.4] text-[#64748b]">Branding y configuración más rápida.</p>
+                        </div>
+                        <div class="rounded-[14px] border border-[#e9edf2] bg-[#f6f7f9] p-4">
+                            <div class="mb-2 inline-flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">E</div>
+                            <h3 class="mb-1 text-[13.5px] font-semibold leading-tight">Optimizar primer pedido</h3>
+                            <p class="text-[11.5px] leading-[1.4] text-[#64748b]">Reducir fricción en la primera venta.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 08 — PRIORIZACIÓN RICE -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">08</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Priorización</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">08 — Priorización RICE</span>
+                    <div class="mb-4 flex flex-wrap items-center gap-3">
+                        <h2 class="text-[22px] font-bold leading-[1.2] sm:text-[26px]">Priorizamos por impacto, no por preferencia.</h2>
+                        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#fbbf24] bg-[#fffbeb] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#d97706]">⚠ Modelo de Priorización Simulado</span>
+                    </div>
+                    <p class="mb-5 text-[12.5px] text-[#64748b]"><span class="font-mono">RICE = Reach × Impact × Confidence ÷ Effort</span></p>
+
+                    <div class="mb-5 overflow-x-auto rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                        <div class="min-w-[520px]">
+                            <div class="mb-3 grid grid-cols-6 gap-2 border-b border-[#e9edf2] pb-2 text-[10px] font-bold uppercase tracking-wide text-[#94a3b8]">
+                                <div class="col-span-2">Oportunidad</div>
+                                <div class="text-center">Reach</div>
+                                <div class="text-center">Impact</div>
+                                <div class="text-center">Conf.</div>
+                                <div class="text-center text-electric">RICE</div>
+                            </div>
+                            <div class="space-y-1.5">
+                                <div class="grid grid-cols-6 gap-2 items-center rounded-lg border-2 border-electric bg-electric/5 px-2 py-2">
+                                    <div class="col-span-2 text-[13px] font-bold text-[#0f172a]">A · Simplificar onboarding</div>
+                                    <div class="text-[12.5px] text-center text-[#475569]">6,000</div>
+                                    <div class="text-[12.5px] text-center text-[#475569]">3</div>
+                                    <div class="text-[12.5px] text-center text-[#475569]">90%</div>
+                                    <div class="text-[13px] font-bold text-center text-electric">5,400</div>
+                                </div>
+                                <div class="grid grid-cols-6 gap-2 items-center px-2 py-1.5">
+                                    <div class="col-span-2 text-[12.5px] font-medium text-[#0f172a]">B · Carga de productos</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">3,800</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">2</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">80%</div>
+                                    <div class="text-[12.5px] text-center text-[#64748b]">2,027</div>
+                                </div>
+                                <div class="grid grid-cols-6 gap-2 items-center px-2 py-1.5">
+                                    <div class="col-span-2 text-[12.5px] font-medium text-[#0f172a]">C · Validaciones</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">4,200</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">1</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">85%</div>
+                                    <div class="text-[12.5px] text-center text-[#64748b]">1,190</div>
+                                </div>
+                                <div class="grid grid-cols-6 gap-2 items-center px-2 py-1.5">
+                                    <div class="col-span-2 text-[12.5px] font-medium text-[#0f172a]">D · Personalización</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">2,800</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">1</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">75%</div>
+                                    <div class="text-[12.5px] text-center text-[#64748b]">1,050</div>
+                                </div>
+                                <div class="grid grid-cols-6 gap-2 items-center px-2 py-1.5">
+                                    <div class="col-span-2 text-[12.5px] font-medium text-[#0f172a]">E · Primer pedido</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">2,000</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">2</div>
+                                    <div class="text-[12px] text-center text-[#64748b]">65%</div>
+                                    <div class="text-[12.5px] text-center text-[#64748b]">650</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-4 rounded-[16px] border-2 border-electric bg-electric/5 px-5 py-4">
+                        <span class="ic" data-icon="trophy" style="font-size:22px;color:#2563eb"></span>
+                        <div>
+                            <div class="text-[10px] font-bold uppercase tracking-wide text-electric">Prioridad clara</div>
+                            <div class="text-[15px] font-bold text-[#0f172a]">Simplificar Onboarding — RICE 5,400</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 09 — DECISIÓN DE PRODUCTO -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">09</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Decisión</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">09 — Decisión</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Reducir fricción antes de agregar más features.</h2>
+
+                    <div class="mb-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                            <div class="mb-2.5 flex h-9 w-9 items-center justify-center rounded-lg bg-electric/10"><span class="ic" data-icon="rocket" style="font-size:17px;color:#2563eb"></span></div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Alto Reach</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Prácticamente todos los nuevos comercios atraviesan onboarding.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                            <div class="mb-2.5 flex h-9 w-9 items-center justify-center rounded-lg bg-electric/10"><span class="ic" data-icon="target" style="font-size:17px;color:#2563eb"></span></div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Conexión Directa</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">El flujo determina si el comercio alcanza el momento de valor.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                            <div class="mb-2.5 flex h-9 w-9 items-center justify-center rounded-lg bg-electric/10"><span class="ic" data-icon="gauge" style="font-size:17px;color:#2563eb"></span></div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Esfuerzo Controlado</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Impacto sin reconstruir completamente el producto.</p>
+                        </div>
+                    </div>
+
+                    <div class="rounded-[16px] bg-[#0f172a] px-5 py-4">
+                        <p class="text-[13.5px] leading-[1.6] text-white"><span class="font-semibold text-electric">Conclusión:</span> el camino hacia la activación va antes que las funciones nuevas.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 10 — HIPÓTESIS -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">10</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Hipótesis</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">10 — Hipótesis</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Si reducimos la carga cognitiva, más comercios publican.</h2>
+
+                    <div class="rounded-[18px] border-2 border-electric bg-electric/5 p-6 sm:p-7">
+                        <div class="grid grid-cols-1 gap-5 sm:grid-cols-3">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wide text-electric">Si</span>
+                                <p class="mt-2 text-[13.5px] leading-[1.6] text-[#0f172a]">simplificamos los pasos para configurar una tienda,</p>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wide text-electric">Entonces</span>
+                                <p class="mt-2 text-[13.5px] leading-[1.6] text-[#0f172a]">más comercios completarán el onboarding y publicarán su tienda,</p>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-wide text-electric">Porque</span>
+                                <p class="mt-2 text-[13.5px] leading-[1.6] text-[#0f172a]">el comercio sabrá qué hacer y cuánto falta para vender.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 11 — SOLUCIÓN / MVP -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">11</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Solución</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">11 — Solución</span>
+                    <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Rediseño del onboarding</h2>
+                    <p class="mb-6 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Un flujo de 7 pasos, claro y guiado, con progreso visible y menos fricciones.</p>
+
+                    <div class="flex flex-col gap-8 lg:flex-row lg:items-center">
+                        <!-- Carrusel: 3 interfaces desktop del onboarding -->
+                        <div class="min-w-0 lg:flex-1">
+                            <div class="fd-carousel relative overflow-hidden rounded-[18px] border border-[#e9edf2] bg-[#f6f7f9]">
+                                <div class="fd-carousel-track" id="fdTrack">
+                                    <div class="fd-carousel-slide px-2 py-6">
+                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 01</span></div>
+                                    </div>
+                                    <div class="fd-carousel-slide px-2 py-6">
+                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 02</span></div>
+                                    </div>
+                                    <div class="fd-carousel-slide px-2 py-6">
+                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 03</span></div>
+                                    </div>
+                                    <div class="fd-carousel-slide px-2 py-6">
+                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 04</span></div>
+                                    </div>
+                                    <div class="fd-carousel-slide px-2 py-6">
+                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 05</span></div>
+                                    </div>
+                                    <div class="fd-carousel-slide px-2 py-6">
+                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 06</span></div>
+                                    </div>
+                                </div>
+                                <button type="button" id="fdPrev" aria-label="Anterior" class="absolute left-3 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[18px] text-[#0f172a] shadow-drop transition hover:bg-electric hover:text-white">‹</button>
+                                <button type="button" id="fdNext" aria-label="Siguiente" class="absolute right-3 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[18px] text-[#0f172a] shadow-drop transition hover:bg-electric hover:text-white">›</button>
+                            </div>
+                            <div class="mt-4 flex items-center justify-center gap-2" id="fdDots"></div>
+                        </div>
+
+                        <!-- Principios de diseño (lista fija) -->
+                        <div class="flex-shrink-0 lg:w-[210px]">
+                            <ul class="space-y-3.5">
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Flujo paso a paso</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Progreso visual</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Lenguaje simple y cercano</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Validaciones en tiempo real</span>
+                                </li>
+                                <li class="flex items-start gap-2.5">
+                                    <span class="mt-0.5 flex h-4 w-4 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[9px] font-bold text-white">✓</span>
+                                    <span class="text-[13px] font-medium text-[#0f172a]">Menos interrupciones</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12 — EXPERIMENTACIÓN -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">12</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Experimentación</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">12 — Experimentación</span>
+                    <h2 class="mb-5 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Control vs. variante: cómo medimos el rediseño.</h2>
+
+                    <div class="mb-5 rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                        <div class="flex flex-wrap items-center gap-x-2.5 gap-y-2 text-[12px] font-semibold text-[#0f172a]">
+                            <span class="rounded-lg bg-white border border-[#e9edf2] px-3 py-1.5">Hipótesis</span><span class="text-electric">→</span>
+                            <span class="rounded-lg bg-white border border-[#e9edf2] px-3 py-1.5">Variante</span><span class="text-electric">→</span>
+                            <span class="rounded-lg bg-white border border-[#e9edf2] px-3 py-1.5">Eventos</span><span class="text-electric">→</span>
+                            <span class="rounded-lg bg-white border border-[#e9edf2] px-3 py-1.5">Funnel</span><span class="text-electric">→</span>
+                            <span class="rounded-lg bg-white border border-[#e9edf2] px-3 py-1.5">Resultado</span><span class="text-electric">→</span>
+                            <span class="rounded-lg border border-electric bg-electric/10 px-3 py-1.5 text-electric">Decisión</span>
+                        </div>
+                    </div>
+
+                    <div class="mb-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
+                            <div class="mb-1.5 text-[10px] font-bold uppercase tracking-wide text-[#94a3b8]">Control</div>
+                            <div class="text-[14.5px] font-semibold text-[#0f172a]">Experiencia baseline</div>
+                        </div>
+                        <div class="rounded-[16px] border-2 border-electric bg-electric/5 p-5">
+                            <div class="mb-1.5 text-[10px] font-bold uppercase tracking-wide text-electric">Variante</div>
+                            <div class="text-[14.5px] font-semibold text-[#0f172a]">Onboarding simplificado</div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="mb-2 text-[9.5px] font-bold uppercase tracking-wide text-[#94a3b8]">Métricas observadas</div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="rounded-full bg-[#f3f5f8] border border-[#e0e5ec] px-3 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Activation Rate</span>
+                            <span class="rounded-full bg-[#f3f5f8] border border-[#e0e5ec] px-3 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Completion Rate</span>
+                            <span class="rounded-full bg-[#f3f5f8] border border-[#e0e5ec] px-3 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Drop-off</span>
+                            <span class="rounded-full bg-[#f3f5f8] border border-[#e0e5ec] px-3 py-1.5 text-[11.5px] font-medium text-[#0f172a]">Time to Activate</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 13 — OUTCOMES -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">13</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Outcomes</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">13 — Outcomes</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">De completar pasos a generar activación.</h2>
+
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                        <div class="rounded-[18px] border-2 border-electric bg-electric/5 p-6 text-center">
+                            <div class="flex items-baseline justify-center gap-2"><span class="text-[16px] font-medium text-[#94a3b8] line-through">48%</span><span class="text-[14px] text-[#94a3b8]">→</span><span class="text-[32px] font-bold leading-none text-electric">63%</span></div>
+                            <p class="mt-2 text-[13px] font-semibold text-[#0f172a]">Activation Rate</p>
+                        </div>
+                        <div class="rounded-[18px] border border-[#e9edf2] bg-panel2 p-6 text-center">
+                            <div class="flex items-baseline justify-center gap-2"><span class="text-[16px] font-medium text-[#94a3b8] line-through">41%</span><span class="text-[14px] text-[#94a3b8]">→</span><span class="text-[32px] font-bold leading-none text-[#0f172a]">30%</span></div>
+                            <p class="mt-2 text-[13px] font-semibold text-[#0f172a]">Abandono del onboarding</p>
+                        </div>
+                        <div class="rounded-[18px] border border-[#e9edf2] bg-panel2 p-6 text-center">
+                            <div class="text-[32px] font-bold leading-none text-[#0f172a]">+21%</div>
+                            <p class="mt-2 text-[13px] font-semibold text-[#0f172a]">Creación de tiendas</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 14 — IMPACTO ECONÓMICO -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">14</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Impacto Económico</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">14 — Impacto Económico</span>
+                    <div class="mb-5 flex flex-wrap items-center gap-3">
+                        <h2 class="text-[22px] font-bold leading-[1.2] sm:text-[26px]">Traduciendo activación a impacto potencial.</h2>
+                        <span class="inline-flex items-center gap-1.5 rounded-full border border-[#fbbf24] bg-[#fffbeb] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#d97706]">⚠ Modelo Económico Estimado</span>
+                    </div>
+
+                    <div class="mb-4 rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5 text-[12.5px] text-[#64748b]">
+                        Activation baseline 48% = 960 activados. Después de la mejora, 63% = 1,260 activados.
+                    </div>
+
+                    <div class="overflow-x-auto rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                        <div class="flex min-w-[640px] flex-nowrap items-center justify-between gap-2 text-center">
+                            <div class="rounded-lg bg-white border border-[#e9edf2] px-4 py-3"><div class="text-[16px] font-bold text-[#0f172a]">+300</div><div class="text-[9.5px] text-[#94a3b8]">activaciones / mes</div></div>
+                            <span class="text-[14px] text-[#94a3b8]">→</span>
+                            <div class="rounded-lg bg-white border border-[#e9edf2] px-4 py-3"><div class="text-[16px] font-bold text-[#0f172a]">S/54K</div><div class="text-[9.5px] text-[#94a3b8]">revenue potencial</div></div>
+                            <span class="text-[14px] text-[#94a3b8]">→</span>
+                            <div class="rounded-lg bg-white border border-[#e9edf2] px-4 py-3"><div class="text-[16px] font-bold text-[#0f172a]">S/18.9K</div><div class="text-[9.5px] text-[#94a3b8]">contribución (35%)</div></div>
+                            <span class="text-[14px] text-[#94a3b8]">→</span>
+                            <div class="rounded-lg bg-white border border-[#e9edf2] px-4 py-3"><div class="text-[16px] font-bold text-[#0f172a]">≈1.5 meses</div><div class="text-[9.5px] text-[#94a3b8]">payback estimado</div></div>
+                            <span class="text-[14px] text-[#94a3b8]">→</span>
+                            <div class="rounded-lg border-2 border-electric bg-electric/10 px-4 py-3"><div class="text-[16px] font-bold text-electric">≈103%</div><div class="text-[9.5px] text-[#475569]">ROI a 3 meses</div></div>
+                        </div>
+                    </div>
+
+                    <p class="mt-3 text-[12px] text-[#64748b]">Costo del proyecto: S/28,000. A 3 meses: S/56,700 − S/28,000 = S/28,700 de beneficio.</p>
+
+                    <div class="mt-4 rounded-[12px] border border-[#e9edf2] bg-[#f7f8fa] p-4 text-[11.5px] leading-[1.55] text-[#64748b]">
+                        <strong class="text-[#0f172a]">ⓘ Disclaimer:</strong> Modelo económico estimado para fines del case study. CAC, revenue, márgenes, costo del proyecto y ROI son supuestos de negocio construidos para demostrar razonamiento de producto, no información financiera oficial.
+                    </div>
+                </div>
+            </section>
+
+            <!-- 15 — APRENDIZAJES -->
+            <section class="flex gap-5 py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 h-8 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">15</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#0f172a]">Aprendizajes</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">15 — Aprendizajes</span>
+                    <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Lo que me llevo del producto.</h2>
+
+                    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">01</div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">UX también es economía</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Una fricción de experiencia puede convertirse en un problema de adquisición y crecimiento.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">02</div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Activación &gt; Registro</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Crear una cuenta no significa alcanzar valor.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">03</div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Data + Research</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">Los datos muestran dónde ocurre el problema; entender al usuario ayuda a explicar por qué.</p>
+                        </div>
+                        <div class="rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] p-5">
+                            <div class="mb-2 flex h-7 w-7 items-center justify-center rounded-full bg-electric text-[12px] font-bold text-white">04</div>
+                            <h3 class="mb-1.5 text-[14px] font-semibold">Priorizar es decidir</h3>
+                            <p class="text-[12.5px] leading-[1.5] text-[#64748b]">No todas las oportunidades deben construirse al mismo tiempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </div>
-    </div>
-        <!-- ================= GALERÍA ================= -->
-        <!-- GALERÍA -->
-    <div class="mx-auto w-full max-w-[1050px]">
+        <!-- ================= /DEEP DIVE TIMELINE ================= -->
 
-        <!-- FILA 01 -->
-        <div
-            class="
-                grid
-                grid-cols-1
-                items-center
-                gap-6
-                md:h-[320px]
-                md:grid-cols-[330fr_555fr_135fr]
-                md:gap-[15px]
-            "
-        >
+        <style>
+            /* Carrusel de la sección Solución (11) — scoped a esta página */
+            .fd-carousel-track { display: flex; transition: transform .45s cubic-bezier(.2,.7,.2,1); cursor: grab; }
+            .fd-carousel-track.dragging { transition: none; cursor: grabbing; }
+            .fd-carousel-slide { flex: 0 0 100%; box-sizing: border-box; }
+            @media (min-width: 640px) { .fd-carousel-slide { flex: 0 0 60%; } }
+            @media (min-width: 900px) { .fd-carousel-slide { flex: 0 0 33.333%; } }
+            .fd-dot { width: 7px; height: 7px; border-radius: 999px; background: #dbe4f3; transition: background-color .2s ease, transform .2s ease; cursor: pointer; border: 0; padding: 0; }
+            .fd-dot.active { background: #2563eb; transform: scale(1.35); }
+        </style>
 
-            <!-- 01 -->
-            <button
-                type="button"
-                class="gallery-item flex h-full w-full items-center justify-center"
-                data-index="0"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/food/1food.svg"
-                    alt="FoodDelivery — flujo de onboarding en 7 pasos"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
+        <script>
+            (function () {
+                /* Carrusel horizontal — sección 11 Solución */
+                var fdTrack = document.getElementById("fdTrack");
+                var fdPrev = document.getElementById("fdPrev");
+                var fdNext = document.getElementById("fdNext");
+                var fdDotsWrap = document.getElementById("fdDots");
+                if (fdTrack && fdDotsWrap) {
+                    var fdSlides = fdTrack.querySelectorAll(".fd-carousel-slide");
+                    var fdIndex = 0;
+                    var fdDots = [];
 
+                    fdSlides.forEach(function (_, i) {
+                        var dot = document.createElement("button");
+                        dot.type = "button";
+                        dot.className = "fd-dot" + (i === 0 ? " active" : "");
+                        dot.setAttribute("aria-label", "Ir a la interfaz " + (i + 1));
+                        dot.addEventListener("click", function () { fdGoTo(i); });
+                        fdDotsWrap.appendChild(dot);
+                        fdDots.push(dot);
+                    });
 
-            <!-- 02 -->
-            <button
-                type="button"
-                class="gallery-item flex h-full w-full items-center justify-center"
-                data-index="1"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/food/2food.svg"
-                    alt="FoodDelivery — consola de pedidos y gestión de entregas"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
+                    function fdSlideWidth() {
+                        return fdSlides[0].getBoundingClientRect().width;
+                    }
+                    function fdGoTo(i) {
+                        fdIndex = Math.max(0, Math.min(i, fdSlides.length - 1));
+                        fdTrack.style.transform = "translateX(-" + (fdIndex * fdSlideWidth()) + "px)";
+                        fdDots.forEach(function (d, di) { d.classList.toggle("active", di === fdIndex); });
+                    }
+                    fdPrev.addEventListener("click", function () { fdGoTo(fdIndex - 1); });
+                    fdNext.addEventListener("click", function () { fdGoTo(fdIndex + 1); });
+                    window.addEventListener("resize", function () { fdGoTo(fdIndex); });
 
+                    /* Drag / swipe */
+                    var fdDragging = false, fdStartX = 0, fdCurrentX = 0, fdBaseOffset = 0;
+                    function fdPointerDown(x) {
+                        fdDragging = true;
+                        fdStartX = x;
+                        fdBaseOffset = -fdIndex * fdSlideWidth();
+                        fdTrack.classList.add("dragging");
+                    }
+                    function fdPointerMove(x) {
+                        if (!fdDragging) return;
+                        fdCurrentX = x;
+                        var delta = fdCurrentX - fdStartX;
+                        fdTrack.style.transform = "translateX(" + (fdBaseOffset + delta) + "px)";
+                    }
+                    function fdPointerUp() {
+                        if (!fdDragging) return;
+                        fdDragging = false;
+                        fdTrack.classList.remove("dragging");
+                        var delta = fdCurrentX - fdStartX;
+                        if (Math.abs(delta) > 60) {
+                            fdGoTo(fdIndex + (delta < 0 ? 1 : -1));
+                        } else {
+                            fdGoTo(fdIndex);
+                        }
+                        fdCurrentX = 0;
+                    }
+                    fdTrack.addEventListener("mousedown", function (e) { fdPointerDown(e.clientX); });
+                    window.addEventListener("mousemove", function (e) { fdPointerMove(e.clientX); });
+                    window.addEventListener("mouseup", fdPointerUp);
+                    fdTrack.addEventListener("touchstart", function (e) { fdPointerDown(e.touches[0].clientX); }, { passive: true });
+                    fdTrack.addEventListener("touchmove", function (e) { fdPointerMove(e.touches[0].clientX); }, { passive: true });
+                    fdTrack.addEventListener("touchend", fdPointerUp);
 
-            <!-- 03 -->
-            <button
-                type="button"
-                class="gallery-item flex h-full w-full items-center justify-center"
-                data-index="2"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/food/3food.svg"
-                    alt="FoodDelivery — experiencia mobile para clientes"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
+                    fdGoTo(0);
+                }
+            })();
+        </script>
 
+        <!-- ================= CTA FINAL ================= -->
+        <div class="mx-auto w-[90%] max-w-grid border-t border-[#e9edf2] py-20 text-center">
+            <h2 class="mb-8 text-[26px] font-bold leading-[1.25] sm:text-[36px]">¿Quieres construir productos que también <br class="hidden sm:block" />muevan <span class="text-electric">métricas</span>?</h2>
+            <a href="https://wa.me/51934865894?text=Hola%20Carlos%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 rounded-full bg-primary px-9 py-3.5 text-[14.5px] font-semibold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.717zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>Conversemos por WhatsApp</a>
         </div>
 
-
-        <!-- FILA 02 -->
-        <div
-    class="
-        mt-10
-        grid
-        grid-cols-1
-        items-center
-        gap-6
-
-        md:h-[320px]
-        md:grid-cols-[510fr_390fr_120fr]
-        md:gap-[15px]
-    "
->
-
-            <!-- 04 -->
-            <button
-                type="button"
-                class="gallery-item flex h-full w-full items-center justify-center"
-                data-index="3"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/food/4food.svg"
-                    alt="FoodDelivery — selección y gestión de carta"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
-
-
-            <!-- 05 -->
-            <button
-                type="button"
-                class="gallery-item flex h-full w-full items-center justify-center"
-                data-index="4"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/food/5food.svg"
-                    alt="FoodDelivery — mis pedidos, detalle y carrito"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
-
-
-            <!-- 06 -->
-            <button
-                type="button"
-                class="gallery-item flex h-full w-full items-center justify-center"
-                data-index="5"
-            >
-                <img
-                    loading="lazy"
-                    src="../assets/projects/food/6food.svg"
-                    alt="FoodDelivery — seguimiento del pedido"
-                    class="
-                        block
-                        max-h-full
-                        max-w-full
-                        cursor-zoom-in
-                        object-contain
-                        transition-all
-                        duration-300
-                        ease-out
-                        hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
-                    "
-                />
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================
-     LIGHTBOX FOODDELIVERY
-=================================== -->
-
-<div id="foodLightbox" class="food-lightbox" aria-hidden="true">
-
-    <!-- Cerrar -->
-    <button
-        id="foodLightboxClose"
-        type="button"
-        class="food-lightbox-close"
-        aria-label="Cerrar galería"
-    >
-        ×
-    </button>
-
-    <!-- Anterior -->
-    <button
-        id="foodLightboxPrev"
-        type="button"
-        class="food-lightbox-arrow food-lightbox-prev"
-        aria-label="Imagen anterior"
-    >
-        ‹
-    </button>
-
-    <!-- Contenido -->
-    <div class="food-lightbox-content">
-
-        <div class="food-lightbox-image-wrapper">
-            <img
-                id="foodLightboxImage"
-                src=""
-                alt=""
-                class="food-lightbox-image"
-            />
-        </div>
-
-        <p
-            id="foodLightboxCaption"
-            class="food-lightbox-caption"
-        ></p>
-
-        <div
-            id="foodLightboxCounter"
-            class="food-lightbox-counter"
-        >
-            1 / 6
-        </div>
-
-    </div>
-
-    <!-- Siguiente -->
-    <button
-        id="foodLightboxNext"
-        type="button"
-        class="food-lightbox-arrow food-lightbox-next"
-        aria-label="Imagen siguiente"
-    >
-        ›
-    </button>
-
-</div>
-
-
-<style>
-    .food-lightbox {
-        position: fixed;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 999999;
-
-        display: none;
-        align-items: center;
-        justify-content: center;
-
-        background: rgba(15, 23, 42, 0.94);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-
-        padding: 40px 80px;
-    }
-
-    .food-lightbox.is-open {
-        display: flex;
-    }
-
-
-    /* CONTENIDO */
-
-    .food-lightbox-content {
-        width: 100%;
-        height: 100%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        pointer-events: none;
-    }
-
-
-    /* CONTENEDOR IMAGEN */
-
-    .food-lightbox-image-wrapper {
-        width: min(900px, 72vw);
-        height: min(620px, 68vh);
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .food-lightbox-image {
-        display: block;
-
-        max-width: 100%;
-        max-height: 100%;
-
-        width: auto;
-        height: auto;
-
-        object-fit: contain;
-
-        border-radius: 14px;
-
-        filter:
-            drop-shadow(
-                0 30px 60px rgba(0, 0, 0, 0.35)
-            );
-
-        opacity: 1;
-
-        transition:
-            opacity 180ms ease,
-            transform 220ms ease;
-
-        pointer-events: auto;
-    }
-
-
-    /* CAPTION */
-
-    .food-lightbox-caption {
-        margin-top: 24px;
-        margin-bottom: 0;
-
-        font-size: 13px;
-        font-weight: 500;
-        line-height: 1.4;
-
-        color: rgba(255, 255, 255, 0.75);
-
-        text-align: center;
-    }
-
-
-    /* CONTADOR */
-
-    .food-lightbox-counter {
-        margin-top: 12px;
-
-        padding: 7px 14px;
-
-        border-radius: 999px;
-
-        background: rgba(0, 0, 0, 0.30);
-
-        color: #ffffff;
-
-        font-size: 12px;
-        font-weight: 600;
-    }
-
-
-    /* CERRAR */
-
-    .food-lightbox-close {
-        position: absolute;
-
-        top: 32px;
-        right: 40px;
-
-        width: 48px;
-        height: 48px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border: 0;
-        border-radius: 999px;
-
-        background: rgba(255, 255, 255, 0.10);
-
-        color: white;
-
-        font-size: 30px;
-        font-weight: 300;
-        line-height: 1;
-
-        cursor: pointer;
-
-        transition:
-            background 180ms ease,
-            transform 180ms ease;
-    }
-
-    .food-lightbox-close:hover {
-        background: rgba(255, 255, 255, 0.18);
-        transform: scale(1.06);
-    }
-
-
-    /* FLECHAS */
-
-    .food-lightbox-arrow {
-        position: absolute;
-        top: 50%;
-
-        width: 52px;
-        height: 52px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        transform: translateY(-50%);
-
-        border: 0;
-        border-radius: 999px;
-
-        background: rgba(255, 255, 255, 0.10);
-
-        color: #ffffff;
-
-        font-size: 34px;
-        font-weight: 300;
-
-        cursor: pointer;
-
-        transition:
-            background 180ms ease,
-            transform 180ms ease;
-    }
-
-    .food-lightbox-arrow:hover {
-        background: rgba(255, 255, 255, 0.18);
-    }
-
-    .food-lightbox-prev {
-        left: 40px;
-    }
-
-    .food-lightbox-next {
-        right: 40px;
-    }
-
-
-    /* MOBILE */
-
-    @media (max-width: 768px) {
-
-        .food-lightbox {
-            padding: 24px;
-        }
-
-        .food-lightbox-image-wrapper {
-            width: 88vw;
-            height: 65vh;
-        }
-
-        .food-lightbox-prev {
-            left: 12px;
-        }
-
-        .food-lightbox-next {
-            right: 12px;
-        }
-
-        .food-lightbox-arrow {
-            width: 44px;
-            height: 44px;
-
-            font-size: 28px;
-        }
-
-        .food-lightbox-close {
-            top: 20px;
-            right: 20px;
-
-            width: 44px;
-            height: 44px;
-        }
-
-        .food-lightbox-caption {
-            margin-top: 18px;
-        }
-    }
-</style>
-
-
-<script>
-    const foodGallery = [
-        {
-            src: "../assets/projects/food/1food.svg",
-            caption: "Onboarding en 7 pasos"
-        },
-        {
-            src: "../assets/projects/food/2food.svg",
-            caption: "Consola de pedidos y gestión de entregas"
-        },
-        {
-            src: "../assets/projects/food/3food.svg",
-            caption: "Experiencia mobile para clientes"
-        },
-        {
-            src: "../assets/projects/food/4food.svg",
-            caption: "Selección y gestión de carta"
-        },
-        {
-            src: "../assets/projects/food/5food.svg",
-            caption: "Mis pedidos, detalle y carrito"
-        },
-        {
-            src: "../assets/projects/food/6food.svg",
-            caption: "Seguimiento del pedido"
-        }
-    ];
-
-
-    const foodLightbox =
-        document.getElementById("foodLightbox");
-
-    const foodLightboxImage =
-        document.getElementById("foodLightboxImage");
-
-    const foodLightboxCaption =
-        document.getElementById("foodLightboxCaption");
-
-    const foodLightboxCounter =
-        document.getElementById("foodLightboxCounter");
-
-    const foodLightboxClose =
-        document.getElementById("foodLightboxClose");
-
-    const foodLightboxPrev =
-        document.getElementById("foodLightboxPrev");
-
-    const foodLightboxNext =
-        document.getElementById("foodLightboxNext");
-
-    const foodGalleryItems =
-        document.querySelectorAll(".gallery-item");
-
-    let currentFoodIndex = 0;
-
-
-    function renderFoodLightbox() {
-
-        const item =
-            foodGallery[currentFoodIndex];
-
-        foodLightboxImage.style.opacity = "0";
-        foodLightboxImage.style.transform = "scale(0.98)";
-
-        setTimeout(() => {
-
-            foodLightboxImage.src = item.src;
-
-            foodLightboxCaption.textContent =
-                item.caption;
-
-            foodLightboxCounter.textContent =
-                `${currentFoodIndex + 1} / ${foodGallery.length}`;
-
-            foodLightboxImage.style.opacity = "1";
-            foodLightboxImage.style.transform = "scale(1)";
-
-        }, 100);
-    }
-
-
-    function openFoodLightbox(index) {
-
-        currentFoodIndex = index;
-
-        renderFoodLightbox();
-
-        foodLightbox.classList.add("is-open");
-
-        foodLightbox.setAttribute(
-            "aria-hidden",
-            "false"
-        );
-
-        document.body.style.overflow = "hidden";
-    }
-
-
-    function closeFoodLightbox() {
-
-        foodLightbox.classList.remove("is-open");
-
-        foodLightbox.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
-        document.body.style.overflow = "";
-    }
-
-
-    function nextFoodImage() {
-
-        currentFoodIndex =
-            (currentFoodIndex + 1) %
-            foodGallery.length;
-
-        renderFoodLightbox();
-    }
-
-
-    function previousFoodImage() {
-
-        currentFoodIndex =
-            (currentFoodIndex - 1 + foodGallery.length) %
-            foodGallery.length;
-
-        renderFoodLightbox();
-    }
-
-
-    foodGalleryItems.forEach((item) => {
-
-        item.addEventListener("click", () => {
-
-            openFoodLightbox(
-                Number(item.dataset.index)
-            );
-
-        });
-
-    });
-
-
-    foodLightboxClose.addEventListener(
-        "click",
-        closeFoodLightbox
-    );
-
-
-    foodLightboxNext.addEventListener(
-        "click",
-        nextFoodImage
-    );
-
-
-    foodLightboxPrev.addEventListener(
-        "click",
-        previousFoodImage
-    );
-
-
-    foodLightbox.addEventListener(
-        "click",
-        (event) => {
-
-            if (event.target === foodLightbox) {
-                closeFoodLightbox();
-            }
-
-        }
-    );
-
-
-    document.addEventListener(
-        "keydown",
-        (event) => {
-
-            if (
-                !foodLightbox.classList.contains(
-                    "is-open"
-                )
-            ) {
-                return;
-            }
-
-            if (event.key === "Escape") {
-                closeFoodLightbox();
-            }
-
-            if (event.key === "ArrowRight") {
-                nextFoodImage();
-            }
-
-            if (event.key === "ArrowLeft") {
-                previousFoodImage();
-            }
-
-        }
-    );
-</script>
-    </main>
-
-            <div class="border-t border-[#e9edf2] py-24 text-center">
-                <h2 class="mb-10 text-[32px] font-bold leading-[1.2] sm:text-[48px]">Diseñando experiencias que <br />convierten <span class="text-electric">datos</span> en decisiones.</h2>
-                <a href="https://wa.me/51934865894?text=Hola%20Carlos%2C%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" rel="noopener" class="inline-flex items-center gap-2.5 rounded-full bg-primary px-10 py-4 text-[16px] font-semibold text-[#ffffff] transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.717zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>Conversemos por WhatsApp</a>
-            </div>
-        </section>
     </main>
 
     <!-- ================= NAV PROYECTOS ================= -->
@@ -1190,7 +964,7 @@
                     <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
                 </div>
                 <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
-                    Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de vanguardia.
+                    Diseño de producto orientado a datos: research, UX y decisiones medibles.
                 </p>
             </div>
             <div class="text-center md:text-right">

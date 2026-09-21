@@ -2,20 +2,166 @@
    JS compartido del portfolio — menú móvil + animaciones
    ============================================================ */
 (function () {
-    /* ---------- Menú móvil ---------- */
-    document.addEventListener("click", function (e) {
-        var toggle = e.target.closest("[data-menu-toggle]");
-        if (toggle) {
-            var menu = document.getElementById("mobile-menu");
-            if (menu) menu.classList.toggle("hidden");
-            return;
+    /* ---------- Menú móvil: botón hamburguesa + drawer lateral ----------
+       Componente global. Se construye a partir de los enlaces que el navbar
+       ya tiene en cada página (no hay que duplicar markup en los HTML).
+       Solo aplica en móvil (< 768px); en desktop/tablet se conserva el navbar. */
+    var NAV_PROJECTS = [
+        { num: "01", name: "FoodDelivery", desc: "Data-Driven Product Design", file: "food-delivery.html", current: "food-delivery" },
+        { num: "02", name: "Satelock", desc: "Product Design · Research & Operations", file: "satelock.html", current: "satelock" },
+        { num: "03", name: "Seller Center", desc: "Marketplace · Product Design", file: "sellercenter.html", current: "seller" },
+        { num: "04", name: "ConDuzko", desc: "Product Management · IA", file: "conduzko.html", current: "conduzko" }
+    ];
+    var ARROW_SVG = '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+    var CLOSE_SVG = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+
+    function escAttr(s) {
+        return String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;");
+    }
+
+    function initMobileNav() {
+        var nav = document.querySelector("nav");
+        if (!nav || nav.getAttribute("data-mobile-nav") === "ready") return;
+
+        var brand = nav.querySelector('a[href$="index.html"]');
+        var aboutLink = nav.querySelector('a[href$="about.html"]');
+        var dropdownLinks = nav.querySelectorAll(".dropdown-menu a");
+        if (!brand || !aboutLink || !dropdownLinks.length) return;
+
+        // Ruta correcta de cada proyecto (raíz o /pages/), tomada del navbar de la página
+        function hrefFor(file) {
+            for (var i = 0; i < dropdownLinks.length; i++) {
+                var h = dropdownLinks[i].getAttribute("href") || "";
+                if (h.toLowerCase().indexOf(file) > -1) return h;
+            }
+            return null;
         }
-        var link = e.target.closest("#mobile-menu a");
-        if (link) {
-            var m = document.getElementById("mobile-menu");
-            if (m) m.classList.add("hidden");
+
+        // Página actual (también reconoce los case studies de cada proyecto)
+        var path = decodeURIComponent(location.pathname).toLowerCase().split("/").pop().replace(/\.html$/, "");
+        var onAbout = path === "about";
+
+        // ---- Botón hamburguesa: cuadrado azul a la derecha (el logo no se toca) ----
+        var burger = document.createElement("button");
+        burger.type = "button";
+        burger.className = "nav-burger";
+        burger.setAttribute("aria-label", "Abrir menú");
+        burger.setAttribute("aria-expanded", "false");
+        burger.setAttribute("aria-controls", "nav-drawer");
+        burger.setAttribute("aria-haspopup", "dialog");
+        burger.innerHTML = '<span class="nav-burger__bar"></span><span class="nav-burger__bar"></span><span class="nav-burger__bar"></span>';
+
+        // Menú móvil anterior (sustituido por el drawer): el botón nuevo ocupa su lugar, a la derecha
+        var oldToggle = nav.querySelector("[data-menu-toggle]");
+        if (oldToggle && oldToggle.parentNode) {
+            oldToggle.parentNode.replaceChild(burger, oldToggle);
+        } else {
+            brand.parentNode.appendChild(burger);
         }
-    });
+        var oldMenu = document.getElementById("mobile-menu");
+        if (oldMenu) oldMenu.remove();
+
+        // ---- Drawer ----
+        var items = NAV_PROJECTS.map(function (p, i) {
+            var href = hrefFor(p.file);
+            if (!href) return "";
+            var isCurrent = path.indexOf(p.current) === 0;
+            return '<a class="nav-drawer__item" style="--i:' + i + '" href="' + escAttr(href) + '"' +
+                (isCurrent ? ' aria-current="page"' : "") + ">" +
+                '<span class="nav-drawer__num">' + p.num + "</span>" +
+                '<span class="nav-drawer__text"><span class="nav-drawer__name">' + p.name + '</span>' +
+                '<span class="nav-drawer__desc">' + p.desc + "</span></span>" +
+                '<span class="nav-drawer__end" aria-hidden="true">' +
+                (isCurrent ? '<span class="nav-drawer__dot"></span>' : ARROW_SVG) + "</span></a>";
+        }).join("");
+
+        var overlay = document.createElement("div");
+        overlay.className = "nav-overlay";
+        overlay.setAttribute("aria-hidden", "true");
+
+        var drawer = document.createElement("aside");
+        drawer.id = "nav-drawer";
+        drawer.className = "nav-drawer";
+        drawer.setAttribute("role", "dialog");
+        drawer.setAttribute("aria-modal", "true");
+        drawer.setAttribute("aria-label", "Menú de navegación");
+        drawer.setAttribute("aria-hidden", "true");
+        drawer.innerHTML =
+            '<div class="nav-drawer__head">' +
+                '<div><a class="nav-drawer__brand" href="' + escAttr(brand.getAttribute("href")) + '">Carlos Meza</a>' +
+                '<p class="nav-drawer__role">PRODUCT / UX / IA</p></div>' +
+                '<button type="button" class="nav-drawer__close" aria-label="Cerrar menú">' + CLOSE_SVG + "</button>" +
+            "</div>" +
+            '<nav class="nav-drawer__nav" aria-label="Principal">' +
+                '<p class="nav-drawer__eyebrow">Proyectos</p>' +
+                '<div class="nav-drawer__list">' + items + "</div>" +
+                '<a class="nav-drawer__about" style="--i:4" href="' + escAttr(aboutLink.getAttribute("href")) + '"' +
+                    (onAbout ? ' aria-current="page"' : "") + ">" +
+                    '<span>Sobre mí</span><span class="nav-drawer__end" aria-hidden="true">' +
+                    (onAbout ? '<span class="nav-drawer__dot"></span>' : ARROW_SVG) + "</span></a>" +
+            "</nav>";
+
+        document.body.appendChild(overlay);
+        document.body.appendChild(drawer);
+        nav.setAttribute("data-mobile-nav", "ready");
+
+        var closeBtn = drawer.querySelector(".nav-drawer__close");
+        var mq = window.matchMedia("(max-width: 767.98px)");
+        var isOpen = false;
+
+        function open() {
+            if (isOpen || !mq.matches) return;
+            isOpen = true;
+            burger.setAttribute("aria-expanded", "true");
+            burger.setAttribute("aria-label", "Cerrar menú");
+            drawer.setAttribute("aria-hidden", "false");
+            drawer.classList.add("is-open");
+            overlay.classList.add("is-open");
+            document.documentElement.classList.add("nav-lock");
+            requestAnimationFrame(function () { closeBtn.focus({ preventScroll: true }); });
+        }
+
+        function close(returnFocus) {
+            if (!isOpen) return;
+            isOpen = false;
+            burger.setAttribute("aria-expanded", "false");
+            burger.setAttribute("aria-label", "Abrir menú");
+            drawer.setAttribute("aria-hidden", "true");
+            drawer.classList.remove("is-open");
+            overlay.classList.remove("is-open");
+            document.documentElement.classList.remove("nav-lock");
+            if (returnFocus !== false) burger.focus({ preventScroll: true });
+        }
+
+        burger.addEventListener("click", function () { isOpen ? close() : open(); });
+        closeBtn.addEventListener("click", function () { close(); });
+        overlay.addEventListener("click", function () { close(); });
+        drawer.addEventListener("click", function (e) {
+            if (e.target.closest("a")) close(false);
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (!isOpen) return;
+            if (e.key === "Escape") { e.preventDefault(); close(); return; }
+            if (e.key !== "Tab") return;
+            // Trampa de foco dentro del drawer
+            var f = drawer.querySelectorAll("a[href], button:not([disabled])");
+            if (!f.length) return;
+            var first = f[0], last = f[f.length - 1];
+            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+            else if (!drawer.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+        });
+
+        // Si se pasa a tablet/desktop con el menú abierto, se cierra y se libera el scroll
+        var onChange = function () { if (!mq.matches) close(false); };
+        if (mq.addEventListener) mq.addEventListener("change", onChange);
+        else if (mq.addListener) mq.addListener(onChange);
+        window.addEventListener("pageshow", function (e) { if (e.persisted) close(false); });
+    }
+
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initMobileNav);
+    else initMobileNav();
 
     /* ---------- Animaciones (progressive enhancement) ---------- */
     function initAnimations() {
