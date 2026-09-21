@@ -726,3 +726,14 @@ html.nav-lock, html.nav-lock body { overflow: hidden; }
     .nav-drawer.is-open .nav-drawer__item,
     .nav-drawer.is-open .nav-drawer__about { animation: none !important; }
 }
+
+/* ============================================================
+   Hero de los Case Studies — imagen + tarjetas flotantes
+   Misma animación que la ilustración del hero de la home
+   (reutiliza los keyframes hiFloat y hvChip).
+   ============================================================ */
+.float-media { animation: hiFloat 7s ease-in-out infinite; will-change: transform; }
+.float-chip { animation: hvChip 6s ease-in-out infinite; will-change: transform; }
+@media (prefers-reduced-motion: reduce) {
+    .float-media, .float-chip { animation: none !important; }
+}

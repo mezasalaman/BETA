@@ -86,27 +86,20 @@
                 </div>
 
                 <!-- Derecha: composición de producto (assets existentes) -->
-                <div class="relative">
-                    <div class="overflow-hidden rounded-[18px] border border-[#e9edf2] bg-white shadow-showcase">
-                        <div class="flex items-center gap-1.5 border-b border-[#e9edf2] bg-[#f6f7f9] px-4 py-2.5">
-                            <span class="h-2 w-2 rounded-full bg-[#e2e8f0]"></span>
-                            <span class="h-2 w-2 rounded-full bg-[#e2e8f0]"></span>
-                            <span class="h-2 w-2 rounded-full bg-[#e2e8f0]"></span>
-                        </div>
-                        <img loading="lazy" src="../assets/projects/food/1food.svg" alt="FoodDelivery — flujo de onboarding" class="block w-full" />
-                    </div>
-                    <div class="absolute -right-3 -top-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex">
+                <div class="relative -top-2 lg:-top-6">
+                    <img loading="lazy" src="../assets/projects/food/1food.svg" alt="FoodDelivery — flujo de onboarding" class="float-media block w-full" />
+                    <div class="float-chip absolute -right-3 -top-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex" style="animation-delay:.6s">
                         <span class="ic" data-icon="trending-up" style="font-size:15px;color:#2563eb"></span>
                         <div>
                             <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8]">Activation Rate</div>
                             <div class="text-[13px] font-bold text-[#0f172a]">48% → 63%</div>
                         </div>
                     </div>
-                    <div class="absolute -bottom-3 -left-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex">
+                    <div class="float-chip absolute -bottom-3 -left-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex" style="animation-delay:1.1s">
                         <span class="ic" data-icon="verified" style="font-size:15px;color:#16a34a"></span>
                         <div>
                             <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8]">Onboarding</div>
-                            <div class="text-[13px] font-bold text-[#0f172a]">7 pasos guiados</div>
+                            <div class="text-[13px] font-bold text-[#0f172a]">Pasos mejor pensados</div>
                         </div>
                     </div>
                 </div>
@@ -629,7 +622,7 @@
                 <div class="min-w-0 flex-1">
                     <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">11 — Solución</span>
                     <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Rediseño del onboarding</h2>
-                    <p class="mb-6 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Un flujo de 7 pasos, claro y guiado, con progreso visible y menos fricciones.</p>
+                    <p class="mb-6 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Un flujo guiado con pasos mejor pensados, progreso visible y menos fricciones.</p>
 
                     <div class="flex flex-col gap-8 lg:flex-row lg:items-center">
                         <!-- Carrusel: 3 interfaces desktop del onboarding -->
@@ -637,22 +630,22 @@
                             <div class="fd-carousel relative overflow-hidden rounded-[18px] border border-[#e9edf2] bg-[#f6f7f9]">
                                 <div class="fd-carousel-track" id="fdTrack">
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 01</span></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-01-bienvenida.png" alt="FoodDelivery — pantalla de bienvenida al tutorial de configuración de la carta" class="block h-full w-full object-cover" /></div>
                                     </div>
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 02</span></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-02-tiendas.png" alt="FoodDelivery — configuración de tiendas, tarifa de envío y métodos de pago por canal" class="block h-full w-full object-cover" /></div>
                                     </div>
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 03</span></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-03-metricas.png" alt="FoodDelivery — configuración de métricas y analíticas de la tienda" class="block h-full w-full object-cover" /></div>
                                     </div>
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 04</span></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-04-categorias.png" alt="FoodDelivery — tutorial guiado, paso 3: organiza tu carta con categorías" class="block h-full w-full object-cover" /></div>
                                     </div>
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 05</span></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-05-producto.png" alt="FoodDelivery — tutorial guiado, paso 5: registra tu producto" class="block h-full w-full object-cover" /></div>
                                     </div>
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="flex aspect-[16/10] w-full items-center justify-center rounded-[14px] border border-[#e2e8f0] bg-white"><span class="text-[12px] font-medium text-[#94a3b8]">Imagen 06</span></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-06-vista-previa.png" alt="FoodDelivery — tutorial guiado, paso 8: revisa la vista previa mobile de la tienda" class="block h-full w-full object-cover" /></div>
                                     </div>
                                 </div>
                                 <button type="button" id="fdPrev" aria-label="Anterior" class="absolute left-3 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[18px] text-[#0f172a] shadow-drop transition hover:bg-electric hover:text-white">‹</button>

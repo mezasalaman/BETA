@@ -90,17 +90,17 @@
 
                 <!-- Derecha: composición de producto (asset real) -->
                 <div class="relative">
-                    <div class="overflow-hidden rounded-[18px] border border-[#e9edf2] bg-white shadow-showcase">
+                    <div class="float-media overflow-hidden rounded-[18px] border border-[#e9edf2] bg-white shadow-showcase">
                         <img loading="lazy" src="../assets/projects/satelock/hero-dashboard.png" alt="Satelock — dashboard de monitoreo de rutas e incidencias" class="block w-full" />
                     </div>
-                    <div class="absolute -right-3 -top-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex">
+                    <div class="float-chip absolute -right-3 -top-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex" style="animation-delay:.6s">
                         <span class="ic" data-icon="satelock" style="font-size:15px;color:#2563eb"></span>
                         <div>
                             <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8]">Time to First Action</div>
                             <div class="text-[13px] font-bold text-[#0f172a]">15 min → 11.25 min</div>
                         </div>
                     </div>
-                    <div class="absolute -bottom-3 -left-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex">
+                    <div class="float-chip absolute -bottom-3 -left-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex" style="animation-delay:1.1s">
                         <span class="ic" data-icon="verified" style="font-size:15px;color:#16a34a"></span>
                         <div>
                             <div class="text-[9px] font-bold uppercase tracking-wide text-[#94a3b8]">Carga operativa</div>
@@ -663,51 +663,27 @@
                             <div class="sl-carousel relative overflow-hidden rounded-[18px] border border-[#e9edf2] bg-[#f6f7f9]">
                                 <div class="sl-carousel-track" id="slTrack">
                                     <div class="sl-carousel-slide px-3 py-4">
-                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
-                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
-                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 01</span>
-                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
-                                        </div>
+                                        <div class="aspect-[15/8] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/satelock/sol-01-entregas.png" alt="Satelock — tablero de entregas con rutas, avance, ETA y estado de cada ruta" class="block h-full w-full object-cover" /></div>
                                         <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">01 — Monitoreo operativo</p>
                                     </div>
                                     <div class="sl-carousel-slide px-3 py-4">
-                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
-                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
-                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 02</span>
-                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
-                                        </div>
+                                        <div class="aspect-[15/8] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/satelock/sol-02-rutas-mapa.png" alt="Satelock — listado de rutas junto al mapa con el recorrido y las unidades en ruta" class="block h-full w-full object-cover" /></div>
                                         <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">02 — Seguimiento y ubicación</p>
                                     </div>
                                     <div class="sl-carousel-slide px-3 py-4">
-                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
-                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
-                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 03</span>
-                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
-                                        </div>
+                                        <div class="aspect-[15/8] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/satelock/sol-03-eliminar-ruta.png" alt="Satelock — confirmación para eliminar una ruta de forma permanente" class="block h-full w-full object-cover" /></div>
                                         <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">03 — Gestión de alertas</p>
                                     </div>
                                     <div class="sl-carousel-slide px-3 py-4">
-                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
-                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
-                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 04</span>
-                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
-                                        </div>
+                                        <div class="aspect-[15/8] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/satelock/sol-04-crear-ruta.png" alt="Satelock — formulario para crear una ruta con clientes y punto inicial en el mapa" class="block h-full w-full object-cover" /></div>
                                         <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">04 — Detalle del activo</p>
                                     </div>
                                     <div class="sl-carousel-slide px-3 py-4">
-                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
-                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
-                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 05</span>
-                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
-                                        </div>
+                                        <div class="aspect-[15/8] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/satelock/sol-05-geozona.png" alt="Satelock — creación de una geozona con límite de velocidad y área dibujada en el mapa" class="block h-full w-full object-cover" /></div>
                                         <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">05 — Acciones operativas</p>
                                     </div>
                                     <div class="sl-carousel-slide px-3 py-4">
-                                        <div class="flex h-[190px] flex-col items-center justify-center gap-1.5 rounded-[14px] border border-[#e2e8f0] bg-[#f1f3f6]">
-                                            <span class="ic" data-icon="gallery" style="font-size:22px;color:#c3cbd8"></span>
-                                            <span class="text-[13px] font-semibold text-[#94a3b8]">Imagen 06</span>
-                                            <span class="text-[11px] text-[#b7c0cc]">Pendiente de reemplazar</span>
-                                        </div>
+                                        <div class="aspect-[15/8] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/satelock/sol-06-detalle-entrega.png" alt="Satelock — detalle de la ruta con línea de tiempo de eventos, mapa y datos del cliente" class="block h-full w-full object-cover" /></div>
                                         <p class="mt-3 text-center text-[12px] font-medium text-[#64748b]">06 — Resolución y seguimiento</p>
                                     </div>
                                 </div>
