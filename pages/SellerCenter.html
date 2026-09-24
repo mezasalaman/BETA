@@ -81,7 +81,7 @@
             <span class="ic cta-explore-arrow" data-icon="arrow-right" style="font-size:20px"></span>
         </a>
 
-        <div class="mx-auto mt-20 w-full max-w-grid overflow-hidden rounded-[32px]">
+        <div class="mx-auto mt-20 w-full max-w-grid overflow-hidden rounded-[32px] reveal-img">
             <img loading="lazy" src="../assets/projects/seller/sellerporada.svg" alt="Seller Center — app móvil en 3 pantallas" class="block w-full" />
         </div>
     </header>
@@ -1091,8 +1091,6 @@
             sellerGallery[currentSellerIndex];
 
 
-        sellerLightboxImage.style.opacity = "0";
-
         sellerLightboxImage.style.transform =
             "scale(0.98)";
 
@@ -1109,10 +1107,6 @@
 
             sellerLightboxCounter.textContent =
                 `${currentSellerIndex + 1} / ${sellerGallery.length}`;
-
-
-            sellerLightboxImage.style.opacity =
-                "1";
 
 
             sellerLightboxImage.style.transform =

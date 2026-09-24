@@ -82,7 +82,7 @@
                 <span class="ic cta-explore-arrow" data-icon="arrow-right" style="font-size:20px"></span>
             </a>
 
-            <div class="mx-auto mt-20 w-full max-w-grid overflow-hidden rounded-[32px] border border-[#e9edf2] bg-card shadow-showcase">
+            <div class="mx-auto mt-20 w-full max-w-grid overflow-hidden rounded-[32px] border border-[#e9edf2] bg-card shadow-showcase reveal-img">
                 <img loading="lazy" src="../assets/projects/food/portadafood.svg" alt="FoodDelivery — panel de gestión de carta" class="block w-full" />
             </div>
         </header>
@@ -1091,7 +1091,6 @@
         const item =
             foodGallery[currentFoodIndex];
 
-        foodLightboxImage.style.opacity = "0";
         foodLightboxImage.style.transform = "scale(0.98)";
 
         setTimeout(() => {
@@ -1104,7 +1103,6 @@
             foodLightboxCounter.textContent =
                 `${currentFoodIndex + 1} / ${foodGallery.length}`;
 
-            foodLightboxImage.style.opacity = "1";
             foodLightboxImage.style.transform = "scale(1)";
 
         }, 100);

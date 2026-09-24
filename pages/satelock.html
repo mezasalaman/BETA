@@ -82,8 +82,8 @@
                 <span class="ic cta-explore-arrow" data-icon="arrow-right" style="font-size:20px"></span>
             </a>
 
-            <div class="flex w-full max-w-[1100px] justify-center px-0 pb-20 pt-10 b">
-                <img loading="lazy" src="../assets/projects/satelock/sate.svg" alt="Satelock Interface" class="block h-auto max-h-[70vh] w-full object-contain" />
+            <div class="flex w-full max-w-[1100px] justify-center px-0 pb-20 pt-10 b reveal-img">
+                <img loading="lazy" src="../assets/projects/satelock/dashboard-monitor-mockup.png" alt="Satelock — dashboard de monitoreo de entregas en tiempo real" class="block h-auto max-h-[70vh] w-full object-contain" />
             </div>
         </header>
 
@@ -1161,8 +1161,6 @@
             satelockGallery[currentSatelockIndex];
 
 
-        satelockLightboxImage.style.opacity = "0";
-
         satelockLightboxImage.style.transform =
             "scale(0.98)";
 
@@ -1179,10 +1177,6 @@
 
             satelockLightboxCounter.textContent =
                 `${currentSatelockIndex + 1} / ${satelockGallery.length}`;
-
-
-            satelockLightboxImage.style.opacity =
-                "1";
 
 
             satelockLightboxImage.style.transform =

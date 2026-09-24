@@ -81,7 +81,7 @@
                 <span class="ic cta-explore-arrow" data-icon="arrow-right" style="font-size:20px"></span>
             </a>
 
-            <div class="mx-auto mt-20 w-full max-w-grid overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card shadow-showcase">
+            <div class="mx-auto mt-20 w-full max-w-grid overflow-hidden rounded-[24px] border border-[#e9edf2] bg-card shadow-showcase reveal-img">
                 <img loading="lazy" src="../assets/conduzko/portada.png" alt="ConDuzko — catálogo y detalle de vehículo" class="block w-full" />
             </div>
         </header>
@@ -1055,7 +1055,6 @@
         const item =
             conduzkoGallery[currentConduzkoIndex];
 
-        conduzkoLightboxImage.style.opacity = "0";
         conduzkoLightboxImage.style.transform = "scale(0.98)";
 
         setTimeout(() => {
@@ -1068,7 +1067,6 @@
             conduzkoLightboxCounter.textContent =
                 `${currentConduzkoIndex + 1} / ${conduzkoGallery.length}`;
 
-            conduzkoLightboxImage.style.opacity = "1";
             conduzkoLightboxImage.style.transform = "scale(1)";
 
         }, 100);
