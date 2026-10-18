@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Delivery | Ecosistema digital</title>
     <meta name="description" content="FoodDelivery — Caso de diseño de producto enfocado en onboarding, activación y conversión para una plataforma gastronómica." />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232563eb'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23315CFF'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Food Delivery | Ecosistema digital" />
     <meta property="og:description" content="FoodDelivery — Caso de diseño de producto enfocado en onboarding, activación y conversión para una plataforma gastronómica." />
@@ -15,14 +15,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../assets/tw-config.js"></script>
     <link rel="stylesheet" href="../assets/portfolio.css" />
+    <link rel="stylesheet" href="../assets/notebook.css" />
 </head>
 
-<body class="bg-ink font-sans text-[#0f172a] antialiased">
+<body class="nb nb-ov nb-food bg-ink font-sans text-[#101828] antialiased">
 
     <!-- ================= NAVBAR ================= -->
     <nav class="sticky top-0 z-[9999] w-full bg-ink">
@@ -30,11 +31,11 @@
             <div class="flex w-full items-center justify-between border-b border-hairline py-6">
                 <a href="../index.html" class="flex items-center gap-3">
                     <span class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
-                    <span class="text-[18px] font-bold text-[#0f172a]">Carlos Meza</span>
+                    <span class="text-[18px] font-bold text-[#101828]">Carlos Meza</span>
                 </a>
                 <ul class="hidden items-center gap-10 md:flex">
                     <li class="dropdown-trigger relative py-2.5">
-                        <a href="#" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Proyectos</a>
+                        <a href="#" class="nav-underline text-[15px] text-[#101828] transition-colors hover:text-primary">Proyectos</a>
                         <div class="dropdown-menu absolute left-1/2 top-full flex min-w-[180px] flex-col items-start gap-4 rounded-xl bg-white p-5 shadow-drop">
                             <a href="food-delivery.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">FoodDelivery</a>
                             <a href="satelock.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Satelock</a>
@@ -42,7 +43,7 @@
                             <a href="conduzko.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">ConDuzko</a>
                         </div>
                     </li>
-                    <li><a href="about.html" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Sobre mí</a></li>
+                    <li><a href="about.html" class="nav-underline text-[15px] text-[#101828] transition-colors hover:text-primary">Sobre mí</a></li>
                 </ul>
                 <button type="button" data-menu-toggle aria-label="Abrir menú" class="flex h-10 w-10 items-center justify-center md:hidden">
                     <span class="relative block h-[2px] w-6 rounded bg-white before:absolute before:-top-2 before:left-0 before:h-[2px] before:w-6 before:rounded before:bg-white before:content-[''] after:absolute after:top-2 after:left-0 after:h-[2px] after:w-6 after:rounded after:bg-white after:content-['']"></span>
@@ -54,7 +55,7 @@
                 <a href="satelock.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Satelock</a>
                 <a href="SellerCenter.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Seller Center</a>
                 <a href="conduzko.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">ConDuzko</a>
-                <a href="about.html" class="mt-1 block rounded-lg px-2 py-2.5 text-[15px] font-medium text-[#0f172a] hover:bg-[#f3f5f8]">Sobre mí</a>
+                <a href="about.html" class="mt-1 block rounded-lg px-2 py-2.5 text-[15px] font-medium text-[#101828] hover:bg-[#f3f5f8]">Sobre mí</a>
             </div>
         </div>
     </nav>
@@ -67,20 +68,20 @@
                 <span class="project-badge__label">SENIOR PRODUCT DESIGNER · DATA-DRIVEN</span>
             </div>
 
-            <h1 class="title-massive mb-12 mt-8 font-extrabold uppercase text-[#0f172a]">
+            <h1 class="title-massive mb-12 mt-8 font-extrabold uppercase text-[#101828]">
                 FOODDELIVERY
                 <span class="mt-4 block text-royal">Ecosistema Digital</span>
             </h1>
 
             <p class="mb-12 max-w-[700px] text-[17px] leading-[1.5] text-[#475569] md:text-[20px]">
                 Rediseñé el onboarding de comercios para que más tiendas lleguen a publicarse.
-                <strong class="font-semibold text-[#0f172a]">Activation Rate: 48% → 63%.</strong>
+                <strong class="font-semibold text-[#101828]">Activation Rate: 48% → 63%.</strong>
             </p>
 
             <a href="food-delivery-case.html" class="cta-explore reveal">
                 Explorar caso de estudio
                 <span class="ic cta-explore-arrow" data-icon="arrow-right" style="font-size:20px"></span>
-            </a>
+            <span class="nbp nbp-arrow" style="right:calc(100% + 26px);top:50%;margin-top:-20px" aria-hidden="true"></span><span class="nbp nbp-cursor" style="left:calc(100% + 26px);top:50%;margin-top:-22px" aria-hidden="true"></span></a>
 
             <div class="mx-auto mt-20 w-full max-w-grid overflow-hidden rounded-[32px] border border-[#e9edf2] bg-card shadow-showcase reveal-img">
                 <img loading="lazy" src="../assets/projects/food/portadafood.svg" alt="FoodDelivery — panel de gestión de carta" class="block w-full" />
@@ -88,7 +89,8 @@
         </header>
 
         <!-- ================= PROBLEMA Y SOLUCIÓN ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-14">
+        <section class="nb-host mx-auto w-[90%] max-w-grid py-14">
+            <span class="nbp nbp-check" style="top:50px;right:6px" aria-hidden="true"></span>
             <h2 class="mb-6 text-[24px] font-semibold">Problema y Solución</h2>
             <div class="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2">
 
@@ -98,25 +100,25 @@
                         <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-err/10"><span class="ic" data-icon="warning" style="font-size:15px;color:#dc2626"></span></span>
                         <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-err">El problema</span>
                     </div>
-                    <h3 class="mb-2.5 text-[22px] font-bold leading-[1.15] text-[#0f172a] sm:text-[25px]">Comercios que <span class="text-err">no se activaban.</span></h3>
+                    <h3 class="mb-2.5 text-[22px] font-bold leading-[1.15] text-[#101828] sm:text-[25px]">Comercios que <span class="text-err">no se activaban.</span></h3>
                     <p class="mb-5 text-[13px] leading-[1.5] text-[#64748b]">Solo 48% de los comercios que iniciaban el onboarding lograba publicar su tienda.</p>
 
                     <div class="mb-5 flex items-start">
                         <div class="flex min-w-0 flex-1 flex-col items-center text-center">
                             <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-err/10 sm:h-11 sm:w-11"><span class="ic" data-icon="design-systems" style="font-size:18px;color:#dc2626"></span></div>
-                            <div class="text-[12px] font-bold text-[#0f172a]">Caída inicial</div>
+                            <div class="text-[12px] font-bold text-[#101828]">Caída inicial</div>
                             <div class="mt-0.5 text-[10px] text-[#94a3b8]">−22 pts en el primer paso</div>
                         </div>
                         <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
                         <div class="flex min-w-0 flex-1 flex-col items-center text-center">
                             <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-err/10 sm:h-11 sm:w-11"><span class="ic" data-icon="process" style="font-size:18px;color:#dc2626"></span></div>
-                            <div class="text-[12px] font-bold text-[#0f172a]">Abandono</div>
+                            <div class="text-[12px] font-bold text-[#101828]">Abandono</div>
                             <div class="mt-0.5 text-[10px] text-[#94a3b8]">Antes de terminar</div>
                         </div>
                         <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
                         <div class="flex min-w-0 flex-1 flex-col items-center text-center">
                             <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-err/10 sm:h-11 sm:w-11"><span class="ic" data-icon="warning" style="font-size:18px;color:#dc2626"></span></div>
-                            <div class="text-[12px] font-bold text-[#0f172a]">Tienda sin publicar</div>
+                            <div class="text-[12px] font-bold text-[#101828]">Tienda sin publicar</div>
                             <div class="mt-0.5 text-[10px] text-[#94a3b8]">Sin valor para el comercio</div>
                         </div>
                     </div>
@@ -136,46 +138,46 @@
                 <!-- Solución -->
                 <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
                     <div class="mb-4 flex items-center gap-2.5">
-                        <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="intro" style="font-size:15px;color:#2563eb"></span></span>
+                        <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="intro" style="font-size:15px;color:#315CFF"></span></span>
                         <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">La solución</span>
                     </div>
-                    <h3 class="mb-2.5 text-[22px] font-bold leading-[1.15] text-[#0f172a] sm:text-[25px]">Un onboarding que <span class="text-electric">activa.</span></h3>
+                    <h3 class="mb-2.5 text-[22px] font-bold leading-[1.15] text-[#101828] sm:text-[25px]">Un onboarding que <span class="text-electric">activa.</span></h3>
                     <p class="mb-5 text-[13px] leading-[1.5] text-[#64748b]">Un flujo guiado con pasos mejor pensados, progreso visible y validaciones en tiempo real.</p>
 
                     <div class="mb-5 flex items-start">
                         <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-electric/10 sm:h-11 sm:w-11"><span class="ic" data-icon="design-systems" style="font-size:18px;color:#2563eb"></span></div>
-                            <div class="text-[12px] font-bold text-[#0f172a]">Flujo guiado</div>
+                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-electric/10 sm:h-11 sm:w-11"><span class="ic" data-icon="design-systems" style="font-size:18px;color:#315CFF"></span></div>
+                            <div class="text-[12px] font-bold text-[#101828]">Flujo guiado</div>
                             <div class="mt-0.5 text-[10px] text-[#94a3b8]">Paso a paso</div>
                         </div>
                         <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
                         <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-electric/10 sm:h-11 sm:w-11"><span class="ic" data-icon="rocket" style="font-size:18px;color:#2563eb"></span></div>
-                            <div class="text-[12px] font-bold text-[#0f172a]">Menos errores</div>
+                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-electric/10 sm:h-11 sm:w-11"><span class="ic" data-icon="rocket" style="font-size:18px;color:#315CFF"></span></div>
+                            <div class="text-[12px] font-bold text-[#101828]">Menos errores</div>
                             <div class="mt-0.5 text-[10px] text-[#94a3b8]">Validación en vivo</div>
                         </div>
                         <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
                         <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-electric/10 sm:h-11 sm:w-11"><span class="ic" data-icon="data-analysis" style="font-size:18px;color:#2563eb"></span></div>
-                            <div class="text-[12px] font-bold text-[#0f172a]">Tienda publicada</div>
+                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-electric/10 sm:h-11 sm:w-11"><span class="ic" data-icon="data-analysis" style="font-size:18px;color:#315CFF"></span></div>
+                            <div class="text-[12px] font-bold text-[#101828]">Tienda publicada</div>
                             <div class="mt-0.5 text-[10px] text-[#94a3b8]">Más comercios activos</div>
                         </div>
                     </div>
 
                     <div class="mt-auto flex items-center divide-x divide-electric/15 rounded-[14px] bg-electric/5 px-5 py-3.5">
                         <div class="flex flex-1 items-center gap-2.5 pr-4">
-                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="arrow-up-right" style="font-size:14px;color:#2563eb"></span></span>
+                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="arrow-up-right" style="font-size:14px;color:#315CFF"></span></span>
                             <div>
                                 <span class="block text-[9px] font-bold uppercase tracking-wide text-[#64748b]">Activation Rate</span>
-                                <span class="block text-[12.5px] font-bold text-[#0f172a]">63%</span>
+                                <span class="block text-[12.5px] font-bold text-[#101828]">63%</span>
                                 <span class="block text-[10px] text-[#64748b]">desde 48%</span>
                             </div>
                         </div>
                         <div class="flex flex-1 items-center gap-2.5 pl-4">
-                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="profile" style="font-size:14px;color:#2563eb"></span></span>
+                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="profile" style="font-size:14px;color:#315CFF"></span></span>
                             <div>
                                 <span class="block text-[9px] font-bold uppercase tracking-wide text-[#64748b]">Abandono</span>
-                                <span class="block text-[12.5px] font-bold text-[#0f172a]">30%</span>
+                                <span class="block text-[12.5px] font-bold text-[#101828]">30%</span>
                                 <span class="block text-[10px] text-[#64748b]">desde 41%</span>
                             </div>
                         </div>
@@ -186,7 +188,8 @@
         </section>
 
         <!-- ================= CONTEXTO DE NEGOCIO ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-14">
+        <section class="nb-host mx-auto w-[90%] max-w-grid py-14">
+            <span class="nbp nbp-nodes" style="top:50px;right:6px" aria-hidden="true"></span>
             <h2 class="mb-6 text-[24px] font-semibold">Contexto de negocio</h2>
 
             <!-- Bloque superior: Contexto + Problema | Funnel -->
@@ -194,7 +197,7 @@
                 <!-- Izquierda: contexto + problema -->
                 <div class="rounded-[20px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
                     <span class="mb-3 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">Contexto de negocio</span>
-                    <h3 class="mb-3 text-[22px] font-semibold leading-[1.2] text-[#0f172a] sm:text-[25px]">Muchos comercios llegaban.<br />Muy pocos lograban activarse.</h3>
+                    <h3 class="mb-3 text-[22px] font-semibold leading-[1.2] text-[#101828] sm:text-[25px]">Muchos comercios llegaban.<br />Muy pocos lograban activarse.</h3>
                     <p class="mb-2.5 text-[13.5px] leading-[1.55] text-[#64748b]">FoodDelivery necesitaba más comercios activos, pero el onboarding era la barrera.</p>
                     <p class="text-[13.5px] leading-[1.55] text-[#64748b]">Adquirir comercios no alcanzaba si no llegaban a publicar su tienda.</p>
                 </div>
@@ -208,26 +211,26 @@
 
                     <div class="flex items-start">
                         <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 sm:h-10 sm:w-10"><span class="ic" data-icon="trending-up" style="font-size:16px;color:#2563eb"></span></div>
-                            <div class="text-[10px] font-semibold text-[#0f172a] sm:text-[11.5px]">Adquisición</div>
+                            <div class="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 sm:h-10 sm:w-10"><span class="ic" data-icon="trending-up" style="font-size:16px;color:#315CFF"></span></div>
+                            <div class="text-[10px] font-semibold text-[#101828] sm:text-[11.5px]">Adquisición</div>
                             <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Comercios que llegan a la plataforma</div>
                         </div>
                         <span class="mt-[14px] flex-shrink-0 px-0 text-[13px] font-semibold text-[#94a3b8] sm:mt-[18px] sm:px-1 sm:text-[17px]">→</span>
                         <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 sm:h-10 sm:w-10"><span class="ic" data-icon="process" style="font-size:16px;color:#2563eb"></span></div>
-                            <div class="text-[10px] font-semibold text-[#0f172a] sm:text-[11.5px]">Onboarding</div>
+                            <div class="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 sm:h-10 sm:w-10"><span class="ic" data-icon="process" style="font-size:16px;color:#315CFF"></span></div>
+                            <div class="text-[10px] font-semibold text-[#101828] sm:text-[11.5px]">Onboarding</div>
                             <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Completan su registro</div>
                         </div>
                         <span class="mt-[14px] flex-shrink-0 px-0 text-[13px] font-semibold text-[#94a3b8] sm:mt-[18px] sm:px-1 sm:text-[17px]">→</span>
                         <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full border-2 border-electric bg-electric/15 sm:h-11 sm:w-11"><span class="ic" data-icon="verified" style="font-size:18px;color:#2563eb"></span></div>
+                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full border-2 border-electric bg-electric/15 sm:h-11 sm:w-11"><span class="ic" data-icon="verified" style="font-size:18px;color:#315CFF"></span></div>
                             <div class="text-[12px] font-bold text-electric">Activación</div>
                             <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Publican su tienda</div>
                         </div>
                         <span class="mt-[14px] flex-shrink-0 px-0 text-[13px] font-semibold text-[#94a3b8] sm:mt-[18px] sm:px-1 sm:text-[17px]">→</span>
                         <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 sm:h-10 sm:w-10"><span class="ic" data-icon="growth" style="font-size:16px;color:#2563eb"></span></div>
-                            <div class="text-[10px] font-semibold text-[#0f172a] sm:text-[11.5px]">Crecimiento</div>
+                            <div class="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 sm:h-10 sm:w-10"><span class="ic" data-icon="growth" style="font-size:16px;color:#315CFF"></span></div>
+                            <div class="text-[10px] font-semibold text-[#101828] sm:text-[11.5px]">Crecimiento</div>
                             <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Comienzan a recibir pedidos</div>
                         </div>
                     </div>
@@ -248,30 +251,30 @@
             <!-- Métricas -->
             <div class="mb-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
                 <div class="flex items-center gap-3.5 rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
-                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="profile" style="font-size:18px;color:#2563eb"></span></div>
+                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="profile" style="font-size:18px;color:#315CFF"></span></div>
                     <div>
                         <span class="block text-[26px] font-bold leading-none text-electric">48%</span>
-                        <p class="mt-1 text-[12.5px] font-semibold text-[#0f172a]">Activation Rate</p>
+                        <p class="mt-1 text-[12.5px] font-semibold text-[#101828]">Activation Rate</p>
                         <p class="mt-0.5 text-[11px] leading-[1.35] text-[#64748b]">Comercios que lograban publicar su tienda.</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-3.5 rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
-                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="funnel" style="font-size:18px;color:#2563eb"></span></div>
+                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="funnel" style="font-size:18px;color:#315CFF"></span></div>
                     <div>
                         <span class="block text-[26px] font-bold leading-none text-electric">41%</span>
-                        <p class="mt-1 text-[12.5px] font-semibold text-[#0f172a]">Abandono</p>
+                        <p class="mt-1 text-[12.5px] font-semibold text-[#101828]">Abandono</p>
                         <p class="mt-0.5 text-[11px] leading-[1.35] text-[#64748b]">Usuarios que dejaban el onboarding antes de completarlo.</p>
                     </div>
                 </div>
                 <div class="relative flex items-center gap-3.5 rounded-[16px] border border-[#e9edf2] bg-panel2 p-5 pt-6">
                     <div class="absolute right-3 top-3 flex max-w-[128px] items-start gap-1 rounded-[6px] bg-electric/10 px-2 py-1">
-                        <span class="ic mt-[1px] flex-shrink-0" data-icon="info" style="font-size:9px;color:#2563eb"></span>
+                        <span class="ic mt-[1px] flex-shrink-0" data-icon="info" style="font-size:9px;color:#315CFF"></span>
                         <span class="text-[8px] font-medium leading-[1.3] text-electric">Dato estimado, no oficial.</span>
                     </div>
-                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="data-analysis" style="font-size:18px;color:#2563eb"></span></div>
+                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="data-analysis" style="font-size:18px;color:#315CFF"></span></div>
                     <div>
                         <span class="block text-[26px] font-bold leading-none text-electric">S/52K</span>
-                        <p class="mt-1 text-[12.5px] font-semibold text-[#0f172a]">Inversión asociada</p>
+                        <p class="mt-1 text-[12.5px] font-semibold text-[#101828]">Inversión asociada</p>
                         <p class="mt-0.5 text-[11px] leading-[1.35] text-[#64748b]">Adquisición vinculada a comercios que no alcanzaban activación.</p>
                     </div>
                 </div>
@@ -280,10 +283,10 @@
             <!-- Desafío de negocio -->
             <div class="flex flex-col items-center gap-5 rounded-[16px] border border-[#e9edf2] bg-panel2 px-7 py-5 text-center sm:flex-row sm:items-center sm:text-left">
                 <div class="flex flex-1 items-center gap-3.5">
-                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="target" style="font-size:17px;color:#2563eb"></span></div>
+                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="target" style="font-size:17px;color:#315CFF"></span></div>
                     <div>
                         <span class="block text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Desafío de negocio</span>
-                        <h4 class="mt-0.5 text-[17px] font-semibold text-[#0f172a]">Convertir adquisición en activación.</h4>
+                        <h4 class="mt-0.5 text-[17px] font-semibold text-[#101828]">Convertir adquisición en activación.</h4>
                     </div>
                 </div>
                 <div class="hidden h-10 w-px bg-[#e4e8ee] sm:block"></div>
@@ -292,7 +295,8 @@
         </section>
 
         <!-- ================= ECOSISTEMA DE PRODUCTO ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-14">
+        <section class="nb-host mx-auto w-[90%] max-w-grid py-14">
+            <span class="nbp nbp-bars" style="top:246px;left:2px;width:64px;height:46px" aria-hidden="true"></span>
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-[30%_1fr] lg:items-start">
                 <!-- Intro -->
                 <div>
@@ -300,7 +304,7 @@
                         <span class="h-1.5 w-1.5 rounded-full bg-[#d97706]"></span>
                         <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-[#d97706]">Ecosistema de producto</span>
                     </div>
-                    <h2 class="mb-3 text-[26px] font-bold leading-[1.15] text-[#0f172a] sm:text-[30px]">Del comercio<br /><span class="text-[#d97706]">a la mesa.</span></h2>
+                    <h2 class="mb-3 text-[26px] font-bold leading-[1.15] text-[#101828] sm:text-[30px]">Del comercio<br /><span class="text-[#d97706]">a la mesa.</span></h2>
                     <p class="text-[13.5px] leading-[1.55] text-[#64748b]">Tres experiencias conectadas: activación del comercio, operación diaria y compra del cliente.</p>
                 </div>
 
@@ -312,13 +316,13 @@
                             <span class="text-[15px] font-bold text-[#d97706]">01</span>
                             <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="seller" style="font-size:16px;color:#d97706"></span></span>
                         </div>
-                        <h3 class="mb-1.5 text-[15px] font-bold text-[#0f172a]">Comercio</h3>
+                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Comercio</h3>
                         <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Activa y gestiona tu negocio en pocos pasos.</p>
                         <div class="mb-2.5 border-t border-[#fbbf24]/20"></div>
                         <ul class="space-y-1.5">
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Onboarding</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Configuración</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Publicación</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Onboarding</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Configuración</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Publicación</li>
                         </ul>
                     </div>
 
@@ -328,15 +332,15 @@
                     <div class="flex-1 rounded-[18px] border border-electric/20 bg-electric/5 p-5">
                         <div class="mb-3 flex items-center justify-between">
                             <span class="text-[15px] font-bold text-electric">02</span>
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="dashboard" style="font-size:16px;color:#2563eb"></span></span>
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="dashboard" style="font-size:16px;color:#315CFF"></span></span>
                         </div>
-                        <h3 class="mb-1.5 text-[15px] font-bold text-[#0f172a]">Operación</h3>
+                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Operación</h3>
                         <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Controla y gestiona tu operación en un solo lugar.</p>
                         <div class="mb-2.5 border-t border-electric/15"></div>
                         <ul class="space-y-1.5">
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Pedidos</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Productos</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#2563eb"></span>Gestión</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Pedidos</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Productos</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Gestión</li>
                         </ul>
                     </div>
 
@@ -348,13 +352,13 @@
                             <span class="text-[15px] font-bold text-[#16a34a]">03</span>
                             <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="profile" style="font-size:16px;color:#16a34a"></span></span>
                         </div>
-                        <h3 class="mb-1.5 text-[15px] font-bold text-[#0f172a]">Cliente</h3>
+                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Cliente</h3>
                         <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Descubre, compra y haz seguimiento fácilmente.</p>
                         <div class="mb-2.5 border-t border-[#16a34a]/15"></div>
                         <ul class="space-y-1.5">
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Descubrimiento</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Compra</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#0f172a]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Seguimiento</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Descubrimiento</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Compra</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Seguimiento</li>
                         </ul>
                     </div>
                 </div>
@@ -363,8 +367,8 @@
             <!-- Barra inferior -->
             <div class="mt-5 flex flex-col gap-3 rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] px-6 py-4 sm:flex-row sm:items-center sm:gap-6">
                 <div class="flex flex-shrink-0 items-center gap-3">
-                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="design-systems" style="font-size:15px;color:#2563eb"></span></span>
-                    <div class="flex items-center gap-2 text-[12.5px] font-bold text-[#0f172a]">
+                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="design-systems" style="font-size:15px;color:#315CFF"></span></span>
+                    <div class="flex items-center gap-2 text-[12.5px] font-bold text-[#101828]">
                         <span>Comercio</span><span class="text-[#c3cbd8]">→</span>
                         <span>Operación</span><span class="text-[#c3cbd8]">→</span>
                         <span>Cliente</span>
@@ -376,7 +380,8 @@
         </section>
 
         <!-- ================= SISTEMA DE DISEÑO ================= -->
-        <section class="mx-auto w-[90%] max-w-grid py-10">
+        <section class="nb-host mx-auto w-[90%] max-w-grid py-10">
+            <span class="nbp nbp-ui" style="bottom:4px;left:2px" aria-hidden="true"></span>
             <div class="grid grid-cols-1 gap-6 lg:grid-cols-[34%_1fr] lg:items-start">
                 <!-- Texto + principios -->
                 <div>
@@ -384,22 +389,22 @@
                         <span class="h-1.5 w-1.5 rounded-full bg-electric"></span>
                         <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Sistema de diseño</span>
                     </div>
-                    <h2 class="mb-2 text-[24px] font-bold leading-[1.15] text-[#0f172a] sm:text-[27px]">Sistema de Diseño</h2>
+                    <h2 class="mb-2 text-[24px] font-bold leading-[1.15] text-[#101828] sm:text-[27px]">Sistema de Diseño</h2>
                     <p class="mb-4 text-[13px] leading-[1.5] text-[#64748b]">Una base visual compartida para mantener consistencia entre los distintos puntos del ecosistema y acelerar el desarrollo de nuevas experiencias.</p>
 
                     <!-- Principios en una sola fila -->
                     <div class="flex items-start divide-x divide-[#e9edf2]">
                         <div class="flex min-w-0 flex-1 flex-col items-start gap-1.5 pr-3">
-                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="work" style="font-size:14px;color:#2563eb"></span></span>
-                            <span class="text-[11px] font-semibold leading-[1.25] text-[#0f172a]">Componentes reutilizables</span>
+                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="work" style="font-size:14px;color:#315CFF"></span></span>
+                            <span class="text-[11px] font-semibold leading-[1.25] text-[#101828]">Componentes reutilizables</span>
                         </div>
                         <div class="flex min-w-0 flex-1 flex-col items-start gap-1.5 px-3">
-                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="design-systems" style="font-size:14px;color:#2563eb"></span></span>
-                            <span class="text-[11px] font-semibold leading-[1.25] text-[#0f172a]">Estilos consistentes</span>
+                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="design-systems" style="font-size:14px;color:#315CFF"></span></span>
+                            <span class="text-[11px] font-semibold leading-[1.25] text-[#101828]">Estilos consistentes</span>
                         </div>
                         <div class="flex min-w-0 flex-1 flex-col items-start gap-1.5 pl-3">
-                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="growth" style="font-size:14px;color:#2563eb"></span></span>
-                            <span class="text-[11px] font-semibold leading-[1.25] text-[#0f172a]">Experiencias escalables</span>
+                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="growth" style="font-size:14px;color:#315CFF"></span></span>
+                            <span class="text-[11px] font-semibold leading-[1.25] text-[#101828]">Experiencias escalables</span>
                         </div>
                     </div>
                 </div>
@@ -436,33 +441,33 @@
                         <!-- Fila 1: Paleta + Tipografía -->
                         <div class="grid grid-cols-1 gap-2.5 sm:grid-cols-[1.85fr_1fr]">
                             <div class="rounded-[12px] border border-[#e9edf2] bg-white p-3.5">
-                                <span class="mb-2.5 block text-[10px] font-bold text-[#0f172a]">Paleta de color</span>
+                                <span class="mb-2.5 block text-[10px] font-bold text-[#101828]">Paleta de color</span>
                                 <div class="flex flex-wrap gap-3.5">
                                     <div class="flex flex-col items-center gap-1">
                                         <span class="h-8 w-8 rounded-full bg-[#ff6a00]"></span>
-                                        <span class="text-[9px] font-semibold text-[#0f172a]">Primary</span>
+                                        <span class="text-[9px] font-semibold text-[#101828]">Primary</span>
                                         <span class="text-[7.5px] text-[#94a3b8]">#FF6A00</span>
                                     </div>
                                     <div class="flex flex-col items-center gap-1">
                                         <span class="h-8 w-8 rounded-full bg-[#0f172a]"></span>
-                                        <span class="text-[9px] font-semibold text-[#0f172a]">Navy</span>
+                                        <span class="text-[9px] font-semibold text-[#101828]">Navy</span>
                                         <span class="text-[7.5px] text-[#94a3b8]">#0F172A</span>
                                     </div>
                                     <div class="flex flex-col items-center gap-1">
                                         <span class="h-8 w-8 rounded-full border border-[#e4e8ee] bg-[#e4e8ee]"></span>
-                                        <span class="text-[9px] font-semibold text-[#0f172a]">Gray</span>
+                                        <span class="text-[9px] font-semibold text-[#101828]">Gray</span>
                                         <span class="text-[7.5px] text-[#94a3b8]">#E4E8EE</span>
                                     </div>
                                     <div class="flex flex-col items-center gap-1">
                                         <span class="h-8 w-8 rounded-full border border-[#e4e8ee] bg-white"></span>
-                                        <span class="text-[9px] font-semibold text-[#0f172a]">Background</span>
+                                        <span class="text-[9px] font-semibold text-[#101828]">Background</span>
                                         <span class="text-[7.5px] text-[#94a3b8]">#FFFFFF</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="rounded-[12px] border border-[#e9edf2] bg-white p-3.5">
-                                <span class="mb-2.5 block text-[10px] font-bold text-[#0f172a]">Tipografía</span>
-                                <span class="block text-[22px] font-bold leading-none text-[#0f172a]">Aa</span>
+                                <span class="mb-2.5 block text-[10px] font-bold text-[#101828]">Tipografía</span>
+                                <span class="block text-[22px] font-bold leading-none text-[#101828]">Aa</span>
                                 <span class="mt-1 block text-[10px] font-semibold text-[#ff6a00]">Poppins</span>
                                 <span class="mt-0.5 block text-[8px] leading-[1.35] text-[#94a3b8]">Aa Bb Cc Dd Ee Ff Gg<br />0123456789</span>
                             </div>
@@ -471,15 +476,15 @@
                         <!-- Fila 2: Componentes + Iconografía -->
                         <div class="grid grid-cols-1 gap-2.5 sm:grid-cols-[1.85fr_1fr]">
                             <div class="rounded-[12px] border border-[#e9edf2] bg-white p-3.5">
-                                <span class="mb-2.5 block text-[10px] font-bold text-[#0f172a]">Componentes</span>
+                                <span class="mb-2.5 block text-[10px] font-bold text-[#101828]">Componentes</span>
                                 <div class="flex flex-wrap items-center gap-2">
                                     <span class="rounded-full bg-[#ff6a00] px-3.5 py-1.5 text-[10.5px] font-semibold text-white">Botón primario</span>
-                                    <span class="rounded-full border border-[#e4e8ee] bg-white px-3.5 py-1.5 text-[10.5px] font-semibold text-[#0f172a]">Botón secundario</span>
+                                    <span class="rounded-full border border-[#e4e8ee] bg-white px-3.5 py-1.5 text-[10.5px] font-semibold text-[#101828]">Botón secundario</span>
                                     <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#ff6a00]/10"><span class="ic" data-icon="arrow-up-right" style="font-size:12px;color:#ff6a00"></span></span>
                                 </div>
                             </div>
                             <div class="rounded-[12px] border border-[#e9edf2] bg-white p-3.5">
-                                <span class="mb-2.5 block text-[10px] font-bold text-[#0f172a]">Iconografía</span>
+                                <span class="mb-2.5 block text-[10px] font-bold text-[#101828]">Iconografía</span>
                                 <div class="flex flex-wrap gap-1.5">
                                     <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#f3f5f8]"><span class="ic" data-icon="home" style="font-size:12px;color:#475569"></span></span>
                                     <span class="flex h-7 w-7 items-center justify-center rounded-full bg-[#f3f5f8]"><span class="ic" data-icon="delivery" style="font-size:12px;color:#475569"></span></span>
@@ -510,7 +515,7 @@
             GALERÍA DE IMÁGENES
         </span>
 
-        <h2 class="mb-8 text-[32px] font-bold leading-[1.1] text-[#0f172a] sm:text-[48px]">
+        <h2 class="mb-8 text-[32px] font-bold leading-[1.1] text-[#101828] sm:text-[48px]">
             Del registro a la tienda publicada.
             
         </h2>
@@ -567,7 +572,7 @@
                         duration-300
                         ease-out
                         hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
                     "
                 />
             </button>
@@ -593,7 +598,7 @@
                         duration-300
                         ease-out
                         hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
                     "
                 />
             </button>
@@ -619,7 +624,7 @@
                         duration-300
                         ease-out
                         hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
                     "
                 />
             </button>
@@ -662,7 +667,7 @@
                         duration-300
                         ease-out
                         hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
                     "
                 />
             </button>
@@ -688,7 +693,7 @@
                         duration-300
                         ease-out
                         hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
                     "
                 />
             </button>
@@ -714,7 +719,7 @@
                         duration-300
                         ease-out
                         hover:scale-[1.04]
-                        hover:drop-shadow-[0_16px_24px_rgba(15,23,42,0.14)]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
                     "
                 />
             </button>
@@ -1234,12 +1239,12 @@
     <!-- ================= NAV PROYECTOS ================= -->
     <section class="mx-auto mb-4 w-[90%] max-w-grid border-t border-[#e9edf2] pt-10">
         <div class="flex items-center justify-between gap-4">
-            <a href="../index.html#proyectos" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
+            <a href="../index.html#proyectos" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#101828]">
                 <span class="transition-transform group-hover:-translate-x-1">←</span>
                 <span class="text-[14px]">Todos los proyectos</span>
             </a>
-            <a href="satelock.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#0f172a]">
-                <span class="text-[14px]">Siguiente: <span class="font-semibold text-[#0f172a]">Satelock</span></span>
+            <a href="satelock.html" class="group inline-flex items-center gap-3 text-[#64748b] transition-colors hover:text-[#101828]">
+                <span class="text-[14px]">Siguiente: <span class="font-semibold text-[#101828]">Satelock</span></span>
                 <span class="transition-transform group-hover:translate-x-1">→</span>
             </a>
         </div>
@@ -1251,22 +1256,22 @@
             <div>
                 <div class="mb-5 flex items-center justify-center gap-3 md:justify-start">
                     <span class="flex h-7 w-7 items-center justify-center rounded-[9px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
-                    <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
+                    <span class="text-[18px] font-bold text-[#101828]">Jose Carlos Meza Portfolio</span>
                 </div>
                 <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
                     Diseño de producto orientado a datos: research, UX y decisiones medibles.
                 </p>
             </div>
             <div class="text-center md:text-right">
-                <h3 class="mb-6 text-[18px] font-semibold text-[#0f172a]">¿Trabajamos juntos?</h3>
+                <h3 class="mb-6 text-[18px] font-semibold text-[#101828]">¿Trabajamos juntos?</h3>
                 <div class="flex justify-center gap-4 md:justify-end">
-                    <a href="mailto:mezasalaman@gmail.com" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                    <a href="mailto:mezasalaman@gmail.com" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#2444D6]">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="opacity-90 group-hover:opacity-100"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                    <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#2444D6]">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="#ffffff" class="opacity-90 group-hover:opacity-100"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21H17v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H10z"></path></svg>
                     </a>
-                    <a href="#" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                    <a href="#" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#2444D6]">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="opacity-90 group-hover:opacity-100"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
                     </a>
                 </div>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carlos Meza | Product Designer</title>
     <meta name="description" content="Carlos Meza — Product Designer especializado en experiencia, métricas y funcionalidad. Portafolio de proyectos de diseño de producto." />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%232563eb'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23315CFF'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Carlos Meza | Product Designer" />
     <meta property="og:description" content="Carlos Meza — Product Designer especializado en experiencia, métricas y funcionalidad. Portafolio de proyectos de diseño de producto." />
@@ -15,15 +15,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet" />
 
     <!-- Tailwind via CDN + configuración y estilos compartidos -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="assets/tw-config.js"></script>
     <link rel="stylesheet" href="assets/portfolio.css" />
+    <link rel="stylesheet" href="assets/notebook.css" />
 </head>
 
-<body class="bg-ink font-sans text-[#0f172a] antialiased">
+<body class="nb nb-home bg-ink font-sans text-[#101828] antialiased">
 
     <!-- ================= NAVBAR ================= -->
     <nav class="sticky top-0 z-[9999] w-full bg-ink">
@@ -32,13 +33,13 @@
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center gap-3">
                     <span class="flex h-[34px] w-[34px] items-center justify-center rounded-[10px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
-                    <span class="text-[18px] font-bold text-[#0f172a]">Carlos Meza</span>
+                    <span class="text-[18px] font-bold text-[#101828]">Carlos Meza</span>
                 </a>
 
                 <!-- Enlaces -->
                 <ul class="hidden items-center gap-10 md:flex">
                     <li class="dropdown-trigger relative py-2.5">
-                        <a href="#proyectos" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Proyectos</a>
+                        <a href="#proyectos" class="nav-underline text-[15px] text-[#101828] transition-colors hover:text-primary">Proyectos</a>
                         <div class="dropdown-menu absolute left-1/2 top-full flex min-w-[180px] flex-col items-start gap-4 rounded-xl bg-white p-5 shadow-drop">
                             <a href="pages/food-delivery.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">FoodDelivery</a>
                             <a href="pages/satelock.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">Satelock</a>
@@ -46,7 +47,7 @@
                             <a href="pages/conduzko.html" class="w-full whitespace-nowrap text-[14px] font-medium text-black transition-colors hover:text-primary">ConDuzko</a>
                         </div>
                     </li>
-                    <li><a href="pages/about.html" class="nav-underline text-[15px] text-[#0f172a] transition-colors hover:text-primary">Sobre mí</a></li>
+                    <li><a href="pages/about.html" class="nav-underline text-[15px] text-[#101828] transition-colors hover:text-primary">Sobre mí</a></li>
                 </ul>
                 <button type="button" data-menu-toggle aria-label="Abrir menú" class="flex h-10 w-10 items-center justify-center md:hidden">
                     <span class="relative block h-[2px] w-6 rounded bg-white before:absolute before:-top-2 before:left-0 before:h-[2px] before:w-6 before:rounded before:bg-white before:content-[''] after:absolute after:top-2 after:left-0 after:h-[2px] after:w-6 after:rounded after:bg-white after:content-['']"></span>
@@ -58,20 +59,26 @@
                 <a href="pages/satelock.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Satelock</a>
                 <a href="pages/SellerCenter.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">Seller Center</a>
                 <a href="pages/conduzko.html" class="block rounded-lg px-2 py-2.5 text-[15px] text-[#334155] hover:bg-[#f3f5f8]">ConDuzko</a>
-                <a href="pages/about.html" class="mt-1 block rounded-lg px-2 py-2.5 text-[15px] font-medium text-[#0f172a] hover:bg-[#f3f5f8]">Sobre mí</a>
+                <a href="pages/about.html" class="mt-1 block rounded-lg px-2 py-2.5 text-[15px] font-medium text-[#101828] hover:bg-[#f3f5f8]">Sobre mí</a>
             </div>
         </div>
     </nav>
 
     <main>
         <!-- ================= HERO ================= -->
-        <section class="mx-auto flex max-w-shell flex-col items-center gap-8 px-5 pb-12 pt-4 md:flex-row md:justify-between md:gap-[60px] md:pb-20 md:pt-10 lg:pt-20">
+        <section class="relative mx-auto flex max-w-shell flex-col items-center gap-8 px-5 pb-12 pt-4 md:flex-row md:justify-between md:gap-[60px] md:pb-20 md:pt-10 lg:pt-20">
+        <!-- Notas de margen del cuaderno (etiquetas fuera del flujo vertical) -->
+        <div class="nb-notes">
+            <span class="nb-sticker nb-sticker--sun nb-cover">The Product Design Notebook</span>
+            <svg class="nb-pen nb-pen--flow" viewBox="0 0 150 40" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="20" r="8" stroke="#101828" stroke-width="1.8" fill="#FFD34E"/><path d="M21 20.5 Q34 19 47 20" stroke="#101828" stroke-width="1.8"/><path d="M42 16 L48 20 L42 24" stroke="#101828" stroke-width="1.8"/><path d="M51 11 L77 10.5 Q79 10.5 79 13 L78.5 27 Q78.5 29.5 76 29.5 L52 30 Q50 30 50.5 27.5 Z" stroke="#315CFF" stroke-width="1.8"/><path d="M80 20 Q92 21.5 103 20" stroke="#101828" stroke-width="1.8"/><path d="M98 16 L104 20 L98 24" stroke="#101828" stroke-width="1.8"/><path d="M116 7.5 L128.5 20 L116 32.5 L103.5 20 Z" stroke="#101828" stroke-width="1.8"/><path d="M62 18 L68 18 M62 23 L66 23" stroke="#315CFF" stroke-width="1.5"/></svg>
+            <div class="nb-avail inline-flex items-center rounded-full border border-primary/20 bg-primary/[0.08] px-4 py-2">
+                <span class="pulse-dot mr-2.5 h-1.5 w-1.5 rounded-full bg-primary"></span>
+                <span class="text-[11px] font-semibold text-primary">DISPONIBLE PARA NUEVOS RETOS</span>
+            </div>
+        </div>
+
             <!-- Izquierda (texto) -->
             <div class="flex-1 text-center md:text-left">
-                <div class="mb-[30px] inline-flex items-center rounded-full border border-primary/20 bg-primary/[0.08] px-4 py-2">
-                    <span class="pulse-dot mr-2.5 h-1.5 w-1.5 rounded-full bg-primary"></span>
-                    <span class="text-[11px] font-semibold text-primary">DISPONIBLE PARA NUEVOS RETOS</span>
-                </div>
 
                 <h1 class="mb-6 text-[42px] leading-[1.1] font-semibold sm:text-[52px] md:text-[64px]">
                     Hola, soy <br /><span class="name-hero text-primary">Carlos Meza</span>
@@ -79,7 +86,7 @@
 
                 <!-- Descripción + CTA: visible solo en desktop dentro del bloque izquierdo -->
                 <p class="mb-10 hidden text-[18px] leading-[1.6] text-dim md:block">
-                    <strong class="font-semibold text-[#0f172a]">Product Experience Manager.</strong> Diseño y dirijo
+                    <strong class="font-semibold text-[#101828]">Product Experience Manager.</strong> Diseño y dirijo
                     experiencias de producto conectando research, estrategia y datos. Transformo necesidades de usuario
                     y objetivos de negocio en decisiones, experiencias y métricas para construir y optimizar productos
                     digitales.
@@ -108,13 +115,20 @@
                     <span class="hi-tag" style="top:40%;right:-5%;animation-delay:.4s"><span class="hi-dot"></span>Claude Design</span>
                     <span class="hi-tag" style="bottom:16%;left:-5%;animation-delay:1.1s"><span class="hi-dot"></span>E-commerce</span>
                     <span class="hi-tag" style="bottom:3%;right:6%;animation-delay:.6s"><span class="hi-dot"></span>Research</span>
+                    <svg class="nb-pen nb-pen--wire" viewBox="0 0 88 68" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7 Q4 3.5 8 3.5 L79 4.5 Q83 4.5 83 8 L82 59 Q82 63 78 63 L8 62.5 Q4 62.5 4 58.5 Z" stroke="#315CFF" stroke-width="1.8"/><path d="M4.5 17 L82.5 17.5" stroke="#315CFF" stroke-width="1.6"/><circle cx="11" cy="10.5" r="1.4" stroke="#101828" stroke-width="1.3"/><circle cx="17" cy="10.5" r="1.4" stroke="#101828" stroke-width="1.3"/><circle cx="23" cy="10.5" r="1.4" stroke="#101828" stroke-width="1.3"/><path d="M11 23.5 L39 23.5 L39 46 L11 46.5 Z" stroke="#101828" stroke-width="1.5"/><path d="M11.5 24 L38.5 45.5 M38.5 24.5 L11.5 45.5" stroke="#101828" stroke-width="1.2"/><path d="M46 26 L74 26 M46 33 L69 33.5 M46 40 L60 40" stroke="#315CFF" stroke-width="1.6"/><path d="M46 49 L70 49 L70 57 L46.5 57.5 Z" stroke="#101828" stroke-width="1.5" fill="#FFD34E"/></svg>
+                    <svg class="nb-pen nb-pen--chart" viewBox="0 0 100 66" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4 L7.5 57 L94 56.5" stroke="#101828" stroke-width="1.7"/><path d="M11 48 L27 37 L41 43.5 L59 25 L75 29.5 L90 11" stroke="#315CFF" stroke-width="2.1"/><path d="M80.8 14.9 L90 11 L88.1 20.8" stroke="#315CFF" stroke-width="2.1"/><circle cx="27" cy="37" r="2.3" fill="#ffffff" stroke="#315CFF" stroke-width="1.6"/><circle cx="41" cy="43.5" r="2.3" fill="#ffffff" stroke="#315CFF" stroke-width="1.6"/><circle cx="59" cy="25" r="2.3" fill="#ffffff" stroke="#315CFF" stroke-width="1.6"/><circle cx="75" cy="29.5" r="2.5" fill="#FFD34E" stroke="#101828" stroke-width="1.5"/><path d="M14 60.5 L14 64 M34 60.5 L34 64 M54 60.5 L54 64 M74 60.5 L74 64" stroke="#101828" stroke-width="1.3"/></svg>
+                    <svg class="nb-pen nb-pen--cursor" viewBox="0 0 64 66" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 9 L16.5 47 L25.5 38.5 L32 54 L38.5 51 L32 36 L44.5 36 Z" fill="#ffffff" stroke="#101828" stroke-width="1.9"/><path d="M9 5 L4.5 1.5 M16 2.5 L16 -1.5 M8 12.5 L3 13.5" stroke="#315CFF" stroke-width="1.8"/><circle cx="16" cy="9" r="10.5" stroke="#FFD34E" stroke-width="1.7" stroke-dasharray="3 3.5"/></svg>
+                    <svg class="nb-doodle nb-star" style="right:-30px;top:-40px;width:46px;height:46px" viewBox="0 0 46 46" aria-hidden="true"><path d="M23 3 L28 18 L43 23 L28 28 L23 43 L18 28 L3 23 L18 18 Z" fill="#FFD34E" stroke="#171717" stroke-width="2.5" stroke-linejoin="round"/></svg>
+                    <svg class="nb-doodle nb-doodle--lg nb-arrow hidden md:block" style="left:-92px;bottom:-4%;width:66px;height:46px" viewBox="0 0 98 66" aria-hidden="true"><path d="M94 58 C 74 8, 36 4, 10 30" fill="none" stroke="#315CFF" stroke-width="3.2" stroke-linecap="round"/><path d="M21.5 26.5 L10 30 L13.5 18.5" fill="none" stroke="#315CFF" stroke-width="3.2" stroke-linecap="round"/></svg>
+                    
+                    
                 </div>
             </div>
 
             <!-- Bloque solo mobile: descripción + CTA al final -->
             <div class="flex w-full flex-col items-center gap-4 md:hidden">
                 <p class="max-w-[320px] text-center text-[16px] leading-[1.5] text-[#475569]">
-                    <strong class="font-semibold text-[#0f172a]">Product Experience Manager.</strong> Diseño y dirijo
+                    <strong class="font-semibold text-[#101828]">Product Experience Manager.</strong> Diseño y dirijo
                     experiencias de producto conectando research, estrategia y datos. Transformo necesidades de usuario
                     y objetivos de negocio en decisiones, experiencias y métricas para construir y optimizar productos
                     digitales.
@@ -132,8 +146,10 @@
         </section>
 
         <!-- ================= MÉTRICAS ================= -->
-        <section class="mx-auto max-w-shell px-5 pb-4 pt-2">
-            <div class="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline md:grid-cols-4">
+        <section class="nb-host mx-auto max-w-shell px-5 pb-4 pt-2">
+            <span class="nbp nbp-ui" style="top:-58px;left:22px" aria-hidden="true"></span>
+            <span class="nbp nbp-symbols" style="top:-52px;left:52%" aria-hidden="true"></span>
+            <div class="nb-metrics grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline md:grid-cols-4">
                 <div class="bg-card px-6 py-8 text-center">
                     <span class="block text-[34px] font-bold leading-none text-primary sm:text-[40px]" data-count="4" data-suffix="+">4+</span>
                     <span class="mt-2.5 block text-[12px] leading-snug text-dim">Años de experiencia en producto</span>
@@ -155,10 +171,11 @@
         </section>
 
         <!-- ================= MI ENFOQUE ================= -->
+        <div class="mx-auto -mb-8 max-w-shell px-5 pt-8"><div class="nb-tabrow"><span class="nb-tab">01</span><span class="nbp nbp-nodes" style="right:110px;bottom:6px;width:62px;height:40px" aria-hidden="true"></span><span class="nb-pn">p. 02</span></div></div>
         <section class="mx-auto flex max-w-shell flex-col items-start gap-10 px-5 py-16 lg:flex-row lg:items-center lg:gap-[60px] lg:py-[100px]">
             <div class="flex-1">
                 <span class="mb-4 block text-[11px] font-bold uppercase tracking-[0.15em] text-primary">MI ENFOQUE</span>
-                <h2 class="mb-6 text-[28px] font-semibold leading-tight text-[#0f172a] sm:text-[32px]">
+                <h2 class="mb-6 text-[28px] font-semibold leading-tight text-[#101828] sm:text-[32px]">
                     Experiencias que conectan usuarios, negocio y tecnología
                 </h2>
                 <p class="mb-4 text-[14px] leading-[1.7] text-dim">
@@ -171,14 +188,14 @@
             </div>
 
             <div class="flex w-full flex-col gap-5 sm:flex-row lg:flex-[1.45]">
-                <article class="flex flex-1 flex-col rounded-[20px] border border-hairline bg-card p-6 sm:p-7">
+                <article class="nb-card flex flex-1 flex-col rounded-[20px] border border-hairline bg-card p-6 sm:p-7">
                     <div class="mb-5 flex items-start justify-between">
                         <span class="flex h-[46px] w-[46px] items-center justify-center rounded-[14px] bg-[#eff4ff] text-primary">
                             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.5" fill="currentColor"></circle></svg>
                         </span>
                         <span class="text-[13px] font-semibold tracking-[0.08em] text-[#94a3b8]">01</span>
                     </div>
-                    <h3 class="mb-2 text-[18px] font-semibold leading-snug text-[#0f172a]">Estrategia de producto</h3>
+                    <h3 class="mb-2 text-[18px] font-semibold leading-snug text-[#101828]">Estrategia de producto</h3>
                     <p class="mb-5 text-[14px] leading-[1.65] text-dim">
                         Defino problemas, oportunidades y prioridades conectando research, comportamiento, negocio y KPIs.
                     </p>
@@ -189,14 +206,14 @@
                         <li class="rounded-full bg-[#eff4ff] px-3 py-1 text-[12px] font-medium leading-[1.4] text-primary">KPIs</li>
                     </ul>
                 </article>
-                <article class="flex flex-1 flex-col rounded-[20px] border border-hairline bg-card p-6 sm:p-7">
+                <article class="nb-card nb-card--pink flex flex-1 flex-col rounded-[20px] border border-hairline bg-card p-6 sm:p-7">
                     <div class="mb-5 flex items-start justify-between">
                         <span class="flex h-[46px] w-[46px] items-center justify-center rounded-[14px] bg-[#eff4ff] text-primary">
                             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5-9-5z"></path><path d="M3 13l9 5 9-5"></path><path d="M3 18l9 5 9-5" opacity="0"></path><path d="M3 13.5 12 18.5l9-5"></path></svg>
                         </span>
                         <span class="text-[13px] font-semibold tracking-[0.08em] text-[#94a3b8]">02</span>
                     </div>
-                    <h3 class="mb-2 text-[18px] font-semibold leading-snug text-[#0f172a]">Dirección de experiencia</h3>
+                    <h3 class="mb-2 text-[18px] font-semibold leading-snug text-[#101828]">Dirección de experiencia</h3>
                     <p class="mb-5 text-[14px] leading-[1.65] text-dim">
                         Diseño y evoluciono journeys y experiencias mediante validación, iteración y medición continua.
                     </p>
@@ -211,10 +228,12 @@
         </section>
 
         <!-- ================= PROYECTOS ================= -->
-        <section id="proyectos" class="mx-auto max-w-shell px-5 py-16">
+        <section id="proyectos" class="nb-host mx-auto max-w-shell px-5 py-16">
+            <span class="nbp nbp-bars" style="top:124px;right:26px" aria-hidden="true"></span>
+            <div class="nb-tabrow"><span class="nb-tab nb-tab--sun">02</span><span class="nbp nbp-cursor" style="right:112px;bottom:8px;width:34px;height:36px" aria-hidden="true"></span><span class="nb-pn">p. 03</span></div>
             <div class="mb-[50px]">
                 <h2 class="mb-2.5 text-[28px] font-semibold sm:text-[32px]">Proyectos Destacados</h2>
-                <p class="text-[14px] text-dim">Tres casos de extremo a extremo: del problema y el research a la solución y sus métricas.</p>
+                <p class="text-[14px] text-dim">Cuatro casos de extremo a extremo: del problema y el research a la solución y sus métricas.</p>
             </div>
 
             <div class="grid grid-cols-1 gap-6 md:grid-cols-2 reveal-img">
@@ -265,7 +284,9 @@
         </section>
 
         <!-- ================= EXPERIENCIA ================= -->
-        <section class="mx-auto max-w-shell px-5 py-16">
+        <section class="nb-host mx-auto max-w-shell px-5 py-16">
+            <span class="nbp nbp-wire" style="top:122px;right:26px;width:70px;height:54px" aria-hidden="true"></span>
+            <div class="nb-tabrow"><span class="nb-tab nb-tab--pink">03</span><span class="nbp nbp-shapes" style="right:112px;bottom:6px;width:60px;height:28px" aria-hidden="true"></span><span class="nb-pn">p. 04</span></div>
             <div class="mb-[60px]">
                 <h2 class="mb-2.5 text-[28px] font-semibold sm:text-[32px]">Experiencia Profesional</h2>
                 <p class="text-[14px] text-dim">Trayectoria dirigiendo y diseñando productos digitales junto a equipos de negocio, ingeniería y QA.</p>
@@ -273,73 +294,73 @@
 
             <div class="relative mx-auto max-w-[1050px] pl-[35px] md:pl-[50px]">
                 <!-- Línea vertical -->
-                <span class="absolute left-[7px] top-2.5 h-[calc(100%-20px)] w-0.5 bg-hairline"></span>
+                <span class="nb-rail absolute left-[7px] top-2.5 h-[calc(100%-20px)] w-0.5 bg-hairline"></span>
 
                 <!-- Job 1 -->
-                <div class="relative mb-[60px] md:mb-[100px]">
-                    <span class="absolute left-[-43px] top-1.5 h-4 w-4 rounded-full bg-primary shadow-glow md:left-[-50px]"></span>
+                <div class="nb-job relative mb-[60px] md:mb-[100px]">
+                    <span class="nb-pin absolute left-[-43px] top-1.5 h-4 w-4 rounded-full bg-primary shadow-glow md:left-[-50px]"></span>
                     <div class="flex flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
-                        <h3 class="text-[20px] font-semibold text-[#0f172a]">Data-Driven Product Designer</h3>
+                        <h3 class="text-[20px] font-semibold text-[#101828]">Data-Driven Product Designer</h3>
                         <span class="text-[16px] font-semibold text-primary">Grupo HNG · Lima - Perú</span>
                     </div>
                     <span class="my-2 block text-[14px] text-dim md:mb-5">Diciembre 2025 — Julio 2026</span>
                     <ul class="list-disc space-y-4 pl-5 marker:text-dim">
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Lideré optimizaciones de producto para soluciones <strong class="font-medium text-[#0f172a]">SaaS y ecommerce</strong>, conectando necesidades de usuario, objetivos de negocio y analítica para priorizar oportunidades de mejora.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Analicé funnels, comportamiento y fricción con <strong class="font-medium text-[#0f172a]">GA4, Mixpanel y Clarity</strong>, transformando insights en hipótesis y decisiones de producto orientadas a conversión y eficiencia.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Diseñé y optimicé journeys end-to-end mediante research, experimentación y prototipado, reduciendo fricciones en flujos clave hasta un <strong class="font-medium text-[#0f172a]">35%</strong>.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Incorporé IA en procesos de discovery, diseño y producción con <strong class="font-medium text-[#0f172a]">Stitch y Claude Design</strong>, acelerando la validación y entrega de soluciones funcionales.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Colaboré con Producto e Ingeniería para evaluar impacto, viabilidad y alcance de iniciativas, reduciendo el handoff hasta un <strong class="font-medium text-[#0f172a]">40%</strong> mediante entregables listos para desarrollo.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Lideré optimizaciones de producto para soluciones <strong class="font-medium text-[#101828]">SaaS y ecommerce</strong>, conectando necesidades de usuario, objetivos de negocio y analítica para priorizar oportunidades de mejora.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Analicé funnels, comportamiento y fricción con <strong class="font-medium text-[#101828]">GA4, Mixpanel y Clarity</strong>, transformando insights en hipótesis y decisiones de producto orientadas a conversión y eficiencia.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Diseñé y optimicé journeys end-to-end mediante research, experimentación y prototipado, reduciendo fricciones en flujos clave hasta un <strong class="font-medium text-[#101828]">35%</strong>.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Incorporé IA en procesos de discovery, diseño y producción con <strong class="font-medium text-[#101828]">Stitch y Claude Design</strong>, acelerando la validación y entrega de soluciones funcionales.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Colaboré con Producto e Ingeniería para evaluar impacto, viabilidad y alcance de iniciativas, reduciendo el handoff hasta un <strong class="font-medium text-[#101828]">40%</strong> mediante entregables listos para desarrollo.</li>
                     </ul>
                 </div>
 
                 <!-- Job -->
-                <div class="relative mb-[60px] md:mb-[100px]">
-                    <span class="absolute left-[-43px] top-1.5 h-4 w-4 rounded-full bg-primary shadow-glow md:left-[-50px]"></span>
+                <div class="nb-job relative mb-[60px] md:mb-[100px]">
+                    <span class="nb-pin absolute left-[-43px] top-1.5 h-4 w-4 rounded-full bg-primary shadow-glow md:left-[-50px]"></span>
                     <div class="flex flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
-                        <h3 class="text-[20px] font-semibold text-[#0f172a]">UX/UI Designer</h3>
+                        <h3 class="text-[20px] font-semibold text-[#101828]">UX/UI Designer</h3>
                         <span class="text-[16px] font-semibold text-primary">Geosatelital · Lima - Perú</span>
                     </div>
                     <span class="my-2 block text-[14px] text-dim md:mb-5">Junio 2024 — Octubre 2025</span>
                     <ul class="list-disc space-y-4 pl-5 marker:text-dim">
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Lideré iniciativas de optimización para productos de <strong class="font-medium text-[#0f172a]">geolocalización, monitoreo</strong> y plataformas digitales, conectando problemas operativos con oportunidades de producto.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Lideré iniciativas de optimización para productos de <strong class="font-medium text-[#101828]">geolocalización, monitoreo</strong> y plataformas digitales, conectando problemas operativos con oportunidades de producto.</li>
                         <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Realicé research, observación de usuarios y análisis de comportamiento para detectar fricciones, necesidades y oportunidades de eficiencia.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Estructuré <strong class="font-medium text-[#0f172a]">journeys, funnels</strong> y flujos operativos alineados a objetivos de negocio, reduciendo fricciones críticas hasta un <strong class="font-medium text-[#0f172a]">35%</strong>.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Definí y validé hipótesis mediante pruebas de usabilidad, experimentación y analítica con <strong class="font-medium text-[#0f172a]">Google Analytics y Hotjar</strong>, respaldando decisiones con evidencia.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Estructuré <strong class="font-medium text-[#101828]">journeys, funnels</strong> y flujos operativos alineados a objetivos de negocio, reduciendo fricciones críticas hasta un <strong class="font-medium text-[#101828]">35%</strong>.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Definí y validé hipótesis mediante pruebas de usabilidad, experimentación y analítica con <strong class="font-medium text-[#101828]">Google Analytics y Hotjar</strong>, respaldando decisiones con evidencia.</li>
                         <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Colaboré con Producto e Ingeniería en la priorización e implementación de mejoras, equilibrando experiencia de usuario, impacto operativo y viabilidad técnica.</li>
                     </ul>
                 </div>
 
                 <!-- Job -->
-                <div class="relative mb-[60px] md:mb-[100px]">
-                    <span class="absolute left-[-43px] top-1.5 h-4 w-4 rounded-full bg-primary shadow-glow md:left-[-50px]"></span>
+                <div class="nb-job relative mb-[60px] md:mb-[100px]">
+                    <span class="nb-pin absolute left-[-43px] top-1.5 h-4 w-4 rounded-full bg-primary shadow-glow md:left-[-50px]"></span>
                     <div class="flex flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
-                        <h3 class="text-[20px] font-semibold text-[#0f172a]">UX/UI Designer</h3>
+                        <h3 class="text-[20px] font-semibold text-[#101828]">UX/UI Designer</h3>
                         <span class="text-[16px] font-semibold text-primary">KusKana · Remoto</span>
                     </div>
                     <span class="my-2 block text-[14px] text-dim md:mb-5">Enero 2025 — Febrero 2025</span>
                     <ul class="list-disc space-y-4 pl-5 marker:text-dim">
                         <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Participé en discovery y definición de oportunidades para productos web y mobile, transformando necesidades de usuario y negocio en decisiones concretas de producto.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Analicé journeys y <strong class="font-medium text-[#0f172a]">arquitectura de información</strong> para identificar fricciones y simplificar recorridos críticos, mejorando la eficiencia de navegación un <strong class="font-medium text-[#0f172a]">32%</strong>.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Analicé journeys y <strong class="font-medium text-[#101828]">arquitectura de información</strong> para identificar fricciones y simplificar recorridos críticos, mejorando la eficiencia de navegación un <strong class="font-medium text-[#101828]">32%</strong>.</li>
                         <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Convertí insights de entrevistas, análisis heurístico y comportamiento en hipótesis y propuestas priorizadas de mejora.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Diseñé y validé soluciones mediante prototipos y pruebas de usabilidad, reduciendo la complejidad de los principales flujos un <strong class="font-medium text-[#0f172a]">30%</strong>.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Coordiné decisiones con Producto y Desarrollo bajo <strong class="font-medium text-[#0f172a]">Agile/Scrum</strong>, reduciendo retrabajos entre diseño e implementación un <strong class="font-medium text-[#0f172a]">35%</strong>.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Diseñé y validé soluciones mediante prototipos y pruebas de usabilidad, reduciendo la complejidad de los principales flujos un <strong class="font-medium text-[#101828]">30%</strong>.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Coordiné decisiones con Producto y Desarrollo bajo <strong class="font-medium text-[#101828]">Agile/Scrum</strong>, reduciendo retrabajos entre diseño e implementación un <strong class="font-medium text-[#101828]">35%</strong>.</li>
                     </ul>
                 </div>
 
                 <!-- Job -->
-                <div class="relative mb-0">
-                    <span class="absolute left-[-43px] top-1.5 h-4 w-4 rounded-full bg-primary shadow-glow md:left-[-50px]"></span>
+                <div class="nb-job relative mb-0">
+                    <span class="nb-pin absolute left-[-43px] top-1.5 h-4 w-4 rounded-full bg-primary shadow-glow md:left-[-50px]"></span>
                     <div class="flex flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
-                        <h3 class="text-[20px] font-semibold text-[#0f172a]">UX/UI Designer</h3>
+                        <h3 class="text-[20px] font-semibold text-[#101828]">UX/UI Designer</h3>
                         <span class="text-[16px] font-semibold text-primary">Level Tour · Remoto</span>
                     </div>
                     <span class="my-2 block text-[14px] text-dim md:mb-5">Junio 2023 — Marzo 2024</span>
                     <ul class="list-disc space-y-4 pl-5 marker:text-dim">
                         <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Analicé comportamiento de usuarios y journeys móviles para identificar fricciones, bloqueos y oportunidades de mejora en tareas críticas.</li>
                         <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Transformé hallazgos de research y métricas de uso en mejoras de navegación, arquitectura y flujos de producto.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Rediseñé recorridos críticos para simplificar la experiencia y aumentar la eficiencia de uso un <strong class="font-medium text-[#0f172a]">30%</strong>.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Rediseñé recorridos críticos para simplificar la experiencia y aumentar la eficiencia de uso un <strong class="font-medium text-[#101828]">30%</strong>.</li>
                         <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Validé hipótesis mediante pruebas moderadas, feedback de usuarios y experimentación iterativa antes de avanzar hacia implementación.</li>
-                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Colaboré con Producto y Desarrollo para convertir requerimientos de negocio en soluciones escalables, reduciendo retrabajos un <strong class="font-medium text-[#0f172a]">35%</strong>.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Colaboré con Producto y Desarrollo para convertir requerimientos de negocio en soluciones escalables, reduciendo retrabajos un <strong class="font-medium text-[#101828]">35%</strong>.</li>
                     </ul>
                 </div>
             </div>
@@ -348,11 +369,12 @@
 
     <!-- ================= FOOTER ================= -->
     <footer id="sobre-mi" class="w-full border-t border-[#e9edf2] bg-card py-20">
+        <span class="nbp nbp-arrow" style="top:42%;left:47%" aria-hidden="true"></span>
         <div class="mx-auto flex w-[90%] max-w-[1050px] flex-col items-center justify-between gap-10 text-center md:flex-row md:items-start md:text-left">
             <div>
                 <div class="mb-5 flex items-center justify-center gap-3 md:justify-start">
                     <span class="flex h-7 w-7 items-center justify-center rounded-[9px] bg-primary text-[#ffffff]"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"></path><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"></path></svg></span>
-                    <span class="text-[18px] font-bold text-[#0f172a]">Jose Carlos Meza Portfolio</span>
+                    <span class="text-[18px] font-bold text-[#101828]">Jose Carlos Meza Portfolio</span>
                 </div>
                 <p class="max-w-full text-[14px] leading-[1.6] text-[#64748b] md:max-w-[400px]">
                     Construyendo el futuro de la logística segura a través de diseño estratégico y tecnología de vanguardia.
@@ -360,15 +382,15 @@
             </div>
 
             <div class="text-center md:text-right">
-                <h3 class="mb-6 text-[18px] font-semibold text-[#0f172a]">¿Trabajamos juntos?</h3>
+                <h3 class="mb-6 text-[18px] font-semibold text-[#101828]">¿Trabajamos juntos?</h3>
                 <div class="flex justify-center gap-4 md:justify-end">
-                    <a href="mailto:mezasalaman@gmail.com" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                    <a href="mailto:mezasalaman@gmail.com" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#2444D6]">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="opacity-90 group-hover:opacity-100"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                    <a href="https://www.linkedin.com/in/jose-carlos-meza-27437b248/" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#2444D6]">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="#ffffff" class="opacity-90 group-hover:opacity-100"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21H17v-5.5c0-1.3-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H10z"></path></svg>
                     </a>
-                    <a href="#" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#1d4ed8]">
+                    <a href="#" class="group flex h-[45px] w-[45px] items-center justify-center rounded-full bg-primary transition-all duration-300 hover:-translate-y-1 hover:bg-[#2444D6]">
                         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="opacity-90 group-hover:opacity-100"><circle cx="12" cy="8" r="4"></circle><path d="M4 21a8 8 0 0 1 16 0"></path></svg>
                     </a>
                 </div>

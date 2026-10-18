@@ -7,10 +7,10 @@ tailwind.config = {
     theme: {
         extend: {
             colors: {
-                primary: "#2563eb",   /* azul CTA principal */
-                royal: "#2563eb",     /* azul CTA / acentos */
-                electric: "#2563eb",  /* azul métricas / acentos */
-                accent: "#2563eb",    /* CTA (antes naranja) -> azul */
+                primary: "#315CFF",   /* azul CTA principal */
+                royal: "#315CFF",     /* azul CTA / acentos */
+                electric: "#315CFF",  /* azul métricas / acentos */
+                accent: "#315CFF",    /* CTA (antes naranja) -> azul */
                 ink: "#ffffff",        /* fondo base (blanco) */
                 card: "#f6f7f9",       /* superficie de cards */
                 panel: "#eef1f5",      /* paneles */
@@ -19,6 +19,8 @@ tailwind.config = {
                 hairline: "#e4e8ee",   /* bordes / líneas */
                 err: "#dc2626",        /* rojo problema */
                 ok: "#16a34a",         /* verde solución */
+                sun: "#FFD34E",        /* cuaderno: amarillo */
+                navy: "#101828",       /* cuaderno: azul navy */
             },
             fontFamily: {
                 sans: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
@@ -28,9 +30,9 @@ tailwind.config = {
                 grid: "1050px",
             },
             boxShadow: {
-                glow: "0 0 0 4px rgba(37,99,235,0.15)",
-                drop: "0 12px 30px rgba(15,23,42,0.10)",
-                showcase: "0 30px 70px rgba(15,23,42,0.12)",
+                glow: "0 0 0 4px rgba(49,92,255,0.15)",
+                drop: "0 12px 30px rgba(16,24,40,0.10)",
+                showcase: "0 30px 70px rgba(16,24,40,0.12)",
             },
         },
     },
