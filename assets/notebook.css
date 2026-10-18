@@ -19,10 +19,15 @@
     --nb-rule: rgba(49, 92, 255, 0.07);
     --nb-accent: #315CFF;
 
+    /* sistema de bordes: finos y delicados */
+    --border-thin: 1px;        /* separadores, líneas, cintas */
+    --border-default: 1.5px;   /* tarjetas, botones, etiquetas, stickers, marcos */
+    --border-emphasis: 2px;    /* reservado a piezas con protagonismo real */
+
     /* sombras suaves */
-    --nb-sh-sm: 2px 2px 0 rgba(23, 23, 23, 0.5);
-    --nb-sh: 3px 3px 0 rgba(23, 23, 23, 0.55);
-    --nb-sh-hover: 4px 4px 0 rgba(23, 23, 23, 0.55);
+    --nb-sh-sm: 2px 2px 0 rgba(23, 23, 23, 0.4);
+    --nb-sh: 3px 3px 0 rgba(23, 23, 23, 0.45);
+    --nb-sh-hover: 4px 4px 0 rgba(23, 23, 23, 0.45);
 }
 /* Diferenciación por proyecto: solo con los dos acentos */
 body.nb-food { --nb-accent: #315CFF; }
@@ -59,7 +64,7 @@ body.nb a:focus-visible, body.nb button:focus-visible { outline: 3px solid var(-
     --bg: #ffffff; --r: -2deg;
     display: inline-flex; align-items: center; gap: 8px;
     padding: 6px 12px;
-    border: 2px solid var(--nb-ink);
+    border: var(--border-default) solid var(--nb-ink);
     border-radius: 8px;
     background: var(--bg);
     color: var(--nb-ink);
@@ -74,15 +79,15 @@ body.nb a:focus-visible, body.nb button:focus-visible { outline: 3px solid var(-
 .nb-sticker--blue { --bg: var(--nb-blue); color: #ffffff; }
 
 /* Separador con pestaña numerada + número de página */
-.nb-tabrow { position: relative; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin: 0 0 30px; border-bottom: 2px solid var(--nb-ink); }
+.nb-tabrow { position: relative; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin: 0 0 30px; border-bottom: var(--border-thin) solid var(--nb-ink); }
 .nb-tab {
     --bg: var(--nb-blue);
     display: inline-flex; align-items: center; justify-content: center;
     min-width: 52px; height: 30px; padding: 0 14px;
-    border: 2px solid var(--nb-ink); border-bottom: 0; border-radius: 10px 10px 0 0;
+    border: var(--border-default) solid var(--nb-ink); border-bottom: 0; border-radius: 10px 10px 0 0;
     background: var(--bg); color: #ffffff;
     font-size: 13px; font-weight: 800; letter-spacing: .06em;
-    margin-bottom: -2px;
+    margin-bottom: -1px;
     transition: translate .25s cubic-bezier(.2,.7,.2,1);
 }
 .nb-tab--sun { --bg: var(--nb-sun); color: var(--nb-ink); }
@@ -91,7 +96,7 @@ body.nb a:focus-visible, body.nb button:focus-visible { outline: 3px solid var(-
 .nb-pn { font-family: "Caveat", cursive; font-weight: 700; font-size: 20px; line-height: 1; color: var(--nb-ink); padding-bottom: 4px; }
 
 /* Cinta adhesiva (washi) */
-.nb-tape { position: absolute; z-index: 6; width: 92px; height: 26px; background: rgba(255, 211, 78, 0.82); border-left: 2px dashed rgba(23,23,23,.18); border-right: 2px dashed rgba(23,23,23,.18); pointer-events: none; }
+.nb-tape { position: absolute; z-index: 6; width: 92px; height: 26px; background: rgba(255, 211, 78, 0.82); border-left: var(--border-thin) dashed rgba(23,23,23,.18); border-right: var(--border-thin) dashed rgba(23,23,23,.18); pointer-events: none; }
 .nb-tape--pink, .nb-tape--mint { background: rgba(49, 92, 255, 0.55); }
 
 /* Garabatos (SVG decorativos) */
@@ -101,8 +106,8 @@ body.nb a:focus-visible, body.nb button:focus-visible { outline: 3px solid var(-
 .nb-cover { --r: -2deg; margin-bottom: 0; }
 
 /* ---------- Navegación ---------- */
-body.nb nav [class*="rounded-[10px]"].bg-primary { border: 2px solid var(--nb-ink); box-shadow: var(--nb-sh-sm); }
-body.nb .dropdown-menu { border: 2px solid var(--nb-ink); border-radius: 12px; box-shadow: var(--nb-sh-hover); }
+body.nb nav [class*="rounded-[10px]"].bg-primary { border: var(--border-default) solid var(--nb-ink); box-shadow: var(--nb-sh-sm); }
+body.nb .dropdown-menu { border: var(--border-default) solid var(--nb-ink); border-radius: 12px; box-shadow: var(--nb-sh-hover); }
 body.nb .nav-underline::after { height: 3px; background: var(--nb-sun); }
 
 /* ---------- Botones / CTAs ----------
@@ -113,7 +118,7 @@ body.nb a.bg-primary[class*="rounded-xl"],
 body.nb a.border-primary[class*="rounded-xl"],
 body.nb a.bg-primary[class*="rounded-full"][class*="px-9"],
 body.nb .cta-explore {
-    border: 2px solid var(--nb-navy);
+    border: var(--border-default) solid var(--nb-navy);
     box-shadow: var(--nb-sh);
 }
 body.nb a.border-primary[class*="rounded-xl"],
@@ -123,10 +128,12 @@ body.nb a.bg-accent[class*="rounded-xl"]:hover,
 body.nb a.bg-primary[class*="rounded-xl"]:hover,
 body.nb a.border-primary[class*="rounded-xl"]:hover,
 body.nb a.bg-primary[class*="rounded-full"][class*="px-9"]:hover { box-shadow: var(--nb-sh-hover); }
+/* Botón secundario (borde azul): conserva su hover original = fondo azul + texto blanco */
+body.nb a.border-primary[class*="rounded-xl"]:hover { background: var(--nb-blue); color: #ffffff; }
 body.anim-ready.nb .cta-explore:hover { box-shadow: var(--nb-sh-hover); filter: none; }
 body.nb .cta-explore { background-color: var(--nb-blue); }
 /* Botones circulares del footer */
-body.nb footer a[class*="rounded-full"].bg-primary { border: 2px solid var(--nb-navy); box-shadow: var(--nb-sh-sm); }
+body.nb footer a[class*="rounded-full"].bg-primary { border: var(--border-default) solid var(--nb-navy); box-shadow: var(--nb-sh-sm); }
 
 /* ---------- Hero Home: portada del cuaderno ----------
    Las dos etiquetas viven en .nb-notes (notas de margen): no ocupan
@@ -161,7 +168,7 @@ body.nb-home .name-hero::after {
 }
 body.nb-home .nb-avail {
     margin: 0;
-    background: #ffffff; border: 2px solid var(--nb-ink); box-shadow: var(--nb-sh);
+    background: #ffffff; border: var(--border-default) solid var(--nb-ink); box-shadow: var(--nb-sh);
     border-radius: 8px; rotate: 1.5deg;
 }
 body.nb-home .nb-avail span { color: var(--nb-ink); }
@@ -175,14 +182,14 @@ body.nb-home .hero-illus { max-width: 360px; margin-inline: auto; }
 body.nb .hero-illus::before {
     content: ""; position: absolute; z-index: 0;
     inset: -12px -12px -44px -12px;
-    background: #ffffff; border: 2px solid var(--nb-ink); border-radius: 6px;
-    box-shadow: 5px 5px 0 var(--nb-blue);
+    background: #ffffff; border: var(--border-default) solid var(--nb-ink); border-radius: 6px;
+    box-shadow: 4px 4px 0 var(--nb-blue);
 }
 body.nb .hero-illus::after {
     content: ""; position: absolute; z-index: 6;
     top: -26px; left: 50%; width: 92px; height: 26px; margin-left: -46px; rotate: -4deg;
     background: rgba(255, 211, 78, 0.85);
-    border-left: 2px dashed rgba(23,23,23,.18); border-right: 2px dashed rgba(23,23,23,.18);
+    border-left: var(--border-thin) dashed rgba(23,23,23,.18); border-right: var(--border-thin) dashed rgba(23,23,23,.18);
 }
 body.nb .hi-glow { opacity: .22; }
 /* garabatos del hero: estrella (esquina del marco) y flecha */
@@ -197,7 +204,7 @@ body.nb-home .hero-illus > .nb-arrow { width: 54px !important; height: 38px !imp
 
 /* Etiquetas flotantes → stickers (azul / amarillo / blanco) */
 body.nb .hi-tag {
-    border: 2px solid var(--nb-ink); border-radius: 8px;
+    border: var(--border-default) solid var(--nb-ink); border-radius: 8px;
     box-shadow: var(--nb-sh);
     font-weight: 700; color: var(--nb-ink);
 }
@@ -213,7 +220,7 @@ body.nb .hi-dot { background: var(--nb-blue); box-shadow: none; }
 body.nb-home main > section:nth-child(2) { padding-top: 24px; }
 body.nb-home .nb-metrics { gap: 20px; background: transparent; border: 0; border-radius: 0; overflow: visible; }
 body.nb-home .nb-metrics > div {
-    border: 1.5px solid var(--nb-ink); border-radius: 12px; background: #ffffff;
+    border: var(--border-default) solid var(--nb-ink); border-radius: 12px; background: #ffffff;
     box-shadow: var(--nb-sh);
     transition: translate .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease, rotate .25s ease;
 }
@@ -229,14 +236,14 @@ body.nb-home .nb-metrics > div > span:first-child::after {
 
 /* Home: tarjetas "Mi enfoque" */
 body.nb-home article.nb-card {
-    background: #ffffff; border: 2px solid var(--nb-ink); border-radius: 14px;
-    box-shadow: 5px 5px 0 var(--nb-blue);
+    background: #ffffff; border: var(--border-default) solid var(--nb-ink); border-radius: 14px;
+    box-shadow: 4px 4px 0 var(--nb-blue);
     transition: translate .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease;
 }
-body.nb-home article.nb-card--pink { box-shadow: 5px 5px 0 var(--nb-sun); }
-body.nb-home article.nb-card:hover { translate: -2px -2px; box-shadow: 7px 7px 0 var(--nb-blue); }
-body.nb-home article.nb-card--pink:hover { box-shadow: 7px 7px 0 var(--nb-sun); }
-body.nb-home article.nb-card ul li { border: 1.5px solid var(--nb-ink); background: #ffffff; color: var(--nb-ink); }
+body.nb-home article.nb-card--pink { box-shadow: 4px 4px 0 var(--nb-sun); }
+body.nb-home article.nb-card:hover { translate: -2px -2px; box-shadow: 6px 6px 0 var(--nb-blue); }
+body.nb-home article.nb-card--pink:hover { box-shadow: 6px 6px 0 var(--nb-sun); }
+body.nb-home article.nb-card ul li { border: var(--border-default) solid var(--nb-ink); background: #ffffff; color: var(--nb-ink); }
 body.nb-home article.nb-card ul li:nth-child(1) { background: var(--nb-sun); }
 
 /* ---------- Home: proyectos como recortes editoriales ---------- */
@@ -244,19 +251,19 @@ body.nb-home #proyectos .grid { counter-reset: pj; gap: 40px; }
 body.nb-home #proyectos a.group {
     --c: var(--nb-blue);
     counter-increment: pj;
-    border: 2px solid var(--nb-ink); border-radius: 14px;
-    box-shadow: 6px 6px 0 var(--c);
+    border: var(--border-default) solid var(--nb-ink); border-radius: 14px;
+    box-shadow: 5px 5px 0 var(--c);
     transition: translate .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease;
 }
 body.nb-home #proyectos a.group:nth-child(2),
 body.nb-home #proyectos a.group:nth-child(4) { --c: var(--nb-sun); }
-body.nb-home #proyectos a.group:hover { translate: -2px -2px; box-shadow: 8px 8px 0 var(--c); }
+body.nb-home #proyectos a.group:hover { translate: -2px -2px; box-shadow: 7px 7px 0 var(--c); }
 body.nb-home #proyectos a.group::after {
     content: "0" counter(pj);
     position: absolute; z-index: 5; top: 0; left: 22px;
     padding: 6px 14px 8px;
     background: var(--c); color: var(--nb-ink);
-    border: 2px solid var(--nb-ink); border-top: 0; border-radius: 0 0 10px 10px;
+    border: var(--border-default) solid var(--nb-ink); border-top: 0; border-radius: 0 0 10px 10px;
     font-size: 14px; font-weight: 800; letter-spacing: .06em;
 }
 body.nb-home #proyectos a.group:nth-child(odd)::after { color: #ffffff; }
@@ -264,7 +271,7 @@ body.nb-home #proyectos a.group:nth-child(odd)::after { color: #ffffff; }
 /* ---------- Home: experiencia como línea de cuaderno con "pins" ---------- */
 body.nb-home .nb-rail { background: repeating-linear-gradient(to bottom, var(--nb-blue) 0 7px, transparent 7px 13px); width: 2px; }
 body.nb-home .nb-pin {
-    width: 18px; height: 18px; background: var(--nb-sun); border: 2px solid var(--nb-ink);
+    width: 18px; height: 18px; background: var(--nb-sun); border: var(--border-default) solid var(--nb-ink);
     box-shadow: var(--nb-sh-sm); border-radius: 50%;
 }
 body.nb-home .nb-job:nth-of-type(even) .nb-pin { background: var(--nb-blue); }
@@ -272,7 +279,7 @@ body.nb-home .nb-job:nth-of-type(3n) .nb-pin { background: #ffffff; }
 
 /* ---------- About ---------- */
 body.nb-about .nb-h2 {
-    display: inline-block; padding: 7px 14px; margin-bottom: 40px; border: 2px solid var(--nb-ink);
+    display: inline-block; padding: 7px 14px; margin-bottom: 40px; border: var(--border-default) solid var(--nb-ink);
     border-radius: 8px; box-shadow: var(--nb-sh); background: var(--bg, var(--nb-sun)); rotate: -1.5deg;
     letter-spacing: 2px;
 }
@@ -287,7 +294,7 @@ body.nb-about main section:first-of-type p { margin-bottom: 40px; }
 
 /* ---------- Overview + Case: portada de proyecto ---------- */
 body.nb .project-badge {
-    background: var(--nb-sun); border: 2px solid var(--nb-ink); color: var(--nb-ink);
+    background: var(--nb-sun); border: var(--border-default) solid var(--nb-ink); color: var(--nb-ink);
     border-radius: 8px; box-shadow: var(--nb-sh); rotate: -1.5deg;
     transition: rotate .25s cubic-bezier(.2,.7,.2,1), translate .25s ease;
 }
@@ -300,16 +307,16 @@ body.nb h1.title-massive .text-royal {
 }
 /* Marco del mockup principal: foto pegada con cinta */
 body.nb [class*="shadow-showcase"] {
-    position: relative; overflow: visible !important; border: 2px solid var(--nb-ink) !important;
+    position: relative; overflow: visible !important; border: var(--border-default) solid var(--nb-ink) !important;
     border-radius: 10px !important; background: #ffffff;
-    box-shadow: 6px 6px 0 var(--nb-accent) !important;
+    box-shadow: 5px 5px 0 var(--nb-accent) !important;
 }
 body.nb [class*="shadow-showcase"] img { border-radius: 8px; }
 body.nb [class*="shadow-showcase"]::before,
 body.nb [class*="shadow-showcase"]::after {
     content: ""; position: absolute; z-index: 6; top: -20px; width: 96px; height: 26px;
     background: rgba(255, 211, 78, 0.85);
-    border-left: 2px dashed rgba(23,23,23,.18); border-right: 2px dashed rgba(23,23,23,.18);
+    border-left: var(--border-thin) dashed rgba(23,23,23,.18); border-right: var(--border-thin) dashed rgba(23,23,23,.18);
     pointer-events: none;
 }
 body.nb [class*="shadow-showcase"]::before { left: 6%; rotate: -5deg; }
@@ -323,7 +330,7 @@ body.nb-ov section > h2:first-child::before {
     display: inline-flex; align-items: center; justify-content: center; vertical-align: middle;
     min-width: 40px; height: 28px; margin-right: 14px; padding: 0 10px;
     background: var(--nb-blue); color: #ffffff;
-    border: 2px solid var(--nb-ink); border-radius: 8px;
+    border: var(--border-default) solid var(--nb-ink); border-radius: 8px;
     font-size: 13px; font-weight: 800; letter-spacing: .06em;
     box-shadow: var(--nb-sh-sm); rotate: -3deg;
 }
@@ -332,17 +339,17 @@ body.nb-ov section:nth-of-type(even) > h2:first-child::before { background: var(
 /* Case: kicker como etiqueta + chips flotantes como stickers */
 body.nb .nb-kicker {
     display: inline-block; padding: 6px 12px; background: var(--nb-sun); color: var(--nb-ink) !important;
-    border: 2px solid var(--nb-ink); border-radius: 8px; box-shadow: var(--nb-sh); rotate: -1.5deg;
+    border: var(--border-default) solid var(--nb-ink); border-radius: 8px; box-shadow: var(--nb-sh); rotate: -1.5deg;
     margin-bottom: 10px;
 }
-body.nb .float-chip { border: 2px solid var(--nb-ink) !important; border-radius: 10px !important; box-shadow: var(--nb-sh) !important; background: #ffffff; }
+body.nb .float-chip { border: var(--border-default) solid var(--nb-ink) !important; border-radius: 10px !important; box-shadow: var(--nb-sh) !important; background: #ffffff; }
 body.nb .float-chip [class*="text-[#94a3b8]"] { color: #344054; }
 body.nb .float-chip:nth-of-type(odd) { background: var(--nb-sun); }
 body.nb .float-chip:nth-of-type(even) { background: #ffffff; }
 
 /* Case: numeraciones del carril = pestañas/sellos; carril punteado */
 body.nb .z-10 > div.bg-electric.rounded-full {
-    border: 2px solid var(--nb-ink); box-shadow: var(--nb-sh-sm); rotate: -4deg;
+    border: var(--border-default) solid var(--nb-ink); box-shadow: var(--nb-sh-sm); rotate: -4deg;
     transition: rotate .25s cubic-bezier(.2,.7,.2,1);
 }
 body.nb section:hover .z-10 > div.bg-electric.rounded-full { rotate: 3deg; }
@@ -353,8 +360,11 @@ body.nb div[class*="-translate-x-1/2"][class*="w-px"] {
 body.nb [class*="border-electric"][class*="border-2"][class*="rounded-"] { box-shadow: 3px 3px 0 var(--nb-blue); }
 body.nb [class*="bg-[#101828]"][class*="rounded-[16px]"] { box-shadow: 3px 3px 0 var(--nb-sun); }
 
+/* Bloques destacados con borde Tailwind `border-2` (azul/rojo tenue): mismo grosor del sistema */
+body.nb [class~="border-2"] { border-width: var(--border-default); }
+
 /* ---------- Footer: contraportada ---------- */
-body.nb footer { position: relative; border-top: 2px dashed var(--nb-ink); }
+body.nb footer { position: relative; border-top: var(--border-thin) dashed var(--nb-ink); }
 body.nb footer::before {
     content: "✂"; position: absolute; top: -17px; left: 6%; padding: 0 8px; background: #ffffff;
     font-size: 22px; line-height: 1; color: var(--nb-ink);
@@ -386,10 +396,10 @@ body.nb footer::before {
 /* ---------- Responsive / accesibilidad ---------- */
 @media (max-width: 767px) {
     body.nb-home #proyectos .grid { gap: 32px; }
-    body.nb-home #proyectos a.group { box-shadow: 5px 5px 0 var(--c); }
-    body.nb [class*="shadow-showcase"] { box-shadow: 5px 5px 0 var(--nb-accent) !important; }
+    body.nb-home #proyectos a.group { box-shadow: 4px 4px 0 var(--c); }
+    body.nb [class*="shadow-showcase"] { box-shadow: 4px 4px 0 var(--nb-accent) !important; }
     body.nb-home .hero-illus { max-width: 270px; margin-bottom: 52px; }
-    body.nb .hero-illus::before { inset: -10px -10px -38px -10px; box-shadow: 4px 4px 0 var(--nb-blue); }
+    body.nb .hero-illus::before { inset: -10px -10px -38px -10px; box-shadow: 3px 3px 0 var(--nb-blue); }
     body.nb-home .hero-illus > .nb-star { width: 32px !important; height: 32px !important; right: -14px !important; top: -30px !important; }
     body.nb-home main > section:first-child h1 { margin-bottom: 24px; }
     body.nb-home main > section:first-child > div.md\:hidden { gap: 24px; }
@@ -400,4 +410,28 @@ body.nb footer::before {
     body.nb-home #proyectos a.group, body.nb .project-badge, body.nb .z-10 > div.bg-electric.rounded-full { transition: none !important; }
     .nb-sticker:hover, body.nb-home .nb-metrics > div:hover, body.nb-home #proyectos a.group:hover,
     body.nb .project-badge:hover, .nb-tabrow:hover .nb-tab { translate: none; }
+}
+
+/* ---------- Hero MÓVIL: descripción → ilustración → botones ----------
+   Causa real: en <768 px el hero es una columna flex y sus hijos seguían el orden del HTML.
+   Se reordena solo aquí con `order`: .nb-notes y el bloque descripción+botones pasan a
+   `display: contents` para que cada pieza (etiqueta, párrafo, cada botón) sea hija directa
+   del hero y se ordene por separado. La etiqueta del cuaderno queda DENTRO de la franja
+   inferior del marco (margen negativo): no ocupa fila propia. Escritorio no cambia. */
+@media (max-width: 767px) {
+    body.nb-home main > section:first-child { gap: 0; padding-top: 22px; padding-bottom: 44px; }
+    body.nb-home .nb-notes { display: contents; }
+    body.nb-home .nb-avail { order: 1; margin: 0 0 20px; }
+    body.nb-home main > section:first-child > div.flex-1 { order: 2; }
+    body.nb-home main > section:first-child h1 { margin-bottom: 22px; }
+    body.nb-home main > section:first-child > div.md\:hidden { display: contents; }
+    body.nb-home main > section:first-child > div.md\:hidden > p { order: 3; margin: 0; }
+    body.nb-home main > section:first-child > div.reveal-img { order: 4; margin-top: 52px; }
+    body.nb-home .hero-illus { margin-bottom: 0; }
+    body.nb-home .nb-notes .nb-cover { order: 5; margin: 6px 0 -43px; position: relative; z-index: 7; }
+    body.nb-home main > section:first-child > div.md\:hidden > a:nth-of-type(1) { order: 6; margin-top: 84px; }
+    body.nb-home main > section:first-child > div.md\:hidden > a:nth-of-type(2) { order: 7; margin-top: 16px; }
+}
+@media (max-width: 359px) {
+    body.nb-home .hero-illus { max-width: 236px; }
 }
