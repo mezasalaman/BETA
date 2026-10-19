@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Delivery | Onboarding y activación</title>
+    <link rel="canonical" href="https://mezasalaman.github.io/BETA/pages/food-delivery-case.html" />
     <meta name="description" content="FoodDelivery — caso de estudio profundo: UX, activación, atomic design y estrategia de datos (GA4 · Clarity)." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23315CFF'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Caso de Estudio | Food Delivery" />
     <meta property="og:description" content="FoodDelivery — caso de estudio profundo: UX, activación, atomic design y estrategia de datos (GA4 · Clarity)." />
-    <meta property="og:image" content="../assets/projects/food-hero.png" />
+    <meta property="og:image" content="../assets/projects/food-hero.webp" />
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,6 +30,7 @@
 </head>
 
 <body class="nb nb-case nb-food bg-ink font-sans text-[#101828] antialiased">
+    <a href="#main" class="skip-link">Saltar al contenido</a>
 
     <!-- ================= NAVBAR ================= -->
     <nav class="sticky top-0 z-[9999] w-full bg-ink">
@@ -65,7 +67,7 @@
         </div>
     </nav>
 
-    <main class="pt-8">
+    <main id="main" tabindex="-1" class="pt-8">
 
         <!-- ================= HERO ================= -->
         <header class="mx-auto w-[90%] max-w-grid py-10 sm:py-14">
@@ -93,7 +95,7 @@
 
                 <!-- Derecha: composición de producto (assets existentes) -->
                 <div class="relative -top-2 lg:-top-6">
-                    <img loading="lazy" src="../assets/projects/food/aimo-onboarding-hero.jpg" alt="FoodDelivery — flujo de onboarding: crear tienda, agregar productos y confirmar información" class="float-media block w-full" />
+                    <img fetchpriority="high" width="1422" height="1106" src="../assets/projects/food/aimo-onboarding-hero.webp" alt="FoodDelivery — flujo de onboarding: crear tienda, agregar productos y confirmar información" class="float-media block w-full" />
                     <div class="float-chip absolute -right-3 -top-3 hidden items-center gap-2.5 rounded-2xl border border-[#e9edf2] bg-white px-3.5 py-2.5 shadow-drop sm:flex" style="animation-delay:.6s">
                         <span class="ic" data-icon="trending-up" style="font-size:15px;color:#315CFF"></span>
                         <div>
@@ -645,22 +647,22 @@
                             <div class="fd-carousel relative overflow-hidden rounded-[18px] border border-[#e9edf2] bg-[#f6f7f9]">
                                 <div class="fd-carousel-track" id="fdTrack">
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-01-bienvenida.png" alt="FoodDelivery — pantalla de bienvenida al tutorial de configuración de la carta" class="block h-full w-full object-cover" /></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img width="2000" height="970" loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-01-bienvenida.webp" alt="FoodDelivery — pantalla de bienvenida al tutorial de configuración de la carta" class="block h-full w-full object-cover" /></div>
                                     </div>
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-02-tiendas.png" alt="FoodDelivery — configuración de tiendas, tarifa de envío y métodos de pago por canal" class="block h-full w-full object-cover" /></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img width="2000" height="974" loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-02-tiendas.webp" alt="FoodDelivery — configuración de tiendas, tarifa de envío y métodos de pago por canal" class="block h-full w-full object-cover" /></div>
                                     </div>
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-03-metricas.png" alt="FoodDelivery — configuración de métricas y analíticas de la tienda" class="block h-full w-full object-cover" /></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img width="2000" height="974" loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-03-metricas.webp" alt="FoodDelivery — configuración de métricas y analíticas de la tienda" class="block h-full w-full object-cover" /></div>
                                     </div>
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-04-categorias.png" alt="FoodDelivery — tutorial guiado, paso 3: organiza tu carta con categorías" class="block h-full w-full object-cover" /></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img width="2000" height="961" loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-04-categorias.webp" alt="FoodDelivery — tutorial guiado, paso 3: organiza tu carta con categorías" class="block h-full w-full object-cover" /></div>
                                     </div>
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-05-producto.png" alt="FoodDelivery — tutorial guiado, paso 5: registra tu producto" class="block h-full w-full object-cover" /></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img width="2000" height="965" loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-05-producto.webp" alt="FoodDelivery — tutorial guiado, paso 5: registra tu producto" class="block h-full w-full object-cover" /></div>
                                     </div>
                                     <div class="fd-carousel-slide px-2 py-6">
-                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-06-vista-previa.png" alt="FoodDelivery — tutorial guiado, paso 8: revisa la vista previa mobile de la tienda" class="block h-full w-full object-cover" /></div>
+                                        <div class="aspect-[2/1] w-full overflow-hidden rounded-[4px] border border-[#e2e8f0] bg-white"><img width="2000" height="968" loading="lazy" decoding="async" draggable="false" src="../assets/projects/food/sol-06-vista-previa.webp" alt="FoodDelivery — tutorial guiado, paso 8: revisa la vista previa mobile de la tienda" class="block h-full w-full object-cover" /></div>
                                     </div>
                                 </div>
                                 <button type="button" id="fdPrev" aria-label="Anterior" class="absolute left-3 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full bg-white text-[18px] text-[#101828] shadow-drop transition hover:bg-electric hover:text-white">‹</button>

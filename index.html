@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carlos Meza | Product Designer</title>
+    <link rel="canonical" href="https://mezasalaman.github.io/BETA/" />
     <meta name="description" content="Carlos Meza — Product Designer especializado en experiencia, métricas y funcionalidad. Portafolio de proyectos de diseño de producto." />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23315CFF'/%3E%3Cpath d='m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z' fill='none' stroke='white' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" type="image/svg+xml" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Carlos Meza | Product Designer" />
     <meta property="og:description" content="Carlos Meza — Product Designer especializado en experiencia, métricas y funcionalidad. Portafolio de proyectos de diseño de producto." />
-    <meta property="og:image" content="assets/projects/food-hero.png" />
+    <meta property="og:image" content="assets/projects/food-hero.webp" />
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,6 +26,7 @@
 </head>
 
 <body class="nb nb-home bg-ink font-sans text-[#101828] antialiased">
+    <a href="#main" class="skip-link">Saltar al contenido</a>
 
     <!-- ================= NAVBAR ================= -->
     <nav class="sticky top-0 z-[9999] w-full bg-ink">
@@ -64,7 +66,7 @@
         </div>
     </nav>
 
-    <main>
+    <main id="main" tabindex="-1">
         <!-- ================= HERO ================= -->
         <section class="relative mx-auto flex max-w-shell flex-col items-center gap-8 px-5 pb-12 pt-4 md:flex-row md:justify-between md:gap-[60px] md:pb-20 md:pt-10 lg:pt-20">
         <!-- Notas de margen del cuaderno (etiquetas fuera del flujo vertical) -->
@@ -109,7 +111,7 @@
             <!-- Derecha (ilustración animada) -->
             <div class="flex flex-1 justify-center reveal-img">
                 <div class="hero-illus">
-                    <img loading="lazy" src="assets/hero-vector.svg" alt="Ilustración — research, datos y diseño de producto" class="hi-img" />
+                    <img fetchpriority="high" width="1200" height="1200" src="assets/hero-vector.webp" alt="Ilustración — research, datos y diseño de producto" class="hi-img" />
                     <span class="hi-tag" style="top:6%;left:-4%;animation-delay:0s"><span class="hi-dot"></span>UX</span>
                     <span class="hi-tag" style="top:0%;right:8%;animation-delay:.8s"><span class="hi-dot"></span>IA</span>
                     <span class="hi-tag" style="top:40%;right:-5%;animation-delay:.4s"><span class="hi-dot"></span>Claude Design</span>
@@ -239,7 +241,7 @@
             <div class="grid grid-cols-1 gap-6 md:grid-cols-2 reveal-img">
                 <!-- FoodDelivery -->
                 <a href="pages/food-delivery.html" class="group relative block overflow-hidden rounded-2xl shadow-drop">
-                    <img loading="lazy" src="assets/projects/food-hero.png" alt="FoodDelivery"
+                    <img width="1184" height="683" loading="lazy" src="assets/projects/food-hero.webp" alt="FoodDelivery"
                          class="h-[300px] w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]" />
                     <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a1530]/85 via-[#0a1530]/15 to-transparent"></span>
                     <div class="reveal reveal-text-fade pointer-events-none absolute bottom-0 left-0 p-7" style="transition-delay:70ms;">
@@ -250,7 +252,7 @@
 
                 <!-- ConDuzko -->
                 <a href="pages/conduzko.html" class="group relative block overflow-hidden rounded-2xl shadow-drop">
-                    <img loading="lazy" src="assets/conduzko/portada.png" alt="ConDuzko — marketplace de autos verificados"
+                    <img width="1512" height="1040" loading="lazy" src="assets/conduzko/portada.webp" alt="ConDuzko — marketplace de autos verificados"
                          class="h-[300px] w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]" />
                     <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a1530]/85 via-[#0a1530]/15 to-transparent"></span>
                     <div class="reveal reveal-text-fade pointer-events-none absolute bottom-0 left-0 p-7" style="transition-delay:70ms;">
@@ -261,7 +263,7 @@
 
                 <!-- Satelock -->
                 <a href="pages/satelock.html" class="group relative block overflow-hidden rounded-2xl shadow-drop">
-                    <img loading="lazy" src="assets/projects/satelock/dashboard-window.png" alt="Satelock"
+                    <img width="850" height="379" loading="lazy" src="assets/projects/satelock/dashboard-window.webp" alt="Satelock"
                          class="h-[300px] w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]" />
                     <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a1530]/85 via-[#0a1530]/15 to-transparent"></span>
                     <div class="reveal reveal-text-fade pointer-events-none absolute bottom-0 left-0 p-7" style="transition-delay:70ms;">
@@ -272,7 +274,7 @@
 
                 <!-- Seller Center -->
                 <a href="pages/SellerCenter.html" class="group relative block overflow-hidden rounded-2xl shadow-drop">
-                    <img loading="lazy" src="assets/projects/seller/hero-3phones.png" alt="Seller Center"
+                    <img width="1281" height="773" loading="lazy" src="assets/projects/seller/hero-3phones.webp" alt="Seller Center"
                          class="h-[300px] w-full object-cover object-center transition-transform duration-300 group-hover:scale-[1.03]" />
                     <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0a1530]/85 via-[#0a1530]/15 to-transparent"></span>
                     <div class="reveal reveal-text-fade pointer-events-none absolute bottom-0 left-0 p-7" style="transition-delay:70ms;">
@@ -296,7 +298,24 @@
                 <!-- Línea vertical -->
                 <span class="nb-rail absolute left-[7px] top-2.5 h-[calc(100%-20px)] w-0.5 bg-hairline"></span>
 
-                <!-- Job 1 -->
+                <!-- Job -->
+                <div class="nb-job relative mb-[60px] md:mb-[100px]">
+                    <span class="nb-pin absolute left-[-43px] top-1.5 h-4 w-4 rounded-full bg-primary shadow-glow md:left-[-50px]"></span>
+                    <div class="flex flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
+                        <h3 class="text-[20px] font-semibold text-[#101828]">Product Designer Mid-Level</h3>
+                        <span class="text-[16px] font-semibold text-primary">Solera | Integratel (Movistar) · Telecomunicaciones</span>
+                    </div>
+                    <span class="my-2 block text-[14px] text-dim md:mb-5">Julio 2026 — Octubre 2026</span>
+                    <ul class="list-disc space-y-4 pl-5 marker:text-dim">
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Participé en el análisis, diseño y optimización de productos digitales <strong class="font-medium text-[#101828]">web y móviles</strong> del sector telecomunicaciones, orientados a contratación, autogestión y comercio electrónico.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Analicé información y métricas de comportamiento de <strong class="font-medium text-[#101828]">miles de usuarios</strong> para identificar patrones, puntos de fricción y oportunidades de optimización.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Realicé <strong class="font-medium text-[#101828]">investigación UX</strong> mediante entrevistas, evaluaciones heurísticas y recorridos cognitivos para evaluar la usabilidad de los productos.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Convertí <strong class="font-medium text-[#101828]">métricas e indicadores de producto</strong> en hallazgos y recomendaciones que respaldaron decisiones de producto y de negocio.</li>
+                        <li class="pl-2.5 text-[13.5px] leading-[1.6] text-dim md:text-[14.5px]">Levanté requerimientos funcionales y diseñé flujos (<strong class="font-medium text-[#101828]">Happy, Alternative y Error Paths</strong>) y prototipos responsive en Figma, validando soluciones con negocio, desarrollo y QA.</li>
+                    </ul>
+                </div>
+
+                <!-- Job -->
                 <div class="nb-job relative mb-[60px] md:mb-[100px]">
                     <span class="nb-pin absolute left-[-43px] top-1.5 h-4 w-4 rounded-full bg-primary shadow-glow md:left-[-50px]"></span>
                     <div class="flex flex-col items-start gap-1 md:flex-row md:items-center md:justify-between md:gap-0">
