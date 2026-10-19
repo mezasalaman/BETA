@@ -441,20 +441,20 @@ body.nb footer::before {
    Los fondos sólidos de tarjetas y paneles pasan a ser semitransparentes para
    que las líneas del cuaderno se transparenten. Solo afecta a elementos dentro
    de <section>, no al nav, footer ni a las imágenes. */
-body.nb section .bg-\[\#f6f7f9\] { background-color: rgba(246,247,249,.5) !important; }
-body.nb section .bg-\[\#f3f5f8\] { background-color: rgba(243,245,248,.5) !important; }
-body.nb section .bg-\[\#eef1f5\] { background-color: rgba(238,241,245,.5) !important; }
-body.nb section .bg-\[\#fbfbfc\] { background-color: rgba(251,251,252,.5) !important; }
-body.nb section .bg-\[\#f7f8fa\] { background-color: rgba(247,248,250,.5) !important; }
-body.nb section .bg-\[\#f5f7fa\] { background-color: rgba(245,247,250,.5) !important; }
-body.nb section .bg-\[\#f8fafc\] { background-color: rgba(248,250,252,.5) !important; }
-body.nb section .bg-panel, body.nb section .bg-panel2 { background-color: rgba(238,241,245,.5) !important; }
-body.nb section .bg-\[\#fffbeb\] { background-color: rgba(255,251,235,.6) !important; }
-body.nb section .bg-\[\#eff4ff\] { background-color: rgba(239,244,255,.6) !important; }
-body.nb section .bg-\[\#eaf0fb\] { background-color: rgba(234,240,251,.6) !important; }
-body.nb section .bg-\[\#f0fdf4\] { background-color: rgba(240,253,244,.6) !important; }
-body.nb section .bg-\[\#fef2f2\] { background-color: rgba(254,242,242,.6) !important; }
-body.nb section .bg-white:not(a):not(button):not(img) { background-color: rgba(255,255,255,.6) !important; }
+body.nb section .bg-\[\#f6f7f9\] { background-color: rgba(246,247,249,.32) !important; }
+body.nb section .bg-\[\#f3f5f8\] { background-color: rgba(243,245,248,.32) !important; }
+body.nb section .bg-\[\#eef1f5\] { background-color: rgba(238,241,245,.32) !important; }
+body.nb section .bg-\[\#fbfbfc\] { background-color: rgba(251,251,252,.32) !important; }
+body.nb section .bg-\[\#f7f8fa\] { background-color: rgba(247,248,250,.32) !important; }
+body.nb section .bg-\[\#f5f7fa\] { background-color: rgba(245,247,250,.32) !important; }
+body.nb section .bg-\[\#f8fafc\] { background-color: rgba(248,250,252,.32) !important; }
+body.nb section .bg-panel, body.nb section .bg-panel2 { background-color: rgba(238,241,245,.32) !important; }
+body.nb section .bg-\[\#fffbeb\] { background-color: rgba(255,251,235,.4) !important; }
+body.nb section .bg-\[\#eff4ff\] { background-color: rgba(239,244,255,.4) !important; }
+body.nb section .bg-\[\#eaf0fb\] { background-color: rgba(234,240,251,.4) !important; }
+body.nb section .bg-\[\#f0fdf4\] { background-color: rgba(240,253,244,.4) !important; }
+body.nb section .bg-\[\#fef2f2\] { background-color: rgba(254,242,242,.4) !important; }
+body.nb section .bg-white:not(a):not(button):not(img) { background-color: rgba(255,255,255,.4) !important; }
 
 
 /* ---------- Accesibilidad ---------- */
