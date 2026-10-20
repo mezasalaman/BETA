@@ -243,91 +243,152 @@
             </div>
         </section>
 
-        <!-- ================= ECOSISTEMA DE PRODUCTO ================= -->
-        <section class="nb-host mx-auto w-[90%] max-w-grid py-14">
-            <span class="nbp nbp-chart" style="top:4px;right:6px;width:72px;height:47px" aria-hidden="true"></span>
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-[26%_1fr] lg:items-start">
-                <!-- Intro -->
-                <div>
-                    <div class="mb-3 flex items-center gap-2">
-                        <span class="h-1.5 w-1.5 rounded-full bg-electric"></span>
-                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Ecosistema de producto</span>
+        <!-- ================= CONVERSACIÓN INTELIGENTE ================= -->
+        <section id="arquitectura-conversacional-resumen" class="nb-host mx-auto w-[90%] max-w-grid py-14">
+            <span class="nbp nbp-nodes" style="top:44px;right:6px" aria-hidden="true"></span>
+            <style>
+            /* Cómo diseñamos una conversación inteligente — diagrama conectado, scoped a esta página */
+            .cvx-eyebrow { display: inline-block; margin-bottom: 10px; padding: 5px 12px; background: #FFD34E; color: #101828; border: 1.5px solid #171717; border-radius: 8px; box-shadow: 3px 3px 0 rgba(23,23,23,.4); font-size: 10.5px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; rotate: -1deg; }
+            .cvx-sub { max-width: 720px; margin: 0 0 26px; font-size: 14px; line-height: 1.65; color: #64748b; }
+            .cvx { position: relative; padding: 30px 22px 22px 22px; border: 1px solid #e4e8ee; border-radius: 20px; background: rgba(255,255,255,.55); }
+            .cvx-tape { position: absolute; z-index: 5; top: -11px; width: 80px; height: 22px; background: rgba(255,211,78,.82); border-left: 1px dashed rgba(23,23,23,.18); border-right: 1px dashed rgba(23,23,23,.18); pointer-events: none; }
+            .cvx-layer { position: relative; display: grid; grid-template-columns: 58px minmax(0,1fr); gap: 0 14px; }
+            .cvx-tab { position: relative; display: flex; flex-direction: column; align-items: center; }
+            .cvx-tab b { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; height: 30px; padding: 0 10px; background: #315CFF; color: #fff; border: 1.5px solid #171717; border-radius: 8px; box-shadow: 2px 2px 0 rgba(23,23,23,.4); font-size: 13px; font-weight: 800; letter-spacing: .06em; rotate: -3deg; }
+            .cvx-layer:nth-of-type(2) .cvx-tab b { background: #FFD34E; color: #101828; rotate: 2deg; }
+            .cvx-tab::after { content: ""; flex: 1; width: 0; margin-top: 6px; border-left: 2px dashed #315CFF; }
+            .cvx-layer:last-of-type .cvx-tab::after { display: none; }
+            .cvx-body { min-width: 0; padding-bottom: 6px; }
+            .cvx-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin: 2px 0 12px; }
+            .cvx-h b { font-size: 15px; color: #101828; }
+            .cvx-h span { font-size: 12px; color: #64748b; }
+            .cvx-link { position: relative; display: flex; align-items: center; gap: 8px; margin: 2px 0 14px 72px; font-size: 11px; font-weight: 700; letter-spacing: .06em; color: #315CFF; }
+            .cvx-link::before { content: "↓"; display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #eff4ff; border: 1px solid #315CFF; font-size: 13px; }
+            .cvx-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 2px 2px 8px; }
+            .cvx-scroll:focus-visible { outline: 2px solid #315CFF; outline-offset: 2px; border-radius: 8px; }
+            .cvx-chain { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 0 0 12px; }
+            .cvx-apipill { padding: 4px 12px; background: #315CFF; color: #fff; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .08em; }
+            .cvx-hint { display: none; margin: 2px 0 0; font-size: 11.5px; color: #94a3b8; }
+            .cvx-bub { display: inline-block; max-width: 100%; padding: 9px 14px; border-radius: 16px; font-size: 13px; line-height: 1.45; }
+            .cvx-bub--u { background: #315CFF; color: #fff; border-bottom-left-radius: 4px; }
+            .cvx-bub--a { background: #f1f4f9; color: #101828; border: 1px solid #e4e8ee; border-bottom-left-radius: 4px; }
+            .cvx-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+            .cvx-arr { color: #315CFF; font-weight: 700; font-size: 18px; }
+            .cvx-n { padding: 7px 12px; background: #fff; border: 1.5px solid #315CFF; border-radius: 10px; font-size: 12px; font-weight: 600; line-height: 1.35; color: #101828; }
+            .cvx-n--p { border: 1.5px dashed #c99700; background: #fffdf0; }
+            .cvx-n small { display: block; font-size: 10.5px; font-weight: 400; color: #64748b; }
+            .cvx-slots { display: flex; flex-wrap: wrap; gap: 8px; }
+            .cvx-slot { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 11px; color: #101828; }
+            .cvx-slot--ok { background: #eff4ff; border: 1px solid #315CFF; }
+            .cvx-slot--miss { background: #fff8d6; border: 1px dashed #c99700; }
+            .cvx-slot em { font-style: normal; font-weight: 700; font-family: Poppins, ui-sans-serif, sans-serif; font-size: 9.5px; letter-spacing: .06em; text-transform: uppercase; }
+            .cvx-slot--ok em { color: #315CFF; } .cvx-slot--miss em { color: #8a6a00; }
+            .cvx-dt { display: block; width: 100%; min-width: 820px; height: auto; font-family: Poppins, ui-sans-serif, system-ui, sans-serif; }
+            .cvx-dt text { fill: #101828; font-size: 12.5px; font-weight: 600; }
+            .cvx-dt .s { fill: #64748b; font-size: 10.5px; font-weight: 500; }
+            .cvx-dt .y { fill: #1f6f3a; font-weight: 700; font-size: 12px; } .cvx-dt .no { fill: #b42318; font-weight: 700; font-size: 12px; }
+            .cvx-dt .doc { fill: #fff; stroke: #315CFF; stroke-width: 1.8; }
+            .cvx-dt .prop { fill: #fffdf0; stroke: #c99700; stroke-width: 1.8; stroke-dasharray: 6 4; }
+            .cvx-dt .dec { fill: #eff4ff; stroke: #315CFF; stroke-width: 1.8; }
+            .cvx-dt .ln { fill: none; stroke: #315CFF; stroke-width: 1.8; }
+            .cvx-dt .lr { fill: none; stroke: #94a3b8; stroke-width: 1.6; stroke-dasharray: 5 4; }
+            .cvx-beh { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)) minmax(0,1.3fr); gap: 12px; align-items: stretch; }
+            .cvx-b { padding: 10px 12px; background: #fffdf0; border: 1.5px dashed #c99700; border-radius: 10px; font-size: 11.5px; line-height: 1.5; color: #475569; }
+            .cvx-b b { display: block; margin-bottom: 4px; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: #101828; }
+            .cvx-reply { display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 10px 12px; background: #fff; border: 1.5px solid #315CFF; border-radius: 10px; }
+            .cvx-reply > span:first-child { font-size: 9.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #315CFF; }
+            .cvx-reply .cvx-bub { font-size: 12px; }
+            .cvx-key { margin: 16px 2px 0; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 11.5px; color: #64748b; }
+            .cvx-key span { display: inline-flex; align-items: center; gap: 7px; }
+            .cvx-key i { display: inline-block; width: 24px; height: 14px; border-radius: 4px; background: #fff; border: 1.5px solid #315CFF; }
+            .cvx-key i.p { border: 1.5px dashed #c99700; background: #fffdf0; }
+            .cvx-note { margin: 12px 2px 0; font-size: 11.5px; line-height: 1.55; color: #94a3b8; }
+            .cvx-cta { display: flex; justify-content: flex-end; margin-top: 18px; }
+            .cvx-tag { display: inline-flex; align-items: center; gap: 6px; max-width: 100%; padding: 7px 14px; background: #fff; border: 1.5px solid #315CFF; border-radius: 8px; color: #315CFF; font-size: 12.5px; font-weight: 600; line-height: 1.3; text-decoration: none; box-shadow: 2px 3px 0 rgba(49,92,255,.28); rotate: -1deg; transition: background-color .2s ease, color .2s ease, translate .25s cubic-bezier(.2,.7,.2,1), rotate .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease; }
+            .cvx-tag:hover, .cvx-tag:focus-visible { background: #315CFF; color: #fff; translate: 0 -2px; rotate: 1deg; box-shadow: 3px 5px 0 rgba(49,92,255,.3); }
+            @media (hover: hover) and (pointer: fine) { .cvx-n, .cvx-b { transition: translate .2s cubic-bezier(.2,.7,.2,1); } .cvx-n:hover, .cvx-b:hover { translate: 0 -2px; } }
+            @media (max-width: 899.98px) { .cvx-hint { display: block; } .cvx-beh { grid-template-columns: 1fr 1fr; } .cvx-reply { grid-column: 1 / -1; } }
+            @media (max-width: 599.98px) { .cvx { padding: 26px 12px 16px; } .cvx-layer { grid-template-columns: 40px minmax(0,1fr); gap: 0 10px; } .cvx-tab b { min-width: 36px; height: 26px; padding: 0 6px; font-size: 12px; } .cvx-link { margin-left: 50px; } .cvx-beh { grid-template-columns: 1fr; } }
+            @media (prefers-reduced-motion: reduce) { .cvx-tag, .cvx-n, .cvx-b { transition: none !important; } .cvx-tag:hover, .cvx-tag:focus-visible, .cvx-n:hover, .cvx-b:hover { translate: none !important; } }
+        </style>
+            <span class="cvx-eyebrow">Conversation Design / AI Experience</span>
+            <h2 class="mb-3 text-[26px] font-semibold leading-[1.15] sm:text-[32px]">Cómo diseñamos una conversación inteligente</h2>
+            <p class="cvx-sub">De la intención del comprador a una experiencia conversacional que comprende necesidades, gestiona decisiones y facilita la exploración de vehículos.</p>
+
+            <div class="cvx" role="group" aria-label="Diagrama conectado de tres capas: intenciones, arquitectura de diálogo y comportamiento del asistente">
+                <span class="cvx-tape" style="left:7%;rotate:-5deg" aria-hidden="true"></span>
+                <span class="cvx-tape" style="right:9%;rotate:4deg;background:rgba(49,92,255,.5)" aria-hidden="true"></span>
+
+                <div class="cvx-layer">
+                    <div class="cvx-tab"><b>01</b></div>
+                    <div class="cvx-body">
+                        <div class="cvx-h"><b>Mapa de intenciones</b><span>Cómo el comprador expresa lo que necesita</span></div>
+                        <div class="cvx-row">
+                            <span class="cvx-bub cvx-bub--u">“Busco un vehículo familiar dentro de mi presupuesto.”</span>
+                            <span class="cvx-arr">→</span>
+                            <div class="cvx-n">Intención<small>Buscar vehículo</small></div>
+                        </div>
+                        <div class="cvx-slots" style="margin-top:12px" aria-label="Parámetros detectados y datos faltantes">
+                            <span class="cvx-slot cvx-slot--ok"><em>Detectado</em>tipo: familiar</span>
+                            <span class="cvx-slot cvx-slot--miss"><em>Falta</em>presupuesto (monto)</span>
+                            <span class="cvx-slot cvx-slot--miss"><em>Falta</em>uso</span>
+                            <span class="cvx-slot cvx-slot--miss"><em>Opcional</em>marca · modelo</span>
+                        </div>
                     </div>
-                    <h2 class="mb-3 text-[26px] font-bold leading-[1.15] text-[#101828] sm:text-[30px]">De la búsqueda<br /><span class="text-electric">a la transacción.</span></h2>
-                    <p class="text-[13.5px] leading-[1.55] text-[#64748b]">Compradores, vendedores y administración en un mismo ecosistema: descubrimiento, publicación, contacto y gestión comercial.</p>
+                </div>
+                <div class="cvx-link">Intención + parámetros detectados</div>
+
+                <div class="cvx-layer">
+                    <div class="cvx-tab"><b>02</b></div>
+                    <div class="cvx-body">
+                        <div class="cvx-h"><b>Arquitectura de diálogo</b><span>Cómo decide el asistente el siguiente paso</span></div>
+                        <div class="cvx-scroll" role="region" aria-label="Flujo de decisión del diálogo (desplazable)" tabindex="0">
+                            <svg class="cvx-dt" viewBox="0 40 940 228" role="img" aria-label="Arquitectura de diálogo: la intención y los parámetros llegan a una decisión sobre si hay datos suficientes. Si no, el asistente hace una pregunta de aclaración y vuelve a evaluar. Si sí, consulta el inventario y decide si hay resultados: con resultados recomienda con explicación; sin resultados explica la limitación y ofrece alternativas.">
+                            <defs><marker id="cvxA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" fill="#315CFF"/></marker><marker id="cvxG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" fill="#94a3b8"/></marker></defs>
+                            <rect class="doc" x="0" y="70" width="150" height="56" rx="28"/><text x="75" y="95" text-anchor="middle">Intención +</text><text x="75" y="112" text-anchor="middle">parámetros</text>
+                            <path class="ln" d="M150 98 H186" marker-end="url(#cvxA)"/>
+                            <path class="dec" d="M190 98 L270 48 L350 98 L270 148 Z"/><text x="270" y="95" text-anchor="middle">¿Datos</text><text x="270" y="112" text-anchor="middle">suficientes?</text>
+                            <path class="ln" d="M350 98 H396" marker-end="url(#cvxA)"/><text class="y" x="373" y="89" text-anchor="middle">Sí</text>
+                            <rect class="doc" x="400" y="70" width="140" height="56" rx="10"/><text x="470" y="95" text-anchor="middle">Consultar</text><text x="470" y="112" text-anchor="middle">el inventario</text>
+                            <path class="ln" d="M540 98 H556" marker-end="url(#cvxA)"/>
+                            <path class="dec" d="M560 98 L640 48 L720 98 L640 148 Z"/><text x="640" y="95" text-anchor="middle">¿Hay</text><text x="640" y="112" text-anchor="middle">resultados?</text>
+                            <path class="ln" d="M720 98 H756" marker-end="url(#cvxA)"/><text class="y" x="738" y="89" text-anchor="middle">Sí</text>
+                            <rect class="doc" x="760" y="70" width="180" height="56" rx="10"/><text x="850" y="95" text-anchor="middle">Recomendar con</text><text x="850" y="112" text-anchor="middle">su explicación</text>
+                            <path class="ln" d="M270 148 V186" marker-end="url(#cvxA)"/><text class="no" x="282" y="172">No</text>
+                            <rect class="prop" x="170" y="190" width="200" height="56" rx="10"/><text x="270" y="215" text-anchor="middle">Pregunta de aclaración</text><text class="s" x="270" y="233" text-anchor="middle">“¿Cuál es tu presupuesto?”</text>
+                            <path class="lr" d="M170 218 C120 218 120 98 186 98" marker-end="url(#cvxG)"/><text class="s" x="112" y="166" text-anchor="end">vuelve a evaluar</text>
+                            <path class="ln" d="M640 148 V186" marker-end="url(#cvxA)"/><text class="no" x="652" y="172">No</text>
+                            <rect class="prop" x="540" y="190" width="200" height="56" rx="10"/><text x="640" y="215" text-anchor="middle">Explicar la limitación</text><text class="s" x="640" y="233" text-anchor="middle">y ofrecer alternativas</text>
+                        </svg>
+                        </div>
+                        <p class="cvx-hint">Desliza para ver el flujo completo →</p>
+                    </div>
+                </div>
+                <div class="cvx-link">Decisión tomada → respuesta definida por reglas</div>
+
+                <div class="cvx-layer">
+                    <div class="cvx-tab"><b>03</b></div>
+                    <div class="cvx-body">
+                        <div class="cvx-h"><b>Comportamiento del asistente</b><span>Qué dice y qué no dice el asistente</span></div>
+                        <div class="cvx-chain" aria-label="Integración: interfaz de ConDuzko, API y Bot Tasker"><div class="cvx-n">Interfaz de ConDuzko<small>chat del asistente</small></div><span class="cvx-arr">⇄</span><span class="cvx-apipill">API</span><span class="cvx-arr">⇄</span><div class="cvx-n">Bot Tasker<small>plataforma conversacional</small></div></div>
+                        <div class="cvx-beh">
+                            <div class="cvx-b"><b>Instrucciones</b>Rol de asistente de búsqueda, tono cercano y claro.</div>
+                            <div class="cvx-b"><b>Contexto</b>Criterios acumulados y vehículos del inventario.</div>
+                            <div class="cvx-b"><b>Confirmación y fallback</b>Confirma cambios; ante la duda aclara, sin inventar.</div>
+                            <div class="cvx-reply"><span>Respuesta conversacional</span><span class="cvx-bub cvx-bub--a">Para uso familiar te sugiero estas opciones. ¿Cuál es tu presupuesto aproximado?</span></div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- 3 cards + flechas -->
-                <div class="flex flex-col gap-3 sm:flex-row sm:items-stretch">
-                    <!-- Usuario -->
-                    <div class="flex-1 rounded-[18px] border border-[#e9edf2] bg-panel2 p-5">
-                        <div class="mb-3 flex items-center justify-between">
-                            <span class="text-[15px] font-bold text-electric">01</span>
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="research" style="font-size:16px;color:#315CFF"></span></span>
-                        </div>
-                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Usuario</h3>
-                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Descubre vehículos, evalúa alternativas y conecta con vendedores.</p>
-                        <div class="mb-2.5 border-t border-electric/15"></div>
-                        <ul class="space-y-1.5">
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Búsqueda y filtros</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Comparación de vehículos</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Contacto con vendedor</li>
-                        </ul>
-                    </div>
-
-                    <span class="hidden flex-shrink-0 items-center px-1 text-[16px] font-semibold text-[#c3cbd8] sm:flex">→</span>
-
-                    <!-- Vendedor -->
-                    <div class="flex-1 rounded-[18px] border border-[#e9edf2] bg-panel2 p-5">
-                        <div class="mb-3 flex items-center justify-between">
-                            <span class="text-[15px] font-bold text-electric">02</span>
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="delivery" style="font-size:16px;color:#315CFF"></span></span>
-                        </div>
-                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Vendedor</h3>
-                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Publica vehículos y gestiona las oportunidades generadas dentro del marketplace.</p>
-                        <div class="mb-2.5 border-t border-electric/15"></div>
-                        <ul class="space-y-1.5">
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Publicación de vehículos</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Gestión de leads</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Seguimiento comercial</li>
-                        </ul>
-                    </div>
-
-                    <span class="hidden flex-shrink-0 items-center px-1 text-[16px] font-semibold text-[#c3cbd8] sm:flex">→</span>
-
-                    <!-- Administración -->
-                    <div class="flex-1 rounded-[18px] border border-[#e9edf2] bg-panel2 p-5">
-                        <div class="mb-3 flex items-center justify-between">
-                            <span class="text-[15px] font-bold text-electric">03</span>
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="dashboard" style="font-size:16px;color:#315CFF"></span></span>
-                        </div>
-                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Administración</h3>
-                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Supervisa el ecosistema y mantiene el control operativo de la plataforma.</p>
-                        <div class="mb-2.5 border-t border-electric/15"></div>
-                        <ul class="space-y-1.5">
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Gestión de publicaciones</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Gestión de usuarios</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Seguimiento del marketplace</li>
-                        </ul>
-                    </div>
-                </div>
+                <div class="cvx-key" aria-label="Cómo leer el diagrama"><span><i></i>Documentado en el caso</span><span><i class="p"></i>Modelado propuesto</span></div>
             </div>
+            <p class="cvx-note">La plataforma es Bot Tasker, integrada por API. El diseño conversacional es modelado propuesto: sin configuraciones ni resultados medidos. Detalle en el caso.</p>
 
-            <!-- Barra inferior -->
-            <div class="mt-5 flex flex-col gap-3 rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] px-6 py-4 sm:flex-row sm:items-center sm:gap-6">
-                <div class="flex flex-shrink-0 items-center gap-3">
-                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="target" style="font-size:15px;color:#315CFF"></span></span>
-                    <div>
-                        <span class="block text-[9.5px] font-bold uppercase tracking-[0.12em] text-electric">Un mismo ecosistema</span>
-                        <div class="mt-0.5 flex items-center gap-2 text-[12.5px] font-bold text-[#101828]">
-                            <span>Usuario</span><span class="text-[#c3cbd8]">→</span>
-                            <span>Vendedor</span><span class="text-[#c3cbd8]">→</span>
-                            <span>Administración</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hidden h-8 w-px bg-[#e4e8ee] sm:block"></div>
-                <p class="text-[12.5px] leading-[1.4] text-[#64748b]">Del descubrimiento a la gestión comercial.</p>
+            <div class="cvx-cta">
+                <a href="conduzko-case.html#arquitectura-conversacional" class="cvx-tag">
+                    Explorar arquitectura conversacional completa
+                    <span class="ic" data-icon="arrow-up-right" style="font-size:13px" aria-hidden="true"></span>
+                </a>
             </div>
         </section>
 

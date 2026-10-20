@@ -365,6 +365,194 @@
                 </div>
             </section>
 
+            <!-- 05.1 — PASEO COGNITIVO (mural completo) -->
+            <section id="paseo-cognitivo" class="border-b border-[#eef1f5] py-14" style="scroll-margin-top:96px">
+                <style>
+            /* Paseo cognitivo (5.1) — mural de investigación a ancho completo, scoped a esta página */
+            .pc-task { position: relative; display: inline-flex; align-items: baseline; gap: 8px; max-width: 100%; margin-bottom: 10px; padding: 9px 14px 9px 16px; background: #fffdf0; border: 1px solid rgba(23,23,23,.14); border-left: 3px solid #FFD34E; border-radius: 6px; box-shadow: 2px 3px 0 rgba(23,23,23,.1); rotate: -.4deg; }
+            .pc-task b { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: #315CFF; white-space: nowrap; }
+            .pc-task span { font-size: 13px; font-weight: 500; color: #101828; }
+            .pc-illus { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: #94a3b8; }
+            .pc-illus i { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #FFD34E; border: 1px solid #101828; }
+            .pc-board { position: relative; margin-top: 34px; border: 1px solid #e4e8ee; border-radius: 20px; background: rgba(255,255,255,.5); }
+            .pc-tape { position: absolute; z-index: 6; width: 84px; height: 24px; background: rgba(255,211,78,.82); border-left: 1px dashed rgba(23,23,23,.18); border-right: 1px dashed rgba(23,23,23,.18); pointer-events: none; }
+            .pc-tape--blue { background: rgba(49,92,255,.5); }
+            .pc-clip { position: absolute; z-index: 7; filter: drop-shadow(0 1px 1px rgba(16,24,40,.25)); pointer-events: none; }
+            .pc-grid { display: grid; grid-template-columns: minmax(0,1fr); }
+            .pc-profiles, .pc-notes { list-style: none; margin: 0; padding: 0; }
+            .pc-profiles { display: grid; grid-template-columns: minmax(0,1fr); gap: 10px; }
+            .pc-profile { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid rgba(23,23,23,.14); border-radius: 12px; box-shadow: 2px 3px 0 rgba(23,23,23,.1); }
+            .pc-profile--y { background: #fff6c9; rotate: -1deg; } .pc-profile--p { background: #ffe1ec; rotate: .8deg; } .pc-profile--b { background: #d9eeff; rotate: -.6deg; }
+            .pc-avatar { flex: 0 0 auto; width: 44px; height: 44px; border-radius: 50%; background: #fff; border: 1px solid rgba(23,23,23,.14); overflow: hidden; }
+            .pc-avatar svg { display: block; width: 100%; height: 100%; }
+            .pc-profile__txt { display: flex; flex-direction: column; min-width: 0; }
+            .pc-profile__tag { font-size: 9.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #315CFF; }
+            .pc-profile__name { font-size: 12.5px; font-weight: 600; line-height: 1.25; color: #101828; }
+            .pc-q { min-width: 0; }
+            .pc-q__h { display: flex; align-items: flex-start; gap: 8px; margin: 0 0 14px; font-size: 12.5px; font-weight: 600; line-height: 1.35; color: #101828; }
+            .pc-q__n { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; min-width: 26px; height: 22px; padding: 0 6px; border-radius: 999px; background: #315CFF; color: #fff; font-size: 10px; font-weight: 700; letter-spacing: .04em; }
+            .pc-notes { display: grid; }
+            .pc-note { position: relative; min-width: 0; color: #1f2937; border-radius: 3px 3px 12px 3px; box-shadow: 0 7px 10px -5px rgba(16,24,40,.28), 0 1px 0 rgba(255,255,255,.5) inset; rotate: var(--r, -1deg); transition: rotate .25s cubic-bezier(.2,.7,.2,1), translate .25s cubic-bezier(.2,.7,.2,1), box-shadow .25s ease; }
+            .pc-note--y { background: #ffe680; } .pc-note--p { background: #ffc8dc; } .pc-note--b { background: #bde3ff; }
+            .pc-note::before { content: ""; position: absolute; top: 6px; left: 50%; width: 11px; height: 11px; margin-left: -5px; border-radius: 50%; background: var(--pin, #315CFF); box-shadow: inset -2px -2px 0 rgba(0,0,0,.2), 1px 2px 2px rgba(16,24,40,.35); }
+            .pc-note p { margin: 0; font-family: "Caveat", "Segoe Script", cursive; font-weight: 700; line-height: 1.18; }
+            .pc-note__who { display: block; margin-bottom: 6px; font-size: 9px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: rgba(16,24,40,.6); }
+            .pc-notes > li:nth-child(1) { --r: -1.3deg; } .pc-notes > li:nth-child(2) { --r: 1deg; } .pc-notes > li:nth-child(3) { --r: -.7deg; }
+            .pc-q:nth-of-type(even) .pc-notes > li:nth-child(1) { --r: 1.1deg; } .pc-q:nth-of-type(even) .pc-notes > li:nth-child(2) { --r: -1.2deg; } .pc-q:nth-of-type(even) .pc-notes > li:nth-child(3) { --r: .8deg; }
+            @media (hover: hover) and (pointer: fine) {
+                .pc-note:hover { rotate: calc(var(--r, -1deg) * .3); translate: 0 -4px; box-shadow: 0 13px 16px -8px rgba(16,24,40,.34), 0 1px 0 rgba(255,255,255,.5) inset; z-index: 3; }
+            }
+            @media (prefers-reduced-motion: reduce) { .pc-note { transition: none; } .pc-note:hover { translate: none; } }
+            .pc-board { padding: 40px 24px 64px; }
+            .pc-grid { gap: 34px 26px; }
+            .pc-notes { gap: 18px; }
+            .pc-note { padding: 22px 16px 17px; }
+            .pc-note p { font-size: 18px; }
+            .pc-summary { position: relative; z-index: 2; margin: -34px 14px 0; padding: 32px 26px 24px; background: #fff; border: 1px solid #e4e8ee; border-radius: 14px; box-shadow: 0 16px 28px -14px rgba(16,24,40,.28); rotate: -.4deg; }
+            .pc-summary h3 { margin: 0 0 16px; font-size: 10.5px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: #315CFF; }
+            .pc-finds { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+            .pc-finds h4 { margin: 4px 0 4px; font-size: 14.5px; font-weight: 700; color: #101828; }
+            .pc-finds p { margin: 0; font-size: 13px; line-height: 1.55; color: #64748b; }
+            .pc-find__n { font-size: 12px; font-weight: 700; color: #315CFF; letter-spacing: .06em; }
+            .pc-concl { margin: 18px 0 0; padding-top: 14px; border-top: 1px dashed #dce3ef; font-size: 14px; font-weight: 500; line-height: 1.55; color: #101828; }
+            .pc-concl span { background: linear-gradient(transparent 62%, rgba(255,211,78,.95) 62% 90%, transparent 90%); padding: 0 .06em; }
+            @media (min-width: 640px) {
+                .pc-profiles { grid-template-columns: repeat(3, minmax(0,1fr)); }
+                .pc-finds { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 28px; }
+            }
+            @media (min-width: 760px) and (max-width: 1099.98px) {
+                .pc-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+                .pc-profiles { grid-column: 1 / -1; }
+            }
+            @media (min-width: 1100px) {
+                .pc-board { padding: 50px 36px 76px; }
+                .pc-grid { grid-template-columns: 168px repeat(4, minmax(0,1fr)); grid-template-rows: auto repeat(3, auto); gap: 24px 32px; }
+                .pc-profiles { grid-column: 1; grid-row: 2 / 5; grid-template-columns: minmax(0,1fr); grid-template-rows: subgrid; gap: 24px; }
+                .pc-profile { flex-direction: column; align-items: flex-start; justify-content: center; padding: 14px; }
+                .pc-avatar { width: 54px; height: 54px; }
+                .pc-profile__name { font-size: 13.5px; }
+                .pc-q { grid-row: 1 / 5; display: grid; grid-template-rows: subgrid; row-gap: 24px; }
+                .pc-q:nth-of-type(1) { grid-column: 2; } .pc-q:nth-of-type(2) { grid-column: 3; } .pc-q:nth-of-type(3) { grid-column: 4; } .pc-q:nth-of-type(4) { grid-column: 5; }
+                .pc-q__h { margin: 0; font-size: 13.5px; }
+                .pc-notes { grid-row: 2 / 5; grid-template-rows: subgrid; gap: 24px; }
+                .pc-note { padding: 24px 17px 19px; }
+                .pc-note__who { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+                .pc-note p { font-size: 19px; }
+                .pc-q:nth-of-type(-n+3) .pc-note::after { content: ""; position: absolute; right: -30px; top: 50%; width: 30px; height: 12px; margin-top: -6px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 12' fill='none' stroke='%23315CFF' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 7 C6 4 12 8 20 6 M15 2 L20.5 6 L15.5 10'/%3E%3C/svg%3E") no-repeat center / contain; }
+                .pc-summary { margin: -40px 36px 0; padding: 36px 40px 28px; }
+                .pc-finds h4 { font-size: 15.5px; } .pc-finds p { font-size: 13.5px; } .pc-concl { font-size: 15px; }
+            }
+        </style>
+                <div class="mb-4 flex items-center gap-2.5">
+                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[10.5px] font-bold text-white">5.1</span>
+                    <span class="text-[10px] font-bold uppercase tracking-[0.15em] text-electric">FoodDelivery</span>
+                </div>
+                <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Paseo cognitivo</h2>
+                <p class="mb-5 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Evaluamos cómo un nuevo comercio configura su tienda y publica su primer producto.</p>
+                <p class="pc-task"><b>Tarea evaluada</b><span>Configurar una tienda y publicar el primer producto.</span></p>
+                <p class="pc-illus"><i aria-hidden="true"></i>Escenario ilustrativo basado en el caso de estudio.</p>
+
+                <div class="pc-board">
+                    <span class="pc-tape" style="top:-12px;left:7%;rotate:-5deg" aria-hidden="true"></span>
+                    <span class="pc-tape pc-tape--blue" style="top:-11px;right:9%;rotate:4deg" aria-hidden="true"></span>
+                    <div class="pc-grid">
+                        <ul class="pc-profiles" aria-label="Perfiles evaluados">
+                            <li class="pc-profile pc-profile--y">
+                                <span class="pc-avatar"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 22v11c0 2 2 3 3 1l1-9zM34 22v11c0 2-2 3-3 1l-1-9z" fill="#3b2a20"/><path d="M8 47c1-9 8-13 16-13s15 4 16 13z" fill="#315CFF"/><rect x="21" y="27" width="6" height="8" rx="2" fill="#f1c9a8"/><circle cx="24" cy="20" r="9" fill="#f1c9a8"/><path d="M14 22c-1-10 5-15 10-15s11 5 10 15c-2-5-5-8-10-8s-8 3-10 8z" fill="#3b2a20"/><circle cx="20.5" cy="21" r="1" fill="#101828"/><circle cx="27.5" cy="21" r="1" fill="#101828"/><path d="M21.5 25q2.5 2 5 0" stroke="#101828" stroke-width="1.1" fill="none" stroke-linecap="round"/></svg></span>
+                                <span class="pc-profile__txt"><span class="pc-profile__tag">Usuario 01</span><span class="pc-profile__name">Emprendedora nueva</span></span>
+                            </li>
+                            <li class="pc-profile pc-profile--p">
+                                <span class="pc-avatar"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 47c1-9 8-13 16-13s15 4 16 13z" fill="#101828"/><path d="M20 34l4 7 4-7z" fill="#ffffff"/><rect x="21" y="27" width="6" height="8" rx="2" fill="#d9a67f"/><circle cx="24" cy="20" r="9" fill="#d9a67f"/><path d="M15 19c0-8 4-11 9-11s9 3 9 11c-3-3-6-4-9-4s-6 1-9 4z" fill="#1f2937"/><circle cx="20.5" cy="21" r="1" fill="#101828"/><circle cx="27.5" cy="21" r="1" fill="#101828"/><circle cx="20.5" cy="21" r="3.2" stroke="#101828" stroke-width=".9" fill="none"/><circle cx="27.5" cy="21" r="3.2" stroke="#101828" stroke-width=".9" fill="none"/><path d="M21.5 26q2.5 1.8 5 0" stroke="#101828" stroke-width="1.1" fill="none" stroke-linecap="round"/></svg></span>
+                                <span class="pc-profile__txt"><span class="pc-profile__tag">Usuario 02</span><span class="pc-profile__name">Administrador de restaurante</span></span>
+                            </li>
+                            <li class="pc-profile pc-profile--b">
+                                <span class="pc-avatar"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 47c1-9 8-13 16-13s15 4 16 13z" fill="#FFD34E"/><rect x="21" y="27" width="6" height="8" rx="2" fill="#bf8a62"/><circle cx="24" cy="21" r="9" fill="#bf8a62"/><path d="M15 15h18v-1c3-1 4-6 1-8-1-3-5-3-7-1-2-2-5-2-7 1-3 0-5 5-3 8z" fill="#ffffff" stroke="#101828" stroke-width="1"/><rect x="15" y="14" width="18" height="4" rx="1.5" fill="#ffffff" stroke="#101828" stroke-width="1"/><circle cx="20.5" cy="22" r="1" fill="#101828"/><circle cx="27.5" cy="22" r="1" fill="#101828"/><path d="M21.5 26.5q2.5 2 5 0" stroke="#101828" stroke-width="1.1" fill="none" stroke-linecap="round"/></svg></span>
+                                <span class="pc-profile__txt"><span class="pc-profile__tag">Usuario 03</span><span class="pc-profile__name">Operador gastronómico</span></span>
+                            </li>
+                        </ul>
+                        <article class="pc-q">
+                            <h3 class="pc-q__h"><span class="pc-q__n">P1</span><span>¿Qué harías primero para empezar a vender?</span></h3>
+                            <ul class="pc-notes">
+                                <li class="pc-note pc-note--y" style="--pin:#315CFF">
+                                    <span class="pc-note__who">Usuario 01 · Emprendedora nueva</span>
+                                    <p>“Buscaría cómo crear mi tienda. ¿Doy mis datos primero?”</p>
+                                </li>
+                                <li class="pc-note pc-note--p" style="--pin:#101828">
+                                    <span class="pc-note__who">Usuario 02 · Administrador de restaurante</span>
+                                    <p>“Revisaría si puedo copiar la información de otro local.”</p>
+                                </li>
+                                <li class="pc-note pc-note--b" style="--pin:#FFD34E">
+                                    <span class="pc-note__who">Usuario 03 · Operador gastronómico</span>
+                                    <p>“Vería un paso a paso; no sé qué datos son obligatorios.”</p>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="pc-q">
+                            <h3 class="pc-q__h"><span class="pc-q__n">P2</span><span>¿Qué datos del registro te generan dudas?</span></h3>
+                            <ul class="pc-notes">
+                                <li class="pc-note pc-note--y" style="--pin:#101828">
+                                    <span class="pc-note__who">Usuario 01 · Emprendedora nueva</span>
+                                    <p>“No sé qué dirección poner: la del negocio o la de mi casa.”</p>
+                                </li>
+                                <li class="pc-note pc-note--p" style="--pin:#FFD34E">
+                                    <span class="pc-note__who">Usuario 02 · Administrador de restaurante</span>
+                                    <p>“No sé qué categoría elegir; hay muchas.”</p>
+                                </li>
+                                <li class="pc-note pc-note--b" style="--pin:#315CFF">
+                                    <span class="pc-note__who">Usuario 03 · Operador gastronómico</span>
+                                    <p>“No sé qué documentos piden ni cuáles son obligatorios.”</p>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="pc-q">
+                            <h3 class="pc-q__h"><span class="pc-q__n">P3</span><span>¿Qué fue lo más difícil al agregar tu primer producto?</span></h3>
+                            <ul class="pc-notes">
+                                <li class="pc-note pc-note--y" style="--pin:#FFD34E">
+                                    <span class="pc-note__who">Usuario 01 · Emprendedora nueva</span>
+                                    <p>“No sabía qué datos hacían falta: precio, foto, descripción.”</p>
+                                </li>
+                                <li class="pc-note pc-note--p" style="--pin:#315CFF">
+                                    <span class="pc-note__who">Usuario 02 · Administrador de restaurante</span>
+                                    <p>“Subir fotos y ajustar precios me tomó tiempo.”</p>
+                                </li>
+                                <li class="pc-note pc-note--b" style="--pin:#101828">
+                                    <span class="pc-note__who">Usuario 03 · Operador gastronómico</span>
+                                    <p>“No entendí cómo activar el producto; creí que ya estaba publicado.”</p>
+                                </li>
+                            </ul>
+                        </article>
+                        <article class="pc-q">
+                            <h3 class="pc-q__h"><span class="pc-q__n">P4</span><span>¿Qué esperas ver al publicar tu producto?</span></h3>
+                            <ul class="pc-notes">
+                                <li class="pc-note pc-note--y" style="--pin:#315CFF">
+                                    <span class="pc-note__who">Usuario 01 · Emprendedora nueva</span>
+                                    <p>“Que me confirme que ya está disponible.”</p>
+                                </li>
+                                <li class="pc-note pc-note--p" style="--pin:#101828">
+                                    <span class="pc-note__who">Usuario 02 · Administrador de restaurante</span>
+                                    <p>“Ver un resumen de mis productos publicados.”</p>
+                                </li>
+                                <li class="pc-note pc-note--b" style="--pin:#FFD34E">
+                                    <span class="pc-note__who">Usuario 03 · Operador gastronómico</span>
+                                    <p>“Ver cómo luce mi producto en la tienda y poder editarlo.”</p>
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="pc-summary">
+                    <svg class="pc-clip" style="left:30px;top:-16px" viewBox="0 0 20 52" width="17" height="44" fill="none" stroke-linecap="round" aria-hidden="true"><path d="M16 8v29a7 7 0 0 1-14 0V12a5 5 0 0 1 10 0v22a3 3 0 0 1-6 0V16" stroke="#7b8494" stroke-width="2"/><path d="M16 8v29a7 7 0 0 1-14 0V12a5 5 0 0 1 10 0v22a3 3 0 0 1-6 0V16" stroke="#e5e7eb" stroke-width=".7" transform="translate(-.5 0)"/></svg>
+                    <h3>Resumen del análisis cognitivo</h3>
+                    <ol class="pc-finds">
+                        <li><span class="pc-find__n">01</span><h4>Sobrecarga en el inicio</h4><p>No saben por dónde empezar ni qué datos son obligatorios.</p></li>
+                        <li><span class="pc-find__n">02</span><h4>Dudas en la configuración</h4><p>Dirección, categoría y documentos generan confusión.</p></li>
+                        <li><span class="pc-find__n">03</span><h4>Incertidumbre en la publicación</h4><p>Esperan una confirmación clara y una vista previa de su producto.</p></li>
+                    </ol>
+                    <p class="pc-concl">Hay que <span>simplificar el proceso</span>, priorizar lo clave y confirmar cada paso.</p>
+                </div>
+            </section>
+
             <!-- 06 — FUNNEL BASELINE -->
             <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
                 <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
