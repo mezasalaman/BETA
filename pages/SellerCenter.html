@@ -311,9 +311,11 @@
             .pc-tag:hover, .pc-tag:focus-visible { background: #315CFF; color: #fff; translate: 0 -2px; rotate: 1deg; box-shadow: 3px 5px 0 rgba(49,92,255,.3); }
             @media (prefers-reduced-motion: reduce) { .pc-tag { transition: none; } .pc-tag:hover, .pc-tag:focus-visible { translate: none; } }
             @media (max-width: 759.98px) {
-                .pc-profile__txt { min-width: 0; }
+                .pc-profile__txt { min-width: 0; align-items: center; }
                 .pc-profile__name { display: none; }
-                .pc-profiles { grid-template-columns: repeat(3, minmax(0,max-content)); justify-content: start; }
+                .pc-profiles { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; }
+                .pc-profile { flex-direction: column; align-items: center; gap: 4px; padding: 8px 4px; text-align: center; }
+                .pc-profile__tag { font-size: 8.5px; letter-spacing: .06em; white-space: nowrap; }
                 .pc-board { padding: 32px 14px 20px; }
                 .pc-note { padding: 18px 12px 11px; }
                 .pc-note p { font-size: 17px; }
