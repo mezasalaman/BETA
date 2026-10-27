@@ -420,7 +420,7 @@ body.anim-ready .cta-explore:hover .cta-explore-arrow {
 @keyframes cta-wave {
     0%   { inset: -2px;  opacity: 0; }
     15%  { opacity: .9; }
-    100% { inset: -34px; opacity: 0; }
+    100% { inset: -22px; opacity: 0; }
 }
 .cta-explore { animation: cta-breathe 3.2s ease-in-out infinite; }
 .cta-explore::before { animation: cta-wave 3.2s cubic-bezier(.2,.6,.3,1) infinite; }
