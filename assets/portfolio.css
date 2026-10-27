@@ -399,6 +399,40 @@ body.anim-ready .cta-explore:hover .cta-explore-arrow {
     outline-offset: 3px;
 }
 
+/* Pulso radiante: respiración + dos ondas que nacen del borde real del botón.
+   Ondas en ::before/::after (detrás, sin capturar clics); `scale` es independiente de `transform`. */
+.cta-explore { isolation: isolate; }
+.cta-explore::before,
+.cta-explore::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: -2px;
+    border: 2.5px solid #315CFF;
+    border-radius: 9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+@keyframes cta-breathe {
+    0%, 100% { scale: 1; }
+    50% { scale: 1.06; }
+}
+@keyframes cta-wave {
+    0%   { inset: -2px;  opacity: 0; }
+    15%  { opacity: .9; }
+    100% { inset: -34px; opacity: 0; }
+}
+.cta-explore { animation: cta-breathe 3.2s ease-in-out infinite; }
+.cta-explore::before { animation: cta-wave 3.2s cubic-bezier(.2,.6,.3,1) infinite; }
+.cta-explore::after  { animation: cta-wave 3.2s cubic-bezier(.2,.6,.3,1) 1.6s infinite; }
+.cta-explore:hover,
+.cta-explore:focus-visible,
+.cta-explore:active { animation-play-state: paused; }
+.cta-explore:hover::before, .cta-explore:hover::after,
+.cta-explore:focus-visible::before, .cta-explore:focus-visible::after,
+.cta-explore:active::before, .cta-explore:active::after { animation: none; opacity: 0; }
+.cta-explore:hover, .cta-explore:focus-visible, .cta-explore:active { animation: none; scale: 1; }
+
 /* Entrada al viewport: reutiliza el sistema .reveal existente (ver assets/site.js) */
 body.anim-ready .cta-explore.reveal {
     transform: translateY(10px);
@@ -410,6 +444,8 @@ body.anim-ready .cta-explore.reveal.in {
 
 @media (prefers-reduced-motion: reduce) {
     .cta-explore, .cta-explore-arrow { transition: none !important; }
+    .cta-explore, .cta-explore::before, .cta-explore::after { animation: none !important; }
+    .cta-explore::before, .cta-explore::after { display: none; }
     body.anim-ready .cta-explore:hover,
     body.anim-ready .cta-explore:hover .cta-explore-arrow,
     .cta-explore:active { transform: none !important; filter: none !important; }
