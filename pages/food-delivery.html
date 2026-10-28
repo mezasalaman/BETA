@@ -92,208 +92,112 @@
         </header>
 
         <!-- ================= PROBLEMA Y SOLUCIÓN ================= -->
-        <section class="nb-host mx-auto w-[90%] max-w-grid py-14">
-            <span class="nbp nbp-check" style="top:50px;right:6px" aria-hidden="true"></span>
-            <h2 class="mb-6 text-[24px] font-semibold">Problema y Solución</h2>
-            <div class="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2">
-
-                <!-- Problema -->
-                <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
-                    <div class="mb-4 flex items-center gap-2.5">
-                        <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-err/10"><span class="ic" data-icon="warning" style="font-size:15px;color:#dc2626"></span></span>
-                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-err">El problema</span>
-                    </div>
-                    <h3 class="mb-2.5 text-[22px] font-bold leading-[1.15] text-[#101828] sm:text-[25px]">Comercios que <span class="text-err">no se activaban.</span></h3>
-                    <p class="mb-5 text-[13px] leading-[1.5] text-[#64748b]">Solo 48% de los comercios que iniciaban el onboarding lograba publicar su tienda.</p>
-
-                    <div class="mb-5 flex items-start">
-                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-err/10 sm:h-11 sm:w-11"><span class="ic" data-icon="design-systems" style="font-size:18px;color:#dc2626"></span></div>
-                            <div class="text-[12px] font-bold text-[#101828]">Caída inicial</div>
-                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">−22 pts en el primer paso</div>
-                        </div>
-                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
-                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-err/10 sm:h-11 sm:w-11"><span class="ic" data-icon="process" style="font-size:18px;color:#dc2626"></span></div>
-                            <div class="text-[12px] font-bold text-[#101828]">Abandono</div>
-                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Antes de terminar</div>
-                        </div>
-                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
-                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-err/10 sm:h-11 sm:w-11"><span class="ic" data-icon="warning" style="font-size:18px;color:#dc2626"></span></div>
-                            <div class="text-[12px] font-bold text-[#101828]">Tienda sin publicar</div>
-                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Sin valor para el comercio</div>
-                        </div>
-                    </div>
-
-                    <div class="mt-auto flex items-center divide-x divide-err/15 rounded-[14px] bg-err/5 px-5 py-3.5">
-                        <div class="flex-1 pr-4">
-                            <span class="block text-[9.5px] font-bold uppercase tracking-wide text-[#64748b]">Activation Rate</span>
-                            <span class="text-[18px] font-bold text-err">48% <span class="text-[11px] font-medium text-[#64748b]">publicaba</span></span>
-                        </div>
-                        <div class="flex-1 pl-4">
-                            <span class="block text-[9.5px] font-bold uppercase tracking-wide text-[#64748b]">Abandono</span>
-                            <span class="text-[16px] font-bold text-err">41%</span>
-                        </div>
-                    </div>
+        <section id="problema-solucion" class="ps nb-host mx-auto w-[90%] max-w-grid py-14" aria-labelledby="problema-solucion-title">
+            <div class="ps-head">
+                <div>
+                    <p class="ps-eyebrow">Problema y solución</p>
+                    <h2 id="problema-solucion-title" class="ps-title">De registrarse a publicar la tienda.</h2>
                 </div>
-
-                <!-- Solución -->
-                <div class="flex flex-col rounded-[24px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
-                    <div class="mb-4 flex items-center gap-2.5">
-                        <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="intro" style="font-size:15px;color:#315CFF"></span></span>
-                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">La solución</span>
-                    </div>
-                    <h3 class="mb-2.5 text-[22px] font-bold leading-[1.15] text-[#101828] sm:text-[25px]">Un onboarding que <span class="text-electric">activa.</span></h3>
-                    <p class="mb-5 text-[13px] leading-[1.5] text-[#64748b]">Un flujo guiado con pasos mejor pensados, progreso visible y validaciones en tiempo real.</p>
-
-                    <div class="mb-5 flex items-start">
-                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-electric/10 sm:h-11 sm:w-11"><span class="ic" data-icon="design-systems" style="font-size:18px;color:#315CFF"></span></div>
-                            <div class="text-[12px] font-bold text-[#101828]">Flujo guiado</div>
-                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Paso a paso</div>
-                        </div>
-                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
-                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-electric/10 sm:h-11 sm:w-11"><span class="ic" data-icon="rocket" style="font-size:18px;color:#315CFF"></span></div>
-                            <div class="text-[12px] font-bold text-[#101828]">Menos errores</div>
-                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Validación en vivo</div>
-                        </div>
-                        <span class="mt-[18px] flex-shrink-0 px-0.5 text-[15px] font-semibold text-[#c3cbd8]">→</span>
-                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full bg-electric/10 sm:h-11 sm:w-11"><span class="ic" data-icon="data-analysis" style="font-size:18px;color:#315CFF"></span></div>
-                            <div class="text-[12px] font-bold text-[#101828]">Tienda publicada</div>
-                            <div class="mt-0.5 text-[10px] text-[#94a3b8]">Más comercios activos</div>
-                        </div>
-                    </div>
-
-                    <div class="mt-auto flex items-center divide-x divide-electric/15 rounded-[14px] bg-electric/5 px-5 py-3.5">
-                        <div class="flex flex-1 items-center gap-2.5 pr-4">
-                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="arrow-up-right" style="font-size:14px;color:#315CFF"></span></span>
-                            <div>
-                                <span class="block text-[9px] font-bold uppercase tracking-wide text-[#64748b]">Activation Rate</span>
-                                <span class="block text-[12.5px] font-bold text-[#101828]">63%</span>
-                                <span class="block text-[10px] text-[#64748b]">desde 48%</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-1 items-center gap-2.5 pl-4">
-                            <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="profile" style="font-size:14px;color:#315CFF"></span></span>
-                            <div>
-                                <span class="block text-[9px] font-bold uppercase tracking-wide text-[#64748b]">Abandono</span>
-                                <span class="block text-[12.5px] font-bold text-[#101828]">30%</span>
-                                <span class="block text-[10px] text-[#64748b]">desde 41%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+            <div class="ps-grid">
+                <article class="ps-col">
+                    <p class="ps-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>01 / El problema</p>
+                    <h3>Comercios que no se activaban.</h3>
+                    <p>Solo 48% de los comercios que iniciaban el onboarding lograba publicar su tienda; la mayor caída ocurría entre el registro y el contexto del comercio.</p>
+                    <div class="ps-foot"><div class="ps-metric"><b>48%</b><span>Activación inicial · comercios que publicaban su tienda (línea base)</span></div></div>
+                </article>
+                <article class="ps-col">
+                    <p class="ps-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M19 17v4M17 19h4"/></svg>02 / La solución</p>
+                    <h3>Un onboarding que activa.</h3>
+                    <p>Un flujo guiado con pasos mejor pensados, progreso visible y validaciones en tiempo real.</p>
+                    <div class="ps-foot"><div class="ps-metric"><b>63%</b><span>Activación tras el lanzamiento · desde 48% (+15 pp)</span></div><p class="ps-note">Resultado observado en el seguimiento posterior; no demuestra por sí solo que el rediseño causara toda la mejora.</p></div>
+                </article>
+            </div>
+            <ul class="ps-biz"><li><strong>Desafío</strong>Convertir adquisición en activación.</li><li><strong>Inversión asociada</strong>S/52K al mes en adquisición de comercios que no se activaban · estimado del case study, no es información oficial.</li></ul>
         </section>
 
-        <!-- ================= CONTEXTO DE NEGOCIO ================= -->
+        <!-- ================= ECOSISTEMA DE PRODUCTO ================= -->
         <section class="nb-host mx-auto w-[90%] max-w-grid py-14">
-            <span class="nbp nbp-nodes" style="top:50px;right:6px" aria-hidden="true"></span>
-            <h2 class="mb-6 text-[24px] font-semibold">Contexto de negocio</h2>
-
-            <!-- Bloque superior: Contexto + Problema | Funnel -->
-            <div class="mb-5 grid grid-cols-1 gap-5 lg:grid-cols-2">
-                <!-- Izquierda: contexto + problema -->
-                <div class="rounded-[20px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
-                    <span class="mb-3 block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">Contexto de negocio</span>
-                    <h3 class="mb-3 text-[22px] font-semibold leading-[1.2] text-[#101828] sm:text-[25px]">Muchos comercios llegaban.<br />Muy pocos lograban activarse.</h3>
-                    <p class="mb-2.5 text-[13.5px] leading-[1.55] text-[#64748b]">FoodDelivery necesitaba más comercios activos, pero el onboarding era la barrera.</p>
-                    <p class="text-[13.5px] leading-[1.55] text-[#64748b]">Adquirir comercios no alcanzaba si no llegaban a publicar su tienda.</p>
+            <span class="nbp nbp-bars" style="top:246px;left:2px;width:64px;height:46px" aria-hidden="true"></span>
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-[30%_1fr] lg:items-start">
+                <!-- Intro -->
+                <div>
+                    <div class="mb-3 flex items-center gap-2">
+                        <span class="h-1.5 w-1.5 rounded-full bg-[#d97706]"></span>
+                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-[#d97706]">Ecosistema de producto</span>
+                    </div>
+                    <h2 class="mb-3 text-[26px] font-bold leading-[1.15] text-[#101828] sm:text-[30px]">Del comercio<br /><span class="text-[#d97706]">a la mesa.</span></h2>
+                    <p class="text-[13.5px] leading-[1.55] text-[#64748b]">Tres experiencias conectadas: activación del comercio, operación diaria y compra del cliente.</p>
                 </div>
 
-                <!-- Derecha: funnel / lógica de negocio -->
-                <div class="relative rounded-[20px] border border-[#e9edf2] bg-panel2 p-6 sm:p-7">
-                    <div class="mb-4 flex items-start justify-between gap-3">
-                        <span class="block text-[11px] font-bold uppercase tracking-[0.15em] text-electric">Del interés a la activación</span>
-                        <span class="flex-shrink-0 whitespace-nowrap rounded-full border border-electric/20 bg-electric/10 px-2.5 py-0.5 text-[10px] font-semibold text-electric">El reto no era atraer, sino activar.</span>
+                <!-- 3 cards + flechas -->
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-stretch">
+                    <!-- Comercio -->
+                    <div class="flex-1 rounded-[18px] border border-[#fbbf24]/25 bg-[#fffbeb] p-5">
+                        <div class="mb-3 flex items-center justify-between">
+                            <span class="text-[15px] font-bold text-[#d97706]">01</span>
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="seller" style="font-size:16px;color:#d97706"></span></span>
+                        </div>
+                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Comercio</h3>
+                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Activa y gestiona tu negocio en pocos pasos.</p>
+                        <div class="mb-2.5 border-t border-[#fbbf24]/20"></div>
+                        <ul class="space-y-1.5">
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Onboarding</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Configuración</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Publicación</li>
+                        </ul>
                     </div>
 
-                    <div class="flex items-start">
-                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 sm:h-10 sm:w-10"><span class="ic" data-icon="trending-up" style="font-size:16px;color:#315CFF"></span></div>
-                            <div class="text-[10px] font-semibold text-[#101828] sm:text-[11.5px]">Adquisición</div>
-                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Comercios que llegan a la plataforma</div>
+                    <span class="hidden flex-shrink-0 items-center px-1 text-[16px] font-semibold text-[#c3cbd8] sm:flex">→</span>
+
+                    <!-- Operación -->
+                    <div class="flex-1 rounded-[18px] border border-electric/20 bg-electric/5 p-5">
+                        <div class="mb-3 flex items-center justify-between">
+                            <span class="text-[15px] font-bold text-electric">02</span>
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="dashboard" style="font-size:16px;color:#315CFF"></span></span>
                         </div>
-                        <span class="mt-[14px] flex-shrink-0 px-0 text-[13px] font-semibold text-[#94a3b8] sm:mt-[18px] sm:px-1 sm:text-[17px]">→</span>
-                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 sm:h-10 sm:w-10"><span class="ic" data-icon="process" style="font-size:16px;color:#315CFF"></span></div>
-                            <div class="text-[10px] font-semibold text-[#101828] sm:text-[11.5px]">Onboarding</div>
-                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Completan su registro</div>
-                        </div>
-                        <span class="mt-[14px] flex-shrink-0 px-0 text-[13px] font-semibold text-[#94a3b8] sm:mt-[18px] sm:px-1 sm:text-[17px]">→</span>
-                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-9 w-9 items-center justify-center rounded-full border-2 border-electric bg-electric/15 sm:h-11 sm:w-11"><span class="ic" data-icon="verified" style="font-size:18px;color:#315CFF"></span></div>
-                            <div class="text-[12px] font-bold text-electric">Activación</div>
-                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Publican su tienda</div>
-                        </div>
-                        <span class="mt-[14px] flex-shrink-0 px-0 text-[13px] font-semibold text-[#94a3b8] sm:mt-[18px] sm:px-1 sm:text-[17px]">→</span>
-                        <div class="flex min-w-0 flex-1 flex-col items-center text-center">
-                            <div class="mx-auto mb-2 flex h-8 w-8 items-center justify-center rounded-full bg-electric/10 sm:h-10 sm:w-10"><span class="ic" data-icon="growth" style="font-size:16px;color:#315CFF"></span></div>
-                            <div class="text-[10px] font-semibold text-[#101828] sm:text-[11.5px]">Crecimiento</div>
-                            <div class="mt-0.5 text-[9.5px] leading-[1.25] text-[#94a3b8]">Comienzan a recibir pedidos</div>
-                        </div>
+                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Operación</h3>
+                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Controla y gestiona tu operación en un solo lugar.</p>
+                        <div class="mb-2.5 border-t border-electric/15"></div>
+                        <ul class="space-y-1.5">
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Pedidos</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Productos</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Gestión</li>
+                        </ul>
                     </div>
 
-                    <!-- Bracket: Adquisición → Onboarding → Activación (excluye Crecimiento) -->
-                    <div class="mt-3 w-[75%]">
-                        <div class="relative h-3">
-                            <div class="absolute inset-x-0 bottom-0 h-3 rounded-b-[10px] border-b border-l border-r border-[#dbe4f3]"></div>
-                        </div>
-                        <div class="flex flex-col items-center">
-                            <div class="h-2.5 w-px bg-[#dbe4f3]"></div>
-                            <span class="mt-1.5 inline-flex max-w-full items-center whitespace-nowrap rounded-full bg-electric/10 px-3.5 py-1.5 text-[10.5px] font-semibold text-electric">Aquí se perdía más de la mitad de los comercios</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <span class="hidden flex-shrink-0 items-center px-1 text-[16px] font-semibold text-[#c3cbd8] sm:flex">→</span>
 
-            <!-- Métricas -->
-            <div class="mb-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
-                <div class="flex items-center gap-3.5 rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
-                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="profile" style="font-size:18px;color:#315CFF"></span></div>
-                    <div>
-                        <span class="block text-[26px] font-bold leading-none text-electric">48%</span>
-                        <p class="mt-1 text-[12.5px] font-semibold text-[#101828]">Activation Rate</p>
-                        <p class="mt-0.5 text-[11px] leading-[1.35] text-[#64748b]">Comercios que lograban publicar su tienda.</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3.5 rounded-[16px] border border-[#e9edf2] bg-panel2 p-5">
-                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="funnel" style="font-size:18px;color:#315CFF"></span></div>
-                    <div>
-                        <span class="block text-[26px] font-bold leading-none text-electric">41%</span>
-                        <p class="mt-1 text-[12.5px] font-semibold text-[#101828]">Abandono</p>
-                        <p class="mt-0.5 text-[11px] leading-[1.35] text-[#64748b]">Usuarios que dejaban el onboarding antes de completarlo.</p>
-                    </div>
-                </div>
-                <div class="relative flex items-center gap-3.5 rounded-[16px] border border-[#e9edf2] bg-panel2 p-5 pt-6">
-                    <div class="absolute right-3 top-3 flex max-w-[128px] items-start gap-1 rounded-[6px] bg-electric/10 px-2 py-1">
-                        <span class="ic mt-[1px] flex-shrink-0" data-icon="info" style="font-size:9px;color:#315CFF"></span>
-                        <span class="text-[8px] font-medium leading-[1.3] text-electric">Dato estimado, no oficial.</span>
-                    </div>
-                    <div class="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="data-analysis" style="font-size:18px;color:#315CFF"></span></div>
-                    <div>
-                        <span class="block text-[26px] font-bold leading-none text-electric">S/52K</span>
-                        <p class="mt-1 text-[12.5px] font-semibold text-[#101828]">Inversión asociada</p>
-                        <p class="mt-0.5 text-[11px] leading-[1.35] text-[#64748b]">Adquisición vinculada a comercios que no alcanzaban activación.</p>
+                    <!-- Cliente -->
+                    <div class="flex-1 rounded-[18px] border border-[#16a34a]/20 bg-[#16a34a]/[0.05] p-5">
+                        <div class="mb-3 flex items-center justify-between">
+                            <span class="text-[15px] font-bold text-[#16a34a]">03</span>
+                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="profile" style="font-size:16px;color:#16a34a"></span></span>
+                        </div>
+                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Cliente</h3>
+                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Descubre, compra y haz seguimiento fácilmente.</p>
+                        <div class="mb-2.5 border-t border-[#16a34a]/15"></div>
+                        <ul class="space-y-1.5">
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Descubrimiento</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Compra</li>
+                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Seguimiento</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Desafío de negocio -->
-            <div class="flex flex-col items-center gap-5 rounded-[16px] border border-[#e9edf2] bg-panel2 px-7 py-5 text-center sm:flex-row sm:items-center sm:text-left">
-                <div class="flex flex-1 items-center gap-3.5">
-                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="target" style="font-size:17px;color:#315CFF"></span></div>
-                    <div>
-                        <span class="block text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Desafío de negocio</span>
-                        <h4 class="mt-0.5 text-[17px] font-semibold text-[#101828]">Convertir adquisición en activación.</h4>
+            <!-- Barra inferior -->
+            <div class="mt-5 flex flex-col gap-3 rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] px-6 py-4 sm:flex-row sm:items-center sm:gap-6">
+                <div class="flex flex-shrink-0 items-center gap-3">
+                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="design-systems" style="font-size:15px;color:#315CFF"></span></span>
+                    <div class="flex items-center gap-2 text-[12.5px] font-bold text-[#101828]">
+                        <span>Comercio</span><span class="text-[#c3cbd8]">→</span>
+                        <span>Operación</span><span class="text-[#c3cbd8]">→</span>
+                        <span>Cliente</span>
                     </div>
                 </div>
-                <div class="hidden h-10 w-px bg-[#e4e8ee] sm:block"></div>
-                <p class="flex-1 text-[13px] leading-[1.5] text-[#64748b] sm:text-left">Simplificar el onboarding para que más comercios publiquen su tienda.</p>
+                <div class="hidden h-8 w-px bg-[#e4e8ee] sm:block"></div>
+                <p class="text-[12.5px] leading-[1.4] text-[#64748b]">Una misma lógica de producto conectando todo el journey.</p>
             </div>
         </section>
 
@@ -458,89 +362,67 @@
             </div>
         </section>
 
-        <!-- ================= ECOSISTEMA DE PRODUCTO ================= -->
-        <section class="nb-host mx-auto w-[90%] max-w-grid py-14">
-            <span class="nbp nbp-bars" style="top:246px;left:2px;width:64px;height:46px" aria-hidden="true"></span>
-            <div class="grid grid-cols-1 gap-6 lg:grid-cols-[30%_1fr] lg:items-start">
-                <!-- Intro -->
+        <!-- ================= DOCUMENTACIÓN DE PRODUCTO · ANÁLISIS UX ================= -->
+        <section id="documentacion-flujo" class="nb-host mx-auto w-[90%] max-w-grid py-14" aria-labelledby="doc-flujo-title">
+            <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_300px] lg:items-end">
                 <div>
-                    <div class="mb-3 flex items-center gap-2">
-                        <span class="h-1.5 w-1.5 rounded-full bg-[#d97706]"></span>
-                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-[#d97706]">Ecosistema de producto</span>
-                    </div>
-                    <h2 class="mb-3 text-[26px] font-bold leading-[1.15] text-[#101828] sm:text-[30px]">Del comercio<br /><span class="text-[#d97706]">a la mesa.</span></h2>
-                    <p class="text-[13.5px] leading-[1.55] text-[#64748b]">Tres experiencias conectadas: activación del comercio, operación diaria y compra del cliente.</p>
+                    <p class="mb-4 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#667085]">Documentación de producto · Análisis UX</p>
+                    <h2 id="doc-flujo-title" class="mb-5 max-w-[760px] text-[30px] font-bold leading-[1.1] text-[#101828] sm:text-[44px]">Documentar el <span class="rounded-[8px] bg-[#315CFF]/10 px-2 text-[#315CFF]">recorrido</span> para anticipar fricciones.</h2>
+                    <p class="max-w-[640px] text-[16px] leading-[1.6] text-[#475569] md:text-[18px]">Documenté el proceso desde el registro hasta la primera carta, identificando dependencias y escenarios que necesitaban validación.</p>
                 </div>
-
-                <!-- 3 cards + flechas -->
-                <div class="flex flex-col gap-3 sm:flex-row sm:items-stretch">
-                    <!-- Comercio -->
-                    <div class="flex-1 rounded-[18px] border border-[#fbbf24]/25 bg-[#fffbeb] p-5">
-                        <div class="mb-3 flex items-center justify-between">
-                            <span class="text-[15px] font-bold text-[#d97706]">01</span>
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="seller" style="font-size:16px;color:#d97706"></span></span>
-                        </div>
-                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Comercio</h3>
-                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Activa y gestiona tu negocio en pocos pasos.</p>
-                        <div class="mb-2.5 border-t border-[#fbbf24]/20"></div>
-                        <ul class="space-y-1.5">
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Onboarding</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Configuración</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#d97706"></span>Publicación</li>
-                        </ul>
-                    </div>
-
-                    <span class="hidden flex-shrink-0 items-center px-1 text-[16px] font-semibold text-[#c3cbd8] sm:flex">→</span>
-
-                    <!-- Operación -->
-                    <div class="flex-1 rounded-[18px] border border-electric/20 bg-electric/5 p-5">
-                        <div class="mb-3 flex items-center justify-between">
-                            <span class="text-[15px] font-bold text-electric">02</span>
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="dashboard" style="font-size:16px;color:#315CFF"></span></span>
-                        </div>
-                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Operación</h3>
-                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Controla y gestiona tu operación en un solo lugar.</p>
-                        <div class="mb-2.5 border-t border-electric/15"></div>
-                        <ul class="space-y-1.5">
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Pedidos</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Productos</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#315CFF"></span>Gestión</li>
-                        </ul>
-                    </div>
-
-                    <span class="hidden flex-shrink-0 items-center px-1 text-[16px] font-semibold text-[#c3cbd8] sm:flex">→</span>
-
-                    <!-- Cliente -->
-                    <div class="flex-1 rounded-[18px] border border-[#16a34a]/20 bg-[#16a34a]/[0.05] p-5">
-                        <div class="mb-3 flex items-center justify-between">
-                            <span class="text-[15px] font-bold text-[#16a34a]">03</span>
-                            <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white"><span class="ic" data-icon="profile" style="font-size:16px;color:#16a34a"></span></span>
-                        </div>
-                        <h3 class="mb-1.5 text-[15px] font-bold text-[#101828]">Cliente</h3>
-                        <p class="mb-3 text-[12px] leading-[1.4] text-[#64748b]">Descubre, compra y haz seguimiento fácilmente.</p>
-                        <div class="mb-2.5 border-t border-[#16a34a]/15"></div>
-                        <ul class="space-y-1.5">
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Descubrimiento</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Compra</li>
-                            <li class="flex items-center gap-1.5 text-[11.5px] font-medium text-[#101828]"><span class="ic" data-icon="success" style="font-size:13px;color:#16a34a"></span>Seguimiento</li>
-                        </ul>
-                    </div>
+                <div class="border-t-[3px] border-[#315CFF] pt-4 lg:w-[300px]" style="border-top-width:3px">
+                    <h3 class="mb-2 text-[18px] font-semibold text-[#101828]">Mi aporte</h3>
+                    <p class="text-[14px] leading-[1.6] text-[#667085]">Análisis del flujo · Documentación funcional · Escenarios alternativos</p>
                 </div>
             </div>
 
-            <!-- Barra inferior -->
-            <div class="mt-5 flex flex-col gap-3 rounded-[16px] border border-[#e9edf2] bg-[#f6f7f9] px-6 py-4 sm:flex-row sm:items-center sm:gap-6">
-                <div class="flex flex-shrink-0 items-center gap-3">
-                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="design-systems" style="font-size:15px;color:#315CFF"></span></span>
-                    <div class="flex items-center gap-2 text-[12.5px] font-bold text-[#101828]">
-                        <span>Comercio</span><span class="text-[#c3cbd8]">→</span>
-                        <span>Operación</span><span class="text-[#c3cbd8]">→</span>
-                        <span>Cliente</span>
-                    </div>
+            <div class="mt-10 rounded-[12px] border border-[#e4e9f2] bg-[#fbfcfe] p-4 sm:p-6">
+                <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+                    <h3 class="text-[20px] font-semibold text-[#101828]">Registro y construcción de la carta</h3>
+                    <button type="button" id="flujo-open" class="inline-flex items-center gap-2 rounded-full border border-[#315CFF] bg-white px-4 py-2 text-[13px] font-semibold text-[#315CFF] transition hover:bg-[#315CFF]/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#315CFF]" aria-haspopup="dialog">
+                        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M10 21H3v-7M21 3l-8 8M3 21l8-8"/></svg>
+                        Ampliar diagrama
+                    </button>
                 </div>
-                <div class="hidden h-8 w-px bg-[#e4e8ee] sm:block"></div>
-                <p class="text-[12.5px] leading-[1.4] text-[#64748b]">Una misma lógica de producto conectando todo el journey.</p>
+                <div class="overflow-x-auto rounded-[8px] border border-[#e4e9f2] bg-white p-3 sm:p-4" tabindex="0" role="region" aria-label="Diagrama de flujo, desplazable horizontalmente">
+                    <img src="../assets/projects/food/flujo-registro-carta.svg" alt="Diagrama de flujo del registro y la construcción de la carta: registro, activación por correo e ingreso; primera tienda, carta, categorías, productos, adicionales y descuentos; revisión de la carta y fin de la guía. Los errores, decisiones y reintentos propuestos aparecen en ámbar." width="1360" height="620" loading="lazy" class="block h-auto w-full min-w-[760px]" />
+                </div>
+                <div class="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-[#475467]">
+                    <span class="inline-flex items-center gap-2"><i class="inline-block h-3 w-3 rounded-full bg-[#315CFF]"></i>Flujo confirmado</span>
+                    <span class="inline-flex items-center gap-2"><i class="inline-block h-3 w-3 rounded-full bg-[#f2a53a]"></i>Casuísticas propuestas</span>
+                </div>
             </div>
+
+            <div class="mt-5 flex flex-col gap-1 rounded-[10px] bg-[#315CFF]/[0.07] px-5 py-4 sm:flex-row sm:items-center sm:gap-5">
+                <span class="inline-flex items-center gap-2 text-[14px] font-semibold text-[#315CFF]"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>Decisión de alcance</span>
+                <p class="text-[14px] leading-[1.5] text-[#475569]">Separé la finalización de la carta de la activación comercial para delimitar el onboarding guiado.</p>
+            </div>
+
+            <ol class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-0">
+                <li class="md:pr-8"><span class="text-[15px] font-bold text-[#315CFF]">01</span><h3 class="mt-2 text-[17px] font-semibold text-[#101828]">Ordenar el recorrido</h3><p class="mt-1 text-[14px] leading-[1.5] text-[#667085]">Tienda → carta → categorías → productos.</p></li>
+                <li class="md:border-l md:border-[#e4e9f2] md:px-8"><span class="text-[15px] font-bold text-[#315CFF]">02</span><h3 class="mt-2 text-[17px] font-semibold text-[#101828]">Anticipar fricciones</h3><p class="mt-1 text-[14px] leading-[1.5] text-[#667085]">Errores, reintentos y rutas de corrección.</p></li>
+                <li class="md:border-l md:border-[#e4e9f2] md:pl-8"><span class="text-[15px] font-bold text-[#315CFF]">03</span><h3 class="mt-2 text-[17px] font-semibold text-[#101828]">Alinear decisiones</h3><p class="mt-1 text-[14px] leading-[1.5] text-[#667085]">Una base para discutir reglas con el equipo.</p></li>
+            </ol>
+
+            <dialog id="flujo-dialog" aria-labelledby="flujo-dialog-title" style="width:min(1280px,96vw);max-height:94vh;padding:0;border:0;border-radius:12px;background:#fff;overflow:hidden">
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid #e4e9f2">
+                    <h3 id="flujo-dialog-title" class="text-[17px] font-semibold text-[#101828]">Registro y construcción de la carta</h3>
+                    <button type="button" id="flujo-close" class="rounded-full border border-[#315CFF] px-4 py-1.5 text-[13px] font-semibold text-[#315CFF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#315CFF]">Cerrar</button>
+                </div>
+                <div style="overflow:auto;max-height:calc(94vh - 62px);padding:16px" tabindex="0">
+                    <img src="../assets/projects/food/flujo-registro-carta.svg" alt="" width="1360" height="620" style="display:block;width:100%;min-width:1000px;height:auto" />
+                </div>
+            </dialog>
+            <script>
+            (function () {
+                var d = document.getElementById("flujo-dialog"), o = document.getElementById("flujo-open"), c = document.getElementById("flujo-close");
+                if (!d || !o || !c || !d.showModal) return;
+                o.addEventListener("click", function () { d.showModal(); });
+                c.addEventListener("click", function () { d.close(); });
+                d.addEventListener("click", function (e) { if (e.target === d) d.close(); });
+                d.addEventListener("close", function () { o.focus(); });
+            })();
+            </script>
         </section>
 
         <!-- ================= SISTEMA DE DISEÑO ================= -->
@@ -553,8 +435,8 @@
                         <span class="h-1.5 w-1.5 rounded-full" style="background:#ff6a00"></span>
                         <span class="text-[10.5px] font-bold uppercase tracking-[0.15em]" style="color:#ff6a00">Sistema de diseño</span>
                     </div>
-                    <h2 class="mb-3 text-[22px] font-bold leading-[1.2] sm:text-[24px]">Una base visual para <span style="color:#ff6a00">todo el ecosistema de delivery.</span></h2>
-                    <p class="mb-4 text-[13px] leading-[1.55] text-[#64748b]">Una base visual compartida para mantener consistencia entre los distintos puntos del ecosistema y acelerar el desarrollo de nuevas experiencias.</p>
+                    <h2 class="mb-3 text-[22px] font-bold leading-[1.2] sm:text-[24px]">Una base visual para <span style="color:#ff6a00">las interfaces de este caso.</span></h2>
+                    <p class="mb-4 text-[13px] leading-[1.55] text-[#64748b]">Una base visual compartida para mantener consistencia entre los distintos puntos del ecosistema y facilitar nuevas pantallas.</p>
                     <ul class="space-y-2">
                         <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#101828]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full" style="background:#ff6a001a"><span class="ic" data-icon="success" style="font-size:11px;color:#ff6a00"></span></span>Componentes reutilizables</li>
                         <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#101828]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full" style="background:#ff6a001a"><span class="ic" data-icon="success" style="font-size:11px;color:#ff6a00"></span></span>Estilos consistentes</li>
@@ -670,10 +552,10 @@
             <div class="mt-4 flex flex-col gap-3 rounded-[16px] border border-[#eef1f5] bg-[#f6f7f9] px-6 py-4 sm:flex-row sm:items-center sm:gap-6">
                 <div class="flex flex-shrink-0 items-center gap-3">
                     <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full" style="background:#ff6a001a"><span class="ic" data-icon="design-systems" style="font-size:15px;color:#ff6a00"></span></span>
-                    <span class="text-[12.5px] font-bold text-[#101828]">Un sistema visual al servicio del ecosistema.</span>
+                    <span class="text-[12.5px] font-bold text-[#101828]">Un sistema visual al servicio de las interfaces del caso.</span>
                 </div>
                 <div class="hidden h-8 w-px bg-[#e4e8ee] sm:block"></div>
-                <p class="text-[12.5px] leading-[1.4] text-[#64748b]">Componentes, colores y patrones diseñados para acelerar el desarrollo de nuevas experiencias y mantener consistencia en todo el producto.</p>
+                <p class="text-[12.5px] leading-[1.4] text-[#64748b]">Componentes, colores y patrones diseñados para mantener consistencia entre las interfaces presentadas en este caso.</p>
             </div>
         </section>
 

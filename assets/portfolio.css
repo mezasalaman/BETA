@@ -784,3 +784,36 @@ html.nav-lock, html.nav-lock body { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
     .float-media, .float-chip { animation: none !important; }
 }
+
+/* ============================================================
+   Problema / Solución — bloque comparativo compartido (overviews)
+   Totalmente transparente: deja ver el fondo del portafolio.
+   ============================================================ */
+.ps { background: transparent; }
+.ps-head { margin-bottom: 32px; }
+.ps-eyebrow { margin: 0 0 12px; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #315CFF; }
+.ps-title { margin: 0; font-size: clamp(22px, 3.1vw, 38px); font-weight: 700; line-height: 1.12; color: #101828; }
+.ps-lead { margin: 0; font-size: 15px; line-height: 1.6; color: #475569; }
+.ps-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border: 1px solid rgba(16,24,40,.16); border-radius: 16px; background: transparent; }
+.ps-col { display: flex; flex-direction: column; padding: 32px; background: transparent; }
+.ps-col + .ps-col { border-left: 1px solid rgba(16,24,40,.16); }
+.ps-tag { display: flex; align-items: center; gap: 8px; margin: 0 0 18px; font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #315CFF; }
+.ps-tag svg { flex: none; width: 18px; height: 18px; }
+.ps-col h3 { margin: 0 0 12px; font-size: 20px; font-weight: 700; line-height: 1.2; color: #101828; }
+.ps-col p { margin: 0; font-size: 15px; line-height: 1.6; color: #475569; }
+.ps-foot { margin-top: auto; padding-top: 24px; }
+.ps-metric { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.ps-metric b { font-size: 30px; font-weight: 700; line-height: 1; color: #315CFF; }
+.ps-metric span { font-size: 13px; line-height: 1.4; color: #475569; }
+.ps-metric--text b { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.ps-metric--text span { font-size: 14px; color: #101828; }
+.ps-col .ps-note { margin: 10px 0 0; font-size: 12px; line-height: 1.5; color: #667085; }
+.ps-biz { display: flex; flex-wrap: wrap; gap: 8px 36px; margin: 20px 0 0; padding: 0; list-style: none; }
+.ps-biz li { font-size: 14px; line-height: 1.5; color: #475569; }
+.ps-biz strong { margin-right: 8px; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #315CFF; }
+@media (max-width: 767px) {
+    .ps-grid { grid-template-columns: 1fr; }
+    .ps-col { padding: 24px 20px; }
+    .ps-col + .ps-col { border-left: 0; border-top: 1px solid rgba(16,24,40,.16); }
+    .ps-biz { flex-direction: column; }
+}

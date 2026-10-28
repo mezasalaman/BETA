@@ -816,17 +816,76 @@
                 </div>
             </section>
 
-            <!-- 11 — SOLUCIÓN / MVP -->
+            <!-- 11 — DOCUMENTACIÓN DE PRODUCTO -->
             <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
                 <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
                     <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
                     <div class="relative z-10 flex items-center gap-2.5">
                         <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">11</div>
+                        <span class="whitespace-nowrap text-[11.5px] font-bold text-[#101828]">Documentación</span>
+                    </div>
+                </div>
+                <div class="min-w-0 flex-1">
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">11 — Documentación</span>
+                    <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Documentar el recorrido para anticipar fricciones.</h2>
+                    <div id="cs-flujo">
+                        <p class="mb-2 text-[10px] font-bold uppercase tracking-[0.12em] text-[#667085]">Documentación de producto · Análisis UX</p>
+                        <p class="mb-5 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Documenté el proceso desde el registro hasta la primera carta, identificando dependencias y escenarios que necesitaban validación.</p>
+                        <div class="rounded-[12px] border border-[#e4e9f2] p-4 sm:p-5">
+                            <div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+                                <h3 class="text-[17px] font-semibold text-[#101828]">Registro y construcción de la carta</h3>
+                                <button type="button" id="cs-flujo-open" class="inline-flex items-center gap-2 rounded-full border border-[#315CFF] bg-white px-4 py-2 text-[13px] font-semibold text-[#315CFF] transition hover:bg-[#315CFF]/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#315CFF]" aria-haspopup="dialog">
+                                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M10 21H3v-7M21 3l-8 8M3 21l8-8"/></svg>
+                                    Ampliar diagrama
+                                </button>
+                            </div>
+                            <div class="overflow-x-auto rounded-[8px] border border-[#e4e9f2] bg-white p-3" tabindex="0" role="region" aria-label="Diagrama de flujo, desplazable horizontalmente">
+                                <img src="../assets/projects/food/flujo-registro-carta.svg" alt="Diagrama de flujo del registro y la construcción de la carta: registro, activación por correo e ingreso; primera tienda, carta, categorías, productos, adicionales y descuentos; revisión de la carta y fin de la guía. Los errores, decisiones y reintentos propuestos aparecen en ámbar." width="1360" height="620" loading="lazy" class="block h-auto w-full min-w-[700px]" />
+                            </div>
+                            <div class="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-[13px] text-[#475467]">
+                                <span class="inline-flex items-center gap-2"><i class="inline-block h-3 w-3 rounded-full bg-[#315CFF]"></i>Flujo confirmado</span>
+                                <span class="inline-flex items-center gap-2"><i class="inline-block h-3 w-3 rounded-full border-2 border-dashed border-[#d97706] bg-[#fff8eb]"></i>Casuísticas propuestas</span>
+                            </div>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-1 rounded-[10px] bg-[#315CFF]/[0.07] px-5 py-3 sm:flex-row sm:items-center sm:gap-5">
+                            <span class="text-[13px] font-semibold text-[#315CFF]">Decisión de alcance</span>
+                            <p class="text-[13px] leading-[1.5] text-[#475569]">Separé la finalización de la carta de la activación comercial para delimitar el onboarding guiado.</p>
+                        </div>
+                        <p class="mt-3 text-[12px] leading-[1.5] text-[#667085]">Las rutas alternativas son propuestas para revisión; no representan validaciones ejecutadas.</p>
+                        <dialog id="cs-flujo-dialog" aria-labelledby="cs-flujo-dialog-title" style="width:min(1500px,98vw);max-height:94vh;padding:0;border:0;border-radius:12px;background:#fff;overflow:hidden">
+                            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid #e4e9f2">
+                                <h3 id="cs-flujo-dialog-title" class="text-[17px] font-semibold text-[#101828]">Registro y construcción de la carta</h3>
+                                <button type="button" id="cs-flujo-close" class="rounded-full border border-[#315CFF] px-4 py-1.5 text-[13px] font-semibold text-[#315CFF] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#315CFF]">Cerrar</button>
+                            </div>
+                            <div style="overflow:auto;max-height:calc(94vh - 62px);padding:16px;touch-action:pan-x pan-y pinch-zoom" tabindex="0">
+                                <img src="../assets/projects/food/flujo-registro-carta.svg" alt="" width="1360" height="620" style="display:block;width:100%;min-width:1000px;height:auto" />
+                            </div>
+                        </dialog>
+                        <script>
+                        (function () {
+                            var d = document.getElementById("cs-flujo-dialog"), o = document.getElementById("cs-flujo-open"), c = document.getElementById("cs-flujo-close");
+                            if (!d || !o || !c || !d.showModal) return;
+                            o.addEventListener("click", function () { d.showModal(); });
+                            c.addEventListener("click", function () { d.close(); });
+                            d.addEventListener("click", function (e) { if (e.target === d) d.close(); });
+                            d.addEventListener("close", function () { o.focus(); });
+                        })();
+                        </script>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12 — SOLUCIÓN / MVP -->
+            <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
+                <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
+                    <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
+                    <div class="relative z-10 flex items-center gap-2.5">
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">12</div>
                         <span class="whitespace-nowrap text-[11.5px] font-bold text-[#101828]">Solución</span>
                     </div>
                 </div>
                 <div class="min-w-0 flex-1">
-                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">11 — Solución</span>
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">12 — Solución</span>
                     <h2 class="mb-2 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Rediseño del onboarding</h2>
                     <p class="mb-6 max-w-[680px] text-[14px] leading-[1.6] text-[#64748b]">Un flujo guiado con pasos mejor pensados, progreso visible y menos fricciones.</p>
 
@@ -889,18 +948,18 @@
                 </div>
             </section>
 
-            <!-- 12 — EXPERIMENTACIÓN -->
+            <!-- 13 — EXPERIMENTACIÓN -->
             <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
                 <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
                     <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
                     <span class="nbp nbp-loop" style="top:92px;left:54px;width:62px;height:42px" aria-hidden="true"></span>
                     <div class="relative z-10 flex items-center gap-2.5">
-                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">12</div>
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">13</div>
                         <span class="whitespace-nowrap text-[11.5px] font-bold text-[#101828]">Experimentación</span>
                     </div>
                 </div>
                 <div class="min-w-0 flex-1">
-                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">12 — Experimentación</span>
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">13 — Experimentación</span>
                     <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Cómo validamos el rediseño.</h2>
 
                     <!-- Validación del rediseño con usuarios -->
@@ -959,17 +1018,17 @@
                 </div>
             </section>
 
-            <!-- 13 — OUTCOMES -->
+            <!-- 14 — OUTCOMES -->
             <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
                 <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
                     <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
                     <div class="relative z-10 flex items-center gap-2.5">
-                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">13</div>
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">14</div>
                         <span class="whitespace-nowrap text-[11.5px] font-bold text-[#101828]">Outcomes</span>
                     </div>
                 </div>
                 <div class="min-w-0 flex-1">
-                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">13 — Outcomes</span>
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">14 — Outcomes</span>
                     <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">De completar pasos a generar activación.</h2>
 
                     <div class="grid grid-cols-1 gap-4">
@@ -981,17 +1040,17 @@
                 </div>
             </section>
 
-            <!-- 14 — IMPACTO ECONÓMICO -->
+            <!-- 15 — IMPACTO ECONÓMICO -->
             <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
                 <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
                     <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
                     <div class="relative z-10 flex items-center gap-2.5">
-                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">14</div>
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">15</div>
                         <span class="whitespace-nowrap text-[11.5px] font-bold text-[#101828]">Impacto Económico</span>
                     </div>
                 </div>
                 <div class="min-w-0 flex-1">
-                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">14 — Impacto Económico</span>
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">15 — Impacto Económico</span>
                     <div class="mb-5 flex flex-wrap items-center gap-3">
                         <h2 class="text-[22px] font-bold leading-[1.2] sm:text-[26px]">Traduciendo activación a impacto potencial.</h2>
                         <span class="inline-flex items-center gap-1.5 rounded-full border border-[#fbbf24] bg-[#fffbeb] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#d97706]">⚠ Modelo Económico Estimado</span>
@@ -1023,18 +1082,18 @@
                 </div>
             </section>
 
-            <!-- 15 — RESULTADOS FINALES EN PRODUCCIÓN -->
+            <!-- 16 — RESULTADOS FINALES EN PRODUCCIÓN -->
             <section class="flex gap-5 border-b border-[#eef1f5] py-10 sm:gap-10">
                 <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
                     <div class="absolute left-4 top-0 bottom-0 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
                     <span class="nbp nbp-arrow" style="top:92px;left:54px;width:62px;height:42px" aria-hidden="true"></span>
                     <div class="relative z-10 flex items-center gap-2.5">
-                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">15</div>
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">16</div>
                         <span class="whitespace-nowrap text-[11.5px] font-bold text-[#101828]">Resultados</span>
                     </div>
                 </div>
                 <div class="min-w-0 flex-1">
-                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">15 — Resultados</span>
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">16 — Resultados</span>
                     <div class="mb-2 flex flex-wrap items-center gap-3">
                         <h2 class="text-[22px] font-bold leading-[1.2] sm:text-[26px]">Resultados finales en producción</h2>
                         <span class="inline-flex items-center rounded-full border border-[#86efac] bg-[#f0fdf4] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-[#15803d]">Observado en producción</span>
@@ -1098,17 +1157,17 @@
                 </div>
             </section>
 
-            <!-- 16 — APRENDIZAJES -->
+            <!-- 17 — APRENDIZAJES -->
             <section class="flex gap-5 py-10 sm:gap-10">
                 <div class="relative hidden flex-shrink-0 sm:flex sm:w-[170px] sm:items-start">
                     <div class="absolute left-4 top-0 h-8 w-px -translate-x-1/2 bg-[#dce3ef]"></div>
                     <div class="relative z-10 flex items-center gap-2.5">
-                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">16</div>
+                        <div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">17</div>
                         <span class="whitespace-nowrap text-[11.5px] font-bold text-[#101828]">Aprendizajes</span>
                     </div>
                 </div>
                 <div class="min-w-0 flex-1">
-                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">16 — Aprendizajes</span>
+                    <span class="mb-2 block text-[10px] font-bold uppercase tracking-[0.12em] text-electric sm:hidden">17 — Aprendizajes</span>
                     <h2 class="mb-6 text-[22px] font-bold leading-[1.2] sm:text-[26px]">Lo que me llevo del producto.</h2>
 
                     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">

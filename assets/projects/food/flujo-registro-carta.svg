@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1360 620" width="1360" height="620" role="img" aria-labelledby="t d" font-family="Poppins, 'Helvetica Neue', Arial, sans-serif">
+<title id="t">Registro y construcción de la carta</title>
+<desc id="d">Diagrama de flujo: registro desde la landing, activación por correo e ingreso; primera tienda, carta, categorías, productos, adicionales y descuentos; revisión de la carta y fin de la guía. Las decisiones, errores y reintentos propuestos se muestran en ámbar.</desc>
+<defs>
+<marker id="mb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" fill="#315CFF"/></marker>
+<marker id="ma" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 1 L9 5 L0 9 z" fill="#d97706"/></marker>
+</defs>
+<text x="20" y="28.5" text-anchor="start" font-size="12.5" font-weight="600" fill="#101828">01 / REGISTRO Y ACCESO</text>
+<rect x="20" y="42" width="150" height="44" rx="22.0" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="95.0" y="68.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Visitar landing</text>
+<rect x="220" y="42" width="150" height="44" rx="3" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="295.0" y="60.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Registro desde banner</text>
+<text x="295.0" y="76.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">o formulario</text>
+<rect x="420" y="42" width="150" height="44" rx="3" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="495.0" y="60.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Activar credencial</text>
+<text x="495.0" y="76.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">por correo</text>
+<rect x="620" y="42" width="170" height="44" rx="3" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="705.0" y="68.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Ingresar a la plataforma</text>
+<polygon points="930,28.0 1000.0,64 930,100.0 860.0,64" fill="#fff8eb" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="930" y="60.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">¿Acceso</text>
+<text x="930" y="76.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">correcto?</text>
+<rect x="1090" y="42" width="190" height="44" rx="3" fill="#fff8eb" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="1185.0" y="60.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">P · Corregir acceso</text>
+<text x="1185.0" y="76.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">o reenviar correo</text>
+<path d="M170 64 H220" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<path d="M370 64 H420" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<path d="M570 64 H620" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<path d="M790 64 H860" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<path d="M1000 64 H1090" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ma)"/>
+<text x="1045" y="60.5" text-anchor="middle" font-size="12" font-weight="500" fill="#475467">No</text>
+<path d="M1185 42 V16 H495 V42" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ma)"/>
+<text x="840" y="10.5" text-anchor="middle" font-size="12" font-weight="500" fill="#475467">Reintentar según el problema</text>
+<text x="20" y="140.5" text-anchor="start" font-size="12.5" font-weight="600" fill="#101828">02 / CONSTRUCCIÓN DE LA CARTA</text>
+<path d="M930 100 V160 H10 V260 H30" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<text x="950" y="130.5" text-anchor="start" font-size="12" font-weight="500" fill="#475467">Sí</text>
+<rect x="30" y="235" width="160" height="50" rx="3" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="110.0" y="264.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Registrar primera tienda</text>
+<rect x="230" y="235" width="160" height="50" rx="3" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="310.0" y="264.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Crear la primera carta</text>
+<rect x="430" y="235" width="160" height="50" rx="3" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="510.0" y="264.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Registrar categoría</text>
+<rect x="630" y="235" width="170" height="50" rx="3" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="715.0" y="256.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Registrar producto</text>
+<text x="715.0" y="272.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">en la categoría</text>
+<rect x="850" y="235" width="170" height="50" rx="3" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="935.0" y="256.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Configurar adicionales</text>
+<text x="935.0" y="272.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">y condicionales</text>
+<rect x="1070" y="235" width="150" height="50" rx="3" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="1145.0" y="264.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Configurar descuentos</text>
+<path d="M190 260 H230" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<path d="M390 260 H430" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<path d="M590 260 H630" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<path d="M800 260 H850" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<path d="M1020 260 H1070" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<polygon points="715,327.0 790.0,365 715,403.0 640.0,365" fill="#fff8eb" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="715" y="361.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">¿Guardado</text>
+<text x="715" y="377.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">correcto?</text>
+<path d="M715 285 V327" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<rect x="880" y="345" width="190" height="44" rx="3" fill="#fff8eb" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="975.0" y="363.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">P · Corregir error</text>
+<text x="975.0" y="379.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">y reintentar</text>
+<path d="M790 365 H880" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ma)"/>
+<text x="835" y="361.5" text-anchor="middle" font-size="12" font-weight="500" fill="#475467">No</text>
+<path d="M975 345 V312 H760 V285" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ma)"/>
+<text x="870" y="310.5" text-anchor="middle" font-size="12" font-weight="500" fill="#475467">Reintentar</text>
+<path d="M715 403 V430 H1080 V443" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<text x="735" y="428.5" text-anchor="start" font-size="12" font-weight="500" fill="#475467">Sí</text>
+<polygon points="1080,444.0 1165.0,482 1080,520.0 995.0,482" fill="#fff8eb" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="1080" y="478.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">¿Añadir más</text>
+<text x="1080" y="494.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">contenido?</text>
+<path d="M1165 482 H1340 V190 H510 V235" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ma)"/>
+<text x="1200" y="478.5" text-anchor="start" font-size="12" font-weight="500" fill="#475467">Sí</text>
+<rect x="740" y="457" width="170" height="50" rx="3" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="825.0" y="478.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Revisar carta</text>
+<text x="825.0" y="494.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">y vista previa</text>
+<path d="M995 482 H910" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<text x="952" y="478.5" text-anchor="middle" font-size="12" font-weight="500" fill="#475467">No</text>
+<polygon points="580,444.0 655.0,482 580,520.0 505.0,482" fill="#fff8eb" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="580" y="486.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">¿Carta lista?</text>
+<path d="M740 482 H655" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<rect x="30" y="457" width="220" height="50" rx="25.0" fill="#fff" stroke="#315CFF" stroke-width="1.8"/>
+<text x="140.0" y="478.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Fin de la guía</text>
+<text x="140.0" y="494.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">Primera carta terminada</text>
+<path d="M505 482 H250" fill="none" stroke="#315CFF" stroke-width="1.6" marker-end="url(#mb)"/>
+<text x="378" y="478.5" text-anchor="middle" font-size="12" font-weight="500" fill="#475467">Sí</text>
+<rect x="490" y="552" width="180" height="44" rx="3" fill="#fff8eb" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4"/>
+<text x="580.0" y="570.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">P · Editar pendientes</text>
+<text x="580.0" y="586.5" text-anchor="middle" font-size="13" font-weight="500" fill="#101828">y volver a revisar</text>
+<path d="M580 520 V552" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ma)"/>
+<text x="600" y="544.5" text-anchor="start" font-size="12" font-weight="500" fill="#475467">No</text>
+<path d="M670 574 H825 V507" fill="none" stroke="#d97706" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#ma)"/>
+<text x="748" y="572.5" text-anchor="middle" font-size="12" font-weight="500" fill="#475467">Revisar de nuevo</text>
+</svg>
