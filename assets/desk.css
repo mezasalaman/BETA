@@ -138,3 +138,27 @@
 
 /* Las carpetas conservan su transición suave de transform (la regla de apertura la pisaba) y al subir pasan por encima de la hoja de perfil */
 .dk-stage>.folder{transition:transform .7s var(--ease),filter .8s var(--ease),opacity .8s var(--ease),translate .8s var(--ease)}
+
+/* ---- Realismo: luz de ventana, grano de cámara, papel con fibra, oclusión ambiental y vapor ---- */
+.desk{background-color:#e9e6df}
+/* franjas de luz de ventana (persiana) más marcadas */
+.desk::before{background:
+  repeating-linear-gradient(112deg,transparent 0 7%,rgba(40,28,12,.11) 7% 11.5%,transparent 11.5% 22%),
+  radial-gradient(130% 100% at 30% 15%,transparent 50%,rgba(70,45,15,.30))}
+/* grano fotográfico sobre todo el escritorio */
+.desk::after{background:radial-gradient(75% 65% at 12% 0%,rgba(255,232,186,.5),transparent 70%),var(--grain);background-blend-mode:normal;mix-blend-mode:soft-light;opacity:1}
+/* fibra de papel en hojas, notas y fichas */
+.dk-index::after,.dk-notebook::after,.dk-ticket::after,.dk-polaroid::after,.dk-sticky::after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.1;mix-blend-mode:multiply;pointer-events:none}
+.dk-profile{background-image:var(--grain),linear-gradient(135deg,#fffefb,var(--paper) 55%,#f1eee6);background-blend-mode:multiply,normal;background-size:200px 200px,auto}
+.f-sheet{background-image:var(--grain),linear-gradient(#fffbf0,#f6efde);background-blend-mode:multiply,normal}
+/* notas adhesivas: borde que se despega y sombra de contacto */
+.dk-sticky,.f-note{background-image:linear-gradient(170deg,rgba(255,255,255,.35),transparent 40%,rgba(120,90,0,.08))}
+/* sombras de contacto más cortas y oscuras + ambiente */
+.dk-index,.dk-ticket,.dk-polaroid,.dk-notebook{box-shadow:0 1px 1px rgba(25,18,8,.35),0 3px 5px -2px rgba(25,18,8,.3),8px 14px 22px -8px rgba(25,18,8,.4),18px 34px 60px -22px rgba(25,18,8,.3)}
+.f-back{box-shadow:0 1px 1px rgba(25,18,8,.4),2px 6px 10px -2px rgba(25,18,8,.35),var(--sh-obj)}
+/* aluminio y reflejos de la laptop */
+.dk-laptop{filter:drop-shadow(8px 14px 14px rgba(25,18,8,.3))}
+/* desenfoque de profundidad de campo en los objetos lejanos de arriba */
+.dk-mug,.dk-plant{filter:blur(.45px)}
+/* vapor del café */
+.dk-steam{position:absolute;left:calc(80*var(--u));top:calc(-6.5*var(--u));width:calc(6*var(--u));height:calc(8*var(--u));z-index:9;pointer-events:none;opacity:.55;filter:blur(3px)}
