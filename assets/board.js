@@ -1,4 +1,4 @@
-/* Preview → caso de estudio: la pantalla se convierte en una pizarra más grande y el cursor pasa a ser una tiza.
+/* Preview → caso de estudio: la pantalla se convierte en una pizarra blanca de plástico más grande y el cursor pasa a ser un plumón indeleble.
    En el caso, la pizarra se "borra" al cargar. Sin movimiento reducido solamente. */
 (function () {
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -22,13 +22,12 @@
       if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       e.preventDefault();
       var href = cta.href, r = cta.getBoundingClientRect();
-      document.documentElement.classList.add('dk-chalk');
+      document.documentElement.classList.add('dk-marker');
       try { sessionStorage.setItem(FLAG, label()); } catch (_) {}
       var d = board(label(), r);
       var cx = r.left + r.width / 2 - innerWidth / 2, cy = r.top + r.height / 2 - innerHeight / 2;
       var a = d.animate([{ transform: 'translate(' + cx + 'px,' + cy + 'px) scale(.08) rotate(-3deg)', opacity: .2 }, { transform: 'translate(0,0) scale(1) rotate(0deg)', opacity: 1 }],
         { duration: 650 * K, easing: 'cubic-bezier(.3,1.18,.4,1)', fill: 'forwards' });
-      if (window.dkSfx) { dkSfx.paper(.25, .18); setTimeout(function () { dkSfx.chalk(.7, .16); }, 450 * K); }
       d.querySelector('.dk-board-in').animate([{ opacity: 0 }, { opacity: 1 }], { duration: 400 * K, delay: 500 * K, fill: 'forwards' });
       d.querySelector('svg path').animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], { duration: 600 * K, delay: 800 * K, fill: 'forwards', easing: 'ease-out' });
       var go = function () { location.href = href; };

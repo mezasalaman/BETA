@@ -76,19 +76,25 @@ body.dk.nb-home,body.dk.nb-about{--pc:var(--primary);--pct:var(--primary)}
 @media (max-width:640px){.dk-rows>div{grid-template-columns:1fr;gap:4px}.dk-note{margin-left:0}}
 .dk-copy,.dk-endbtn,.dk-back{letter-spacing:0;word-spacing:normal}
 
-/* Cursor de tiza en los casos de estudio y durante la transición a la pizarra */
-body.dk.nb-case,body.dk.nb-case *,html.dk-chalk,html.dk-chalk *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cg transform='rotate(45 16 16)'%3E%3Crect x='13' y='2' width='7' height='24' rx='2' fill='%23f4f1e8' stroke='%23b9b3a2'/%3E%3Crect x='13' y='22' width='7' height='6' fill='%23e3dccb'/%3E%3C/g%3E%3C/svg%3E") 8 25, auto!important}
+/* Cursor de plumón indeleble en los casos de estudio y durante la transición a la pizarra */
+body.dk.nb-case,body.dk.nb-case *,html.dk-marker,html.dk-marker *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Cg transform='rotate(45 18 18)'%3E%3Crect x='14' y='2' width='8' height='9' rx='2' fill='%23315CFF'/%3E%3Crect x='13' y='10' width='10' height='17' rx='2' fill='%23161a2b' stroke='%23000' stroke-width='.6'/%3E%3Crect x='13.5' y='12' width='9' height='2.5' fill='%23ffffff' opacity='.55'/%3E%3Cpath d='M15 27h6l-1.6 6h-2.8z' fill='%23d9dce0'/%3E%3Cpath d='M16.6 33h2.8l-.6 2.2h-1.6z' fill='%23111'/%3E%3C/g%3E%3C/svg%3E") 9 33, auto!important}
 
-/* Pizarra */
-.dk-board{position:fixed;inset:0;z-index:20000;background:radial-gradient(120% 90% at 30% 20%,#33413f,#1d2726 70%);box-shadow:inset 0 0 0 18px #b58a58,inset 0 0 0 22px #8a6238,inset 0 0 80px rgba(0,0,0,.5);display:grid;place-items:center;pointer-events:all}
-.dk-board::before{content:"";position:absolute;inset:22px;background:radial-gradient(40% 30% at 60% 40%,rgba(255,255,255,.06),transparent),var(--grain);opacity:.5;mix-blend-mode:screen;pointer-events:none}
-.dk-board-in{position:relative;text-align:center;color:#f4f1e8;opacity:0;font-family:var(--font-hand)}
-.dk-board-in b{display:block;font:400 clamp(48px,10vw,140px)/1.05 var(--font-hand);text-shadow:0 0 1px #fff,1px 1px 0 rgba(255,255,255,.25)}
-.dk-board-k{font:500 14px var(--font-mono);letter-spacing:.2em;text-transform:uppercase;opacity:.7}
-.dk-board-s{display:block;font-size:clamp(24px,3.4vw,44px);margin-top:10px;opacity:.9}
+/* Pizarra blanca de plástico */
+.dk-board{position:fixed;inset:0;z-index:20000;display:grid;place-items:center;pointer-events:all;
+  background:linear-gradient(135deg,#ffffff 0%,#f6f7f6 45%,#e9ecec 100%);
+  box-shadow:inset 0 0 0 16px #c9cdd2,inset 0 0 0 18px #eef0f2,inset 0 0 0 20px #8f959c,inset 0 0 60px rgba(0,0,0,.12)}
+.dk-board::before{content:"";position:absolute;inset:20px;pointer-events:none;
+  background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.85) 38%,transparent 46%,transparent 62%,rgba(255,255,255,.5) 66%,transparent 72%),
+  radial-gradient(60% 40% at 25% 30%,rgba(190,200,210,.18),transparent)}
+.dk-board-in{position:relative;text-align:center;color:#12162b;opacity:0;font-family:var(--font-hand)}
+.dk-board-in b{display:block;font:400 clamp(48px,10vw,140px)/1.05 var(--font-hand);color:#0f1330;text-shadow:.6px .6px 0 rgba(15,19,48,.35)}
+.dk-board-k{font:500 14px var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:#315CFF}
+.dk-board-s{display:block;font-size:clamp(24px,3.4vw,44px);margin-top:10px;color:#315CFF}
 .dk-board-in svg{display:block;width:min(520px,70vw);height:20px;margin:18px auto 0}
-.dk-board-in path{fill:none;stroke:#f4f1e8;stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
-.dk-board-tray{position:absolute;left:12%;right:12%;bottom:22px;height:10px;background:linear-gradient(#a37a49,#7a5530);border-radius:3px;box-shadow:0 4px 6px rgba(0,0,0,.4)}
+.dk-board-in path{fill:none;stroke:#0f1330;stroke-width:4;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.dk-board-tray{position:absolute;left:14%;right:14%;bottom:20px;height:12px;background:linear-gradient(#d5d9de,#9ea4ab);border-radius:2px 2px 6px 6px;box-shadow:0 4px 6px rgba(0,0,0,.25)}
+.dk-board-tray::before{content:"";position:absolute;left:8%;top:-9px;width:90px;height:9px;border-radius:4px 4px 0 0;background:linear-gradient(90deg,#161a2b 0 70%,#315CFF 70%)}
+.dk-board-tray::after{content:"";position:absolute;left:calc(8% + 110px);top:-9px;width:90px;height:9px;border-radius:4px 4px 0 0;background:linear-gradient(90deg,#161a2b 0 70%,#d9342b 70%)}
 
 /* Pantalla "Problema y solución" como carpeta */
 body.dk .ps{position:relative;margin-top:72px;padding:56px 36px 36px;border-radius:4px 18px 4px 4px;box-shadow:var(--sh-obj);

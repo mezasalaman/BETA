@@ -30,7 +30,6 @@
     var vw = innerWidth, vh = innerHeight, t = 0;
     var up = { left: r.left, top: r.top - r.height * tExtract, width: r.width, height: r.height };
     var big = { left: r.left - r.width * .035, top: up.top - r.height * .035, width: r.width * 1.07, height: r.height * 1.07 };
-    sfx('paper', .6, .26);
     anim(doc, [{ opacity: 0 }, { opacity: 1 }], { duration: 300, easing: EASE });
     timers.push(setTimeout(function () {
       anim(doc, [{ transform: rectT(r, vw, vh) }, { transform: rectT(up, vw, vh) }], { duration: 720, easing: PAPER });
@@ -47,9 +46,8 @@
     timers.push(setTimeout(onEnd, 2300));
   }
 
-  function sfx(n, l, v) { if (window.dkSfx) dkSfx[n](l, v); }
   function openFolder(a) {
-    sfx('paper', .3, .2);
+    if (window.dkSfx) dkSfx.flip(); // único sonido: hoja que se pasa al abrir la carpeta
     var r0 = a.getBoundingClientRect();
     var rot = getComputedStyle(a).getPropertyValue('--r').trim() || '0deg';
     var color = getComputedStyle(a).getPropertyValue('--c').trim();
@@ -83,7 +81,6 @@
     front.style.visibility = 'hidden';
     var t3 = 840;
     timers.push(setTimeout(function () {
-      sfx('paper', .45, .24);
       anim(lid, [{ transform: 'perspective(2000px) rotateY(0deg)' }, { transform: 'perspective(2000px) rotateY(-174deg)' }], { duration: 900, easing: LID });
       anim(out, [{ filter: 'brightness(1)' }, { filter: 'brightness(.55)' }], { duration: 900, easing: LID });
       anim(inn, [{ filter: 'brightness(.7)' }, { filter: 'brightness(1.05)' }], { duration: 900, easing: LID });
@@ -99,7 +96,6 @@
   }
 
   function openCard(a) {
-    sfx('paper', .3, .2);
     var r = a.getBoundingClientRect();
     var doc = makeDoc(r, 'var(--primary)', 'Índice', a.textContent.trim());
     a.style.visibility = 'hidden';
