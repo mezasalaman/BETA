@@ -211,3 +211,8 @@ body.dk.nb-ov main{font-size:1.06em}
 body.dk.nb-ov main h1,body.dk.nb-ov main h2,body.dk.nb-ov main h3{font-weight:400}
 body.dk.nb-ov main b,body.dk.nb-ov main strong{font-weight:700}
 body.dk.nb-ov .ps::before{font-family:var(--font-mono)}
+
+.dk-lang{display:inline-flex;border:2px solid var(--navy);border-radius:10px;overflow:hidden;background:#fff}
+.dk-lang button{min-height:44px;padding:0 20px;border:0;background:transparent;font:700 14px var(--font-title);color:var(--navy);cursor:pointer;transition:background .25s var(--ease)}
+.dk-lang button[aria-checked="true"]{background:var(--accent-yellow)}
+.dk-lang button:focus-visible{outline:3px solid var(--primary);outline-offset:-3px}
