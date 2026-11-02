@@ -83,20 +83,21 @@
     });
 
     // 4 · sale la hoja y se extiende hasta cubrir la pantalla
-    at(1000, function () {
+    at(930, function () {
       var sh = a.querySelector('.f-sheet.s1').getBoundingClientRect();
       var r = { left: sh.left, top: sh.top, width: sh.width, height: sh.width * 1.05 };
       var doc = makeDoc(r, color, 'Expediente ' + num, name);
       var c = cover(r);
-      anim(doc, [{ opacity: 0 }, { opacity: 1 }], { duration: 160, easing: EASE });
-      anim(doc, [{ transform: 'translateY(0) scale(1)', filter: 'drop-shadow(0 4px 6px rgba(25,18,8,.3))' }, { transform: 'translateY(' + (-r.height * .42) + 'px) scale(1.04)', filter: 'drop-shadow(0 26px 30px rgba(25,18,8,.38))' }], { duration: 380, easing: PAPER });
-      at(380, function () {
+      // el título ya está en la hoja al abrirse la tapa: aparece quieta dentro de la carpeta y luego sigue
+      anim(doc, [{ opacity: 0 }, { opacity: 1 }], { duration: 240, easing: EASE });
+      anim(doc, [{ transform: 'translateY(0) scale(1)', filter: 'drop-shadow(0 4px 6px rgba(25,18,8,.3))' }, { transform: 'translateY(' + (-r.height * .42) + 'px) scale(1.04)', filter: 'drop-shadow(0 26px 30px rgba(25,18,8,.38))' }], { duration: 380, delay: 380, easing: PAPER });
+      at(760, function () {
         anim(doc, [{ transform: 'translateY(' + (-r.height * .42) + 'px) scale(1.04)', filter: 'drop-shadow(0 26px 30px rgba(25,18,8,.38))' },
                    { transform: 'translate(' + c.dx + 'px,' + (c.dy) + 'px) scale(' + c.f + ')', filter: 'drop-shadow(0 0 0 rgba(25,18,8,0))' }], { duration: 520, easing: PAPER });
         anim(a, [{ opacity: 1 }, { opacity: 0 }], { duration: 320, delay: 160, easing: EASE });
         reveal(doc, 0, 520);
       });
-      at(950, go);
+      at(1710, go);
     });
   }
 
