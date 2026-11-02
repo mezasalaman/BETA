@@ -1,5 +1,5 @@
 /* Rediseño · Fase 2: escritorio de la portada. Requiere desk-tokens.css */
-.desk{--u:min(1vw,calc(100svh/50));position:relative;height:100svh;min-height:420px;overflow:hidden;
+.desk{--u:min(1vw,calc(100svh/50),20px);position:relative;height:100svh;min-height:420px;overflow:hidden;
   background:var(--wood),var(--desk);background-size:1200px 900px,auto;color:var(--navy);font-family:var(--font-title);isolation:isolate}
 .desk::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:50;
   background:repeating-linear-gradient(115deg,transparent 0 9%,rgba(40,28,12,.07) 9% 13%,transparent 13% 24%),radial-gradient(120% 95% at 35% 25%,transparent 55%,rgba(90,60,20,.24));filter:blur(18px);mix-blend-mode:multiply}
@@ -244,4 +244,10 @@
 .dk-stage>*:not(.folder){translate:0 calc(-2.35*var(--u))}
 .folder{top:auto!important;bottom:calc(-5.4*var(--u))}
 .dk-ph-laptop,.dk-ph-mug{height:auto}
+}
+
+/* Imágenes rasterizadas: pegadas a los bordes de la pantalla y sin crecer por encima de su resolución (u máx. 20px) */
+@media (min-width:761px){
+.dk-ph-laptop{left:min(0px,calc(50*var(--u) - 50vw));image-rendering:auto}
+.dk-ph-mug{left:auto;right:min(0px,calc(50*var(--u) - 50vw));image-rendering:auto}
 }
