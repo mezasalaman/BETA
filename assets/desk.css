@@ -303,7 +303,6 @@
 /* Cuaderno: lista en cursiva, centrada en la hoja y más abajo (llena el hueco sobre el boceto) */
 @media (min-width:761px){
 .dk-notebook{padding:calc(4.2*var(--u)) calc(2*var(--u)) 0 calc(4.6*var(--u));text-align:center}
-.dk-notebook .nb-t,.dk-notebook .nb-l{font-family:"Caveat","Kalam",cursive!important;font-weight:700}
 .dk-notebook .nb-t{display:block;width:max-content;margin:0 auto calc(.5*var(--u));font-size:calc(2.1*var(--u));line-height:1;border-bottom:2px solid var(--navy)}
 .dk-notebook .nb-l{display:block;margin:0;font-size:calc(1.85*var(--u));line-height:calc(2.05*var(--u));transform:rotate(-2.5deg);color:#14215C}
 }
@@ -343,3 +342,12 @@
 .dk-ph-mug{top:calc(1.2*var(--u));right:calc(6*var(--u));width:calc(10.5*var(--u))}
 .dk-leaves{top:calc(-1.5*var(--u));right:calc(-2.5*var(--u));width:calc(12*var(--u))}
 }
+
+/* Cuaderno y notas: letra firme, sin cursiva */
+@media (min-width:761px){
+.dk-notebook .nb-t,.dk-notebook .nb-l{font-family:var(--font-title)!important;font-style:normal;letter-spacing:-.02em}
+.dk-notebook .nb-t{font-weight:800;font-size:calc(1.8*var(--u))}
+.dk-notebook .nb-l{font-weight:700;font-size:calc(1.7*var(--u));line-height:calc(2.1*var(--u))}
+}
+.dk-polaroid,.dk-wire,.dk-sticky{font-style:normal}
+@media (max-width:760px){html,body{overflow-x:clip}.desk{overflow-x:clip}}

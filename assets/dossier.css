@@ -216,3 +216,21 @@ body.dk.nb-ov .ps::before{font-family:var(--font-mono)}
 .dk-lang button{min-height:44px;padding:0 20px;border:0;background:transparent;font:700 14px var(--font-title);color:var(--navy);cursor:pointer;transition:background .25s var(--ease)}
 .dk-lang button[aria-checked="true"]{background:var(--accent-yellow)}
 .dk-lang button:focus-visible{outline:3px solid var(--primary);outline-offset:-3px}
+
+/* ---- Tipografía final: sin cursiva ni inclinación; títulos fuertes y texto normal, todo en Plus Jakarta Sans ---- */
+body.dk *{font-style:normal!important}
+body.dk.nb-ov main h1,body.dk.nb-ov main h2,body.dk.nb-ov main h3,
+body.dk.nb-case main h1,body.dk.nb-case main h2,body.dk.nb-case main h3{font-weight:800!important;letter-spacing:-.025em!important}
+body.dk.nb-ov main,body.dk.nb-case main{font-weight:400}
+body.dk.nb-ov main{font-size:1em}
+body.dk.nb-ov main b,body.dk.nb-ov main strong,body.dk.nb-case main b,body.dk.nb-case main strong{font-weight:700}
+body.dk.nb-ov header .title-massive span{font-weight:800}
+.dk-label,.dk-hd .hand,.dk-end p,.dk-note,.dk-quick,.dk-board-in,.dk-board-in b,.dk-board-s{font-family:var(--font-title)!important;font-style:normal}
+.dk-board-in b{font-weight:800;letter-spacing:-.03em}
+.dk-board-s{font-weight:600}
+.dk-label{font-weight:700}
+.dk-hd .hand{font-weight:500}
+.dk-end p{font-weight:800;font-size:24px}
+.dk-note,.dk-quick{font-weight:600;font-size:19px}
+@media (max-width:860px){.dk-pages{padding-right:24px}.dk-pg--2{left:0}}
+body.dk{overflow-x:clip}
