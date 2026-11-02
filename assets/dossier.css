@@ -72,3 +72,34 @@ body.dk.nb-home,body.dk.nb-about{--pc:var(--primary);--pct:var(--primary)}
 .dk-note{width:230px;margin:36px 0 0 auto;padding:22px;background:var(--sticky);transform:rotate(-2deg);box-shadow:2px 6px 12px rgba(25,18,8,.3);font:400 24px/1.2 var(--font-hand);color:var(--navy)}
 @media (max-width:640px){.dk-rows>div{grid-template-columns:1fr;gap:4px}.dk-note{margin-left:0}}
 .dk-copy,.dk-endbtn,.dk-back{letter-spacing:0;word-spacing:normal}
+
+/* Cursor de tiza en los casos de estudio y durante la transición a la pizarra */
+body.dk.nb-case,body.dk.nb-case *,html.dk-chalk,html.dk-chalk *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cg transform='rotate(45 16 16)'%3E%3Crect x='13' y='2' width='7' height='24' rx='2' fill='%23f4f1e8' stroke='%23b9b3a2'/%3E%3Crect x='13' y='22' width='7' height='6' fill='%23e3dccb'/%3E%3C/g%3E%3C/svg%3E") 8 25, auto!important}
+
+/* Pizarra */
+.dk-board{position:fixed;inset:0;z-index:20000;background:radial-gradient(120% 90% at 30% 20%,#33413f,#1d2726 70%);box-shadow:inset 0 0 0 18px #b58a58,inset 0 0 0 22px #8a6238,inset 0 0 80px rgba(0,0,0,.5);display:grid;place-items:center;pointer-events:all}
+.dk-board::before{content:"";position:absolute;inset:22px;background:radial-gradient(40% 30% at 60% 40%,rgba(255,255,255,.06),transparent),var(--grain);opacity:.5;mix-blend-mode:screen;pointer-events:none}
+.dk-board-in{position:relative;text-align:center;color:#f4f1e8;opacity:0;font-family:var(--font-hand)}
+.dk-board-in b{display:block;font:400 clamp(48px,10vw,140px)/1.05 var(--font-hand);text-shadow:0 0 1px #fff,1px 1px 0 rgba(255,255,255,.25)}
+.dk-board-k{font:500 14px var(--font-mono);letter-spacing:.2em;text-transform:uppercase;opacity:.7}
+.dk-board-s{display:block;font-size:clamp(24px,3.4vw,44px);margin-top:10px;opacity:.9}
+.dk-board-in svg{display:block;width:min(520px,70vw);height:20px;margin:18px auto 0}
+.dk-board-in path{fill:none;stroke:#f4f1e8;stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.dk-board-tray{position:absolute;left:12%;right:12%;bottom:22px;height:10px;background:linear-gradient(#a37a49,#7a5530);border-radius:3px;box-shadow:0 4px 6px rgba(0,0,0,.4)}
+
+/* Pantalla "Problema y solución" como carpeta */
+body.dk .ps{position:relative;margin-top:72px;padding:56px 36px 36px;border-radius:4px 18px 4px 4px;box-shadow:var(--sh-obj);
+  background:linear-gradient(150deg,color-mix(in srgb,var(--pc) 82%,#fff),var(--pc) 45%,color-mix(in srgb,var(--pc) 88%,#000))}
+body.dk .ps::before{content:"Expediente";position:absolute;left:28px;top:-34px;height:34px;padding:0 22px;display:flex;align-items:center;border-radius:10px 10px 0 0;background:var(--pct);color:var(--navy);font:500 12px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;box-shadow:0 -2px 6px rgba(25,18,8,.15)}
+body.dk.nb-food .ps::before{content:"01 · Problema y solución"}
+body.dk.nb-satelock .ps::before{content:"02 · Problema y solución"}
+body.dk.nb-conduzko .ps::before{content:"03 · Problema y solución"}
+body.dk.nb-seller .ps::before{content:"04 · Problema y solución"}
+body.dk .ps::after{content:"";position:absolute;inset:0;border-radius:inherit;background:repeating-linear-gradient(0deg,rgba(255,255,255,.05) 0 1px,transparent 1px 3px),var(--grain);opacity:.5;mix-blend-mode:soft-light;pointer-events:none}
+body.dk .ps-eyebrow{color:var(--navy);font-family:var(--font-mono);font-weight:500}
+body.dk .ps-title{color:var(--navy);font-weight:800;letter-spacing:-.035em}
+body.dk .ps-grid{border:0;gap:22px;background:none}
+body.dk .ps-col{background:linear-gradient(135deg,#fffefb,#f6f2e8);box-shadow:var(--sh-paper);border-radius:2px;transform:rotate(-.5deg)}
+body.dk .ps-col+.ps-col{border-left:0;transform:rotate(.5deg)}
+body.dk .ps-col p,body.dk .ps-col h3{color:var(--navy)}
+@media (max-width:760px){body.dk .ps{padding:48px 16px 24px}body.dk .ps-col+.ps-col{border-top:0}}

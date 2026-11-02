@@ -3,6 +3,8 @@
    modificadores se navega sin animar. Cualquier tecla o clic durante la animación salta a la página. */
 (function () {
   var desk = document.querySelector('.desk');
+  var K = .5; // multiplicador global de duraciones (1 = original)
+  var setTimeout = function (f, ms) { return window.setTimeout(f, ms * K); };
   if (!desk) return;
   var reduce = matchMedia('(prefers-reduced-motion: reduce)');
   var running = false, timers = [], href = null;
@@ -10,7 +12,7 @@
 
   function go() { if (href) location.href = href; }
   function skip() { if (running) { timers.forEach(clearTimeout); go(); } }
-  function anim(el, frames, opts) { opts.fill = 'forwards'; return el.animate(frames, opts); }
+  function anim(el, frames, opts) { opts.fill = 'forwards'; opts.duration *= K; if (opts.delay) opts.delay *= K; return el.animate(frames, opts); }
   function rectT(r, vw, vh) { return 'translate(' + r.left + 'px,' + r.top + 'px) scale(' + (r.width / vw) + ',' + (r.height / vh) + ')'; }
 
   function makeDoc(r, color, label, name) {
@@ -28,6 +30,7 @@
     var vw = innerWidth, vh = innerHeight, t = 0;
     var up = { left: r.left, top: r.top - r.height * tExtract, width: r.width, height: r.height };
     var big = { left: r.left - r.width * .035, top: up.top - r.height * .035, width: r.width * 1.07, height: r.height * 1.07 };
+    sfx('paper', .6, .26);
     anim(doc, [{ opacity: 0 }, { opacity: 1 }], { duration: 300, easing: EASE });
     timers.push(setTimeout(function () {
       anim(doc, [{ transform: rectT(r, vw, vh) }, { transform: rectT(up, vw, vh) }], { duration: 720, easing: PAPER });
@@ -44,7 +47,9 @@
     timers.push(setTimeout(onEnd, 2300));
   }
 
+  function sfx(n, l, v) { if (window.dkSfx) dkSfx[n](l, v); }
   function openFolder(a) {
+    sfx('paper', .3, .2);
     var r0 = a.getBoundingClientRect();
     var rot = getComputedStyle(a).getPropertyValue('--r').trim() || '0deg';
     var color = getComputedStyle(a).getPropertyValue('--c').trim();
@@ -78,6 +83,7 @@
     front.style.visibility = 'hidden';
     var t3 = 840;
     timers.push(setTimeout(function () {
+      sfx('paper', .45, .24);
       anim(lid, [{ transform: 'perspective(2000px) rotateY(0deg)' }, { transform: 'perspective(2000px) rotateY(-174deg)' }], { duration: 900, easing: LID });
       anim(out, [{ filter: 'brightness(1)' }, { filter: 'brightness(.55)' }], { duration: 900, easing: LID });
       anim(inn, [{ filter: 'brightness(.7)' }, { filter: 'brightness(1.05)' }], { duration: 900, easing: LID });
@@ -93,6 +99,7 @@
   }
 
   function openCard(a) {
+    sfx('paper', .3, .2);
     var r = a.getBoundingClientRect();
     var doc = makeDoc(r, 'var(--primary)', 'Índice', a.textContent.trim());
     a.style.visibility = 'hidden';
