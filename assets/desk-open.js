@@ -85,7 +85,7 @@
 
     // 4–8 · hoja dentro → extraer → al aire → expandir → documento
     timers.push(setTimeout(function () {
-      var sheet = a.querySelector('.f-sheet:not(.s2)').getBoundingClientRect();
+      var sheet = a.querySelector('.f-sheet.s1').getBoundingClientRect();
       var doc = makeDoc({ left: sheet.left, top: sheet.top, width: sheet.width, height: sheet.height * 1.9 }, color, 'Expediente ' + num, name);
       openDoc(doc, { left: sheet.left, top: sheet.top, width: sheet.width, height: sheet.height * 1.9 }, .5, go);
       anim(a, [{ transform: 'translate(' + dx + 'px,' + dy + 'px) rotate(0deg) scale(' + s + ')' }, { transform: 'translate(' + dx + 'px,' + (dy + 30) + 'px) rotate(0deg) scale(' + s + ')' }], { duration: 720, delay: 300, easing: PAPER });
