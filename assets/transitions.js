@@ -14,8 +14,7 @@
   }, true);
 
   function nameDoc() {
-    var m = document.querySelector('main');
-    if (m) m.style.viewTransitionName = 'doc';
+    /* sin transición de elemento compartido: la apertura y el cierre los anima desk-open.js; aquí solo hay un fundido breve */
   }
 
   addEventListener('pageswap', function (e) {
@@ -29,8 +28,12 @@
     var href = null;
     try { href = sessionStorage.getItem(KEY); } catch (_) {}
     var el = href && document.querySelector('.folder[href="' + href + '"], .dk-index a[href="' + href + '"]');
-    if (el) el.style.viewTransitionName = 'doc';
+
   });
+
+  // Marca el regreso al escritorio para reproducir el cierre de la carpeta
+  function markReturn() { try { sessionStorage.setItem('dk-return', '1'); } catch (_) {} }
+  document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a.dk-back, a.dk-endbtn[href$="index.html"]'); if (a) markReturn(); }, true);
 
   // Esc cierra el documento y vuelve al escritorio (si no hay un diálogo abierto)
   if (!onDesk) {
@@ -40,7 +43,7 @@
       var t = e.target;
       if (t && /^(input|textarea|select)$/i.test(t.tagName)) return;
       var home = document.querySelector('a[href$="index.html"]');
-      if (home) location.href = home.href;
+      if (home) { markReturn(); location.href = home.href; }
     });
   }
 })();

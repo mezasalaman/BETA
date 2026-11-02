@@ -14,7 +14,7 @@
   var T = 1.3; // factor de duración (1 = original); un poco más lenta
   function at(ms, fn) { timers.push(setTimeout(fn, ms * T)); }
   function go() { if (href) location.href = href; }
-  function skip() { if (running) { timers.forEach(clearTimeout); go(); } }
+  function skip() { if (running && !skipFn) { timers.forEach(clearTimeout); go(); } }
   function anim(el, frames, opts) { opts.fill = 'forwards'; opts.duration *= T; if (opts.delay) opts.delay *= T; return el.animate(frames, opts); }
 
   // Hoja que sale de la carpeta: mide exactamente su rectángulo; solo se transforma con escala uniforme
@@ -137,7 +137,8 @@
     document.documentElement.style.overflow = 'hidden';
     f ? openFolder(a) : openCard(a);
   }, true);
-  addEventListener('keydown', skip);
+  addEventListener('keydown', function () { if (skipFn && running) skipFn(); else skip(); });
+  document.addEventListener('click', function () { if (skipFn && running) skipFn(); }, true);
 
   // Al volver con el botón atrás (bfcache) el escritorio debe estar limpio
   addEventListener('pageshow', function (e) {
@@ -153,4 +154,62 @@
     desk.querySelectorAll('.dk-index a').forEach(function (l) { l.style.visibility = ''; });
     var ix = desk.querySelector('.dk-index'); if (ix) ix.style.opacity = '';
   });
+
+  // ---- Regreso: la hoja se encoge y entra a la carpeta, la tapa se cierra y la carpeta vuelve a su sitio ----
+  function playReturn() {
+    var flag = null, org = null;
+    try { flag = sessionStorage.getItem('dk-return'); sessionStorage.removeItem('dk-return'); org = sessionStorage.getItem('dk-origin'); } catch (_) {}
+    if (!flag || !org || reduce.matches) return;
+    var a = desk.querySelector('.folder[href="' + org + '"]'); if (!a) return;
+    var r0 = a.getBoundingClientRect();
+    var rot = getComputedStyle(a).getPropertyValue('--r').trim() || '0deg';
+    var color = getComputedStyle(a).getPropertyValue('--c').trim();
+    var front = a.querySelector('.f-front');
+    var name = a.querySelector('.f-name').textContent, num = a.querySelector('.f-num').textContent;
+    var s = Math.min(innerWidth * .3 / r0.width, innerHeight * .56 / r0.height, 2.1);
+    var dx = innerWidth / 2 - (r0.left + r0.width / 2), dy = (innerHeight * .52 + s * r0.height / 2) - r0.bottom;
+    var mid = 'translate(' + dx + 'px,' + dy + 'px) rotate(0deg) scale(' + s + ')';
+    running = true; href = null;
+    document.documentElement.style.overflow = 'hidden';
+    desk.classList.add('dk-opening'); a.classList.add('is-active'); a.style.zIndex = '40';
+    a.style.transition = 'none'; // sin transición CSS: la carpeta debe estar ya en el centro al medir la hoja
+    a.style.transform = mid;
+    void a.getBoundingClientRect();
+    var lid = document.createElement('span'); lid.className = 'f-lid';
+    var out = front.cloneNode(true); out.classList.add('face', 'face-out');
+    var inn = document.createElement('span'); inn.className = 'face face-in';
+    lid.appendChild(out); lid.appendChild(inn); a.appendChild(lid);
+    lid.style.transform = 'perspective(1800px) rotateY(-172deg)'; out.style.filter = 'brightness(.6)'; inn.style.filter = 'brightness(1.04)';
+    front.style.visibility = 'hidden';
+    var sh = a.querySelector('.f-sheet.s1').getBoundingClientRect();
+    var r = { left: sh.left, top: sh.top, width: sh.width, height: sh.width * 1.05 };
+    var doc = makeDoc(r, color, 'Expediente ' + num, name), c = cover(r);
+    doc.style.opacity = '1'; doc._big.style.opacity = '1'; doc.querySelector('.dk-doc-in').style.opacity = '0';
+    var up = 'translateY(' + (-r.height * .42) + 'px) scale(1.04)';
+    anim(doc._big, [{ opacity: 1 }, { opacity: 0 }], { duration: 260, easing: EASE });
+    anim(doc.querySelector('.dk-doc-in'), [{ opacity: 0 }, { opacity: 1 }], { duration: 260, delay: 160, easing: EASE });
+    anim(doc, [{ transform: 'translate(' + c.dx + 'px,' + c.dy + 'px) scale(' + c.f + ')', filter: 'drop-shadow(0 0 0 rgba(25,18,8,0))' }, { transform: up, filter: 'drop-shadow(0 26px 30px rgba(25,18,8,.38))' }], { duration: 560, easing: PAPER });
+    at(560, function () { anim(doc, [{ transform: up }, { transform: 'translateY(0) scale(1)' }], { duration: 360, easing: PAPER }); });
+    at(900, function () { anim(doc, [{ opacity: 1 }, { opacity: 0 }], { duration: 140, easing: EASE }); });
+    at(960, function () {
+      anim(lid, [{ transform: 'perspective(1800px) rotateY(-172deg)' }, { transform: 'perspective(1800px) rotateY(0deg)' }], { duration: 520, easing: LID });
+      anim(out, [{ filter: 'brightness(.6)' }, { filter: 'brightness(1)' }], { duration: 520, easing: LID });
+      anim(inn, [{ filter: 'brightness(1.04)' }, { filter: 'brightness(.75)' }], { duration: 520, easing: LID });
+    });
+    at(1480, function () {
+      desk.classList.remove('dk-opening');
+      anim(a, [{ transform: mid }, { transform: 'translateY(0) rotate(' + rot + ') scale(1)' }], { duration: 640, easing: GLIDE });
+    });
+    function done() {
+      timers.forEach(clearTimeout); timers = [];
+      [doc, doc._big, lid].forEach(function (n) { n.remove(); });
+      a.getAnimations().forEach(function (x) { x.cancel(); });
+      a.style.transform = ''; a.style.zIndex = ''; requestAnimationFrame(function () { a.style.transition = ''; }); a.classList.remove('is-active'); front.style.visibility = '';
+      desk.classList.remove('dk-opening'); document.documentElement.style.overflow = ''; running = false; skipFn = null;
+    }
+    skipFn = done;
+    at(2200, done);
+  }
+  var skipFn = null;
+  if (document.readyState === 'complete') playReturn(); else addEventListener('load', playReturn);
 })();

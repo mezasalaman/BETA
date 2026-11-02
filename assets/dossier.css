@@ -265,3 +265,21 @@ body.dk .ps::before{background:color-mix(in srgb,var(--pc) 78%,#fff)}
 .ov-more>summary:focus-visible{outline:3px solid var(--primary);outline-offset:3px}
 .ov-more>section{width:100%!important}
 body.dk .ps-biz li,body.dk .ps-biz strong{color:var(--navy)!important}
+/* Notas adhesivas del paseo cognitivo: tamaño de lectura (sin desbordar) */
+body.dk .pc-note p{font-size:14px!important;font-weight:600!important;line-height:1.3!important;letter-spacing:0!important;overflow-wrap:anywhere;hyphens:auto}
+body.dk .pc-note{padding-top:22px}
+
+.about-roles{list-style:none;margin:0 0 16px;padding:0;border-top:2px solid var(--navy)}
+.about-roles li{display:flex;flex-wrap:wrap;gap:4px 18px;padding:12px 0;border-bottom:1px solid rgba(20,33,92,.18)}
+.about-roles b{flex:0 0 240px;font-size:15px;color:var(--navy)}
+.about-roles span{flex:1 1 280px;font-size:14.5px;color:#475569}
+.about-more{display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--primary);text-decoration:none;border-bottom:2px solid var(--accent-yellow)}
+.about-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;margin-top:28px}
+.about-cols h3{font-size:16px;margin:0 0 6px;color:var(--navy)}.about-cols p{margin:0;font-size:15px;line-height:1.6;color:#475569}
+
+.eco-more{border-bottom:1px solid #eef1f5}
+.eco-more>summary{display:flex;align-items:center;min-height:52px;padding:0 4px;cursor:pointer;font:700 15px var(--font-title);color:var(--navy);list-style:none}
+.eco-more>summary::-webkit-details-marker{display:none}
+.eco-more>summary::after{content:"+";margin-left:auto;font-size:24px}
+.eco-more[open]>summary::after{content:"–"}
+.eco-more>summary:focus-visible{outline:3px solid var(--primary);outline-offset:3px}
