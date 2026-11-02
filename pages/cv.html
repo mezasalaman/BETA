@@ -31,11 +31,13 @@
     <script defer src="../assets/analytics.js"></script>
     <link rel="stylesheet" href="../assets/transitions.css" />
     <script defer src="../assets/transitions.js"></script>
+    <script defer src="../assets/cv.js"></script>
 </head>
 
 <body class="dk nb nb-home bg-ink font-sans text-[#101828] antialiased">
     <a href="#main" class="skip-link">Saltar al contenido</a>
-    <div class="dk-bar"><div class="dk-bar-in"><a class="dk-back" href="../index.html">← Volver al escritorio</a><span class="dk-run">CV</span></div></div>
+    <div class="dk-strip" aria-hidden="true"><span>Portafolio · José Carlos Meza · Product Design · UX · Data · Growth</span><span>Portafolio · José Carlos Meza · Product Design · UX · Data · Growth</span><span>Portafolio · José Carlos Meza · Product Design · UX · Data · Growth</span></div>
+    <div class="dk-bar"><div class="dk-bar-in"><a class="dk-back" href="../index.html">← Volver al escritorio</a><span class="dk-run">Índice · CV</span></div></div>
 
     <!-- ================= NAVBAR ================= -->
     <nav class="sticky top-0 z-[9999] w-full bg-ink">
@@ -77,10 +79,19 @@
 
 
     <main id="main" tabindex="-1" class="dk-sheet">
-        <header class="dk-hd"><span class="mono">Documento</span><h1>CV</h1><p class="hand">Vista previa del documento impreso</p>
-            <a class="dk-endbtn" href="../assets/CV-Jose-Carlos-Meza-Gonzales-ES.pdf" download>Descargar CV · PDF</a></header>
-        <div class="dk-cvsheet"><object data="../assets/CV-Jose-Carlos-Meza-Gonzales-ES.pdf#view=FitH" type="application/pdf" aria-label="Vista previa del CV de José Carlos Meza">
-            <p>Tu navegador no muestra PDFs aquí. <a href="../assets/CV-Jose-Carlos-Meza-Gonzales-ES.pdf" download>Descargar CV · PDF</a></p></object></div>
+        <header class="dk-hd"><span class="dk-label">CV</span><h1>Currículum</h1><p class="hand">Vista previa del documento impreso</p></header>
+        <div class="dk-cv">
+            <div class="dk-pages">
+                <button type="button" class="dk-pg dk-pg--2" data-page="1" aria-label="Abrir página 2 de 2 del CV a pantalla completa"><img src="../assets/cv/cv-p2.webp" width="1571" height="2222" loading="lazy" alt="CV de José Carlos Meza, página 2 de 2"></button>
+                <button type="button" class="dk-pg dk-pg--1" data-page="0" aria-label="Abrir página 1 de 2 del CV a pantalla completa"><img src="../assets/cv/cv-p1.webp" width="1571" height="2222" alt="CV de José Carlos Meza, página 1 de 2"></button>
+            </div>
+            <aside class="dk-side">
+                <a class="dk-endbtn" href="../assets/CV-Jose-Carlos-Meza-Gonzales-ES.pdf" download>Descargar CV · PDF</a>
+                <a class="dk-btn2" href="../assets/CV-Jose-Carlos-Meza-Gonzales-ES.pdf" target="_blank" rel="noopener">Ver en pantalla completa</a>
+                <div class="dk-quick"><span>Product Designer Semi Senior</span><br><span>Lima, Perú</span><br><span>4+ años de experiencia</span></div>
+            </aside>
+        </div>
+        <dialog class="dk-viewer" aria-label="Visor del CV"><div class="dk-viewer-in"><img alt=""><button type="button" class="dk-vbtn dk-vprev" aria-label="Página anterior">←</button><button type="button" class="dk-vbtn dk-vnext" aria-label="Página siguiente">→</button><button type="button" class="dk-vbtn dk-vclose">Cerrar (Esc)</button></div></dialog>
     </main>
 
     <!-- ================= FOOTER ================= -->

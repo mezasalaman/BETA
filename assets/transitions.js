@@ -45,8 +45,11 @@
   }
 })();
 
-// Al abrir un documento, el foco pasa al botón de volver
+// Al abrir un documento con teclado, el foco pasa al botón de volver (con ratón no se fuerza el anillo)
+document.addEventListener('keydown', function () { try { sessionStorage.setItem('dk-input', 'kbd'); } catch (_) {} }, true);
+document.addEventListener('pointerdown', function () { try { sessionStorage.setItem('dk-input', 'ptr'); } catch (_) {} }, true);
 addEventListener('pageshow', function () {
-  var b = document.querySelector('.dk-back');
-  if (b && !document.querySelector('.desk')) b.focus({ preventScroll: true });
+  var b = document.querySelector('.dk-back'), k = null;
+  try { k = sessionStorage.getItem('dk-input'); } catch (_) {}
+  if (b && !document.querySelector('.desk') && k === 'kbd') b.focus({ preventScroll: true });
 });
