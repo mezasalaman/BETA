@@ -319,3 +319,17 @@ body.dk .pc-note{padding-top:22px}
 @media (max-width:760px){
   main p:not(.hand):not(.dk-label),main .pc-note p,main .ov-content p,main figcaption{text-align:center;text-align-last:auto;text-wrap:pretty}
 }
+
+/* Problema y solución: sin marco naranja de carpeta; solo las dos hojas sobre el fondo */
+body.dk .ps{background:none!important;box-shadow:none!important;border-radius:0;padding:24px 0 0;margin-top:40px}
+body.dk .ps::before,body.dk .ps::after{display:none!important}
+body.dk .ps-eyebrow{color:var(--pct,#315CFF)}
+body.dk .ps-title{color:var(--navy)}
+/* Problema y solución: hojas sin sombra (no tapan «Desafío» / «Inversión asociada») */
+body.dk .ps-col{box-shadow:none!important;border:1px solid rgba(20,33,92,.14)}
+body.dk .ps-grid{filter:none!important}
+body.dk .ps-grid+*{margin-top:20px}
+
+/* Sin franja superior y sin marco azul de foco en «Volver al escritorio» (el foco se indica con el desplazamiento y la sombra del botón) */
+.dk-strip{display:none!important}
+.dk-back:focus,.dk-back:focus-visible,.dk-endbtn:focus,.dk-endbtn:focus-visible{outline:none!important}
