@@ -159,3 +159,18 @@ body.dk .ps-col p,body.dk .ps-col h3{color:var(--navy)}
 .dk-act .dk-copied{margin:0}
 .dk-contact .dk-note{margin:8px 0 0}
 @media (max-width:760px){.dk-contact{grid-template-columns:1fr}.dk-rows>div{grid-template-columns:1fr;gap:6px}.dk-act{justify-self:start}}
+
+/* Casos de estudio: la página es una pizarra blanca de plástico y cada bloque es una hoja pegada con cinta */
+body.dk.nb-case{background:linear-gradient(135deg,#ffffff 0%,#f6f7f6 45%,#e9ecec 100%) fixed!important}
+body.dk.nb-case::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9998;
+  box-shadow:inset 0 0 0 10px #c9cdd2,inset 0 0 0 11px #eef0f2,inset 0 0 0 13px #8f959c,inset 0 0 70px rgba(0,0,0,.08);
+  background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 38%,transparent 46%,transparent 62%,rgba(255,255,255,.3) 66%,transparent 72%)}
+body.dk.nb-case main section.flex,body.dk.nb-case main section#paseo-cognitivo,body.dk.nb-case main header+section{
+  position:relative;margin:34px auto;padding:40px clamp(18px,3vw,36px);border:0!important;background:linear-gradient(135deg,#fffefb,#f8f5ec);
+  box-shadow:var(--sh-paper);border-radius:2px;transform:rotate(-.18deg)}
+body.dk.nb-case main section.flex:nth-of-type(even){transform:rotate(.2deg)}
+body.dk.nb-case main section.flex::before,body.dk.nb-case main section#paseo-cognitivo::before{content:"";position:absolute;left:50%;top:-12px;width:96px;height:24px;margin-left:-48px;
+  background:rgba(255,225,90,.72);transform:rotate(-2deg);box-shadow:0 1px 2px rgba(25,18,8,.2);z-index:2}
+body.dk.nb-case main section.flex:nth-of-type(even)::before{background:rgba(49,92,255,.45);transform:rotate(2.5deg)}
+body.dk.nb-case main header+section{padding-top:24px;padding-bottom:24px}
+body.dk.nb-case .dk-end{border-top-color:#8f959c}
