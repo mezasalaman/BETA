@@ -247,3 +247,21 @@ body.dk main button[class*="absolute"][class*="left-3"],body.dk main button[clas
 /* Contraste ≥ 4.5:1 */
 body.dk .text-\[\#94a3b8\]{color:#5b6b80!important}
 body.dk .ps::before{background:color-mix(in srgb,var(--pc) 78%,#fff)}
+
+/* Alcance y estados de evidencia */
+.ev-scope{margin-top:18px;margin-bottom:6px;padding:16px 20px;border:1.5px dashed var(--navy);border-radius:4px;background:rgba(255,234,130,.35);font-size:14px;line-height:1.55;color:var(--navy)}
+.ev-scope__t{margin:0 0 4px;font:500 11px var(--font-mono);letter-spacing:.14em;text-transform:uppercase}
+.ev-scope p{margin:0}
+.ev-tag{display:inline-block;padding:1px 8px;border:1.5px solid var(--navy);border-radius:99px;font:600 11px var(--font-title);color:var(--navy);background:#fff}
+.ev-tag--obs{background:#d9f2df}.ev-tag--prop{background:#fff6c9}.ev-tag--est{background:#e5e7ff}.ev-tag--ilus{background:#ffe1ec}
+
+/* Overviews: síntesis arriba; el resto del resumen queda en un bloque desplegable */
+.ov-cta{margin:8px auto 28px;display:flex;justify-content:center}
+.ov-more{margin-top:12px;margin-bottom:32px;border-top:2px solid var(--navy);border-bottom:2px solid var(--navy)}
+.ov-more>summary{display:flex;align-items:center;min-height:56px;padding:0 4px;cursor:pointer;font:700 16px var(--font-title);color:var(--navy);list-style:none}
+.ov-more>summary::-webkit-details-marker{display:none}
+.ov-more>summary::after{content:"+";margin-left:auto;font-size:26px;line-height:1}
+.ov-more[open]>summary::after{content:"–"}
+.ov-more>summary:focus-visible{outline:3px solid var(--primary);outline-offset:3px}
+.ov-more>section{width:100%!important}
+body.dk .ps-biz li,body.dk .ps-biz strong{color:var(--navy)!important}

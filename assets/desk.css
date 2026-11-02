@@ -435,3 +435,25 @@
 
 /* Versión móvil: sin taza ni hojas de planta */
 @media (max-width:760px){.dk-mug2,.dk-leaves,.dk-mug,.dk-ph-mug,.dk-mug-shadow{display:none!important}}
+
+/* ===== Composición móvil propia (sin reducir el escritorio): texto de lectura 16 px, proyectos primero ===== */
+.dk-mob-cta{display:none}
+@media (hover:none){.f-open{opacity:1;transform:translate(-50%,0)}}
+@media (max-width:760px){
+  .desk .dk-profile{padding:24px 20px 24px}
+  .desk .dk-name{font-size:clamp(30px,9vw,40px);line-height:1.05;margin:10px 0 12px}
+  .desk .dk-hi{font-size:15px}
+  .desk .dk-role{font-size:18px;font-weight:700;line-height:1.3}
+  .desk .dk-lead{font-size:16px;line-height:1.6;max-width:none;margin-top:14px;color:#2A3366}
+  .dk-mob-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .dk-mcta{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 18px;border:2px solid var(--navy);border-radius:10px;font:700 15px var(--font-title);color:var(--navy);background:#fff}
+  .dk-mcta--main{flex:1 1 100%;background:var(--accent-yellow);font-size:16px}
+  .desk .dk-facts{order:5;margin-top:20px;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px;padding-right:0}
+  .desk .dk-facts li{font-size:13px;line-height:1.35;flex-direction:row;gap:10px;text-align:left;align-items:flex-start;max-width:none}
+  .desk .dk-facts li svg{flex:none;width:24px;height:24px;margin:0}
+  .dk-index{order:4!important}
+  .folder{order:2!important}
+  .dk-stage{gap:16px}
+  .folder .f-open{display:none}
+  .f-front::before{content:"Ver proyecto →";position:absolute;right:5cqw;bottom:4cqw;z-index:3;padding:2.4cqw 4.4cqw;border-radius:99px;background:var(--navy);color:#fff;font:700 4.2cqw var(--font-title)}
+}
