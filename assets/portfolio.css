@@ -817,3 +817,7 @@ html.nav-lock, html.nav-lock body { overflow: hidden; }
     .ps-col + .ps-col { border-left: 0; border-top: 1px solid rgba(16,24,40,.16); }
     .ps-biz { flex-direction: column; }
 }
+
+/* Sin el marco azul pulsante: el botón conserva solo su respiración */
+.cta-explore::before,
+.cta-explore::after { display: none; }

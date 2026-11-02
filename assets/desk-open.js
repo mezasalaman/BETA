@@ -11,10 +11,11 @@
   var PAPER = 'cubic-bezier(.65,0,.2,1)', GLIDE = 'cubic-bezier(.25,.9,.3,1)', LID = 'cubic-bezier(.55,.05,.25,1)', EASE = 'cubic-bezier(.22,.8,.22,1)';
   var SH0 = 'drop-shadow(0 4px 6px rgba(25,18,8,.25))', SH1 = 'drop-shadow(0 34px 38px rgba(25,18,8,.42))';
 
-  function at(ms, fn) { timers.push(setTimeout(fn, ms)); }
+  var T = 1.3; // factor de duración (1 = original); un poco más lenta
+  function at(ms, fn) { timers.push(setTimeout(fn, ms * T)); }
   function go() { if (href) location.href = href; }
   function skip() { if (running) { timers.forEach(clearTimeout); go(); } }
-  function anim(el, frames, opts) { opts.fill = 'forwards'; return el.animate(frames, opts); }
+  function anim(el, frames, opts) { opts.fill = 'forwards'; opts.duration *= T; if (opts.delay) opts.delay *= T; return el.animate(frames, opts); }
 
   // Hoja que sale de la carpeta: mide exactamente su rectángulo; solo se transforma con escala uniforme
   function makeDoc(r, color, label, name) {
