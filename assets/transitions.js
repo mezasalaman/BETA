@@ -20,8 +20,7 @@
 
   addEventListener('pageswap', function (e) {
     if (!e.viewTransition || reduce) return;
-    if (onDesk && origin) origin.style.viewTransitionName = 'doc';
-    else if (!onDesk) nameDoc();
+    if (!onDesk) nameDoc();
   });
 
   addEventListener('pagereveal', function (e) {

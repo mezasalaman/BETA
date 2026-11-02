@@ -1,5 +1,5 @@
 /* Rediseño · Fase 2: escritorio de la portada. Requiere desk-tokens.css */
-.desk{--u:min(1vw,calc((100svh - 86px)*.0145));position:relative;height:calc(100svh - 86px);min-height:420px;overflow:hidden;
+.desk{--u:min(1vw,calc(100svh*.0145));position:relative;height:100svh;min-height:420px;overflow:hidden;
   background:var(--wood),var(--desk);background-blend-mode:multiply;color:var(--navy);font-family:var(--font-title);isolation:isolate}
 .desk::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:50;
   background:repeating-linear-gradient(115deg,transparent 0 9%,rgba(40,28,12,.07) 9% 13%,transparent 13% 24%),radial-gradient(120% 95% at 35% 25%,transparent 55%,rgba(90,60,20,.2));filter:blur(18px);mix-blend-mode:multiply}
@@ -110,3 +110,19 @@
 }
 @media (max-width:760px){.dk-stage{grid-template-columns:1fr 1fr}.dk-profile,.dk-index{grid-column:1/-1}.folder{margin-top:18px}}
 @media (prefers-reduced-motion:reduce){.folder,.f-sheet,.f-open,.dk-btn,.dk-index a span,.dk-index a::after{transition:none}}
+
+/* Apertura de carpeta: fondo en profundidad de campo y documento que se expande */
+.dk-stage>*{transition:filter .8s var(--ease),opacity .8s var(--ease),translate .8s var(--ease)}
+.dk-opening .dk-stage>*:not(.is-active){filter:blur(3px) saturate(.6);opacity:.75;pointer-events:none}
+.dk-opening .folder:not(.is-active){translate:0 calc(3.4*var(--u));filter:blur(1.5px) saturate(.5)}
+.folder.is-active{transition:none;pointer-events:none}
+.f-lid{left:0;right:0;top:4cqw;bottom:0;transform-origin:left center;transform-style:preserve-3d;z-index:3}
+.f-lid .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.f-lid .face-out{top:0;bottom:0;left:0;right:0}
+.f-lid .face-in{transform:rotateY(180deg);border-radius:2cqw 3cqw 0 0;background:linear-gradient(160deg,#fff7e8,color-mix(in srgb,var(--c) 35%,#fff));box-shadow:0 0 18px rgba(25,18,8,.25) inset}
+.dk-doc{position:fixed;left:0;top:0;width:100vw;height:100vh;transform-origin:0 0;z-index:9000;background:linear-gradient(135deg,#fffefb,var(--paper) 55%,#f3f0e8);pointer-events:none;overflow:hidden}
+.dk-doc-strip{position:absolute;left:0;right:0;top:0;height:6%}
+.dk-doc-in{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:var(--navy);text-align:center;opacity:0}
+.dk-doc-in b{font:800 clamp(40px,9vw,130px)/1 var(--font-title);letter-spacing:-.045em}
+.dk-doc-in .mono{font-size:13px}
+@media (prefers-reduced-motion:reduce){.dk-stage>*{transition:none}}
