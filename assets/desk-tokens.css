@@ -11,7 +11,9 @@
 
   /* Tipografía */
   --font-title:"Plus Jakarta Sans",system-ui,sans-serif;
-  --font-hand:"Patrick Hand","Caveat",cursive;
+  --font-hand:var(--font-title); /* todo lo que no es pizarra va tipado */
+  --font-paper:"Patrick Hand","Kalam",cursive; /* escritura a mano sobre papel: previews de proyecto */
+  --font-board:"Kalam","Patrick Hand",cursive; /* escritura de pizarra: solo en la pizarra */
   --font-mono:"IBM Plex Mono",ui-monospace,monospace;
 
   /* Unidad maestra del escritorio */

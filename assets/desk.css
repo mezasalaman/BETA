@@ -263,3 +263,20 @@
 .dk-doc-big b{font:800 clamp(44px,10vw,150px)/1 var(--font-title);letter-spacing:-.045em}
 .dk-doc-big .mono{font-size:14px}
 .dk-doc-big i{display:block;width:min(30vw,360px);height:5px;background:var(--navy);opacity:.7;border-radius:9px}
+
+/* Texto tipado: tamaños ajustados a la tipografía de imprenta */
+.dk-notebook{font-weight:500}
+.dk-notebook .nb-t{font-weight:700}
+.dk-notebook .nb-l{font-weight:500;line-height:1.55}
+@media (min-width:761px){
+.dk-notebook{font-size:calc(1.15*var(--u))}
+.dk-notebook .nb-l{font-size:calc(1.1*var(--u))}
+.dk-wire{font-size:calc(1.05*var(--u));font-weight:600;line-height:1.35}
+.desk .dk-hint{font-size:calc(.85*var(--u));font-weight:600;line-height:1.2}
+.desk .dk-role{font-size:calc(1*var(--u));font-weight:600}
+.desk .dk-hi{font-size:calc(.95*var(--u));font-weight:700}
+.dk-index h2{font-size:calc(1*var(--u));font-weight:700}
+.dk-ticket{font-weight:500}
+}
+.f-note{font-size:4.4cqw;font-weight:600;line-height:1.3}
+.dk-polaroid{font-weight:600}

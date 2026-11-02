@@ -86,8 +86,8 @@ body.dk.nb-case,body.dk.nb-case *,html.dk-marker,html.dk-marker *{cursor:var(--d
 .dk-board::before{content:"";position:absolute;inset:20px;pointer-events:none;
   background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.85) 38%,transparent 46%,transparent 62%,rgba(255,255,255,.5) 66%,transparent 72%),
   radial-gradient(60% 40% at 25% 30%,rgba(190,200,210,.18),transparent)}
-.dk-board-in{position:relative;text-align:center;color:#12162b;opacity:0;font-family:var(--font-hand)}
-.dk-board-in b{display:block;font:400 clamp(48px,10vw,140px)/1.05 var(--font-hand);color:#0f1330;text-shadow:.6px .6px 0 rgba(15,19,48,.35)}
+.dk-board-in{position:relative;text-align:center;color:#12162b;opacity:0;font-family:var(--font-board)}
+.dk-board-in b{display:block;font:400 clamp(48px,10vw,140px)/1.05 var(--font-board);color:#0f1330;text-shadow:.6px .6px 0 rgba(15,19,48,.35)}
 .dk-board-k{font:500 14px var(--font-mono);letter-spacing:.2em;text-transform:uppercase;color:#315CFF}
 .dk-board-s{display:block;font-size:clamp(24px,3.4vw,44px);margin-top:10px;color:#315CFF}
 .dk-board-in svg{display:block;width:min(520px,70vw);height:20px;margin:18px auto 0}
@@ -195,3 +195,19 @@ body.dk.nb-case{padding-bottom:84px}
 body.dk.nb-case .dk-tray,body.dk.nb-case .dk-tray *{cursor:pointer!important}
 .dk-mk:focus-visible{outline:3px solid var(--primary);outline-offset:2px;border-radius:6px}
 @media (max-width:760px){.dk-tray{left:4%;right:4%}.dk-mk{width:60px}.dk-mk:nth-of-type(2){left:calc(8% + 72px)}.dk-mk:nth-of-type(3){left:calc(8% + 144px)}.dk-mk:nth-of-type(4){left:calc(8% + 216px)}.dk-tray-l{display:none}}
+
+/* ---- Tipografía: tipado en carpetas y hojas; escritura de pizarra solo en la pizarra (casos y pantalla de carga) ---- */
+body.dk:not(.nb-case) .nb-hand,body.dk:not(.nb-case) .nb-pn{font-family:var(--font-title);font-weight:600}
+body.dk.nb-ov header .title-massive span{font-weight:700;letter-spacing:-.02em}
+body.dk.nb-case,body.dk.nb-case main,body.dk.nb-case main *,body.dk.nb-case .dk-end,body.dk.nb-case .dk-end *{font-family:var(--font-board)!important;letter-spacing:0!important}
+body.dk.nb-case main h1,body.dk.nb-case main h2,body.dk.nb-case main h3{font-weight:700}
+body.dk.nb-case main svg text{font-family:var(--font-board)}
+body.dk.nb-case .dk-bar *,body.dk.nb-case .dk-strip,body.dk.nb-case .dk-tray *{font-family:var(--font-title)!important}
+body.dk.nb-case .dk-bar .dk-run,body.dk.nb-case .dk-strip,body.dk.nb-case .dk-tray-l{font-family:var(--font-mono)!important}
+
+/* Previews de proyecto: todo lo escrito parece hecho a mano sobre papel (la barra superior queda tipada) */
+body.dk.nb-ov main,body.dk.nb-ov main *,body.dk.nb-ov .dk-end,body.dk.nb-ov .dk-end *{font-family:var(--font-paper)!important;letter-spacing:0!important}
+body.dk.nb-ov main{font-size:1.06em}
+body.dk.nb-ov main h1,body.dk.nb-ov main h2,body.dk.nb-ov main h3{font-weight:400}
+body.dk.nb-ov main b,body.dk.nb-ov main strong{font-weight:700}
+body.dk.nb-ov .ps::before{font-family:var(--font-mono)}
