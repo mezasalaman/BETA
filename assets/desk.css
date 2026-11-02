@@ -280,3 +280,22 @@
 }
 .f-note{font-size:4.4cqw;font-weight:600;line-height:1.3}
 .dk-polaroid{font-weight:600}
+
+/* Cuaderno: bocetos de flujo, outputs y outcomes (la nota adhesiva pasa a la esquina y el lápiz al borde derecho) */
+@media (min-width:761px){
+.dk-notebook svg{left:calc(3.2*var(--u));bottom:calc(2.6*var(--u));width:calc(24*var(--u))}
+.dk-wire.dk-wire--tr{left:calc(19.2*var(--u));top:calc(11.6*var(--u));width:calc(9.2*var(--u));transform:rotate(5deg)}
+.dk-pen{left:calc(25.6*var(--u))!important;top:calc(21*var(--u))!important;height:calc(21*var(--u));transform:rotate(12deg)}
+}
+
+/* Tarjeta índice: hover más vivo (la tarjeta se endereza, cada opción se resalta con marcador y se desliza) */
+.dk-index{transition:transform .55s var(--ease),box-shadow .55s var(--ease)}
+.dk-index:hover,.dk-index:focus-within{transform:rotate(0deg) translateY(calc(-.4*var(--u)))}
+.dk-index a{transition:transform .4s var(--ease);padding-left:calc(.2*var(--u))}
+.dk-index a span{background:linear-gradient(var(--accent-yellow),var(--accent-yellow)) 0 55%/0 80% no-repeat;padding:0 calc(.35*var(--u));margin-left:calc(-.35*var(--u));transition:background-size .45s var(--ease)}
+.dk-index a:hover span,.dk-index a:focus-visible span{background-size:100% 80%}
+.dk-index a:hover,.dk-index a:focus-visible{transform:translateX(calc(.55*var(--u)))}
+.dk-index a svg{transition:transform .45s var(--ease-pop)}
+.dk-index a:hover svg,.dk-index a:focus-visible svg{transform:scale(1.22) rotate(-8deg)}
+.dk-index a:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.dk-index,.dk-index a,.dk-index a span,.dk-index a svg{transition:none}}
