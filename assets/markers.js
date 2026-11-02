@@ -33,4 +33,50 @@
     apply(n); tray.querySelectorAll('.dk-mk')[n].focus();
   });
   apply(cur);
+
+  // ---- Pintar con el plumón elegido: los trazos desaparecen 6 s después de soltarlos ----
+  var LIFE = 6000, FADE = 700, strokes = [], cur2 = null, raf = 0;
+  var cv = document.createElement('canvas'), g = cv.getContext('2d');
+  cv.setAttribute('aria-hidden', 'true');
+  cv.style.cssText = 'position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:9997';
+  document.body.appendChild(cv);
+  function size() {
+    var d = window.devicePixelRatio || 1;
+    cv.width = Math.round(innerWidth * d); cv.height = Math.round(innerHeight * d);
+    g.setTransform(d, 0, 0, d, 0, 0);
+  }
+  size(); addEventListener('resize', size);
+  function draw(now) {
+    g.clearRect(0, 0, innerWidth, innerHeight);
+    strokes = strokes.filter(function (s) { return !s.end || now - s.end < LIFE + FADE; });
+    strokes.forEach(function (s) {
+      var a = 1;
+      if (s.end) { var age = now - s.end; if (age > LIFE) a = 1 - (age - LIFE) / FADE; }
+      g.globalAlpha = Math.max(0, a) * .92;
+      g.strokeStyle = s.col; g.lineWidth = 5; g.lineCap = 'round'; g.lineJoin = 'round';
+      g.beginPath();
+      s.pts.forEach(function (p, i) { var x = p[0] - scrollX, y = p[1] - scrollY; i ? g.lineTo(x, y) : g.moveTo(x, y); });
+      if (s.pts.length === 1) g.lineTo(s.pts[0][0] - scrollX + .01, s.pts[0][1] - scrollY);
+      g.stroke();
+    });
+    raf = strokes.length ? requestAnimationFrame(draw) : 0;
+    if (!raf) g.clearRect(0, 0, innerWidth, innerHeight);
+  }
+  function kick() { if (!raf) raf = requestAnimationFrame(draw); }
+  var SKIP = 'a,button,input,textarea,select,summary,label,dialog,[role="button"],[role="radio"],.dk-tray,.dk-bar';
+  document.addEventListener('pointerdown', function (e) {
+    if (e.button !== 0 || e.pointerType === 'touch' || (e.target.closest && e.target.closest(SKIP))) return;
+    e.preventDefault(); // evita seleccionar texto o arrastrar imágenes mientras se pinta
+    cur2 = { col: COLORS[cur][1], pts: [[e.pageX, e.pageY]], end: 0 };
+    strokes.push(cur2); kick();
+  }, true);
+  document.addEventListener('pointermove', function (e) {
+    if (!cur2) return;
+    var l = cur2.pts[cur2.pts.length - 1];
+    if (Math.abs(l[0] - e.pageX) + Math.abs(l[1] - e.pageY) > 1.5) cur2.pts.push([e.pageX, e.pageY]);
+  }, true);
+  function stop() { if (cur2) { cur2.end = performance.now(); cur2 = null; kick(); } }
+  document.addEventListener('pointerup', stop, true);
+  document.addEventListener('pointercancel', stop, true);
+  addEventListener('blur', stop);
 })();
