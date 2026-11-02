@@ -102,22 +102,25 @@
   }
 
   function openCard(a) {
-    var r = a.getBoundingClientRect();
+    var cr = a.getBoundingClientRect();
+    // La hoja que sale de la tarjeta es vertical (más alta que ancha), no apretada como la ficha
+    var r = { left: cr.left, top: cr.top, width: cr.width, height: cr.width * 1.4 };
     var doc = makeDoc(r, 'var(--primary)', 'Índice', a.textContent.trim());
-    a.style.visibility = 'hidden';
     desk.classList.add('dk-opening');
     var vw = innerWidth, vh = innerHeight;
-    var s = Math.min(vw * .3 / r.width, vh * .7 / r.height);
-    var mid = 'translate(' + (vw / 2 - (r.left + r.width / 2)) + 'px,' + (vh / 2 - (r.top + r.height / 2)) + 'px) scale(' + s + ') rotate(-1.4deg)';
+    var s = Math.min(vw * .34 / r.width, vh * .78 / r.height);
+    var dx = vw / 2 - (r.left + r.width / 2), dy = vh / 2 - (r.top + r.height / 2);
+    var mid = 'translate(' + dx + 'px,' + dy + 'px) scale(' + s + ') rotate(-1.4deg)';
     var c = cover(r);
     doc.style.opacity = '1';
-    anim(doc, [{ transform: 'translateY(0) scale(1)', filter: SH0 }, { transform: 'translateY(-12px) scale(1.03)', filter: SH1 }], { duration: 260, easing: EASE });
-    at(220, function () { anim(doc, [{ transform: 'translateY(-12px) scale(1.03)', filter: SH1 }, { transform: mid, filter: SH1 }], { duration: 560, easing: GLIDE }); });
-    at(780, function () {
-      anim(doc, [{ transform: mid, filter: SH1 }, { transform: 'translate(' + c.dx + 'px,' + c.dy + 'px) scale(' + c.f + ')', filter: 'drop-shadow(0 0 0 rgba(25,18,8,0))' }], { duration: 520, easing: PAPER });
-      reveal(doc, 0, 520);
+    var tray = a.closest('.dk-index'); if (tray) tray.style.opacity = '.0';
+    anim(doc, [{ transform: 'translateY(0) scale(1)', filter: SH0 }, { transform: 'translateY(-14px) scale(1.03)', filter: SH1 }], { duration: 300, easing: EASE });
+    at(260, function () { anim(doc, [{ transform: 'translateY(-14px) scale(1.03)', filter: SH1 }, { transform: mid, filter: SH1 }], { duration: 700, easing: GLIDE }); });
+    at(980, function () {
+      anim(doc, [{ transform: mid, filter: SH1 }, { transform: 'translate(' + c.dx + 'px,' + c.dy + 'px) scale(' + c.f + ')', filter: 'drop-shadow(0 0 0 rgba(25,18,8,0))' }], { duration: 640, easing: PAPER });
+      reveal(doc, 0, 640);
     });
-    at(1300, go);
+    at(1700, go);
   }
 
   document.addEventListener('click', function (e) {
@@ -148,5 +151,6 @@
       var fr = f.querySelector('.f-front'); if (fr) fr.style.visibility = '';
     });
     desk.querySelectorAll('.dk-index a').forEach(function (l) { l.style.visibility = ''; });
+    var ix = desk.querySelector('.dk-index'); if (ix) ix.style.opacity = '';
   });
 })();
