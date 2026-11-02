@@ -234,3 +234,16 @@ body.dk.nb-ov header .title-massive span{font-weight:800}
 .dk-note,.dk-quick{font-weight:600;font-size:19px}
 @media (max-width:860px){.dk-pages{padding-right:24px}.dk-pg--2{left:0}}
 body.dk{overflow-x:clip}
+
+/* Zonas táctiles de al menos 44 × 44 px */
+.dk-rows .dk-act a,.dk-end-links a,.dk-endlink{display:inline-flex;align-items:center;min-height:44px;padding:0 8px}
+body.dk main a.group,body.dk main .pc-tag,body.dk main button[class*="inline-flex"]{min-height:44px}
+body.dk .fd-dot{position:relative}
+body.dk .fd-dot::after{content:"";position:absolute;inset:-18px -8px}
+body.dk main button[class*="absolute"][class*="left-3"],body.dk main button[class*="absolute"][class*="right-3"]{min-width:44px;min-height:44px}
+.dk-mk{height:44px}.dk-mk i{bottom:12px}
+.skip-link:focus{min-height:44px}
+
+/* Contraste ≥ 4.5:1 */
+body.dk .text-\[\#94a3b8\]{color:#5b6b80!important}
+body.dk .ps::before{background:color-mix(in srgb,var(--pc) 78%,#fff)}

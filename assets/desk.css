@@ -359,3 +359,4 @@
 .dk-mug-shadow::after{content:"";position:absolute;left:calc(1.5*var(--u));top:calc(-.6*var(--u));width:calc(9*var(--u));height:calc(2.4*var(--u));background:radial-gradient(ellipse at 30% 50%,rgba(25,18,8,.75),transparent 70%);filter:blur(2px)}
 .dk-ph-mug{filter:drop-shadow(calc(.35*var(--u)) calc(.5*var(--u)) calc(.4*var(--u)) rgba(25,18,8,.5)) drop-shadow(calc(1.4*var(--u)) calc(1.9*var(--u)) calc(1.6*var(--u)) rgba(25,18,8,.28)) saturate(.94) contrast(.98)}
 }
+.f-tab{background:color-mix(in srgb,var(--c) 78%,#fff)}
