@@ -24,8 +24,9 @@
 .desk .dk-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:24px}
 .dk-facts li{display:flex;flex-direction:column;align-items:center;text-align:center;font-size:max(12px,calc(1*var(--u)));line-height:1.35}
 .dk-facts b{font-size:max(30px,calc(3*var(--u)));font-weight:800;color:var(--primary);line-height:1.1;margin-bottom:4px}
-.desk .dk-hint{position:relative;width:max-content;margin:calc(1.2*var(--u)) calc(1.5*var(--u)) 0 auto;font-family:var(--font-hand);font-size:calc(1.3*var(--u));transform:rotate(-6deg);text-align:center;line-height:1.1}
-.dk-hint svg{position:absolute;left:calc(-2.4*var(--u));top:calc(1.9*var(--u));width:calc(2.6*var(--u));height:calc(2.6*var(--u));overflow:visible}
+
+.desk .dk-hint{position:absolute;right:calc(-12.4*var(--u));bottom:calc(-.4*var(--u));width:max-content;font-family:var(--font-hand);font-size:calc(1.45*var(--u));transform:rotate(-6deg);text-align:center;line-height:1.1;color:var(--navy)}
+.dk-hint svg{position:absolute;left:calc(-3.4*var(--u));top:calc(2.4*var(--u));width:calc(3.4*var(--u));height:calc(3.4*var(--u));overflow:visible}
 .dk-ctas{display:flex;gap:calc(1*var(--u));margin-top:calc(1.3*var(--u))}
 .dk-btn{font-weight:700;font-size:calc(1*var(--u));padding:calc(.7*var(--u)) calc(1.4*var(--u));border:2px solid var(--navy);border-radius:calc(.6*var(--u));background:var(--accent-yellow);transition:transform .25s var(--ease-pop),box-shadow .25s var(--ease-pop)}
 .dk-btn:hover,.dk-btn:focus-visible{transform:translateY(-2px);box-shadow:4px 5px 0 var(--navy)}
@@ -43,7 +44,7 @@
 .dk-index a:hover::after,.dk-index a:focus-visible::after{opacity:1;transform:none}
 
 /* Carpetas */
-.folder{top:calc(55.5*var(--u));width:calc(21*var(--u));height:calc(26*var(--u));container-type:inline-size;z-index:10;display:block;
+.folder{top:calc(53.5*var(--u));width:calc(21*var(--u));height:calc(26*var(--u));container-type:inline-size;z-index:10;display:block;
   transform:rotate(var(--r));transform-origin:50% 100%;transition:transform .7s var(--ease)}
 .folder:nth-of-type(1){left:calc(8*var(--u))}.folder:nth-of-type(2){left:calc(28.8*var(--u))}.folder:nth-of-type(3){left:calc(49.6*var(--u))}.folder:nth-of-type(4){left:calc(70.4*var(--u))}
 .folder>*{position:absolute}
@@ -90,7 +91,7 @@
 .dk-polaroid{left:calc(65*var(--u));top:calc(-2.2*var(--u));width:calc(10.5*var(--u));padding:calc(.6*var(--u)) calc(.6*var(--u)) calc(2.2*var(--u));background:#fff;transform:rotate(6deg);z-index:2;box-shadow:var(--sh-paper);
   font:calc(1.3*var(--u))/1 var(--font-hand);text-align:center}
 .dk-polaroid i{display:block;height:calc(7*var(--u));margin-bottom:calc(.5*var(--u));background:linear-gradient(#9db8d8 0 45%,#b9a98a 45% 62%,#7c8a62 62%)}
-.dk-mug{left:calc(77*var(--u));top:calc(-3*var(--u));width:calc(13*var(--u));z-index:8}
+.dk-mug{left:calc(75.4*var(--u));top:calc(-4.6*var(--u));width:calc(16*var(--u));z-index:8}
 .dk-plant{left:calc(89*var(--u));top:calc(-4*var(--u));width:calc(14*var(--u));z-index:7}
 .dk-clip{width:calc(1.8*var(--u));z-index:30}
 .dk-binder{width:calc(4.6*var(--u));z-index:6;filter:drop-shadow(3px 6px 4px rgba(25,18,8,.45))}
@@ -159,6 +160,6 @@
 /* aluminio y reflejos de la laptop */
 .dk-laptop{filter:drop-shadow(8px 14px 14px rgba(25,18,8,.3))}
 /* desenfoque de profundidad de campo en los objetos lejanos de arriba */
-.dk-mug,.dk-plant{filter:blur(.45px)}
+.dk-plant{filter:blur(.45px)}
 /* vapor del café */
-.dk-steam{position:absolute;left:calc(80*var(--u));top:calc(-6.5*var(--u));width:calc(6*var(--u));height:calc(8*var(--u));z-index:9;pointer-events:none;opacity:.55;filter:blur(3px)}
+.dk-steam{position:absolute;left:calc(80*var(--u));top:calc(-7.5*var(--u));width:calc(6*var(--u));height:calc(8*var(--u));z-index:9;pointer-events:none;opacity:.55;filter:blur(3px)}
