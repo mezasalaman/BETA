@@ -307,3 +307,9 @@
 .dk-notebook .nb-t{display:block;width:max-content;margin:0 auto calc(.5*var(--u));font-size:calc(2.1*var(--u));line-height:1;border-bottom:2px solid var(--navy)}
 .dk-notebook .nb-l{display:block;margin:0;font-size:calc(1.85*var(--u));line-height:calc(2.05*var(--u));transform:rotate(-2.5deg);color:#14215C}
 }
+
+@media (min-width:761px){
+.dk-notebook{padding:calc(4.6*var(--u)) calc(3.6*var(--u)) 0 calc(4.4*var(--u))}
+.dk-notebook .nb-l{font-size:calc(2.25*var(--u));line-height:calc(2.5*var(--u));transform:rotate(-2deg)}
+.dk-wire.dk-wire--tr{top:calc(10.6*var(--u));left:calc(20.6*var(--u))}
+}
