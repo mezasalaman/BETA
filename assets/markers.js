@@ -35,7 +35,7 @@
   apply(cur);
 
   // ---- Pintar con el plumón elegido: los trazos desaparecen 3 s después de soltarlos ----
-  var LIFE = 3000, FADE = 700, strokes = [], cur2 = null, raf = 0;
+  var LIFE = 1000, FADE = 500, strokes = [], cur2 = null, raf = 0;
   var cv = document.createElement('canvas'), g = cv.getContext('2d');
   cv.setAttribute('aria-hidden', 'true');
   cv.style.cssText = 'position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:9997';
