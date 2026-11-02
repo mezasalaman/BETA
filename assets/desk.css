@@ -299,3 +299,11 @@
 .dk-index a:hover svg,.dk-index a:focus-visible svg{transform:scale(1.22) rotate(-8deg)}
 .dk-index a:focus-visible{outline:3px solid var(--primary);outline-offset:2px}
 @media (prefers-reduced-motion:reduce){.dk-index,.dk-index a,.dk-index a span,.dk-index a svg{transition:none}}
+
+/* Cuaderno: lista en cursiva, centrada en la hoja y más abajo (llena el hueco sobre el boceto) */
+@media (min-width:761px){
+.dk-notebook{padding:calc(4.2*var(--u)) calc(2*var(--u)) 0 calc(4.6*var(--u));text-align:center}
+.dk-notebook .nb-t,.dk-notebook .nb-l{font-family:"Caveat","Kalam",cursive!important;font-weight:700}
+.dk-notebook .nb-t{display:block;width:max-content;margin:0 auto calc(.5*var(--u));font-size:calc(2.1*var(--u));line-height:1;border-bottom:2px solid var(--navy)}
+.dk-notebook .nb-l{display:block;margin:0;font-size:calc(1.85*var(--u));line-height:calc(2.05*var(--u));transform:rotate(-2.5deg);color:#14215C}
+}
