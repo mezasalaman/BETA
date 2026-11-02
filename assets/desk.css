@@ -423,3 +423,12 @@
 .dk-blackbook{top:calc(22*var(--u));left:calc(92*var(--u))}
 .dk-bpen{top:calc(26*var(--u));left:calc(94.5*var(--u))}
 }
+
+/* Tarjeta índice: un poco más pequeña y con sombras de papel apoyado sobre la mesa */
+@media (min-width:761px){
+.dk-index{left:calc(78.6*var(--u));width:calc(17*var(--u));padding:calc(1.1*var(--u)) calc(1.4*var(--u));
+  box-shadow:0 1px 1px rgba(25,18,8,.42),0 3px 4px -1px rgba(25,18,8,.3),calc(.6*var(--u)) calc(1*var(--u)) calc(1.2*var(--u)) calc(-.3*var(--u)) rgba(25,18,8,.38),calc(1.6*var(--u)) calc(2.6*var(--u)) calc(3.4*var(--u)) calc(-.6*var(--u)) rgba(25,18,8,.3),calc(3.2*var(--u)) calc(5*var(--u)) calc(6.5*var(--u)) calc(-1.2*var(--u)) rgba(25,18,8,.22)}
+.dk-index h2{font-size:calc(1.3*var(--u))}
+.dk-index a{min-height:calc(2.6*var(--u));font-size:calc(1.15*var(--u))}
+.dk-index a svg{width:calc(1.5*var(--u));height:calc(1.5*var(--u))}
+}
