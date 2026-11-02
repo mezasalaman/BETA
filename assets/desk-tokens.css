@@ -22,6 +22,9 @@
   --sh-obj:0 2px 2px rgba(25,18,8,.25),6px 14px 18px -6px rgba(25,18,8,.48),24px 44px 70px -18px rgba(25,18,8,.42);
   --sh-air:0 3px 4px rgba(25,18,8,.16),18px 36px 44px -14px rgba(25,18,8,.42),48px 90px 130px -30px rgba(25,18,8,.48);
 
+  --sh-rest:0 1px 1px rgba(25,18,8,.3),10px 20px 28px -8px rgba(25,18,8,.48),26px 50px 80px -20px rgba(25,18,8,.42);
+  --sh-lift:0 2px 2px rgba(25,18,8,.18),14px 26px 30px -10px rgba(25,18,8,.38),40px 70px 90px -26px rgba(25,18,8,.5);
+
   /* Curvas */
   --ease:cubic-bezier(.22,.8,.22,1);
   --ease-paper:cubic-bezier(.65,0,.2,1);
