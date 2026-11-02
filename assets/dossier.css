@@ -1,0 +1,45 @@
+/* Rediseño · Fase 4: expedientes (previews y casos). Solo capa visual: el contenido no se toca. */
+body.dk{--pc:var(--folder-food);--pct:var(--folder-food-tab);font-family:var(--font-title);background:var(--paper);color:var(--navy);position:relative}
+body.dk.nb-satelock{--pc:var(--folder-satelock);--pct:var(--folder-satelock-tab)}
+body.dk.nb-conduzko{--pc:var(--folder-conduzko);--pct:var(--folder-conduzko-tab)}
+body.dk.nb-seller{--pc:var(--folder-seller);--pct:var(--folder-seller-tab)}
+body.dk::before{content:"";position:fixed;inset:0;background:var(--grain);opacity:.06;mix-blend-mode:multiply;pointer-events:none;z-index:1}
+body.dk h1,body.dk h2,body.dk h3{font-family:var(--font-title);font-weight:800;letter-spacing:-.03em}
+
+/* Barra superior fija con volver al escritorio */
+.dk-bar{position:sticky;top:0;z-index:10000;background:var(--paper);border-bottom:2px solid var(--navy);box-shadow:0 6px 14px -10px rgba(25,18,8,.5)}
+.dk-bar::before{content:"";display:block;height:8px;background:var(--pc)}
+.dk-bar-in{max-width:1150px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.dk-back,.dk-endbtn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;background:var(--accent-yellow);color:var(--navy);border:2px solid var(--navy);border-radius:10px;
+  font:700 14px var(--font-title);text-decoration:none;transition:transform .25s var(--ease-pop),box-shadow .25s var(--ease-pop)}
+.dk-back:hover,.dk-back:focus-visible,.dk-endbtn:hover,.dk-endbtn:focus-visible{transform:translateY(-2px);box-shadow:4px 5px 0 var(--navy)}
+.dk-run{font:500 11px var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--navy);text-align:right}
+body.dk>nav{position:relative!important}
+
+/* Preview: portada del expediente */
+body.dk.nb-ov header .project-badge{background:var(--pc);border:2px solid var(--navy);border-radius:4px}
+body.dk.nb-ov header .project-badge__label{font-family:var(--font-mono);letter-spacing:.12em;color:var(--navy)}
+body.dk.nb-ov header .title-massive{font-weight:800;letter-spacing:-.045em;color:var(--navy)}
+body.dk.nb-ov header .title-massive span{font-family:var(--font-hand);font-weight:400;text-transform:none;letter-spacing:0;color:var(--primary)}
+body.dk.nb-ov header .cta-explore{background:var(--accent-yellow);color:var(--navy);border:2px solid var(--navy);font-weight:700}
+body.dk.nb-ov header .cta-explore:hover,body.dk.nb-ov header .cta-explore:focus-visible{box-shadow:4px 5px 0 var(--navy)}
+/* Imágenes como fotos impresas */
+body.dk.nb-ov header .shadow-showcase{background:#fff;padding:14px;border:0;border-radius:3px;box-shadow:var(--sh-paper);transform:rotate(-.6deg)}
+body.dk.nb-ov header .shadow-showcase img{border-radius:0}
+body.dk.nb-case header img{background:#fff;padding:10px;border-radius:3px;box-shadow:var(--sh-paper);transform:rotate(1deg)}
+
+/* Caso: kicker, metadatos y números de sección */
+body.dk.nb-case .nb-kicker{font-family:var(--font-mono);letter-spacing:.12em;color:var(--navy)!important;background:linear-gradient(transparent 55%,var(--accent-yellow) 55%);padding:0 4px}
+body.dk.nb-case header + section{border-top:2px solid var(--navy);border-bottom:1px solid rgba(20,33,92,.2)}
+body.dk.nb-case section.flex>div:first-child .rounded-full{background:linear-gradient(transparent 62%,var(--pc) 62%)!important;color:var(--navy)!important;border:0!important;box-shadow:none!important;border-radius:0!important;width:auto;height:auto;padding:0 4px;font:800 clamp(30px,3.4vw,44px)/1.1 var(--font-title);letter-spacing:-.04em}
+body.dk.nb-case section.flex>div:first-child span{font-family:var(--font-mono);font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:10.5px}
+body.dk.nb-case section.flex{border-color:rgba(20,33,92,.14)}
+@media (min-width:640px){body.dk.nb-case section.flex>div:first-child{width:150px}}
+@media (max-width:639px){body.dk.nb-case section.flex{flex-direction:column}}
+
+/* Cierre del expediente */
+.dk-end{max-width:1150px;width:90%;margin:48px auto 0;padding:36px 0;border-top:2px solid var(--navy);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.dk-end p{margin:0;font:400 28px var(--font-hand);color:var(--navy)}
+.dk-end-links{display:flex;flex-wrap:wrap;gap:12px}
+.dk-endlink{display:inline-flex;align-items:center;min-height:44px;padding:0 6px;font:600 14px var(--font-title);color:var(--navy);text-decoration:none;border-bottom:2px solid var(--pc)}
+@media (max-width:640px){.dk-run{display:none}}

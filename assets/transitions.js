@@ -45,3 +45,9 @@
     });
   }
 })();
+
+// Al abrir un documento, el foco pasa al botón de volver
+addEventListener('pageshow', function () {
+  var b = document.querySelector('.dk-back');
+  if (b && !document.querySelector('.desk')) b.focus({ preventScroll: true });
+});
