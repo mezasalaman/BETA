@@ -313,3 +313,23 @@
 .dk-notebook .nb-l{font-size:calc(2.25*var(--u));line-height:calc(2.5*var(--u));transform:rotate(-2deg)}
 .dk-wire.dk-wire--tr{top:calc(10.6*var(--u));left:calc(20.6*var(--u))}
 }
+
+/* ---- Rendimiento del hover de "También puedes ver" ----
+   Causa: dos capas de pantalla completa por encima de todo (persianas con blur de 18px + multiply, y luz con soft-light)
+   obligaban a recomponer/mezclar el escritorio entero en cada fotograma del hover, y el marcador animaba
+   background-size (se repinta). Ahora: capas con mezcla normal, sin blur, y el marcador anima solo transform. */
+.desk::before{background:
+  repeating-linear-gradient(112deg,transparent 0 6%,rgba(40,28,12,.10) 9% 10.5%,transparent 13.5% 22%),
+  radial-gradient(130% 100% at 30% 15%,transparent 50%,rgba(70,45,15,.26));filter:none;mix-blend-mode:normal}
+.desk::after{background:radial-gradient(75% 65% at 12% 0%,rgba(255,236,196,.26),transparent 70%),var(--grain);mix-blend-mode:normal;opacity:.5}
+.dk-index{will-change:transform;isolation:isolate}
+.dk-index a{will-change:transform}
+.dk-index a span{background:none!important;transition:none!important;position:relative;z-index:0}
+.dk-index a span::before{content:"";position:absolute;left:calc(-.35*var(--u));right:calc(-.35*var(--u));top:8%;bottom:6%;z-index:-1;border-radius:2px;
+  background:var(--accent-yellow);transform:scaleX(0);transform-origin:left center;transition:transform .45s var(--ease)}
+.dk-index a:hover span::before,.dk-index a:focus-visible span::before{transform:scaleX(1)}
+.dk-index a svg{will-change:transform}
+@media (prefers-reduced-motion:reduce){.dk-index a span::before{transition:none}}
+
+/* Frase del cuaderno: derecha, sin giro */
+@media (min-width:761px){.dk-notebook .nb-l{transform:none}}
