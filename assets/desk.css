@@ -44,12 +44,12 @@
 
 /* Carpetas */
 .folder{top:calc(55.5*var(--u));width:calc(21*var(--u));height:calc(26*var(--u));container-type:inline-size;z-index:10;display:block;
-  transform:rotate(var(--r));transform-origin:50% 100%;transition:transform .45s var(--ease-pop)}
+  transform:rotate(var(--r));transform-origin:50% 100%;transition:transform .7s var(--ease)}
 .folder:nth-of-type(1){left:calc(8*var(--u))}.folder:nth-of-type(2){left:calc(28.8*var(--u))}.folder:nth-of-type(3){left:calc(49.6*var(--u))}.folder:nth-of-type(4){left:calc(70.4*var(--u))}
 .folder>*{position:absolute}
 .f-tab{left:6cqw;top:-4.6cqw;width:30cqw;height:7cqw;border-radius:2cqw 2cqw 0 0;background:var(--tab);font:500 3.2cqw/7cqw var(--font-mono);padding-left:3cqw;color:var(--navy)}
 .f-back{inset:0;background:var(--tab);border-radius:1.5cqw 3cqw 0 0;box-shadow:var(--sh-obj)}
-.f-sheet{left:3cqw;right:4cqw;top:-2.6cqw;height:30cqw;background:linear-gradient(#fffbf0,#f6efde);transform:rotate(0deg);transition:transform .45s var(--ease-pop);box-shadow:0 -1px 2px rgba(25,18,8,.18)}
+.f-sheet{left:3cqw;right:4cqw;top:-2.6cqw;height:30cqw;background:linear-gradient(#fffbf0,#f6efde);transform:rotate(0deg);transition:transform .7s var(--ease);box-shadow:0 -1px 2px rgba(25,18,8,.18)}
 .f-sheet.s2{left:6cqw;right:1cqw;top:-4.2cqw;transform:rotate(2.5deg);background:linear-gradient(#f4ecd8,#ebe2cb)}
 .f-sheet.s3{left:1cqw;right:7cqw;top:-5.6cqw;transform:rotate(-3deg);background:linear-gradient(#efe6d0,#e4dac1)}
 .f-front{left:0;right:0;top:4cqw;bottom:0;background:linear-gradient(150deg,color-mix(in srgb,var(--c) 82%,#fff),var(--c) 45%,color-mix(in srgb,var(--c) 88%,#000));
@@ -65,8 +65,8 @@
 .f-note{right:2cqw;top:42cqw;width:44cqw;padding:4.4cqw;background:var(--sticky);box-shadow:2px 4px 6px rgba(25,18,8,.28);transform:rotate(2deg);font:400 5.5cqw/1.2 var(--font-hand);color:var(--navy);position:absolute;word-break:keep-all;overflow-wrap:normal;isolation:isolate}
 .f-note::after{content:"";position:absolute;right:3%;bottom:2%;width:62%;height:28%;box-shadow:8px 12px 10px rgba(25,18,8,.5);transform:rotate(4deg);z-index:-1}
 .f-note i{font-style:normal;white-space:nowrap}
-.f-open{left:50%;top:-10cqw;transform:translate(-50%,6px);padding:1.6cqw 4cqw;border-radius:99px;background:var(--navy);color:#fff;font:500 3.4cqw var(--font-mono);white-space:nowrap;opacity:0;transition:.3s var(--ease);z-index:2}
-.folder:hover,.folder:focus-visible{transform:translateY(calc(-2.2*var(--u))) rotate(0);z-index:12}
+.f-open{left:50%;top:-10cqw;transform:translate(-50%,6px);padding:1.6cqw 4cqw;border-radius:99px;background:var(--navy);color:#fff;font:500 3.4cqw var(--font-mono);white-space:nowrap;opacity:0;transition:.5s var(--ease);z-index:2}
+.folder:hover,.folder:focus-visible{transform:translateY(calc(-2.2*var(--u))) rotate(0);z-index:30}
 .folder:hover .f-sheet,.folder:focus-visible .f-sheet{transform:translateY(-2cqw) rotate(0deg)}
 .folder:hover .f-sheet.s2,.folder:focus-visible .f-sheet.s2{transform:translateY(-3.5cqw) rotate(2.5deg)}
 .folder:hover .f-sheet.s3,.folder:focus-visible .f-sheet.s3{transform:translateY(-4.5cqw) rotate(-3deg)}
@@ -135,3 +135,6 @@
 @media (prefers-reduced-motion:reduce){.dk-stage>*{transition:none}}
 
 .desk::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:49;background:radial-gradient(75% 65% at 12% 0%,rgba(255,236,196,.38),transparent 70%);mix-blend-mode:soft-light}
+
+/* Las carpetas conservan su transición suave de transform (la regla de apertura la pisaba) y al subir pasan por encima de la hoja de perfil */
+.dk-stage>.folder{transition:transform .7s var(--ease),filter .8s var(--ease),opacity .8s var(--ease),translate .8s var(--ease)}
