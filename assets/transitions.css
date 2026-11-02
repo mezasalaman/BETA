@@ -1,0 +1,13 @@
+/* Rediseño · Fase 3: transición continua carpeta/tarjeta → documento (View Transitions entre páginas) */
+@view-transition{navigation:auto}
+::view-transition-group(doc){animation-duration:.95s;animation-timing-function:cubic-bezier(.65,0,.2,1);z-index:10}
+::view-transition-old(doc),::view-transition-new(doc){animation-duration:.95s;height:100%;object-fit:cover}
+::view-transition-old(doc){animation-name:dk-doc-out}
+::view-transition-new(doc){animation-name:dk-doc-in}
+@keyframes dk-doc-out{to{opacity:0}}
+@keyframes dk-doc-in{from{opacity:0}}
+/* El resto de la página se desvanece sin cortar la animación del documento */
+::view-transition-old(root),::view-transition-new(root){animation-duration:.45s}
+@media (prefers-reduced-motion:reduce){
+  @view-transition{navigation:none}
+}
