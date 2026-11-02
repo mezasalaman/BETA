@@ -360,3 +360,66 @@
 .dk-ph-mug{filter:drop-shadow(calc(.35*var(--u)) calc(.5*var(--u)) calc(.4*var(--u)) rgba(25,18,8,.5)) drop-shadow(calc(1.4*var(--u)) calc(1.9*var(--u)) calc(1.6*var(--u)) rgba(25,18,8,.28)) saturate(.94) contrast(.98)}
 }
 .f-tab{background:color-mix(in srgb,var(--c) 78%,#fff)}
+
+/* ---- Taza 2D ilustrada (botón): al hacer clic sale humo ---- */
+@media (min-width:761px){
+.dk-mug2{position:absolute;right:calc(3.4*var(--u));top:calc(-.4*var(--u));width:calc(12.6*var(--u));padding:0;border:0;background:none;cursor:pointer;z-index:9;overflow:visible;
+  transition:transform .35s var(--ease-pop)}
+.dk-mug2 svg{display:block;width:100%;height:auto;overflow:visible}
+.dk-mug2:hover{transform:translateY(-3px) rotate(-1.5deg)}
+.dk-mug2:active{transform:translateY(0) scale(.97)}
+.dk-mug2:focus-visible{outline:3px solid var(--primary);outline-offset:4px;border-radius:12px}
+.dk-leaves{right:calc(-2.8*var(--u));top:calc(-2.4*var(--u))}
+}
+.m2-steam path{stroke-dasharray:1;opacity:0}
+.dk-mug2.is-steaming .m2-steam{opacity:1}
+.dk-mug2.is-steaming .m2-steam path{animation:m2-rise 2.8s cubic-bezier(.3,.6,.4,1) forwards;transform-box:fill-box;transform-origin:50% 100%}
+.dk-mug2.is-steaming .w2{animation-delay:.35s}
+.dk-mug2.is-steaming .w3{animation-delay:.7s}
+@keyframes m2-rise{0%{opacity:0;transform:translateY(14px) scaleY(.6)}18%{opacity:.85}70%{opacity:.55}100%{opacity:0;transform:translateY(-34px) scaleY(1.15) translateX(6px)}}
+@media (prefers-reduced-motion:reduce){.dk-mug2,.dk-mug2.is-steaming .m2-steam path{transition:none;animation-duration:.01s}}
+@media (min-width:761px){
+.dk-mug2{top:calc(4.6*var(--u));right:calc(5.2*var(--u));width:calc(9.6*var(--u))}
+.dk-leaves{top:calc(.8*var(--u))}
+.dk-index{top:calc(14.2*var(--u))}
+.dk-blackbook{top:calc(15.2*var(--u))}
+.dk-bpen{top:calc(19.5*var(--u))}
+}
+
+/* Taza en vista aérea: más grande; el humo se expande hacia el espectador */
+@media (min-width:761px){
+.dk-mug2{top:calc(-.6*var(--u));right:calc(2.2*var(--u));width:calc(15.2*var(--u))}
+.dk-leaves{top:calc(-3*var(--u));right:calc(-3.6*var(--u));width:calc(11*var(--u))}
+.dk-index{top:calc(15.4*var(--u))}
+.dk-blackbook{top:calc(16.4*var(--u))}
+.dk-bpen{top:calc(20.5*var(--u))}
+}
+.m2-steam path{opacity:0;transform-box:fill-box;transform-origin:50% 90%}
+.dk-mug2.is-steaming .m2-steam path{animation:m2-rise 3s cubic-bezier(.3,.6,.4,1) forwards}
+@keyframes m2-rise{0%{opacity:0;transform:translate(0,10px) scale(.55)}20%{opacity:.8}65%{opacity:.5}100%{opacity:0;transform:translate(8px,-46px) scale(1.5)}}
+.dk-mug2.is-steaming .m2-steam path{animation-name:m2-rise2;animation-duration:3.2s}
+.dk-mug2.is-steaming .m2-steam{filter:drop-shadow(0 0 4px rgba(255,255,255,.9))}
+@keyframes m2-rise2{0%{opacity:0;transform:translate(0,8px) scale(.6)}18%{opacity:1}60%{opacity:.75}100%{opacity:0;transform:translate(14px,-72px) scale(1.9)}}
+
+/* Humo: bocanadas independientes */
+.m2-steam circle{opacity:0;transform-box:fill-box;transform-origin:50% 50%;will-change:transform,opacity}
+.dk-mug2.is-steaming .m2-steam{filter:none!important}
+.dk-mug2.is-steaming .m2-steam circle{animation:m2-puff 3.4s cubic-bezier(.25,.55,.35,1) both}
+@keyframes m2-puff{
+  0%{opacity:0;transform:translate(0,0) scale(.35)}
+  18%{opacity:.9}
+  50%{opacity:.6;transform:translate(var(--mx),calc(var(--y)*.5)) scale(calc(var(--s)*.6))}
+  100%{opacity:0;transform:translate(var(--x),var(--y)) scale(var(--s))}
+}
+
+/* Taza más abajo y a la izquierda (plato completo) y tarjeta índice más grande, también más abajo a la izquierda */
+@media (min-width:761px){
+.dk-mug2{top:calc(2.2*var(--u));right:calc(7.2*var(--u));width:calc(15.2*var(--u))}
+.dk-leaves{top:calc(-1.5*var(--u))}
+.dk-index{left:calc(77.6*var(--u));top:calc(19.6*var(--u));width:calc(19*var(--u));padding:calc(1.3*var(--u)) calc(1.6*var(--u))}
+.dk-index h2{font-size:calc(1.45*var(--u))}
+.dk-index a{min-height:calc(2.9*var(--u));font-size:calc(1.3*var(--u))}
+.dk-index a svg{width:calc(1.7*var(--u));height:calc(1.7*var(--u))}
+.dk-blackbook{top:calc(22*var(--u));left:calc(92*var(--u))}
+.dk-bpen{top:calc(26*var(--u));left:calc(94.5*var(--u))}
+}
