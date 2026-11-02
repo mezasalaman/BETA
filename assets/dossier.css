@@ -77,7 +77,7 @@ body.dk.nb-home,body.dk.nb-about{--pc:var(--primary);--pct:var(--primary)}
 .dk-copy,.dk-endbtn,.dk-back{letter-spacing:0;word-spacing:normal}
 
 /* Cursor de plumón indeleble en los casos de estudio y durante la transición a la pizarra */
-body.dk.nb-case,body.dk.nb-case *,html.dk-marker,html.dk-marker *{cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Cg transform='rotate(45 18 18)'%3E%3Crect x='14' y='2' width='8' height='9' rx='2' fill='%23315CFF'/%3E%3Crect x='13' y='10' width='10' height='17' rx='2' fill='%23161a2b' stroke='%23000' stroke-width='.6'/%3E%3Crect x='13.5' y='12' width='9' height='2.5' fill='%23ffffff' opacity='.55'/%3E%3Cpath d='M15 27h6l-1.6 6h-2.8z' fill='%23d9dce0'/%3E%3Cpath d='M16.6 33h2.8l-.6 2.2h-1.6z' fill='%23111'/%3E%3C/g%3E%3C/svg%3E") 9 33, auto!important}
+body.dk.nb-case,body.dk.nb-case *,html.dk-marker,html.dk-marker *{cursor:var(--dk-cursor,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36'%3E%3Cg transform='rotate(45 18 18)'%3E%3Crect x='14' y='2' width='8' height='9' rx='2' fill='%23315CFF'/%3E%3Crect x='13' y='10' width='10' height='17' rx='2' fill='%23161a2b' stroke='%23000' stroke-width='.6'/%3E%3Crect x='13.5' y='12' width='9' height='2.5' fill='%23ffffff' opacity='.55'/%3E%3Cpath d='M15 27h6l-1.6 6h-2.8z' fill='%23d9dce0'/%3E%3Cpath d='M16.6 33h2.8l-.6 2.2h-1.6z' fill='%23111'/%3E%3C/g%3E%3C/svg%3E") 9 33, auto)!important}
 
 /* Pizarra blanca de plástico */
 .dk-board{position:fixed;inset:0;z-index:20000;display:grid;place-items:center;pointer-events:all;
@@ -174,3 +174,21 @@ body.dk.nb-case main section.flex::before,body.dk.nb-case main section#paseo-cog
 body.dk.nb-case main section.flex:nth-of-type(even)::before{background:rgba(49,92,255,.45);transform:rotate(2.5deg)}
 body.dk.nb-case main header+section{padding-top:24px;padding-bottom:24px}
 body.dk.nb-case .dk-end{border-top-color:#8f959c}
+
+/* Casos: sin sombras, todo pegado con cinta */
+body.dk.nb-case main *{box-shadow:none!important;text-shadow:none!important;filter:none!important}
+body.dk.nb-case main section.flex,body.dk.nb-case main section#paseo-cognitivo,body.dk.nb-case main header+section{border:1px solid rgba(20,33,92,.14)!important;box-shadow:none!important}
+body.dk.nb-case main section.flex::before,body.dk.nb-case main section#paseo-cognitivo::before{box-shadow:none}
+body.dk.nb-case main header img{box-shadow:none!important}
+body.dk.nb-case{padding-bottom:84px}
+
+/* Bandeja fija con plumones: al elegir uno cambia el color del cursor */
+.dk-tray{position:fixed;left:50%;bottom:0;transform:translateX(-50%);z-index:10001;display:flex;gap:14px;align-items:flex-end;padding:0 28px;height:56px;
+  background:linear-gradient(#dfe2e6,#a7adb4);border-radius:8px 8px 0 0;border:1px solid #8f959c;border-bottom:0}
+.dk-tray-l{align-self:center;font:500 10px var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:#2b3340}
+.dk-mk{position:relative;width:44px;height:56px;padding:0;border:0;background:transparent;display:grid;place-items:end center;transition:transform .25s var(--ease-pop)}
+body.dk.nb-case .dk-tray,body.dk.nb-case .dk-tray *{cursor:pointer!important}
+.dk-mk svg{display:block;width:30px;height:60px;transform:translateY(10px);transition:transform .25s var(--ease-pop)}
+.dk-mk:hover svg,.dk-mk:focus-visible svg{transform:translateY(2px)}
+.dk-mk[aria-checked="true"] svg{transform:translateY(-10px)}
+.dk-mk:focus-visible{outline:3px solid var(--primary);outline-offset:-2px;border-radius:6px}
