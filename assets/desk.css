@@ -432,3 +432,6 @@
 .dk-index a{min-height:calc(2.6*var(--u));font-size:calc(1.15*var(--u))}
 .dk-index a svg{width:calc(1.5*var(--u));height:calc(1.5*var(--u))}
 }
+
+/* Versión móvil: sin taza ni hojas de planta */
+@media (max-width:760px){.dk-mug2,.dk-leaves,.dk-mug,.dk-ph-mug,.dk-mug-shadow{display:none!important}}
