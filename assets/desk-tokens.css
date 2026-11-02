@@ -1,0 +1,65 @@
+/* Rediseño "The Product Designer's Desk" · Fase 1: tokens y base.
+   Archivo aditivo: no altera estilos existentes hasta que una página lo enlace. */
+:root{
+  /* Color */
+  --navy:#14215C; --primary:#315CFF; --accent-yellow:#FFD34E; --sticky:#FFEA82;
+  --paper:#FCFBF8; --desk:#ECEAE5;
+  --folder-food:#F28A3C; --folder-food-tab:#D46F27;
+  --folder-satelock:#5B9BEA; --folder-satelock-tab:#3F7FD0;
+  --folder-conduzko:#F7D154; --folder-conduzko-tab:#DDB534;
+  --folder-seller:#C1B8EC; --folder-seller-tab:#A398D8;
+
+  /* Tipografía */
+  --font-title:"Plus Jakarta Sans",system-ui,sans-serif;
+  --font-hand:"Patrick Hand","Caveat",cursive;
+  --font-mono:"IBM Plex Mono",ui-monospace,monospace;
+
+  /* Unidad maestra del escritorio */
+  --u:min(1vw,1.45vh);
+
+  /* Sombras (luz arriba a la izquierda) */
+  --sh-paper:0 1px 1px rgba(40,28,12,.20),0 3px 5px -2px rgba(40,28,12,.20),7px 14px 22px -8px rgba(40,28,12,.40),18px 34px 60px -22px rgba(40,28,12,.34);
+  --sh-obj:0 2px 2px rgba(25,18,8,.25),6px 14px 18px -6px rgba(25,18,8,.48),24px 44px 70px -18px rgba(25,18,8,.42);
+  --sh-air:0 3px 4px rgba(25,18,8,.16),18px 36px 44px -14px rgba(25,18,8,.42),48px 90px 130px -30px rgba(25,18,8,.48);
+
+  /* Curvas */
+  --ease:cubic-bezier(.22,.8,.22,1);
+  --ease-paper:cubic-bezier(.65,0,.2,1);
+  --ease-spring:cubic-bezier(.3,1.18,.4,1);
+  --ease-pop:cubic-bezier(.34,1.56,.64,1);
+  --ease-lid:cubic-bezier(.55,.05,.25,1);
+
+  /* Texturas generadas en código (sin imágenes pesadas) */
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .15 0 0 0 0 .1 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --wood:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Cfilter id='w'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.004 .09' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .4 0 0 0 0 .33 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23w)'/%3E%3C/svg%3E");
+}
+
+.desk-surface{
+  background:var(--wood),var(--desk);
+  background-blend-mode:multiply;
+  position:relative;
+}
+/* Franjas de persiana y viñeteado cálido */
+.desk-surface::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    repeating-linear-gradient(115deg,transparent 0 9%,rgba(40,28,12,.08) 9% 14%,transparent 14% 24%),
+    radial-gradient(120% 90% at 30% 20%,transparent 55%,rgba(90,60,20,.18));
+  filter:blur(18px);mix-blend-mode:multiply;
+}
+.paper{
+  background:linear-gradient(135deg,#fffefb,var(--paper) 55%,#f3f0e8);
+  box-shadow:var(--sh-paper);color:var(--navy);position:relative;
+}
+.paper::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:var(--grain);opacity:.08;mix-blend-mode:multiply;
+}
+.hand{font-family:var(--font-hand)}
+.mono{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.12em}
+
+:focus-visible{outline:3px solid var(--primary);outline-offset:3px}
+
+@media (prefers-reduced-motion:reduce){
+  :root{--ease:linear;--ease-paper:linear;--ease-spring:linear;--ease-pop:linear;--ease-lid:linear}
+}
