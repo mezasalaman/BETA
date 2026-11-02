@@ -351,3 +351,11 @@
 }
 .dk-polaroid,.dk-wire,.dk-sticky{font-style:normal}
 @media (max-width:760px){html,body{overflow-x:clip}.desk{overflow-x:clip}}
+
+/* Taza integrada en la mesa: sombra de contacto + sombra larga difusa, y luz cálida sobre la cerámica */
+@media (min-width:761px){
+.dk-mug-shadow{position:absolute;right:calc(3.2*var(--u));top:calc(8.6*var(--u));width:calc(12.5*var(--u));height:calc(3*var(--u));z-index:6;pointer-events:none;
+  background:radial-gradient(ellipse at 38% 50%,rgba(25,18,8,.55) 0,rgba(25,18,8,.32) 35%,transparent 70%);filter:blur(5px);transform:rotate(-6deg)}
+.dk-mug-shadow::after{content:"";position:absolute;left:calc(1.5*var(--u));top:calc(-.6*var(--u));width:calc(9*var(--u));height:calc(2.4*var(--u));background:radial-gradient(ellipse at 30% 50%,rgba(25,18,8,.75),transparent 70%);filter:blur(2px)}
+.dk-ph-mug{filter:drop-shadow(calc(.35*var(--u)) calc(.5*var(--u)) calc(.4*var(--u)) rgba(25,18,8,.5)) drop-shadow(calc(1.4*var(--u)) calc(1.9*var(--u)) calc(1.6*var(--u)) rgba(25,18,8,.28)) saturate(.94) contrast(.98)}
+}
