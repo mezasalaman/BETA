@@ -283,3 +283,39 @@ body.dk .pc-note{padding-top:22px}
 .eco-more>summary::after{content:"+";margin-left:auto;font-size:24px}
 .eco-more[open]>summary::after{content:"–"}
 .eco-more>summary:focus-visible{outline:3px solid var(--primary);outline-offset:3px}
+
+/* ===== Móvil: textos centrados en todo el proyecto (las listas con viñetas se mantienen alineadas a la izquierda) ===== */
+@media (max-width:760px){
+  main h1,main h2,main h3,main h4,main h5,main p,main figcaption,main blockquote,
+  main .dk-label,main .dk-hd,main .ev-scope,main .pc-note,main .ov-content,
+  .dk-end,.dk-end a,footer,footer p{text-align:center}
+  main .flex.flex-col.items-start{align-items:center}
+  main .flex.flex-wrap{justify-content:center}
+  main ul:not(.list-disc):not([class*="list-"]){text-align:center}
+  main .list-disc,main ol{text-align:left}
+  .dk-hd{display:flex;flex-direction:column;align-items:center}
+}
+@media (max-width:760px){
+  main section,main header,main article{text-align:center}
+  main .list-disc li,main ol li{text-align:left}
+}
+
+/* Móvil: párrafos justificados (última línea centrada); títulos y etiquetas siguen centrados */
+@media (max-width:760px){
+  main p:not(.hand):not(.dk-label),main .pc-note p,main .ov-content p,main figcaption{text-align:justify;text-align-last:center;hyphens:manual}
+  main .list-disc li,main ol li{text-align:left;hyphens:none}
+}
+
+/* Móvil: tarjetas "Perfil ilustrativo" en una columna, texto contenido */
+@media (max-width:760px){
+  body .pc-profiles{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+  body .pc-profile{flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;text-align:left!important;gap:14px!important;padding:12px 14px!important;overflow:hidden;transform:none!important}
+  body .pc-profile__txt{align-items:flex-start;min-width:0;flex:1}
+  body .pc-profile__tag{font-size:10px!important;letter-spacing:.08em!important;white-space:normal!important;overflow-wrap:anywhere;text-align:left!important;line-height:1.25}
+  body .pc-profile__name{font-size:15px!important;line-height:1.25;text-align:left!important}
+}
+
+/* Móvil: justificado suave. Párrafos centrados con renglones equilibrados (sin huecos grandes entre palabras) */
+@media (max-width:760px){
+  main p:not(.hand):not(.dk-label),main .pc-note p,main .ov-content p,main figcaption{text-align:center;text-align-last:auto;text-wrap:pretty}
+}
