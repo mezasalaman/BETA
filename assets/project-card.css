@@ -1,0 +1,112 @@
+/* Ficha de proyecto flotante (hoja de cuaderno) que aparece tras abrir una carpeta del escritorio.
+   Un solo componente para los cuatro proyectos; el color de acento llega por --pc. */
+.pcard-ov{position:fixed;inset:0;z-index:9500;display:grid;place-items:center;padding:16px;background:rgba(20,16,10,.46);opacity:0;transition:opacity .45s cubic-bezier(.22,.8,.22,1)}
+.pcard-ov[hidden]{display:none}
+.pcard-ov.is-in{opacity:1}
+
+.pcard{--pc:#F28A3C;--ink:#14215C;--blue:#315CFF;position:relative;display:flex;flex-direction:column;width:min(1000px,100%);max-height:min(calc(100dvh - 32px),760px);border-radius:14px;color:var(--ink);font-family:var(--font-title,"Plus Jakarta Sans",system-ui,sans-serif);
+  background:var(--grain,none),linear-gradient(160deg,#fffdf7,#faf5e8 60%,#f4edda);background-blend-mode:multiply,normal;
+  box-shadow:0 2px 3px rgba(25,18,8,.2),10px 22px 34px -10px rgba(25,18,8,.45),30px 60px 90px -26px rgba(25,18,8,.5)}
+.pcard:focus{outline:none}
+.pcard::before{content:"";position:absolute;left:0;right:0;top:0;height:7px;border-radius:14px 14px 0 0;background:var(--pc)}
+
+.pcard-clip{position:absolute;left:34px;top:-22px;width:22px;height:58px;z-index:3;pointer-events:none;filter:drop-shadow(1px 3px 2px rgba(25,18,8,.3))}
+.pcard-x{position:absolute;right:12px;top:14px;z-index:4;display:grid;place-items:center;width:34px;height:34px;padding:0;border:0;border-radius:50%;background:rgba(20,33,92,.06);color:var(--ink);cursor:pointer;transition:background .2s,transform .2s}
+.pcard-x:hover{background:rgba(20,33,92,.14);transform:rotate(90deg)}
+.pcard-x:focus-visible,.pcard-thumb:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+.pcard-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;border-radius:14px 14px 0 0;padding:34px 34px 8px;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);column-gap:34px;row-gap:18px;align-content:start}
+.pcard-head{grid-column:1;min-width:0}
+.pcard-kicker{display:inline-flex;align-items:center;gap:8px;margin:0 0 10px;font:500 11.5px/1 var(--font-mono,monospace);text-transform:uppercase;letter-spacing:.12em;color:rgba(20,33,92,.75)}
+.pcard-kicker b{display:inline-block;padding:4px 8px;border-radius:5px;background:var(--pc);color:var(--ink);font-weight:500}
+.pcard-title{margin:0;font-weight:800;font-size:clamp(30px,4.2vw,44px);line-height:1;letter-spacing:-.04em}
+.pcard-wave{display:block;width:120px;height:10px;margin:6px 0 10px;overflow:visible}
+.pcard-lead{margin:0;font-size:14.5px;line-height:1.5;color:rgba(20,33,92,.82);max-width:46ch}
+
+.pcard-vis{grid-column:1;grid-row:2;min-width:0}
+.pcard-main{position:relative;margin:6px 4px 0;padding:6px 6px 6px;border-radius:4px;background:#fff;box-shadow:0 1px 2px rgba(25,18,8,.25),4px 10px 18px -6px rgba(25,18,8,.4);--rot:-1.1deg;transform:rotate(var(--rot));transition:transform .5s cubic-bezier(.22,.8,.22,1),box-shadow .5s cubic-bezier(.22,.8,.22,1)}
+.pcard-main:hover{transform:rotate(calc(var(--rot) + .5deg)) translateY(-3px);box-shadow:0 2px 3px rgba(25,18,8,.22),8px 18px 26px -8px rgba(25,18,8,.42)}
+.pcard-main::before{content:"";position:absolute;left:50%;top:-10px;z-index:2;width:74px;height:20px;margin-left:-37px;transform:rotate(-2deg);background:rgba(255,211,78,.75);border-left:1px dashed rgba(20,33,92,.2);border-right:1px dashed rgba(20,33,92,.2)}
+.pcard-frame{position:relative;display:block;aspect-ratio:16/9.4;overflow:hidden;border-radius:2px;background:color-mix(in srgb,var(--pc) 22%,#f4efe2)}
+.pcard-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center;transition:opacity .25s ease}
+.pcard-frame img.is-swap{opacity:0}
+.pcard-thumbs{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:10px;margin:14px 4px 0}
+.pcard-thumb{--tr:1.2deg;position:relative;display:block;padding:3px;border:0;border-radius:3px;background:#fff;cursor:pointer;box-shadow:0 1px 2px rgba(25,18,8,.25),2px 5px 9px -3px rgba(25,18,8,.35);transform:rotate(var(--tr));transition:transform .35s cubic-bezier(.22,.8,.22,1),box-shadow .35s cubic-bezier(.22,.8,.22,1)}
+.pcard-thumb:nth-child(even){--tr:-1.4deg}
+.pcard-thumb:hover,.pcard-thumb:focus-visible{transform:translateY(-3px) rotate(calc(var(--tr) * -1));box-shadow:0 2px 3px rgba(25,18,8,.2),4px 12px 16px -5px rgba(25,18,8,.42)}
+.pcard-thumb[aria-pressed="true"]{box-shadow:0 0 0 2px var(--blue),2px 6px 10px -3px rgba(25,18,8,.4)}
+.pcard-thumb span{display:block;aspect-ratio:16/10;overflow:hidden;border-radius:1px;background:color-mix(in srgb,var(--pc) 22%,#f4efe2)}
+.pcard-thumb img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.pcard-note{margin:12px 6px 0;font:700 18px/1 Kalam,"Patrick Hand",cursive;color:var(--blue);transform:rotate(-1.5deg)}
+
+.pcard-info{grid-column:2;grid-row:1/3;display:grid;align-content:start;gap:16px;margin:0;min-width:0;padding-top:22px}
+.pcard-blk{margin:0}
+.pcard-blk dt{margin:0 0 5px;font:500 11px/1 var(--font-mono,monospace);text-transform:uppercase;letter-spacing:.14em;color:var(--blue)}
+.pcard-blk dd{margin:0;font-size:13.5px;line-height:1.5;color:rgba(20,33,92,.88)}
+.pcard-blk+.pcard-blk{padding-top:14px;border-top:1px dashed rgba(20,33,92,.2)}
+.pcard-metric{display:inline-flex;align-items:center;gap:10px;margin:0 0 4px;font-weight:800;font-size:34px;line-height:1.05;letter-spacing:-.04em;color:var(--ink)}
+.pcard-goal{flex:none;width:30px;height:30px;overflow:visible}
+.pcard-cap{display:block;margin-top:6px;font-size:12.5px;line-height:1.45;color:rgba(20,33,92,.75)}
+.pcard-how{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.pcard-how li{position:relative;padding-left:20px;font-size:13.5px;line-height:1.4}
+.pcard-how li::before{content:counter(pc);counter-increment:pc;position:absolute;left:0;top:0;display:grid;place-items:center;width:15px;height:15px;border-radius:50%;background:var(--pc);font:500 9.5px/1 var(--font-mono,monospace);color:var(--ink)}
+.pcard-how{counter-reset:pc}
+
+.pcard-foot{display:flex;justify-content:flex-end;align-items:center;padding:14px 34px 22px;border-top:1px dashed rgba(20,33,92,.18);background:none;border-radius:0 0 14px 14px}
+.pcard-cta{position:relative;display:inline-flex;align-items:center;gap:8px;padding:15px 26px;border-radius:12px;background:var(--cta,#2342C9);color:var(--cta-ink,#fff);font:700 16px/1 var(--font-title,"Plus Jakarta Sans",system-ui,sans-serif);text-decoration:none;white-space:nowrap;box-shadow:0 6px 16px -6px color-mix(in srgb,var(--cta,#2342C9) 70%,transparent);animation:pcard-breathe 3.2s ease-in-out infinite;transition:background .25s,box-shadow .25s}
+.pcard-cta::before,.pcard-cta::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;box-shadow:0 0 0 0 color-mix(in srgb,var(--cta,#315CFF) 45%,transparent);opacity:0;animation:pcard-wave 3.2s ease-out infinite}
+.pcard-cta::after{animation-delay:1.45s}
+.pcard-cta i{font-style:normal;display:inline-block;transition:transform .3s cubic-bezier(.22,.8,.22,1)}
+.pcard-cta:hover,.pcard-cta:focus-visible{background:var(--cta-h,#1A33A8);animation:none;box-shadow:0 8px 20px -6px color-mix(in srgb,var(--cta,#2342C9) 75%,transparent)}
+.pcard-cta:hover::before,.pcard-cta:hover::after,.pcard-cta:focus-visible::before,.pcard-cta:focus-visible::after{animation:none}
+.pcard-cta:hover i,.pcard-cta:focus-visible i{transform:translateX(4px)}
+.pcard-cta:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+@keyframes pcard-breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+@keyframes pcard-wave{0%{opacity:.9;box-shadow:0 0 0 0 color-mix(in srgb,var(--cta,#315CFF) 45%,transparent)}70%{opacity:.15}100%{opacity:0;box-shadow:0 0 0 20px color-mix(in srgb,var(--cta,#315CFF) 0%,transparent)}}
+
+/* Entrada escalonada de las imágenes: solo cuando la ficha ya está sobre el escritorio */
+.pcard-ov.is-in .pcard-main{animation:pcard-photo .75s cubic-bezier(.22,.8,.22,1) .3s backwards}
+.pcard-ov.is-in .pcard-thumb{animation:pcard-thumb .55s cubic-bezier(.22,.8,.22,1) backwards;animation-delay:calc(.5s + var(--i) * .09s)}
+.pcard-ov.is-in .pcard-note{animation:pcard-fade .5s ease .95s backwards}
+@keyframes pcard-photo{from{opacity:0;transform:translate(-14px,16px) rotate(-5deg) scale(.96)}}
+@keyframes pcard-thumb{from{opacity:0;transform:translateY(14px) rotate(calc(var(--tr) * 2)) scale(.94)}}
+@keyframes pcard-fade{from{opacity:0}}
+
+@media (max-width:860px){
+  .pcard-scroll{grid-template-columns:minmax(0,1fr);padding:30px 22px 6px;row-gap:14px}
+  .pcard-head,.pcard-vis,.pcard-info{grid-column:1;grid-row:auto}
+  .pcard-info{padding-top:6px}
+  .pcard-foot{padding:12px 22px 18px}
+}
+@media (max-width:520px){
+  .pcard-ov{padding:10px}
+  .pcard{max-height:calc(100dvh - 20px)}
+  .pcard-clip{left:22px}
+  .pcard-title{font-size:30px;padding-right:36px}
+  .pcard-thumbs{gap:7px}
+  .pcard-blk dd,.pcard-how li{font-size:14px}
+  .pcard-foot{justify-content:stretch}
+  .pcard-cta{width:100%;justify-content:center;padding:16px 20px}
+}
+@media (prefers-reduced-motion:reduce){
+  .pcard-ov{transition:none}
+  .pcard-cta,.pcard-cta::before,.pcard-cta::after{animation:none!important}
+  .pcard-ov.is-in .pcard-main,.pcard-ov.is-in .pcard-thumb,.pcard-ov.is-in .pcard-note{animation:none}
+  .pcard-main,.pcard-thumb,.pcard-x,.pcard-cta i,.pcard-frame img{transition:none}
+}
+
+/* Rendimiento: capas propias para lo que se anima y sin desenfoque animado sobre todo el escritorio mientras hay una carpeta abierta */
+.pcard{will-change:transform,opacity}
+.pcard-ov:not(.is-in) .pcard{will-change:auto}
+.folder.is-active,.folder.is-active .f-lid{will-change:transform}
+.dk-opening .dk-stage>*:not(.is-active){filter:saturate(.6)}
+.dk-opening .folder:not(.is-active){filter:saturate(.5)}
+
+/* Recuadro «Ver más fotos»: última miniatura de la fila, enlaza a la galería del caso */
+.pcard-more{text-decoration:none;color:var(--ink)}
+.pcard-more span{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border:1.5px dashed rgba(20,33,92,.45);background:color-mix(in srgb,var(--pc) 30%,#fffdf7);text-align:center;transition:background .25s}
+.pcard-more b{font:700 12px/1.2 var(--font-title,"Plus Jakarta Sans",system-ui,sans-serif)}
+.pcard-more i{font-style:normal;display:inline-block;transition:transform .25s}
+.pcard-more:hover span,.pcard-more:focus-visible span{background:color-mix(in srgb,var(--pc) 50%,#fffdf7)}
+.pcard-more:hover i,.pcard-more:focus-visible i{transform:translateX(3px)}
+@media (prefers-reduced-motion:reduce){.pcard-more span,.pcard-more i{transition:none}}

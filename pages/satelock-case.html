@@ -27,9 +27,9 @@
     <link rel="stylesheet" href="../assets/transitions.css" />
     <script defer src="../assets/transitions.js"></script>
     <script defer src="../assets/sfx.js"></script>
-    <script defer src="../assets/board.js"></script>
-    <script defer src="../assets/markers.js"></script>
+    <link rel="stylesheet" href="../assets/tw/satelock.css" />
     <link rel="stylesheet" href="../assets/tw/satelock-case.css" />
+    <link rel="stylesheet" href="../assets/tw/gallery-satelock-case.css" />
 </head>
 
 <body class="dk nb nb-case nb-satelock bg-ink font-sans text-[#101828] antialiased">
@@ -96,7 +96,7 @@
                         <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#101828]">Data</span>
                         <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-4 py-1.5 text-[11.5px] font-medium text-[#101828]">Operational Efficiency</span>
                     </div>
-                    <a href="satelock.html" class="group inline-flex items-center gap-2 rounded-xl border-2 border-primary px-5 py-2.5 text-[13.5px] font-semibold text-primary transition-all hover:bg-primary hover:text-white">
+                    <a href="../index.html#resumen=satelock-case.html" class="group inline-flex items-center gap-2 rounded-xl border-2 border-primary px-5 py-2.5 text-[13.5px] font-semibold text-primary transition-all hover:bg-primary hover:text-white">
                         <span class="transition-transform group-hover:-translate-x-1">←</span> Ver resumen del proyecto
                     </a>
                 </div>
@@ -1261,6 +1261,1008 @@
             })();
         </script>
 
+
+        <!-- ================= SISTEMA DE DISEÑO + GALERÍA (desde el overview) ================= -->
+        <!-- ================= SISTEMA DE DISEÑO ================= -->
+        <section id="sistema-diseno" class="nb-host mx-auto w-[90%] max-w-grid py-14">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px"><div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">18</div><span style="font-size:11.5px;font-weight:700;color:#101828">Sistema de diseño</span></div>
+            <span class="nbp nbp-wire" style="top:4px;right:6px;width:56px;height:43px" aria-hidden="true"></span>
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-[260px_1fr] lg:items-start">
+                <!-- Introducción -->
+                <div>
+                    <div class="mb-3 flex items-center gap-2">
+                        <span class="h-1.5 w-1.5 rounded-full bg-electric"></span>
+                        <span class="text-[10.5px] font-bold uppercase tracking-[0.15em] text-electric">Sistema de diseño</span>
+                    </div>
+                    <h2 class="mb-3 text-[22px] font-bold leading-[1.2] sm:text-[24px]">Una base visual clara para <span class="text-electric">la operación.</span></h2>
+                    <p class="mb-4 text-[13px] leading-[1.55] text-[#64748b]">Diseñamos un sistema visual pensado para entornos operativos, priorizando la claridad, la consistencia y la rápida identificación de estados críticos.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#101828]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="success" style="font-size:11px;color:#315CFF"></span></span>Componentes consistentes</li>
+                        <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#101828]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="success" style="font-size:11px;color:#315CFF"></span></span>Estados visuales claros</li>
+                        <li class="flex items-center gap-2 text-[12.5px] font-medium text-[#101828]"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="success" style="font-size:11px;color:#315CFF"></span></span>Experiencia escalable</li>
+                    </ul>
+                </div>
+
+                <!-- Panel Design System -->
+                <div class="rounded-[20px] border border-[#eef1f5] bg-[#fbfbfc] p-4">
+                    <div class="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                        <!-- Colores -->
+                        <div class="rounded-[14px] border border-[#eef1f5] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#101828]">Colores</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#64748b]">Paleta funcional que comunica estados y jerarquía.</p>
+                            <div class="mb-2.5 grid grid-cols-4 gap-1.5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-electric"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Primario</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#101828]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Navy</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full border border-[#e4e8ee] bg-[#f6f7f9]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Superficie</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#5b6573]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Texto</span>
+                                </div>
+                            </div>
+                            <div class="mb-2 border-t border-[#eef1f5]"></div>
+                            <div class="grid grid-cols-4 gap-1.5">
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#16a34a]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Éxito</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#d97706]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Advert.</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-[#dc2626]"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Crítico</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <span class="h-6 w-6 rounded-full bg-electric"></span>
+                                    <span class="text-[8px] font-semibold text-[#94a3b8]">Info.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tipografía -->
+                        <div class="rounded-[14px] border border-[#eef1f5] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#101828]">Tipografía</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#64748b]">Poppins, para una lectura clara en entornos operativos.</p>
+                            <div class="mb-2 text-[28px] font-bold leading-none text-[#101828]">Aa</div>
+                            <p class="mb-2.5 text-[11px] font-semibold text-[#64748b]">Poppins</p>
+                            <div class="space-y-1 border-t border-[#eef1f5] pt-2">
+                                <div class="flex items-center justify-between text-[10px] text-[#64748b]"><span class="font-bold text-[#101828]">H1</span><span>Bold · 26px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#64748b]"><span class="font-bold text-[#101828]">H2</span><span>Bold · 22px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#64748b]"><span class="font-semibold text-[#101828]">H3</span><span>Semibold · 14px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#64748b]"><span class="text-[#101828]">Body</span><span>Regular · 13px</span></div>
+                                <div class="flex items-center justify-between text-[10px] text-[#64748b]"><span class="font-bold text-[#101828]">Caption</span><span>Bold · 11px</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Componentes -->
+                        <div class="rounded-[14px] border border-[#eef1f5] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#101828]">Componentes</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#64748b]">Elementos reutilizables para mantener consistencia.</p>
+                            <div class="space-y-1.5">
+                                <div class="flex items-center justify-center gap-1.5 rounded-full bg-electric px-3 py-1.5 text-[10.5px] font-semibold text-white">Botón principal <span class="ic" data-icon="arrow-up-right" style="font-size:10px"></span></div>
+                                <div class="flex items-center justify-center rounded-full border border-[#e4e8ee] px-3 py-1.5 text-[10.5px] font-semibold text-[#101828]">Botón secundario</div>
+                                <div class="flex items-center gap-1.5 rounded-full border border-[#e4e8ee] bg-[#f6f7f9] px-3 py-1.5 text-[10.5px] text-[#94a3b8]"><span class="ic" data-icon="location" style="font-size:11px;color:#94a3b8"></span>Buscar activo...</div>
+                                <div class="flex items-center justify-between rounded-full border border-[#e4e8ee] px-3 py-1.5 text-[10.5px] text-[#101828]">Seleccionar opción<span class="text-[#94a3b8]">▾</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-3">
+                        <!-- Estados operativos -->
+                        <div class="rounded-[14px] border border-[#eef1f5] bg-white p-4 sm:col-span-2">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#101828]">Estados operativos</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#64748b]">Señales visuales para identificar rápidamente el estado de los activos.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#16a34a]/10 px-3 py-1.5 text-[10.5px] font-semibold text-[#16a34a]"><span class="h-1.5 w-1.5 rounded-full bg-[#16a34a]"></span>Normal</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#d97706]/10 px-3 py-1.5 text-[10.5px] font-semibold text-[#d97706]"><span class="h-1.5 w-1.5 rounded-full bg-[#d97706]"></span>Advertencia</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-[#dc2626]/10 px-3 py-1.5 text-[10.5px] font-semibold text-[#dc2626]"><span class="h-1.5 w-1.5 rounded-full bg-[#dc2626]"></span>Crítico</span>
+                                <span class="inline-flex items-center gap-1.5 rounded-full bg-electric/10 px-3 py-1.5 text-[10.5px] font-semibold text-electric"><span class="h-1.5 w-1.5 rounded-full bg-electric"></span>Información</span>
+                            </div>
+                        </div>
+
+                        <!-- Iconografía -->
+                        <div class="rounded-[14px] border border-[#eef1f5] bg-white p-4">
+                            <h3 class="mb-1 text-[13px] font-bold text-[#101828]">Iconografía</h3>
+                            <p class="mb-3 text-[10.5px] leading-[1.4] text-[#64748b]">Íconos simples y consistentes para facilitar la comprensión.</p>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="delivery" style="font-size:13px;color:#101828"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="location" style="font-size:13px;color:#101828"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="satelock" style="font-size:13px;color:#101828"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="warning" style="font-size:13px;color:#101828"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="tech-analytics" style="font-size:13px;color:#101828"></span></span>
+                                <span class="flex h-7 w-7 items-center justify-center rounded-lg bg-[#f6f7f9]"><span class="ic" data-icon="process" style="font-size:13px;color:#101828"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barra inferior -->
+            <div class="mt-4 flex flex-col gap-3 rounded-[16px] border border-[#eef1f5] bg-[#f6f7f9] px-6 py-4 sm:flex-row sm:items-center sm:gap-6">
+                <div class="flex flex-shrink-0 items-center gap-3">
+                    <span class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric/10"><span class="ic" data-icon="design-systems" style="font-size:15px;color:#315CFF"></span></span>
+                    <span class="text-[12.5px] font-bold text-[#101828]">Un sistema visual al servicio de las interfaces del caso.</span>
+                </div>
+                <div class="hidden h-8 w-px bg-[#e4e8ee] sm:block"></div>
+                <p class="text-[12.5px] leading-[1.4] text-[#64748b]">Componentes, colores y patrones diseñados para facilitar la gestión de activos, mejorar la legibilidad y mantener consistencia entre las interfaces presentadas en este caso.</p>
+            </div>
+        </section>
+
+<!-- GALERÍA SATELOCK -->
+<section id="galeria" style="scroll-margin-top:96px;display:flex;flex-direction:column;align-items:center" class="mx-auto w-[90%] max-w-grid px-0 pb-12 pt-20 text-center">
+
+    <!-- Encabezado -->
+    <div class="mb-12 max-w-[800px]">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px"><div class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-electric text-[11px] font-bold text-white">19</div><span style="font-size:11.5px;font-weight:700;color:#101828">Galería de imágenes</span></div>
+        <span class="mb-8 block text-[11px] font-bold uppercase tracking-[0.15em] text-royal">
+            GALERÍA DE IMÁGENES
+        </span>
+
+        <h2 class="mb-8 text-[32px] font-bold leading-[1.1] text-[#101828] sm:text-[48px]">
+            Del monitoreo a la acción, con menos navegación.
+        </h2>
+
+        <div class="flex flex-wrap justify-center gap-4">
+            <span class="rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569]">
+                Gestión en tiempo real
+            </span>
+
+            <span class="hidden rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569] md:block">
+                Captura de evidencia
+            </span>
+
+            <span class="hidden rounded-full border border-[#e0e5ec] bg-[#f3f5f8] px-[22px] py-2 text-[12px] font-medium text-[#475569] md:block">
+                Seguimiento detallado
+            </span>
+        </div>
+    </div>
+
+
+    <!-- GALERÍA -->
+    <div class="mx-auto w-full max-w-[1050px]">
+
+        <!-- =========================
+             FILA 01
+             3 móviles + Laptop + Mobile
+        ========================== -->
+        <div
+            class="
+                grid
+                grid-cols-1
+                items-center
+                gap-6
+
+                md:h-[240px]
+                md:grid-cols-[330fr_555fr_135fr]
+                md:gap-[15px]
+                lg:h-[320px]
+            "
+        >
+
+            <!-- 01 — 3 celulares -->
+            <button
+                type="button"
+                class="satelock-gallery-item flex h-full w-full items-center justify-center"
+                data-index="0"
+            >
+                <img width="1672" height="941"
+                    loading="lazy"
+                    src="../assets/projects/satelock/1sate.webp"
+                    alt="Satelock — inicio de sesión, rutas y seguimiento"
+                    class="
+                        block
+                        max-h-full
+                        max-w-full
+                        cursor-zoom-in
+                        object-contain
+                        transition-all
+                        duration-300
+                        ease-out
+                        hover:scale-[1.04]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
+                    "
+                />
+            </button>
+
+
+            <!-- 02 — Laptop -->
+            <button
+                type="button"
+                class="satelock-gallery-item flex h-full w-full items-center justify-center"
+                data-index="1"
+            >
+                <img width="1708" height="921"
+                    loading="lazy"
+                    src="../assets/projects/satelock/2sate-entregas.jpg"
+                    alt="Satelock — seguimiento de entregas y geozonas en el mapa"
+                    class="
+                        block
+                        max-h-full
+                        max-w-full
+                        cursor-zoom-in
+                        object-contain
+                        transition-all
+                        duration-300
+                        ease-out
+                        hover:scale-[1.04]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
+                    "
+                />
+            </button>
+
+
+            <!-- 03 — Mobile -->
+            <button
+                type="button"
+                class="satelock-gallery-item flex h-full w-full items-center justify-center"
+                data-index="2"
+            >
+                <img width="1024" height="1536"
+                    loading="lazy"
+                    src="../assets/projects/satelock/3sate-recorrido.jpg"
+                    alt="Satelock — resumen del recorrido y aperturas por cliente"
+                    class="
+                        block
+                        max-h-full
+                        max-w-full
+                        cursor-zoom-in
+                        object-contain
+                        transition-all
+                        duration-300
+                        ease-out
+                        hover:scale-[1.04]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
+                    "
+                />
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             FILA 02
+             Laptop + 3 móviles + Mobile
+        ========================== -->
+        <div
+            class="
+                mt-10
+                grid
+                grid-cols-1
+                items-center
+                gap-6
+
+                md:h-[240px]
+                md:grid-cols-[510fr_390fr_120fr]
+                md:gap-[15px]
+                lg:h-[320px]
+            "
+        >
+
+            <!-- 04 — Laptop -->
+            <button
+                type="button"
+                class="satelock-gallery-item flex h-full w-full items-center justify-center"
+                data-index="3"
+            >
+                <img width="1619" height="971"
+                    loading="lazy"
+                    src="../assets/projects/satelock/4sate-crear-ruta.jpg"
+                    alt="Satelock — creación de rutas con clientes y punto de partida"
+                    class="
+                        block
+                        max-h-full
+                        max-w-full
+                        cursor-zoom-in
+                        object-contain
+                        transition-all
+                        duration-300
+                        ease-out
+                        hover:scale-[1.04]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
+                    "
+                />
+            </button>
+
+
+            <!-- 05 — 3 celulares -->
+            <button
+                type="button"
+                class="satelock-gallery-item flex h-full w-full items-center justify-center"
+                data-index="4"
+            >
+                <img width="1672" height="941"
+                    loading="lazy"
+                    src="../assets/projects/satelock/5sate-evidencia.jpg"
+                    alt="Satelock — evidencia fotográfica en el punto de entrega"
+                    class="
+                        block
+                        max-h-full
+                        max-w-full
+                        cursor-zoom-in
+                        object-contain
+                        transition-all
+                        duration-300
+                        ease-out
+                        hover:scale-[1.04]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
+                    "
+                />
+            </button>
+
+
+            <!-- 06 — Mobile -->
+            <button
+                type="button"
+                class="satelock-gallery-item flex h-full w-full items-center justify-center"
+                data-index="5"
+            >
+                <img width="1024" height="1536"
+                    loading="lazy"
+                    src="../assets/projects/satelock/6sate-candado.jpg"
+                    alt="Satelock — estado del candado y confirmación de apertura"
+                    class="
+                        block
+                        max-h-full
+                        max-w-full
+                        cursor-zoom-in
+                        object-contain
+                        transition-all
+                        duration-300
+                        ease-out
+                        hover:scale-[1.04]
+                        hover:drop-shadow-[0_16px_24px_rgba(16,24,40,0.14)]
+                    "
+                />
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================
+     LIGHTBOX SATELOCK
+=================================== -->
+
+<div id="satelockLightbox" class="satelock-lightbox" aria-hidden="true">
+
+    <!-- Cerrar -->
+    <button
+        id="satelockLightboxClose"
+        type="button"
+        class="satelock-lightbox-close"
+        aria-label="Cerrar galería"
+    >
+        ×
+    </button>
+
+
+    <!-- Anterior -->
+    <button
+        id="satelockLightboxPrev"
+        type="button"
+        class="satelock-lightbox-arrow satelock-lightbox-prev"
+        aria-label="Imagen anterior"
+    >
+        ‹
+    </button>
+
+
+    <!-- Contenido -->
+    <div class="satelock-lightbox-content">
+
+        <div class="satelock-lightbox-image-wrapper">
+            <img
+                id="satelockLightboxImage"
+                src=""
+                alt=""
+                class="satelock-lightbox-image"
+            />
+        </div>
+
+        <p
+            id="satelockLightboxCaption"
+            class="satelock-lightbox-caption"
+        ></p>
+
+        <div
+            id="satelockLightboxCounter"
+            class="satelock-lightbox-counter"
+        >
+            1 / 6
+        </div>
+
+    </div>
+
+
+    <!-- Siguiente -->
+    <button
+        id="satelockLightboxNext"
+        type="button"
+        class="satelock-lightbox-arrow satelock-lightbox-next"
+        aria-label="Imagen siguiente"
+    >
+        ›
+    </button>
+
+</div>
+
+
+<style>
+
+    .satelock-lightbox {
+        position: fixed;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        z-index: 999999;
+
+        display: none;
+        align-items: center;
+        justify-content: center;
+
+        background: rgba(8, 21, 45, 0.95);
+
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+
+        padding: 40px 80px;
+    }
+
+
+    .satelock-lightbox.is-open {
+        display: flex;
+    }
+
+
+    /* CONTENIDO */
+
+    .satelock-lightbox-content {
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        pointer-events: none;
+    }
+
+
+    /* IMAGEN */
+
+    .satelock-lightbox-image-wrapper {
+
+        width: min(900px, 72vw);
+        height: min(620px, 68vh);
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .satelock-lightbox-image {
+
+        display: block;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        border-radius: 14px;
+
+        filter:
+            drop-shadow(
+                0 30px 60px rgba(0,0,0,0.35)
+            );
+
+        opacity: 1;
+
+        transition:
+            opacity 180ms ease,
+            transform 220ms ease;
+
+        pointer-events: auto;
+    }
+
+
+    /* CAPTION */
+
+    .satelock-lightbox-caption {
+
+        margin-top: 24px;
+        margin-bottom: 0;
+
+        font-size: 13px;
+        font-weight: 500;
+
+        line-height: 1.4;
+
+        color: rgba(255,255,255,0.75);
+
+        text-align: center;
+    }
+
+
+    /* CONTADOR */
+
+    .satelock-lightbox-counter {
+
+        margin-top: 12px;
+
+        padding: 7px 14px;
+
+        border-radius: 999px;
+
+        background: rgba(0,0,0,0.30);
+
+        color: #ffffff;
+
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+    /* CERRAR */
+
+    .satelock-lightbox-close {
+
+        position: absolute;
+
+        top: 32px;
+        right: 40px;
+
+        width: 48px;
+        height: 48px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        border: 0;
+
+        border-radius: 999px;
+
+        background: rgba(255,255,255,0.10);
+
+        color: white;
+
+        font-size: 30px;
+        font-weight: 300;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        transition:
+            background 180ms ease,
+            transform 180ms ease;
+    }
+
+
+    .satelock-lightbox-close:hover {
+
+        background: rgba(255,255,255,0.18);
+
+        transform: scale(1.06);
+    }
+
+
+    /* FLECHAS */
+
+    .satelock-lightbox-arrow {
+
+        position: absolute;
+
+        top: 50%;
+
+        width: 52px;
+        height: 52px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        transform: translateY(-50%);
+
+        border: 0;
+
+        border-radius: 999px;
+
+        background: rgba(255,255,255,0.10);
+
+        color: #ffffff;
+
+        font-size: 34px;
+        font-weight: 300;
+
+        cursor: pointer;
+
+        transition:
+            background 180ms ease,
+            transform 180ms ease;
+    }
+
+
+    .satelock-lightbox-arrow:hover {
+
+        background: rgba(255,255,255,0.18);
+    }
+
+
+    .satelock-lightbox-prev {
+
+        left: 40px;
+    }
+
+
+    .satelock-lightbox-next {
+
+        right: 40px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+        .satelock-lightbox {
+
+            padding: 24px;
+        }
+
+
+        .satelock-lightbox-image-wrapper {
+
+            width: 88vw;
+            height: 65vh;
+        }
+
+
+        .satelock-lightbox-prev {
+
+            left: 12px;
+        }
+
+
+        .satelock-lightbox-next {
+
+            right: 12px;
+        }
+
+
+        .satelock-lightbox-arrow {
+
+            width: 44px;
+            height: 44px;
+
+            font-size: 28px;
+        }
+
+
+        .satelock-lightbox-close {
+
+            top: 20px;
+            right: 20px;
+
+            width: 44px;
+            height: 44px;
+        }
+
+
+        .satelock-lightbox-caption {
+
+            margin-top: 18px;
+        }
+    }
+
+</style>
+
+
+<script>
+
+    const satelockGallery = [
+
+        {
+            src: "../assets/projects/satelock/1sate.webp",
+            caption: "Inicio, rutas asignadas y seguimiento"
+        },
+
+        {
+            src: "../assets/projects/satelock/2sate-entregas.jpg",
+            caption: "Seguimiento de entregas y geozonas en el mapa"
+        },
+
+        {
+            src: "../assets/projects/satelock/3sate-recorrido.jpg",
+            caption: "Resumen del recorrido y aperturas por cliente"
+        },
+
+        {
+            src: "../assets/projects/satelock/4sate-crear-ruta.jpg",
+            caption: "Creación de rutas con clientes y punto de partida"
+        },
+
+        {
+            src: "../assets/projects/satelock/5sate-evidencia.jpg",
+            caption: "Evidencia fotográfica en el punto de entrega"
+        },
+
+        {
+            src: "../assets/projects/satelock/6sate-candado.jpg",
+            caption: "Estado del candado y confirmación de apertura"
+        }
+
+    ];
+
+
+    const satelockLightbox =
+        document.getElementById("satelockLightbox");
+
+
+    const satelockLightboxImage =
+        document.getElementById("satelockLightboxImage");
+
+
+    const satelockLightboxCaption =
+        document.getElementById("satelockLightboxCaption");
+
+
+    const satelockLightboxCounter =
+        document.getElementById("satelockLightboxCounter");
+
+
+    const satelockLightboxClose =
+        document.getElementById("satelockLightboxClose");
+
+
+    const satelockLightboxPrev =
+        document.getElementById("satelockLightboxPrev");
+
+
+    const satelockLightboxNext =
+        document.getElementById("satelockLightboxNext");
+
+
+    const satelockGalleryItems =
+        document.querySelectorAll(".satelock-gallery-item");
+
+
+    let currentSatelockIndex = 0;
+
+
+    function renderSatelockLightbox() {
+
+        const item =
+            satelockGallery[currentSatelockIndex];
+
+
+        satelockLightboxImage.style.transform =
+            "scale(0.98)";
+
+
+        setTimeout(() => {
+
+            satelockLightboxImage.src =
+                item.src;
+
+
+            satelockLightboxCaption.textContent =
+                item.caption;
+
+
+            satelockLightboxCounter.textContent =
+                `${currentSatelockIndex + 1} / ${satelockGallery.length}`;
+
+
+            satelockLightboxImage.style.transform =
+                "scale(1)";
+
+        }, 100);
+
+    }
+
+
+    function openSatelockLightbox(index) {
+
+        currentSatelockIndex = index;
+
+
+        renderSatelockLightbox();
+
+
+        satelockLightbox.classList.add(
+            "is-open"
+        );
+
+
+        satelockLightbox.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        document.body.style.overflow =
+            "hidden";
+    }
+
+
+    function closeSatelockLightbox() {
+
+        satelockLightbox.classList.remove(
+            "is-open"
+        );
+
+
+        satelockLightbox.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+
+        document.body.style.overflow =
+            "";
+    }
+
+
+    function nextSatelockImage() {
+
+        currentSatelockIndex =
+            (currentSatelockIndex + 1)
+            %
+            satelockGallery.length;
+
+
+        renderSatelockLightbox();
+    }
+
+
+    function previousSatelockImage() {
+
+        currentSatelockIndex =
+            (
+                currentSatelockIndex
+                - 1
+                + satelockGallery.length
+            )
+            %
+            satelockGallery.length;
+
+
+        renderSatelockLightbox();
+    }
+
+
+    satelockGalleryItems.forEach(
+        (item) => {
+
+            item.addEventListener(
+                "click",
+                () => {
+
+                    openSatelockLightbox(
+                        Number(
+                            item.dataset.index
+                        )
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+    satelockLightboxClose.addEventListener(
+        "click",
+        closeSatelockLightbox
+    );
+
+
+    satelockLightboxNext.addEventListener(
+        "click",
+        nextSatelockImage
+    );
+
+
+    satelockLightboxPrev.addEventListener(
+        "click",
+        previousSatelockImage
+    );
+
+
+    satelockLightbox.addEventListener(
+        "click",
+        (event) => {
+
+            if (
+                event.target
+                ===
+                satelockLightbox
+            ) {
+
+                closeSatelockLightbox();
+
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        (event) => {
+
+            if (
+                !satelockLightbox
+                    .classList
+                    .contains("is-open")
+            ) {
+
+                return;
+
+            }
+
+
+            if (event.key === "Escape") {
+
+                closeSatelockLightbox();
+
+            }
+
+
+            if (
+                event.key
+                ===
+                "ArrowRight"
+            ) {
+
+                nextSatelockImage();
+
+            }
+
+
+            if (
+                event.key
+                ===
+                "ArrowLeft"
+            ) {
+
+                previousSatelockImage();
+
+            }
+
+        }
+    );
+
+</script>
+
         <!-- ================= CTA FINAL ================= -->
         <div class="mx-auto w-[90%] max-w-grid border-t border-[#e9edf2] py-20 text-center">
             <h2 class="mb-8 text-[26px] font-bold leading-[1.25] sm:text-[36px]">¿Quieres diseñar operaciones que también <br class="hidden sm:block" />generen <span class="text-electric">eficiencia</span>?</h2>
@@ -1272,7 +2274,7 @@
     <!-- ================= NAV PROYECTOS ================= -->
     <section class="dk-end" aria-label="Fin del expediente">
         <p>Fin del expediente 02</p>
-        <div class="dk-end-links"><a class="dk-endlink" href="food-delivery.html"><span aria-hidden="true">← </span>Anterior: FoodDelivery</a><a class="dk-endlink" href="conduzko.html">Siguiente: ConDuzko<span aria-hidden="true"> →</span></a><a class="dk-endlink" href="../index.html#proyectos">Todos los proyectos</a><a class="dk-endbtn" href="../index.html">← Volver al escritorio</a></div>
+        <div class="dk-end-links"><a class="dk-endlink" href="food-delivery-case.html"><span aria-hidden="true">← </span>Ver caso de estudio de FoodDelivery</a><a class="dk-endlink" href="conduzko-case.html">Ver caso de estudio de ConDuzko<span aria-hidden="true"> →</span></a><a class="dk-endlink" href="../index.html#proyectos">Todos los proyectos</a><a class="dk-endbtn" href="../index.html">← Volver al escritorio</a></div>
     </section>
 
     <!-- ================= FOOTER ================= -->
@@ -1305,6 +2307,7 @@
     </footer>
 
     <script src="../assets/site.js"></script>
+    <script defer src="../assets/mobile-copy.js"></script>
     <script src="../assets/icons.js"></script>
     <script src="../assets/diagram-modal.js"></script>
 </body>

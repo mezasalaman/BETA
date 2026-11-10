@@ -7,14 +7,14 @@
   var desk = document.querySelector('.desk');
   if (!desk) return;
   var reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  var running = false, timers = [], href = null;
+  var running = false, timers = [], href = null, opening = null;
   var PAPER = 'cubic-bezier(.65,0,.2,1)', GLIDE = 'cubic-bezier(.25,.9,.3,1)', LID = 'cubic-bezier(.55,.05,.25,1)', EASE = 'cubic-bezier(.22,.8,.22,1)';
   var SH0 = 'drop-shadow(0 4px 6px rgba(25,18,8,.25))', SH1 = 'drop-shadow(0 34px 38px rgba(25,18,8,.42))';
 
-  var T = 1.3; // factor de duración (1 = original); un poco más lenta
+  var T = 1; // factor de duración (1 = original)
   function at(ms, fn) { timers.push(setTimeout(fn, ms * T)); }
   function go() { if (href) location.href = href; }
-  function skip() { if (running && !skipFn) { timers.forEach(clearTimeout); go(); } }
+  function skip() { if (opening) { opening(); return; } if (running && !skipFn) { timers.forEach(clearTimeout); go(); } }
   function anim(el, frames, opts) { opts.fill = 'forwards'; opts.duration *= T; if (opts.delay) opts.delay *= T; return el.animate(frames, opts); }
 
   // Hoja que sale de la carpeta: mide exactamente su rectángulo; solo se transforma con escala uniforme
@@ -64,9 +64,12 @@
     var cx = innerWidth / 2, cy = innerHeight * .52;
     var dx = cx - (r0.left + r0.width / 2), dy = (cy + s * r0.height / 2) - r0.bottom;
     var mid = 'translate(' + dx + 'px,' + dy + 'px) rotate(0deg) scale(' + s + ')';
-    at(200, function () {
-      anim(a, [{ transform: 'translateY(-22px) rotate(' + rot + ') scale(1.03)' }, { transform: mid }], { duration: 620, easing: GLIDE });
-    });
+    var travelled = false, lidOpened = false, shown = false;
+    function travel() {
+      if (travelled) return; travelled = true;
+      return anim(a, [{ transform: 'translateY(-22px) rotate(' + rot + ') scale(1.03)' }, { transform: mid }], { duration: 620, easing: GLIDE });
+    }
+    at(200, travel);
 
     // 3 · se abre la tapa (520 ms): cara exterior que se oscurece e interior que se aclara
     var lid = document.createElement('span');
@@ -76,19 +79,34 @@
     lid.appendChild(out); lid.appendChild(inn);
     a.appendChild(lid);
     front.style.visibility = 'hidden';
-    at(700, function () {
-      anim(lid, [{ transform: 'perspective(1800px) rotateY(0deg)' }, { transform: 'perspective(1800px) rotateY(-172deg)' }], { duration: 520, easing: LID });
+    function openLid() {
+      if (lidOpened) return; lidOpened = true;
+      var l = anim(lid, [{ transform: 'perspective(1800px) rotateY(0deg)' }, { transform: 'perspective(1800px) rotateY(-172deg)' }], { duration: 520, easing: LID });
       anim(out, [{ filter: 'brightness(1)' }, { filter: 'brightness(.6)' }], { duration: 520, easing: LID });
       anim(inn, [{ filter: 'brightness(.75)' }, { filter: 'brightness(1.04)' }], { duration: 520, easing: LID });
+      return l;
+    }
+
+    // 4 · con la tapa abierta aparece la ficha flotante (evento real de fin de la animación de la tapa)
+    function showCard() {
+      if (shown) return; shown = true; opening = null;
+      if (window.dkCard && dkCard.has(a)) {
+        running = false; // los clics de la ficha (CTA, cerrar) ya no se interceptan
+        dkCard.open(a, { onClose: function () { closeFolder({ a: a, lid: lid, out: out, inn: inn, front: front, rot: rot, mid: mid }); } });
+      } else legacyExit();
+    }
+    opening = function () { timers.forEach(clearTimeout); timers = []; travel(); openLid(); a.getAnimations({ subtree: true }).forEach(function (x) { x.finish(); }); showCard(); };
+    at(700, function () {
+      var l = openLid();
+      l.finished.then(showCard, function () {});
     });
 
-    // 4 · sale la hoja y se extiende hasta cubrir la pantalla
-    at(930, function () {
+    // Salida original (hoja que crece hasta cubrir la pantalla y navega); solo si no hay ficha para esta carpeta
+    function legacyExit() {
       var sh = a.querySelector('.f-sheet.s1').getBoundingClientRect();
       var r = { left: sh.left, top: sh.top, width: sh.width, height: sh.width * 1.05 };
       var doc = makeDoc(r, color, 'Expediente ' + num, name);
       var c = cover(r);
-      // el título ya está en la hoja al abrirse la tapa: aparece quieta dentro de la carpeta y luego sigue
       anim(doc, [{ opacity: 0 }, { opacity: 1 }], { duration: 240, easing: EASE });
       anim(doc, [{ transform: 'translateY(0) scale(1)', filter: 'drop-shadow(0 4px 6px rgba(25,18,8,.3))' }, { transform: 'translateY(' + (-r.height * .42) + 'px) scale(1.04)', filter: 'drop-shadow(0 26px 30px rgba(25,18,8,.38))' }], { duration: 380, delay: 380, easing: PAPER });
       at(760, function () {
@@ -98,7 +116,30 @@
         reveal(doc, 0, 520);
       });
       at(1710, go);
-    });
+    }
+  }
+
+  // Cierre de la ficha: la tapa se cierra y la carpeta vuelve a su sitio (inverso de la apertura)
+  function closeFolder(o) {
+    var a = o.a;
+    running = true; href = null; opening = null;
+    var l = anim(o.lid, [{ transform: 'perspective(1800px) rotateY(-172deg)' }, { transform: 'perspective(1800px) rotateY(0deg)' }], { duration: 520, easing: LID });
+    anim(o.out, [{ filter: 'brightness(.6)' }, { filter: 'brightness(1)' }], { duration: 520, easing: LID });
+    anim(o.inn, [{ filter: 'brightness(1.04)' }, { filter: 'brightness(.75)' }], { duration: 520, easing: LID });
+    function done() {
+      timers.forEach(clearTimeout); timers = [];
+      o.lid.remove();
+      a.getAnimations().forEach(function (x) { x.cancel(); });
+      a.style.transform = ''; a.style.zIndex = ''; a.classList.remove('is-active'); o.front.style.visibility = '';
+      desk.classList.remove('dk-opening'); document.documentElement.style.overflow = ''; running = false; skipFn = null;
+      a.focus({ preventScroll: true });
+    }
+    skipFn = done;
+    l.finished.then(function () {
+      if (!skipFn) return;
+      desk.classList.remove('dk-opening');
+      anim(a, [{ transform: o.mid }, { transform: 'translateY(0) rotate(' + o.rot + ') scale(1)' }], { duration: 640, easing: GLIDE }).finished.then(function () { if (skipFn) done(); }, function () {});
+    }, function () {});
   }
 
   function openCard(a) {
@@ -125,8 +166,12 @@
 
   document.addEventListener('click', function (e) {
     if (running) { e.preventDefault(); skip(); return; }
-    if (reduce.matches || e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     var f = e.target.closest('.folder');
+    if (reduce.matches) {
+      if (f && window.dkCard && dkCard.has(f)) { e.preventDefault(); dkCard.open(f, { onClose: function () { f.focus({ preventScroll: true }); } }); }
+      return;
+    }
     var c = e.target.closest('.dk-index a');
     var a = f || c;
     if (!a) return;
@@ -143,7 +188,8 @@
   // Al volver con el botón atrás (bfcache) el escritorio debe estar limpio
   addEventListener('pageshow', function (e) {
     if (!e.persisted) return;
-    running = false; timers.forEach(clearTimeout); timers = [];
+    if (window.dkCard) dkCard.reset();
+    running = false; opening = null; skipFn = null; timers.forEach(clearTimeout); timers = [];
     document.querySelectorAll('.dk-doc,.dk-doc-big,.f-lid').forEach(function (n) { n.remove(); });
     desk.classList.remove('dk-opening');
     document.documentElement.style.overflow = '';

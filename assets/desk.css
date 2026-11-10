@@ -468,7 +468,7 @@
 }
 @media (max-width:600px){
   .dk-stage{grid-template-columns:1fr}
-  .folder{aspect-ratio:1/.8;margin-top:10px;max-width:420px;width:100%!important;justify-self:center}
+  .folder{aspect-ratio:1/.98;margin-top:10px;max-width:420px;width:100%!important;justify-self:center}
 }
 @media (max-width:380px){
   .desk{padding:14px 12px 28px}
